@@ -3,6 +3,7 @@
     /* text-transform: uppercase; */
     position: relative;
     display: inline-block;
+    text-align: center;
     font-size: 46px;
     font-weight: 700;
     margin-left: 10px;

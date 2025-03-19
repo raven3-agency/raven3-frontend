@@ -596,6 +596,7 @@ h6 {
   color: var(--raven-black);
   animation-delay: 0.8s;
   background: var(--raven-celeste);
+  margin-bottom: 10px;
 }
 
 @media (max-width: 768px) {
@@ -643,7 +644,7 @@ section {
     padding-right: 0px;
   }
   .consultoria {
-    max-width: 395px;
+    max-width: 320px;
   }
 }
 
