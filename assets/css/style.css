@@ -617,6 +617,16 @@ h6 {
   }
 }
 
+.consultoria {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  text-align: center;
+  background: var(--raven-grey-light);
+  border-radius: 25px;
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -1316,14 +1326,4 @@ section {
   overflow: hidden;
   padding: 30px;
   position: relative;
-}
-.consultoria {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
-  background: var(--raven-grey-light);
-  border-radius: 25px;
 }
