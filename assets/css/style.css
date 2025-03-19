@@ -1302,6 +1302,7 @@ section {
 }
 .call {
   border-radius: 25px;
+  border: black 2px solid;
   padding: 25px 25px 25px 25px;
 }
 .call:hover {
