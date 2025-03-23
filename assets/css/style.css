@@ -1328,3 +1328,15 @@ section {
   padding: 30px;
   position: relative;
 }
+.recaptcha-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.g-recaptcha {
+  transform: scale(1); /* Tamaño original */
+  transform-origin: center;
+}

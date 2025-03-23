@@ -28,6 +28,12 @@
       }
     }
   };
+
+  const el = document.getElementById('g-recaptcha-response'); 
+  if (el) { 
+    el.setAttribute('required', 'required'); 
+  } 
+
   /**
    * Easy on scroll event listener
    */
