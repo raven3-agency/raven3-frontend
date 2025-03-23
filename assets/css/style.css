@@ -626,6 +626,8 @@ h6 {
   text-align: center;
   background: var(--raven-grey-light);
   border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
 }
 /*--------------------------------------------------------------
 # Sections General
@@ -643,6 +645,15 @@ section {
   }
   .consultoria {
     max-width: 290px;
+  }
+  .personalizado {
+    flex-direction: column-reverse !important;
+  }
+  #asesoramiento {
+    order: 2; /* El texto queda arriba */
+  }
+  #conversemos {
+    order: 1; /* El botón queda abajo */
   }
 }
 
@@ -793,8 +804,8 @@ section {
   /* Gradient Background */
   background: radial-gradient(
     circle at center,
-    var(--raven-celeste) 0%,
-    var(--raven-pink) 100%
+    var(--raven-pink) 0%,
+    var(--raven-celeste) 100%
   );
   overflow: hidden;
   /* Optional for a slight 3D effect */
@@ -1313,31 +1324,33 @@ section {
 }
 .call {
   border-radius: 25px;
-  border: black 2px solid;
   padding: 25px 25px 25px 25px;
 }
 .call:hover {
   transform: scale(1.05);
 }
-.conversemos {
+#conversemos {
   margin-left: 15px;
 }
-.conversemos:hover {
+#conversemos:hover {
   transform: scale(1.05) !important;
 }
 .personalizado {
+  display: flex;
+  position: relative;
+  flex-direction: column;
   place-content: center space-between;
   align-items: center;
   align-self: stretch;
   background-color: var(--raven-grey-light);
   border-radius: 20px;
-  display: flex;
   flex: 1 0 0px;
   flex-flow: row;
   height: auto;
   overflow: hidden;
   padding: 30px;
-  position: relative;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
 }
 .recaptcha-wrapper {
   width: 100%;
