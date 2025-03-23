@@ -692,6 +692,17 @@ section {
   text-align: center;
 }
 
+.section-title2 h2 {
+  font-size: 30px;
+  font-weight: 700;
+  padding: 0;
+  line-height: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Varela Round", sans-serif;
+  text-align: center;
+}
+
 /* .section-title h2::after {
   content: "";
   width: 120px;
