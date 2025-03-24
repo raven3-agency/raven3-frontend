@@ -189,7 +189,23 @@
   if (form) {
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
+      
+      // Validación del campo de email
+      const emailField = form.querySelector("input[name='email']");
+      const emailRegex = /^[\\w-.]+@[\\w-]+\\.[\\w-.]+$/;
+      if (!emailField || !emailRegex.test(emailField.value.trim())) {
+        errorMessage.innerText = "El campo de email no es válido.";
+        errorMessage.style.display = "block";
+        return;
+      }
 
+      // Validación del campo de mensaje
+      const messageField = form.querySelector("textarea[name='message']");
+      if (!messageField || messageField.value.trim() === "") {
+        errorMessage.innerText = "El campo de mensaje no puede estar vacío.";
+        errorMessage.style.display = "block";
+        return;
+      }
       // Validar reCAPTCHA
       if (!validateCaptcha()) {
         errorMessage.innerText = "¡Falta completar el captcha!";
@@ -226,10 +242,4 @@
       }
     });
   }
-
-  // function displayError(thisForm, error) {
-  //   thisForm.querySelector(".loading").classList.remove("d-block");
-  //   thisForm.querySelector(".error-message").innerHTML = error;
-  //   thisForm.querySelector(".error-message").classList.add("d-block");
-  // }
 })();
