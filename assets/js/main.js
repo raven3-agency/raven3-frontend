@@ -9,11 +9,9 @@
    */
   const select = (el, all = false) => {
     el = el.trim();
-    if (all) {
-      return [...document.querySelectorAll(el)];
-    } else {
-      return document.querySelector(el);
-    }
+    return all
+      ? [...document.querySelectorAll(el)]
+      : document.querySelector(el);
   };
   /**
    * Easy event listener function
@@ -21,19 +19,11 @@
   const on = (type, el, listener, all = false) => {
     let selectEl = select(el, all);
     if (selectEl) {
-      if (all) {
-        selectEl.forEach((e) => e.addEventListener(type, listener));
-      } else {
-        selectEl.addEventListener(type, listener);
-      }
+      all
+        ? selectEl.forEach((e) => e.addEventListener(type, listener))
+        : selectEl.addEventListener(type, listener);
     }
   };
-
-  const el = document.getElementById('g-recaptcha-response'); 
-  if (el) { 
-    el.setAttribute('required', 'required'); 
-  } 
-
   /**
    * Easy on scroll event listener
    */
@@ -186,42 +176,60 @@
       mirror: false,
     });
   });
+  /**
+   * Validación de reCAPTCHA
+   */
+  const validateCaptcha = () => grecaptcha.getResponse().length > 0;
+  /**
+   * Configuración del formulario y manejo del submit
+   */
   var form = document.getElementById("my-form");
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
+  const errorMessage = document.getElementById("error-message");
 
-    form.querySelector(".loading").classList.add("d-block");
-    form.querySelector(".error-message").classList.remove("d-block");
-    form.querySelector(".sent-message").classList.remove("d-block");
+  if (form) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
 
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
+      // Validar reCAPTCHA
+      if (!validateCaptcha()) {
+        errorMessage.innerText = "¡Falta completar el captcha!";
+        errorMessage.style.display = "block";
+        return;
+      } else {
+        errorMessage.style.display = "none";
+      }
+
+      form.querySelector(".loading").classList.add("d-block");
+      form.querySelector(".error-message").classList.remove("d-block");
+      form.querySelector(".sent-message").classList.remove("d-block");
+
+      try {
+        const data = new FormData(event.target);
+        const response = await fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: "application/json" },
+        });
+
         form.querySelector(".loading").classList.remove("d-block");
+
         if (response.ok) {
           form.querySelector(".sent-message").classList.add("d-block");
           form.reset();
+          grecaptcha.reset();
         } else {
-          displayError(form, "Oops! There was a problem in your form");
+          throw new Error("Oops! Hubo un problema al enviar el formulario.");
         }
-      })
-      .catch((error) => {
-        displayError(form, error);
-      });
+      } catch (error) {
+        form.querySelector(".error-message").innerText = error.message;
+        form.querySelector(".error-message").classList.add("d-block");
+      }
+    });
   }
-  if (form) {
-    form.addEventListener("submit", handleSubmit);
-  }
-  function displayError(thisForm, error) {
-    thisForm.querySelector(".loading").classList.remove("d-block");
-    thisForm.querySelector(".error-message").innerHTML = error;
-    thisForm.querySelector(".error-message").classList.add("d-block");
-  }
+
+  // function displayError(thisForm, error) {
+  //   thisForm.querySelector(".loading").classList.remove("d-block");
+  //   thisForm.querySelector(".error-message").innerHTML = error;
+  //   thisForm.querySelector(".error-message").classList.add("d-block");
+  // }
 })();
