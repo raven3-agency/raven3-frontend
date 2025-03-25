@@ -190,15 +190,6 @@
     form.addEventListener("submit", async (event) => {
       event.preventDefault();
       
-      // Validación del campo de email
-      const emailField = form.querySelector("input[name='email']");
-      const emailRegex = /^[\\w-.]+@[\\w-]+\\.[\\w-.]+$/;
-      if (!emailField || !emailRegex.test(emailField.value.trim())) {
-        errorMessage.innerText = "El campo de email no es válido.";
-        errorMessage.style.display = "block";
-        return;
-      }
-
       // Validación del campo de mensaje
       const messageField = form.querySelector("textarea[name='message']");
       if (!messageField || messageField.value.trim() === "") {
