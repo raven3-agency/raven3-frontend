@@ -812,7 +812,7 @@ section {
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.cta2 {
+/* .cta2 {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/cta2.webp") fixed center center;
   background-size: cover;
@@ -824,7 +824,7 @@ section {
   height: 350px;
   margin-top: 50px;
   margin-bottom: 50px;
-}
+} */
 .cta3 {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/raven.avif") fixed center center;

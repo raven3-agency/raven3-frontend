@@ -1,10 +1,10 @@
-:root{
+:root {
   --raven-celeste: #37e2d5;
   --raven-white: #ffffff;
   --raven-black: #000000;
   --raven-grey: #444444;
 }
-.celes{
+.celes {
   color: var(--raven-celeste) !important;
 }
 h1 {
@@ -12,8 +12,8 @@ h1 {
   font-weight: 700;
   color: var(--raven-black);
 }
-body{
-overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 p {
   font-size: 15px;
@@ -124,12 +124,38 @@ p {
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.2;
-  color: rgba(255, 255, 255, 0.500) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .cta2 {
   background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
     url("../img/poster.png") fixed center center;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -webkit-background-size: cover;
+  padding: 60px 0;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.cta-seo {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/cta-seo.jpg") fixed center center;
+  background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -webkit-background-size: cover;
+  padding: 60px 0;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.cta-seo2 {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../img/cta-seo2.jpg") fixed center center;
   background-size: cover;
   -o-background-size: cover;
   -moz-background-size: cover;
@@ -146,9 +172,17 @@ p {
     background: url("../img/poster.png") center top no-repeat scroll;
     background-size: auto 350px;
   }
+  .cta-seo {
+    background: url("../img/cta-seo.jpg") center top no-repeat scroll;
+    background-size: auto 350px;
+  }
+  .cta-seo2 {
+    background: url("../img/cta-seo2.jpg") center top no-repeat scroll;
+    background-size: auto 350px;
+  }
 }
 
-.redes{
+.redes {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px !important;
