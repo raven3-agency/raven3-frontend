@@ -1395,6 +1395,7 @@ section {
 
 .btn-asesoramiento:hover {
   transform: scale(1.05);
+  color: #000;
 }
 
 @keyframes gradientMove {
