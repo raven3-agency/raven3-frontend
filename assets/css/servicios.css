@@ -213,6 +213,6 @@ p {
 }
 @media screen and (min-width: 1025px) {
   .text-stroke-white {
-    font-size: 20vh;
+    font-size: 17vh;
   }
 }
