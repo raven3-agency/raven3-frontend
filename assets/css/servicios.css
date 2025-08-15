@@ -187,32 +187,22 @@ p {
   margin-bottom: 15px;
   font-size: 24px !important;
 }
-/* Media query for screens up to 320px */
-@media screen and (max-width: 320px) {
-  .text-stroke-white {
-    font-size: 4vh;
-  }
+.text-stroke-white{
+  /* tamaño: mínimo 24px, fluido 8vmin, tope 96px */
+  font-size: clamp(24px, 8vmin, 96px);
+  line-height: 1.1;
+  letter-spacing: .02em;
+
+  /* que no se pegue a los bordes ni se haga interminable */
+  max-width: min(1100px, 92vw);
+  margin-inline: auto;
+  padding-inline: 12px;
+
+  /* mejora el quiebre de líneas en títulos largos (progressive enhancement) */
+  text-wrap: balance;
 }
-/* Media query for screens between 321px and 425px */
-@media screen and (min-width: 321px) and (max-width: 425px) {
-  .text-stroke-white {
-    font-size: 6vh;
-  }
-}
-/* Media query for screens between 426px and 768px */
-@media screen and (min-width: 426px) and (max-width: 768px) {
-  .text-stroke-white {
-    font-size: 8vh;
-  }
-}
-/* Media query for screens between 769px and 1024px */
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .text-stroke-white {
-    font-size: 10vh;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .text-stroke-white {
-    font-size: 17vh;
-  }
+
+/* fallback por si algún navegador viejo no soporta clamp() */
+@supports not (font-size: clamp(1rem, 1vw, 10rem)) {
+  .text-stroke-white { font-size: 32px; }
 }
