@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-AR">
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
@@ -33,7 +33,10 @@
       property="og:image"
       content="https://www.raven3.com.ar/assets/img/paginas.png"
     />
-
+    <meta
+      name="twitter:image:alt"
+      content="Diseño y desarrollo web a medida en Argentina — Raven3"
+    />
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
@@ -51,14 +54,23 @@
       property="twitter:image"
       content="https://www.raven3.com.ar/assets/img/paginas.png"
     />
-
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
     <!-- Favicon para navegadores de escritorio -->
     <link
       rel="icon"
       type="image/x-icon"
       href="assets/img/favicon_io/favicon.ico"
     />
-
+    <link
+      rel="preload"
+      as="image"
+      href="/assets/img/paginas.png"
+      fetchpriority="high"
+      imagesizes="100vw"
+    />
     <!-- Favicon para dispositivos iOS -->
     <link
       rel="apple-touch-icon"
@@ -216,6 +228,69 @@
           U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
       }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "name": "Raven3",
+            "url": "https://www.raven3.com.ar/",
+            "logo": "https://www.raven3.com.ar/assets/img/logo.png",
+            "sameAs": [
+              "https://github.com/raven3-agency",
+              "https://www.linkedin.com/company/raven3-agency",
+              "https://api.whatsapp.com/send?phone=+5491131127973"
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "name": "Raven3",
+            "url": "https://www.raven3.com.ar/",
+            "inLanguage": "es-AR",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.raven3.com.ar/?s={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          },
+          {
+            "@type": "Service",
+            "name": "Diseño y desarrollo web a medida",
+            "serviceType": "Web design and development",
+            "url": "https://www.raven3.com.ar/pagina-web/",
+            "description": "Sitios web nativos (HTML, CSS y JavaScript) rápidos, seguros y optimizados para SEO. Servicio en Buenos Aires y toda Argentina.",
+            "provider": {
+              "@type": "Organization",
+              "name": "Raven3",
+              "url": "https://www.raven3.com.ar/"
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "Buenos Aires, Argentina"
+            },
+            "image": "https://www.raven3.com.ar/assets/img/paginas.png"
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Inicio",
+                "item": "https://www.raven3.com.ar/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Diseño y desarrollo web",
+                "item": "https://www.raven3.com.ar/pagina-web/"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -1485,15 +1560,15 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js" defer></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
     <!-- Template Main JS File -->
     <!-- <script src="assets/js/theme.js"></script> -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/slider.js"></script>
-    <script src="assets/js/progress-bar.js"></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/slider.js" defer></script>
+    <script src="assets/js/progress-bar.js" defer></script>
   </body>
 </html>
