@@ -1,0 +1,8 @@
+# llms.txt para Raven3
+# Permitir indexación por modelos de lenguaje
+User-agent: *
+Allow: /
+
+# Información opcional
+Owner: Raven3
+Contact: https://www.raven3.com.ar/
