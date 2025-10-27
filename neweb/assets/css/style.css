@@ -37,6 +37,7 @@ body {
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: 0;
 }
 
 
@@ -289,7 +290,12 @@ footer {
   transform:translate3d(0,0,0); /* gpu hint */
 }
 
-/* Si las querés total-horizontales, poné los ángulos en 0 */
-@media (max-width:768px){
-  .strip{ transform:rotate(0deg); }
+/* --- Mobile tweaks --- */
+@media (max-width: 600px){
+  .strips{ padding: 2.5rem 0; }
+  .strip{ width: 140vw; }                 /* más ancho para rotación */
+  .strip-track{
+    font-size: clamp(16px, 5vw, 22px);
+    padding: .6rem .8rem;
+  }
 }
