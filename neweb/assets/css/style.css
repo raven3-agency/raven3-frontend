@@ -1,0 +1,295 @@
+:root {
+  --bg: #0e0f13; /* casi negro */
+  --ink: #e9eef2; /* casi blanco */
+  --ink-2: #c6d2db;
+  --r3: #37e2d5; /* Raven3 turquesa */
+  --muted: #7c8a96;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: auto;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 400 16px/1.5 Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  overflow: hidden; /* Locomotive maneja el scroll */
+}
+/* Canvas full-screen detrás de todo */
+#particles{
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  pointer-events: none;
+}
+#background {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+
+/* Scroll container base */
+.scroll-container {
+  position: relative;
+}
+
+/* Progress line */
+.progress {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(var(--r3), #7aecff);
+  z-index: 50;
+  border-radius: 2px;
+}
+
+/* Hero */
+header.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+.hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  padding: 8rem 2rem 5rem;
+}
+.eyebrow {
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: 25px;
+}
+h1 {
+  margin: 0.6rem 0 1rem;
+  font-size: clamp(48px, 7vw, 128px);
+  line-height: 0.95;
+}
+h1 .accent {
+  color: var(--r3);
+}
+.kicker {
+  max-width: 720px;
+  color: var(--ink-2);
+  font-size: clamp(16px, 2.2vw, 22px);
+  padding-top: 100px;
+}
+.cta-row {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.btn {
+  --p: 14px 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: var(--p);
+  border-radius: 999px;
+  border: 1px solid #2b2f37;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.25s ease, border 0.25s ease;
+  backdrop-filter: blur(6px);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn.primary {
+  background: linear-gradient(90deg, var(--r3), #7aecff);
+  color: #001114;
+  border-color: transparent;
+  font-weight: 700;
+}
+
+/* Sections */
+section {
+  position: relative;
+  padding: 8rem 2rem;
+}
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+.section-title {
+  font-size: clamp(28px, 4.5vw, 56px);
+  margin: 0 0 0.75rem;
+}
+.muted {
+  color: var(--muted);
+}
+
+/* Raven strips */
+.raven-strip {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+.raven-strip svg {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+}
+
+/* Services */
+.grid {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(12, 1fr);
+}
+.card {
+  grid-column: span 12;
+  background: linear-gradient(180deg, #12141a, #0c0d11);
+  border: 1px solid #1b1e25;
+  border-radius: 22px;
+  padding: 28px;
+  position: relative;
+  overflow: hidden;
+}
+.card h3 {
+  font-size: clamp(22px, 3vw, 32px);
+  margin: 0.25rem 0 0.5rem;
+}
+.card p {
+  color: var(--ink-2);
+  max-width: 60ch;
+}
+.card .tag {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(55, 226, 213, 0.1);
+  border: 1px solid rgba(55, 226, 213, 0.4);
+  color: var(--r3);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+@media (min-width: 700px) {
+  .card {
+    grid-column: span 6;
+  }
+}
+@media (min-width: 1024px) {
+  .card {
+    grid-column: span 4;
+  }
+}
+
+/* Showcase images */
+.showcase{
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:16px;
+}
+.shot{
+  grid-column:span 12;
+  position:relative;
+  height:clamp(240px,45vw,520px);
+  border-radius:18px;
+  overflow:hidden;
+  border:1px solid #1b1e25;
+  background:transparent;           /* <— sin fondo oscuro */
+}
+.shot img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  opacity:1;                        /* <— quita el oscurecido */
+  will-change:transform;
+  transform:scale(1.04) translateZ(0);
+}
+.shot::after{
+  /* si querés un leve fade, hacelo con un gradiente suave */
+  content:"";
+  position:absolute; inset:0;
+  pointer-events:none;
+  background:linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,.18));
+  /* O directamente comentá esta regla si no querés overlay */
+}
+
+@media (min-width:800px){
+  .shot{ grid-column:span 6; }
+}
+
+/* Footer */
+footer {
+  padding: 6rem 2rem;
+  /* background: linear-gradient(180deg, #0c0e12, #0a0b0e); */
+  border-top: 1px solid #1b1e25;
+}
+.foot {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  gap: 28px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 24px;
+  letter-spacing: 0.02em;
+}
+.small {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+/* === STRIPS (Locomotive horizontal banners estilo demo) === */
+.strips { position:relative; width:100%; padding:200px 0; overflow:hidden; }
+.strips-wrap { position:relative; width:100%; }
+
+.strip{
+  position:relative;
+  height:clamp(60px,10vw,120px);
+  margin:28px 0;
+  display:flex; align-items:center; justify-content:center;
+  transform:rotate(var(--rot,0deg));
+  /* dejamos visible para que el bleed no se corte dentro del strip */
+  overflow:visible;
+}
+
+/* La “cinta” blanca: más ancha que el viewport y con desplazamiento negativo */
+.strip-inner{
+  display:block;
+  width:250vw;               /* <-- más ancho que 100vw para cubrir al rotar */
+  margin-left:-20vw;         /* <-- centra el bleed */
+  background:#fff;
+  color:#0e0f13;
+  font-weight:900;
+  font-size:clamp(24px,6vw,70px);
+  text-transform:uppercase;
+  letter-spacing:.04em;
+  line-height:1.15;
+  padding:.25em 2vw;
+  white-space:nowrap;
+  box-shadow:0 6px 12px rgba(0,0,0,.25);
+  will-change:transform;
+  transform:translate3d(0,0,0); /* gpu hint */
+}
+
+/* Si las querés total-horizontales, poné los ángulos en 0 */
+@media (max-width:768px){
+  .strip{ transform:rotate(0deg); }
+}

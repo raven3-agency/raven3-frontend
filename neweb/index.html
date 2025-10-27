@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Raven3 — Webs, Tiendas Online y SEO Técnico</title>
+    <meta
+      name="description"
+      content="Raven3 crea páginas web a medida, tiendas online y SEO técnico. Demostración con Locomotive Scroll + Three.js"
+    />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="background">
+      <canvas id="particles"></canvas>
+
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <!-- SCROLL CONTAINER -->
+    <main class="scroll-container" data-scroll-container>
+      <!-- HERO with WebGL background -->
+      <header class="hero" data-scroll-section>
+        <div class="hero__inner container">
+          <p class="eyebrow" data-scroll data-scroll-speed="-1">
+            Agencia Digital
+          </p>
+          <h1 data-scroll data-scroll-speed="-2">
+            Diseñamos y <span class="accent">desarrollamos</span
+            ><br />experiencias web con performance real
+          </h1>
+          <p
+            class="kicker"
+            data-scroll
+            data-scroll-delay="0.1"
+            data-scroll-speed="-0.5"
+          >
+            En Raven3 construimos sitios nativos, tiendas online y optimizamos
+            SEO técnico para que tu negocio cargue más rápido, posicione mejor y
+            convierta más.
+          </p>
+          <div class="cta-row" data-scroll data-scroll-speed="-0.3">
+            <a class="btn primary" href="#servicios">Ver servicios</a>
+            <a class="btn" href="#contacto">Charlemos</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Raven strip parallax -->
+      <section aria-label="Ravens" data-scroll-section>
+        <div class="container">
+          <div class="raven-strip" id="ravenStrip"></div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" data-scroll-section>
+        <div class="container">
+          <h2 class="section-title" data-scroll data-scroll-class="is-in">
+            ¿Qué hacemos?
+          </h2>
+          <p class="muted" data-scroll data-scroll-repeat="true">
+            Equipos obsesionados con performance, accesibilidad y SEO técnico.
+          </p>
+          <div class="grid" style="margin-top: 28px">
+            <article class="card" data-scroll data-scroll-speed="0.4">
+              <div class="tag">Frontend</div>
+              <h3>Webs a medida</h3>
+              <p>
+                Interfaces limpias y rápidas con HTML, CSS y JavaScript puro o
+                Angular/React. Animaciones sutiles y percepción de 60fps.
+              </p>
+            </article>
+            <article class="card" data-scroll data-scroll-speed="0.2">
+              <div class="tag">E‑commerce</div>
+              <h3>Tiendas Online</h3>
+              <p>
+                Catálogos, checkout y analítica. Integración con medios de pago
+                y automatizaciones. Arquitectura pensada para escalar.
+              </p>
+            </article>
+            <article class="card" data-scroll data-scroll-speed="0.6">
+              <div class="tag">SEO</div>
+              <h3>SEO Técnico</h3>
+              <p>
+                Core Web Vitals, indexabilidad, datos estructurados y auditorías
+                con acciones concretas para subir posiciones.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Showcase con parallax en imágenes (puedes reemplazar los src) -->
+      <section aria-label="Showcase" data-scroll-section>
+        <div class="container">
+          <h2 class="section-title">Scroll que se siente bien</h2>
+          <div class="showcase" style="margin-top: 20px">
+            <figure class="shot">
+              <img
+                data-scroll
+                data-scroll-speed="-1"
+                src="assets/img/raven.jpg"
+                alt="Raven in flight"
+              />
+            </figure>
+            <figure class="shot">
+              <img
+                data-scroll
+                data-scroll-speed="-0.4"
+                src="assets/img/code.jpg"
+                alt="Code & UI"
+              />
+            </figure>
+            <figure class="shot">
+              <img
+                data-scroll
+                data-scroll-speed="-1.4"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                alt="Team work"
+              />
+            </figure>
+            <figure class="shot">
+              <img
+                data-scroll
+                data-scroll-speed="-0.7"
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+                alt="Laptop code"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee CTA -->
+      <!-- Strips / Banners con movimiento horizontal -->
+<section class="strips" data-scroll-section>
+  <div class="strips-wrap" id="stripsTarget">
+
+    <div class="strip" style="--rot:-6deg">
+      <span class="strip-inner"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="8"
+            data-scroll-target="#stripsTarget">
+        Diseño web • Performance real • Experiencias digitales
+      </span>
+    </div>
+
+    <div class="strip" style="--rot:4deg">
+      <span class="strip-inner"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="-10"
+            data-scroll-target="#stripsTarget">
+        Webs a medida • Tiendas online • SEO técnico
+      </span>
+    </div>
+
+    <div class="strip" style="--rot:-3deg">
+      <span class="strip-inner"
+            data-scroll
+            data-scroll-direction="horizontal"
+            data-scroll-speed="12"
+            data-scroll-target="#stripsTarget"
+            data-scroll-delay="0.05">
+        Velocidad • Diseño con propósito • Resultados reales
+      </span>
+    </div>
+
+  </div>
+</section>
+      <!-- Footer / contacto -->
+      <footer id="contacto" data-scroll-section>
+        <div class="foot">
+          <div class="brand">Raven3</div>
+          <div>
+            <div class="small">
+              ¿Tenés un proyecto? Escribinos y armamos algo increíble.
+            </div>
+            <div class="cta-row" style="margin-top: 1rem">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar"
+                >Contactar por email</a
+              >
+              <a
+                class="btn"
+                href="https://wa.me/549"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="small">Hecho con Locomotive Scroll + Three.js</div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Raven SVG templates injected via JS template strings above -->
+    <script>
+      function ravenSVG() {
+        return `<svg viewBox="0 0 128 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z" fill="#101317" stroke="rgba(55,226,213,.45)" stroke-width="1.25"/></svg>`;
+      }
+      function marqueeUnit() {
+        return `<div class="unit"><svg viewBox="0 0 128 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z" fill="#0f1317"/></svg> Raven3`;
+      }
+    </script>
+
+    <!-- Librerías externas -->
+    <script src="https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+
+    <!-- Tu script principal -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+  </body>
+</html>
