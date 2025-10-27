@@ -239,7 +239,7 @@ section {
 footer {
   padding: 6rem 2rem;
   /* background: linear-gradient(180deg, #0c0e12, #0a0b0e); */
-  border-top: 1px solid #1b1e25;
+  /* border-top: 1px solid #1b1e25; */
 }
 .foot {
   max-width: 1200px;
