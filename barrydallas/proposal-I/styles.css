@@ -1,0 +1,118 @@
+/* styles.css */
+:root {
+  --fg: rgba(255, 255, 255, 0.95);
+  --fgDark: rgba(10, 10, 10, 0.92);
+  --soft: rgba(255, 255, 255, 0.65);
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #000;
+  font-family: ui-serif, Georgia, "Times New Roman", Times, serif;
+}
+
+#app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+#c {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: grid;
+  place-items: center;
+}
+
+.textblock {
+  width: min(980px, 86vw);
+  text-align: center;
+  padding: 28px 18px;
+  transform: translateY(-2vh);
+}
+
+.line {
+  color: var(--fg);
+  letter-spacing: 0.01em;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 600ms ease, transform 600ms ease, color 600ms ease;
+}
+
+.line.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#line1 {
+  font-size: clamp(34px, 4.6vw, 62px);
+  font-weight: 600;
+  line-height: 1.08;
+  margin-bottom: 10px;
+}
+
+#line2 {
+  font-size: clamp(16px, 1.7vw, 22px);
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--soft);
+  font-style: italic;
+}
+
+.phase {
+  position: absolute;
+  left: 14px;
+  bottom: 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  user-select: none;
+  display: none; /* set to block if you want to see phase names */
+}
+
+.skip {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(0,0,0,0.25);
+  color: rgba(255,255,255,0.78);
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 140ms ease, background 180ms ease, border-color 180ms ease;
+  pointer-events: auto;
+}
+
+.skip:hover {
+  transform: translateY(-1px);
+  background: rgba(0,0,0,0.38);
+  border-color: rgba(255,255,255,0.26);
+}
+
+.skip:active { transform: translateY(0); }
+
+/* When the “page” is effectively white, text needs to invert */
+body.white .line {
+  color: var(--fgDark);
+}
+
+body.white #line2 {
+  color: rgba(20,20,20,0.70);
+}

@@ -1,0 +1,32 @@
+<!-- index.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>From Darkness into Light — Concept Prototype</title>
+    <link rel="stylesheet" href="../proposal-I/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="c"></canvas>
+
+      <!-- Text layer -->
+      <div class="overlay" aria-hidden="true">
+        <div class="textblock">
+          <div id="line1" class="line"></div>
+          <div id="line2" class="line"></div>
+        </div>
+
+        <!-- Optional subtle caption for debugging; set display:none in CSS if you want -->
+        <div id="phase" class="phase"></div>
+      </div>
+
+      <!-- Small hint (remove if you want) -->
+      <button id="skip" class="skip" type="button">Skip</button>
+    </div>
+
+    <!-- Three.js (module) -->
+    <script type="module" src="../proposal-I/app.js"></script>
+  </body>
+</html>
