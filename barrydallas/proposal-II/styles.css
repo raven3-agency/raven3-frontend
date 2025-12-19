@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #050507;
+  color: #f2f2f2;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.ui {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center {
+  text-align: center;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(12px);
+  padding: 40px 50px;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+}
+
+.eyebrow {
+  font-size: 12px;
+  letter-spacing: 0.3em;
+  opacity: 0.7;
+}
+
+h1 {
+  margin: 12px 0;
+  font-size: clamp(36px, 6vw, 72px);
+  letter-spacing: 0.12em;
+}
+
+.author {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.instruction {
+  margin-top: 18px;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+.progress {
+  margin: 14px auto 0;
+  width: 260px;
+  height: 6px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#bar {
+  height: 100%;
+  width: 0%;
+  background: #fff;
+}
+
+#skip {
+  margin-top: 14px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+#page2 {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+  z-index: 3;
+}
+
+#page2.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.page2-inner {
+  max-width: 600px;
+  margin: 15vh auto;
+  text-align: center;
+}
