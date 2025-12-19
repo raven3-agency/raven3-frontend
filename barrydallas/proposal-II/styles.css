@@ -26,6 +26,51 @@ canvas {
   justify-content: center;
 }
 
+/* Marquees */
+.marquee{
+  position:fixed;
+  left:0; right:0;
+  height:56px;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  pointer-events:none;
+  z-index:3;
+  background: linear-gradient(to bottom, rgba(5,5,7,.72), rgba(5,5,7,0));
+  backdrop-filter: blur(8px);
+}
+.marquee-bottom{
+  top:auto;
+  bottom:0;
+  background: linear-gradient(to top, rgba(5,5,7,.72), rgba(5,5,7,0));
+}
+.marquee-top{ top:0; }
+
+.track{
+  display:flex;
+  gap:40px;
+  white-space:nowrap;
+  opacity:.55;
+  letter-spacing:.28em;
+  font-weight:600;
+  font-size:12px;
+  text-transform:uppercase;
+}
+.track span{ display:inline-block; padding-left:40px; }
+
+/* Separate animations: right vs left */
+.track-right{ animation: marquee-right 18s linear infinite; }
+.track-left{ animation: marquee-left 22s linear infinite; }
+
+@keyframes marquee-right{
+  from{ transform:translateX(-20%); }
+  to{ transform:translateX(0%); }
+}
+@keyframes marquee-left{
+  from{ transform:translateX(0%); }
+  to{ transform:translateX(-20%); }
+}
+
 .link{
   color: white;
 }
@@ -95,7 +140,7 @@ h1 {
   align-items:flex-start;
   justify-content:center;
   padding: 96px 20px 40px;
-  background: rgba(0,0,0,.68);
+  background: rgb(255, 255, 255);
   backdrop-filter: blur(12px);
   opacity:0;
   pointer-events:none;
