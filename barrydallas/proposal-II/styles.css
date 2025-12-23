@@ -139,6 +139,10 @@ h1 {
   align-items:flex-start;
   justify-content:center;
   padding: 96px 20px 40px;
+
+  overflow-y: auto;              /* ✅ habilita scroll */
+  -webkit-overflow-scrolling: touch; /* ✅ scroll suave iOS */
+  
   background: rgb(255, 255, 255);
   backdrop-filter: blur(12px);
   opacity:0;
@@ -197,24 +201,75 @@ h1 {
   gap: 14px;
   margin-top: 14px;
 }
-.card{
-  border-radius: 16px;
-  border: 1px solid rgba(255,255,255,.12);
-  background: rgba(255,255,255,.05);
-  padding: 16px;
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+.card-media {
+  position: relative;
+  height: 200px;              /* 🔑 CLAVE: tamaño controlado */
+  overflow: hidden;
+  background: #0a0a0d;
+}
+
+@media (max-width: 760px) {
+  .card-media {
+    height: 180px;
+  }
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* recorte cinematográfico */
+  object-position: center top;
+  display: block;
+  opacity: 0.92;
 }
 .card-head{
   display:flex;
   align-items:center;
   justify-content:space-between;
   gap:10px;
+  margin-left: 15px;
 }
-.card h4{ margin:0; }
+.card-head h4 {
+  font-size: 15px;
+  letter-spacing: 0.12em;
+}
+
+.card-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  opacity: 0.8;
+   margin-left: 15px;
+}
+
 .tag{
   font-size:11px;
   letter-spacing:.12em;
   text-transform:uppercase;
   opacity:.7;
+  margin-right: 15px;
+}
+.card-btn{
+    display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.06);
+  color: rgba(255,255,255,.90);
+  text-decoration:none;
+  cursor:pointer;
+  transition: transform .12s ease, background .18s ease, border-color .18s ease;
 }
 
 .btn{
