@@ -52,7 +52,6 @@
         width: 100%;
         padding: 10px 18px;
         text-align: center;
-        text-transform: uppercase;
       }
 
       /* Top title */
@@ -143,9 +142,95 @@
           max-width: 240px;
         }
       }
+
+      /* =========================
+   INTERSTITIAL (before Page 2)
+========================= */
+.interstitial{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.92);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 20;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s ease;
+}
+
+.interstitial.show{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.interstitial-card{
+  width: min(860px, 92vw);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 22px;
+  padding: 28px 26px 22px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.55);
+}
+
+.interstitial-text{
+  color: rgba(255,255,255,0.92);
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.interstitial-text h2{
+  margin: 0 0 14px;
+  font-size: clamp(22px, 3.2vw, 34px);
+  font-weight: 500;
+}
+
+.interstitial-text p{
+  margin: 10px 0;
+  font-size: clamp(14px, 1.9vw, 18px);
+  line-height: 1.55;
+  color: rgba(255,255,255,0.82);
+}
+
+.interstitial-text p.em{
+  font-style: italic;
+  color: rgba(255,255,255,0.90);
+}
+
+/* Loader bar */
+.interstitial-loader{
+  margin-top: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.interstitial-loader .bar{
+  width: min(420px, 70vw);
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.16);
+  overflow: hidden;
+}
+
+.interstitial-loader .bar span{
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: rgba(255,255,255,0.92);
+  transition: width .15s linear;
+}
+
+@media (max-width: 640px){
+  .interstitial-card{ padding: 22px 18px 18px; border-radius: 18px; }
+}
+
     </style>
   </head>
   <body>
+
+    
     <div class="frame" aria-hidden="true"></div>
 
     <header class="band top">
@@ -160,6 +245,38 @@
       Click to create a new point of radiance.<br />
       Click the center to “unlock”.
     </div>
+
+     <!-- Interstitial / Loader before Page 2 -->
+    <div id="interstitial" class="interstitial" aria-hidden="true">
+      <div class="interstitial-card">
+        <div class="interstitial-text">
+          <h2>From Darkness into Light</h2>
+
+          <p>
+            Preceeding pages sequentially unfold:<br />
+            the book's title then adds the author;<br />
+            one raindrop becomes many “concentric waves”<br />
+            in 2D plan erasing/eliminating the black background;
+          </p>
+
+          <p class="em">
+            This page converts concentric plans into 3D spheres continuing to
+            expand and erase/eliminate the black background until it's
+            white/blank;
+          </p>
+
+          <p>
+            adds author then title;<br />
+            and begins again all black.
+          </p>
+        </div>
+
+        <div class="interstitial-loader" aria-hidden="true">
+          <div class="bar"><span id="loaderBar"></span></div>
+        </div>
+      </div>
+    </div>
+    
     <div id="fade" class="fade"></div>
 
     <canvas id="c"></canvas>
