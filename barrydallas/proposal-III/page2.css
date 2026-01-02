@@ -35,9 +35,16 @@ body {
 .page2-inner {
   max-width: 980px;
   margin: 0 auto;
-  border-radius: 22px;
-  overflow: hidden;
-  padding: calc(var(--marqueeH) + 76px) 24px 64px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+   padding: 96px 20px 64px;
+
+  background: #f2f2f2; /* gris muy tenue */
+  border-radius: 22px; /* bordes suaves */
+  border: 1px solid rgba(0, 0, 0, 0.08); /* línea sutil */
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+
+  overflow: hidden; /* respeta bordes */
 }
 
 .marquee {
@@ -46,7 +53,7 @@ body {
   width: 100%;
   height: var(--marqueeH);
   overflow: hidden;
-  background: #fff;
+  background: #000000;
   border-bottom: 1px solid var(--line);
   z-index: 10;
   display: flex;
@@ -68,12 +75,16 @@ body {
   padding-right: 40px;
   font-size: 13px;
   letter-spacing: 2px;
-  color: var(--muted);
+  color: var(--bg);
   text-transform: uppercase;
 }
 
 .track-right {
   animation: marquee-right 28s linear infinite;
+}
+
+.track-left {
+  animation: marquee-left 28s linear infinite;
 }
 
 @keyframes marquee-right {
@@ -82,6 +93,15 @@ body {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 
