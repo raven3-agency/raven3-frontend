@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THE TIME BEING — Page 2</title>
+    <style>
+      /* =========================
+   VARIABLES / BASE
+========================= */
+      :root {
+        --bg: #fff;
+        --fg: #000;
+        --muted: rgba(0, 0, 0, 0.55);
+        --line: rgba(0, 0, 0, 0.15);
+        --accent: #000;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /* =========================
+   PAGE 2 WRAPPER
+========================= */
+      .page2 {
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--fg);
+        overflow-x: hidden;
+      }
+
+      .page2-inner {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 120px 24px 64px;
+      }
+
+      /* =========================
+   MARQUEE
+========================= */
+      .marquee {
+        position: fixed;
+        left: 0;
+        width: 100%;
+        height: 44px;
+        overflow: hidden;
+        background: #fff;
+        border-bottom: 1px solid var(--line);
+        z-index: 10;
+        display: flex;
+  align-items: center;
+      }
+
+
+
+      .track {
+        display: flex;
+        width: max-content;
+      }
+
+      .track span {
+        display: inline-block;
+        white-space: nowrap;
+        padding-right: 40px;
+        font-size: 13px;
+        letter-spacing: 2px;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .track-right {
+        animation: marquee-right 28s linear infinite;
+      }
+
+      @keyframes marquee-right {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+
+      /* =========================
+   HEADER
+========================= */
+      .page2-header {
+        margin-bottom: 64px;
+      }
+
+      .page2-header h2 {
+        margin: 0 0 12px;
+        font-size: clamp(36px, 6vw, 64px);
+        letter-spacing: 2px;
+        font-weight: 700;
+      }
+
+      .page2-header .lead {
+        margin: 0 0 32px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      /* =========================
+   CTA BUTTONS
+========================= */
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 18px;
+        border: 1px solid var(--line);
+        color: var(--fg);
+        background: transparent;
+        text-decoration: none;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.25s ease;
+      }
+
+      .btn:hover {
+        background: #000;
+        color: #fff;
+      }
+
+      .btn.primary {
+        border-color: #000;
+      }
+
+      /* =========================
+   CONTENT BLOCKS
+========================= */
+      .block {
+        margin-bottom: 64px;
+      }
+
+      .block h3 {
+        margin: 0 0 16px;
+        font-size: 22px;
+        letter-spacing: 1px;
+      }
+
+      .block p {
+        max-width: 640px;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      /* =========================
+   SCREENPLAY GRID
+========================= */
+      .grid {
+        margin-top: 32px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+      }
+
+      /* =========================
+   CARD
+========================= */
+      .card {
+        border: 1px solid var(--line);
+        display: flex;
+        background: #fff;
+        flex-direction: column;
+      }
+
+      .card-media {
+        background: #fff;
+      }
+
+      .card-media img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .card-body {
+        padding: 18px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .card-head {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .card-head h4 {
+        margin: 0;
+        font-size: 18px;
+      }
+
+      .tag {
+        font-size: 11px;
+        letter-spacing: 1px;
+        color: var(--muted);
+        text-transform: uppercase;
+      }
+
+      .card-text {
+        font-size: 14px;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+
+      /* =========================
+   CARD BUTTON
+========================= */
+      .card-btn {
+        align-self: flex-start;
+        padding: 8px 14px;
+       border: 1px solid var(--line);
+  color: #000;
+  background: transparent;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.25s ease;
+      }
+
+      .card-btn:hover {
+       background: #000;
+  color: #fff;
+      }
+
+      .card-btn.small {
+        font-size: 11px;
+      }
+
+      /* =========================
+   LINKS
+========================= */
+      .link {
+        color: #000;
+  text-decoration: underline;
+      }
+
+      .link:hover {
+        opacity: 0.75;
+      }
+
+      /* =========================
+   FOOTER
+========================= */
+      .page2-footer {
+        margin-top: 96px;
+        padding-top: 24px;
+        border-top: 1px solid var(--line);
+        font-size: 13px;
+      }
+
+      /* =========================
+   RESPONSIVE
+========================= */
+      @media (max-width: 640px) {
+        .page2-inner {
+          padding-top: 96px;
+        }
+
+        .page2-header h2 {
+          font-size: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="page2" id="page2" aria-hidden="true">
+      <div class="marquee marquee-top" aria-hidden="true">
+        <div class="track track-right">
+          <span>THE TIME BEING — THE NOW — THE TIME BEING — THE NOW — </span>
+          <span>THE TIME BEING — THE NOW — THE TIME BEING — THE NOW — </span>
+          <span>THE TIME BEING — THE NOW — THE TIME BEING — THE NOW — </span>
+        </div>
+      </div>
+
+      <div class="page2-inner">
+        <header class="page2-header">
+          <h2>THE TIME BEING</h2>
+          <p class="lead">Digital release. English edition.</p>
+          <div class="cta-row">
+            <!-- Replace these with real links -->
+            <a class="btn primary" href="#" id="buyLink" rel="noopener"
+              >Buy / Download</a
+            >
+            <a class="btn" href="#screenplays">Screenplays</a>
+            <a class="btn" href="mailto:info@EtienneDeMontebello.com"
+              >Contact</a
+            >
+          </div>
+        </header>
+
+        <article class="block">
+          <h3>About</h3>
+          <p>
+            Written under a pseudonym: <strong>Etienne de Montebello</strong>.
+            This site is intended to remain stable for an initial test window.
+          </p>
+        </article>
+
+        <article class="block" id="screenplays">
+          <h3>Screenplays</h3>
+          <p class="muted">Not for sale. PDF available upon request.</p>
+
+          <div class="grid">
+            <div class="card">
+              <div class="card-media">
+                <img
+                  src="../proposal-II/RB_Poster.jpg"
+                  alt="R 8 B — Poster"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <h4>R 8 B</h4>
+                  <span class="tag">Synopsis + Poster</span>
+                </div>
+
+                <p class="card-text">
+                  Conceptual science-fantasy / magical realism. Art, time, and
+                  recurrence.
+                </p>
+
+                <a
+                  class="card-btn small"
+                  href="mailto:info@EtienneDeMontebello.com?subject=Request%20PDF%20%E2%80%94%20R%208%20B"
+                >
+                  Request PDF
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-media">
+                <img
+                  src="../proposal-II/BR_Poster.jpg"
+                  alt="R 8 B — Poster"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <h4>Brother Redeemer</h4>
+                  <span class="tag">Synopsis + Poster</span>
+                </div>
+
+                <p class="card-text">
+                  A story of identity, inheritance, and the moral weight of
+                  history.
+                </p>
+
+                <a
+                  class="card-btn small"
+                  href="mailto:info@EtienneDeMontebello.com?subject=Request%20PDF%20%E2%80%94%20R%208%20B"
+                >
+                  Request PDF
+                </a>
+              </div>
+            </div>
+
+            <!-- <div class="card">
+              <div class="card-head">
+                <h4>Brother Redeemer</h4>
+                <span class="tag">Synopsis + Poster</span>
+              </div>
+              <p>
+                A story of identity, inheritance, and the moral weight of
+                history.
+              </p>
+              <a
+                class="btn small"
+                href="mailto:info@EtienneDeMontebello.com?subject=Request%20PDF%20%E2%80%94%20Brother%20Redeemer"
+              >
+                Request PDF
+              </a>
+            </div> -->
+          </div>
+        </article>
+
+        <article class="block">
+          <h3>Contact</h3>
+          <p>
+            For inquiries, requests, or collaboration:
+            <a class="link" href="mailto:info@EtienneDeMontebello.com"
+              >info@EtienneDeMontebello.com</a
+            >
+          </p>
+        </article>
+
+        <footer class="page2-footer">
+          <span class="muted"
+            >© <span id="year"></span> Etienne de Montebello</span
+          >
+        </footer>
+      </div>
+    </section>
+  </body>
+</html>

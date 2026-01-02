@@ -1,24 +1,170 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Black Canvas — Deform Grid + Ball</title>
-    <link rel="stylesheet" href="../proposal-III/style.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THE TIME BEING</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #000;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+        width: 100vw;
+        height: 100vh;
+      }
+
+      /* ===== Frame (double-line feel) ===== */
+      .frame {
+        position: fixed;
+        inset: 0px; /* margen exterior */
+        border: 4px solid #fff; /* borde externo grueso */
+        outline: 2px solid #fff; /* borde interno fino */
+        outline-offset: -5px; /* separa el doble borde */
+        pointer-events: none;
+        z-index: 4;
+      }
+
+      /* ===== Top & bottom bands ===== */
+      .band {
+        position: fixed;
+        left: 12px;
+        right: 12px;
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        pointer-events: none;
+        z-index: 5;
+      }
+
+      .band-inner {
+        padding: 10px 18px;
+        background: rgba(0, 0, 0, 0); /* 0.15 si querés más contraste */
+        width: 100%;
+        padding: 10px 18px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+
+      /* Top title */
+      .band.top {
+        top: 12px;
+        font-size: clamp(42px, 7vw, 86px);
+        line-height: 1;
+        text-align: center;
+      }
+
+      /* Bottom author */
+      .band.bottom {
+        bottom: 12px;
+        font-size: clamp(34px, 7vw, 80px);
+        line-height: 1;
+        text-transform: none; /* autor como nombre propio */
+      }
+      /* ===== Hint ===== */
+      .hint {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: rgba(255, 255, 255, 0.35);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-align: center;
+
+        z-index: 6;
+        user-select: none;
+        pointer-events: none;
+      }
+      /* ===== Fade ===== */
+      .fade {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 700ms ease;
+        z-index: 7;
+      }
+      .fade.on {
+        opacity: 1;
+      }
+
+      @media (max-width: 640px) {
+
+  /* Marco un poco más fino */
+  .frame {
+    inset: 0px;
+    border-width: 3px;
+    outline-width: 2px;
+    outline-offset: -5px;
+  }
+
+  /* Bandas ocupan todo el ancho */
+  .band {
+    left: 8px;
+    right: 8px;
+  }
+
+  /* TEXTO SUPERIOR */
+  .band.top .band-inner {
+    font-size: clamp(26px, 9vw, 40px);
+    letter-spacing: 2px;
+    text-align: left;      /* 👈 clave */
+    white-space: normal;   /* permite salto controlado */
+  }
+
+  /* TEXTO INFERIOR */
+  .band.bottom .band-inner {
+    font-size: clamp(22px, 9vw, 36px);
+    letter-spacing: 1.5px;
+    text-align: left;
+    white-space: normal;
+  }
+
+  /* desactivamos justify hack en mobile */
+  .band-inner::after {
+    display: none;
+  }
+
+  /* Hint más chica */
+  .hint {
+    font-size: 12px;
+    max-width: 240px;
+  }
+}
+    </style>
   </head>
-
   <body>
-    <div id="wrap">
-      <canvas id="c"></canvas>
+    <div class="frame" aria-hidden="true"></div>
 
-      <div class="hud">
-        <div class="title">BLACK CANVAS</div>
-        <div class="hint">
-          Mouse mueve la bola. Click para soltarla. Pasá el mouse encima para agarrarla.
-        </div>
-      </div>
+    <header class="band top">
+      <div class="band-inner">THE TIME BEING</div>
+    </header>
+
+    <footer class="band bottom">
+      <div class="band-inner">Etienne de Montebello</div>
+    </footer>
+
+    <div class="hint">
+      Click to create a new point of radiance.<br />
+      Click the center to “unlock”.
     </div>
+    <div id="fade" class="fade"></div>
 
-    <script type="module" src="../proposal-III/main.js"></script>
+    <canvas id="c"></canvas>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
