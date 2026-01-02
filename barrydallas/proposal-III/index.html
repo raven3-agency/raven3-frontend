@@ -102,48 +102,47 @@
       }
 
       @media (max-width: 640px) {
+        /* Marco un poco más fino */
+        .frame {
+          inset: 0px;
+          border-width: 3px;
+          outline-width: 2px;
+          outline-offset: -5px;
+        }
 
-  /* Marco un poco más fino */
-  .frame {
-    inset: 0px;
-    border-width: 3px;
-    outline-width: 2px;
-    outline-offset: -5px;
-  }
+        /* Bandas ocupan todo el ancho */
+        .band {
+          left: 8px;
+          right: 8px;
+        }
 
-  /* Bandas ocupan todo el ancho */
-  .band {
-    left: 8px;
-    right: 8px;
-  }
+        /* TEXTO SUPERIOR */
+        .band.top .band-inner {
+          font-size: clamp(26px, 9vw, 40px);
+          letter-spacing: 2px;
+          text-align: left; /* 👈 clave */
+          white-space: normal; /* permite salto controlado */
+        }
 
-  /* TEXTO SUPERIOR */
-  .band.top .band-inner {
-    font-size: clamp(26px, 9vw, 40px);
-    letter-spacing: 2px;
-    text-align: left;      /* 👈 clave */
-    white-space: normal;   /* permite salto controlado */
-  }
+        /* TEXTO INFERIOR */
+        .band.bottom .band-inner {
+          font-size: clamp(22px, 9vw, 36px);
+          letter-spacing: 1.5px;
+          text-align: left;
+          white-space: normal;
+        }
 
-  /* TEXTO INFERIOR */
-  .band.bottom .band-inner {
-    font-size: clamp(22px, 9vw, 36px);
-    letter-spacing: 1.5px;
-    text-align: left;
-    white-space: normal;
-  }
+        /* desactivamos justify hack en mobile */
+        .band-inner::after {
+          display: none;
+        }
 
-  /* desactivamos justify hack en mobile */
-  .band-inner::after {
-    display: none;
-  }
-
-  /* Hint más chica */
-  .hint {
-    font-size: 12px;
-    max-width: 240px;
-  }
-}
+        /* Hint más chica */
+        .hint {
+          font-size: 12px;
+          max-width: 240px;
+        }
+      }
     </style>
   </head>
   <body>

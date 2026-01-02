@@ -183,3 +183,14 @@ function tick(){
   requestAnimationFrame(tick);
 }
 tick();
+
+function showPage2() {
+  if (page2Shown) return;
+  page2Shown = true;
+
+  document.getElementById("fade")?.classList.add("on");
+
+  setTimeout(() => {
+    page2.classList.add("show");
+  }, 600);
+}

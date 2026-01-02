@@ -1,0 +1,276 @@
+:root {
+  --bg: #fff;
+  --fg: #000;
+  --muted: rgba(0, 0, 0, 0.55);
+  --line: rgba(0, 0, 0, 0.15);
+  --accent: #000;
+  --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  --marqueeH: 44px; /* 👈 para compensar el header fijo */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.page2 {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+.page2.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.page2-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  border-radius: 22px;
+  overflow: hidden;
+  padding: calc(var(--marqueeH) + 76px) 24px 64px;
+}
+
+.marquee {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: var(--marqueeH);
+  overflow: hidden;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.marquee-top {
+  top: 0;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+}
+
+.track span {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 40px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.track-right {
+  animation: marquee-right 28s linear infinite;
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.page2 .marquee {
+  position: sticky;
+  top: 0;
+}
+
+.page2-header {
+  margin-bottom: 64px;
+}
+
+.page2-header h2 {
+  margin: 0 0 12px;
+  font-size: clamp(36px, 6vw, 64px);
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.page2-header .lead {
+  margin: 0 0 32px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid var(--line);
+  color: var(--fg);
+  background: transparent;
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  border-radius: 999px;
+}
+
+.btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.btn.primary {
+  border-color: #000;
+}
+
+.block {
+  margin-bottom: 64px;
+}
+
+.block h3 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.block p {
+  max-width: 640px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.card {
+  border: 1px solid var(--line);
+  display: flex;
+  background: #fff;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.card-media {
+  background: #fff;
+  height: 200px;
+  border-radius: 18px 18px 0 0;
+  overflow: hidden;
+}
+
+.card-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.card-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-head h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.tag {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.card-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.card-btn {
+  align-self: flex-start;
+  padding: 8px 14px;
+  border: 1px solid var(--line);
+  color: #000;
+  background: transparent;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.25s ease;
+  border-radius: 999px;
+}
+
+.card-btn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.card-btn.small {
+  font-size: 11px;
+}
+
+.link {
+  color: #000;
+  text-decoration: underline;
+}
+
+.link:hover {
+  opacity: 0.75;
+}
+
+.page2-footer {
+  margin-top: 96px;
+  padding-top: 24px;
+  font-size: 13px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --marqueeH: 48px;
+  }
+
+  .page2-inner {
+    padding-top: calc(var(--marqueeH) + 48px);
+  }
+
+  .page2-header h2 {
+    font-size: 40px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
