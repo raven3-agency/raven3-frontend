@@ -241,8 +241,8 @@ body {
   align-self: flex-start;
   padding: 8px 14px;
   border: 1px solid var(--line);
-  color: #000;
-  background: transparent;
+  color: white;
+  background: #000;
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 1px;
