@@ -155,6 +155,7 @@ function addOriginAt(clientX, clientY){
 }
 
 function handleTap(clientX, clientY) {
+  if (enteringPage2) return;
   const rect = canvas.getBoundingClientRect();
   const x = (clientX - rect.left) / rect.width;
   const y = 1.0 - (clientY - rect.top) / rect.height;
@@ -230,8 +231,12 @@ function enterPage2WithInterstitial(onDone) {
   }, INTERSTITIAL_MS);
 }
 
-interstitial?.addEventListener("click", () => {
+interstitial?.addEventListener("pointerdown", (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
   if (!enteringPage2) return;
+
   interstitial.classList.remove("show");
   fadeEl.classList.add("on");
   setTimeout(() => {
