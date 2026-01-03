@@ -154,23 +154,33 @@ function addOriginAt(clientX, clientY){
   mat.uniforms.uOrigins.value = origins;
 }
 
-window.addEventListener("click", (e) => {
-  // If click near center => unlock
+function handleTap(clientX, clientY) {
   const rect = canvas.getBoundingClientRect();
-  const x = (e.clientX - rect.left) / rect.width;
-  const y = 1.0 - (e.clientY - rect.top) / rect.height;
+  const x = (clientX - rect.left) / rect.width;
+  const y = 1.0 - (clientY - rect.top) / rect.height;
 
   const dx = x - 0.5;
   const dy = y - 0.5;
-  const dist = Math.sqrt(dx*dx + dy*dy);
+  const dist = Math.sqrt(dx * dx + dy * dy);
 
   if (dist < 0.06) {
     unlockToPage2();
     return;
   }
 
-  addOriginAt(e.clientX, e.clientY);
-});
+  addOriginAt(clientX, clientY);
+}
+
+window.addEventListener(
+  "pointerdown",
+  (e) => {
+    // Si tocás un botón/overlay, no generes círculos
+    if (e.target && e.target.closest && e.target.closest("#enterBtn, #interstitial")) return;
+
+    handleTap(e.clientX, e.clientY);
+  },
+  { passive: true }
+);
 
 // Animate
 function tick(){

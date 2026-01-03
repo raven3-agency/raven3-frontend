@@ -19,6 +19,7 @@
         display: block;
         width: 100vw;
         height: 100vh;
+        touch-action: none;
       }
 
       /* ===== Frame (double-line feel) ===== */
@@ -92,7 +93,9 @@
 
         transition: opacity 0.25s ease, border-color 0.25s ease,
           transform 0.25s ease;
-          border-radius: 25px;
+        border-radius: 25px;
+        -webkit-tap-highlight-color: transparent;
+        touch-action: manipulation;
       }
 
       .enter-btn span {
