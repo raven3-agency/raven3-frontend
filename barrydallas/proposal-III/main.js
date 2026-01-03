@@ -243,3 +243,8 @@ interstitial?.addEventListener("pointerdown", (e) => {
     window.location.href = "./page2.html";
   }, 720);
 });
+const enterBtn = document.getElementById("enterBtn");
+
+enterBtn?.addEventListener("click", () => {
+  unlockToPage2();
+});
