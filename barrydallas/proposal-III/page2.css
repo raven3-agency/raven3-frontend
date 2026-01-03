@@ -5,7 +5,7 @@
   --line: rgba(0, 0, 0, 0.15);
   --accent: #000;
   --shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
-  --marqueeH: 44px; /* 👈 para compensar el header fijo */
+  --marqueeH: 44px; 
 }
 
 * {
@@ -37,14 +37,12 @@ body {
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 50px;
-   padding: 96px 20px 64px;
-
-  background: #f2f2f2; /* gris muy tenue */
-  border-radius: 22px; /* bordes suaves */
-  border: 1px solid rgba(0, 0, 0, 0.08); /* línea sutil */
+  padding: 96px 20px 64px;
+  background: #f4f3f1; 
+  border-radius: 22px; 
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
-
-  overflow: hidden; /* respeta bordes */
+  overflow: hidden; 
 }
 
 .marquee {
