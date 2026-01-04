@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+/* Canvas */
+canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  touch-action: none;
+}
+
+/* Frame */
+.frame {
+  position: fixed;
+  inset: 6px;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+  z-index: 4;
+}
+
+/* Top & bottom bands */
+.band {
+  position: fixed;
+  left: 12px;
+  right: 12px;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.band-inner {
+  padding: 10px 18px;
+  text-align: center;
+}
+
+/* Title */
+.band.top {
+  top: 12px;
+  font-size: clamp(42px, 7vw, 86px);
+  line-height: 1;
+}
+
+/* Author */
+.band.bottom {
+  bottom: 12px;
+  font-size: clamp(34px, 7vw, 80px);
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
+/* Enter button */
+.enter-btn {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 16px 28px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  z-index: 6;
+  transition: opacity 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  border-radius: 25px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.enter-btn span {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.65;
+  text-transform: none;
+}
+
+.enter-btn:hover {
+  border-color: rgba(255, 255, 255, 0.85);
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.enter-btn:active {
+  transform: translate(-50%, -50%) scale(0.98);
+}
+
+.enter-btn:focus {
+  outline: none;
+}
+
+/* Fade to next page */
+.fade {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 700ms ease;
+  z-index: 30;
+}
+.fade.on {
+  opacity: 1;
+}
+
+/* Interstitial loader (sin texto narrativo) */
+.interstitial {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s ease;
+}
+
+.interstitial.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.interstitial-card {
+  width: min(560px, 92vw);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 22px;
+  padding: 22px 22px 18px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  text-align: center;
+}
+
+.interstitial-loader {
+  display: flex;
+  justify-content: center;
+}
+
+.interstitial-loader .bar {
+  width: min(420px, 70vw);
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: hidden;
+}
+
+.interstitial-loader .bar span {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: rgba(255, 255, 255, 0.92);
+  transition: width 0.15s linear;
+}
+
+.interstitial-hint {
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Mobile tweaks */
+@media (max-width: 640px) {
+  .frame {
+    inset: 0px;
+    border-width: 3px;
+  }
+  .band {
+    left: 8px;
+    right: 8px;
+  }
+  .band.top .band-inner,
+  .band.bottom .band-inner {
+    text-align: left;
+    white-space: normal;
+  }
+  .band.top .band-inner {
+    font-size: clamp(26px, 9vw, 40px);
+  }
+  .band.bottom .band-inner {
+    font-size: clamp(22px, 9vw, 36px);
+  }
+}

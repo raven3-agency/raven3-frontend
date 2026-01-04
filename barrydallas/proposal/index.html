@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THE TIME BEING</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="frame" aria-hidden="true"></div>
+
+    <header class="band top" aria-label="Title">
+      <div class="band-inner">THE TIME BEING</div>
+    </header>
+
+    <footer class="band bottom" aria-label="Author">
+      <div class="band-inner">Etienne de Montebello</div>
+    </footer>
+
+    <button id="enterBtn" class="enter-btn" aria-label="Enter experience">
+      Enter<br />
+      <span>Begin Now</span>
+    </button>
+
+    <!-- Interstitial: solo loader (sin texto) -->
+    <div id="interstitial" class="interstitial" aria-hidden="true">
+      <div class="interstitial-card">
+        <div class="interstitial-loader" aria-hidden="true">
+          <div class="bar"><span id="loaderBar"></span></div>
+        </div>
+        <div class="interstitial-hint" aria-hidden="true">
+          Loading…
+        </div>
+      </div>
+    </div>
+
+    <div id="fade" class="fade" aria-hidden="true"></div>
+
+    <canvas id="c"></canvas>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
