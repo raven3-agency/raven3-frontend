@@ -1,37 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>From Darkness into Light</title>
+    <title>proposal-V</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="page">
-      <h1 class="title">From Darkness into Light</h1>
+    <!-- Text UI -->
+    <div id="ui">
+      <div id="title" class="txt top">The Time Being</div>
+      <div id="author" class="txt bottom">Ettiene de Montebello</div>
+    </div>
 
-      <section class="content" aria-label="Text content">
-        <p class="lead">
-          <strong>Preceeding pages sequentially unfold:</strong><br />
-          the book's title then adds the author;<br />
-          one raindrop becomes many “concentric waves”<br />
-          in 2D plan erasing/eliminating the black<br />
-          background;
-        </p>
+    <!-- Visual layers -->
+    <canvas id="ripple"></canvas>
+    <canvas id="webgl"></canvas>
 
-        <p class="italic">
-          This page converts concentric plans into 3D<br />
-          spheres continuing to expand and erase/eliminate<br />
-          the black background until it's white/blank;
-        </p>
-
-        <p class="tail">
-          adds author then title;<br />
-          and begins again all black.
-        </p>
-      </section>
-    </main>
-
+    <!-- Three.js -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

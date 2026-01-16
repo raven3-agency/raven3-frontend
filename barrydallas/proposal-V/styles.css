@@ -1,71 +1,55 @@
-/* Base reset */
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: #000; }
 
-:root {
-  --bg: #ffffff;
-  --text: #111111;
+#ripple, #webgl {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
-/* Page layout */
-body {
-  background: var(--bg);
-  color: var(--text);
-  display: grid;
-  place-items: center;
-  padding: clamp(16px, 4vw, 48px);
-  font-family: Georgia, "Times New Roman", Times, serif;
+#ui {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
 }
 
-.page {
-  width: min(920px, 100%);
-  text-align: center;
-}
-
-/* Title */
-.title {
-  font-weight: 400;
-  font-size: clamp(34px, 4vw, 56px);
-  line-height: 1.1;
-  margin: 0 0 clamp(18px, 3vw, 34px);
-}
-
-/* Content block */
-.content {
-  font-size: clamp(22px, 2.4vw, 34px);
-  line-height: 1.25;
-}
-
-/* Paragraph spacing similar to the image */
-.content p {
-  margin: 0;
-}
-
-/* Strong lead line */
-.lead strong {
-  font-weight: 700;
-}
-
-/* Italic section */
-.italic {
-  font-style: italic;
-  margin-top: clamp(12px, 2vw, 18px);
-  margin-bottom: clamp(12px, 2vw, 18px);
-}
-
-/* Tail block */
-.tail {
-  margin-top: clamp(6px, 1.5vw, 12px);
-}
-
-/* Optional subtle fade-in */
-.page {
+/* Text placement: title top, author bottom */
+.txt {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Times New Roman", Times, Georgia, serif;
+  letter-spacing: 0.02em;
+  color: #fff;
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 700ms ease, transform 700ms ease;
+  transition: opacity 900ms ease;
+  text-align: center;
+  width: min(92vw, 960px);
+  user-select: none;
 }
 
-.page.is-ready {
-  opacity: 1;
-  transform: translateY(0);
+.txt.top {
+  top: 6.5vh;
+  font-size: clamp(36px, 4.3vw, 64px);
+  line-height: 1.05;
 }
+
+.txt.bottom {
+  bottom: 7vh;
+  font-size: clamp(18px, 2.0vw, 30px);
+  line-height: 1.15;
+}
+
+/* When background flips to white, we invert text color via a body class */
+body.is-white .txt { color: #000; }
+
+/* Layering: ripple above webgl early, then we crossfade */
+#webgl { z-index: 1; }
+#ripple { z-index: 2; }
+
+/* Crossfade helpers controlled by JS */
+.fade-out { opacity: 0; transition: opacity 1200ms ease; }
+.fade-in  { opacity: 1; transition: opacity 1200ms ease; }
