@@ -1,0 +1,62 @@
+:root {
+  --bg: #000;
+  --fg: #fff;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: var(--bg);
+  overflow: hidden;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.top {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+  text-align: center;
+  pointer-events: none;
+  color: var(--fg);
+}
+
+#title {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-size: clamp(36px, 5vw, 72px);
+  line-height: 1.05;
+}
+
+#author {
+  margin-top: 10px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  font-size: clamp(16px, 1.8vw, 24px);
+  opacity: 0.92;
+}
+
+/* White wipe overlay */
+#wipe {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 900ms ease-in-out;
+  pointer-events: none;
+}
+#wipe.is-on {
+  opacity: 1;
+}
