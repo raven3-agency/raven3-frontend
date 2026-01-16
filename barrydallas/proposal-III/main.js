@@ -214,7 +214,7 @@ tick();
 // ==============================
 // Interstitial (loader) before Page 2
 // ==============================
-const INTERSTITIAL_MS = 10000;
+const INTERSTITIAL_MS = 2000;
 
 const interstitial = document.getElementById("interstitial");
 const loaderBar = document.getElementById("loaderBar");
