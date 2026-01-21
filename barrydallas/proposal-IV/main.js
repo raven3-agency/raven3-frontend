@@ -100,10 +100,10 @@ const fragmentShader = /* glsl */`
     float band = abs(d - r);
 
     // grosor del anillo (disminuye con el tiempo)
-    float thickness = mix(0.010, 0.0025, clamp(t / 4.5, 0.0, 1.0));
+    float thickness = mix(0.0048, 0.0011, clamp(t / 4.8, 0.0, 1.0));
 
     // intensidad base
-    float wave = exp(-band * (1.0 / thickness));
+    float wave = exp(-band * (1.15 / thickness));
 
     // modulación senoidal para un look más “acuático”
     float osc = 0.5 + 0.5 * sin((d - r) * freq);
@@ -139,7 +139,7 @@ const fragmentShader = /* glsl */`
 
     // Curva para que se vean bien sobre negro
     float intensity = clamp(accum, 0.0, 1.0);
-    intensity = pow(intensity, 0.72);
+    intensity = pow(intensity, 0.62);
 
     vec3 col = mix(uBg, uLine, intensity);
 
