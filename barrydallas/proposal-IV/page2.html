@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -10,6 +10,13 @@
   <body>
     <main class="page2" id="page2">
       <header class="hero">
+        <div class="theme-toggle" aria-label="Theme toggle">
+          <button id="themeToggle" type="button" aria-pressed="false">
+            <span class="label light">White</span>
+            <span class="switch"></span>
+            <span class="label dark">Black</span>
+          </button>
+        </div>
         <div class="hero-inner">
           <p class="kicker">Digital release</p>
 
@@ -32,7 +39,11 @@
             <a class="btn" href="#screenplays">Screenplays</a>
 
             <!-- TODO: Replace with final website URL if different -->
-            <a class="btn" href="https://EtienneDeMontebello.com" rel="noopener">
+            <a
+              class="btn"
+              href="https://EtienneDeMontebello.com"
+              rel="noopener"
+            >
               Website
             </a>
 
@@ -58,8 +69,8 @@
               <!-- Barry will accommodate length; this block is designed to flex. -->
               <p class="lead">
                 <!-- TODO: Replace with Barry’s final blurb -->
-                A speculative story grounded in the idea that time is not linear —
-                there is no past, there is no future: there is only the Now.
+                A speculative story grounded in the idea that time is not linear
+                — there is no past, there is no future: there is only the Now.
               </p>
 
               <p class="muted small">
@@ -71,7 +82,10 @@
               <div class="cta-row">
                 <!-- TODO: Replace with ECWID / PublishDrive URL -->
                 <a class="btn primary" href="#" rel="noopener">Get the eBook</a>
-                <a class="btn ghost" href="mailto:info@EtienneDeMontebello.com?subject=THE%20TIME%20BEING%20%E2%80%94%20eBook%20Help">
+                <a
+                  class="btn ghost"
+                  href="mailto:info@EtienneDeMontebello.com?subject=THE%20TIME%20BEING%20%E2%80%94%20eBook%20Help"
+                >
                   Need help?
                 </a>
               </div>
@@ -105,7 +119,8 @@
           <div class="panel-head">
             <h2 id="sp">Screenplays</h2>
             <p class="muted">
-              The screenplays are subservient. Posters are shown in full; blurbs are minimal.
+              The screenplays are subservient. Posters are shown in full; blurbs
+              are minimal.
             </p>
           </div>
 
@@ -114,11 +129,7 @@
             <article class="card">
               <div class="poster">
                 <!-- TODO: Replace with cleaned poster path once you fix file -->
-                <img
-                  src="RB_Poster.jpg"
-                  alt="R 8 B — Poster"
-                  loading="lazy"
-                />
+                <img src="RB_Poster.jpg" alt="R 8 B — Poster" loading="lazy" />
               </div>
 
               <div class="card-body">
@@ -181,19 +192,39 @@
             <h2 id="contact">Contact</h2>
             <p class="muted">
               For inquiries, requests, or collaboration:
-              <a class="link" href="mailto:info@EtienneDeMontebello.com">info@EtienneDeMontebello.com</a>
+              <a class="link" href="mailto:info@EtienneDeMontebello.com"
+                >info@EtienneDeMontebello.com</a
+              >
             </p>
           </div>
         </section>
 
         <footer class="footer">
-          <span class="muted small">© <span id="year"></span> Etienne de Montebello</span>
+          <span class="muted small"
+            >© <span id="year"></span> Etienne de Montebello</span
+          >
         </footer>
       </section>
 
       <script>
         // purely convenience
         document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+      <script>
+        const root = document.documentElement;
+        const toggle = document.getElementById("themeToggle");
+
+        const savedTheme = localStorage.getItem("page2-theme");
+        if (savedTheme === "dark") {
+          root.classList.add("theme-dark");
+          toggle.setAttribute("aria-pressed", "true");
+        }
+
+        toggle.addEventListener("click", () => {
+          const isDark = root.classList.toggle("theme-dark");
+          toggle.setAttribute("aria-pressed", String(isDark));
+          localStorage.setItem("page2-theme", isDark ? "dark" : "light");
+        });
       </script>
     </main>
   </body>
