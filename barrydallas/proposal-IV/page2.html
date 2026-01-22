@@ -1,27 +1,200 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>proposal-IV</title>
-    <style>
-      html, body { margin: 0; height: 100%; }
-      body {
-        background: #fff;
-        color: #000;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        display: grid;
-        place-items: center;
-      }
-      .wrap { text-align: center; max-width: 900px; padding: 48px; }
-      h2 { margin: 0 0 10px; font-size: 44px; letter-spacing: 0.02em; }
-      p { margin: 0; font-size: 18px; line-height: 1.6; opacity: 0.85; }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>THE TIME BEING — Page 2</title>
+    <link rel="stylesheet" href="page2.css" />
   </head>
+
   <body>
-    <div class="wrap">
-      <h2>Page 2</h2>
-      <p>Page two content, this will be focussed later</p>
-    </div>
+    <main class="page2" id="page2">
+      <header class="hero">
+        <div class="hero-inner">
+          <p class="kicker">Digital release</p>
+
+          <h1 class="title">THE TIME BEING</h1>
+          <p class="subtitle">A Story For All Ages</p>
+
+          <div class="meta">
+            <span class="by">Etienne de Montebello</span>
+            <span class="dot" aria-hidden="true">•</span>
+            <span class="edition">English edition</span>
+          </div>
+
+          <nav class="cta" aria-label="Primary actions">
+            <!-- TODO: Replace with ECWID / PublishDrive URL -->
+            <a class="btn primary" href="#" id="ebookLink" rel="noopener">
+              Download eBook
+            </a>
+
+            <!-- Optional: if you prefer separate “Buy” vs “Download”, split it later -->
+            <a class="btn" href="#screenplays">Screenplays</a>
+
+            <!-- TODO: Replace with final website URL if different -->
+            <a class="btn" href="https://EtienneDeMontebello.com" rel="noopener">
+              Website
+            </a>
+
+            <a class="btn" href="mailto:info@EtienneDeMontebello.com">
+              Email
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <section class="content">
+        <!-- Primary emphasis block -->
+        <section class="panel panel-primary" aria-labelledby="ebook">
+          <div class="panel-head">
+            <h2 id="ebook">eBook Download</h2>
+            <p class="muted">
+              THE TIME BEING is available for download as an eBook.
+            </p>
+          </div>
+
+          <div class="panel-grid">
+            <div class="panel-copy">
+              <!-- Barry will accommodate length; this block is designed to flex. -->
+              <p class="lead">
+                <!-- TODO: Replace with Barry’s final blurb -->
+                A speculative story grounded in the idea that time is not linear —
+                there is no past, there is no future: there is only the Now.
+              </p>
+
+              <p class="muted small">
+                <!-- TODO: Replace when you receive PublishDrive details -->
+                Distribution details and storefront links will be finalized once
+                accounts are connected.
+              </p>
+
+              <div class="cta-row">
+                <!-- TODO: Replace with ECWID / PublishDrive URL -->
+                <a class="btn primary" href="#" rel="noopener">Get the eBook</a>
+                <a class="btn ghost" href="mailto:info@EtienneDeMontebello.com?subject=THE%20TIME%20BEING%20%E2%80%94%20eBook%20Help">
+                  Need help?
+                </a>
+              </div>
+            </div>
+
+            <aside class="panel-side" aria-label="Quick info">
+              <div class="info-card">
+                <div class="info-row">
+                  <span class="label">Format</span>
+                  <span class="value">eBook</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Audience</span>
+                  <span class="value">PG / All Ages</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Language</span>
+                  <span class="value">English</span>
+                </div>
+                <div class="info-row">
+                  <span class="label">Author</span>
+                  <span class="value">Etienne de Montebello</span>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+
+        <!-- Secondary block: Screenplays (subservient) -->
+        <section class="panel" id="screenplays" aria-labelledby="sp">
+          <div class="panel-head">
+            <h2 id="sp">Screenplays</h2>
+            <p class="muted">
+              The screenplays are subservient. Posters are shown in full; blurbs are minimal.
+            </p>
+          </div>
+
+          <div class="cards">
+            <!-- Card 1 -->
+            <article class="card">
+              <div class="poster">
+                <!-- TODO: Replace with cleaned poster path once you fix file -->
+                <img
+                  src="../proposal-III/RB_Poster.jpg"
+                  alt="R 8 B — Poster"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <h3 class="card-title">R 8 B</h3>
+                  <span class="tag">Poster</span>
+                </div>
+
+                <!-- Minimal blurb -->
+                <p class="card-text">
+                  <!-- TODO: Replace with Barry’s minimal blurb -->
+                  Synopsis available upon request.
+                </p>
+
+                <a
+                  class="btn small"
+                  href="mailto:info@EtienneDeMontebello.com?subject=Request%20PDF%20%E2%80%94%20R%208%20B"
+                >
+                  Request PDF
+                </a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+              <div class="poster">
+                <!-- TODO: Replace with cleaned poster path once you fix file -->
+                <img
+                  src="../proposal-III/BR_Poster.jpg"
+                  alt="Brother Redeemer — Poster"
+                  loading="lazy"
+                />
+              </div>
+
+              <div class="card-body">
+                <div class="card-head">
+                  <h3 class="card-title">Brother Redeemer</h3>
+                  <span class="tag">Poster</span>
+                </div>
+
+                <p class="card-text">
+                  <!-- TODO: Replace with Barry’s minimal blurb -->
+                  Synopsis available upon request.
+                </p>
+
+                <a
+                  class="btn small"
+                  href="mailto:info@EtienneDeMontebello.com?subject=Request%20PDF%20%E2%80%94%20Brother%20Redeemer"
+                >
+                  Request PDF
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Contact (simple) -->
+        <section class="panel" aria-labelledby="contact">
+          <div class="panel-head">
+            <h2 id="contact">Contact</h2>
+            <p class="muted">
+              For inquiries, requests, or collaboration:
+              <a class="link" href="mailto:info@EtienneDeMontebello.com">info@EtienneDeMontebello.com</a>
+            </p>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <span class="muted small">© <span id="year"></span> Etienne de Montebello</span>
+        </footer>
+      </section>
+
+      <script>
+        // purely convenience
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </main>
   </body>
 </html>
