@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Clientes | Raven3</title>
+
+    <meta
+      name="description"
+      content="Algunos de nuestros clientes: webs a medida, tiendas online y casos de SEO técnico con foco en performance."
+    />
+    <link rel="canonical" href="https://raven3.com.ar/clientes.html" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Base (misma que index) -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Solo clientes -->
+    <link rel="stylesheet" href="assets/css/clientes.css" />
+
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+  </head>
+
+  <body>
+    <div id="background">
+      <canvas id="particles"></canvas>
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <main class="scroll-container" data-scroll-container>
+      <!-- Top bar minimal (coherente con home) -->
+      <header class="topbar" data-scroll-section>
+        <div class="container topbar__inner">
+          <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
+            ><img
+              src="../assets/img/logo.png"
+              alt="logo de raven3"
+              class="img-fluid"
+              width="100px"
+              height="40px"
+          /></a>
+
+          <nav class="topbar__nav" aria-label="Navegación principal">
+            <!-- <a class="topbar__link" href="index.html#servicios">Servicios</a> -->
+            <!-- <a class="topbar__link is-active" href="clientes.html">Clientes</a> -->
+            <!-- <a class="topbar__link" href="index.html#contacto">Contacto</a> -->
+          </nav>
+
+          <a class="btn btn-sm primary" href="index.html#contacto">Charlemos</a>
+        </div>
+      </header>
+
+      <!-- HERO -->
+      <section class="clients-hero" data-scroll-section>
+        <div class="container">
+          <p class="eyebrow" data-scroll data-scroll-speed="-1">Portfolio</p>
+          <h1 data-scroll data-scroll-speed="-2">
+            Algunos <span class="accent">clientes</span><br />y proyectos
+            recientes
+          </h1>
+          <p class="kicker muted" data-scroll data-scroll-speed="-0.4">
+            Webs a medida, tiendas online y SEO técnico. Menos humo, más
+            performance.
+          </p>
+
+          <div class="filters" data-scroll data-scroll-speed="-0.2">
+            <button class="chip is-active" data-filter="all" type="button">
+              Todos
+            </button>
+            <button class="chip" data-filter="web" type="button">Webs</button>
+            <button class="chip" data-filter="tienda" type="button">
+              Tiendas
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID -->
+      <section
+        class="clients"
+        data-scroll-section
+        aria-label="Listado de clientes"
+      >
+        <div class="container">
+          <div class="clients-grid" id="clientsGrid">
+            <!-- ITEM -->
+            <article class="client-card" data-type="web">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="assets/img/portfolio/WEB/lassen/LassenPharma_Logo.png"
+                aria-label="Ver imagen de Lassen Pharma"
+              >
+                <img
+                  src="../assets/img/portfolio/WEB/lassen/logo.png"
+                  alt="Logo de Lassen Pharma"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Web</div>
+                <h3>Lassen Pharma</h3>
+                <p class="muted">
+                  Web corporativa con foco en performance y SEO técnico.
+                </p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://www.lassen.ar/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir al sitio
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card" data-type="web">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="assets/img/portfolio/WEB/ndbpropiedades/web.png"
+                aria-label="Ver imagen de NDB Propiedades"
+              >
+                <img
+                  src="../assets/img/portfolio/WEB/ndbpropiedades/logo.png"
+                  alt="Logo de NDB Propiedades"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Web</div>
+                <h3>NDB Propiedades</h3>
+                <p class="muted">Web + integración con API Tokko Broker.</p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://www.ndbpropiedades.com.ar/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir al sitio
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card" data-type="web">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="assets/img/portfolio/WEB/beforce/web.png"
+                aria-label="Ver imagen de BEFORCE"
+              >
+                <img
+                  src="../assets/img/portfolio/WEB/beforce/logo.png"
+                  alt="Logo de BEFORCE"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Web</div>
+                <h3>BEFORCE</h3>
+                <p class="muted">Catálogo digital + identidad visual.</p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://www.beforce.ar/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir al sitio
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card" data-type="web">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="assets/img/portfolio/WEB/sgm/logo.png"
+                aria-label="Ver imagen de SGM+"
+              >
+                <img
+                  src="../assets/img/portfolio/WEB/sgm/logo.png"
+                  alt="Logo de SGM+"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Web</div>
+                <h3>SGM+</h3>
+                <p class="muted">Institucional + experiencia para talleres.</p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://www.somosgrupodemujeresmas.ar/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir al sitio
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card" data-type="web">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="../assets/img/portfolio/WEB/okos/web_okos.png"
+                aria-label="Ver imagen de OKOS"
+              >
+                <img
+                  src="../assets/img/portfolio/WEB/okos/logo.png"
+                  alt="Logo de OKOS"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Web</div>
+                <h3>OKOS</h3>
+                <p class="muted">Sitio institucional con UI limpia.</p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://www.okos.com.ar/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir al sitio
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card" data-type="web">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="../assets/img/portfolio/WEB/art1/web_art1.png"
+                aria-label="Ver imagen de ART1"
+              >
+                <img
+                  src="../assets/img/portfolio/WEB/art1/logo.png"
+                  alt="Logo de ART1"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Web</div>
+                <h3>ART1</h3>
+                <p class="muted">Sitio corporativo / institucional.</p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://www.art1.com.ar/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir al sitio
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <article class="client-card" data-type="tienda">
+              <button
+                class="client-thumb"
+                type="button"
+                data-lightbox="../assets/img/portfolio/TIENDA/knots/tienda_knots.png"
+                aria-label="Ver imagen de Tienda Knots"
+              >
+                <img
+                  src="../assets/img/portfolio/TIENDA/knots/logo.png"
+                  alt="Logo de Knots"
+                  loading="lazy"
+                />
+              </button>
+              <div class="client-body">
+                <div class="tag">Tienda</div>
+                <h3>Knots</h3>
+                <p class="muted">E-commerce sobre Tienda Nube.</p>
+                <div class="client-actions">
+                  <a
+                    class="btn btn-outline"
+                    href="https://knots4.mitiendanube.com/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    Ir a la tienda
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- CTA -->
+          <div class="cta-center" style="margin-top: 42px" data-scroll>
+            <a class="btn primary" href="index.html#contacto">Quiero mi web</a>
+            <a class="btn" href="index.html#servicios">Ver servicios</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer igual al vibe de tu index -->
+      <footer id="contacto" data-scroll-section>
+        <div class="foot">
+          <div class="brand">Raven3</div>
+          <div>
+            <div class="small">
+              ¿Tenés un proyecto digital? Escribinos y armamos algo increíble.
+              Convertimos ideas en sitios web rápidos, accesibles y rentables.
+            </div>
+            <div class="cta-row" style="margin-top: 1rem">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar"
+                >Contactar por email</a
+              >
+              <a
+                class="btn"
+                href="https://wa.me/5491134568899"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="small">Hecho con ❤️ • Raven3 © 2026</div>
+        </div>
+      </footer>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox__close" type="button" aria-label="Cerrar">
+          ✕
+        </button>
+        <img class="lightbox__img" alt="" />
+      </div>
+    </main>
+
+    <script src="https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/particles.js"></script>
+    <script src="assets/js/clientes.js"></script>
+  </body>
+</html>
