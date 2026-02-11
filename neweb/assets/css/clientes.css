@@ -1,152 +1,256 @@
-/* ========= TOPBAR FIX ========= */
+/* ===============================
+   RvN3 – Clients UI (Responsive)
+   =============================== */
+
+/* --------- Design tokens (opcional pero recomendado) --------- */
+:root{
+  --topbar-h: 72px;
+  --radius-lg: 22px;
+  --radius-md: 16px;
+  --radius-sm: 12px;
+
+  --line: rgba(255,255,255,.10);
+  --line-2: rgba(255,255,255,.14);
+
+  --card: rgba(255,255,255,.04);
+  --card-hover: rgba(255,255,255,.06);
+
+  --txt: rgba(255,255,255,.92);
+  --muted: rgba(255,255,255,.72);
+
+  --accent: rgba(55,226,213,.95);
+  --accent-2: rgba(55,226,213,.55);
+
+  --shadow: 0 10px 30px rgba(0,0,0,.25);
+
+  /* layout */
+  --gutter: clamp(16px, 3vw, 28px);
+}
+
+/* Fallback container si no tenés uno */
+.container{
+  width: min(1120px, 100% - (var(--gutter) * 2));
+  margin-inline: auto;
+}
+
+/* Mejoras generales UX */
+*{ box-sizing: border-box; }
+html{ -webkit-text-size-adjust: 100%; }
+body{ color: var(--txt); }
+a{ color: inherit; }
+:focus{ outline: none; }
+:focus-visible{
+  outline: 2px solid rgba(55,226,213,.8);
+  outline-offset: 3px;
+}
+
+/* Reduce motion (accesibilidad) */
+@media (prefers-reduced-motion: reduce){
+  *{ scroll-behavior: auto !important; }
+  .chip, .topbar__link{ transition: none !important; }
+}
+
+/* ========= TOPBAR (Responsive + usable) ========= */
 
 .topbar{
   position: sticky;
   top: 0;
   z-index: 999;
-  height: 72px;                 /* altura fija para centrar todo */
+
+  /* altura fluida en vez de fija */
+  min-height: var(--topbar-h);
   display: flex;
   align-items: center;
-  backdrop-filter: blur(1px);
-  background: transparent;
+
+  /* safe area para iPhone notch */
+  padding-top: env(safe-area-inset-top);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  /* Mejor lectura sobre fondo con partículas */
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.55),
+    rgba(0,0,0,.22)
+  );
   border-bottom: 1px solid rgba(255,255,255,.08);
 }
 
 .topbar__inner{
   width: 100%;
-  height: 72px;
+  min-height: var(--topbar-h);
   display: flex;
-  align-items: center;          /* centra verticalmente */
+  align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 14px;
+
+  /* evita que en mobile quede todo pegado */
+  padding-block: 10px;
 }
 
-/* Brand */
 .topbar .brand{
   display: inline-flex;
   align-items: center;
-  height: 72px;
+  min-height: 44px;              /* target táctil */
   line-height: 1;
   font-weight: 800;
   letter-spacing: .2px;
   text-decoration: none;
-  color: rgba(255,255,255,.92); /* evita el azul default */
+  color: rgba(255,255,255,.92);
+  user-select: none;
 }
 
-/* Nav */
 .topbar__nav{
   display: flex;
   align-items: center;
   gap: 18px;
 }
 
-/* Links (mata el azul + subrayado y alinea bien) */
 .topbar__link{
   display: inline-flex;
   align-items: center;
-  height: 72px;                 /* mismo alto para centrar */
+
+  min-height: 44px;              /* target táctil */
+  padding-inline: 8px;
+
   line-height: 1;
   text-decoration: none;
   color: rgba(255,255,255,.75);
   font-size: 14px;
   letter-spacing: .2px;
+
   transition: color .18s ease, opacity .18s ease;
 }
 
-.topbar__link:hover{
-  color: rgba(255,255,255,.92);
-}
+.topbar__link:hover{ color: rgba(255,255,255,.92); }
+.topbar__link.is-active{ color: var(--accent); }
 
-.topbar__link.is-active{
-  color: rgba(55,226,213,.95);
-}
-
-/* CTA button a la derecha */
+/* CTA */
 .btn.btn-sm{
-  padding: 10px 16px;
-  border-radius: 999px;
-  line-height: 1;
-  white-space: nowrap;
-}
-
-/* Mobile: oculto nav y dejo brand + CTA */
-@media (max-width: 720px){
-  .topbar__nav{ display: none; }
-}
-
-.btn.btn-sm {
   padding: 10px 14px;
   font-size: 14px;
   border-radius: 999px;
+  line-height: 1;
+  white-space: nowrap;
+  min-height: 44px;              /* target táctil */
 }
 
-.clients-hero {
-  padding: 64px 0 26px;
+/* Mobile: oculto nav (ideal: reemplazar por menú hamburguesa en HTML/JS) */
+@media (max-width: 720px){
+  .topbar__nav{ display: none; }
+  .btn.btn-sm{ padding: 10px 14px; }
 }
 
-.filters {
+/* ========= HERO / TYPO ========= */
+
+.clients-hero{
+  /* más aire en desktop, menos en mobile */
+  padding: clamp(40px, 6vw, 72px) 0 clamp(18px, 3vw, 28px);
+}
+
+/* Si tu H1 está dentro de .clients-hero, esto lo mejora mucho */
+.clients-hero h1{
+  font-size: clamp(34px, 5.2vw, 64px);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+  margin: 0 0 14px;
+}
+
+.clients-hero p{
+  max-width: 62ch;
+  color: rgba(255,255,255,.70);
+  font-size: clamp(14px, 1.7vw, 16px);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ========= FILTERS / CHIPS ========= */
+
+.filters{
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
   margin-top: 18px;
 }
 
-.chip {
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.04);
+/* Mobile UX: chips scrolleables en una línea */
+@media (max-width: 640px){
+  .filters{
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+  }
+  .filters::-webkit-scrollbar{ height: 6px; }
+  .filters::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.14); border-radius: 999px; }
+  .chip{ scroll-snap-align: start; }
+}
+
+.chip{
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(255,255,255,.04);
   color: inherit;
+
   padding: 10px 14px;
   border-radius: 999px;
+
   cursor: pointer;
-  transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+  user-select: none;
+
+  min-height: 44px;              /* target táctil */
+  display: inline-flex;
+  align-items: center;
+
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
 
-.chip:hover {
+.chip:hover{
   transform: translateY(-1px);
-  border-color: rgba(55, 226, 213, 0.5);
+  border-color: rgba(55,226,213,.50);
 }
 
-.chip.is-active {
-  background: rgba(55, 226, 213, 0.12);
-  border-color: rgba(55, 226, 213, 0.55);
+.chip.is-active{
+  background: rgba(55,226,213,.12);
+  border-color: rgba(55,226,213,.55);
 }
 
-.clients {
-  padding: 30px 0 70px;
+/* ========= GRID ========= */
+
+.clients{
+  padding: clamp(22px, 3vw, 30px) 0 clamp(54px, 7vw, 80px);
 }
 
-.clients-grid {
+/* En vez de 12 columnas fijas, auto-fit para que fluya perfecto */
+.clients-grid{
   display: grid;
   gap: 18px;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
+  align-items: stretch;
 }
 
-.client-card {
-  grid-column: span 4;
-  border-radius: 22px;
+/* Card */
+.client-card{
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+
   transform: translateZ(0);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease;
 }
 
-@media (max-width: 980px) {
-  .client-card {
-    grid-column: span 6;
-  }
+.client-card:hover{
+  background: var(--card-hover);
+  border-color: rgba(255,255,255,.16);
+  transform: translateY(-2px);
 }
 
-@media (max-width: 640px) {
-  .topbar__nav {
-    display: none;
-  }
-  .client-card {
-    grid-column: span 12;
-  }
-}
+/* ========= THUMB / IMAGE ========= */
 
-.client-thumb {
+.client-thumb{
   width: 100%;
   display: block;
   padding: 0;
@@ -155,64 +259,90 @@
   cursor: zoom-in;
 }
 
-.client-thumb img {
+/* altura de imagen fluida por breakpoint */
+.client-thumb img{
   width: 100%;
-  height: 220px;
+  height: clamp(190px, 24vw, 240px);
   object-fit: cover;
   display: block;
   filter: saturate(1.05);
   transform: scale(1.001);
 }
 
-.client-body {
+/* ========= BODY ========= */
+
+.client-body{
   padding: 16px 16px 18px;
 }
 
-.client-body h3 {
+.client-body h3{
   margin: 10px 0 6px;
+  font-size: 18px;
+  line-height: 1.2;
 }
 
-.client-actions {
+.client-body p{
+  margin: 0;
+  color: rgba(255,255,255,.70);
+  line-height: 1.5;
+}
+
+.client-actions{
   margin-top: 14px;
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-/* Lightbox simple */
-.lightbox {
+.client-actions .btn,
+.client-actions a.btn{
+  min-height: 44px;              /* target táctil */
+}
+
+/* ========= LIGHTBOX (mejor mobile + cierre seguro) ========= */
+
+.lightbox{
   position: fixed;
   inset: 0;
   display: none;
   align-items: center;
   justify-content: center;
-  padding: 18px;
-  background: rgba(0, 0, 0, 0.72);
-  z-index: 60;
+
+  padding: clamp(14px, 2.2vw, 22px);
+  background: rgba(0,0,0,.72);
+  z-index: 1000;
 }
 
-.lightbox.is-open {
-  display: flex;
-}
+.lightbox.is-open{ display: flex; }
 
-.lightbox__img {
+.lightbox__img{
   max-width: min(1100px, 96vw);
-  max-height: 86vh;
+  max-height: min(86vh, 760px);
+
   border-radius: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
 }
 
-.lightbox__close {
+.lightbox__close{
   position: fixed;
-  top: 16px;
-  right: 16px;
+  top: calc(16px + env(safe-area-inset-top));
+  right: calc(16px + env(safe-area-inset-right));
+
   width: 46px;
   height: 46px;
   border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255,255,255,.20);
+  background: rgba(255,255,255,.10);
   color: #fff;
   font-size: 18px;
   cursor: pointer;
+
+  display: grid;
+  place-items: center;
+}
+
+.lightbox__close:hover{
+  background: rgba(255,255,255,.16);
 }
