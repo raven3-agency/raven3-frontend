@@ -10,7 +10,6 @@ function loadScript(src) {
 }
 
 async function init() {
-  await ensureLocomotive();
 
   const container = document.querySelector("[data-scroll-container]");
   if (!container) return;
