@@ -74,3 +74,68 @@
   // Default
   applyFilter("all");
 })();
+
+(() => {
+  const grid = document.getElementById("clientsGrid");
+  const chips = document.querySelectorAll(".chip[data-filter]");
+  const resultsCount = document.getElementById("resultsCount");
+  const emptyState = document.getElementById("emptyState");
+
+  if (!grid || chips.length === 0) return;
+
+  const cards = Array.from(grid.querySelectorAll(".client-card"));
+
+  const pluralize = (n, singular, plural) => (n === 1 ? singular : plural);
+
+  function applyFilter(filter) {
+    let visible = 0;
+
+    cards.forEach((card) => {
+      const type = card.dataset.type;
+      const show = filter === "all" || type === filter;
+
+      // Mostrar/ocultar (evita “huecos” si estás usando CSS grid)
+      card.hidden = !show;
+
+      if (show) visible++;
+    });
+
+    // Texto contador
+    if (resultsCount) {
+      const total = cards.length;
+      const label = pluralize(visible, "proyecto", "proyectos");
+
+      // Opción A: simple
+      resultsCount.textContent =
+        filter === "all"
+          ? `Mostrando ${visible} ${label}`
+          : `Mostrando ${visible} ${label} (${filter})`;
+
+      // Opción B: más “pro”
+      // resultsCount.textContent = `Mostrando ${visible} de ${total} ${pluralize(total, "proyecto", "proyectos")}`;
+    }
+
+    // Empty state
+    if (emptyState) {
+      emptyState.hidden = visible !== 0;
+    }
+
+    // Chip UI + a11y
+    chips.forEach((chip) => {
+      const isActive = chip.dataset.filter === filter;
+      chip.classList.toggle("is-active", isActive);
+      chip.setAttribute("aria-selected", isActive ? "true" : "false");
+    });
+  }
+
+  // Bind
+  chips.forEach((chip) => {
+    chip.addEventListener("click", () => {
+      applyFilter(chip.dataset.filter);
+    });
+  });
+
+  // Init (usa el que venga activo en el HTML, sino "all")
+  const active = document.querySelector(".chip.is-active[data-filter]");
+  applyFilter(active?.dataset.filter || "all");
+})();
