@@ -99,10 +99,12 @@
     />
 
     <!-- Preconnects -->
-    <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://www.google-analytics.com" crossorigin />
 
     <!-- CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- GA4 (bien cargado; en tu html actual te falta el gtag.js) -->
@@ -129,20 +131,23 @@
 
     <!-- JSON-LD (recomendado; no estaba en la ex index, pero suma mucho hoy) -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Raven3",
-        "url": "https://raven3.com.ar/",
-        "logo": "https://www.raven3.com.ar/assets/img/logo.png",
-        "sameAs": [
-          "https://www.instagram.com/agencia.raven3/",
-          "https://github.com/raven3-agency/"
-        ],
-        "areaServed": "AR",
-        "email": "hola@raven3.com.ar"
-      }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Raven3",
+    "url": "https://raven3.com.ar/",
+    "logo": "https://www.raven3.com.ar/assets/img/logo.png",
+    "image": "https://www.raven3.com.ar/assets/img/fondoN.png",
+    "description": "Agencia digital especializada en diseño web a medida, tiendas online y SEO técnico. Performance real, accesibilidad y resultados.",
+    "email": "hola@raven3.com.ar",
+    "telephone": "+54 9 11 3456-8899",
+    "areaServed": ["AR"],
+    "sameAs": [
+      "https://www.instagram.com/agencia.raven3/",
+      "https://github.com/raven3-agency/"
+    ]
+  }
+  </script>
   </head>
   <body>
     <div class="wasap" aria-label="WhatsApp Raven3">
@@ -293,6 +298,7 @@
                 src="assets/img/portfolio/WEB/ndbpropiedades/logo.png"
                 class="img-fluid"
                 alt="imagen del logo de ndb propiedades"
+                loading="lazy" decoding="async"
               />
               <figcaption>
                 <h3>NDB Propiedades</h3>
@@ -316,6 +322,7 @@
                 src="assets/img/portfolio/WEB/sgm/logo.png"
                 class="img-fluid"
                 alt="imagen del logo de sgm+"
+                loading="lazy" decoding="async"
               />
               <figcaption>
                 <h3>SGM+</h3>
@@ -338,7 +345,8 @@
               <img
                 src="assets/img/portfolio/WEB/lassen/logo.png"
                 class="img-fluid"
-                alt="imagen del logo de ndb propiedades"
+                alt="imagen del logo de lassenpharma"
+                loading="lazy" decoding="async"
               />
               <figcaption>
                 <h3>LASSENPHARMA</h3>
@@ -361,7 +369,8 @@
               <img
                 src="assets/img/portfolio/WEB/beforce/logo.png"
                 class="img-fluid"
-                alt="imagen del logo de ndb propiedades"
+                alt="imagen del logo de beforce"
+                loading="lazy" decoding="async"
               />
               <figcaption>
                 <h3>BEFORCE</h3>
