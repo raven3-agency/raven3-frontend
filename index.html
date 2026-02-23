@@ -118,6 +118,14 @@
       gtag("js", new Date());
       gtag("config", "G-XXXXXXXXXX");
     </script>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+        }
+      }
+    </script>
 
     <!-- JSON-LD (recomendado; no estaba en la ex index, pero suma mucho hoy) -->
     <script type="application/ld+json">
@@ -517,41 +525,41 @@
 
     <!-- Librerías externas -->
     <script src="https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script> -->
 
     <!-- Tu script principal -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/particles.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/particles.js"></script>
 
     <script>
-  const form = document.getElementById("contactForm");
-  const status = document.getElementById("formStatus");
+      const form = document.getElementById("contactForm");
+      const status = document.getElementById("formStatus");
 
-  form.addEventListener("submit", async function (e) {
-    e.preventDefault();
-    status.textContent = "Enviando...";
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        status.textContent = "Enviando...";
 
-    const data = new FormData(form);
+        const data = new FormData(form);
 
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data,
-        headers: {
-          Accept: "application/json",
-        },
+        try {
+          const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+
+          if (response.ok) {
+            status.textContent = "Mensaje enviado correctamente ✓";
+            form.reset();
+          } else {
+            status.textContent = "Ocurrió un error. Intentá nuevamente.";
+          }
+        } catch (error) {
+          status.textContent = "Error de conexión.";
+        }
       });
-
-      if (response.ok) {
-        status.textContent = "Mensaje enviado correctamente ✓";
-        form.reset();
-      } else {
-        status.textContent = "Ocurrió un error. Intentá nuevamente.";
-      }
-    } catch (error) {
-      status.textContent = "Error de conexión.";
-    }
-  });
-</script>
+    </script>
   </body>
 </html>
