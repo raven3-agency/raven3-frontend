@@ -10,7 +10,6 @@ function loadScript(src) {
 }
 
 async function init() {
-
   const container = document.querySelector("[data-scroll-container]");
   if (!container) return;
 
@@ -51,5 +50,11 @@ async function init() {
 
   scroll.update();
 }
+
+document.querySelectorAll("[data-scroll-to]").forEach(btn => {
+  btn.addEventListener("click", () => {
+    scroll.scrollTo(btn.dataset.scrollTo);
+  });
+});
 
 window.addEventListener("load", init);
