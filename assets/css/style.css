@@ -217,19 +217,19 @@ h1 .accent {
 }
 .client-label {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 1px;
   text-transform: uppercase;
-  opacity: 0.6;
+  opacity: 0.55;
   margin-bottom: 6px;
 }
 .client-outcome {
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.6;
   opacity: 0.85;
+  transition: all 0.3s ease;
 }
-
 
 section {
   position: relative;
@@ -318,6 +318,44 @@ section {
   overflow: hidden;
   border: 1px solid #1b1e25;
   background: transparent;
+
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  transition:
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.shot:hover {
+  transform: translateY(-6px);
+  border-color: rgba(55, 226, 213, 0.35);
+
+  box-shadow:
+    0 18px 36px rgba(0, 0, 0, 0.55),
+    0 0 32px rgba(55, 226, 213, 0.06);
+}
+
+.shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at 50% 0%,
+    rgba(55, 226, 213, 0.12),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.shot:hover::after {
+  opacity: 1;
 }
 .shot img {
   display: block;
@@ -328,7 +366,7 @@ section {
   will-change: transform;
   transform: scale(1.04) translateZ(0);
 }
-.shot::after {
+/* .shot::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -338,7 +376,7 @@ section {
     rgba(0, 0, 0, 0) 60%,
     rgba(0, 0, 0, 0.18)
   );
-}
+} */
 
 @media (min-width: 800px) {
   .shot {
