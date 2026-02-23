@@ -43,16 +43,20 @@ async function init() {
     });
   }
 
-  document.querySelectorAll('a[href^="#"]').forEach((a) => {
-    a.addEventListener("click", (e) => {
-      const href = a.getAttribute("href");
-      if (!href || href === "#") return;
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest("[data-target]");
+    if (!btn) return;
 
-      const el = document.querySelector(href);
-      if (!el) return; // <-- si no existe, evitás el warning
+    const id = btn.dataset.target;
+    const el = document.getElementById(id);
 
-      e.preventDefault();
-      scroll.scrollTo(el, { duration: 800, offset: -80 });
+    if (!el || !scroll) return;
+
+    e.preventDefault();
+
+    scroll.scrollTo(el, {
+      duration: 900,
+      offset: -80,
     });
   });
 
