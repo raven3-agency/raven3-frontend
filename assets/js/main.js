@@ -1,7 +1,89 @@
-(function(){"use strict";var currentYear=new Date().getFullYear();document.getElementById("copyright").innerHTML=currentYear+" © Copyright <strong><span>Agencia raven3</span></strong>. Todos los derechos reservados. Argentina, Buenos Aires.";const select=(el,all=!1)=>{el=el.trim();return all?[...document.querySelectorAll(el)]:document.querySelector(el)};const on=(type,el,listener,all=!1)=>{let selectEl=select(el,all);if(selectEl){all?selectEl.forEach((e)=>e.addEventListener(type,listener)):selectEl.addEventListener(type,listener)}};const onscroll=(el,listener)=>{el.addEventListener("scroll",listener)};let navbarlinks=select("#navbar .scrollto",!0);const navbarlinksActive=()=>{let position=window.scrollY+200;navbarlinks.forEach((navbarlink)=>{if(!navbarlink.hash)return;let section=select(navbarlink.hash);if(!section)return;if(position>=section.offsetTop&&position<=section.offsetTop+section.offsetHeight){navbarlink.classList.add("active")}else{navbarlink.classList.remove("active")}})};window.addEventListener("load",navbarlinksActive);onscroll(document,navbarlinksActive);const scrollto=(el)=>{let header=select("#header");let offset=header.offsetHeight;let elementPos=select(el).offsetTop;window.scrollTo({top:elementPos-offset,behavior:"smooth",})};let selectHeader=select("#header");if(selectHeader){const headerScrolled=()=>{if(window.scrollY>100){selectHeader.classList.add("header-scrolled")}else{selectHeader.classList.remove("header-scrolled")}};window.addEventListener("load",headerScrolled);onscroll(document,headerScrolled)}
-let backtotop=select(".back-to-top");if(backtotop){const toggleBacktotop=()=>{if(window.scrollY>100){backtotop.classList.add("active")}else{backtotop.classList.remove("active")}};window.addEventListener("load",toggleBacktotop);onscroll(document,toggleBacktotop)}
-on("click",".mobile-nav-toggle",function(e){select("#navbar").classList.toggle("navbar-mobile");this.classList.toggle("bi-list");this.classList.toggle("bi-x");let burger=select("#burger");if(burger.classList.contains("bi-list")){document.body.style.overflowY="visible"}else{document.body.style.overflowY="hidden"}});on("click",".navbar .dropdown > a",function(e){if(select("#navbar").classList.contains("navbar-mobile")){e.preventDefault();this.nextElementSibling.classList.toggle("dropdown-active")}},!0);on("click",".scrollto",function(e){if(select(this.hash)){e.preventDefault();let navbar=select("#navbar");if(navbar.classList.contains("navbar-mobile")){navbar.classList.remove("navbar-mobile");let navbarToggle=select(".mobile-nav-toggle");navbarToggle.classList.toggle("bi-list");navbarToggle.classList.toggle("bi-x")}
-scrollto(this.hash)}},!0);window.addEventListener("load",()=>{if(window.location.hash){if(select(window.location.hash)){scrollto(window.location.hash)}}});let preloader=select("#preloader");if(preloader){window.addEventListener("load",()=>{preloader.remove()})}
-new PureCounter();window.addEventListener("load",()=>{AOS.init({duration:1000,easing:"ease-in-out",once:!0,mirror:!1,})});const validateCaptcha=()=>grecaptcha.getResponse().length>0;var form=document.getElementById("my-form");const errorMessage=document.getElementById("error-message");if(form){form.addEventListener("submit",async(event)=>{event.preventDefault();const messageField=form.querySelector("textarea[name='message']");if(!messageField||messageField.value.trim()===""){errorMessage.innerText="El campo de mensaje no puede estar vacío.";errorMessage.style.display="block";return}
-if(!validateCaptcha()){errorMessage.innerText="¡Falta completar el captcha!";errorMessage.style.display="block";return}else{errorMessage.style.display="none"}
-form.querySelector(".loading").classList.add("d-block");form.querySelector(".error-message").classList.remove("d-block");form.querySelector(".sent-message").classList.remove("d-block");try{const data=new FormData(event.target);const response=await fetch(event.target.action,{method:form.method,body:data,headers:{Accept:"application/json"},});form.querySelector(".loading").classList.remove("d-block");if(response.ok){form.querySelector(".sent-message").classList.add("d-block");form.reset();grecaptcha.reset()}else{throw new Error("Oops! Hubo un problema al enviar el formulario.")}}catch(error){form.querySelector(".error-message").innerText=error.message;form.querySelector(".error-message").classList.add("d-block")}})}})()
+// =======================================================
+// Raven3 website interactions
+// Locomotive Scroll + Three.js + custom parallax strips
+// =======================================================
+
+// Helper para crear scripts dinámicamente (por si algún CDN falla)
+function loadScript(src) {
+  return new Promise((resolve, reject) => {
+    const s = document.createElement("script");
+    s.src = src;
+    s.async = true;
+    s.onload = resolve;
+    s.onerror = () => reject(new Error("No se pudo cargar " + src));
+    document.head.appendChild(s);
+  });
+}
+
+// Asegurar que las librerías estén listas
+async function ensureLibs() {
+  if (!window.LocomotiveScroll) {
+    try {
+      await loadScript(
+        "https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"
+      );
+    } catch {
+      await loadScript(
+        "https://cdn.jsdelivr.net/npm/locomotive-scroll@4/dist/locomotive-scroll.min.js"
+      );
+    }
+  }
+  if (!window.THREE) {
+    try {
+      await loadScript(
+        "https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"
+      );
+    } catch {
+      await loadScript("https://unpkg.com/three@0.152.2/build/three.min.js");
+    }
+  }
+}
+
+async function init() {
+  await ensureLibs();
+
+  // =======================
+  // Locomotive Scroll init
+  // =======================
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("[data-scroll-container]"),
+    smooth: true,
+    lerp: 0.08,
+    smartphone: { smooth: true },
+    tablet: { smooth: true },
+  });
+
+  // Barra de progreso lateral
+  const progressEl = document.getElementById("progress");
+  scroll.on("scroll", (args) => {
+    const h = (args.scroll.y / (args.limit.y || 1)) * 100;
+    progressEl.style.height = `${Math.min(100, Math.max(0, h))}vh`;
+  });
+
+
+
+  // =======================
+  // Renderizar cuervos SVG
+  // =======================
+  const ravenStrip = document.getElementById("ravenStrip");
+  const speeds = [2, 1.4, 2.6, 1.2, 2.1, 1.6, 2.8, 1.3, 2.2, 1.7, 2.4, 1.1];
+
+  const ravenSVG = () => `
+    <svg viewBox="0 0 128 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z"
+        fill="#101317" stroke="rgba(55,226,213,.45)" stroke-width="1.25"/>
+    </svg>`;
+
+  if (ravenStrip) {
+    speeds.forEach((speed) => {
+      const div = document.createElement("div");
+      div.setAttribute("data-scroll", "");
+      div.setAttribute("data-scroll-speed", speed);
+      div.innerHTML = ravenSVG();
+      ravenStrip.appendChild(div);
+    });
+  }
+}
+
+// Ejecutar todo al cargar la página
+window.addEventListener("load", init);

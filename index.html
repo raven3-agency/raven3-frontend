@@ -1,71 +1,92 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
-    <title>Desarrollo Web y Tiendas Online | Raven3 ®</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta
-      name="title"
-      content="Raven3 | Desarrollo Web & Servicios Digitales para empresas"
-    />
+
+    <title>
+      Raven3 — Diseño Web, Tiendas Online y SEO Técnico en Argentina
+    </title>
+
     <meta
       name="description"
-      content="Diseño de Páginas Web y tiendas online en Argentina para empresas y negocios del mundo, somos diseñadores de páginas web profesionales, más de 10 años de experiencia. ¡Ingresá!"
+      content="Raven3 es una agencia digital especializada en diseño web a medida, desarrollo de tiendas online y SEO técnico. Creamos sitios rápidos, optimizados y con resultados reales para empresas y emprendedores de toda Argentina."
     />
-    <meta name="author" content="raven3®" />
+
+    <!-- (Opcional) keywords ya no rankea por sí solo, pero no molesta -->
+    <meta
+      name="keywords"
+      content="Raven3, diseño web, desarrollo web, páginas web, tiendas online, SEO técnico, optimización web, agencia digital, performance web, diseño UX UI, Argentina"
+    />
+
+    <meta name="author" content="Raven3 Agency" />
+    <meta name="language" content="Spanish" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit" content="5 days" />
+
+    <!-- Geo (no es clave para SEO moderno, pero venía en la ex index) -->
     <meta name="city" content="Buenos Aires" />
     <meta name="country" content="Argentina" />
     <meta name="geography" content="Buenos Aires, Argentina" />
-    <meta
-      name="keywords"
-      content="DISEÑO WEB, Diseño de páginas web, Páginas Web para Pymes, Páginas Web para Inmobiliarias, 
-    Tienda Online, Páginas Web e-commerce, Página Web a medida, Página Web Wordpress, Redes Sociales, pagina web para restaurantes, carta digital para restaurantes, pagina web con qr, pagina web para empresas, pagina web para hoteles"
-    />
-    <meta name="language" content="Spanish" />
-    <meta name="revisit" content="5 days" />
-    <meta name="robots" content="All, index, follow" />
+
+    <!-- Google verification (pegar tu valor real) -->
     <meta name="google-site-verification" content="..." />
-    <!-- Open Graph / Facebook -->
+
+    <link rel="canonical" href="https://raven3.com.ar/" />
+
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.raven3.com.ar/" />
+    <meta property="og:url" content="https://raven3.com.ar/" />
     <meta
       property="og:title"
-      content="Raven3 - Desarrollo Web & Servicios Digitales para empresas"
+      content="Raven3 — Diseño Web, Tiendas Online y SEO Técnico en Argentina"
     />
     <meta
       property="og:description"
-      content="Diseño de Páginas Web y tiendas online en Argentina para empresas y negocios del mundo, somos diseñadores de páginas web profesionales, más de 10 años de experiencia. ¡Ingresá!"
+      content="Agencia digital especializada en diseño web a medida, tiendas online y SEO técnico. Performance real, accesibilidad y resultados."
     />
     <meta
       property="og:image"
       content="https://www.raven3.com.ar/assets/img/fondoN.png"
     />
-    <!-- Twitter -->
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://www.raven3.com.ar/" />
+    <meta property="twitter:url" content="https://raven3.com.ar/" />
     <meta
       property="twitter:title"
-      content="Raven3 - Desarrollo Web & Servicios Digitales para empresas"
+      content="Raven3 — Diseño Web, Tiendas Online y SEO Técnico"
     />
     <meta
       property="twitter:description"
-      content="Diseño de Páginas Web y tiendas online en Argentina para empresas y negocios del mundo, somos diseñadores de páginas web profesionales, más de 10 años de experiencia. ¡Ingresá!"
+      content="Webs rápidas, tiendas online y SEO técnico con performance real."
     />
     <meta
       property="twitter:image"
       content="https://www.raven3.com.ar/assets/img/fondoN.png"
     />
 
-    <link rel="canonical" href="https://raven3.com.ar/" />
-    <!-- Favicon para navegadores de escritorio -->
+    <!-- Favicons (completo como la ex index) -->
     <link
       rel="icon"
       type="image/x-icon"
       href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico"
     />
-
-    <!-- Favicon para dispositivos iOS -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
+    />
     <link
       rel="apple-touch-icon"
       sizes="192x192"
@@ -77,1014 +98,460 @@
       href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
     />
 
-    <!-- Favicon para otros dispositivos -->
-    <link
-      rel="icon"
-      sizes="16x16"
-      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      sizes="32x32"
-      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
-    />
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
-    <!-- Vendor CSS Files -->
-    <link
-      rel="preload"
-      href="assets/vendor/aos/aos.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link rel="stylesheet" href="assets/vendor/aos/aos.css"
-    /></noscript>
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-    <link
-      rel="preload"
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="assets/vendor/bootstrap/css/bootstrap.min.css"
-    /></noscript>
-
-    <link
-      rel="preload"
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-    /></noscript>
-
-    <link
-      rel="preload"
-      href="assets/vendor/boxicons/css/boxicons.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="assets/vendor/boxicons/css/boxicons.min.css"
-    /></noscript>
-
-    <link
-      rel="preload"
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript
-      ><link
-        rel="stylesheet"
-        href="assets/vendor/glightbox/css/glightbox.min.css"
-    /></noscript>
-
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
-    <link href="assets/css/style-light.css" id="style-light" rel="stylesheet" />
-
-    <link href="assets/css/glitch.css" rel="stylesheet" />
-    <script async>
+    <!-- GA4 (bien cargado; en tu html actual te falta el gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-      gtag("config", "G-MF63Q3JMSL");
+      gtag("config", "G-XXXXXXXXXX");
     </script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script
-      src="https://www.google.com/recaptcha/api.js?render=explicit"
-      async
-      defer
-    ></script>
-  </head>
 
+    <!-- JSON-LD (recomendado; no estaba en la ex index, pero suma mucho hoy) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Raven3",
+        "url": "https://raven3.com.ar/",
+        "logo": "https://www.raven3.com.ar/assets/img/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/agencia.raven3/",
+          "https://github.com/raven3-agency/"
+        ],
+        "areaServed": "AR",
+        "email": "hola@raven3.com.ar"
+      }
+    </script>
+  </head>
   <body>
-    <div class="progress-bar"></div>
-    <div class="wasap" style="animation-name: tada">
+    <div class="wasap" aria-label="WhatsApp Raven3">
       <a
-        href="https://api.whatsapp.com/send?l=es&amp;text=Hola%20Ravens!%20Quiero%20consultarles%20por%20un%20presupuesto[Pagina%20Principal]&amp;phone=+5491134568899"
+        href="https://api.whatsapp.com/send?l=es&amp;text=Hola%20Ravens!%20Quiero%20consultarles%20por%20un%20presupuesto%20%5BPagina%20Principal%5D&amp;phone=5491134568899"
         target="_blank"
-        aria-label="link to whatsapp"
-        ><img src="assets/img/svg/logo-wapp-01.svg" alt="raven whatsapp" />
+        rel="noopener"
+        aria-label="Enviar mensaje por WhatsApp"
+      >
+        <img src="../assets/img/svg/logo-wapp-02.svg" alt="WhatsApp Raven3" />
       </a>
     </div>
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-      <div
-        class="container d-flex align-items-center justify-content-lg-between varela"
-      >
-        <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
-          ><img
-            src="assets/img/logo.png"
-            alt="logo de raven3"
-            class="img-fluid"
-            width="100px"
-            height="40px"
-        /></a>
+    <div id="background">
+      <canvas id="particles"></canvas>
+      <div class="progress" id="progress"></div>
+    </div>
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
-          <ul>
-            <li>
-              <a
-                class="nav-link scrollto"
-                href="https://raven3.com.ar/#nosotros"
-                >Nosotros</a
-              >
-            </li>
+    <!-- SCROLL CONTAINER -->
+    <main class="scroll-container" data-scroll-container>
+      <!-- Top bar minimal (coherente con home) -->
+      <header class="topbar" data-scroll-section>
+        <div class="container topbar__inner">
+          <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
+            ><img
+              src="../assets/img/logo.png"
+              alt="logo de raven3"
+              class="img-fluid"
+              width="100px"
+              height="40px"
+          /></a>
 
-            <li class="dropdown">
-              <a href="https://raven3.com.ar/#servicios"
-                ><span id="serviceD">Servicios Digitales</span>
-                <i class="bi bi-chevron-down dropdown-indicator"></i
-              ></a>
-              <ul>
-                <li>
-                  <a
-                    href="https://raven3.com.ar/pagina-web"
-                    style="color: black"
-                    >Diseño y desarrollo web</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://raven3.com.ar/tiendas-online"
-                    style="color: black"
-                    >Tiendas Online</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="https://raven3.com.ar/#servicios"
-                ><span id="serviceM">Servicios Marketing</span>
-                <i class="bi bi-chevron-down dropdown-indicator"></i
-              ></a>
-              <ul>
-                <li>
-                  <a
-                    href="https://raven3.com.ar/contenido-para-redes-sociales"
-                    style="color: black"
-                    >Contenido para Redes</a
-                  >
-                </li>
-                <li>
-                  <a
-                    href="https://raven3.com.ar/seo-tecnico"
-                    style="color: black"
-                    >SEO Técnico</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a class="nav-link scrollto" href="https://raven3.com.ar/trabajos"
-                >Clientes</a
-              >
-            </li>
+          <nav class="topbar__nav" aria-label="Navegación principal">
+            <!-- <a class="topbar__link" href="index.html#servicios">Servicios</a> -->
+            <!-- <a class="topbar__link is-active" href="clientes.html">Clientes</a> -->
+            <!-- <a class="topbar__link" href="index.html#contacto">Contacto</a> -->
+          </nav>
 
-            <!-- <li>
-              <a
-                href="#projectos"
-                class="nav-link scrollto"
-                onclick="theme_toggle(); return false;"
-                title="Change Theme"
-                >&#127763;</a
-              >
-            </li> -->
-          </ul>
-          <i
-            class="bi bi-list mobile-nav-toggle"
-            id="burger"
-            style="font-size: 30px !important"
-          ></i>
-        </nav>
-
-        <a href="#contact" class="get-started-btn scrollto mb-2">Contacto</a>
-      </div>
-    </header>
-    <!-- End Header -->
-
-    <main id="main" class="main">
-      <section id="hero">
-        <div
-          id="heroCarousel"
-          data-bs-interval="15000"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner" role="listbox">
-            <!-- Slide 1 -->
-            <div
-              class="carousel-item active"
-              aria-label="slide-1"
-              style="
-                background-image: url(assets/img/carousel/index/slide-1.jpg);
-              "
-            >
-              <div class="carousel-container">
-                <div class="container text-center">
-                  <span class="glitch" data-text="Especialistas"
-                    >Especialistas</span
-                  >
-                  <span class="glitch">que</span>
-                  <span class="glitch">trabajan</span>
-                  <span class="glitch">para</span>
-                  <span class="glitch">tu</span>
-                  <span class="glitch" data-text="marca.">marca.</span>
-
-                  <p class="white">
-                    Agencia de desarrollo web y soluciones digitales
-                    <span class="celes">.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div
-              class="carousel-item"
-              aria-label="slide-2"
-              style="
-                background-image: url(assets/img/carousel/index/pagina-web.jpeg);
-              "
-            >
-              <div class="carousel-container">
-                <div class="container">
-                  <h2 class="animated fadeInDown white">Desarrollo Web</h2>
-                  <p class="animated fadeInUp">
-                    Eleva la presencia digital de tu negocio al próximo nivel
-                    con una página web profesional. Permíteles conocerte,
-                    explorar tus productos o servicios y contactarte fácilmente.
-                    Asegura tu presencia en Google y otros buscadores con
-                    nuestras prácticas avanzadas de SEO.
-                  </p>
-                  <a
-                    href="#contact"
-                    class="btn-get-started2 animated fadeInUp scrollto"
-                    >Contacto</a
-                  >
-                  <a
-                    href="https://raven3.com.ar/pagina-web"
-                    class="btn-get-started animated fadeInUp scrollto"
-                    >Ver más</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div
-              class="carousel-item"
-              style="
-                background-image: url(assets/img/carousel/index/tienda-online.jpeg);
-              "
-            >
-              <div class="carousel-container">
-                <div class="container">
-                  <h2 class="animated fadeInDown white">Tiendas Online</h2>
-                  <p class="animated fadeInUp">
-                    Transforma tu idea en una tienda online exitosa con nuestra
-                    ayuda. Ofrecemos soluciones personalizadas y fáciles de
-                    gestionar para que tu negocio crezca en el mundo digital.
-                    ¡Contáctanos y comienza tu viaje hacia el éxito hoy mismo!
-                  </p>
-                  <a
-                    href="#contact"
-                    class="btn-get-started2 animated fadeInUp scrollto"
-                    >Contacto</a
-                  >
-                  <a
-                    href="https://raven3.com.ar/tiendas-online"
-                    class="btn-get-started animated fadeInUp scrollto"
-                    >Ver más</a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <a
-            aria-label="previous"
-            class="carousel-control-prev"
-            href="#heroCarousel"
-            role="button"
-            data-bs-slide="prev"
+          <a class="btn btn-sm primary" href="index.html#contacto">Charlemos</a>
+        </div>
+      </header>
+      <!-- HERO with WebGL background -->
+      <header class="hero" data-scroll-section>
+        <div class="hero__inner container">
+          <p class="eyebrow" data-scroll data-scroll-speed="-1">
+            Agencia Digital
+          </p>
+          <h1 data-scroll data-scroll-speed="-2">
+            Diseñamos y <span class="accent">desarrollamos</span
+            ><br />experiencias web con performance real
+          </h1>
+          <p
+            class="kicker"
+            data-scroll
+            data-scroll-delay="0.1"
+            data-scroll-speed="-0.5"
           >
-            <span
-              class="carousel-control-prev-icon bi bi-chevron-left"
-              aria-hidden="true"
-            ></span>
-          </a>
-          <a
-            aria-label="next"
-            class="carousel-control-next"
-            href="#heroCarousel"
-            role="button"
-            data-bs-slide="next"
-          >
-            <span
-              class="carousel-control-next-icon bi bi-chevron-right"
-              aria-hidden="true"
-            ></span>
-          </a>
-        </div>
-      </section>
-      <!-- <div class="audio-player" style="display: flex; align-items: center">
-        <audio id="audio-player" autoplay loop src="/assets/audio/Rain.mp3" type="audio/mpeg" preload="metadata" >
-          Your browser does not support the audio element.
-        </audio>
-        <button
-          id="mute-button"
-          style="
-            background: none;
-            border: none;
-            font-size: 24px;
-            cursor: pointer;
-            padding: 0;
-            z-index: 10000;
-            position: fixed;
-            top: 100px;
-            left: 20px;
-          ">
-          🔊
-        </button>
-      </div> -->
-
-      <!-- ======= Nosotros Section ======= -->
-      <section id="nosotros" class="nosotros">
-        <h1 class="main-heading">
-          Nos especializamos en Páginas Web y Tiendas Online
-        </h1>
-        <div class="container" data-aos="fade-up">
-          <div class="row">
-            <div class="image col-lg-6 rounded" data-aos="fade-right"></div>
-            <div class="col-lg-6" data-aos="fade-left">
-              <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in">
-                <h2>Nosotros</h2>
-                <p>
-                  Cuando recibimos una propuesta de trabajo, hacemos un análisis
-                  en profundidad de la marca para poder entender si nuestros
-                  intereses son compatibles.
-                </p>
-              </div>
-              <div class="icon-box mt-5" data-aos="zoom-in">
-                <h2>Equipo</h2>
-                <p>
-                  Somos una agencia boutique lo que significa que nuestro equipo
-                  es muy especializado en cada área de servicios que ofrecemos
-                  pero también es reducido.
-                </p>
-              </div>
-            </div>
-            <div class="col-sm-12">
-              <div class="mb-5 mt-8"></div>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="icon-box mt-5" data-aos="zoom-in">
-                    <i class="bi bi-brightness-high"></i>
-                    <h3>Somos creativos</h3>
-                    <p>
-                      La creatividad es la esencia de nuestro ser. Creemos en el
-                      pensamiento original y en la innovación constante. Nuestra
-                      creatividad no se limita a lo que hacemos, sino que se
-                      refleja en cómo pensamos, cómo resolvemos problemas y cómo
-                      nos enfrentamos a los desafíos.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="icon-box mt-5" data-aos="zoom-in">
-                    <i class="bi bi-speedometer2"></i>
-                    <h3>Cumplimos metas</h3>
-                    <p>
-                      Estamos orientados a los resultados. Nos esforzamos por
-                      alcanzar nuestras metas y superar nuestras propias
-                      expectativas. Nuestro compromiso con la excelencia nos
-                      impulsa a alcanzar y superar los objetivos que nos
-                      proponemos.
-                    </p>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="icon-box mt-5" data-aos="zoom-in">
-                    <i class="bi bi-people"></i>
-                    <h3>Trabajamos en equipo</h3>
-                    <p>
-                      Valoramos el trabajo en equipo. Creemos que las mejores
-                      ideas y soluciones surgen de la colaboración y el
-                      intercambio de perspectivas. Nuestro equipo es nuestro
-                      mayor activo, y juntos somos más fuertes.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            En <strong>Raven3</strong> creamos
+            <strong>sitios web a medida</strong>,
+            <strong>tiendas online profesionales</strong> y estrategias de
+            <strong>SEO técnico</strong> que mejoran la velocidad, la
+            visibilidad y las conversiones de tu negocio digital.
+          </p>
+          <div class="cta-row" data-scroll data-scroll-speed="-0.3">
+            <a class="btn primary" href="#servicios">Ver servicios</a>
+            <a class="btn" href="#contacto">Charlemos</a>
           </div>
         </div>
-      </section>
-      <!-- End nosotros Section -->
+      </header>
 
-      <!-- <section id="cta2" class="cta2">
-        <div class="container"></div>
-      </section> -->
-
-      <section id="cta4" class="cta4">
-        <div class="container"></div>
-      </section>
-      <!-- ======= servicios Section ======= -->
-      <section id="servicios" class="servicios">
-        <div class="container" data-aos="fade-up">
-          <div class="section-title mb-5">
-            <h2 id="digital" class="varela">Nuestros Servicios</h2>
-            <!-- <p class="varela"></p> -->
-          </div>
-
-          <div class="row">
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-              id="paginaweb"
-            >
-              <div class="icon-box">
-                <div class="icon">
-                  <i class="bi bi-layout-text-window-reverse"></i>
-                </div>
-                <h2>
-                  <a href="https://raven3.com.ar/pagina-web">Diseño y desarrollo web</a>
-                </h2>
-                <p>
-                  Ideal para campañas publicitarias. Diseño adapatable mobile,
-                  tablet, desktop. Formulario de contacto, links a redes
-                  sociales y Botón de Whatsapp.
-                </p>
-                <hr />
-                <button
-                  class="get-started-btn btn-landing"
-                  onclick="window.location.href='https://raven3.com.ar/pagina-web'"
-                >
-                  Más Información
-                </button>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-              id="tiendaonline"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-cart4"></i></div>
-                <h2>
-                  <a href="https://raven3.com.ar/tiendas-online"
-                    >Tiendas Online</a
-                  >
-                </h2>
-                <p>
-                  Maximiza tu alcance y aumenta tus ventas con una plataforma de
-                  comercio electrónico intuitiva, segura y fácil de gestionar.
-                  Tienda diseñada a medida.
-                </p>
-                <hr />
-                <button
-                  class="get-started-btn btn-landing"
-                  onclick="window.location.href='https://raven3.com.ar/tiendas-online'"
-                >
-                  Más Información
-                </button>
-              </div>
-            </div>
-
-            <div
-              class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0"
-              data-aos="zoom-in"
-              data-aos-delay="600"
-              id="seo"
-            >
-              <div class="icon-box">
-                <div class="icon"><i class="bi bi-graph-up-arrow"></i></div>
-                <h2>
-                  <a href="https://raven3.com.ar/seo-tecnico">SEO Técnico</a>
-                </h2>
-                <p>
-                  Optimizamos el código y la estructura de tu sitio para mejorar
-                  su velocidad, seguridad y visibilidad en Google. Detectamos
-                  errores técnicos y aplicamos mejoras clave para escalar
-                  posiciones en buscadores.
-                </p>
-                <hr />
-                <button
-                  class="get-started-btn btn-landing"
-                  onclick="window.location.href='https://raven3.com.ar/seo-tecnico'"
-                >
-                  Más Información
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="cta1" class="cta1">
-        <div class="container"></div>
-      </section>
-
-      <section id="portfolio2" class="portfolio2" data-aos="zoom-in">
-        <a
-          href="https://raven3.com.ar/trabajos"
-          title="Ver nuestros proyectos"
-          class="btn-asesoramiento"
-        >
-          <span>Ver Proyectos</span>
-        </a>
-      </section>
-
-      <section id="cta3" class="cta3">
-        <div class="container"></div>
-      </section>
-
-      <!-- End Team Section -->
-      <!-- ======= Contact Section ======= -->
-      <section
-        id="contact"
-        class="contact"
-        style="margin-top: 50px; margin-bottom: 50px"
-      >
-        <div class="container consultoria" data-aos="fade-up">
-          <div
-            class="section-title2"
-            data-aos="fade-right"
-            data-aos-delay="100"
-          >
-            <h2 class="varela mt-5">Consultoría gratuita</h2>
-            <p class="varela">
-              Completa el form para agendar una reunión con nuestro equipo,
-              ¡queremos conocerte!
-            </p>
-          </div>
-
-          <!-- <div class="row mt-5">
-            <div class="col-lg-4">
-              <div class="info">
-                <div class="address" data-aos="fade-right" data-aos-delay="200">
-                  <i class="bi bi-whatsapp"></i>
-                  <h2>Envíanos un mensaje al</h2>
-                  <p>📞 +54 11 34568899</p>
-                </div>
-
-                <div class="email" data-aos="fade-right" data-aos-delay="300">
-                  <i class="bi bi-envelope"></i>
-                  <h2>Para consultas, escribe a</h2>
-                  <p>✉️ hola@raven3.com.ar</p>
-                </div>
-              </div>
-            </div> -->
-
-          <div class="col-lg-6 mt-5 mt-lg-0">
-            <!-- <p>Datos de contacto</p> -->
-            <form
-              id="my-form"
-              action="https://formspree.io/f/mvoykeyq"
-              method="POST"
-              class="php-email-form"
-            >
-              <div
-                class="form-group mt-3"
-                data-aos="fade-left"
-                data-aos-delay="100"
-              >
-                <div style="display: flex">
-                  <label for="email">Tu Email</label>
-                </div>
-
-                <input
-                  type="email"
-                  class="form-control"
-                  name="email"
-                  id="email"
-                  required
-                />
-              </div>
-              <div
-                class="form-group mt-3"
-                data-aos="fade-left"
-                data-aos-delay="200"
-              >
-                <div style="display: flex">
-                  <label for="message"
-                    >Cuéntanos más sobre tí y tu negocio.
-                  </label>
-                </div>
-                <textarea
-                  class="form-control"
-                  name="message"
-                  rows="5"
-                  id="message"
-                  required
-                ></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message" id="error-message"></div>
-                <div class="sent-message">
-                  Tú mensaje ha sido enviado. Gracias!
-                </div>
-              </div>
-              <div class="recaptcha-wrapper">
-                <div
-                  class="g-recaptcha"
-                  data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq"
-                ></div>
-              </div>
-              <div
-                class="text-center"
-                data-aos="fade-left"
-                data-aos-delay="300"
-              >
-                <button type="submit" id="my-form-button">
-                  Enviar Mensaje
-                </button>
-                <p id="my-form-status"></p>
-              </div>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <!-- <iframe
-        title="office location"
-        style="width: 100%; height: 450px"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3287.801398048403!2d-58.48308678434926!3d-34.507918880484304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb10f4ed19c99%3A0x742a888de27361a7!2sCmte.%20Leonardo%20Rosales%202483%2C%20B1636DQE%20Olivos%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1sen!2sar!4v1662483119244!5m2!1sen!2sar"
-        class="gmap"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe> -->
-
-      <div id="map" class="map">
-        <div class="text-center">
-          <div style="max-width: 1170px; margin: auto">
-            <p style="font-size: 16px !important; padding: 0 15px">
-              <span class="texto-resaltado">Diseño Web en Argentina</span><br />
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Capital Federal</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Buenos Aires</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Córdoba</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Santa Fe</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Mendoza</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Entre Ríos</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >La Pampa</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Río Negro</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Neuquén</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Chubut</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Corrientes</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >San Juan</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Salta</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Jujuy</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >San Luis</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Misiones</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Catamarca</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Santa Cruz</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Tucumán</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >La Rioja</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Formosa</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Santiago del Estero</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Tierra del Fuego</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Chaco</a
-              >
-            </p>
-            <p class="texto-footer footer-p-provincias">
-              <span class="texto-resaltado"
-                >Diseño Web en el resto del mundo</span
-              ><br />
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Uruguay</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Chile</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >España</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >Estados Unidos</a
-              >
-              <i class="bi bi-geo-alt-fill" style="color: #bbb"></i>
-              <a
-                href="https://raven3.com.ar/pagina-web"
-                class="a-footer-provincias"
-                >México</a
-              >
-            </p>
-            <p class="texto-footer footer-p-provincias"></p>
-          </div>
-        </div>
-      </div>
-
-      <section>
+      <!-- Raven strip parallax -->
+      <section aria-label="Ravens" data-scroll-section>
         <div class="container">
-          <div class="personalizado-box">
-            <div id="asesoramiento" class="mb-4">
-              <h3>Personalizado</h3>
+          <div class="raven-strip" id="ravenStrip"></div>
+        </div>
+      </section>
+
+      <!-- Servicios -->
+      <section id="servicios" data-scroll-section>
+        <div class="container">
+          <h2 class="section-title" data-scroll data-scroll-class="is-in">
+            ¿Qué hacemos?
+          </h2>
+          <p class="muted" data-scroll data-scroll-repeat="true">
+            Somos una agencia enfocada en <strong>performance</strong>,
+            <strong>accesibilidad</strong> y <strong>SEO técnico</strong>.
+            Diseñamos sitios rápidos, seguros y optimizados para destacar en los
+            buscadores.
+          </p>
+          <div class="grid" style="margin-top: 28px">
+            <article class="card" data-scroll data-scroll-speed="0.4">
+              <div class="tag">Frontend</div>
+              <h3>Web a medida</h3>
               <p>
-                ¿No ves lo que buscabas? No te preocupes. Hablemos de tu negocio
-                y trabajemos en un plan personalizado.
+                Creamos <strong>páginas web personalizadas</strong> con HTML,
+                CSS y JavaScript o frameworks modernos como
+                <strong>Angular</strong> y <strong>React</strong>. Interfaz
+                limpia, animaciones sutiles y rendimiento optimizado para una
+                experiencia 60 fps real.
               </p>
-            </div>
-            <div id="conversemos" class="text-center text-md-start">
-              <a
-                href="https://calendly.com/raven3-asesoramiento"
-                title="Solicitar llamada con un especialista"
-                class="d-inline-block"
-              >
-                <h4 class="call">Conversemos</h4>
-              </a>
-            </div>
+            </article>
+            <article class="card" data-scroll data-scroll-speed="0.2">
+              <div class="tag">E‑commerce</div>
+              <h3>Tiendas Online</h3>
+              <p>
+                Desarrollamos <strong>tiendas online profesionales</strong> con
+                catálogos dinámicos, integración con medios de pago,
+                automatización y analítica. Arquitectura lista para escalar tu
+                negocio.
+              </p>
+            </article>
+            <article class="card" data-scroll data-scroll-speed="0.6">
+              <div class="tag">SEO</div>
+              <h3>SEO Técnico</h3>
+              <p>
+                Mejoramos tus <strong>Core Web Vitals</strong>,
+                <strong>indexabilidad</strong> y
+                <strong>estructura de datos</strong>. Auditorías técnicas con
+                acciones concretas para mejorar tu posicionamiento en Google.
+              </p>
+            </article>
           </div>
         </div>
       </section>
-    </main>
-    <!-- End #main -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer" data-aos="zoom-in" data-aos-delay="100">
-      <div class="footer-top">
+      <!-- Showcase con parallax en imágenes (puedes reemplazar los src) -->
+      <section aria-label="Showcase" data-scroll-section>
         <div class="container">
-          <div class="row text-center">
-            <div class="col-lg-3 col-md-3">
-              <div class="footer-info">
-                <h2>Rvn3<span>.</span></h2>
-                <p>Agencia de Diseño Web</p>
-                <p>
-                  <i class="bi bi-geo-alt-fill"></i>
-                  Argentina, Buenos Aires.<br /><br />
-                  <strong>Telefono:</strong> +54 9 11 3112 7973<br />
-                  <strong>Mail:</strong>
-                  <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a
-                  ><br />
-                </p>
-                <div class="social-links mt-3">
-                  <a
-                    href="https://api.whatsapp.com/send?l=es&amp;text=Hola%20Ravens!%20Quiero%20consultarles%20por%20un%20presupuesto&amp;phone=+5491134568899"
-                    class="whatsapp"
-                    aria-label="link to whatsapp"
-                    ><i class="bx bxl-whatsapp"></i
-                  ></a>
+          <h2 class="section-title">Marcas que confiaron en nosotros</h2>
+          <p class="section-subtitle" data-scroll data-scroll-speed="0.3">
+            Casos reales de webs, tiendas y SEO técnico que potenciaron su
+            presencia online.
+          </p>
+          <div class="showcase" style="margin-top: 30px">
+            <!-- Cliente 1 -->
+            <figure class="shot">
+              <!-- <video
+                autoplay
+                muted
+                loop
+                playsinline
+                data-scroll
+                data-scroll-speed="-0.8"
+              >
+                <source src="assets/video/1.mp4" type="video/mp4" />
+              </video> -->
+              <img
+                src="../assets/img/portfolio/WEB/ndbpropiedades/logo.png"
+                class="img-fluid"
+                alt="imagen del logo de ndb propiedades"
+              />
+              <figcaption>
+                <h3>NDB Propiedades</h3>
+                <p>Web + Integración API Tokko Broker</p>
+              </figcaption>
+            </figure>
 
-                  <a
-                    href="https://github.com/raven3-agency/"
-                    aria-label="link to github profile"
-                    class="github"
-                    ><i class="bx bxl-github"></i
-                  ></a>
+            <!-- Cliente 2 -->
+            <figure class="shot">
+              <!-- <video
+                autoplay
+                muted
+                loop
+                playsinline
+                data-scroll
+                data-scroll-speed="-0.8"
+              >
+                <source src="assets/video/1.mp4" type="video/mp4" />
+              </video> -->
+              <img
+                src="../assets/img/portfolio/WEB/sgm/logo.png"
+                class="img-fluid"
+                alt="imagen del logo de sgm+"
+              />
+              <figcaption>
+                <h3>SGM+</h3>
+                <p>Sitio institucional + Tienda online de talleres</p>
+              </figcaption>
+            </figure>
 
-                  <a
-                    href="https://www.instagram.com/agencia.raven3/"
-                    aria-label="instagram"
-                    class="instagram"
-                    ><i class="bx bxl-instagram"></i
-                  ></a>
-                </div>
+            <!-- Cliente 3 -->
+            <figure class="shot">
+              <!-- <video
+                autoplay
+                muted
+                loop
+                playsinline
+                data-scroll
+                data-scroll-speed="-0.8"
+              >
+                <source src="assets/video/1.mp4" type="video/mp4" />
+              </video> -->
+              <img
+                src="../assets/img/portfolio/WEB/lassen/logo.png"
+                class="img-fluid"
+                alt="imagen del logo de ndb propiedades"
+              />
+              <figcaption>
+                <h3>LASSENPHARMA</h3>
+                <p>Web corporativa con SEO técnico</p>
+              </figcaption>
+            </figure>
+
+            <!-- Cliente 4 -->
+            <figure class="shot">
+              <!-- <video
+                autoplay
+                muted
+                loop
+                playsinline
+                data-scroll
+                data-scroll-speed="-0.8"
+              >
+                <source src="assets/video/1.mp4" type="video/mp4" />
+              </video> -->
+              <img
+                src="../assets/img/portfolio/WEB/beforce/logo.png"
+                class="img-fluid"
+                alt="imagen del logo de ndb propiedades"
+              />
+              <figcaption>
+                <h3>BEFORCE</h3>
+                <p>Catálogo digital + identidad visual</p>
+              </figcaption>
+            </figure>
+          </div>
+          <div
+            class="cta-center"
+            data-scroll
+            data-scroll-speed="0.2"
+            style="margin-top: 40px"
+          >
+            <a href="clientes.html" class="btn btn-outline"
+              >Ver más proyectos</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Marquee CTA -->
+      <!-- Strips / Banners con movimiento horizontal -->
+      <section class="strips" data-scroll-section>
+        <div class="strips-wrap" id="stripsTarget">
+          <div class="strip" style="--rot: -6deg">
+            <span
+              class="strip-inner"
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="8"
+              data-scroll-target="#stripsTarget"
+            >
+              RAVEN3.COM.AR • Diseño web a medida • Performance real •
+              Experiencias digitales
+            </span>
+          </div>
+
+          <div class="strip" style="--rot: 4deg">
+            <span
+              class="strip-inner"
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="-10"
+              data-scroll-target="#stripsTarget"
+            >
+              Webs rápidas • Tiendas online • SEO técnico avanzado
+            </span>
+          </div>
+
+          <div class="strip" style="--rot: -3deg">
+            <span
+              class="strip-inner"
+              data-scroll
+              data-scroll-direction="horizontal"
+              data-scroll-speed="12"
+              data-scroll-target="#stripsTarget"
+              data-scroll-delay="0.05"
+            >
+              RAVEN3.COM.AR • Resultados reales • Diseño con propósito •
+              Velocidad que convierte
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section id="contacto" data-scroll-section>
+        <div class="container contact-section">
+          <div class="contact-intro">
+            <h2 class="section-title">¿Tenés un proyecto en mente?</h2>
+            <p class="muted">
+              Contanos qué necesitás. Te respondemos en menos de 24hs con una
+              propuesta concreta.
+            </p>
+          </div>
+
+          <form
+            class="r3-form"
+            action="https://formspree.io/f/xxxxxxxx"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
               </div>
             </div>
 
-            <div class="col-lg-3 col-md-3 footer-links"></div>
-
-            <div class="col-lg-3 col-md-3 footer-links">
-              <h3>Otros Links</h3>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://raven3.com.ar/blog/">Blog Raven3</a>
-                </li>
-              </ul>
+            <div class="form-group">
+              <label for="service">¿Qué necesitás?</label>
+              <select id="service" name="service">
+                <option value="">Seleccionar servicio</option>
+                <option value="web">Web a medida</option>
+                <option value="ecommerce">Tienda online</option>
+                <option value="seo">SEO técnico</option>
+                <option value="otro">Otro</option>
+              </select>
             </div>
 
-            <div class="col-lg-3 col-md-3 footer-links">
-              <h3>Nuestros Servicios</h3>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://raven3.com.ar/pagina-web"  >Diseño y desarrollo web</a>
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://raven3.com.ar/tiendas-online"
-                    >Tiendas Online</a
-                  >
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://raven3.com.ar/contenido-para-redes-sociales"
-                    >Contenido<br />
-                    para Redes</a
-                  >
-                </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://raven3.com.ar/seo-tecnico"
-                    >Seo Tecnico<br
-                  /></a>
-                </li>
-              </ul>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Contanos sobre tu proyecto..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn primary">Enviar mensaje</button>
+              <span class="form-status" id="formStatus"></span>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- Footer / contacto -->
+      <footer id="contacto" data-scroll-section>
+        <div class="foot">
+          <div class="brand">Raven3</div>
+          <div>
+            <div class="small">
+              ¿Tenés un proyecto digital? Escribinos y armamos algo increíble.
+              Convertimos ideas en sitios web rápidos, accesibles y rentables.
+            </div>
+            <div class="cta-row" style="margin-top: 1rem">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar"
+                >Contactar por email</a
+              >
+              <a
+                class="btn"
+                href="https://wa.me/549"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
             </div>
           </div>
+          <div class="small">Hecho con ❤️ • Raven3 © 2025</div>
         </div>
-      </div>
+      </footer>
+    </main>
 
-      <div class="container" id="terminos">
-        <div class="credits">
-          <a
-            href="https://raven3.com.ar/terminos-de-contratacion"
-            title="Terminos de contratacion"
-            >Términos de Contratación</a
-          >
-          <span>|</span>
-          <a
-            href="https://raven3.com.ar/politicas-de-privacidad"
-            title="Politicas de privacidad"
-            >Políticas de privacidad</a
-          >
-        </div>
+    <!-- Raven SVG templates injected via JS template strings above -->
+    <script>
+      function ravenSVG() {
+        return `<svg viewBox="0 0 128 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z" fill="#101317" stroke="rgba(55,226,213,.45)" stroke-width="1.25"/></svg>`;
+      }
+      function marqueeUnit() {
+        return `<div class="unit"><svg viewBox="0 0 128 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z" fill="#0f1317"/></svg> Raven3`;
+      }
+    </script>
 
-        <div class="copyright" id="copyright"></div>
-      </div>
-    </footer>
-    <!-- End Footer -->
-    <!-- <div class="cursor"></div> -->
+    <!-- Librerías externas -->
+    <script src="https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
 
-    <div id="preloader"></div>
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      aria-label="Back to top"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
-
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script async src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script async src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script
-      async
-      src="assets/vendor/isotope-layout/isotope.pkgd.min.js"
-    ></script>
-    <!-- <script src="assets/vendor/swiper/swiper-bundle.min.js"></script> -->
-    <script async src="assets/vendor/jsbutton.js"></script>
-
-    <!-- Template Main JS File -->
-    <!-- <script src="assets/js/theme.js"></script> -->
+    <!-- Tu script principal -->
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/progress-bar.js"></script>
+    <script src="assets/js/particles.js"></script>
+
+    <script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    status.textContent = "Enviando...";
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        status.textContent = "Mensaje enviado correctamente ✓";
+        form.reset();
+      } else {
+        status.textContent = "Ocurrió un error. Intentá nuevamente.";
+      }
+    } catch (error) {
+      status.textContent = "Error de conexión.";
+    }
+  });
+</script>
   </body>
 </html>
