@@ -156,6 +156,12 @@
         ]
       }
     </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+      src="https://www.google.com/recaptcha/api.js?render=explicit"
+      async
+      defer
+    ></script>
   </head>
   <body>
     <div class="wasap" aria-label="WhatsApp Raven3">
@@ -502,16 +508,17 @@
             </div>
 
             <div class="form-footer">
+              
               <button type="submit" class="btn primary">Enviar mensaje</button>
+              
               <span class="form-status" id="formStatus"></span>
-            </div>
-
-             <div class="recaptcha-wrapper">
+              <div class="recaptcha-wrapper">
                 <div
                   class="g-recaptcha"
                   data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq"
                 ></div>
               </div>
+            </div>
           </form>
         </div>
       </section>
