@@ -1,5 +1,3 @@
-import * as THREE from "three";
-
 let started = false;
 
 function start() {
