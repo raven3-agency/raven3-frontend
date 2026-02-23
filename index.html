@@ -294,7 +294,11 @@
           </p>
           <div class="showcase" style="margin-top: 30px">
             <!-- Cliente 1 -->
-            <figure class="shot">
+            <figure
+              class="shot"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
               <!-- <video
                 autoplay
                 muted
@@ -313,13 +317,16 @@
                 decoding="async"
               />
               <figcaption>
-                <h3>NDB Propiedades</h3>
-                <p>Web + Integración API Tokko Broker</p>
+                <p class="client-label" itemprop="name">NDB Propiedades</p>
+                <p class="client-outcome" itemprop="description">
+                  Inmobiliaria con filtros avanzados e integración API Tokko.
+                </p>
               </figcaption>
             </figure>
 
             <!-- Cliente 2 -->
-            <figure class="shot">
+            <figure class="shot"   itemscope
+              itemtype="https://schema.org/CreativeWork">
               <!-- <video
                 autoplay
                 muted
@@ -338,13 +345,17 @@
                 decoding="async"
               />
               <figcaption>
-                <h3>SGM+</h3>
-                <p>Sitio institucional + Tienda online de talleres</p>
+                <!-- <h3 class="client-name">SGM+</h3> -->
+                <p class="client-label" itemprop="name">SGM+</p>
+                <p class="client-outcome" itemprop="description">
+                  Sitio institucional + Tienda online de talleres
+                </p>
               </figcaption>
             </figure>
 
             <!-- Cliente 3 -->
-            <figure class="shot">
+            <figure class="shot"   itemscope
+              itemtype="https://schema.org/CreativeWork">
               <!-- <video
                 autoplay
                 muted
@@ -363,13 +374,15 @@
                 decoding="async"
               />
               <figcaption>
-                <h3>LASSENPHARMA</h3>
-                <p>Web corporativa con SEO técnico</p>
+                <!-- <h3 class="client-name">LASSENPHARMA</h3> -->
+                  <p class="client-label" itemprop="name">LASSENPHARMA</p>
+                <p class="client-outcome">Web corporativa con SEO técnico</p>
               </figcaption>
             </figure>
 
             <!-- Cliente 4 -->
-            <figure class="shot">
+            <figure class="shot"   itemscope
+              itemtype="https://schema.org/CreativeWork">
               <!-- <video
                 autoplay
                 muted
@@ -388,8 +401,11 @@
                 decoding="async"
               />
               <figcaption>
-                <h3>BEFORCE</h3>
-                <p>Catálogo digital + identidad visual</p>
+                <!-- <h3 class="client-name">BEFORCE</h3> -->
+                <p class="client-label" itemprop="name">BEFORCE</p>
+                <p class="client-outcome">
+                  Catálogo digital + identidad visual
+                </p>
               </figcaption>
             </figure>
           </div>
@@ -399,9 +415,7 @@
             data-scroll-speed="0.2"
             style="margin-top: 40px"
           >
-            <a href="clientes.html" class="btn primary"
-              >Ver más proyectos</a
-            >
+            <a href="clientes.html" class="btn primary">Ver más proyectos</a>
           </div>
         </div>
       </section>
@@ -503,9 +517,8 @@
             </div>
 
             <div class="form-footer">
-              
               <button type="submit" class="btn primary">Enviar mensaje</button>
-              
+
               <span class="form-status" id="formStatus"></span>
               <div class="recaptcha-wrapper">
                 <div
