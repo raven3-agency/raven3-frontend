@@ -1,9 +1,3 @@
-// =======================================================
-// Raven3 website interactions
-// Locomotive Scroll + Three.js + custom parallax strips
-// =======================================================
-
-// Helper para crear scripts dinámicamente (por si algún CDN falla)
 function loadScript(src) {
   return new Promise((resolve, reject) => {
     const s = document.createElement("script");
@@ -15,75 +9,48 @@ function loadScript(src) {
   });
 }
 
-// Asegurar que las librerías estén listas
-async function ensureLibs() {
-  if (!window.LocomotiveScroll) {
-    try {
-      await loadScript(
-        "https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"
-      );
-    } catch {
-      await loadScript(
-        "https://cdn.jsdelivr.net/npm/locomotive-scroll@4/dist/locomotive-scroll.min.js"
-      );
-    }
-  }
-  if (!window.THREE) {
-    try {
-      await loadScript(
-        "https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"
-      );
-    } catch {
-      await loadScript("https://unpkg.com/three@0.152.2/build/three.min.js");
-    }
-  }
-}
-
 async function init() {
-  await ensureLibs();
+  await ensureLocomotive();
 
-  // =======================
-  // Locomotive Scroll init
-  // =======================
+  const container = document.querySelector("[data-scroll-container]");
+  if (!container) return;
+
   const scroll = new LocomotiveScroll({
-    el: document.querySelector("[data-scroll-container]"),
+    el: container,
     smooth: true,
     lerp: 0.08,
     smartphone: { smooth: true },
     tablet: { smooth: true },
   });
 
-  // Barra de progreso lateral
   const progressEl = document.getElementById("progress");
-  scroll.on("scroll", (args) => {
-    const h = (args.scroll.y / (args.limit.y || 1)) * 100;
-    progressEl.style.height = `${Math.min(100, Math.max(0, h))}vh`;
-  });
+  if (progressEl) {
+    scroll.on("scroll", (args) => {
+      const h = (args.scroll.y / (args.limit.y || 1)) * 100;
+      progressEl.style.height = `${Math.min(100, Math.max(0, h))}vh`;
+    });
+  }
 
-
-
-  // =======================
-  // Renderizar cuervos SVG
-  // =======================
   const ravenStrip = document.getElementById("ravenStrip");
-  const speeds = [2, 1.4, 2.6, 1.2, 2.1, 1.6, 2.8, 1.3, 2.2, 1.7, 2.4, 1.1];
-
-  const ravenSVG = () => `
-    <svg viewBox="0 0 128 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z"
-        fill="#101317" stroke="rgba(55,226,213,.45)" stroke-width="1.25"/>
-    </svg>`;
-
   if (ravenStrip) {
+    const speeds = [2, 1.4, 2.6, 1.2, 2.1, 1.6, 2.8, 1.3, 2.2, 1.7, 2.4, 1.1];
+
+    const ravenSVG = () => `
+      <svg viewBox="0 0 128 64" fill="none" xmlns="http:
+        <path d="M3 36c16-6 27-9 51-9 20 0 32 2 52 9-7-9-15-15-23-19 7-4 14-6 21-6-12-3-23-2-33 1-6-2-12-3-18-3-9 0-18 2-27 6-6 3-12 8-20 21 0 0 6 2 10 0 6-3 9-7 17-9-6 6-10 12-12 18 7-3 15-6 25-7-11 7-17 12-20 17 13-6 30-11 55-11 12 0 23 2 33 5-16 7-35 10-58 9C32 58 15 51 3 36Z"
+          fill="#101317" stroke="rgba(55,226,213,.45)" stroke-width="1.25"/>
+      </svg>`;
+
     speeds.forEach((speed) => {
       const div = document.createElement("div");
       div.setAttribute("data-scroll", "");
-      div.setAttribute("data-scroll-speed", speed);
+      div.setAttribute("data-scroll-speed", String(speed));
       div.innerHTML = ravenSVG();
       ravenStrip.appendChild(div);
     });
   }
+
+  scroll.update();
 }
 
-// Ejecutar todo al cargar la página
 window.addEventListener("load", init);

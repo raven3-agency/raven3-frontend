@@ -35,7 +35,8 @@ function start() {
     return tex;
   }
 
-  let mouseX = 0, mouseY = 0;
+  let mouseX = 0,
+    mouseY = 0;
   let halfX = window.innerWidth / 2;
   let halfY = window.innerHeight / 2;
 
@@ -43,7 +44,7 @@ function start() {
     50,
     window.innerWidth / window.innerHeight,
     5,
-    2000
+    2000,
   );
   camera.position.z = 500;
 
@@ -66,7 +67,10 @@ function start() {
   }
 
   const geometry = new THREE.BufferGeometry();
-  geometry.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
+  geometry.setAttribute(
+    "position",
+    new THREE.Float32BufferAttribute(vertices, 3),
+  );
 
   const material = new THREE.PointsMaterial({
     size: 2.2,
@@ -83,7 +87,11 @@ function start() {
   const points = new THREE.Points(geometry, material);
   scene.add(points);
 
-  const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+  const renderer = new THREE.WebGLRenderer({
+    canvas,
+    alpha: true,
+    antialias: true,
+  });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.setSize(window.innerWidth, window.innerHeight);
 
