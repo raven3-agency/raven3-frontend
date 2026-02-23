@@ -1,8 +1,3 @@
-/* ===============================
-   RvN3 – Clients UI (Responsive)
-   =============================== */
-
-/* --------- Design tokens (opcional pero recomendado) --------- */
 :root {
   --topbar-h: 72px;
   --radius-lg: 22px;
@@ -23,17 +18,14 @@
 
   --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
 
-  /* layout */
   --gutter: clamp(16px, 3vw, 28px);
 }
 
-/* Fallback container si no tenés uno */
 .container {
   width: min(1120px, 100% - (var(--gutter) * 2));
   margin-inline: auto;
 }
 
-/* Mejoras generales UX */
 * {
   box-sizing: border-box;
 }
@@ -54,7 +46,6 @@ a {
   outline-offset: 3px;
 }
 
-/* Reduce motion (accesibilidad) */
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
@@ -65,13 +56,11 @@ a {
   }
 }
 
-/* ========= TOPBAR (Responsive + usable) ========= */
-
 .topbar {
   position: sticky;
   top: 0;
   z-index: 999;
-  height: 72px; /* altura fija para centrar todo */
+  height: 72px;
   display: flex;
   align-items: center;
   backdrop-filter: blur(1px);
@@ -87,14 +76,13 @@ a {
   justify-content: space-between;
   gap: 14px;
 
-  /* evita que en mobile quede todo pegado */
   padding-block: 10px;
 }
 
 .topbar .brand {
   display: inline-flex;
   align-items: center;
-  min-height: 44px; /* target táctil */
+  min-height: 44px;
   line-height: 1;
   font-weight: 800;
   letter-spacing: 0.2px;
@@ -113,7 +101,7 @@ a {
   display: inline-flex;
   align-items: center;
 
-  min-height: 44px; /* target táctil */
+  min-height: 44px;
   padding-inline: 8px;
 
   line-height: 1;
@@ -133,8 +121,6 @@ a {
 .topbar__link.is-active {
   color: var(--accent);
 }
-
-/* CTA */
 
 .btn {
   --btn-bg: transparent;
@@ -187,21 +173,30 @@ a {
   box-shadow: 0 0 18px rgba(55, 226, 213, 0.18);
 }
 
-/* Mobile: oculto nav (ideal: reemplazar por menú hamburguesa en HTML/JS) */
 @media (max-width: 720px) {
   .topbar__nav {
     display: none;
   }
 }
 
-/* ========= HERO / TYPO ========= */
-
-.clients-hero {
-  /* más aire en desktop, menos en mobile */
-  padding: clamp(40px, 6vw, 72px) 0 clamp(18px, 3vw, 28px);
+.clients-hero .container {
+  position: relative;
+  z-index: 1;
+  padding: clamp(28px, 4vw, 48px);
+  border-radius: 28px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.35)
+  );
+  border: 1px solid rgba(55, 226, 213, 0.08);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.4),
+    0 0 40px rgba(55, 226, 213, 0.04);
 }
 
-/* Si tu H1 está dentro de .clients-hero, esto lo mejora mucho */
 .clients-hero h1 {
   font-size: clamp(34px, 5.2vw, 64px);
   line-height: 1.02;
@@ -217,8 +212,6 @@ a {
   margin: 0;
 }
 
-/* ========= FILTERS / CHIPS ========= */
-
 .filters {
   display: flex;
   gap: 10px;
@@ -229,7 +222,6 @@ a {
   margin-top: 8px;
 }
 
-/* Mobile UX: chips scrolleables en una línea */
 @media (max-width: 640px) {
   .proof-pills {
     margin-bottom: 14px;
@@ -265,7 +257,7 @@ a {
   cursor: pointer;
   user-select: none;
 
-  min-height: 44px; /* target táctil */
+  min-height: 44px;
   display: inline-flex;
   align-items: center;
 
@@ -285,13 +277,10 @@ a {
   border-color: rgba(55, 226, 213, 0.55);
 }
 
-/* ========= GRID ========= */
-
 .clients {
   padding: clamp(22px, 3vw, 30px) 0 clamp(54px, 7vw, 80px);
 }
 
-/* En vez de 12 columnas fijas, auto-fit para que fluya perfecto */
 .clients-grid {
   display: grid;
   gap: 18px;
@@ -299,7 +288,6 @@ a {
   align-items: stretch;
 }
 
-/* Card */
 .client-card {
   border: 1px solid rgba(255, 255, 255, 0.04);
   border-radius: 20px;
@@ -383,8 +371,6 @@ a {
   margin-bottom: 14px;
 }
 
-/* ========= THUMB / IMAGE ========= */
-
 .client-thumb {
   width: 100%;
   display: block;
@@ -394,7 +380,6 @@ a {
   cursor: zoom-in;
 }
 
-/* altura de imagen fluida por breakpoint */
 .client-thumb img {
   width: 100%;
   height: clamp(190px, 24vw, 240px);
@@ -403,8 +388,6 @@ a {
   filter: saturate(1.05);
   transform: scale(1.001);
 }
-
-/* ========= BODY ========= */
 
 .client-body {
   padding: 16px 16px 18px;
@@ -428,8 +411,6 @@ a {
   gap: 10px;
   flex-wrap: wrap;
 }
-
-/* ========= LIGHTBOX (mejor mobile + cierre seguro) ========= */
 
 .lightbox {
   position: fixed;
@@ -491,8 +472,6 @@ a {
   border: 0;
 }
 
-/* ========= PROOF PILLS ========= */
-
 .proof-pills {
   display: flex;
   flex-wrap: wrap;
@@ -513,8 +492,6 @@ a {
   color: var(--muted);
 }
 
-/* ========= RESULTS ========= */
-
 .results {
   margin-left: auto;
   display: flex;
@@ -526,7 +503,6 @@ a {
   opacity: 0.65;
   letter-spacing: 0.2px;
 }
-/* ========= EMPTY STATE ========= */
 
 .empty {
   text-align: center;
@@ -552,43 +528,42 @@ a {
     gap: 8px;
   }
 }
-/* ========= SEO BLOCK – PREMIUM VERSION ========= */
 
-.seo-block{
+.seo-block {
   margin-top: clamp(50px, 8vw, 90px);
   padding: clamp(28px, 3vw, 40px);
   border-radius: 24px;
 
-  border: 1px solid rgba(255,255,255,0.08);
-  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(12px);
 
-  box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
 }
 
-.seo-intro{
+.seo-intro {
   max-width: 820px;
   margin-bottom: 40px;
 }
 
-.seo-intro h2{
+.seo-intro h2 {
   font-size: clamp(22px, 3vw, 32px);
   line-height: 1.15;
   margin-bottom: 12px;
 }
 
-.seo-intro p{
+.seo-intro p {
   opacity: 0.75;
   line-height: 1.6;
 }
 
-.seo-grid{
+.seo-grid {
   display: grid;
   gap: 28px;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
-.seo-col h3{
+.seo-col h3 {
   font-size: 14px;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -596,13 +571,13 @@ a {
   color: var(--accent);
 }
 
-.seo-col ul{
+.seo-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.seo-col li{
+.seo-col li {
   font-size: 14px;
   line-height: 1.6;
   opacity: 0.7;
@@ -611,7 +586,7 @@ a {
   padding-left: 14px;
 }
 
-.seo-col li::before{
+.seo-col li::before {
   content: "";
   position: absolute;
   left: 0;
@@ -622,27 +597,27 @@ a {
   background: var(--accent);
 }
 
-.seo-highlights{
+.seo-highlights {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin-bottom: 32px;
 }
 
-.seo-highlights span{
+.seo-highlights span {
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   padding: 8px 14px;
   border-radius: 999px;
 
-  border: 1px solid rgba(55,226,213,0.35);
-  background: rgba(55,226,213,0.08);
+  border: 1px solid rgba(55, 226, 213, 0.35);
+  background: rgba(55, 226, 213, 0.08);
   color: var(--accent);
 
   opacity: 0.85;
 }
-.seo-manifesto{
+.seo-manifesto {
   margin-top: 38px;
   max-width: 720px;
   font-size: 15px;
@@ -652,12 +627,12 @@ a {
   position: relative;
 }
 
-.seo-manifesto::before{
-  content:"";
-  display:block;
+.seo-manifesto::before {
+  content: "";
+  display: block;
   width: 40px;
   height: 2px;
-  background: rgba(55,226,213,.6);
+  background: rgba(55, 226, 213, 0.6);
   margin-bottom: 18px;
   border-radius: 2px;
 }
