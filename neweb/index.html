@@ -3,33 +3,90 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
     <title>
       Raven3 — Diseño Web, Tiendas Online y SEO Técnico en Argentina
     </title>
+
     <meta
       name="description"
       content="Raven3 es una agencia digital especializada en diseño web a medida, desarrollo de tiendas online y SEO técnico. Creamos sitios rápidos, optimizados y con resultados reales para empresas y emprendedores de toda Argentina."
     />
+
+    <!-- (Opcional) keywords ya no rankea por sí solo, pero no molesta -->
     <meta
       name="keywords"
       content="Raven3, diseño web, desarrollo web, páginas web, tiendas online, SEO técnico, optimización web, agencia digital, performance web, diseño UX UI, Argentina"
     />
+
     <meta name="author" content="Raven3 Agency" />
+    <meta name="language" content="Spanish" />
+    <meta name="robots" content="index,follow" />
+    <meta name="revisit" content="5 days" />
+
+    <!-- Geo (no es clave para SEO moderno, pero venía en la ex index) -->
     <meta name="city" content="Buenos Aires" />
     <meta name="country" content="Argentina" />
+    <meta name="geography" content="Buenos Aires, Argentina" />
+
+    <!-- Google verification (pegar tu valor real) -->
+    <meta name="google-site-verification" content="..." />
 
     <link rel="canonical" href="https://raven3.com.ar/" />
-    <link rel="preconnect" href="https://unpkg.com" />
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <!-- Favicon para navegadores de escritorio -->
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/" />
+    <meta
+      property="og:title"
+      content="Raven3 — Diseño Web, Tiendas Online y SEO Técnico en Argentina"
+    />
+    <meta
+      property="og:description"
+      content="Agencia digital especializada en diseño web a medida, tiendas online y SEO técnico. Performance real, accesibilidad y resultados."
+    />
+    <meta
+      property="og:image"
+      content="https://www.raven3.com.ar/assets/img/fondoN.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://raven3.com.ar/" />
+    <meta
+      property="twitter:title"
+      content="Raven3 — Diseño Web, Tiendas Online y SEO Técnico"
+    />
+    <meta
+      property="twitter:description"
+      content="Webs rápidas, tiendas online y SEO técnico con performance real."
+    />
+    <meta
+      property="twitter:image"
+      content="https://www.raven3.com.ar/assets/img/fondoN.png"
+    />
+
+    <!-- Favicons (completo como la ex index) -->
     <link
       rel="icon"
       type="image/x-icon"
       href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico"
     />
-
-    <!-- Favicon para dispositivos iOS -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
+    />
     <link
       rel="apple-touch-icon"
       sizes="192x192"
@@ -40,8 +97,57 @@
       sizes="512x512"
       href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
     />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- GA4 (bien cargado; en tu html actual te falta el gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
+
+    <!-- JSON-LD (recomendado; no estaba en la ex index, pero suma mucho hoy) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Raven3",
+        "url": "https://raven3.com.ar/",
+        "logo": "https://www.raven3.com.ar/assets/img/logo.png",
+        "sameAs": [
+          "https://www.instagram.com/agencia.raven3/",
+          "https://github.com/raven3-agency/"
+        ],
+        "areaServed": "AR",
+        "email": "hola@raven3.com.ar"
+      }
+    </script>
   </head>
   <body>
+    <div class="wasap" aria-label="WhatsApp Raven3">
+      <a
+        href="https://api.whatsapp.com/send?l=es&amp;text=Hola%20Ravens!%20Quiero%20consultarles%20por%20un%20presupuesto%20%5BPagina%20Principal%5D&amp;phone=5491134568899"
+        target="_blank"
+        rel="noopener"
+        aria-label="Enviar mensaje por WhatsApp"
+      >
+        <img src="../assets/img/svg/logo-wapp-02.svg" alt="WhatsApp Raven3" />
+      </a>
+    </div>
+
     <div id="background">
       <canvas id="particles"></canvas>
       <div class="progress" id="progress"></div>
@@ -49,7 +155,7 @@
 
     <!-- SCROLL CONTAINER -->
     <main class="scroll-container" data-scroll-container>
-            <!-- Top bar minimal (coherente con home) -->
+      <!-- Top bar minimal (coherente con home) -->
       <header class="topbar" data-scroll-section>
         <div class="container topbar__inner">
           <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
@@ -312,6 +418,65 @@
           </div>
         </div>
       </section>
+
+      <!-- Contacto -->
+      <section id="contacto" data-scroll-section>
+        <div class="container contact-section">
+          <div class="contact-intro">
+            <h2 class="section-title">¿Tenés un proyecto en mente?</h2>
+            <p class="muted">
+              Contanos qué necesitás. Te respondemos en menos de 24hs con una
+              propuesta concreta.
+            </p>
+          </div>
+
+          <form
+            class="r3-form"
+            action="https://formspree.io/f/xxxxxxxx"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">¿Qué necesitás?</label>
+              <select id="service" name="service">
+                <option value="">Seleccionar servicio</option>
+                <option value="web">Web a medida</option>
+                <option value="ecommerce">Tienda online</option>
+                <option value="seo">SEO técnico</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Contanos sobre tu proyecto..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn primary">Enviar mensaje</button>
+              <span class="form-status" id="formStatus"></span>
+            </div>
+          </form>
+        </div>
+      </section>
       <!-- Footer / contacto -->
       <footer id="contacto" data-scroll-section>
         <div class="foot">
@@ -357,5 +522,36 @@
     <!-- Tu script principal -->
     <script src="assets/js/main.js"></script>
     <script src="assets/js/particles.js"></script>
+
+    <script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    status.textContent = "Enviando...";
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        status.textContent = "Mensaje enviado correctamente ✓";
+        form.reset();
+      } else {
+        status.textContent = "Ocurrió un error. Intentá nuevamente.";
+      }
+    } catch (error) {
+      status.textContent = "Error de conexión.";
+    }
+  });
+</script>
   </body>
 </html>
