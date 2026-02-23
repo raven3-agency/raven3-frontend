@@ -48,11 +48,11 @@ async function init() {
       const href = a.getAttribute("href");
       if (!href || href === "#") return;
 
+      const el = document.querySelector(href);
+      if (!el) return; // <-- si no existe, evitás el warning
+
       e.preventDefault();
-      scroll.scrollTo(href, {
-        duration: 800,
-        offset: -80,
-      });
+      scroll.scrollTo(el, { duration: 800, offset: -80 });
     });
   });
 

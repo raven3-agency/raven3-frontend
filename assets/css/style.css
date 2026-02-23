@@ -184,6 +184,7 @@ h1 .accent {
     background 0.25s ease,
     border 0.25s ease;
   backdrop-filter: blur(6px);
+  cursor: pointer;
 }
 .btn:hover {
   transform: translateY(-2px);
