@@ -28,6 +28,14 @@
       sizes="192x192"
       href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
     />
+       <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+        }
+      }
+    </script>
   </head>
 
   <body>
@@ -350,10 +358,10 @@
     </main>
 
     <script src="https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script> -->
 
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/particles.js"></script>
+    <script type="module" src="assets/js/particles.js"></script>
     <script src="assets/js/clientes.js"></script>
   </body>
 </html>
