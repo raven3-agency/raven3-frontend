@@ -1,6 +1,3 @@
-import * as THREE from "three";
-// si necesitás OrbitControls u otros:
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 // assets/js/particles.js
 (() => {
   function start() {
