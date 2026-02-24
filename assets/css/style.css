@@ -253,10 +253,40 @@ section {
   gap: 24px;
   align-items: center;
 }
+
+.raven-strip > div {
+  /* para que el grid item no te meta alturas raras */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .raven-strip svg {
   width: 100%;
   height: auto;
+  max-width: 84px; /* controla tamaño en desktop */
   filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.45));
+}
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .raven-strip { grid-template-columns: repeat(10, 1fr); }
+  .raven-strip svg { max-width: 90px; }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .raven-strip { grid-template-columns: repeat(6, 1fr); }
+  .raven-strip svg { max-width: 110px; }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .raven-strip {
+    grid-template-columns: repeat(3, 1fr); /* menos items por fila => más grandes */
+    gap: 14px;
+  }
+  .raven-strip svg { max-width: 120px; }
 }
 
 .grid {
