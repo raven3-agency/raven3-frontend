@@ -1,5 +1,4 @@
-import * as THREE from "three";
-
+import * as THREE from "/assets/vendor/three/three.module.js";
 let started = false;
 
 function start() {
