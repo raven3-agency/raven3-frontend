@@ -1,6 +1,11 @@
 let scroll;
 let listenersBound = false;
 
+document.addEventListener("DOMContentLoaded", () => {
+  const year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+});
+
 function buildRavenStrip() {
   const ravenStrip = document.getElementById("ravenStrip");
   if (!ravenStrip) return;
@@ -114,7 +119,6 @@ async function init() {
 
 window.addEventListener("load", init);
 
-
 // Reviews: Leer más / Ver menos (HOME)
 document.addEventListener("click", (e) => {
   const btn = e.target.closest(".review-toggle");
@@ -124,7 +128,9 @@ document.addEventListener("click", (e) => {
   if (!card) return;
 
   card.classList.toggle("expanded");
-  btn.textContent = card.classList.contains("expanded") ? "Ver menos" : "Leer más";
+  btn.textContent = card.classList.contains("expanded")
+    ? "Ver menos"
+    : "Leer más";
 
   // Si Locomotive está disponible, refrescá layout
   if (window.scroll && typeof window.scroll.update === "function") {
