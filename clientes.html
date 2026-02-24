@@ -155,33 +155,35 @@
             role="tablist"
             aria-label="Filtros de proyectos"
           >
-            <button
-              class="chip is-active"
-              data-filter="all"
-              type="button"
-              role="tab"
-              aria-selected="true"
-            >
-              Todos
-            </button>
-            <button
-              class="chip"
-              data-filter="web"
-              type="button"
-              role="tab"
-              aria-selected="false"
-            >
-              Webs
-            </button>
-            <button
-              class="chip"
-              data-filter="tienda"
-              type="button"
-              role="tab"
-              aria-selected="false"
-            >
-              Tiendas
-            </button>
+            <div class="chips-row" role="presentation">
+              <button
+                class="chip is-active"
+                data-filter="all"
+                type="button"
+                role="tab"
+                aria-selected="true"
+              >
+                Todos
+              </button>
+              <button
+                class="chip"
+                data-filter="web"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                Webs
+              </button>
+              <button
+                class="chip"
+                data-filter="tienda"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                Tiendas
+              </button>
+            </div>
 
             <div class="results" aria-live="polite">
               <span id="resultsCount" class="muted">Mostrando 7 proyectos</span>
@@ -653,7 +655,9 @@
 
           <!-- CTA -->
           <div class="cta-center" style="margin-top: 42px" data-scroll>
-            <a id="ctaPrimary" class="btn primary" href="index.html#contacto">Quiero mi web</a>
+            <a id="ctaPrimary" class="btn primary" href="index.html#contacto"
+              >Quiero mi web</a
+            >
             <a class="btn" href="index.html#servicios">Ver servicios</a>
           </div>
 
@@ -670,7 +674,8 @@
             </div>
             <div class="seo-intro">
               <h2>
-               No diseñamos páginas. Diseñamos infraestructuras digitales que generan negocio.
+                No diseñamos páginas. Diseñamos infraestructuras digitales que
+                generan negocio.
               </h2>
               <p>
                 En Raven3 combinamos diseño UI a medida, ingeniería frontend
