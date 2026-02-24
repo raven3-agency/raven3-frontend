@@ -732,7 +732,9 @@ showcase
   object-fit: cover;
   border-radius: inherit;
 }
-
+/* 
+-- 
+*/
 .cta-center {
   text-align: center;
 }
@@ -752,7 +754,9 @@ showcase
   background: #37e2d5;
   color: #000;
 }
-
+/* 
+-- 
+*/
 footer {
   padding: 6rem 2rem;
 }
@@ -931,4 +935,3 @@ footer {
   display: flex;
   justify-content: center;
 }
-
