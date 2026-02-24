@@ -186,11 +186,7 @@ a {
   border-radius: 28px;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.55),
-    rgba(0, 0, 0, 0.35)
-  );
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
   border: 1px solid rgba(55, 226, 213, 0.08);
   box-shadow:
     0 20px 60px rgba(0, 0, 0, 0.4),
@@ -376,7 +372,9 @@ a {
   display: block;
   padding: 0;
   border: 0;
-  background: transparent;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
   cursor: zoom-in;
 }
 
@@ -391,6 +389,10 @@ a {
 
 .client-body {
   padding: 16px 16px 18px;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.35));
 }
 
 .client-body h3 {
