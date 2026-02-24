@@ -113,3 +113,21 @@ async function init() {
 }
 
 window.addEventListener("load", init);
+
+
+// Reviews: Leer más / Ver menos (HOME)
+document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".review-toggle");
+  if (!btn) return;
+
+  const card = btn.closest(".quote");
+  if (!card) return;
+
+  card.classList.toggle("expanded");
+  btn.textContent = card.classList.contains("expanded") ? "Ver menos" : "Leer más";
+
+  // Si Locomotive está disponible, refrescá layout
+  if (window.scroll && typeof window.scroll.update === "function") {
+    window.scroll.update();
+  }
+});
