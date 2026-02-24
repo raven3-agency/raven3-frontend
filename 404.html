@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -96,13 +96,15 @@
     <div class="container">
       <div class="row">
         <div class="col-xl-12 mt-5 text-center">
-          <h1 style="color: white">La página que intentas solicitar no esta en el servidor.</h1>
-          
-          <p style="color: white" class="mt-5">
+          <h1 style="color: white">
+            La página que intentas solicitar no esta en el servidor.
+          </h1>
+
+          <!-- <p style="color: white" class="mt-5">
             Oops! Te quedaste sin oxígeno.
-          </p>
+          </p> -->
           <!-- Otro contenido a la izquierda si es necesario -->
-          <button id="backearth">Clickea para volver a Tierra</button>
+          <!-- <button id="backearth">Clickea para volver a Tierra</button> -->
         </div>
       </div>
       <div class="row">
@@ -118,7 +120,7 @@
               alt="Imagen del astronauta"
               id="astro"
             />
-            <h1 id="cuatroh1">404</h1>
+            <!-- <h1 id="cuatroh1">404</h1> -->
           </div>
         </div>
       </div>
@@ -131,6 +133,11 @@
     </footer>
 
     <script src="https://raven3.com.ar/assets/vendor/aos/aos.js"></script>
+    <script>
+      setTimeout(function () {
+        window.location.href = "https://www.raven3.com.ar";
+      }, 5000); // 5000 ms = 5 segundos
+    </script>
     <!-- <script src="https://raven3.com.ar/assets/vendor/jsbutton.js"></script> -->
     <script src="https://raven3.com.ar/assets/js/404.js"></script>
   </body>
