@@ -156,7 +156,7 @@
         ]
       }
     </script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
   </head>
   <body>
     <div class="wasap" aria-label="WhatsApp Raven3">
@@ -715,6 +715,34 @@
           status.textContent = "Error de conexión.";
         }
       });
+    </script>
+
+    <script>
+      let recaptchaLoaded = false;
+
+      function loadRecaptcha() {
+        if (recaptchaLoaded) return;
+        recaptchaLoaded = true;
+
+        const s = document.createElement("script");
+        s.src = "https://www.google.com/recaptcha/api.js";
+        s.async = true;
+        s.defer = true;
+        document.head.appendChild(s);
+      }
+
+      // 1) Al hacer foco en cualquier input del form
+      const formEl = document.getElementById("contactForm");
+      formEl.addEventListener("focusin", loadRecaptcha, { once: true });
+
+      // 2) O cuando el form entra en viewport
+      const io = new IntersectionObserver(
+        (entries) => {
+          if (entries.some((e) => e.isIntersecting)) loadRecaptcha();
+        },
+        { rootMargin: "200px" },
+      );
+      io.observe(formEl);
     </script>
   </body>
 </html>
