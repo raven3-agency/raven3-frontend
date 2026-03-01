@@ -398,6 +398,12 @@ a {
   line-height: 1.55;
   color: var(--muted);
   margin-bottom: 8px;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.5em * 3); /* altura de 3 líneas */
 }
 
 .client-meta {
@@ -676,3 +682,4 @@ a {
   margin-bottom: 18px;
   border-radius: 2px;
 }
+

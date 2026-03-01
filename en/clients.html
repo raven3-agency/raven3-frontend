@@ -1,26 +1,26 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Portfolio de Clientes | Raven3</title>
+    <title>Client Portfolio | Raven3</title>
     <meta
       name="description"
-      content="Portfolio: desarrollo web a medida, tiendas online e integraciones (Tokko Broker) + SEO técnico y performance. Proyectos reales para marcas en Argentina."
+      content="Portfolio: custom web development, online stores and integrations (Tokko Broker) + technical SEO and performance. Real projects for brands in Argentina."
     />
     <link rel="canonical" href="https://raven3.com.ar/clientes.html" />
 
     <!-- Social -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Raven3" />
-    <meta property="og:title" content="Portfolio de Clientes | Raven3" />
+    <meta property="og:title" content="Client Portfolio | Raven3" />
     <meta
       property="og:description"
-      content="Proyectos reales: webs a medida, e-commerce, SEO técnico y performance. Menos humo, más resultados."
+      content="Real projects: custom websites, e-commerce, technical SEO and performance. Less smoke, more results."
     />
     <meta property="og:url" content="https://raven3.com.ar/clientes.html" />
-    <!-- Sugerencia: agregá una imagen real de portfolio -->
+    <!-- Suggestion: add a real portfolio image -->
     <meta
       property="og:image"
       content="https://raven3.com.ar/assets/img/og/portfolio.jpg"
@@ -33,8 +33,8 @@
     <link rel="preload" as="image" href="assets/img/logo.png" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/clientes.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/clientes.css" />
 
     <!-- Icons -->
     <link
@@ -73,9 +73,9 @@
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
-        "name": "Portfolio de Clientes",
+        "name": "Client Portfolio",
         "url": "https://raven3.com.ar/clientes.html",
-        "description": "Portfolio de proyectos: desarrollo web a medida, tiendas online, integraciones y SEO técnico con foco en performance.",
+        "description": "Project portfolio: custom web development, online stores, integrations and technical SEO with a performance-first approach.",
         "isPartOf": {
           "@type": "WebSite",
           "name": "Raven3",
@@ -96,12 +96,12 @@
       <header class="topbar" data-scroll-section>
         <div class="container topbar__inner">
           <a
-            href="https://raven3.com.ar/"
+            href="https://raven3.com.ar/en/index.html"
             class="logo"
-            aria-label="Ir a la home"
+            aria-label="Go to homepage"
           >
             <img
-              src="assets/img/logo.png"
+              src="../assets/img/logo.png"
               alt="Raven3"
               width="100"
               height="40"
@@ -110,16 +110,16 @@
             />
           </a>
 
-          <nav class="topbar__nav" aria-label="Navegación">
-            <!-- <a class="topbar__link" href="index.html#servicios">Servicios</a>
+          <nav class="topbar__nav" aria-label="Navigation">
+            <!-- <a class="topbar__link" href="index.html#servicios">Services</a>
             <a class="topbar__link is-active" href="clientes.html">Portfolio</a>
-            <a class="topbar__link" href="index.html#contacto">Contacto</a> -->
+            <a class="topbar__link" href="index.html#contacto">Contact</a> -->
             <div class="lang-switch">
-              <a href="en/index.html" hreflang="en">ENGLISH</a>
+              <a href="/clientes.html" hreflang="es-AR">ESPAÑOL</a>
             </div>
           </nav>
 
-          <a class="btn primary" href="index.html#contacto">Charlemos</a>
+          <a class="btn primary" href="index.html#contacto">Let’s talk</a>
         </div>
       </header>
 
@@ -129,13 +129,13 @@
           <p class="eyebrow" data-scroll data-scroll-speed="-1">Portfolio</p>
 
           <h1 data-scroll data-scroll-speed="-2">
-            Proyectos reales, <span class="accent">resultados</span><br />
-            y soluciones a medida
+            Real projects, <span class="accent">results</span><br />
+            and custom-built solutions
           </h1>
 
           <p class="kicker muted" data-scroll data-scroll-speed="-0.4">
-            Desarrollo web a medida, e-commerce e integraciones. SEO técnico y
-            performance como estándar.
+            Custom web development, e-commerce and integrations. Technical SEO
+            and performance as the standard.
           </p>
 
           <!-- Quick value props (UX: scanning) -->
@@ -143,12 +143,12 @@
             class="proof-pills"
             data-scroll
             data-scroll-speed="-0.2"
-            aria-label="Diferenciales"
+            aria-label="Differentiators"
           >
             <li>Core Web Vitals</li>
-            <li>SEO técnico</li>
-            <li>Integraciones API</li>
-            <li>UI a medida</li>
+            <li>Technical SEO</li>
+            <li>API Integrations</li>
+            <li>Custom UI</li>
           </ul>
 
           <div
@@ -156,7 +156,7 @@
             data-scroll
             data-scroll-speed="-0.2"
             role="tablist"
-            aria-label="Filtros de proyectos"
+            aria-label="Project filters"
           >
             <div class="chips-row" role="presentation">
               <button
@@ -166,7 +166,7 @@
                 role="tab"
                 aria-selected="true"
               >
-                Todos
+                All
               </button>
               <button
                 class="chip"
@@ -175,7 +175,7 @@
                 role="tab"
                 aria-selected="false"
               >
-                Webs
+                Websites
               </button>
               <button
                 class="chip"
@@ -184,23 +184,19 @@
                 role="tab"
                 aria-selected="false"
               >
-                Tiendas
+                Stores
               </button>
             </div>
 
             <div class="results" aria-live="polite">
-              <span id="resultsCount" class="muted">Mostrando 7 proyectos</span>
+              <span id="resultsCount" class="muted">Showing 7 projects</span>
             </div>
           </div>
         </div>
       </section>
 
       <!-- GRID -->
-      <section
-        class="clients"
-        data-scroll-section
-        aria-label="Listado de proyectos"
-      >
+      <section class="clients" data-scroll-section aria-label="Project list">
         <div class="container">
           <div class="clients-grid" id="clientsGrid">
             <!-- 1) LASSEN -->
@@ -216,36 +212,35 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/WEB/lassen/lassen.web.png"
-                aria-label="Ver preview de Lassen Pharma"
+                data-lightbox="../assets/img/portfolio/WEB/lassen/lassen.web.png"
+                aria-label="View Lassen Pharma preview"
               >
                 <img
-                  src="assets/img/portfolio/WEB/lassen/logo.png"
-                  alt="Logo de Lassen Pharma"
+                  src="../assets/img/portfolio/WEB/lassen/logo.png"
+                  alt="Lassen Pharma logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
                 <h2 class="sr-only">
-                  Lassen Pharma — Web corporativa y SEO técnico
+                  Lassen Pharma — Corporate website and technical SEO
                 </h2>
 
                 <div class="client-top">
-                  <span class="tag">Web</span>
+                  <span class="tag">Website</span>
                 </div>
 
                 <p class="client-label" itemprop="name">Lassen Pharma</p>
 
                 <p class="client-outcome" itemprop="description">
-                  Web corporativa con arquitectura optimizada y SEO técnico
-                  enfocado en performance y visibilidad orgánica.
+                  Corporate website with optimized architecture and technical
+                  SEO focused on performance and organic visibility.
                 </p>
 
                 <p class="client-meta">
-                  SEO técnico · Performance · UI a medida
+                  Technical SEO · Performance · Custom UI
                 </p>
 
                 <div class="client-actions">
@@ -255,14 +250,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver sitio
+                    View site
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/WEB/lassen/LassenPharma_Logo.png"
+                    data-lightbox="../assets/img/portfolio/WEB/lassen/LassenPharma_Logo.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -284,36 +279,35 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/WEB/ndbpropiedades/web.png"
-                aria-label="Ver preview de NDB Propiedades"
+                data-lightbox="../assets/img/portfolio/WEB/ndbpropiedades/web.png"
+                aria-label="View NDB Propiedades preview"
               >
                 <img
-                  src="assets/img/portfolio/WEB/ndbpropiedades/logo.png"
-                  alt="Logo de NDB Propiedades"
+                  src="../assets/img/portfolio/WEB/ndbpropiedades/logo.png"
+                  alt="NDB Propiedades logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
                 <h2 class="sr-only">
-                  NDB Propiedades — Plataforma inmobiliaria con Tokko Broker
+                  NDB Propiedades — Real estate platform with Tokko Broker
                 </h2>
 
                 <div class="client-top">
-                  <span class="tag">Web</span>
+                  <span class="tag">Website</span>
                 </div>
 
                 <p class="client-label" itemprop="name">NDB Propiedades</p>
 
                 <p class="client-outcome" itemprop="description">
-                  Plataforma inmobiliaria a medida con filtros avanzados e
-                  integración completa con API Tokko Broker.
+                  Custom real estate platform with advanced filters and full
+                  integration with the Tokko Broker API.
                 </p>
 
                 <p class="client-meta">
-                  Tokko Broker · Filtros avanzados · Performance
+                  Tokko Broker · Advanced filters · Performance
                 </p>
 
                 <div class="client-actions">
@@ -323,14 +317,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver sitio
+                    View site
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/WEB/ndbpropiedades/web.png"
+                    data-lightbox="../assets/img/portfolio/WEB/ndbpropiedades/web.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -349,35 +343,34 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/WEB/beforce/web.png"
-                aria-label="Ver preview de BEFORCE"
+                data-lightbox="../assets/img/portfolio/WEB/beforce/web.png"
+                aria-label="View BEFORCE preview"
               >
                 <img
-                  src="assets/img/portfolio/WEB/beforce/logo.png"
-                  alt="Logo de BEFORCE"
+                  src="../assets/img/portfolio/WEB/beforce/logo.png"
+                  alt="BEFORCE logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
                 <h2 class="sr-only">
-                  BEFORCE — Catálogo digital e identidad visual
+                  BEFORCE — Digital catalog and visual identity
                 </h2>
 
                 <div class="client-top">
-                  <span class="tag">Web</span>
+                  <span class="tag">Website</span>
                 </div>
 
                 <p class="client-label" itemprop="name">BEFORCE</p>
 
                 <p class="client-outcome" itemprop="description">
-                  Catálogo digital a medida con identidad sólida, diseñado para
-                  exhibir productos con claridad y velocidad.
+                  Custom digital catalog with a strong identity, designed to
+                  showcase products with clarity and speed.
                 </p>
 
-                <p class="client-meta">Catálogo · UI/Branding · Performance</p>
+                <p class="client-meta">Catalog · UI/Branding · Performance</p>
 
                 <div class="client-actions">
                   <a
@@ -386,14 +379,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver sitio
+                    View site
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/WEB/beforce/web.png"
+                    data-lightbox="../assets/img/portfolio/WEB/beforce/web.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -415,35 +408,35 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/WEB/sgm/logo.png"
-                aria-label="Ver preview de SGM+"
+                data-lightbox="../assets/img/portfolio/WEB/sgm/logo.png"
+                aria-label="View SGM+ preview"
               >
                 <img
-                  src="assets/img/portfolio/WEB/sgm/logo.png"
-                  alt="Logo de SGM+"
+                  src="../assets/img/portfolio/WEB/sgm/logo.png"
+                  alt="SGM+ logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
                 <h2 class="sr-only">
-                  SGM+ — Sitio institucional con e-commerce
+                  SGM+ — Institutional website with e-commerce
                 </h2>
 
                 <div class="client-top">
-                  <span class="tag">Web</span>
+                  <span class="tag">Website</span>
                 </div>
 
                 <p class="client-label" itemprop="name">SGM+</p>
 
                 <p class="client-outcome" itemprop="description">
-                  Sitio institucional con e-commerce integrado para talleres y
-                  experiencias, diseñado para escalar comunidad e inscripciones.
+                  Institutional website with integrated e-commerce for workshops
+                  and experiences, designed to scale community and
+                  registrations.
                 </p>
 
-                <p class="client-meta">E-commerce · UX · Inscripciones</p>
+                <p class="client-meta">E-commerce · UX · Registrations</p>
 
                 <div class="client-actions">
                   <a
@@ -452,14 +445,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver sitio
+                    View site
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/WEB/sgm/logo.png"
+                    data-lightbox="../assets/img/portfolio/WEB/sgm/logo.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -478,33 +471,32 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/WEB/okos/web_okos.png"
-                aria-label="Ver preview de OKOS"
+                data-lightbox="../assets/img/portfolio/WEB/okos/web_okos.png"
+                aria-label="View OKOS preview"
               >
                 <img
-                  src="assets/img/portfolio/WEB/okos/logo.png"
-                  alt="Logo de OKOS"
+                  src="../assets/img/portfolio/WEB/okos/logo.png"
+                  alt="OKOS logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
-                <h2 class="sr-only">OKOS — Sitio institucional minimal</h2>
+                <h2 class="sr-only">OKOS — Minimal institutional website</h2>
 
                 <div class="client-top">
-                  <span class="tag">Web</span>
+                  <span class="tag">Website</span>
                 </div>
 
                 <p class="client-label" itemprop="name">OKOS</p>
 
                 <p class="client-outcome" itemprop="description">
-                  Sitio institucional minimal, rápido y optimizado para claridad
-                  de marca.
+                  Minimal institutional site, fast and optimized for brand
+                  clarity.
                 </p>
 
-                <p class="client-meta">UI limpia · Performance · SEO base</p>
+                <p class="client-meta">Clean UI · Performance · Basic SEO</p>
 
                 <div class="client-actions">
                   <a
@@ -513,14 +505,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver sitio
+                    View site
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/WEB/okos/web_okos.png"
+                    data-lightbox="../assets/img/portfolio/WEB/okos/web_okos.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -539,33 +531,32 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/WEB/art1/web_art1.png"
-                aria-label="Ver preview de ART1"
+                data-lightbox="../assets/img/portfolio/WEB/art1/web_art1.png"
+                aria-label="View ART1 preview"
               >
                 <img
-                  src="assets/img/portfolio/WEB/art1/logo.png"
-                  alt="Logo de ART1"
+                  src="../assets/img/portfolio/WEB/art1/logo.png"
+                  alt="ART1 logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
-                <h2 class="sr-only">ART1 — Web corporativa y estructura SEO</h2>
+                <h2 class="sr-only">ART1 — Corporate site and SEO structure</h2>
 
                 <div class="client-top">
-                  <span class="tag">Web</span>
+                  <span class="tag">Website</span>
                 </div>
 
                 <p class="client-label" itemprop="name">ART1</p>
 
                 <p class="client-outcome" itemprop="description">
-                  Web corporativa con estructura SEO y foco en accesibilidad,
-                  estabilidad visual y velocidad.
+                  Corporate website with SEO structure and a focus on
+                  accessibility, visual stability and speed.
                 </p>
 
-                <p class="client-meta">Accesibilidad · SEO · Rendimiento</p>
+                <p class="client-meta">Accessibility · SEO · Performance</p>
 
                 <div class="client-actions">
                   <a
@@ -574,14 +565,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver sitio
+                    View site
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/WEB/art1/web_art1.png"
+                    data-lightbox="../assets/img/portfolio/WEB/art1/web_art1.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -600,33 +591,32 @@
               <button
                 class="client-thumb"
                 type="button"
-                data-lightbox="assets/img/portfolio/TIENDA/knots/tienda_knots.png"
-                aria-label="Ver preview de Knots"
+                data-lightbox="../assets/img/portfolio/TIENDA/knots/tienda_knots.png"
+                aria-label="View Knots preview"
               >
                 <img
-                  src="assets/img/portfolio/TIENDA/knots/logo.png"
-                  alt="Logo de Knots"
+                  src="../assets/img/portfolio/TIENDA/knots/logo.png"
+                  alt="Knots logo"
                   loading="lazy"
                   decoding="async"
                 />
-                <span class="thumb-hint" aria-hidden="true">Preview</span>
               </button>
 
               <div class="client-body">
-                <h2 class="sr-only">Knots — E-commerce en Tienda Nube</h2>
+                <h2 class="sr-only">Knots — E-commerce on Tienda Nube</h2>
 
                 <div class="client-top">
-                  <span class="tag">Tienda</span>
+                  <span class="tag">Store</span>
                 </div>
 
                 <p class="client-label" itemprop="name">Knots</p>
 
                 <p class="client-outcome" itemprop="description">
-                  E-commerce optimizado sobre Tienda Nube, con mejoras de UX y
-                  presentación de producto.
+                  Optimized e-commerce on Tienda Nube, with UX improvements and
+                  stronger product presentation.
                 </p>
 
-                <p class="client-meta">E-commerce · UX · Catálogo</p>
+                <p class="client-meta">E-commerce · UX · Catalog</p>
 
                 <div class="client-actions">
                   <a
@@ -635,14 +625,14 @@
                     target="_blank"
                     rel="noopener"
                   >
-                    Ver tienda
+                    View store
                   </a>
                   <button
                     class="btn"
                     type="button"
-                    data-lightbox="assets/img/portfolio/TIENDA/knots/tienda_knots.png"
+                    data-lightbox="../assets/img/portfolio/TIENDA/knots/tienda_knots.png"
                   >
-                    Ver preview
+                    View preview
                   </button>
                 </div>
               </div>
@@ -651,89 +641,85 @@
 
           <!-- Empty state -->
           <div class="empty" id="emptyState" hidden>
-            <p class="muted">
-              No hay proyectos para este filtro. Probá con “Todos”.
-            </p>
+            <p class="muted">No projects match this filter. Try “All”.</p>
           </div>
 
           <!-- CTA -->
           <div class="cta-center" style="margin-top: 42px" data-scroll>
             <a id="ctaPrimary" class="btn primary" href="index.html#contacto"
-              >Quiero mi web</a
+              >I want my website</a
             >
-            <a class="btn" href="index.html#servicios">Ver servicios</a>
+            <a class="btn" href="index.html#servicios">View services</a>
           </div>
 
-          <!-- SEO Block (sin ensuciar UI) -->
-          <section
-            class="seo-block"
-            aria-label="Capacidades estratégicas de Raven3"
-          >
+          <!-- SEO Block -->
+          <section class="seo-block" aria-label="Raven3 strategic capabilities">
             <div class="seo-highlights">
-              <span>Arquitectura a medida</span>
-              <span>Performance como estándar</span>
-              <span>Sin plantillas pesadas</span>
-              <span>SEO técnico desde la base</span>
+              <span>Custom architecture</span>
+              <span>Performance as the standard</span>
+              <span>No heavy templates</span>
+              <span>Technical SEO from day one</span>
             </div>
+
             <div class="seo-intro">
               <h2>
-                No diseñamos páginas. Diseñamos infraestructuras digitales que
-                generan negocio.
+                We don’t design pages. We design digital infrastructure that
+                generates business.
               </h2>
               <p>
-                En Raven3 combinamos diseño UI a medida, ingeniería frontend
-                avanzada y arquitectura SEO técnica para crear sitios rápidos,
-                escalables y orientados a conversión. Cada proyecto está pensado
-                para posicionar, rendir y generar negocio.
+                At Raven3 we combine custom UI design, advanced front-end
+                engineering and technical SEO architecture to build fast,
+                scalable, conversion-focused websites. Every project is designed
+                to rank, perform and generate business.
               </p>
             </div>
 
             <div class="seo-grid">
               <div class="seo-col">
-                <h3>Ingeniería Web</h3>
+                <h3>Web Engineering</h3>
                 <ul>
-                  <li>Arquitectura a medida (sin plantillas pesadas)</li>
-                  <li>Optimización Core Web Vitals</li>
+                  <li>Custom architecture (no heavy templates)</li>
+                  <li>Core Web Vitals optimization</li>
                   <li>Performance-first development</li>
-                  <li>Accesibilidad y estabilidad visual</li>
+                  <li>Accessibility and visual stability</li>
                 </ul>
               </div>
 
               <div class="seo-col">
-                <h3>SEO Técnico</h3>
+                <h3>Technical SEO</h3>
                 <ul>
-                  <li>Estructura semántica avanzada</li>
-                  <li>Schema.org y datos estructurados</li>
-                  <li>Optimización de crawling e indexación</li>
-                  <li>Arquitectura orientada a ranking</li>
+                  <li>Advanced semantic structure</li>
+                  <li>Schema.org and structured data</li>
+                  <li>Crawling and indexing optimization</li>
+                  <li>Ranking-oriented architecture</li>
                 </ul>
               </div>
 
               <div class="seo-col">
-                <h3>Integraciones & E-commerce</h3>
+                <h3>Integrations & E-commerce</h3>
                 <ul>
-                  <li>APIs (Tokko Broker y otras)</li>
-                  <li>Tiendas online optimizadas</li>
-                  <li>Automatización de procesos</li>
-                  <li>Catálogos digitales performantes</li>
+                  <li>APIs (Tokko Broker and others)</li>
+                  <li>Optimized online stores</li>
+                  <li>Process automation</li>
+                  <li>High-performance digital catalogs</li>
                 </ul>
               </div>
 
               <div class="seo-col">
-                <h3>Enfoque Comercial</h3>
+                <h3>Commercial Focus</h3>
                 <ul>
-                  <li>UX orientada a conversión</li>
-                  <li>Estructuras pensadas para leads</li>
-                  <li>Optimización continua</li>
-                  <li>Escalabilidad futura garantizada</li>
+                  <li>Conversion-focused UX</li>
+                  <li>Lead-oriented structures</li>
+                  <li>Continuous optimization</li>
+                  <li>Future scalability guaranteed</li>
                 </ul>
               </div>
             </div>
 
             <p class="seo-manifesto">
-              Ingeniería digital sin atajos. Cada proyecto se construye desde
-              cero, optimizado para posicionar, rendir y convertir. No seguimos
-              tendencias: diseñamos infraestructuras que escalan.
+              Digital engineering without shortcuts. Every project is built from
+              scratch, optimized to rank, perform and convert. We don’t chase
+              trends: we build infrastructure that scales.
             </p>
           </section>
         </div>
@@ -745,12 +731,14 @@
           <div class="brand">Raven3</div>
           <div>
             <div class="small">
-              ¿Tenés un proyecto digital? Escribinos y armamos algo increíble.
-              Convertimos ideas en sitios web rápidos, accesibles y rentables.
+              Do you have a digital project? Write to us and we’ll build
+              something incredible. We turn ideas into fast, accessible and
+              profitable websites.
             </div>
+
             <div class="cta-row" style="margin-top: 1rem">
               <a class="btn primary" href="mailto:hola@raven3.com.ar"
-                >Contactar por email</a
+                >Contact via email</a
               >
               <a
                 class="btn"
@@ -761,15 +749,16 @@
               >
             </div>
           </div>
+
           <div class="copyright small">
-            <span id="year"></span> © Raven3. Todos los derechos reservados.
+            <span id="year"></span> © Raven3. All rights reserved.
           </div>
         </div>
       </footer>
 
       <!-- Lightbox -->
       <div class="lightbox" id="lightbox" aria-hidden="true">
-        <button class="lightbox__close" type="button" aria-label="Cerrar">
+        <button class="lightbox__close" type="button" aria-label="Close">
           ✕
         </button>
         <img class="lightbox__img" alt="" />
@@ -779,8 +768,8 @@
     <!-- JS -->
     <script src="https://unpkg.com/locomotive-scroll@4/dist/locomotive-scroll.min.js"></script>
 
-    <script defer src="assets/js/main.js"></script>
-    <script type="module" src="assets/js/particles.js"></script>
-    <script defer src="assets/js/clientes.js"></script>
+    <script defer src="../assets/js/main.js"></script>
+    <script type="module" src="../assets/js/particles.js"></script>
+    <script defer src="clients.js"></script>
   </body>
 </html>

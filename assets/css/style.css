@@ -340,6 +340,59 @@ section {
     grid-column: span 4;
   }
 }
+
+/* =========================
+   Language Switch
+========================= */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.lang-switch a {
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink-2);
+  opacity: 0.7;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+/* Hover underline animado */
+.lang-switch a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: var(--r3);
+  transition: width 0.3s ease;
+}
+
+.lang-switch a:hover {
+  color: var(--ink);
+  opacity: 1;
+}
+
+.lang-switch a:hover::after {
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .lang-switch {
+    top: 15px;
+    right: 20px;
+  }
+
+  .lang-switch a {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+}
 /*
 --
 REVIEWS 
