@@ -111,6 +111,7 @@
     <!-- CSS -->
     <link rel="preload" href="../assets/css/style.css" as="style" />
     <link rel="stylesheet" href="../assets/css/style.css" />
+        <link rel="stylesheet" href="../assets/css/swiper.css" />
 
     <!-- GA4 -->
     <script
@@ -204,7 +205,9 @@
       <!-- HERO -->
       <header class="hero" data-scroll-section>
         <div class="hero__inner container">
-          <p class="eyebrow" data-scroll data-scroll-speed="-1">Digital Agency</p>
+          <p class="eyebrow" data-scroll data-scroll-speed="-1">
+            Digital Agency
+          </p>
 
           <h1 data-scroll data-scroll-speed="-2">
             We <span class="accent">design</span> and
@@ -290,15 +293,19 @@
         </div>
       </section>
 
-      <section class="reviews-home" aria-label="Google reviews" data-scroll-section>
+      <section
+        class="reviews-home"
+        aria-label="Reseñas de Google"
+        data-scroll-section
+      >
         <div class="container">
           <div class="reviews-card">
             <div class="reviews-top">
-              <div class="reviews-score" aria-label="Rating 5 out of 5">
+              <div class="reviews-score" aria-label="Calificación 5 de 5">
                 <div class="stars" aria-hidden="true">★★★★★</div>
                 <div class="score-line">
                   <strong>5.0</strong>
-                  <span class="muted">· 3 Google reviews</span>
+                  <span class="muted">· 3 reseñas en Google</span>
                 </div>
               </div>
 
@@ -309,7 +316,7 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  View reviews
+                  Ver reseñas
                 </a>
                 <a
                   class="btn primary"
@@ -317,60 +324,87 @@
                   target="_blank"
                   rel="noopener"
                 >
-                  Leave a review
+                  Dejar una reseña
                 </a>
               </div>
             </div>
 
             <div class="reviews-copy">
-              <h2>Worked with Raven3?</h2>
+              <h2>¿Trabajaste con Raven3?</h2>
               <p class="section-subtitle">
-                If your project improved in performance, search visibility or
-                conversion rate, your review helps more brands choose custom
-                development and real technical quality.
+                Si tu proyecto mejoró en performance, posicionamiento o
+                conversión, tu reseña ayuda a que más marcas apuesten por
+                desarrollo a medida y calidad técnica real.
               </p>
             </div>
 
-            <div class="reviews-quotes" role="list">
-              <article class="quote" role="listitem">
-                <p class="review-quote">
-                  “Excellent service!!! They built me a top-tier website. Very
-                  attentive and always available, continuously improving and
-                  proposing enhancements. Highly recommended!”
-                </p>
-                <div class="review-toggle">Read more</div>
-                <span class="who muted">— Nicolas De Brasi</span>
-              </article>
+            <!-- Opcional: mini quotes (cuando pegues el texto real) -->
+            <!-- Opcional: mini quotes (cuando pegues el texto real) -->
+            <div class="reviews-quotes reviews-quotes--swiper">
+              <div
+                class="swiper reviews-swiper"
+                aria-label="Reseñas destacadas"
+              >
+                <div class="swiper-wrapper" role="list">
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      “Excellent service!!! They built me a top-tier website.
+                      Very attentive and always available, continuously
+                      improving and proposing enhancements. Highly recommended!”
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Read more
+                    </button>
+                    <span class="who muted">— Nicolas De Brasi</span>
+                  </article>
 
-              <article class="quote" role="listitem">
-                <p class="review-quote">
-                  “I recommend Raven 3 for the excellent work they did designing
-                  our Okos website. The site is modern, attractive and easy to
-                  navigate. Functionality is flawless and fits our automation
-                  and control needs perfectly. The design is responsive and
-                  looks great on different devices. Without a doubt, I recommend
-                  Raven 3 for any web design project. Their team is
-                  professional, creative and detail-oriented. We’re very happy
-                  with the result and would definitely work with them again in
-                  the future.”
-                </p>
-                <div class="review-toggle">Read more</div>
-                <span class="who muted">— Julián Fernandez</span>
-              </article>
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      “I recommend Raven 3 for the excellent work they did
+                      designing our Okos website. The site is modern, attractive
+                      and easy to navigate. Functionality is flawless and fits
+                      our automation and control needs perfectly. The design is
+                      responsive and looks great on different devices. Without a
+                      doubt, I recommend Raven 3 for any web design project.
+                      Their team is professional, creative and detail-oriented.
+                      We’re very happy with the result and would definitely work
+                      with them again in the future.”
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                        Read more
+                    </button>
+                    <span class="who muted">— Julián Fernandez</span>
+                  </article>
 
-              <article class="quote" role="listitem">
-                <p class="review-quote">
-                  “My experience with Raven3 was a success — they built a
-                  website that far exceeded my expectations. Communication was
-                  clear and effective from the beginning, and they were always
-                  willing to listen to my needs and adjust as necessary. The
-                  site performance is fast and efficient. In short, I 100%
-                  recommend them — I came with an idea and they delivered a
-                  much better solution!”
-                </p>
-                <div class="review-toggle">Read more</div>
-                <span class="who muted">— Agustina Menichelli</span>
-              </article>
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      “My experience with Raven3 was a success — they built a
+                      website that far exceeded my expectations. Communication
+                      was clear and effective from the beginning, and they were
+                      always willing to listen to my needs and adjust as
+                      necessary. The site performance is fast and efficient. In
+                      short, I 100% recommend them — I came with an idea and
+                      they delivered a much better solution!”
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Read more
+                    </button>
+                    <span class="who muted">— agustina menichelli</span>
+                  </article>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -387,7 +421,11 @@
 
           <div class="showcase" style="margin-top: 30px">
             <!-- Client 1 -->
-            <figure class="shot" itemscope itemtype="https://schema.org/CreativeWork">
+            <figure
+              class="shot"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
               <img
                 src="../assets/img/portfolio/WEB/ndbpropiedades/logo.png"
                 class="img-fluid"
@@ -405,7 +443,11 @@
             </figure>
 
             <!-- Client 2 -->
-            <figure class="shot" itemscope itemtype="https://schema.org/CreativeWork">
+            <figure
+              class="shot"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
               <img
                 src="../assets/img/portfolio/WEB/sgm/logo.png"
                 class="img-fluid"
@@ -417,13 +459,18 @@
                 <p class="client-label" itemprop="name">SGM+</p>
                 <p class="client-outcome" itemprop="description">
                   Institutional website with integrated e-commerce for workshops
-                  and experiences, designed to scale community and registrations.
+                  and experiences, designed to scale community and
+                  registrations.
                 </p>
               </figcaption>
             </figure>
 
             <!-- Client 3 -->
-            <figure class="shot" itemscope itemtype="https://schema.org/CreativeWork">
+            <figure
+              class="shot"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
               <img
                 src="../assets/img/portfolio/WEB/lassen/logo.png"
                 class="img-fluid"
@@ -441,7 +488,11 @@
             </figure>
 
             <!-- Client 4 -->
-            <figure class="shot" itemscope itemtype="https://schema.org/CreativeWork">
+            <figure
+              class="shot"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
               <img
                 src="../assets/img/portfolio/WEB/beforce/logo.png"
                 class="img-fluid"
@@ -459,8 +510,15 @@
             </figure>
           </div>
 
-          <div class="cta-center" data-scroll data-scroll-speed="0.2" style="margin-top: 40px">
-            <a href="/en/clients.html" class="btn primary">View more projects</a>
+          <div
+            class="cta-center"
+            data-scroll
+            data-scroll-speed="0.2"
+            style="margin-top: 40px"
+          >
+            <a href="/en/clients.html" class="btn primary"
+              >View more projects</a
+            >
           </div>
         </div>
       </section>
@@ -476,7 +534,8 @@
               data-scroll-speed="8"
               data-scroll-target="#stripsTarget"
             >
-              RAVEN3.COM.AR • Custom web development • Real performance • Digital experiences
+              RAVEN3.COM.AR • Custom web development • Real performance •
+              Digital experiences
             </span>
           </div>
 
@@ -501,7 +560,8 @@
               data-scroll-target="#stripsTarget"
               data-scroll-delay="0.05"
             >
-              RAVEN3.COM.AR • Real results • Purpose-driven design • Speed that converts
+              RAVEN3.COM.AR • Real results • Purpose-driven design • Speed that
+              converts
             </span>
           </div>
         </div>
@@ -582,7 +642,8 @@
           <div>
             <div class="section-subtitle">
               Have a digital project? Message us and we’ll build something
-              great. We turn ideas into fast, accessible and profitable websites.
+              great. We turn ideas into fast, accessible and profitable
+              websites.
             </div>
 
             <div class="cta-row" style="margin-top: 1rem">
@@ -626,6 +687,7 @@
     <!-- Your main scripts -->
     <script type="module" src="../assets/js/main.js"></script>
     <script type="module" src="../assets/js/particles.js"></script>
+        <script type="module" src="reviews-swiper.js"></script>
 
     <script>
       const form = document.getElementById("contactForm");
