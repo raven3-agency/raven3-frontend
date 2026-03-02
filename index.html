@@ -114,7 +114,7 @@
     <!-- CSS -->
     <link rel="preload" href="assets/css/style.css" as="style" />
     <link rel="stylesheet" href="assets/css/style.css" />
-
+    <link rel="stylesheet" href="assets/css/swiper.css" />
     <!-- GA4 (bien cargado; en tu html actual te falta el gtag.js) -->
     <script
       async
@@ -333,45 +333,76 @@
             </div>
 
             <!-- Opcional: mini quotes (cuando pegues el texto real) -->
-            <div class="reviews-quotes" role="list">
-              <article class="quote" role="listitem">
-                <p class="review-quote">
-                  “Excelente servicio!!! Me crearon una página web de primera
-                  línea!!! Muy atentos y a disposición siempre, mejorando y
-                  proponiendo mejoras continuamente. Altamente recomendables!”
-                </p>
-                <div class="review-toggle">Leer más</div>
-                <span class="who muted">— Nicolas De Brasi</span>
-              </article>
-              <article class="quote" role="listitem">
-                <p class="review-quote">
-                  “Recomiendo a Raven 3 por el excelente trabajo que hicieron en
-                  el diseño de nuestra página web Okos. La página web que
-                  diseñaron es moderna, atractiva y fácil de navegar. La
-                  funcionalidad es impecable y se adapta perfectamente a
-                  nuestras necesidades de automatización y control. El diseño es
-                  responsivo y se ve bien en diferentes dispositivos. Sin duda,
-                  recomiendo a Raven 3 para cualquier proyecto de diseño web. Su
-                  equipo es profesional, creativo y atento a los detalles.
-                  Estamos muy satisfechos con el resultado y no dudamos en
-                  trabajar con ellos nuevamente en el futuro.”
-                </p>
-                <div class="review-toggle">Leer más</div>
-                <span class="who muted">— Julián Fernandez</span>
-              </article>
-              <article class="quote" role="listitem">
-                <p class="review-quote">
-                  “Mi experiencia con Raven3 ha sido un éxito me desarrollaron
-                  un sitio web que superó ampliamente mis expectativas. Su
-                  comunicación fue clara y efectiva desde el principio, y
-                  siempre estuvo dispuesto a escuchar mis necesidades y hacer
-                  ajustes según sea necesario. El rendimiento de la web es
-                  rápido y eficiente. En resumen recomiendo al 100% fui con una
-                  idea y me ofrecieron una solución mucho mejor!”
-                </p>
-                <div class="review-toggle">Leer más</div>
-                <span class="who muted">— agustina menichelli</span>
-              </article>
+            <!-- Opcional: mini quotes (cuando pegues el texto real) -->
+            <div class="reviews-quotes reviews-quotes--swiper">
+              <div
+                class="swiper reviews-swiper"
+                aria-label="Reseñas destacadas"
+              >
+                <div class="swiper-wrapper" role="list">
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      “Excelente servicio!!! Me crearon una página web de
+                      primera línea!!! Muy atentos y a disposición siempre,
+                      mejorando y proponiendo mejoras continuamente. Altamente
+                      recomendables!”
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted">— Nicolas De Brasi</span>
+                  </article>
+
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      “Recomiendo a Raven 3 por el excelente trabajo que
+                      hicieron en el diseño de nuestra página web Okos. La
+                      página web que diseñaron es moderna, atractiva y fácil de
+                      navegar. La funcionalidad es impecable y se adapta
+                      perfectamente a nuestras necesidades de automatización y
+                      control. El diseño es responsivo y se ve bien en
+                      diferentes dispositivos. Sin duda, recomiendo a Raven 3
+                      para cualquier proyecto de diseño web. Su equipo es
+                      profesional, creativo y atento a los detalles. Estamos muy
+                      satisfechos con el resultado y no dudamos en trabajar con
+                      ellos nuevamente en el futuro.”
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted">— Julián Fernandez</span>
+                  </article>
+
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      “Mi experiencia con Raven3 ha sido un éxito me
+                      desarrollaron un sitio web que superó ampliamente mis
+                      expectativas. Su comunicación fue clara y efectiva desde
+                      el principio, y siempre estuvo dispuesto a escuchar mis
+                      necesidades y hacer ajustes según sea necesario. El
+                      rendimiento de la web es rápido y eficiente. En resumen
+                      recomiendo al 100% fui con una idea y me ofrecieron una
+                      solución mucho mejor!”
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted">— agustina menichelli</span>
+                  </article>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -392,16 +423,6 @@
               itemscope
               itemtype="https://schema.org/CreativeWork"
             >
-              <!-- <video
-                autoplay
-                muted
-                loop
-                playsinline
-                data-scroll
-                data-scroll-speed="-0.8"
-              >
-                <source src="assets/video/1.mp4" type="video/mp4" />
-              </video> -->
               <img
                 src="assets/img/portfolio/WEB/ndbpropiedades/logo.png"
                 class="img-fluid"
@@ -425,16 +446,6 @@
               itemscope
               itemtype="https://schema.org/CreativeWork"
             >
-              <!-- <video
-                autoplay
-                muted
-                loop
-                playsinline
-                data-scroll
-                data-scroll-speed="-0.8"
-              >
-                <source src="assets/video/1.mp4" type="video/mp4" />
-              </video> -->
               <img
                 src="assets/img/portfolio/WEB/sgm/logo.png"
                 class="img-fluid"
@@ -458,16 +469,6 @@
               itemscope
               itemtype="https://schema.org/CreativeWork"
             >
-              <!-- <video
-                autoplay
-                muted
-                loop
-                playsinline
-                data-scroll
-                data-scroll-speed="-0.8"
-              >
-                <source src="assets/video/1.mp4" type="video/mp4" />
-              </video> -->
               <img
                 src="assets/img/portfolio/WEB/lassen/logo.png"
                 class="img-fluid"
@@ -491,16 +492,6 @@
               itemscope
               itemtype="https://schema.org/CreativeWork"
             >
-              <!-- <video
-                autoplay
-                muted
-                loop
-                playsinline
-                data-scroll
-                data-scroll-speed="-0.8"
-              >
-                <source src="assets/video/1.mp4" type="video/mp4" />
-              </video> -->
               <img
                 src="assets/img/portfolio/WEB/beforce/logo.png"
                 class="img-fluid"
@@ -688,7 +679,7 @@
     <!-- Tu script principal -->
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="assets/js/particles.js"></script>
-
+    <script type="module" src="assets/js/reviews-swiper.js"></script>
     <script>
       const form = document.getElementById("contactForm");
       const status = document.getElementById("formStatus");
