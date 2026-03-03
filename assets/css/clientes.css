@@ -684,3 +684,12 @@ a {
   border-radius: 2px;
 }
 
+.pswp__button--arrow--left,
+.pswp__button--arrow--right,
+.pswp__counter {
+  display: none !important;
+}
+
+.pswp__top-bar {
+  justify-content: flex-end;
+}
