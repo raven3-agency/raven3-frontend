@@ -35,6 +35,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/clientes.css" />
+    <link rel="stylesheet" href="../assets/css/photoswipe.css" />
 
     <!-- Icons -->
     <link
@@ -758,10 +759,22 @@
 
       <!-- Lightbox -->
       <div class="lightbox" id="lightbox" aria-hidden="true">
-        <button class="lightbox__close" type="button" aria-label="Close">
+        <button
+          class="lightbox-close"
+          type="button"
+          aria-label="Cerrar preview"
+        >
           ✕
         </button>
-        <img class="lightbox__img" alt="" />
+
+        <div
+          class="lightbox-viewport"
+          role="dialog"
+          aria-modal="true"
+          tabindex="0"
+        >
+          <img class="lightbox-img" alt="Preview del sitio" />
+        </div>
       </div>
     </main>
 
@@ -771,5 +784,6 @@
     <script defer src="../assets/js/main.js"></script>
     <script type="module" src="../assets/js/particles.js"></script>
     <script defer src="clients.js"></script>
+    <script defer src="../assets/js/lightbox.js"></script>
   </body>
 </html>
