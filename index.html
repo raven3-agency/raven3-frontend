@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <title>
-      Raven3 — Diseño Web, Tiendas Online y SEO Técnico en Argentina
-    </title>
+    <title>Raven3 — Diseño Web Custom, Tiendas Online y SEO Técnico</title>
 
     <meta
       name="description"
@@ -520,6 +518,60 @@
         </div>
       </section>
 
+      <section class="newsletter" aria-label="newsletter" data-scroll-section>
+        <div class="newsletter-inner">
+          <span class="newsletter-eyebrow">NEWSLETTER</span>
+          <h3>Web Performance Insights Raven3</h3>
+
+          <p>
+            Tips, experimentos y análisis técnicos sobre performance, SEO
+            técnico y desarrollo web a medida.
+          </p>
+
+          <form id="newsletter-form" class="newsletter-form">
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              placeholder="tu@email.com"
+              autocomplete="email"
+              required
+            />
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo suscriptor Raven3"
+            />
+            <button
+              type="submit"
+              id="newsletter-btn"
+              class="btn primary"
+              data-idle-text="Suscribirme"
+              data-sending-text="Enviando…"
+              data-success-text="Suscripto ✓"
+              data-already-text="Ya suscripto ✓"
+              data-retry-text="Reintentar"
+            >
+              Suscribirme
+            </button>
+          </form>
+
+          <p
+            class="newsletter-msg"
+            id="newsletter-msg"
+            aria-live="polite"
+            data-sending-text="Procesando suscripción…"
+            data-success-msg="Hecho: <strong>{email}</strong> está suscripto."
+            data-already-msg="Hecho: <strong>{email}</strong> ya estaba suscripto."
+            data-error-text="Algo salió mal. Por favor, inténtalo de nuevo."
+          ></p>
+        </div>
+        <small class="newsletter-note">
+          Sin spam. Solo contenido técnico de alto valor.
+        </small>
+      </section>
+
       <!-- Marquee CTA -->
       <!-- Strips / Banners con movimiento horizontal -->
       <section class="strips" data-scroll-section>
@@ -680,6 +732,7 @@
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="assets/js/particles.js"></script>
     <script type="module" src="assets/js/reviews-swiper.js"></script>
+    <script type="module" src="assets/js/newsletter.js"></script>
     <script>
       const form = document.getElementById("contactForm");
       const status = document.getElementById("formStatus");

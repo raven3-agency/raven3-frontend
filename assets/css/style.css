@@ -423,8 +423,16 @@ REVIEWS (pulido + Swiper friendly)
   pointer-events: none;
   opacity: 0.95;
   background:
-    radial-gradient(900px 360px at 14% 0%, rgba(55, 226, 213, 0.1), transparent 60%),
-    radial-gradient(900px 460px at 88% 10%, rgba(255, 255, 255, 0.06), transparent 60%),
+    radial-gradient(
+      900px 360px at 14% 0%,
+      rgba(55, 226, 213, 0.1),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 460px at 88% 10%,
+      rgba(255, 255, 255, 0.06),
+      transparent 60%
+    ),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.52));
 }
 
@@ -456,7 +464,11 @@ REVIEWS (pulido + Swiper friendly)
   border-radius: inherit;
   opacity: 0.9;
 
-  background: radial-gradient(circle at 20% 0%, rgba(55, 226, 213, 0.12), transparent 55%);
+  background: radial-gradient(
+    circle at 20% 0%,
+    rgba(55, 226, 213, 0.12),
+    transparent 55%
+  );
   mask: linear-gradient(#000, transparent 72%);
 }
 
@@ -952,4 +964,114 @@ footer {
   flex: 1;
   display: flex;
   justify-content: center;
+}
+/* --
+      NEWSLETTER
+-- */
+/* Base */
+.newsletter {
+  margin: 120px auto 80px;
+  max-width: 800px;
+  text-align: center;
+
+  /* Mobile safe padding */
+  padding-inline: 16px;
+}
+
+.newsletter-inner {
+  backdrop-filter: blur(12px);
+  background: rgba(10, 10, 12, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 28px;
+  padding: 40px;
+
+  /* Prevent overflow on small screens */
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.newsletter-eyebrow {
+  display: inline-block;
+  background: rgba(55, 226, 213, 0.08);
+  border: 1px solid rgba(55, 226, 213, 0.25);
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-bottom: 12px;
+}
+
+/* Typography (fluid) */
+.newsletter h3 {
+  font-size: clamp(22px, 4.2vw, 28px);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.newsletter p {
+  opacity: 0.7;
+  margin-bottom: 25px;
+  font-size: clamp(14px, 2.6vw, 16px);
+  line-height: 1.5;
+}
+
+/* Form layout */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Inputs */
+.newsletter input {
+  background: linear-gradient(180deg, #12141a, #0c0d11);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  outline: none;
+
+  flex: 1 1 auto;
+  width: 100%;
+
+  /* KEY FIX: remove hard min-width */
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Make button behave nicely in flex */
+.newsletter-form .btn,
+.newsletter-form button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+   padding: 12px 24px;
+}
+
+/* --- Mobile breakpoint --- */
+@media (max-width: 520px) {
+  .newsletter {
+    margin: 80px auto 56px;
+  }
+
+  .newsletter-inner {
+    padding: 26px 18px;
+    border-radius: 22px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .newsletter-form .btn,
+  .newsletter-form button {
+    width: 100%;
+    justify-content: center;
+  }
 }

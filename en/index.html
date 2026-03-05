@@ -523,6 +523,59 @@
         </div>
       </section>
 
+      <section class="newsletter" aria-label="newsletter" data-scroll-section>
+        <div class="newsletter-inner">
+           <span class="newsletter-eyebrow">NEWSLETTER</span>
+          <h3>Raven3 Web Performance Insights</h3>
+
+          <p>
+            Tips, experiments and technical analysis on web performance,
+            technical SEO and custom web development.
+          </p>
+
+          <form id="newsletter-form" class="newsletter-form">
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              placeholder="your@email.com"
+              autocomplete="email"
+              required
+            />
+            <input
+              type="hidden"
+              name="_subject"
+              value="New Raven3 subscriber"
+            />
+            <button
+              type="submit"
+              id="newsletter-btn"
+              class="btn primary"
+              data-idle-text="Subscribe"
+              data-sending-text="Sending…"
+              data-success-text="Subscribed ✓"
+              data-already-text="Already subscribed ✓"
+              data-retry-text="Retry"
+            >
+              Subscribe
+            </button>
+          </form>
+
+          <p
+            class="newsletter-msg"
+            id="newsletter-msg"
+            aria-live="polite"
+            data-sending-text="Processing subscription…"
+            data-success-msg="Done: <strong>{email}</strong> is now subscribed."
+            data-already-msg="Done: <strong>{email}</strong> was already subscribed."
+            data-error-text="Something went wrong. Please try again."
+          ></p>
+        </div>
+          <small class="newsletter-note">
+          No spam. Just technical insights.
+        </small>
+      </section>
+
       <!-- Marquee CTA -->
       <section class="strips" data-scroll-section>
         <div class="strips-wrap" id="stripsTarget">
@@ -688,6 +741,7 @@
     <script type="module" src="../assets/js/main.js"></script>
     <script type="module" src="../assets/js/particles.js"></script>
     <script type="module" src="reviews-swiper.js"></script>
+    <script type="module" src="newsletter.js"></script>
 
     <script>
       const form = document.getElementById("contactForm");
