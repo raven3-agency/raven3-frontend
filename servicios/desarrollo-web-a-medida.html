@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>Desarrollo Web a Medida en Argentina | Raven3</title>
+
+    <meta
+      name="description"
+      content="Desarrollo web a medida en Argentina. En Raven3 diseñamos sitios rápidos, escalables y optimizados para SEO, performance y Core Web Vitals."
+    />
+    <meta
+      name="keywords"
+      content="desarrollo web a medida, desarrollo web argentina, diseño web profesional, SEO técnico, Core Web Vitals, Raven3"
+    />
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="index,follow" />
+    <meta name="theme-color" content="#050816" />
+
+    <link
+      rel="canonical"
+      href="https://raven3.com.ar/servicios/desarrollo-web-a-medida.html"
+    />
+
+    <meta
+      property="og:title"
+      content="Desarrollo Web a Medida en Argentina | Raven3"
+    />
+    <meta
+      property="og:description"
+      content="Sitios web rápidos, escalables y optimizados para SEO. Sin plantillas pesadas. Arquitectura pensada para performance y conversión."
+    />
+    <meta
+      property="og:url"
+      content="https://raven3.com.ar/servicios/desarrollo-web-a-medida.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raven3" />
+    <meta
+      property="og:image"
+      content="https://raven3.com.ar/assets/og/og-raven3.jpg"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Desarrollo Web a Medida en Argentina | Raven3"
+    />
+    <meta
+      name="twitter:description"
+      content="Desarrollo web a medida con foco en SEO, performance y Core Web Vitals."
+    />
+    <meta
+      name="twitter:image"
+      content="https://raven3.com.ar/assets/og/og-raven3.jpg"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Desarrollo Web a Medida",
+        "serviceType": "Desarrollo Web a Medida",
+        "description": "Servicio de desarrollo web a medida en Argentina enfocado en performance, SEO técnico, escalabilidad y experiencia de usuario.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Argentina"
+        },
+        "provider": {
+          "@type": "Organization",
+          "name": "Raven3",
+          "url": "https://raven3.com.ar",
+          "logo": "https://raven3.com.ar/assets/logo/raven3-logo.png"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://raven3.com.ar/contacto.html",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "¿Qué es una web a medida?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Es un sitio desarrollado desde cero para un negocio específico, sin utilizar plantillas genéricas ni estructuras innecesarias."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Cuánto tarda desarrollar una web?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dependiendo del alcance del proyecto, una web a medida puede tardar entre 3 y 8 semanas."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "¿Por qué evitar plantillas?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Porque suelen agregar peso innecesario, limitar la personalización, afectar la performance y complicar la escalabilidad del proyecto."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <style>
+      :root {
+        --bg: #02050a;
+        --bg-soft: #071019;
+        --bg-deep: #0b1622;
+
+        --panel: rgba(7, 14, 22, 0.72);
+        --panel-2: rgba(9, 17, 27, 0.9);
+        --panel-3: rgba(12, 22, 34, 0.96);
+
+        --text: #f5fbff;
+        --text-strong: #ffffff;
+        --muted: rgba(245, 251, 255, 0.74);
+        --muted-2: rgba(245, 251, 255, 0.52);
+        --muted-3: rgba(245, 251, 255, 0.34);
+
+        --accent: #37e2d5;
+        --accent-2: #7ffaf0;
+        --accent-deep: #12bfb3;
+        --accent-soft: rgba(55, 226, 213, 0.08);
+        --accent-glow: rgba(55, 226, 213, 0.18);
+        --accent-glow-strong: rgba(55, 226, 213, 0.3);
+
+        --line: rgba(55, 226, 213, 0.18);
+        --line-strong: rgba(55, 226, 213, 0.34);
+        --line-soft: rgba(255, 255, 255, 0.08);
+        --line-softer: rgba(255, 255, 255, 0.05);
+
+        --shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.42);
+        --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.28);
+        --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.18);
+
+        --radius-xl: 30px;
+        --radius-lg: 22px;
+        --radius-md: 18px;
+        --radius-sm: 14px;
+
+        --container: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family:
+          "Inter",
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        background:
+          radial-gradient(
+            circle at top,
+            rgba(55, 226, 213, 0.1),
+            transparent 28%
+          ),
+          radial-gradient(
+            circle at 18% 78%,
+            rgba(55, 226, 213, 0.05),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 88% 18%,
+            rgba(127, 250, 240, 0.05),
+            transparent 22%
+          ),
+          linear-gradient(
+            180deg,
+            #010409 0%,
+            #02050a 30%,
+            #06111a 68%,
+            #091520 100%
+          );
+        color: var(--text);
+        line-height: 1.65;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition:
+          color 0.22s ease,
+          border-color 0.22s ease,
+          background-color 0.22s ease,
+          transform 0.22s ease,
+          box-shadow 0.22s ease,
+          opacity 0.22s ease;
+      }
+
+      img {
+        max-width: 100%;
+        display: block;
+      }
+
+      .container {
+        width: min(var(--container), calc(100% - 40px));
+        margin: 0 auto;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: linear-gradient(
+          180deg,
+          rgba(4, 8, 14, 0.84),
+          rgba(4, 8, 14, 0.7)
+        );
+        border-bottom: 1px solid var(--line-softer);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+      }
+
+      .site-header .inner {
+        min-height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.02em;
+        color: var(--text-strong);
+      }
+
+      .brand:hover {
+        opacity: 0.96;
+      }
+
+      .brand-mark {
+        width: 12px;
+        height: 12px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        box-shadow:
+          0 0 0 6px rgba(55, 226, 213, 0.08),
+          0 0 26px rgba(55, 226, 213, 0.46);
+      }
+
+      .nav {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+
+      .nav a {
+        color: var(--muted);
+        font-size: 0.95rem;
+        position: relative;
+      }
+
+      .nav a:hover {
+        color: var(--text-strong);
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--accent),
+          transparent
+        );
+        opacity: 0;
+        transform: scaleX(0.75);
+        transform-origin: center;
+        transition:
+          opacity 0.22s ease,
+          transform 0.22s ease;
+      }
+
+      .nav a:hover::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        padding: 0 20px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: rgba(255, 255, 255, 0.025);
+        color: var(--text);
+        font-weight: 700;
+        letter-spacing: -0.01em;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+        border-color: rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.045);
+        color: var(--text-strong);
+      }
+
+      .btn.primary {
+        color: #041015;
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--accent-2) 100%
+        );
+        border-color: transparent;
+        box-shadow:
+          0 10px 30px var(--accent-glow),
+          inset 0 1px 0 rgba(255, 255, 255, 0.16);
+      }
+
+      .btn.primary:hover {
+        filter: brightness(1.04);
+        box-shadow:
+          0 14px 34px var(--accent-glow-strong),
+          inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 104px 0 80px;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        border-radius: 999px;
+        filter: blur(80px);
+        pointer-events: none;
+      }
+
+      .hero::before {
+        width: 320px;
+        height: 320px;
+        background: rgba(55, 226, 213, 0.09);
+        top: -90px;
+        left: -90px;
+      }
+
+      .hero::after {
+        width: 300px;
+        height: 300px;
+        background: rgba(127, 250, 240, 0.06);
+        right: -90px;
+        top: 20px;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 14px;
+        margin-bottom: 22px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background:
+          linear-gradient(
+            180deg,
+            rgba(55, 226, 213, 0.08),
+            rgba(55, 226, 213, 0.04)
+          ),
+          rgba(255, 255, 255, 0.015);
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0;
+        line-height: 1.05;
+        letter-spacing: -0.045em;
+        color: var(--text-strong);
+      }
+
+      h1 {
+        max-width: 960px;
+        font-size: clamp(2.7rem, 6vw, 5rem);
+        font-weight: 800;
+      }
+
+      .hero-copy {
+        max-width: 780px;
+        margin-top: 24px;
+        font-size: clamp(1.04rem, 1.4vw, 1.18rem);
+        color: var(--muted);
+      }
+
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 50px;
+      }
+
+      .stat {
+        padding: 22px;
+        border-radius: var(--radius-lg);
+        border: 1px solid var(--line-soft);
+        background: linear-gradient(
+          180deg,
+          rgba(12, 19, 29, 0.92),
+          rgba(8, 13, 21, 0.96)
+        );
+        box-shadow: var(--shadow-md);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(55, 226, 213, 0.22),
+          transparent
+        );
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.42rem;
+        margin-bottom: 6px;
+        color: var(--text-strong);
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      main {
+        padding-bottom: 88px;
+      }
+
+      .section {
+        padding: 30px 0;
+      }
+
+      .section + .section {
+        margin-top: 6px;
+      }
+
+      .section-card {
+        border: 1px solid var(--line-soft);
+        background: linear-gradient(
+          180deg,
+          rgba(10, 18, 28, 0.95),
+          rgba(6, 11, 18, 0.98)
+        );
+        border-radius: var(--radius-xl);
+        padding: 36px;
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .section-card::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(55, 226, 213, 0.18),
+          transparent
+        );
+        pointer-events: none;
+      }
+
+      .section-head {
+        max-width: 820px;
+        margin-bottom: 28px;
+      }
+
+      .section-head h2 {
+        font-size: clamp(2rem, 3vw, 3.1rem);
+        margin-bottom: 14px;
+      }
+
+      .section-head p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .list-clean,
+      .tech-list,
+      .projects-list {
+        margin: 0;
+        padding-left: 1.15rem;
+        color: var(--muted);
+      }
+
+      .list-clean li,
+      .tech-list li,
+      .projects-list li {
+        margin: 10px 0;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1.12fr 0.88fr;
+        gap: 24px;
+      }
+
+      .benefits-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .benefit,
+      .process-step,
+      .faq-item,
+      .mini-card {
+        border: 1px solid var(--line-soft);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.02),
+          rgba(255, 255, 255, 0.01)
+        );
+        padding: 22px;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .benefit:hover,
+      .process-step:hover,
+      .faq-item:hover,
+      .mini-card:hover {
+        border-color: rgba(55, 226, 213, 0.18);
+        background: linear-gradient(
+          180deg,
+          rgba(55, 226, 213, 0.03),
+          rgba(255, 255, 255, 0.015)
+        );
+        transform: translateY(-2px);
+      }
+
+      .benefit h3,
+      .process-step h3,
+      .faq-item h3,
+      .mini-card h3 {
+        font-size: 1.14rem;
+        margin-bottom: 10px;
+        color: var(--text-strong);
+      }
+
+      .benefit p,
+      .process-step p,
+      .faq-item p,
+      .mini-card p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .process-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .step-index {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+        font-weight: 800;
+        color: #041019;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        box-shadow: 0 8px 18px rgba(55, 226, 213, 0.2);
+      }
+
+      .projects-list a {
+        color: var(--text);
+        text-decoration: underline;
+        text-decoration-color: rgba(55, 226, 213, 0.28);
+        text-underline-offset: 4px;
+      }
+
+      .projects-list a:hover {
+        color: var(--text-strong);
+        text-decoration-color: var(--accent);
+      }
+
+      .faq-grid {
+        display: grid;
+        gap: 16px;
+      }
+
+      .cta {
+        text-align: center;
+        padding: 62px 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-xl);
+        background:
+          radial-gradient(
+            circle at top,
+            rgba(55, 226, 213, 0.1),
+            transparent 52%
+          ),
+          linear-gradient(180deg, rgba(8, 14, 24, 0.98), rgba(5, 10, 17, 0.98));
+        box-shadow: var(--shadow-lg);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta::before {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 50%;
+        width: 360px;
+        height: 1px;
+        transform: translateX(-50%);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(55, 226, 213, 0.3),
+          transparent
+        );
+      }
+
+      .cta h2 {
+        font-size: clamp(2.1rem, 4vw, 3.3rem);
+        margin-bottom: 14px;
+      }
+
+      .cta p {
+        max-width: 720px;
+        margin: 0 auto 24px;
+        color: var(--muted);
+      }
+
+      .site-footer {
+        padding: 34px 0 56px;
+        color: var(--muted-2);
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: center;
+        border-top: 1px solid var(--line-softer);
+        padding-top: 24px;
+      }
+
+      .footer-links {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .footer-links a:hover {
+        color: var(--text-strong);
+      }
+
+      @media (max-width: 980px) {
+        .grid-2,
+        .hero-stats,
+        .benefits-grid,
+        .process-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .site-header .inner {
+          min-height: 68px;
+        }
+
+        .nav {
+          display: none;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .container {
+          width: min(var(--container), calc(100% - 24px));
+        }
+
+        .hero {
+          padding: 74px 0 54px;
+        }
+
+        .section-card {
+          padding: 22px;
+          border-radius: 24px;
+        }
+
+        .cta {
+          padding: 38px 18px;
+        }
+
+        .footer-inner {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .hero-actions {
+          flex-direction: column;
+        }
+
+        .hero-actions .btn {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container inner">
+        <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
+          ><img
+            src="../assets/img/logo.png"
+            alt="logo de raven3"
+            class="img-fluid"
+            width="100"
+            height="40"
+        /></a>
+
+        <nav class="nav" aria-label="Navegación principal">
+          <a href="/index.html">Inicio</a>
+          <a href="/servicios.html">Servicios</a>
+          <a href="/clientes.html">Clientes</a>
+          <a href="/contacto.html">Contacto</a>
+        </nav>
+
+        <a class="btn" href="/contacto.html">Hablemos</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="eyebrow">Servicio · Desarrollo Web</div>
+
+          <h1>Desarrollo Web a Medida en Argentina</h1>
+
+          <p class="hero-copy">
+            Diseñamos y desarrollamos sitios web rápidos, escalables y
+            optimizados para SEO. Sin plantillas, sin plugins pesados.
+            Arquitectura web pensada para performance, Core Web Vitals y
+            crecimiento de negocio.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn primary" href="/contacto.html">
+              Solicitar asesoramiento
+            </a>
+            <a class="btn" href="/clientes.html"> Ver proyectos </a>
+          </div>
+
+          <div class="hero-stats" aria-label="Puntos clave del servicio">
+            <div class="stat">
+              <strong>SEO técnico</strong>
+              <span
+                >Estructura limpia pensada para indexación y visibilidad.</span
+              >
+            </div>
+            <div class="stat">
+              <strong>Alto rendimiento</strong>
+              <span
+                >Optimización orientada a velocidad real y Core Web
+                Vitals.</span
+              >
+            </div>
+            <div class="stat">
+              <strong>Desarrollo custom</strong>
+              <span
+                >Arquitectura flexible para crecer sin límites
+                artificiales.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>¿Por qué muchas páginas web no generan resultados?</h2>
+              <p>
+                La mayoría de los sitios web hoy se construyen utilizando
+                plantillas pesadas y sistemas llenos de plugins. Eso suele
+                traducirse en sitios lentos, difíciles de mantener y con una
+                base técnica débil para SEO.
+              </p>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <ul class="list-clean">
+                  <li>Performance baja y tiempos de carga altos.</li>
+                  <li>Problemas de SEO técnico e indexabilidad.</li>
+                  <li>Dependencia de plugins o builders pesados.</li>
+                  <li>Dificultad para escalar funcionalidades a futuro.</li>
+                  <li>Peor experiencia de usuario y menor conversión.</li>
+                </ul>
+              </div>
+
+              <aside class="mini-card">
+                <h3>El problema real</h3>
+                <p>
+                  Una web no debería ser sólo “linda”. También tiene que cargar
+                  rápido, ser fácil de rastrear por Google, adaptarse bien a
+                  mobile y sostener el crecimiento del negocio sin romperse.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>La solución: desarrollo web a medida</h2>
+              <p>
+                En Raven3 desarrollamos sitios web desde cero utilizando
+                tecnologías modernas y una arquitectura enfocada en performance.
+                Cada proyecto se diseña específicamente para el negocio del
+                cliente, priorizando velocidad, posicionamiento SEO,
+                mantenibilidad y escalabilidad.
+              </p>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <p style="margin: 0; color: var(--muted)">
+                  A diferencia de una solución genérica, una web a medida
+                  permite definir exactamente qué necesita el proyecto, evitando
+                  código innecesario, dependencias artificiales y cuellos de
+                  botella técnicos. Eso se traduce en una base más limpia, más
+                  rápida y más preparada para evolucionar.
+                </p>
+              </div>
+
+              <aside class="mini-card">
+                <h3>Ideal para</h3>
+                <p>
+                  Empresas, marcas y proyectos que necesitan una presencia
+                  digital profesional, diferenciada y técnicamente sólida.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Beneficios de un sitio web desarrollado a medida</h2>
+              <p>
+                Una arquitectura custom permite optimizar el sitio para
+                buscadores, usuarios y objetivos de negocio, sin las
+                limitaciones de una plantilla genérica.
+              </p>
+            </div>
+
+            <div class="benefits-grid">
+              <article class="benefit">
+                <h3>Máxima velocidad</h3>
+                <p>
+                  Sitios optimizados para Core Web Vitals y carga ultra rápida,
+                  reduciendo fricción y mejorando la experiencia.
+                </p>
+              </article>
+
+              <article class="benefit">
+                <h3>SEO técnico optimizado</h3>
+                <p>
+                  Estructura limpia, semántica y preparada para facilitar el
+                  rastreo e indexación en Google.
+                </p>
+              </article>
+
+              <article class="benefit">
+                <h3>Escalabilidad real</h3>
+                <p>
+                  Arquitectura preparada para crecer con el negocio, incorporar
+                  integraciones y sumar nuevas funcionalidades.
+                </p>
+              </article>
+
+              <article class="benefit">
+                <h3>Control total</h3>
+                <p>
+                  Sin dependencias innecesarias, sin builders limitantes y con
+                  mayor libertad para evolucionar el producto digital.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Tecnologías que utilizamos</h2>
+              <p>
+                Seleccionamos el stack según los objetivos del proyecto, con
+                foco en performance, estabilidad y mantenibilidad.
+              </p>
+            </div>
+
+            <div class="grid-2">
+              <div>
+                <ul class="tech-list">
+                  <li>HTML5 semántico</li>
+                  <li>CSS moderno y responsive</li>
+                  <li>JavaScript optimizado</li>
+                  <li>Arquitectura orientada a performance</li>
+                  <li>Optimización de Core Web Vitals</li>
+                  <li>Buenas prácticas de accesibilidad</li>
+                  <li>Integraciones con APIs y herramientas externas</li>
+                </ul>
+              </div>
+
+              <aside class="mini-card">
+                <h3>Enfoque técnico</h3>
+                <p>
+                  Cada decisión técnica apunta a lograr una web rápida, estable,
+                  accesible y lista para posicionar mejor en buscadores.
+                </p>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Nuestro proceso de desarrollo</h2>
+              <p>
+                Trabajamos con una metodología clara para que el proyecto tenga
+                dirección, calidad técnica y foco en resultados.
+              </p>
+            </div>
+
+            <div class="process-grid">
+              <article class="process-step">
+                <div class="step-index">1</div>
+                <h3>Análisis del proyecto</h3>
+                <p>
+                  Estudiamos el negocio, los objetivos, el público y la
+                  arquitectura necesaria para el sitio.
+                </p>
+              </article>
+
+              <article class="process-step">
+                <div class="step-index">2</div>
+                <h3>Diseño de interfaz</h3>
+                <p>
+                  Diseñamos una experiencia visual y funcional alineada con la
+                  marca, la conversión y la usabilidad.
+                </p>
+              </article>
+
+              <article class="process-step">
+                <div class="step-index">3</div>
+                <h3>Desarrollo y optimización</h3>
+                <p>
+                  Construimos el sitio con foco en performance, accesibilidad,
+                  SEO técnico y buena experiencia en mobile.
+                </p>
+              </article>
+
+              <article class="process-step">
+                <div class="step-index">4</div>
+                <h3>Testing y lanzamiento</h3>
+                <p>
+                  Validamos velocidad, estructura, responsive, accesibilidad y
+                  calidad general antes de publicar.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Proyectos desarrollados</h2>
+              <p>
+                Algunos proyectos donde aplicamos desarrollo custom, foco en
+                performance y una ejecución técnica alineada al negocio.
+              </p>
+            </div>
+
+            <ul class="projects-list">
+              <li><a href="/clientes.html">Lassen Pharma</a></li>
+              <li><a href="/clientes.html">NDB Propiedades</a></li>
+              <li><a href="/clientes.html">Etienne de Montebello</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Preguntas frecuentes</h2>
+              <p>
+                Respuestas rápidas a dudas comunes sobre el desarrollo de una
+                web a medida.
+              </p>
+            </div>
+
+            <div class="faq-grid">
+              <article class="faq-item">
+                <h3>¿Qué es una web a medida?</h3>
+                <p>
+                  Es un sitio desarrollado desde cero para un negocio
+                  específico, sin utilizar plantillas genéricas ni estructuras
+                  rígidas.
+                </p>
+              </article>
+
+              <article class="faq-item">
+                <h3>¿Cuánto tarda desarrollar una web?</h3>
+                <p>
+                  Dependiendo del proyecto, el plazo puede ir de 3 a 8 semanas,
+                  según alcance, contenidos, validaciones e integraciones.
+                </p>
+              </article>
+
+              <article class="faq-item">
+                <h3>¿Por qué evitar plantillas?</h3>
+                <p>
+                  Porque suelen agregar peso innecesario, limitar la
+                  personalización y afectar la velocidad, la escalabilidad y el
+                  SEO técnico.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta">
+            <h2>¿Querés una web rápida y optimizada para SEO?</h2>
+
+            <p>
+              Contanos sobre tu proyecto y analizamos la mejor arquitectura para
+              desarrollar un sitio sólido, escalable y alineado con tus
+              objetivos.
+            </p>
+
+            <a class="btn primary" href="/contacto.html"> Hablar con Raven3 </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© Raven3 — Desarrollo web, e-commerce y SEO técnico.</div>
+
+        <div class="footer-links">
+          <a href="/index.html">Inicio</a>
+          <a href="/servicios.html">Servicios</a>
+          <a href="/clientes.html">Clientes</a>
+          <a href="/contacto.html">Contacto</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
