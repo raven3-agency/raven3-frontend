@@ -175,31 +175,31 @@
         --bg-soft: #071019;
         --bg-deep: #0b1622;
 
-        --panel: rgba(7, 14, 22, 0.72);
-        --panel-2: rgba(9, 17, 27, 0.9);
-        --panel-3: rgba(12, 22, 34, 0.96);
+        --panel: rgba(7, 14, 22, 0.78);
+        --panel-2: rgba(9, 17, 27, 0.92);
+        --panel-3: rgba(12, 22, 34, 0.98);
 
         --text: #f5fbff;
         --text-strong: #ffffff;
-        --muted: rgba(245, 251, 255, 0.74);
-        --muted-2: rgba(245, 251, 255, 0.52);
-        --muted-3: rgba(245, 251, 255, 0.34);
+        --muted: rgba(245, 251, 255, 0.8);
+        --muted-2: rgba(245, 251, 255, 0.6);
+        --muted-3: rgba(245, 251, 255, 0.38);
 
         --accent: #37e2d5;
         --accent-2: #7ffaf0;
         --accent-deep: #12bfb3;
-        --accent-soft: rgba(55, 226, 213, 0.08);
+        --accent-soft: rgba(55, 226, 213, 0.09);
         --accent-glow: rgba(55, 226, 213, 0.18);
-        --accent-glow-strong: rgba(55, 226, 213, 0.3);
+        --accent-glow-strong: rgba(55, 226, 213, 0.34);
 
-        --line: rgba(55, 226, 213, 0.18);
-        --line-strong: rgba(55, 226, 213, 0.34);
-        --line-soft: rgba(255, 255, 255, 0.08);
-        --line-softer: rgba(255, 255, 255, 0.05);
+        --line: rgba(55, 226, 213, 0.22);
+        --line-strong: rgba(55, 226, 213, 0.42);
+        --line-soft: rgba(255, 255, 255, 0.1);
+        --line-softer: rgba(255, 255, 255, 0.06);
 
-        --shadow-lg: 0 24px 80px rgba(0, 0, 0, 0.42);
-        --shadow-md: 0 14px 36px rgba(0, 0, 0, 0.28);
-        --shadow-sm: 0 8px 20px rgba(0, 0, 0, 0.18);
+        --shadow-lg: 0 28px 90px rgba(0, 0, 0, 0.48);
+        --shadow-md: 0 18px 44px rgba(0, 0, 0, 0.34);
+        --shadow-sm: 0 10px 26px rgba(0, 0, 0, 0.22);
 
         --radius-xl: 30px;
         --radius-lg: 22px;
@@ -227,10 +227,28 @@
           "Segoe UI",
           sans-serif;
         background:
-          radial-gradient(circle at top, rgba(55, 226, 213, 0.1), transparent 28%),
-          radial-gradient(circle at 18% 78%, rgba(55, 226, 213, 0.05), transparent 24%),
-          radial-gradient(circle at 88% 18%, rgba(127, 250, 240, 0.05), transparent 22%),
-          linear-gradient(180deg, #010409 0%, #02050a 30%, #06111a 68%, #091520 100%);
+          radial-gradient(
+            circle at top,
+            rgba(55, 226, 213, 0.12),
+            transparent 26%
+          ),
+          radial-gradient(
+            circle at 18% 78%,
+            rgba(55, 226, 213, 0.06),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 88% 18%,
+            rgba(127, 250, 240, 0.07),
+            transparent 22%
+          ),
+          linear-gradient(
+            180deg,
+            #010409 0%,
+            #02050a 24%,
+            #07111b 62%,
+            #0a1621 100%
+          );
         color: var(--text);
         line-height: 1.65;
         -webkit-font-smoothing: antialiased;
@@ -270,8 +288,8 @@
           rgba(4, 8, 14, 0.84),
           rgba(4, 8, 14, 0.7)
         );
-        border-bottom: 1px solid var(--line-softer);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
 
       .site-header .inner {
@@ -329,7 +347,12 @@
         bottom: -6px;
         width: 100%;
         height: 1px;
-        background: linear-gradient(90deg, transparent, var(--accent), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--accent),
+          transparent
+        );
         opacity: 0;
         transform: scaleX(0.75);
         transform-origin: center;
@@ -367,7 +390,11 @@
 
       .btn.primary {
         color: #041015;
-        background: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+        background: linear-gradient(
+          135deg,
+          var(--accent) 0%,
+          var(--accent-2) 100%
+        );
         border-color: transparent;
         box-shadow:
           0 10px 30px var(--accent-glow),
@@ -444,7 +471,11 @@
         border: 1px solid var(--line);
         border-radius: 999px;
         background:
-          linear-gradient(180deg, rgba(55, 226, 213, 0.08), rgba(55, 226, 213, 0.04)),
+          linear-gradient(
+            180deg,
+            rgba(55, 226, 213, 0.08),
+            rgba(55, 226, 213, 0.04)
+          ),
           rgba(255, 255, 255, 0.015);
         color: var(--accent);
         font-size: 0.8rem;
@@ -513,34 +544,6 @@
 
       .stat {
         padding: 22px;
-        border-radius: var(--radius-lg);
-        border: 1px solid var(--line-soft);
-        background:
-          linear-gradient(180deg, rgba(12, 19, 29, 0.92), rgba(8, 13, 21, 0.96));
-        box-shadow: var(--shadow-md);
-        position: relative;
-        overflow: hidden;
-      }
-
-      .stat::before {
-        content: "";
-        position: absolute;
-        inset: 0 auto auto 0;
-        width: 100%;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, rgba(55, 226, 213, 0.22), transparent);
-      }
-
-      .stat strong {
-        display: block;
-        font-size: 1.42rem;
-        margin-bottom: 6px;
-        color: var(--text-strong);
-      }
-
-      .stat span {
-        color: var(--muted);
-        font-size: 0.95rem;
       }
 
       main {
@@ -552,12 +555,17 @@
       }
 
       .section-card {
-        border: 1px solid var(--line-soft);
-        background:
-          linear-gradient(180deg, rgba(10, 18, 28, 0.95), rgba(6, 11, 18, 0.98));
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: linear-gradient(
+          180deg,
+          rgba(12, 20, 31, 0.96),
+          rgba(7, 12, 20, 0.99)
+        );
         border-radius: var(--radius-xl);
         padding: 36px;
-        box-shadow: var(--shadow-lg);
+        box-shadow:
+          var(--shadow-lg),
+          inset 0 1px 0 rgba(255, 255, 255, 0.03);
         position: relative;
         overflow: hidden;
       }
@@ -571,8 +579,20 @@
         background: linear-gradient(
           90deg,
           transparent,
-          rgba(55, 226, 213, 0.18),
+          rgba(55, 226, 213, 0.2),
           transparent
+        );
+        pointer-events: none;
+      }
+
+      .section-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(55, 226, 213, 0.045),
+          transparent 28%
         );
         pointer-events: none;
       }
@@ -580,6 +600,8 @@
       .section-head {
         max-width: 840px;
         margin-bottom: 28px;
+        position: relative;
+        z-index: 1;
       }
 
       .section-head h2 {
@@ -597,6 +619,8 @@
         display: grid;
         grid-template-columns: 1.12fr 0.88fr;
         gap: 24px;
+        position: relative;
+        z-index: 1;
       }
 
       .benefits-grid,
@@ -608,6 +632,8 @@
       .why-grid {
         display: grid;
         gap: 18px;
+        position: relative;
+        z-index: 1;
       }
 
       .benefits-grid,
@@ -629,6 +655,8 @@
         margin: 0;
         padding-left: 1.15rem;
         color: var(--muted);
+        position: relative;
+        z-index: 1;
       }
 
       .list-clean li,
@@ -645,13 +673,76 @@
       .feature-item,
       .related-card,
       .type-card,
-      .why-card {
-        border: 1px solid var(--line-soft);
+      .why-card,
+      .stat {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: var(--radius-lg);
-        background:
-          linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+        background: linear-gradient(
+          180deg,
+          rgba(18, 28, 40, 0.92),
+          rgba(10, 16, 25, 0.98)
+        );
         padding: 22px;
-        box-shadow: var(--shadow-sm);
+        box-shadow:
+          0 12px 28px rgba(0, 0, 0, 0.22),
+          inset 0 1px 0 rgba(255, 255, 255, 0.025);
+        transition:
+          transform 0.32s ease,
+          border-color 0.32s ease,
+          box-shadow 0.32s ease,
+          background 0.32s ease;
+      }
+
+      .benefit::before,
+      .process-step::before,
+      .faq-item::before,
+      .mini-card::before,
+      .feature-item::before,
+      .related-card::before,
+      .type-card::before,
+      .why-card::before,
+      .stat::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at top right,
+          rgba(55, 226, 213, 0.08),
+          transparent 34%
+        );
+        opacity: 0.7;
+        pointer-events: none;
+        transition:
+          opacity 0.32s ease,
+          transform 0.32s ease;
+        z-index: 0;
+      }
+
+      .benefit::after,
+      .process-step::after,
+      .faq-item::after,
+      .mini-card::after,
+      .feature-item::after,
+      .related-card::after,
+      .type-card::after,
+      .why-card::after,
+      .stat::after {
+        content: "";
+        position: absolute;
+        inset: 0 auto auto 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(55, 226, 213, 0.18),
+          transparent
+        );
+        pointer-events: none;
+        z-index: 0;
       }
 
       .benefit:hover,
@@ -661,11 +752,45 @@
       .feature-item:hover,
       .related-card:hover,
       .type-card:hover,
-      .why-card:hover {
-        border-color: rgba(55, 226, 213, 0.18);
-        background:
-          linear-gradient(180deg, rgba(55, 226, 213, 0.03), rgba(255, 255, 255, 0.015));
-        transform: translateY(-2px);
+      .why-card:hover,
+      .stat:hover {
+        transform: translateY(-6px);
+        border-color: rgba(55, 226, 213, 0.34);
+        background: linear-gradient(
+          180deg,
+          rgba(20, 33, 46, 0.96),
+          rgba(11, 18, 28, 0.99)
+        );
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.3),
+          0 0 0 1px rgba(55, 226, 213, 0.05),
+          0 0 32px rgba(55, 226, 213, 0.08);
+      }
+
+      .benefit:hover::before,
+      .process-step:hover::before,
+      .faq-item:hover::before,
+      .mini-card:hover::before,
+      .feature-item:hover::before,
+      .related-card:hover::before,
+      .type-card:hover::before,
+      .why-card:hover::before,
+      .stat:hover::before {
+        opacity: 1;
+        transform: scale(1.04);
+      }
+
+      .benefit > *,
+      .process-step > *,
+      .faq-item > *,
+      .mini-card > *,
+      .feature-item > *,
+      .related-card > *,
+      .type-card > *,
+      .why-card > *,
+      .stat > * {
+        position: relative;
+        z-index: 1;
       }
 
       .benefit h3,
@@ -678,7 +803,35 @@
       .why-card h3 {
         font-size: 1.14rem;
         margin-bottom: 10px;
-        color: var(--text-strong);
+        color: #ffffff;
+        position: relative;
+        padding-left: 14px;
+      }
+
+      .benefit h3::before,
+      .process-step h3::before,
+      .faq-item h3::before,
+      .mini-card h3::before,
+      .feature-item h3::before,
+      .related-card h3::before,
+      .type-card h3::before,
+      .why-card h3::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.28em;
+        width: 6px;
+        height: 6px;
+        border-radius: 999px;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        box-shadow: 0 0 14px rgba(55, 226, 213, 0.4);
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.42rem;
+        margin-bottom: 6px;
+        color: #ffffff;
       }
 
       .benefit p,
@@ -688,9 +841,10 @@
       .feature-item p,
       .related-card p,
       .type-card p,
-      .why-card p {
+      .why-card p,
+      .stat span {
         margin: 0;
-        color: var(--muted);
+        color: rgba(245, 251, 255, 0.78);
       }
 
       .step-index {
@@ -712,26 +866,36 @@
       .inline-link {
         color: var(--text);
         text-decoration: underline;
-        text-decoration-color: rgba(55, 226, 213, 0.28);
+        text-decoration-color: rgba(55, 226, 213, 0.24);
         text-underline-offset: 4px;
+        transition:
+          color 0.22s ease,
+          text-decoration-color 0.22s ease,
+          opacity 0.22s ease;
       }
 
+      .related-card:hover a,
       .projects-list a:hover,
-      .related-card a:hover,
       .inline-link:hover {
-        color: var(--text-strong);
+        color: #ffffff;
         text-decoration-color: var(--accent);
       }
 
       .cta {
         text-align: center;
         padding: 62px 24px;
-        border: 1px solid var(--line);
+        border: 1px solid rgba(55, 226, 213, 0.2);
         border-radius: var(--radius-xl);
         background:
-          radial-gradient(circle at top, rgba(55, 226, 213, 0.1), transparent 52%),
-          linear-gradient(180deg, rgba(8, 14, 24, 0.98), rgba(5, 10, 17, 0.98));
-        box-shadow: var(--shadow-lg);
+          radial-gradient(
+            circle at top,
+            rgba(55, 226, 213, 0.16),
+            transparent 52%
+          ),
+          linear-gradient(180deg, rgba(10, 18, 29, 0.98), rgba(5, 10, 17, 0.99));
+        box-shadow:
+          0 28px 80px rgba(0, 0, 0, 0.4),
+          0 0 50px rgba(55, 226, 213, 0.07);
         position: relative;
         overflow: hidden;
       }
@@ -743,18 +907,44 @@
         width: 360px;
         height: 1px;
         transform: translateX(-50%);
-        background: linear-gradient(90deg, transparent, rgba(55, 226, 213, 0.3), transparent);
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(55, 226, 213, 0.3),
+          transparent
+        );
+      }
+
+      .cta::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          circle at 50% 0%,
+          rgba(127, 250, 240, 0.06),
+          transparent 36%
+        );
+        pointer-events: none;
       }
 
       .cta h2 {
         font-size: clamp(2.1rem, 4vw, 3.3rem);
         margin-bottom: 14px;
+        position: relative;
+        z-index: 1;
       }
 
       .cta p {
         max-width: 760px;
         margin: 0 auto 24px;
         color: var(--muted);
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta .btn {
+        position: relative;
+        z-index: 1;
       }
 
       .site-footer {
@@ -835,16 +1025,33 @@
           width: 100%;
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          animation: none !important;
+          transition: none !important;
+        }
+      }
     </style>
   </head>
 
   <body>
     <header class="site-header">
       <div class="container inner">
-        <a class="brand" href="/index.html" aria-label="Ir al inicio de Raven3">
-          <span class="brand-mark" aria-hidden="true"></span>
-          <span>Raven3</span>
-        </a>
+        <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
+          ><img
+            src="../assets/img/logo.png"
+            alt="logo de raven3"
+            class="img-fluid"
+            width="100"
+            height="40"
+        /></a>
 
         <nav class="nav" aria-label="Navegación principal">
           <a href="/index.html">Inicio</a>
@@ -857,7 +1064,7 @@
       </div>
     </header>
 
-    <div class="breadcrumbs">
+    <!-- <div class="breadcrumbs">
       <div class="container">
         <nav aria-label="Breadcrumb">
           <ol>
@@ -869,29 +1076,27 @@
           </ol>
         </nav>
       </div>
-    </div>
+    </div> -->
 
     <main>
       <section class="hero">
         <div class="container">
-          <div class="eyebrow">Raven3 · Tiendas Online</div>
+          <div class="eyebrow">Servicio · Tiendas Online</div>
 
           <h1>Tiendas online en Argentina pensadas para vender mejor</h1>
 
           <p class="hero-copy">
-            En Raven3 desarrollamos e-commerce con foco en conversión, estructura,
-            experiencia de compra, performance y escalabilidad. Creamos tiendas
-            online preparadas para crecer, posicionar y sostener una operación más
-            profesional.
+            En Raven3 desarrollamos e-commerce con foco en conversión,
+            estructura, experiencia de compra, performance y escalabilidad.
+            Creamos tiendas online preparadas para crecer, posicionar y sostener
+            una operación más profesional.
           </p>
 
           <div class="hero-actions">
             <a class="btn primary" href="/contacto.html">
               Solicitar asesoramiento
             </a>
-            <a class="btn" href="/clientes.html">
-              Ver proyectos
-            </a>
+            <a class="btn" href="/clientes.html"> Ver proyectos </a>
           </div>
 
           <div class="quick-nav" aria-label="Accesos rápidos">
@@ -905,15 +1110,22 @@
           <div class="hero-stats" aria-label="Puntos clave del servicio">
             <div class="stat">
               <strong>Conversión</strong>
-              <span>Diseño y estructura pensados para facilitar la compra.</span>
+              <span
+                >Diseño y estructura pensados para facilitar la compra.</span
+              >
             </div>
             <div class="stat">
               <strong>Performance</strong>
-              <span>Tiendas más rápidas, ordenadas y agradables de navegar.</span>
+              <span
+                >Tiendas más rápidas, ordenadas y agradables de navegar.</span
+              >
             </div>
             <div class="stat">
               <strong>Escalabilidad</strong>
-              <span>Base técnica preparada para crecer en catálogo y operación.</span>
+              <span
+                >Base técnica preparada para crecer en catálogo y
+                operación.</span
+              >
             </div>
           </div>
         </div>
@@ -926,8 +1138,9 @@
               <h2>¿Por qué muchas tiendas online no venden lo que podrían?</h2>
               <p>
                 Porque no alcanza con “tener e-commerce”. Una tienda puede estar
-                publicada y aun así perder ventas por una mala experiencia de compra,
-                una estructura confusa, poca confianza visual o una base técnica débil.
+                publicada y aun así perder ventas por una mala experiencia de
+                compra, una estructura confusa, poca confianza visual o una base
+                técnica débil.
               </p>
             </div>
 
@@ -946,8 +1159,9 @@
                 <h3>El problema real</h3>
                 <p>
                   Una tienda online tiene que ayudar a vender. Si la experiencia
-                  genera dudas, fricción o cansancio, el usuario abandona. Por eso
-                  diseño, estructura, velocidad y confianza visual importan tanto.
+                  genera dudas, fricción o cansancio, el usuario abandona. Por
+                  eso diseño, estructura, velocidad y confianza visual importan
+                  tanto.
                 </p>
               </aside>
             </div>
@@ -959,12 +1173,14 @@
         <div class="container">
           <div class="section-card">
             <div class="section-head">
-              <h2>La solución: e-commerce pensado como herramienta comercial</h2>
+              <h2>
+                La solución: e-commerce pensado como herramienta comercial
+              </h2>
               <p>
                 En Raven3 desarrollamos tiendas online buscando equilibrio entre
-                diseño, performance, arquitectura y objetivos de negocio. La idea no
-                es sólo publicar productos, sino construir una experiencia que ayude
-                a vender mejor.
+                diseño, performance, arquitectura y objetivos de negocio. La
+                idea no es sólo publicar productos, sino construir una
+                experiencia que ayude a vender mejor.
               </p>
             </div>
 
@@ -972,16 +1188,18 @@
               <div>
                 <p class="lead">
                   Una buena tienda online ordena el catálogo, comunica valor,
-                  transmite confianza, facilita el recorrido del usuario y deja una
-                  base preparada para escalar en tráfico, productos y operación.
+                  transmite confianza, facilita el recorrido del usuario y deja
+                  una base preparada para escalar en tráfico, productos y
+                  operación.
                 </p>
               </div>
 
               <aside class="mini-card">
                 <h3>Ideal para</h3>
                 <p>
-                  Marcas, negocios y emprendimientos que quieren vender online con
-                  una tienda más profesional, más clara y mejor preparada para crecer.
+                  Marcas, negocios y emprendimientos que quieren vender online
+                  con una tienda más profesional, más clara y mejor preparada
+                  para crecer.
                 </p>
               </aside>
             </div>
@@ -996,7 +1214,8 @@
               <h2>Beneficios de una tienda online bien desarrollada</h2>
               <p>
                 Un e-commerce sólido mejora experiencia, ordena la operación y
-                aumenta la capacidad del negocio para vender más y sostener crecimiento.
+                aumenta la capacidad del negocio para vender más y sostener
+                crecimiento.
               </p>
             </div>
 
@@ -1004,16 +1223,17 @@
               <article class="benefit">
                 <h3>Mejor experiencia de compra</h3>
                 <p>
-                  Navegación clara, estructura simple y recorrido más cómodo para que
-                  el usuario llegue al producto y complete la compra con menos fricción.
+                  Navegación clara, estructura simple y recorrido más cómodo
+                  para que el usuario llegue al producto y complete la compra
+                  con menos fricción.
                 </p>
               </article>
 
               <article class="benefit">
                 <h3>Más confianza visual</h3>
                 <p>
-                  Una tienda bien resuelta transmite seriedad, orden y valor de marca,
-                  algo clave para mejorar respuesta comercial.
+                  Una tienda bien resuelta transmite seriedad, orden y valor de
+                  marca, algo clave para mejorar respuesta comercial.
                 </p>
               </article>
 
@@ -1043,9 +1263,9 @@
             <div class="section-head">
               <h2>¿Por qué trabajar tu tienda online con Raven3?</h2>
               <p>
-                Porque no vemos el e-commerce como una plantilla cargada de productos,
-                sino como una experiencia digital donde estructura, conversión,
-                velocidad y marca tienen que trabajar juntas.
+                Porque no vemos el e-commerce como una plantilla cargada de
+                productos, sino como una experiencia digital donde estructura,
+                conversión, velocidad y marca tienen que trabajar juntas.
               </p>
             </div>
 
@@ -1053,32 +1273,32 @@
               <article class="why-card">
                 <h3>Enfoque orientado a conversión</h3>
                 <p>
-                  Diseñamos recorridos más claros para ayudar a que el usuario entienda,
-                  confíe y avance hacia la compra.
+                  Diseñamos recorridos más claros para ayudar a que el usuario
+                  entienda, confíe y avance hacia la compra.
                 </p>
               </article>
 
               <article class="why-card">
                 <h3>Performance-first</h3>
                 <p>
-                  La velocidad y la experiencia mobile forman parte de la calidad
-                  general del e-commerce y del rendimiento comercial.
+                  La velocidad y la experiencia mobile forman parte de la
+                  calidad general del e-commerce y del rendimiento comercial.
                 </p>
               </article>
 
               <article class="why-card">
                 <h3>Estructura clara para crecer</h3>
                 <p>
-                  Ordenamos categorías, productos, contenido y jerarquía para que la
-                  tienda sea más fácil de usar y más fácil de expandir.
+                  Ordenamos categorías, productos, contenido y jerarquía para
+                  que la tienda sea más fácil de usar y más fácil de expandir.
                 </p>
               </article>
 
               <article class="why-card">
                 <h3>Visión técnica y comercial</h3>
                 <p>
-                  Cruzamos diseño, tecnología, SEO técnico y experiencia de compra
-                  para construir una solución más completa.
+                  Cruzamos diseño, tecnología, SEO técnico y experiencia de
+                  compra para construir una solución más completa.
                 </p>
               </article>
             </div>
@@ -1092,8 +1312,9 @@
             <div class="section-head">
               <h2>Qué tipo de tiendas online desarrollamos</h2>
               <p>
-                El enfoque puede adaptarse según el negocio, el catálogo, la complejidad
-                operativa y el nivel de personalización que necesite el proyecto.
+                El enfoque puede adaptarse según el negocio, el catálogo, la
+                complejidad operativa y el nivel de personalización que necesite
+                el proyecto.
               </p>
             </div>
 
@@ -1101,32 +1322,33 @@
               <article class="type-card">
                 <h3>Tiendas de marca</h3>
                 <p>
-                  Para negocios que necesitan una experiencia cuidada, visualmente
-                  sólida y alineada con la identidad del producto.
+                  Para negocios que necesitan una experiencia cuidada,
+                  visualmente sólida y alineada con la identidad del producto.
                 </p>
               </article>
 
               <article class="type-card">
                 <h3>Catálogos con venta online</h3>
                 <p>
-                  E-commerce donde la organización del catálogo, filtros, categorías
-                  y fichas de producto tienen un rol central.
+                  E-commerce donde la organización del catálogo, filtros,
+                  categorías y fichas de producto tienen un rol central.
                 </p>
               </article>
 
               <article class="type-card">
                 <h3>Tiendas en crecimiento</h3>
                 <p>
-                  Proyectos que necesitan una base preparada para sumar productos,
-                  campañas, contenido, automatizaciones o integraciones.
+                  Proyectos que necesitan una base preparada para sumar
+                  productos, campañas, contenido, automatizaciones o
+                  integraciones.
                 </p>
               </article>
 
               <article class="type-card">
                 <h3>E-commerce con foco en performance</h3>
                 <p>
-                  Tiendas donde la velocidad, la estructura y el comportamiento en
-                  mobile impactan directamente en negocio.
+                  Tiendas donde la velocidad, la estructura y el comportamiento
+                  en mobile impactan directamente en negocio.
                 </p>
               </article>
             </div>
@@ -1140,9 +1362,9 @@
             <div class="section-head">
               <h2>Qué puede incluir una tienda online bien resuelta</h2>
               <p>
-                El alcance depende del proyecto, pero una buena tienda online suele
-                necesitar una combinación inteligente de estructura, UX, contenido y
-                base técnica.
+                El alcance depende del proyecto, pero una buena tienda online
+                suele necesitar una combinación inteligente de estructura, UX,
+                contenido y base técnica.
               </p>
             </div>
 
@@ -1150,24 +1372,24 @@
               <article class="feature-item">
                 <h3>Home comercial clara</h3>
                 <p>
-                  Portada orientada a comunicar valor, destacar categorías y facilitar
-                  el ingreso al catálogo.
+                  Portada orientada a comunicar valor, destacar categorías y
+                  facilitar el ingreso al catálogo.
                 </p>
               </article>
 
               <article class="feature-item">
                 <h3>Categorías y navegación ordenadas</h3>
                 <p>
-                  Arquitectura clara para que el usuario encuentre rápido lo que busca
-                  y la tienda escale mejor.
+                  Arquitectura clara para que el usuario encuentre rápido lo que
+                  busca y la tienda escale mejor.
                 </p>
               </article>
 
               <article class="feature-item">
                 <h3>Fichas de producto sólidas</h3>
                 <p>
-                  Información clara, imágenes bien presentadas y una estructura que
-                  ayude a entender el producto y reducir dudas.
+                  Información clara, imágenes bien presentadas y una estructura
+                  que ayude a entender el producto y reducir dudas.
                 </p>
               </article>
 
@@ -1218,7 +1440,9 @@
                   <li>Optimización de carga, imágenes y recursos.</li>
                   <li>Base SEO técnica para categorías y fichas.</li>
                   <li>Jerarquía de contenido y navegación intuitiva.</li>
-                  <li>Escalabilidad para campañas, catálogo e integraciones.</li>
+                  <li>
+                    Escalabilidad para campañas, catálogo e integraciones.
+                  </li>
                   <li>Consistencia visual para transmitir confianza.</li>
                 </ul>
               </div>
@@ -1227,8 +1451,8 @@
                 <h3>Una tienda online vende mejor cuando está bien pensada</h3>
                 <p>
                   La experiencia de compra no depende sólo del producto. También
-                  influyen la estructura, la claridad, la velocidad y la confianza
-                  que transmite todo el sistema.
+                  influyen la estructura, la claridad, la velocidad y la
+                  confianza que transmite todo el sistema.
                 </p>
               </aside>
             </div>
@@ -1242,8 +1466,8 @@
             <div class="section-head">
               <h2>Nuestro proceso de trabajo</h2>
               <p>
-                Construimos tiendas online con una metodología clara para alinear
-                negocio, experiencia de compra y ejecución técnica.
+                Construimos tiendas online con una metodología clara para
+                alinear negocio, experiencia de compra y ejecución técnica.
               </p>
             </div>
 
@@ -1252,8 +1476,8 @@
                 <div class="step-index">1</div>
                 <h3>Análisis del negocio</h3>
                 <p>
-                  Entendemos el tipo de producto, la audiencia, el catálogo y los
-                  objetivos comerciales del proyecto.
+                  Entendemos el tipo de producto, la audiencia, el catálogo y
+                  los objetivos comerciales del proyecto.
                 </p>
               </article>
 
@@ -1261,8 +1485,8 @@
                 <div class="step-index">2</div>
                 <h3>Arquitectura y UX</h3>
                 <p>
-                  Ordenamos categorías, jerarquía, recorridos y puntos de contacto
-                  para construir una experiencia de compra clara.
+                  Ordenamos categorías, jerarquía, recorridos y puntos de
+                  contacto para construir una experiencia de compra clara.
                 </p>
               </article>
 
@@ -1270,8 +1494,8 @@
                 <div class="step-index">3</div>
                 <h3>Desarrollo e implementación</h3>
                 <p>
-                  Trabajamos la tienda con foco en performance, estructura, diseño,
-                  responsive y base técnica sólida.
+                  Trabajamos la tienda con foco en performance, estructura,
+                  diseño, responsive y base técnica sólida.
                 </p>
               </article>
 
@@ -1279,8 +1503,8 @@
                 <div class="step-index">4</div>
                 <h3>Optimización y lanzamiento</h3>
                 <p>
-                  Validamos funcionamiento, experiencia, claridad comercial y puntos
-                  técnicos clave antes de publicar.
+                  Validamos funcionamiento, experiencia, claridad comercial y
+                  puntos técnicos clave antes de publicar.
                 </p>
               </article>
             </div>
@@ -1294,18 +1518,24 @@
             <div class="section-head">
               <h2>Cómo se relaciona una tienda online con SEO y performance</h2>
               <p>
-                En e-commerce, la estructura del sitio impacta de lleno en cómo se
-                descubren productos, cómo navega el usuario y cómo escala la tienda
-                en orgánico.
+                En e-commerce, la estructura del sitio impacta de lleno en cómo
+                se descubren productos, cómo navega el usuario y cómo escala la
+                tienda en orgánico.
               </p>
             </div>
 
             <div class="grid-2">
               <div>
                 <ul class="seo-list">
-                  <li>Categorías mejor estructuradas pueden ordenar el catálogo.</li>
-                  <li>Fichas de producto claras ayudan a posicionar y convertir.</li>
-                  <li>La velocidad influye en UX, abandono y calidad general.</li>
+                  <li>
+                    Categorías mejor estructuradas pueden ordenar el catálogo.
+                  </li>
+                  <li>
+                    Fichas de producto claras ayudan a posicionar y convertir.
+                  </li>
+                  <li>
+                    La velocidad influye en UX, abandono y calidad general.
+                  </li>
                   <li>Una arquitectura limpia facilita el enlazado interno.</li>
                   <li>La base técnica prepara mejor la tienda para crecer.</li>
                 </ul>
@@ -1315,14 +1545,15 @@
                 <h3>E-commerce y SEO técnico van juntos</h3>
                 <p>
                   Una tienda online no sólo necesita diseño y checkout. También
-                  necesita una estructura sólida para que el catálogo, las páginas y
-                  las categorías funcionen mejor frente a Google y frente al usuario.
+                  necesita una estructura sólida para que el catálogo, las
+                  páginas y las categorías funcionen mejor frente a Google y
+                  frente al usuario.
                 </p>
                 <p style="margin-top: 12px">
                   También podés ver nuestro servicio de
                   <a class="inline-link" href="/servicios/seo-tecnico.html">
-                    SEO Técnico
-                  </a>.
+                    SEO Técnico </a
+                  >.
                 </p>
               </aside>
             </div>
@@ -1334,10 +1565,12 @@
         <div class="container">
           <div class="section-card">
             <div class="section-head">
-              <h2>Proyectos donde una tienda online bien armada hace diferencia</h2>
+              <h2>
+                Proyectos donde una tienda online bien armada hace diferencia
+              </h2>
               <p>
-                El impacto es mayor cuando el negocio necesita vender con una base
-                más profesional, más clara y más preparada para crecer.
+                El impacto es mayor cuando el negocio necesita vender con una
+                base más profesional, más clara y más preparada para crecer.
               </p>
             </div>
 
@@ -1356,8 +1589,8 @@
             <div class="section-head">
               <h2>Preguntas frecuentes sobre tiendas online</h2>
               <p>
-                Algunas dudas comunes sobre desarrollo de e-commerce, estructura y
-                capacidad de crecimiento.
+                Algunas dudas comunes sobre desarrollo de e-commerce, estructura
+                y capacidad de crecimiento.
               </p>
             </div>
 
@@ -1366,31 +1599,32 @@
                 <h3>¿Qué necesita una buena tienda online?</h3>
                 <p>
                   Necesita una estructura clara, experiencia de compra simple,
-                  velocidad, confianza visual y una base técnica preparada para crecer.
+                  velocidad, confianza visual y una base técnica preparada para
+                  crecer.
                 </p>
               </article>
 
               <article class="faq-item">
                 <h3>¿Conviene hacer una tienda online a medida?</h3>
                 <p>
-                  Depende del caso, pero una solución bien implementada permite más
-                  control sobre UX, performance, SEO e integraciones.
+                  Depende del caso, pero una solución bien implementada permite
+                  más control sobre UX, performance, SEO e integraciones.
                 </p>
               </article>
 
               <article class="faq-item">
                 <h3>¿Una tienda online puede posicionar en Google?</h3>
                 <p>
-                  Sí. Puede mejorar su posicionamiento trabajando categorías, fichas
-                  de producto, arquitectura, performance y SEO técnico.
+                  Sí. Puede mejorar su posicionamiento trabajando categorías,
+                  fichas de producto, arquitectura, performance y SEO técnico.
                 </p>
               </article>
 
               <article class="faq-item">
                 <h3>¿Raven3 trabaja e-commerce con foco en performance?</h3>
                 <p>
-                  Sí. Nuestro enfoque combina estructura comercial, experiencia de
-                  compra y una base técnica más sólida para vender mejor.
+                  Sí. Nuestro enfoque combina estructura comercial, experiencia
+                  de compra y una base técnica más sólida para vender mejor.
                 </p>
               </article>
             </div>
@@ -1404,8 +1638,9 @@
             <div class="section-head">
               <h2>Servicios relacionados</h2>
               <p>
-                Según el proyecto, una tienda online puede complementarse con una
-                mejor base SEO o con desarrollo custom para escalar más fuerte.
+                Según el proyecto, una tienda online puede complementarse con
+                una mejor base SEO o con desarrollo custom para escalar más
+                fuerte.
               </p>
             </div>
 
@@ -1417,8 +1652,8 @@
                   </a>
                 </h3>
                 <p>
-                  Para proyectos que necesitan una arquitectura más custom, rápida y
-                  flexible según los objetivos del negocio.
+                  Para proyectos que necesitan una arquitectura más custom,
+                  rápida y flexible según los objetivos del negocio.
                 </p>
               </article>
 
@@ -1437,8 +1672,8 @@
                   <a href="/clientes.html">Ver proyectos</a>
                 </h3>
                 <p>
-                  Casos y trabajos donde experiencia, estructura y performance hacen
-                  una diferencia concreta.
+                  Casos y trabajos donde experiencia, estructura y performance
+                  hacen una diferencia concreta.
                 </p>
               </article>
             </div>
@@ -1449,16 +1684,17 @@
       <section class="section" id="cta-final">
         <div class="container">
           <div class="cta">
-            <h2>¿Querés una tienda online más sólida y preparada para vender?</h2>
+            <h2>
+              ¿Querés una tienda online más sólida y preparada para vender?
+            </h2>
 
             <p>
-              Contanos sobre tu negocio y analizamos la mejor forma de estructurar un
-              e-commerce con foco en experiencia de compra, performance, SEO y crecimiento.
+              Contanos sobre tu negocio y analizamos la mejor forma de
+              estructurar un e-commerce con foco en experiencia de compra,
+              performance, SEO y crecimiento.
             </p>
 
-            <a class="btn primary" href="/contacto.html">
-              Hablar con Raven3
-            </a>
+            <a class="btn primary" href="/contacto.html"> Hablar con Raven3 </a>
           </div>
         </div>
       </section>
@@ -1476,5 +1712,27 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      (() => {
+        const cards = document.querySelectorAll(
+          ".benefit, .process-step, .faq-item, .mini-card, .feature-item, .related-card, .type-card, .why-card",
+        );
+
+        cards.forEach((card) => {
+          const glow = document.createElement("span");
+          glow.className = "card-glow";
+          card.appendChild(glow);
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty("--mx", `${x}px`);
+            card.style.setProperty("--my", `${y}px`);
+          });
+        });
+      })();
+    </script>
   </body>
 </html>
