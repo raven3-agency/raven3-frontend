@@ -832,6 +832,27 @@
         z-index: 1;
       }
 
+      .quick-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .quick-nav a {
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid var(--line-soft);
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      .quick-nav a:hover {
+        color: var(--text);
+        border-color: var(--line);
+      }
+
       .site-footer {
         padding: 34px 0 56px;
         color: var(--muted-2);
@@ -964,6 +985,14 @@
             <a class="btn" href="/clientes.html"> Ver proyectos </a>
           </div>
 
+          <div class="quick-nav" aria-label="Accesos rápidos">
+            <a href="#beneficios">Beneficios</a>
+            <a href="#tecnologias">Tecnologías</a>
+            <a href="#proceso">Proceso</a>
+            <a href="#faq">FAQ</a>
+            <a href="#proyectos">Proyectos</a>
+          </div>
+
           <div class="hero-stats" aria-label="Puntos clave del servicio">
             <div class="stat">
               <strong>SEO técnico</strong>
@@ -989,7 +1018,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="problema">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1026,7 +1055,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="solucion">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1063,7 +1092,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="beneficios">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1112,7 +1141,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="tecnologias">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1148,7 +1177,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="proceso">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1200,7 +1229,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="proyectos">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1220,7 +1249,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="faq">
         <div class="container">
           <div class="section-card">
             <div class="section-head">
@@ -1262,7 +1291,7 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section" id="cta-final">
         <div class="container">
           <div class="cta">
             <h2>¿Querés una web rápida y optimizada para SEO?</h2>
