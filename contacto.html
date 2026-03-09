@@ -51,6 +51,35 @@
       content="https://raven3.com.ar/assets/og/og-raven3.jpg"
     />
 
+    <!-- Favicons (completo como la ex index) -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -835,6 +864,11 @@
           background-color 0.22s ease;
       }
 
+      .contact-form input::placeholder,
+      .contact-form textarea::placeholder {
+        color: rgba(245, 251, 255, 0.32);
+      }
+
       .contact-form input:focus,
       .contact-form select:focus,
       .contact-form textarea:focus {
@@ -851,6 +885,37 @@
         font-size: 0.95rem;
         color: var(--muted);
         margin-top: 2px;
+      }
+
+      .form-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        margin-top: 8px;
+      }
+
+      .form-footer .btn {
+        min-width: 220px;
+      }
+
+      .form-status {
+        min-height: 20px;
+        font-size: 0.9rem;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      .recaptcha-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .recaptcha-wrapper .g-recaptcha {
+        display: inline-block;
       }
 
       .inline-link {
@@ -876,11 +941,7 @@
             rgba(55, 226, 213, 0.16),
             transparent 52%
           ),
-          linear-gradient(
-            180deg,
-            rgba(10, 18, 29, 0.98),
-            rgba(5, 10, 17, 0.99)
-          );
+          linear-gradient(180deg, rgba(10, 18, 29, 0.98), rgba(5, 10, 17, 0.99));
         box-shadow:
           0 28px 80px rgba(0, 0, 0, 0.4),
           0 0 50px rgba(55, 226, 213, 0.07);
@@ -1064,13 +1125,15 @@
           <h1>Hablemos sobre tu próximo proyecto digital</h1>
 
           <p class="hero-copy">
-            Si necesitás una web a medida, una tienda online mejor resuelta o una
-            base técnica más sólida para posicionar y escalar, contanos tu caso.
-            Analizamos el proyecto y te proponemos el mejor enfoque.
+            Si necesitás una web a medida, una tienda online mejor resuelta o
+            una base técnica más sólida para posicionar y escalar, contanos tu
+            caso. Analizamos el proyecto y te proponemos el mejor enfoque.
           </p>
 
           <div class="hero-actions">
-            <a class="btn primary" href="#formulario">Quiero pedir presupuesto</a>
+            <a class="btn primary" href="#formulario"
+              >Quiero pedir presupuesto</a
+            >
             <a class="btn" href="mailto:hola@raven3.com.ar">Enviar email</a>
           </div>
 
@@ -1084,7 +1147,9 @@
           <div class="hero-stats" aria-label="Puntos clave de contacto">
             <div class="stat">
               <strong>Enfoque consultivo</strong>
-              <span>Entendemos el proyecto antes de proponer arquitectura.</span>
+              <span
+                >Entendemos el proyecto antes de proponer arquitectura.</span
+              >
             </div>
             <div class="stat">
               <strong>Foco en performance</strong>
@@ -1104,9 +1169,9 @@
             <div class="section-head">
               <h2>Contanos qué necesitás y te respondemos con criterio</h2>
               <p>
-                Cuanto más contexto tengamos, mejor vamos a poder orientarte.
-                No hace falta que tengas todo definido: también podemos ayudarte
-                a ordenar alcance, prioridades y próxima etapa.
+                Cuanto más contexto tengamos, mejor vamos a poder orientarte. No
+                hace falta que tengas todo definido: también podemos ayudarte a
+                ordenar alcance, prioridades y próxima etapa.
               </p>
             </div>
 
@@ -1120,8 +1185,9 @@
 
                 <form
                   class="contact-form"
-                  action="https://formspree.io/f/TU_ENDPOINT"
+                  action="https://formspree.io/f/mvoykeyq"
                   method="POST"
+                  id="contactForm"
                 >
                   <div class="form-grid">
                     <div class="form-group">
@@ -1184,12 +1250,8 @@
                         <option value="menos-de-1000-usd">
                           Menos de USD 1.000
                         </option>
-                        <option value="1000-2500-usd">
-                          USD 1.000 – 2.500
-                        </option>
-                        <option value="2500-5000-usd">
-                          USD 2.500 – 5.000
-                        </option>
+                        <option value="1000-2500-usd">USD 1.000 – 2.500</option>
+                        <option value="2500-5000-usd">USD 2.500 – 5.000</option>
                         <option value="mas-de-5000-usd">
                           Más de USD 5.000
                         </option>
@@ -1223,10 +1285,20 @@
                     name="_subject"
                     value="Nueva consulta desde contacto Raven3"
                   />
+                  <input type="hidden" name="form_source" value="contacto" />
 
                   <button class="btn primary" type="submit">
                     Enviar consulta
                   </button>
+                  <span class="form-status" id="formStatus"></span>
+
+                  <div class="recaptcha-wrapper">
+                    <div
+                      class="g-recaptcha"
+                      data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq"
+                      data-theme="dark"
+                    ></div>
+                  </div>
                 </form>
               </div>
 
@@ -1354,7 +1426,8 @@
                 </h3>
                 <p>
                   E-commerce orientado a conversión, claridad de catálogo,
-                  experiencia de compra y estructura técnica preparada para crecer.
+                  experiencia de compra y estructura técnica preparada para
+                  crecer.
                 </p>
               </article>
 
@@ -1434,12 +1507,16 @@
       <section class="section" id="cta-final">
         <div class="container">
           <div class="cta">
-            <h2>¿Tenés un proyecto, una idea o una web que necesita mejorar?</h2>
+            <h2>
+              ¿Tenés un proyecto, una idea o una web que necesita mejorar?
+            </h2>
             <p>
               Escribinos y analizamos la mejor forma de construir una base más
               sólida para tu sitio, tu tienda online o tu estrategia técnica.
             </p>
-            <a class="btn primary" href="#formulario">Quiero hablar con Raven3</a>
+            <a class="btn primary" href="#formulario"
+              >Quiero hablar con Raven3</a
+            >
           </div>
         </div>
       </section>
@@ -1461,7 +1538,7 @@
     <script>
       (() => {
         const cards = document.querySelectorAll(
-          ".info-card, .faq-item, .service-card, .stat"
+          ".info-card, .faq-item, .service-card, .stat",
         );
 
         cards.forEach((card) => {
@@ -1478,6 +1555,38 @@
           });
         });
       })();
+    </script>
+
+    <script>
+      let recaptchaLoaded = false;
+
+      function loadRecaptcha() {
+        if (recaptchaLoaded) return;
+        recaptchaLoaded = true;
+
+        const s = document.createElement("script");
+        s.src = "https://www.google.com/recaptcha/api.js";
+        s.async = true;
+        s.defer = true;
+        document.head.appendChild(s);
+      }
+
+      const formEl = document.getElementById("contactForm");
+
+      if (formEl) {
+        // cargar cuando interactúan
+        formEl.addEventListener("focusin", loadRecaptcha, { once: true });
+
+        // cargar cuando aparece en viewport
+        const io = new IntersectionObserver(
+          (entries) => {
+            if (entries.some((e) => e.isIntersecting)) loadRecaptcha();
+          },
+          { rootMargin: "200px" },
+        );
+
+        io.observe(formEl);
+      }
     </script>
   </body>
 </html>
