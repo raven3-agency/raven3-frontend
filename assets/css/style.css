@@ -102,13 +102,8 @@ body {
   height: 72px;
   display: flex;
   align-items: center;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: linear-gradient(
-    180deg,
-    rgba(5, 8, 14, 0.78),
-    rgba(5, 8, 14, 0.52)
-  );
+  backdrop-filter: blur(1px);
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
