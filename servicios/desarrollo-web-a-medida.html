@@ -234,8 +234,13 @@
         position: sticky;
         top: 0;
         z-index: 50;
-        backdrop-filter: blur(1px);
-        background: transparent;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(10px);
+        background: linear-gradient(
+          180deg,
+          rgba(5, 8, 14, 0.78),
+          rgba(5, 8, 14, 0.52)
+        );
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.14);
         border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       }
