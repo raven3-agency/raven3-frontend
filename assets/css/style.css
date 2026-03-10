@@ -927,6 +927,21 @@ section {
 /* =========================
    FOOTER
 ========================= */
+.footer-legal {
+  margin-left: 8px;
+  opacity: 0.8;
+}
+
+.footer-legal a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.25s ease;
+}
+
+.footer-legal a:hover {
+  opacity: 1;
+}
 
 footer {
   padding: 6rem 2rem;
