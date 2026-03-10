@@ -273,7 +273,8 @@
         text-transform: uppercase;
         letter-spacing: 0.06em;
       }
-      .legal-section a {
+      
+      .legal-link {
         color: var(--accent);
         text-decoration: none;
         border-bottom: 1px solid rgba(55, 226, 213, 0.32);
@@ -283,12 +284,12 @@
           opacity 0.25s ease;
       }
 
-      .legal-section a:hover {
+      .legal-link:hover {
         color: var(--accent-2);
         border-bottom-color: rgba(127, 250, 240, 0.72);
       }
 
-      .legal-section a:focus-visible {
+      .legal-link:focus-visible {
         outline: 2px solid rgba(55, 226, 213, 0.5);
         outline-offset: 3px;
         border-bottom-color: transparent;
@@ -817,7 +818,9 @@
               <h2>Contacto</h2>
               <p>
                 Para consultas relacionadas con estos términos, podés escribir a
-                <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>.
+                <a href="mailto:hola@raven3.com.ar" class="legal-link"
+                  >hola@raven3.com.ar</a
+                >.
               </p>
               <div class="legal-actions">
                 <a class="btn primary" href="/#contacto">Quiero consultar</a>
