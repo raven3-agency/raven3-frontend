@@ -145,6 +145,7 @@ body {
   display: inline-flex;
   align-items: center;
   height: 72px;
+  font-weight: 400;
   line-height: 1;
   position: relative;
   text-decoration: none;
