@@ -107,7 +107,7 @@ a {
   line-height: 1;
   text-decoration: none;
   color: rgba(255, 255, 255, 0.75);
-  font-size: 14px;
+  font-size: 0.95rem;
   letter-spacing: 0.2px;
 
   transition:
@@ -334,7 +334,9 @@ a {
     box-shadow 0.35s ease,
     border-color 0.35s ease;
 }
-.client-card[hidden] { display: none !important; }
+.client-card[hidden] {
+  display: none !important;
+}
 .client-card:hover {
   transform: translateY(-7px);
   border-color: rgba(55, 226, 213, 0.42);
