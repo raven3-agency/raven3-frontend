@@ -212,6 +212,24 @@
         letter-spacing: -0.05em;
         text-wrap: balance;
       }
+      .about-hero h1::after {
+        content: "";
+        position: absolute;
+        inset: auto auto 6% -4%;
+        width: 42%;
+        height: 22%;
+        background: radial-gradient(
+          circle,
+          rgba(55, 226, 213, 0.12),
+          transparent 70%
+        );
+        filter: blur(18px);
+        z-index: -1;
+        pointer-events: none;
+      }
+      .about-hero h1 {
+        position: relative;
+      }
 
       .about-lead {
         max-width: 720px;
@@ -651,6 +669,10 @@
           padding: 118px 0 40px;
         }
 
+        .container {
+          width: min(100% - 36px, 1200px);
+        }
+
         .about-grid,
         .service-links,
         .stat-grid,
@@ -688,6 +710,465 @@
         .cta-banner__actions .btn {
           width: 100%;
           justify-content: center;
+        }
+      }
+      /* =========================================================
+   ABOUT / MOBILE POLISH PATCH
+   Agregar debajo de tu CSS actual
+   ========================================================= */
+
+      /* Seguridad general */
+      html,
+      body {
+        overflow-x: clip;
+      }
+
+      .about-hero,
+      .about-section,
+      .about-section--compact {
+        overflow: clip;
+      }
+
+      /* Evita que textos o grids fuercen overflow horizontal */
+      .about-hero__inner,
+      .about-grid,
+      .service-links,
+      .compare-grid,
+      .stat-grid,
+      .split-layout,
+      .manifesto,
+      .cta-banner {
+        min-width: 0;
+      }
+
+      .about-hero__inner > *,
+      .split-layout > *,
+      .manifesto > *,
+      .cta-banner > * {
+        min-width: 0;
+      }
+
+      /* Mejor balance general del hero */
+      .about-hero {
+        padding: 124px 0 56px;
+      }
+
+      .about-hero h1 {
+        text-wrap: pretty;
+        word-break: normal;
+        overflow-wrap: normal;
+      }
+
+      .about-lead {
+        text-wrap: pretty;
+      }
+
+      /* Mejor bloque visual del panel derecho */
+      .about-hero__panel .card-glow {
+        position: relative;
+        isolation: isolate;
+      }
+
+      .about-hero__panel .card-glow::before {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        pointer-events: none;
+        background: linear-gradient(
+          135deg,
+          rgba(55, 226, 213, 0.18),
+          transparent 28%,
+          transparent 72%,
+          rgba(55, 226, 213, 0.08)
+        );
+        mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        -webkit-mask:
+          linear-gradient(#fff 0 0) content-box,
+          linear-gradient(#fff 0 0);
+        mask-composite: exclude;
+        -webkit-mask-composite: xor;
+        padding: 1px;
+      }
+
+      /* Cards un poco más premium */
+      .about-card,
+      .service-link-card,
+      .compare-card,
+      .manifesto-item,
+      .stat-item,
+      .principle,
+      .card-glow,
+      .cta-banner {
+        box-shadow:
+          0 12px 32px rgba(0, 0, 0, 0.22),
+          inset 0 1px 0 rgba(255, 255, 255, 0.025);
+      }
+
+      /* Mejoras para tablet */
+      @media (max-width: 1024px) {
+        .about-hero {
+          padding: 116px 0 52px;
+        }
+
+        .about-hero__inner {
+          gap: 22px;
+        }
+
+        .about-hero h1 {
+          max-width: 11.5ch;
+          font-size: clamp(2.7rem, 8.4vw, 4.25rem);
+          line-height: 0.95;
+          letter-spacing: -0.045em;
+          margin-bottom: 18px;
+        }
+
+        .about-lead {
+          max-width: 100%;
+          font-size: 1rem;
+          line-height: 1.78;
+        }
+
+        .about-hero__actions {
+          gap: 10px;
+          margin-top: 24px;
+        }
+
+        .about-breadcrumb {
+          gap: 8px;
+          row-gap: 6px;
+          margin-top: 16px;
+          font-size: 0.92rem;
+        }
+
+        .about-section {
+          padding: 38px 0 28px;
+        }
+
+        .section-head {
+          margin-bottom: 24px;
+        }
+
+        .about-grid,
+        .service-links,
+        .compare-grid {
+          gap: 16px;
+        }
+
+        .manifesto,
+        .cta-banner {
+          padding: 26px;
+        }
+      }
+
+      /* Mobile principal */
+      @media (max-width: 760px) {
+        .container {
+          width: min(100% - 36px, 1200px);
+        }
+
+        .about-hero {
+          padding: 108px 0 36px;
+        }
+
+        .about-hero__inner {
+          gap: 18px;
+        }
+
+        .about-hero h1 {
+          max-width: 100%;
+          margin: 0 0 16px;
+          font-size: clamp(2.45rem, 12vw, 3.7rem);
+          line-height: 0.96;
+          letter-spacing: -0.055em;
+          text-wrap: balance;
+        }
+
+        .about-lead {
+          font-size: 1rem;
+          line-height: 1.8;
+          color: rgba(245, 251, 255, 0.8);
+        }
+
+        .about-hero__actions {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 12px;
+          margin-top: 22px;
+        }
+
+        .about-hero__actions .btn,
+        .cta-banner__actions .btn {
+          width: 100%;
+          min-height: 54px;
+          padding-inline: 18px;
+          border-radius: 999px;
+          justify-content: center;
+          font-size: 0.98rem;
+        }
+
+        .about-breadcrumb {
+          margin-top: 16px;
+          font-size: 0.9rem;
+          line-height: 1.55;
+        }
+
+        .about-hero__panel {
+          max-width: 100%;
+        }
+
+        .card-glow {
+          padding: 20px;
+          border-radius: 24px;
+          backdrop-filter: blur(8px);
+        }
+
+        .stat-grid {
+          gap: 12px;
+        }
+
+        .stat-item {
+          padding: 15px;
+          border-radius: 18px;
+        }
+
+        .stat-kicker {
+          margin-bottom: 8px;
+          font-size: 0.68rem;
+          letter-spacing: 0.14em;
+        }
+
+        .stat-item strong {
+          margin-bottom: 6px;
+          font-size: 1rem;
+          line-height: 1.22;
+        }
+
+        .stat-item p {
+          font-size: 0.92rem;
+          line-height: 1.62;
+        }
+
+        .about-section {
+          padding: 30px 0 20px;
+        }
+
+        .about-section--compact {
+          padding-top: 14px;
+        }
+
+        .section-head {
+          margin-bottom: 18px;
+        }
+
+        .about-card,
+        .service-link-card,
+        .compare-card {
+          padding: 20px;
+          border-radius: 20px;
+        }
+
+        .about-card h3,
+        .service-link-card h3,
+        .compare-card h3 {
+          margin: 10px 0 8px;
+          font-size: 1.08rem;
+          line-height: 1.22;
+        }
+
+        .about-card p,
+        .service-link-card p,
+        .compare-card li,
+        .manifesto-item p {
+          font-size: 0.96rem;
+          line-height: 1.72;
+        }
+
+        .principles {
+          gap: 12px;
+        }
+
+        .principle {
+          grid-template-columns: 48px 1fr;
+          gap: 14px;
+          padding: 16px;
+          border-radius: 18px;
+        }
+
+        .principle span {
+          width: 48px;
+          height: 48px;
+          border-radius: 14px;
+          font-size: 0.94rem;
+        }
+
+        .principle h3 {
+          margin-bottom: 6px;
+          font-size: 1rem;
+          line-height: 1.24;
+        }
+
+        .principle p {
+          font-size: 0.95rem;
+          line-height: 1.66;
+        }
+
+        .manifesto {
+          gap: 16px;
+          padding: 20px;
+          border-radius: 22px;
+        }
+
+        .manifesto__list {
+          gap: 12px;
+        }
+
+        .manifesto-item {
+          padding: 16px;
+          border-radius: 18px;
+        }
+
+        .manifesto-item strong {
+          margin-bottom: 6px;
+          font-size: 0.98rem;
+          line-height: 1.25;
+        }
+
+        .compare-card ul {
+          padding-left: 18px;
+        }
+
+        .compare-card li + li {
+          margin-top: 7px;
+        }
+
+        .service-links,
+        .about-grid,
+        .compare-grid,
+        .stat-grid {
+          grid-template-columns: 1fr;
+          gap: 14px;
+        }
+
+        .cta-banner {
+          gap: 16px;
+          padding: 22px 20px;
+          border-radius: 22px;
+        }
+
+        .cta-banner h2 {
+          margin-bottom: 10px;
+          font-size: clamp(1.55rem, 7vw, 2.05rem);
+          line-height: 1.05;
+          letter-spacing: -0.03em;
+          text-wrap: balance;
+        }
+
+        .cta-banner p {
+          font-size: 0.97rem;
+          line-height: 1.72;
+        }
+
+        .cta-banner__actions {
+          display: grid;
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+
+        .footer-legal {
+          display: inline-block;
+          margin-left: 0;
+          margin-top: 8px;
+        }
+      }
+
+      /* Mobile chico */
+      @media (max-width: 480px) {
+        .container {
+          width: min(100% - 28px, 1200px);
+        }
+
+        .about-hero {
+          padding: 100px 0 32px;
+        }
+
+        .about-hero h1 {
+          font-size: clamp(2.2rem, 12.8vw, 3.25rem);
+          line-height: 0.98;
+          letter-spacing: -0.06em;
+          margin-bottom: 14px;
+        }
+
+        .about-lead {
+          font-size: 0.98rem;
+          line-height: 1.76;
+        }
+
+        .about-hero__actions {
+          margin-top: 20px;
+        }
+
+        .about-breadcrumb {
+          font-size: 0.86rem;
+        }
+
+        .card-glow,
+        .about-card,
+        .service-link-card,
+        .compare-card,
+        .manifesto,
+        .cta-banner {
+          border-radius: 20px;
+        }
+
+        .card-glow,
+        .about-card,
+        .service-link-card,
+        .compare-card {
+          padding: 18px;
+        }
+
+        .principle {
+          padding: 15px;
+        }
+
+        .cta-banner {
+          padding: 20px 18px;
+        }
+
+        .cta-banner h2 {
+          font-size: clamp(1.42rem, 7.6vw, 1.9rem);
+        }
+      }
+
+      @media (max-width: 760px) {
+        header nav,
+        .nav,
+        .navbar,
+        .nav-links {
+          display: none !important;
+        }
+
+        .about-hero__inner {
+          padding-inline: 2px;
+        }
+      }
+
+      /* Mejora de interacción táctil */
+      @media (hover: none) and (pointer: coarse) {
+        .service-link-card:hover {
+          transform: none;
+          box-shadow:
+            0 12px 32px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.025);
+          border-color: rgba(55, 226, 213, 0.1);
+        }
+
+        .service-link-card:active {
+          transform: translateY(-2px);
+          border-color: rgba(55, 226, 213, 0.22);
         }
       }
     </style>
