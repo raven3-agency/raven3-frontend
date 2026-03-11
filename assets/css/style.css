@@ -1317,6 +1317,10 @@ footer {
   .section-subtitle {
     max-width: 100%;
   }
+
+   .topbar__nav {
+    display: none !important;
+  }
 }
 
 @media (max-width: 640px) {
