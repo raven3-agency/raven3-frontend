@@ -145,7 +145,8 @@ body {
   display: inline-flex;
   align-items: center;
   height: 72px;
-  font-weight: 400;
+
+  font-style: normal;
   line-height: 1;
   position: relative;
   text-decoration: none;
@@ -155,6 +156,8 @@ body {
   transition:
     color 0.22s ease,
     opacity 0.22s ease;
+
+  font-weight: 500;
 }
 
 .topbar__link:hover {
@@ -1318,7 +1321,7 @@ footer {
     max-width: 100%;
   }
 
-   .topbar__nav {
+  .topbar__nav {
     display: none !important;
   }
 }
