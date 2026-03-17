@@ -92,6 +92,16 @@ body {
   position: relative;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 110px;      /* controlás el tamaño visual */
+  width: auto;       /* mantiene proporción */
+  display: block;
+}
 .progress {
   position: fixed;
   left: 0;
