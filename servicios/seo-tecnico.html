@@ -273,7 +273,16 @@
         max-width: 100%;
         display: block;
       }
+      .logo {
+        display: flex;
+        align-items: center;
+      }
 
+      .logo-img {
+        height: 110px; /* controlás el tamaño visual */
+        width: auto; /* mantiene proporción */
+        display: block;
+      }
       .container {
         width: min(var(--container), calc(100% - 40px));
         margin: 0 auto;
@@ -1074,9 +1083,9 @@
       <div class="container inner">
         <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
           ><img
-            src="../assets/img/logo.png"
+            src="../assets/img/logo2.png"
             alt="logo de raven3"
-            class="img-fluid"
+            class="logo-img"
             width="100"
             height="40"
         /></a>
