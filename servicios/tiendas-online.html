@@ -753,6 +753,14 @@
         pointer-events: none;
         z-index: 0;
       }
+      .topbar__link.is-active {
+        color: var(--accent);
+      }
+      .topbar__link:hover::after,
+      .topbar__link.is-active::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
 
       .benefit:hover,
       .process-step:hover,
@@ -1058,8 +1066,8 @@
             src="../assets/img/logo2.png"
             alt="logo de raven3"
             class="logo-img"
-              width="579"
-              height="431"
+            width="579"
+            height="431"
             width="100"
             height="40"
         /></a>
@@ -1595,7 +1603,14 @@
             </div>
 
             <ul class="projects-list">
-              <li><a href="https://knots4.mitiendanube.com/" target="_blank" rel="noopener noreferrer">Knots</a></li>
+              <li>
+                <a
+                  href="https://knots4.mitiendanube.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Knots</a
+                >
+              </li>
               <!-- <li><a href="/clientes.html">Beforce</a></li>
               <li><a href="/clientes.html">Proyectos e-commerce Raven3</a></li> -->
             </ul>

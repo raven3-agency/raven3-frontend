@@ -499,6 +499,15 @@
         opacity: 1;
       }
 
+      .topbar__link.is-active {
+        color: var(--accent);
+      }
+      .topbar__link:hover::after,
+      .topbar__link.is-active::after {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+
       .section-card {
         border: 1px solid rgba(255, 255, 255, 0.08);
         background: linear-gradient(
@@ -959,8 +968,8 @@
             src="../assets/img/logo2.png"
             alt="logo de raven3"
             class="logo-img"
-              width="579"
-              height="431"
+            width="579"
+            height="431"
             width="100"
             height="40"
         /></a>
@@ -1262,9 +1271,30 @@
             </div>
 
             <ul class="projects-list">
-              <li><a href="https://lassen.ar/" target="_blank" rel="noopener noreferrer">Lassen Pharma</a></li>
-              <li><a href="https://ndbpropiedades.com.ar/" target="_blank" rel="noopener noreferrer">NDB Propiedades</a></li>
-              <li><a href="https://beforce.ar/" target="_blank" rel="noopener noreferrer">BEFORCE</a></li>
+              <li>
+                <a
+                  href="https://lassen.ar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Lassen Pharma</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://ndbpropiedades.com.ar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >NDB Propiedades</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://beforce.ar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >BEFORCE</a
+                >
+              </li>
             </ul>
           </div>
         </div>
