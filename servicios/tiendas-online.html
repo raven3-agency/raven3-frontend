@@ -797,19 +797,44 @@
         transform: scale(1.04);
       }
 
-      .benefit > *,
-      .process-step > *,
-      .faq-item > *,
-      .mini-card > *,
-      .feature-item > *,
-      .related-card > *,
-      .type-card > *,
-      .why-card > *,
-      .stat > * {
+      .benefit > :not(.card-glow),
+      .process-step > :not(.card-glow),
+      .faq-item > :not(.card-glow),
+      .mini-card > :not(.card-glow),
+      .feature-item > :not(.card-glow),
+      .related-card > :not(.card-glow),
+      .type-card > :not(.card-glow),
+      .why-card > :not(.card-glow),
+      .stat > :not(.card-glow) {
         position: relative;
         z-index: 1;
       }
 
+      .card-glow {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.28s ease;
+        background: radial-gradient(
+          220px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(55, 226, 213, 0.14),
+          transparent 60%
+        );
+      }
+
+      .benefit:hover .card-glow,
+      .process-step:hover .card-glow,
+      .faq-item:hover .card-glow,
+      .mini-card:hover .card-glow,
+      .feature-item:hover .card-glow,
+      .related-card:hover .card-glow,
+      .type-card:hover .card-glow,
+      .why-card:hover .card-glow,
+      .stat:hover .card-glow {
+        opacity: 1;
+      }
       .benefit h3,
       .process-step h3,
       .faq-item h3,
@@ -1749,7 +1774,7 @@
     <script>
       (() => {
         const cards = document.querySelectorAll(
-          ".benefit, .process-step, .faq-item, .mini-card, .feature-item, .related-card, .type-card, .why-card",
+          ".benefit, .process-step, .faq-item, .mini-card, .feature-item, .related-card, .type-card, .why-card , .stat",
         );
 
         cards.forEach((card) => {

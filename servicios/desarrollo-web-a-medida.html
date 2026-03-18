@@ -704,11 +704,11 @@
         transform: scale(1.04);
       }
 
-      .benefit > *,
-      .process-step > *,
-      .faq-item > *,
-      .mini-card > *,
-      .stat > * {
+      .benefit > :not(.card-glow),
+      .process-step > :not(.card-glow),
+      .faq-item > :not(.card-glow),
+      .mini-card > :not(.card-glow),
+      .stat > :not(.card-glow) {
         position: relative;
         z-index: 1;
       }

@@ -1792,27 +1792,5 @@
         });
       })();
     </script>
-
-    <script>
-      (() => {
-        const cards = document.querySelectorAll(
-          ".benefit, .process-step, .faq-item, .mini-card, .audit-item, .related-card, .type-card, .why-card, .stat",
-        );
-
-        cards.forEach((card) => {
-          const glow = document.createElement("span");
-          glow.className = "card-glow";
-          card.appendChild(glow);
-
-          card.addEventListener("mousemove", (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.setProperty("--mx", `${x}px`);
-            card.style.setProperty("--my", `${y}px`);
-          });
-        });
-      })();
-    </script>
   </body>
 </html>
