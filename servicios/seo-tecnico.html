@@ -1007,14 +1007,62 @@
         padding-top: 24px;
       }
 
-      .footer-links {
+      /* =========================
+   FOOTER
+========================= */
+
+      .footer-nav {
         display: flex;
-        gap: 16px;
         flex-wrap: wrap;
+        gap: 12px 18px;
+        margin-top: 32px;
+        opacity: 0.9;
       }
 
-      .footer-links a:hover {
-        color: var(--text-strong);
+      .footer-nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition:
+          color 0.25s ease,
+          opacity 0.25s ease;
+      }
+      .footer-nav a:hover {
+        color: var(--accent);
+        opacity: 1;
+      }
+
+      .footer-legal {
+        margin-left: 8px;
+        opacity: 0.8;
+      }
+
+      .footer-legal a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.25s ease;
+      }
+
+      .footer-legal a:hover {
+        opacity: 1;
+      }
+
+      footer {
+        padding: 6rem 2rem;
+      }
+
+      .foot {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        gap: 28px;
+      }
+
+      .small {
+        font-size: 14px;
+        color: var(--muted);
       }
 
       @media (max-width: 1080px) {
@@ -1763,7 +1811,7 @@
         <div class="brand">
           <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0">
             <img
-              src="assets/img/logo2.png"
+              src="../assets/img/logo2.png"
               alt="logo de raven3"
               class="logo-img"
               width="579"
