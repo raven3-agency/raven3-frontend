@@ -22,7 +22,6 @@
 
     <link rel="canonical" href="https://raven3.com.ar/sobre-raven3.html" />
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://raven3.com.ar/sobre-raven3.html" />
     <meta
@@ -40,7 +39,6 @@
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
@@ -59,7 +57,6 @@
       content="https://www.raven3.com.ar/assets/img/fondoN.png"
     />
 
-    <!-- Favicons -->
     <link
       rel="icon"
       type="image/x-icon"
@@ -88,7 +85,6 @@
       href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
     />
 
-    <!-- Preconnect -->
     <link
       rel="preconnect"
       href="https://www.googletagmanager.com"
@@ -100,11 +96,9 @@
       crossorigin
     />
 
-    <!-- CSS -->
     <link rel="preload" href="assets/css/style.css" as="style" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- GA4 -->
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"
@@ -118,7 +112,6 @@
       gtag("config", "G-MF63Q3JMSL");
     </script>
 
-    <!-- JSON-LD -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -191,6 +184,7 @@
         ]
       }
     </script>
+
     <style>
       .about-hero {
         position: relative;
@@ -211,7 +205,9 @@
         line-height: 0.92;
         letter-spacing: -0.05em;
         text-wrap: balance;
+        position: relative;
       }
+
       .about-hero h1::after {
         content: "";
         position: absolute;
@@ -227,9 +223,6 @@
         z-index: -1;
         pointer-events: none;
       }
-      .about-hero h1 {
-        position: relative;
-      }
 
       .about-lead {
         max-width: 720px;
@@ -243,21 +236,6 @@
         width: 100%;
         max-width: 460px;
         justify-self: end;
-      }
-      @media (max-width: 1180px) {
-        .about-hero__inner {
-          grid-template-columns: 1fr;
-          gap: 24px;
-        }
-
-        .about-hero__panel {
-          max-width: 100%;
-          justify-self: stretch;
-        }
-
-        .about-hero h1 {
-          max-width: 12ch;
-        }
       }
 
       .about-hero__actions {
@@ -650,6 +628,42 @@
         opacity: 1;
       }
 
+      .flow-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .flow-card .flow-spot {
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        left: var(--mx, 50%);
+        top: var(--my, 50%);
+        transform: translate(-50%, -50%);
+        border-radius: 999px;
+        pointer-events: none;
+        background: radial-gradient(
+          circle,
+          rgba(55, 226, 213, 0.16) 0%,
+          rgba(55, 226, 213, 0.08) 28%,
+          rgba(55, 226, 213, 0.03) 48%,
+          transparent 72%
+        );
+        opacity: 0;
+        transition: opacity 0.22s ease;
+        z-index: 0;
+      }
+
+      .flow-card:hover .flow-spot {
+        opacity: 1;
+      }
+
+      .flow-card > *:not(.flow-spot) {
+        position: relative;
+        z-index: 1;
+      }
+
       @media (max-width: 1180px) {
         .about-grid,
         .service-links {
@@ -661,6 +675,15 @@
         .manifesto,
         .cta-banner {
           grid-template-columns: 1fr;
+        }
+
+        .about-hero__panel {
+          max-width: 100%;
+          justify-self: stretch;
+        }
+
+        .about-hero h1 {
+          max-width: 12ch;
         }
       }
 
@@ -711,13 +734,19 @@
           width: 100%;
           justify-content: center;
         }
-      }
-      /* =========================================================
-   ABOUT / MOBILE POLISH PATCH
-   Agregar debajo de tu CSS actual
-   ========================================================= */
 
-      /* Seguridad general */
+        header nav,
+        .nav,
+        .navbar,
+        .nav-links {
+          display: none !important;
+        }
+
+        .about-hero__inner {
+          padding-inline: 2px;
+        }
+      }
+
       html,
       body {
         overflow-x: clip;
@@ -729,7 +758,6 @@
         overflow: clip;
       }
 
-      /* Evita que textos o grids fuercen overflow horizontal */
       .about-hero__inner,
       .about-grid,
       .service-links,
@@ -748,7 +776,6 @@
         min-width: 0;
       }
 
-      /* Mejor balance general del hero */
       .about-hero {
         padding: 124px 0 56px;
       }
@@ -763,7 +790,6 @@
         text-wrap: pretty;
       }
 
-      /* Mejor bloque visual del panel derecho */
       .about-hero__panel .card-glow {
         position: relative;
         isolation: isolate;
@@ -793,7 +819,6 @@
         padding: 1px;
       }
 
-      /* Cards un poco más premium */
       .about-card,
       .service-link-card,
       .compare-card,
@@ -807,7 +832,6 @@
           inset 0 1px 0 rgba(255, 255, 255, 0.025);
       }
 
-      /* Mejoras para tablet */
       @media (max-width: 1024px) {
         .about-hero {
           padding: 116px 0 52px;
@@ -863,7 +887,6 @@
         }
       }
 
-      /* Mobile principal */
       @media (max-width: 760px) {
         .container {
           width: min(100% - 36px, 1200px);
@@ -1084,7 +1107,6 @@
         }
       }
 
-      /* Mobile chico */
       @media (max-width: 480px) {
         .container {
           width: min(100% - 28px, 1200px);
@@ -1143,20 +1165,6 @@
         }
       }
 
-      @media (max-width: 760px) {
-        header nav,
-        .nav,
-        .navbar,
-        .nav-links {
-          display: none !important;
-        }
-
-        .about-hero__inner {
-          padding-inline: 2px;
-        }
-      }
-
-      /* Mejora de interacción táctil */
       @media (hover: none) and (pointer: coarse) {
         .service-link-card:hover {
           transform: none;
@@ -1252,12 +1260,6 @@
               >
               <a class="btn" href="/clientes.html">Ver proyectos</a>
             </div>
-
-            <!-- <nav class="about-breadcrumb" aria-label="Breadcrumb">
-              <a href="/">Inicio</a>
-              <span>/</span>
-              <span aria-current="page">Sobre Raven3</span>
-            </nav> -->
           </div>
 
           <div
@@ -1266,7 +1268,7 @@
             data-scroll-speed="0.6"
           >
             <div class="stat-grid">
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Enfoque</span>
                 <strong>Custom-first</strong>
                 <p>
@@ -1274,7 +1276,7 @@
                   plantillas pesadas.
                 </p>
               </div>
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Especialidad</span>
                 <strong>Performance + SEO</strong>
                 <p>
@@ -1282,7 +1284,7 @@
                   base del trabajo.
                 </p>
               </div>
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Stack</span>
                 <strong>Frontend técnico</strong>
                 <p>
@@ -1290,7 +1292,7 @@
                   medida.
                 </p>
               </div>
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Objetivo</span>
                 <strong>Conversión real</strong>
                 <p>Diseño con intención comercial, no solo visual.</p>
@@ -1315,7 +1317,11 @@
           </div>
 
           <div class="about-grid">
-            <article class="about-card" data-scroll data-scroll-speed="0.15">
+            <article
+              class="about-card flow-card"
+              data-scroll
+              data-scroll-speed="0.15"
+            >
               <div class="tag">Web a medida</div>
               <h3>Desarrollo sin rigidez innecesaria</h3>
               <p>
@@ -1325,7 +1331,11 @@
               </p>
             </article>
 
-            <article class="about-card" data-scroll data-scroll-speed="0.25">
+            <article
+              class="about-card flow-card"
+              data-scroll
+              data-scroll-speed="0.25"
+            >
               <div class="tag">E-commerce</div>
               <h3>Tiendas pensadas para vender</h3>
               <p>
@@ -1335,7 +1345,11 @@
               </p>
             </article>
 
-            <article class="about-card" data-scroll data-scroll-speed="0.35">
+            <article
+              class="about-card flow-card"
+              data-scroll
+              data-scroll-speed="0.35"
+            >
               <div class="tag">SEO técnico</div>
               <h3>Optimización desde la base</h3>
               <p>
@@ -1345,7 +1359,11 @@
               </p>
             </article>
 
-            <article class="about-card" data-scroll data-scroll-speed="0.45">
+            <article
+              class="about-card flow-card"
+              data-scroll
+              data-scroll-speed="0.45"
+            >
               <div class="tag">Integraciones</div>
               <h3>Sitios conectados con el negocio</h3>
               <p>
@@ -1373,7 +1391,7 @@
           </div>
 
           <div class="about-grid">
-            <article class="about-card">
+            <article class="about-card flow-card">
               <div class="tag">01</div>
               <h3>Desarrollo realmente a medida</h3>
               <p>
@@ -1383,7 +1401,7 @@
               </p>
             </article>
 
-            <article class="about-card">
+            <article class="about-card flow-card">
               <div class="tag">02</div>
               <h3>Performance como ventaja competitiva</h3>
               <p>
@@ -1393,7 +1411,7 @@
               </p>
             </article>
 
-            <article class="about-card">
+            <article class="about-card flow-card">
               <div class="tag">03</div>
               <h3>SEO técnico desde la base</h3>
               <p>
@@ -1403,7 +1421,7 @@
               </p>
             </article>
 
-            <article class="about-card">
+            <article class="about-card flow-card">
               <div class="tag">04</div>
               <h3>Visión comercial, no solo visual</h3>
               <p>
@@ -1444,7 +1462,7 @@
 
           <div class="card-glow" data-scroll data-scroll-speed="0.35">
             <div class="stat-grid">
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Base</span>
                 <strong>Desarrollo real</strong>
                 <p>
@@ -1452,21 +1470,21 @@
                   arquitectura web.
                 </p>
               </div>
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Foco</span>
                 <strong>Calidad de ejecución</strong>
                 <p>
                   Detalles visuales, consistencia técnica y percepción premium.
                 </p>
               </div>
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Estilo</span>
                 <strong>Hands-on</strong>
                 <p>
                   Trabajo directo sobre el proyecto, sin capas innecesarias.
                 </p>
               </div>
-              <div class="stat-item">
+              <div class="stat-item flow-card">
                 <span class="stat-kicker">Objetivo</span>
                 <strong>Resultados serios</strong>
                 <p>
@@ -1496,28 +1514,28 @@
             </div>
 
             <div class="manifesto__list">
-              <div class="manifesto-item">
+              <div class="manifesto-item flow-card">
                 <strong>Menos dependencia de plugins</strong>
                 <p>
                   Reducimos fragilidad técnica, conflictos, sobrecarga y
                   mantenimiento innecesario.
                 </p>
               </div>
-              <div class="manifesto-item">
+              <div class="manifesto-item flow-card">
                 <strong>Más control sobre el resultado final</strong>
                 <p>
                   La interfaz, la estructura, la performance y la experiencia se
                   ajustan al proyecto, no a las limitaciones de un template.
                 </p>
               </div>
-              <div class="manifesto-item">
+              <div class="manifesto-item flow-card">
                 <strong>Mejor base para SEO y velocidad</strong>
                 <p>
                   Un desarrollo más limpio permite optimizar carga, semántica,
                   indexabilidad y señales técnicas con mucha más precisión.
                 </p>
               </div>
-              <div class="manifesto-item">
+              <div class="manifesto-item flow-card">
                 <strong>Mayor percepción de marca</strong>
                 <p>
                   Un sitio custom transmite una identidad más sólida, más
@@ -1545,7 +1563,7 @@
           </div>
 
           <div class="compare-grid">
-            <article class="compare-card compare-card--muted">
+            <article class="compare-card compare-card--muted flow-card">
               <span class="tag">Opción genérica</span>
               <h3>Templates / builders</h3>
               <ul>
@@ -1557,7 +1575,7 @@
               </ul>
             </article>
 
-            <article class="compare-card compare-card--accent">
+            <article class="compare-card compare-card--accent flow-card">
               <span class="tag">Enfoque Raven3</span>
               <h3>Desarrollo a medida</h3>
               <ul>
@@ -1597,7 +1615,7 @@
           </div>
 
           <div class="principles" data-scroll data-scroll-speed="0.32">
-            <article class="principle">
+            <article class="principle flow-card">
               <span>01</span>
               <div>
                 <h3>Performance como estándar</h3>
@@ -1605,7 +1623,7 @@
               </div>
             </article>
 
-            <article class="principle">
+            <article class="principle flow-card">
               <span>02</span>
               <div>
                 <h3>SEO técnico desde el inicio</h3>
@@ -1616,7 +1634,7 @@
               </div>
             </article>
 
-            <article class="principle">
+            <article class="principle flow-card">
               <span>03</span>
               <div>
                 <h3>Diseño con intención comercial</h3>
@@ -1627,7 +1645,7 @@
               </div>
             </article>
 
-            <article class="principle">
+            <article class="principle flow-card">
               <span>04</span>
               <div>
                 <h3>Soluciones a medida</h3>
@@ -1650,7 +1668,7 @@
 
           <div class="service-links">
             <a
-              class="service-link-card"
+              class="service-link-card flow-card"
               href="/servicios/desarrollo-web-a-medida.html"
             >
               <span class="tag">Servicio</span>
@@ -1661,7 +1679,10 @@
               </p>
             </a>
 
-            <a class="service-link-card" href="/servicios/tiendas-online.html">
+            <a
+              class="service-link-card flow-card"
+              href="/servicios/tiendas-online.html"
+            >
               <span class="tag">Servicio</span>
               <h3>Tiendas online</h3>
               <p>
@@ -1670,7 +1691,10 @@
               </p>
             </a>
 
-            <a class="service-link-card" href="/servicios/seo-tecnico.html">
+            <a
+              class="service-link-card flow-card"
+              href="/servicios/seo-tecnico.html"
+            >
               <span class="tag">Servicio</span>
               <h3>SEO técnico</h3>
               <p>
@@ -1684,7 +1708,7 @@
 
       <section class="about-section" data-scroll-section>
         <div class="container">
-          <div class="cta-banner cta-banner--premium">
+          <div class="cta-banner cta-banner--premium flow-card">
             <div>
               <p class="eyebrow">Proyecto premium</p>
               <h2>
@@ -1748,7 +1772,6 @@
             </div>
           </div>
 
-          <!-- NAV FOOTER -->
           <nav class="footer-nav">
             <a href="/sobre-raven3.html">Sobre Raven3</a>
             ·
@@ -1788,6 +1811,34 @@
     <script src="assets/vendor/locomotive/locomotive-scroll.min.js"></script>
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="assets/js/particles.js"></script>
+
+    <script>
+      (() => {
+        const cards = document.querySelectorAll(".flow-card");
+
+        cards.forEach((card) => {
+          const glow = document.createElement("span");
+          glow.className = "flow-spot";
+          card.appendChild(glow);
+
+          card.addEventListener("mousemove", (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            card.style.setProperty("--mx", `${x}px`);
+            card.style.setProperty("--my", `${y}px`);
+          });
+
+          card.addEventListener("mouseenter", () => {
+            card.classList.add("is-flowing");
+          });
+
+          card.addEventListener("mouseleave", () => {
+            card.classList.remove("is-flowing");
+          });
+        });
+      })();
+    </script>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
