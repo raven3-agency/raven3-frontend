@@ -1484,6 +1484,67 @@
           border-radius: 18px;
         }
       }
+      .process__step {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .process__step::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.35;
+        transform: scale(1.05);
+        transition: all 0.4s ease;
+        z-index: 0;
+      }
+
+      .process__step::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 19, 33, 0.2),
+          rgba(6, 19, 33, 0.6) 40%,
+          rgba(6, 19, 33, 0.95)
+        );
+        z-index: 1;
+      }
+
+      /* contenido arriba */
+      .process__step > * {
+        position: relative;
+        z-index: 2;
+      }
+      .process__step--recepcion::before {
+        background-image: url("img/proceso-recepcion.png");
+      }
+
+      .process__step--almacenaje::before {
+        background-image: url("img/proceso-almacenaje.png");
+      }
+
+      .process__step--preparacion::before {
+        background-image: url("img/proceso-preparacion.png");
+      }
+
+      .process__step--distribucion::before {
+        background-image: url("img/proceso-distribucion.png");
+      }
+      .process__step:hover {
+        transform: translateY(-6px);
+        border-color: rgba(44, 130, 246, 0.3);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .process__step:hover::before {
+        opacity: 0.6;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
@@ -1733,7 +1794,7 @@
               <div class="card__icon">04</div>
               <h3>Distribución</h3>
               <p>
-                Logística de salida con cobertura ampliada y flota propia para
+                Logística de salida con flota propia para
                 operaciones que necesitan cumplimiento.
               </p>
               <ul>
@@ -1954,7 +2015,7 @@
           </div>
 
           <div class="process">
-            <article class="process__step reveal">
+            <article class="process__step process__step--recepcion reveal">
               <div class="num">1</div>
               <h3>Recepción</h3>
               <p>
@@ -1963,7 +2024,7 @@
               </p>
             </article>
 
-            <article class="process__step reveal">
+            <article class="process__step process__step--almacenaje reveal">
               <div class="num">2</div>
               <h3>Almacenaje</h3>
               <p>
@@ -1972,7 +2033,7 @@
               </p>
             </article>
 
-            <article class="process__step reveal">
+            <article class="process__step process__step--preparacion reveal">
               <div class="num">3</div>
               <h3>Preparación</h3>
               <p>
@@ -1981,7 +2042,7 @@
               </p>
             </article>
 
-            <article class="process__step reveal">
+            <article class="process__step process__step--distribucion reveal">
               <div class="num">4</div>
               <h3>Distribución</h3>
               <p>
@@ -2139,10 +2200,6 @@
                 </div>
 
                 <div class="form-actions">
-                  <span class="form-note">
-                    Este formulario valida a nivel front. El próximo paso es
-                    conectarlo con mail corporativo, Formspree o backend.
-                  </span>
                   <button type="submit" class="btn btn--primary">
                     Enviar consulta
                   </button>
