@@ -1417,6 +1417,73 @@
         position: relative;
         z-index: 4;
       }
+
+      .contact-map-card {
+        margin-top: 22px;
+        overflow: hidden;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.045);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        box-shadow: var(--shadow-md);
+      }
+
+      .contact-map-card__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        gap: 18px;
+        padding: 28px 28px 0;
+      }
+
+      .contact-map-card__head h3 {
+        margin: 0 0 8px;
+        color: var(--text-strong);
+        font-size: clamp(1.35rem, 2vw, 1.8rem);
+        line-height: 1.08;
+      }
+
+      .contact-map-card__head p {
+        margin: 0;
+        max-width: 62ch;
+        color: var(--muted);
+        line-height: 1.72;
+      }
+
+      .contact-map-card__frame {
+        padding: 24px;
+      }
+
+      .contact-map-card__frame iframe {
+        display: block;
+        width: 100%;
+        height: 440px;
+        border: 0;
+        border-radius: 22px;
+        background: #0b1624;
+        filter: grayscale(0.08) contrast(1.02) saturate(0.95);
+      }
+
+      @media (max-width: 860px) {
+        .contact-map-card__head {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .contact-map-card__head {
+          padding: 24px 24px 0;
+        }
+
+        .contact-map-card__frame {
+          padding: 18px;
+        }
+
+        .contact-map-card__frame iframe {
+          height: 320px;
+          border-radius: 18px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1948,7 +2015,7 @@
         </div>
       </section>
 
-      <section class="section section--alt" id="contacto">
+      <!-- <section class="section section--alt" id="contacto">
         <div class="container contact-wrap">
           <div class="contact-card reveal">
             <span class="eyebrow">Contacto</span>
@@ -2083,6 +2150,179 @@
 
               <p class="form-status" id="formStatus" aria-live="polite"></p>
             </form>
+          </div>
+        </div>
+      </section> -->
+
+      <section class="section section--alt" id="contacto">
+        <div class="container">
+          <div class="contact-wrap">
+            <div class="contact-card reveal">
+              <span class="eyebrow">Contacto</span>
+              <h2
+                style="
+                  margin: 16px 0 10px;
+                  font-size: clamp(1.9rem, 3vw, 2.7rem);
+                  line-height: 1.04;
+                  letter-spacing: -0.04em;
+                  color: var(--text-strong);
+                "
+              >
+                Hablemos de tu operación
+              </h2>
+
+              <p style="margin: 0; color: var(--muted); line-height: 1.78">
+                Si necesitás almacenamiento, distribución o una operación
+                logística con cadena de frío, completá el formulario y
+                coordinamos una respuesta comercial.
+              </p>
+
+              <div class="contact-list">
+                <div class="contact-item">
+                  <strong>Ubicación</strong>
+                  <p>Mejico 5250, Villa Martelli, Buenos Aires</p>
+                </div>
+
+                <div class="contact-item">
+                  <strong>Teléfono</strong>
+                  <a href="tel:+5491154270519">+54 9 11 5427-0519</a>
+                </div>
+
+                <div class="contact-item">
+                  <strong>Email</strong>
+                  <a href="mailto:at.clientes@cea-american.com.ar">
+                    at.clientes@cea-american.com.ar
+                  </a>
+                </div>
+
+                <div class="contact-item">
+                  <strong>Cobertura</strong>
+                  <p>CABA, GBA e interior del país</p>
+                </div>
+              </div>
+
+              <div class="contact-quick">
+                <span class="contact-chip">Flota propia</span>
+                <span class="contact-chip">Trazabilidad</span>
+                <span class="contact-chip">SENASA</span>
+                <span class="contact-chip">Cadena de frío</span>
+              </div>
+            </div>
+
+            <div class="form-card reveal">
+              <form id="contactForm" novalidate>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="name">Nombre</label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      placeholder="Tu nombre"
+                      required
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="company">Empresa</label>
+                    <input
+                      id="company"
+                      name="company"
+                      type="text"
+                      placeholder="Nombre de la empresa"
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="tu@email.com"
+                      required
+                    />
+                  </div>
+
+                  <div class="field">
+                    <label for="phone">Teléfono</label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+54 11..."
+                    />
+                  </div>
+
+                  <div class="field field--full">
+                    <label for="service">Servicio de interés</label>
+                    <select id="service" name="service">
+                      <option value="">Seleccionar</option>
+                      <option>Almacenaje refrigerado</option>
+                      <option>Almacenaje congelado</option>
+                      <option>Preparación de pedidos</option>
+                      <option>Distribución</option>
+                      <option>Operación integral</option>
+                      <option>Otro</option>
+                    </select>
+                  </div>
+
+                  <div class="field field--full">
+                    <label for="message">Mensaje</label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      placeholder="Contanos qué tipo de operación necesitás, cobertura, frecuencia o volumen aproximado"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="form-actions">
+                  <span class="form-note">
+                    Este formulario valida a nivel front. El próximo paso es
+                    conectarlo con mail corporativo, Formspree o backend.
+                  </span>
+                  <button type="submit" class="btn btn--primary">
+                    Enviar consulta
+                  </button>
+                </div>
+
+                <p class="form-status" id="formStatus" aria-live="polite"></p>
+              </form>
+            </div>
+          </div>
+
+          <div class="contact-map-card reveal">
+            <div class="contact-map-card__head">
+              <div>
+                <span class="eyebrow">Mapa</span>
+                <h3>Base operativa en Villa Martelli</h3>
+                <p>
+                  Ubicación estratégica para almacenamiento, distribución y
+                  cobertura logística en CABA, GBA e interior del país.
+                </p>
+              </div>
+
+              <a
+                class="btn btn--primary"
+                href="https://www.google.com/maps/search/?api=1&query=Mejico+5250+Villa+Martelli+Buenos+Aires"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Cómo llegar
+              </a>
+            </div>
+
+            <div class="contact-map-card__frame">
+              <iframe
+                title="Mapa de CEA American en Villa Martelli"
+                src="https://www.google.com/maps?q=Mejico%205250%20Villa%20Martelli%20Buenos%20Aires&z=15&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
