@@ -208,10 +208,10 @@
       }
 
       .brand img {
-        height: 90px;
+        height: 60px;
         width: auto;
         object-fit: contain;
-        filter: drop-shadow(0 6px 22px rgba(0, 0, 0, 0.18));
+        filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.18));
       }
 
       .nav {
@@ -319,6 +319,7 @@
         font-weight: 800;
         letter-spacing: 0.08em;
         text-transform: uppercase;
+        margin-bottom: 20px;
       }
 
       .hero {
@@ -484,7 +485,7 @@
       }
 
       .stats {
-        padding: 14px 0 28px;
+        padding: 14px 0 32px;
       }
 
       .stats__grid {
@@ -494,26 +495,143 @@
       }
 
       .stat-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 210px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
         padding: 22px 20px;
         border-radius: var(--radius-lg);
         background: rgba(255, 255, 255, 0.04);
         border: 1px solid rgba(255, 255, 255, 0.08);
         box-shadow: var(--shadow-sm);
+        transition:
+          transform 0.28s ease,
+          border-color 0.28s ease,
+          box-shadow 0.28s ease;
+      }
+
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.38;
+        transform: scale(1.04);
+        transition:
+          opacity 0.35s ease,
+          transform 0.5s ease;
+        z-index: 0;
+      }
+
+      .stat-card::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 19, 33, 0.16) 0%,
+          rgba(6, 19, 33, 0.46) 38%,
+          rgba(6, 19, 33, 0.88) 100%
+        );
+        z-index: 1;
+        transition: background 0.35s ease;
+      }
+
+      .stat-card > * {
+        position: relative;
+        z-index: 2;
       }
 
       .stat-card strong {
         display: block;
         margin-bottom: 8px;
         font-size: 1.35rem;
+        line-height: 1.1;
         color: var(--text-strong);
+        transition: color 0.28s ease;
       }
 
       .stat-card span {
-        color: var(--muted);
+        color: rgba(255, 255, 255, 0.9);
         font-size: 0.92rem;
         line-height: 1.5;
+        transition: color 0.28s ease;
       }
 
+      .stat-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(44, 130, 246, 0.28);
+        box-shadow: var(--shadow-lg);
+      }
+
+      .stat-card:hover::before {
+        opacity: 1;
+        transform: scale(1.1);
+      }
+
+      .stat-card:hover::after {
+        background: linear-gradient(
+          180deg,
+          rgba(6, 19, 33, 0.12) 0%,
+          rgba(6, 19, 33, 0.34) 34%,
+          rgba(6, 19, 33, 0.84) 100%
+        );
+      }
+
+      .stat-card:hover strong,
+      .stat-card:hover span {
+        color: #ffffff;
+      }
+
+      .stat-card--congelado::before {
+        background-image: url("img/congelado.png");
+      }
+
+      .stat-card--refrigerado::before {
+        background-image: url("img/refrigerado.png");
+      }
+
+      .stat-card--seco::before {
+        background-image: url("img/seco.png");
+      }
+
+      .stat-card--distribucion::before {
+        background-image: url("img/distribucion.png");
+      }
+
+      @media (max-width: 1080px) {
+        .stats__grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 640px) {
+        .stats__grid {
+          grid-template-columns: 1fr;
+        }
+
+        .stat-card {
+          min-height: 220px;
+        }
+
+        .stat-card::before {
+          opacity: 0.9;
+          transform: none;
+        }
+
+        .stat-card::after {
+          background: linear-gradient(
+            180deg,
+            rgba(6, 19, 33, 0.14) 0%,
+            rgba(6, 19, 33, 0.34) 34%,
+            rgba(6, 19, 33, 0.84) 100%
+          );
+        }
+      }
       .section {
         padding: 86px 0;
       }
@@ -1170,7 +1288,7 @@
           href="#inicio"
           aria-label="Ir al inicio de CEA American"
         >
-          <img src="logo2_fondoazul.png" alt="CEA American" />
+          <img src="img/logo2_fondoazul.png" alt="CEA American" />
         </a>
 
         <button
@@ -1290,7 +1408,7 @@
 
       <section class="stats" aria-label="Tipos de operación">
         <div class="container stats__grid">
-          <article class="stat-card reveal">
+          <article class="stat-card stat-card--congelado reveal">
             <strong>Congelado</strong>
             <span>
               Operaciones para productos que requieren conservación a muy baja
@@ -1298,7 +1416,7 @@
             </span>
           </article>
 
-          <article class="stat-card reveal">
+          <article class="stat-card stat-card--refrigerado reveal">
             <strong>Refrigerado</strong>
             <span>
               Gestión de mercadería con estabilidad térmica y control durante la
@@ -1306,7 +1424,7 @@
             </span>
           </article>
 
-          <article class="stat-card reveal">
+          <article class="stat-card stat-card--seco reveal">
             <strong>Seco</strong>
             <span>
               Espacios de almacenamiento y preparación logística para
@@ -1314,7 +1432,7 @@
             </span>
           </article>
 
-          <article class="stat-card reveal">
+          <article class="stat-card stat-card--distribucion reveal">
             <strong>Distribución</strong>
             <span>
               Cobertura en CABA, GBA e interior del país con flota propia y
