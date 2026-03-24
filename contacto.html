@@ -1101,6 +1101,91 @@
           transition: none !important;
         }
       }
+      .flow-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      .flow-spot {
+        position: absolute;
+        width: 240px;
+        height: 240px;
+        left: var(--mx, 50%);
+        top: var(--my, 50%);
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 999px;
+        z-index: 0;
+        opacity: 0;
+        transition: opacity 0.28s ease;
+        background: radial-gradient(
+          circle,
+          rgba(55, 226, 213, 0.16) 0%,
+          rgba(55, 226, 213, 0.09) 28%,
+          rgba(55, 226, 213, 0.04) 48%,
+          transparent 72%
+        );
+      }
+
+      .flow-card:hover .flow-spot {
+        opacity: 1;
+      }
+
+      
+      .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+        margin-top: 32px;
+        opacity: 0.9;
+      }
+
+      .footer-nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-size: 0.9rem;
+        opacity: 0.8;
+        transition:
+          color 0.25s ease,
+          opacity 0.25s ease;
+      }
+      .footer-nav a:hover {
+        color: var(--accent);
+        opacity: 1;
+      }
+
+      .footer-legal {
+        margin-left: 8px;
+        opacity: 0.8;
+      }
+
+      .footer-legal a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: opacity 0.25s ease;
+      }
+
+      .footer-legal a:hover {
+        opacity: 1;
+      }
+
+      footer {
+        padding: 6rem 2rem;
+      }
+
+      .foot {
+        max-width: 1200px;
+        margin: auto;
+        display: grid;
+        gap: 28px;
+      }
+
+      .small {
+        font-size: 14px;
+        color: var(--muted);
+      }
     </style>
   </head>
 
@@ -1131,7 +1216,7 @@
           >
         </nav>
 
-        <a class="btn" href="/contacto.html">Hablemos</a>
+        <a class="btn" href="#formulario">Hablemos</a>
       </div>
     </header>
 
@@ -1163,17 +1248,17 @@
           </div>
 
           <div class="hero-stats" aria-label="Puntos clave de contacto">
-            <div class="stat">
+            <div class="stat flow-card">
               <strong>Enfoque consultivo</strong>
               <span
                 >Entendemos el proyecto antes de proponer arquitectura.</span
               >
             </div>
-            <div class="stat">
+            <div class="stat flow-card">
               <strong>Foco en performance</strong>
               <span>Priorizamos velocidad, estructura y conversión real.</span>
             </div>
-            <div class="stat">
+            <div class="stat flow-card">
               <strong>Base técnica sólida</strong>
               <span>Desarrollo, e-commerce y SEO técnico alineados.</span>
             </div>
@@ -1194,7 +1279,7 @@
             </div>
 
             <div class="contact-grid">
-              <div class="contact-panel">
+              <div class="contact-panel flow-card">
                 <h3>Formulario de contacto</h3>
                 <p class="form-note">
                   Ideal para proyectos de desarrollo web, tiendas online, SEO
@@ -1319,7 +1404,7 @@
               </div>
 
               <aside class="contact-side">
-                <div class="info-card">
+                <div class="info-card flow-card">
                   <h3>Qué podés consultarnos</h3>
                   <ul class="contact-list">
                     <li>Desarrollo de webs a medida.</li>
@@ -1330,7 +1415,7 @@
                   </ul>
                 </div>
 
-                <div class="info-card">
+                <div class="info-card flow-card">
                   <h3>Contacto directo</h3>
                   <div class="contact-meta">
                     <div>
@@ -1348,7 +1433,7 @@
                   </div>
                 </div>
 
-                <div class="info-card">
+                <div class="info-card flow-card">
                   <h3>Antes de escribirnos</h3>
                   <p>
                     Si no tenés todo cerrado, no pasa nada. Podés escribirnos
@@ -1375,7 +1460,7 @@
             </div>
 
             <div class="cards-grid">
-              <article class="info-card">
+              <article class="info-card flow-card">
                 <h3>Entendemos el contexto</h3>
                 <p>
                   Revisamos el tipo de negocio, el objetivo del sitio, la etapa
@@ -1383,7 +1468,7 @@
                 </p>
               </article>
 
-              <article class="info-card">
+              <article class="info-card flow-card">
                 <h3>Ordenamos prioridades</h3>
                 <p>
                   Detectamos qué conviene resolver primero: estructura,
@@ -1391,7 +1476,7 @@
                 </p>
               </article>
 
-              <article class="info-card">
+              <article class="info-card flow-card">
                 <h3>Proponemos el mejor enfoque</h3>
                 <p>
                   No vendemos plantillas genéricas. Buscamos la solución más
@@ -1400,7 +1485,7 @@
                 </p>
               </article>
 
-              <article class="info-card">
+              <article class="info-card flow-card">
                 <h3>Armamos una base para crecer</h3>
                 <p>
                   La idea no es sólo publicar algo. Queremos que el sitio quede
@@ -1424,7 +1509,7 @@
             </div>
 
             <div class="services-grid">
-              <article class="service-card">
+              <article class="service-card flow-card">
                 <h3>
                   <a href="/servicios/desarrollo-web-a-medida.html">
                     Desarrollo Web a Medida
@@ -1436,7 +1521,7 @@
                 </p>
               </article>
 
-              <article class="service-card">
+              <article class="service-card flow-card">
                 <h3>
                   <a href="/servicios/tiendas-online.html">Tiendas Online</a>
                 </h3>
@@ -1447,7 +1532,7 @@
                 </p>
               </article>
 
-              <article class="service-card">
+              <article class="service-card flow-card">
                 <h3>
                   <a href="/servicios/seo-tecnico.html">SEO Técnico</a>
                 </h3>
@@ -1457,7 +1542,7 @@
                 </p>
               </article>
 
-              <article class="service-card">
+              <article class="service-card flow-card">
                 <h3>Optimización / Reestructuración</h3>
                 <p>
                   Mejora de sitios existentes que necesitan una base técnica más
@@ -1481,7 +1566,7 @@
             </div>
 
             <div class="faq-grid">
-              <article class="faq-item">
+              <article class="faq-item flow-card">
                 <h3>¿Qué tipo de proyectos toma Raven3?</h3>
                 <p>
                   Principalmente desarrollo web a medida, tiendas online, SEO
@@ -1490,7 +1575,7 @@
                 </p>
               </article>
 
-              <article class="faq-item">
+              <article class="faq-item flow-card">
                 <h3>¿Puedo escribir aunque todavía no tenga todo definido?</h3>
                 <p>
                   Sí. Muchas veces el primer paso es ordenar la necesidad. Si el
@@ -1498,7 +1583,7 @@
                 </p>
               </article>
 
-              <article class="faq-item">
+              <article class="faq-item flow-card">
                 <h3>¿Raven3 trabaja sólo en Argentina?</h3>
                 <p>
                   Raven3 está basado en Argentina, pero puede trabajar con
@@ -1507,7 +1592,7 @@
                 </p>
               </article>
 
-              <article class="faq-item">
+              <article class="faq-item flow-card">
                 <h3>¿También implementan mejoras técnicas?</h3>
                 <p>
                   Sí. Según el proyecto, no sólo auditamos: también podemos
@@ -1600,19 +1685,20 @@
 
     <script>
       (() => {
-        const cards = document.querySelectorAll(
-          ".info-card, .faq-item, .service-card, .stat",
-        );
+        const cards = document.querySelectorAll(".flow-card");
 
         cards.forEach((card) => {
-          const glow = document.createElement("span");
-          glow.className = "card-glow";
-          card.appendChild(glow);
+          if (!card.querySelector(".flow-spot")) {
+            const glow = document.createElement("span");
+            glow.className = "flow-spot";
+            card.appendChild(glow);
+          }
 
           card.addEventListener("mousemove", (e) => {
             const rect = card.getBoundingClientRect();
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
+
             card.style.setProperty("--mx", `${x}px`);
             card.style.setProperty("--my", `${y}px`);
           });
