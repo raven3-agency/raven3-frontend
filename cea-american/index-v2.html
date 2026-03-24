@@ -1278,9 +1278,87 @@
           min-height: 320px;
         }
       }
+
+      .whatsapp-float {
+        position: fixed;
+        right: 22px;
+        bottom: 22px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #25d366, #1ebe5d);
+        color: #fff;
+        display: grid;
+        place-items: center;
+        box-shadow:
+          0 12px 30px rgba(0, 0, 0, 0.35),
+          0 0 0 0 rgba(37, 211, 102, 0.4);
+        z-index: 999;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease;
+        animation: whatsapp-pulse 2.2s infinite;
+      }
+
+      .whatsapp-float:hover {
+        transform: translateY(-4px) scale(1.05);
+        box-shadow:
+          0 18px 40px rgba(0, 0, 0, 0.45),
+          0 0 0 10px rgba(37, 211, 102, 0.08);
+      }
+
+      @keyframes whatsapp-pulse {
+        0% {
+          box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.35),
+            0 0 0 0 rgba(37, 211, 102, 0.4);
+        }
+        70% {
+          box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.35),
+            0 0 0 16px rgba(37, 211, 102, 0);
+        }
+        100% {
+          box-shadow:
+            0 12px 30px rgba(0, 0, 0, 0.35),
+            0 0 0 0 rgba(37, 211, 102, 0);
+        }
+      }
+
+      /* Mobile */
+      @media (max-width: 640px) {
+        .whatsapp-float {
+          width: 54px;
+          height: 54px;
+          right: 16px;
+          bottom: 16px;
+        }
+      }
     </style>
   </head>
   <body>
+    <a
+      href="https://wa.me/541147055757?text=Hola%2C%20estoy%20evaluando%20servicios%20de%20almacenaje%20y%20distribuci%C3%B3n.%20%C2%BFPodr%C3%ADan%20asesorarme%3F"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp"
+    >
+      <svg
+        viewBox="0 0 32 32"
+        width="26"
+        height="26"
+        fill="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          d="M19.11 17.27c-.27-.14-1.6-.79-1.85-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.32.2-.59.07-.27-.14-1.14-.42-2.17-1.33-.8-.71-1.34-1.58-1.5-1.85-.16-.27-.02-.41.12-.54.13-.13.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.83-2.02-.22-.53-.45-.46-.61-.47l-.52-.01c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29s.99 2.65 1.13 2.83c.14.18 1.95 2.97 4.72 4.16.66.28 1.17.45 1.57.58.66.21 1.27.18 1.75.11.53-.08 1.6-.65 1.83-1.28.23-.63.23-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"
+        />
+        <path
+          d="M16.01 2.67c-7.36 0-13.33 5.97-13.33 13.33 0 2.35.61 4.66 1.78 6.69L2 30l7.48-2.4c1.96 1.07 4.16 1.63 6.53 1.63h.01c7.36 0 13.33-5.97 13.33-13.33S23.37 2.67 16.01 2.67zm0 24.24h-.01c-2.01 0-3.98-.54-5.7-1.55l-.41-.24-4.44 1.42 1.45-4.33-.27-.44c-1.16-1.85-1.77-3.99-1.77-6.19 0-6.5 5.29-11.79 11.8-11.79 6.5 0 11.79 5.29 11.79 11.79 0 6.5-5.29 11.79-11.79 11.79z"
+        />
+      </svg>
+    </a>
     <header class="topbar">
       <div class="container topbar__inner">
         <a
