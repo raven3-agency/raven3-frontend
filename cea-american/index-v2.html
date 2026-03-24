@@ -1332,6 +1332,91 @@
           bottom: 16px;
         }
       }
+      .metric-card--snow-fx,
+      .card--snow-fx,
+      .stat-card--snow-fx {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+      }
+
+      /* glow suave debajo del contenido */
+      .metric-card--snow-fx::before,
+      .card--snow-fx::before,
+      .stat-card--snow-fx::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          180px circle at var(--mx, 50%) var(--my, 50%),
+          rgba(90, 190, 255, 0.16),
+          rgba(90, 190, 255, 0.07) 32%,
+          transparent 62%
+        );
+        opacity: 0;
+        transition: opacity 0.25s ease;
+        z-index: 1;
+        pointer-events: none;
+      }
+
+      .metric-card--snow-fx.is-hovered::before,
+      .card--snow-fx.is-hovered::before,
+      .stat-card--snow-fx.is-hovered::before {
+        opacity: 1;
+      }
+
+      /* el copo también por debajo del texto */
+      .metric-card--snow-fx .snow-fx,
+      .card--snow-fx .snow-fx,
+      .stat-card--snow-fx .snow-fx {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 46px;
+        height: 46px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-size: 18px;
+        line-height: 1;
+        color: rgba(232, 247, 255, 0.92);
+        background: rgba(160, 220, 255, 0.08);
+        border: 1px solid rgba(180, 230, 255, 0.14);
+        box-shadow:
+          0 0 0 0 rgba(90, 190, 255, 0),
+          0 0 22px rgba(90, 190, 255, 0.08),
+          inset 0 0 16px rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(6px);
+        pointer-events: none;
+        z-index: 2;
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.72);
+        transition:
+          opacity 0.22s ease,
+          transform 0.22s ease,
+          box-shadow 0.22s ease,
+          background 0.22s ease,
+          border-color 0.22s ease;
+      }
+
+      .metric-card--snow-fx.is-hovered .snow-fx,
+      .card--snow-fx.is-hovered .snow-fx,
+      .stat-card--snow-fx.is-hovered .snow-fx {
+        opacity: 0.75;
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow:
+          0 0 0 8px rgba(90, 190, 255, 0.06),
+          0 0 28px rgba(90, 190, 255, 0.12),
+          inset 0 0 18px rgba(255, 255, 255, 0.04);
+      }
+
+      /* contenido por arriba */
+      .metric-card--snow-fx > *:not(.snow-fx),
+      .card--snow-fx > *:not(.snow-fx),
+      .stat-card--snow-fx > *:not(.snow-fx) {
+        position: relative;
+        z-index: 4;
+      }
     </style>
   </head>
   <body>
@@ -1749,7 +1834,8 @@
           </div>
 
           <div class="metrics-grid">
-            <article class="metric-card reveal">
+            <article class="metric-card metric-card--snow-fx reveal">
+              <span class="snow-fx" aria-hidden="true">❄</span>
               <strong>Infraestructura preparada</strong>
               <p>
                 Espacios y sistemas orientados a congelado, refrigerado y seco,
@@ -1757,7 +1843,8 @@
               </p>
             </article>
 
-            <article class="metric-card reveal">
+            <article class="metric-card metric-card--snow-fx reveal">
+              <span class="snow-fx" aria-hidden="true">❄</span>
               <strong>Criterios de cumplimiento</strong>
               <p>
                 Operación alineada a habilitaciones, requisitos SENASA y
@@ -1765,7 +1852,8 @@
               </p>
             </article>
 
-            <article class="metric-card reveal">
+            <article class="metric-card metric-card--snow-fx reveal">
+              <span class="snow-fx" aria-hidden="true">❄</span>
               <strong>Respuesta logística</strong>
               <p>
                 Distribución con unidades propias para mayor control sobre la
@@ -1773,7 +1861,8 @@
               </p>
             </article>
 
-            <article class="metric-card reveal">
+            <article class="metric-card metric-card--snow-fx reveal">
+              <span class="snow-fx" aria-hidden="true">❄</span>
               <strong>Visibilidad operativa</strong>
               <p>
                 Trazabilidad, monitoreo térmico y foco en estabilidad durante el
@@ -2072,6 +2161,36 @@
           form.reset();
         });
       }
+    </script>
+    <script>
+      const snowFxCards = document.querySelectorAll(
+        ".metric-card--snow-fx, .card--snow-fx, .stat-card--snow-fx",
+      );
+
+      snowFxCards.forEach((card) => {
+        const icon = card.querySelector(".snow-fx");
+        if (!icon) return;
+
+        card.addEventListener("mouseenter", () => {
+          card.classList.add("is-hovered");
+        });
+
+        card.addEventListener("mouseleave", () => {
+          card.classList.remove("is-hovered");
+        });
+
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          icon.style.left = `${x}px`;
+          icon.style.top = `${y}px`;
+
+          card.style.setProperty("--mx", `${x}px`);
+          card.style.setProperty("--my", `${y}px`);
+        });
+      });
     </script>
   </body>
 </html>
