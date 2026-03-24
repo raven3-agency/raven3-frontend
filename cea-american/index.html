@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>
-      CEA American | Almacenaje refrigerado, logística y distribución de alimentos
+      CEA American | Almacenaje refrigerado, logística y distribución de
+      alimentos
     </title>
     <meta
       name="description"
@@ -48,7 +49,7 @@
       name="twitter:image"
       content="https://www.raven3.com.ar/cea-american/logo.png"
     />
-        <!-- Favicons (completo como la ex index) -->
+    <!-- Favicons (completo como la ex index) -->
     <link
       rel="icon"
       type="image/x-icon"
@@ -77,7 +78,6 @@
       href="https://www.raven3.com.ar/cea-american/favicon_io/apple-touch-icon.png"
     />
 
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -88,12 +88,7 @@
         "description": "Empresa de almacenaje, distribución y logística de alimentos congelados, refrigerados y secos con trazabilidad, flota propia y monitoreo de temperatura.",
         "telephone": "+54 11 4705-5757",
         "email": "info@cea-american.com.ar",
-        "areaServed": [
-          "CABA",
-          "GBA",
-          "Provincia de Buenos Aires",
-          "Argentina"
-        ],
+        "areaServed": ["CABA", "GBA", "Provincia de Buenos Aires", "Argentina"],
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Villa Martelli",
@@ -152,8 +147,16 @@
         font-family: Arial, Helvetica, sans-serif;
         color: var(--text);
         background:
-          radial-gradient(circle at 0% 0%, rgba(63, 208, 255, 0.08), transparent 26%),
-          radial-gradient(circle at 100% 10%, rgba(121, 210, 29, 0.06), transparent 18%),
+          radial-gradient(
+            circle at 0% 0%,
+            rgba(63, 208, 255, 0.08),
+            transparent 26%
+          ),
+          radial-gradient(
+            circle at 100% 10%,
+            rgba(121, 210, 29, 0.06),
+            transparent 18%
+          ),
           linear-gradient(180deg, #f8fbff 0%, #f2f6fb 40%, #edf3f8 100%);
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -206,8 +209,9 @@
       }
 
       .brand img {
-        width: 190px;
-        height: auto;
+        height: 80px; 
+        width: auto; 
+        object-fit: contain;
       }
 
       .nav {
@@ -313,8 +317,14 @@
         position: absolute;
         inset: 0;
         background:
-          linear-gradient(92deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.89) 38%, rgba(255, 255, 255, 0.58) 100%),
-          url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80") center/cover no-repeat;
+          linear-gradient(
+            92deg,
+            rgba(255, 255, 255, 0.97) 0%,
+            rgba(255, 255, 255, 0.89) 38%,
+            rgba(255, 255, 255, 0.58) 100%
+          ),
+          url("https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1800&q=80")
+            center/cover no-repeat;
         z-index: -2;
       }
 
@@ -323,8 +333,16 @@
         position: absolute;
         inset: 0;
         background:
-          radial-gradient(circle at 14% 18%, rgba(63, 208, 255, 0.16), transparent 24%),
-          radial-gradient(circle at 84% 82%, rgba(121, 210, 29, 0.12), transparent 20%);
+          radial-gradient(
+            circle at 14% 18%,
+            rgba(63, 208, 255, 0.16),
+            transparent 24%
+          ),
+          radial-gradient(
+            circle at 84% 82%,
+            rgba(121, 210, 29, 0.12),
+            transparent 20%
+          );
         z-index: -1;
       }
 
@@ -410,7 +428,11 @@
         inset: auto -10% -40% auto;
         width: 220px;
         height: 220px;
-        background: radial-gradient(circle, rgba(20, 87, 180, 0.08), transparent 68%);
+        background: radial-gradient(
+          circle,
+          rgba(20, 87, 180, 0.08),
+          transparent 68%
+        );
         pointer-events: none;
       }
 
@@ -491,7 +513,11 @@
       }
 
       .section--soft {
-        background: linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0.72));
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.32),
+          rgba(255, 255, 255, 0.72)
+        );
       }
 
       .section-head {
@@ -529,10 +555,17 @@
         overflow: hidden;
         padding: 24px;
         border-radius: var(--radius-xl);
-        background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(247,250,255,0.96));
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.98),
+          rgba(247, 250, 255, 0.96)
+        );
         border: 1px solid rgba(16, 35, 63, 0.08);
         box-shadow: var(--shadow-md);
-        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+        transition:
+          transform 0.25s ease,
+          box-shadow 0.25s ease,
+          border-color 0.25s ease;
       }
 
       .card:hover {
@@ -548,8 +581,11 @@
         place-items: center;
         margin-bottom: 18px;
         border-radius: 16px;
-        background:
-          linear-gradient(135deg, rgba(20, 87, 180, 0.12), rgba(121, 210, 29, 0.12));
+        background: linear-gradient(
+          135deg,
+          rgba(20, 87, 180, 0.12),
+          rgba(121, 210, 29, 0.12)
+        );
         color: var(--primary);
         font-size: 1.05rem;
         font-weight: 800;
@@ -609,8 +645,13 @@
         border: 1px solid rgba(16, 35, 63, 0.08);
         box-shadow: var(--shadow-lg);
         background:
-          linear-gradient(180deg, rgba(11, 31, 58, 0.16), rgba(11, 31, 58, 0.5)),
-          url("https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+          linear-gradient(
+            180deg,
+            rgba(11, 31, 58, 0.16),
+            rgba(11, 31, 58, 0.5)
+          ),
+          url("https://images.unsplash.com/photo-1553413077-190dd305871c?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
       }
 
       .feature-list {
@@ -662,7 +703,11 @@
         border-radius: 999px;
         color: #fff;
         font-weight: 800;
-        background: linear-gradient(135deg, var(--primary), var(--primary-deep));
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-deep)
+        );
       }
 
       .process__step h3 {
@@ -758,7 +803,11 @@
         overflow: hidden;
         padding: 36px;
         border-radius: 30px;
-        background: linear-gradient(135deg, rgba(11,31,58,0.98), rgba(20,87,180,0.94));
+        background: linear-gradient(
+          135deg,
+          rgba(11, 31, 58, 0.98),
+          rgba(20, 87, 180, 0.94)
+        );
         color: #fff;
         box-shadow: 0 24px 56px rgba(11, 31, 58, 0.2);
       }
@@ -770,7 +819,11 @@
         top: -40px;
         width: 180px;
         height: 180px;
-        background: radial-gradient(circle, rgba(121, 210, 29, 0.18), transparent 70%);
+        background: radial-gradient(
+          circle,
+          rgba(121, 210, 29, 0.18),
+          transparent 70%
+        );
         pointer-events: none;
       }
 
@@ -784,7 +837,7 @@
       .cta-band p {
         margin: 0;
         max-width: 64ch;
-        color: rgba(255,255,255,0.84);
+        color: rgba(255, 255, 255, 0.84);
         line-height: 1.75;
       }
 
@@ -883,7 +936,10 @@
         border-radius: 14px;
         padding: 14px 14px;
         outline: none;
-        transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+        transition:
+          border-color 0.2s ease,
+          box-shadow 0.2s ease,
+          transform 0.2s ease;
       }
 
       input::placeholder,
@@ -940,7 +996,9 @@
       .reveal {
         opacity: 0;
         transform: translateY(24px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
       }
 
       .reveal.is-visible {
@@ -980,7 +1038,7 @@
           gap: 14px;
           padding: 18px;
           border-radius: 18px;
-          background: rgba(255,255,255,0.98);
+          background: rgba(255, 255, 255, 0.98);
           border: 1px solid rgba(16, 35, 63, 0.08);
           box-shadow: 0 18px 44px rgba(11, 31, 58, 0.14);
         }
@@ -1055,13 +1113,12 @@
   <body>
     <header class="topbar">
       <div class="container topbar__inner">
-        <a class="brand" href="#inicio" aria-label="Ir al inicio de CEA American">
-          <img
-            src="logo.png"
-            alt="CEA American, almacenaje y distribución"
-            width="190"
-            height="60"
-          />
+        <a
+          class="brand"
+          href="#inicio"
+          aria-label="Ir al inicio de CEA American"
+        >
+          <img src="logo.png" alt="CEA American, almacenaje y distribución" />
         </a>
 
         <button
@@ -1093,19 +1150,25 @@
       <section class="hero" id="inicio">
         <div class="container hero__grid">
           <div class="hero__copy reveal">
-            <span class="eyebrow">Cadena de frío · logística alimentaria · operación B2B</span>
+            <span class="eyebrow"
+              >Cadena de frío · logística alimentaria · operación B2B</span
+            >
 
-            <h1>Almacenaje y distribución con trazabilidad y control térmico</h1>
+            <h1>
+              Almacenaje y distribución con trazabilidad y control térmico
+            </h1>
 
             <p>
               En CEA American brindamos soluciones para productos congelados,
               refrigerados y secos, con flota propia, monitoreo de temperatura,
-              trazabilidad operativa y cobertura logística en CABA, GBA e interior
-              del país.
+              trazabilidad operativa y cobertura logística en CABA, GBA e
+              interior del país.
             </p>
 
             <div class="hero__actions">
-              <a class="btn btn--primary" href="#contacto">Solicitar presupuesto</a>
+              <a class="btn btn--primary" href="#contacto"
+                >Solicitar presupuesto</a
+              >
               <a class="btn btn--secondary" href="#servicios">Ver servicios</a>
             </div>
 
@@ -1126,8 +1189,8 @@
                 <div>
                   <strong>Cámaras de congelado y refrigerado</strong>
                   <p>
-                    Infraestructura orientada a conservar mercadería bajo condiciones
-                    adecuadas según el tipo de producto.
+                    Infraestructura orientada a conservar mercadería bajo
+                    condiciones adecuadas según el tipo de producto.
                   </p>
                 </div>
               </article>
@@ -1137,8 +1200,8 @@
                 <div>
                   <strong>Distribución con flota propia</strong>
                   <p>
-                    Camiones y camionetas para una operación más controlada, ágil
-                    y consistente.
+                    Camiones y camionetas para una operación más controlada,
+                    ágil y consistente.
                   </p>
                 </div>
               </article>
@@ -1159,8 +1222,8 @@
                 <div>
                   <strong>Cumplimiento y manipulación segura</strong>
                   <p>
-                    Trabajo bajo habilitaciones correspondientes, criterios SENASA,
-                    capacitaciones y foco en seguridad e higiene.
+                    Trabajo bajo habilitaciones correspondientes, criterios
+                    SENASA, capacitaciones y foco en seguridad e higiene.
                   </p>
                 </div>
               </article>
@@ -1174,28 +1237,32 @@
           <article class="stat-card reveal">
             <strong>Congelado</strong>
             <span>
-              Operaciones para productos que requieren conservación a muy baja temperatura.
+              Operaciones para productos que requieren conservación a muy baja
+              temperatura.
             </span>
           </article>
 
           <article class="stat-card reveal">
             <strong>Refrigerado</strong>
             <span>
-              Almacenaje y manipulación con temperatura controlada y monitoreo constante.
+              Almacenaje y manipulación con temperatura controlada y monitoreo
+              constante.
             </span>
           </article>
 
           <article class="stat-card reveal">
             <strong>Seco</strong>
             <span>
-              Gestión ordenada de stock y preparación logística para abastecimiento.
+              Gestión ordenada de stock y preparación logística para
+              abastecimiento.
             </span>
           </article>
 
           <article class="stat-card reveal">
             <strong>Distribución</strong>
             <span>
-              Despacho y cobertura logística para operaciones en CABA, GBA e interior.
+              Despacho y cobertura logística para operaciones en CABA, GBA e
+              interior.
             </span>
           </article>
         </div>
@@ -1209,9 +1276,9 @@
               <h2>Soluciones logísticas para alimentos y cadena de frío</h2>
             </div>
             <p>
-              La propuesta comercial debe comunicar con claridad qué hace la empresa,
-              cómo opera y por qué puede ser un socio confiable para almacenamiento,
-              preparación de pedidos y distribución.
+              La propuesta comercial debe comunicar con claridad qué hace la
+              empresa, cómo opera y por qué puede ser un socio confiable para
+              almacenamiento, preparación de pedidos y distribución.
             </p>
           </div>
 
@@ -1221,7 +1288,8 @@
               <h3>Almacenaje refrigerado</h3>
               <p>
                 Gestión de mercadería con control térmico, orden de stock y
-                conservación adecuada para productos que requieren refrigeración.
+                conservación adecuada para productos que requieren
+                refrigeración.
               </p>
               <ul>
                 <li>Recepción y control de ingreso</li>
@@ -1234,8 +1302,8 @@
               <div class="card__icon">02</div>
               <h3>Almacenaje congelado</h3>
               <p>
-                Operación orientada a productos sensibles que requieren cadena de
-                frío intensiva y seguimiento de conservación.
+                Operación orientada a productos sensibles que requieren cadena
+                de frío intensiva y seguimiento de conservación.
               </p>
               <ul>
                 <li>Cámaras de congelado</li>
@@ -1248,8 +1316,8 @@
               <div class="card__icon">03</div>
               <h3>Preparación de pedidos</h3>
               <p>
-                Armado, clasificación y despacho operativo para agilizar la salida
-                logística y el abastecimiento.
+                Armado, clasificación y despacho operativo para agilizar la
+                salida logística y el abastecimiento.
               </p>
               <ul>
                 <li>Picking y consolidación</li>
@@ -1283,8 +1351,9 @@
               <h2>Capacidad operativa, control y cumplimiento</h2>
             </div>
             <p>
-              Acá es donde la web deja de ser genérica. Estos diferenciales convierten
-              a CEA American en una propuesta mucho más fuerte para clientes B2B.
+              Acá es donde la web deja de ser genérica. Estos diferenciales
+              convierten a CEA American en una propuesta mucho más fuerte para
+              clientes B2B.
             </p>
           </div>
 
@@ -1302,8 +1371,8 @@
               <div class="card__icon">B</div>
               <h3>Trazabilidad</h3>
               <p>
-                Seguimiento de la mercadería a lo largo de la operación para mejorar
-                control, orden y previsibilidad.
+                Seguimiento de la mercadería a lo largo de la operación para
+                mejorar control, orden y previsibilidad.
               </p>
             </article>
 
@@ -1336,31 +1405,34 @@
             <div class="section-head reveal" style="margin-bottom: 8px">
               <div>
                 <span class="eyebrow">Infraestructura</span>
-                <h2>Preparados para almacenamiento, conservación y distribución</h2>
+                <h2>
+                  Preparados para almacenamiento, conservación y distribución
+                </h2>
               </div>
             </div>
 
             <article class="feature reveal">
               <strong>Pallets, racks y bins</strong>
               <p>
-                Infraestructura preparada para una gestión ordenada del almacenamiento
-                y una mejor organización del stock.
+                Infraestructura preparada para una gestión ordenada del
+                almacenamiento y una mejor organización del stock.
               </p>
             </article>
 
             <article class="feature reveal">
               <strong>Cámaras de congelado y refrigerado</strong>
               <p>
-                Espacios orientados a conservar productos bajo condiciones acordes
-                al tipo de mercadería y exigencia operativa.
+                Espacios orientados a conservar productos bajo condiciones
+                acordes al tipo de mercadería y exigencia operativa.
               </p>
             </article>
 
             <article class="feature reveal">
               <strong>Monitoreo y temperatura constante</strong>
               <p>
-                Control de unidades, seguimiento térmico e instrumentos digitales
-                para sostener estabilidad durante la operación logística.
+                Control de unidades, seguimiento térmico e instrumentos
+                digitales para sostener estabilidad durante la operación
+                logística.
               </p>
             </article>
 
@@ -1399,15 +1471,19 @@
             <span class="eyebrow">Confianza operativa</span>
             <h3>Una propuesta pensada para clientes B2B</h3>
             <p>
-              La combinación de infraestructura, control, cumplimiento y capacidad
-              logística permite construir una presencia digital mucho más seria y
-              comercial.
+              La combinación de infraestructura, control, cumplimiento y
+              capacidad logística permite construir una presencia digital mucho
+              más seria y comercial.
             </p>
 
             <ul class="trust-list">
               <li>Manipulación de alimentos con foco en buenas prácticas</li>
-              <li>Capacitación del personal para sostener estándares operativos</li>
-              <li>Control de temperatura y trazabilidad durante la distribución</li>
+              <li>
+                Capacitación del personal para sostener estándares operativos
+              </li>
+              <li>
+                Control de temperatura y trazabilidad durante la distribución
+              </li>
               <li>Base operativa en Buenos Aires con cobertura ampliada</li>
             </ul>
           </article>
@@ -1422,8 +1498,8 @@
               <h2>Cómo se organiza la operación logística</h2>
             </div>
             <p>
-              Un flujo claro ayuda a transmitir orden, cumplimiento y capacidad de
-              respuesta desde el primer contacto comercial.
+              Un flujo claro ayuda a transmitir orden, cumplimiento y capacidad
+              de respuesta desde el primer contacto comercial.
             </p>
           </div>
 
@@ -1432,8 +1508,8 @@
               <div class="num">1</div>
               <h3>Recepción</h3>
               <p>
-                Ingreso de mercadería con clasificación inicial y control operativo
-                según el tipo de producto.
+                Ingreso de mercadería con clasificación inicial y control
+                operativo según el tipo de producto.
               </p>
             </article>
 
@@ -1441,8 +1517,8 @@
               <div class="num">2</div>
               <h3>Almacenaje</h3>
               <p>
-                Ubicación en condiciones acordes a congelado, refrigerado o seco,
-                con infraestructura preparada para orden y conservación.
+                Ubicación en condiciones acordes a congelado, refrigerado o
+                seco, con infraestructura preparada para orden y conservación.
               </p>
             </article>
 
@@ -1459,8 +1535,8 @@
               <div class="num">4</div>
               <h3>Distribución</h3>
               <p>
-                Despacho con flota propia, monitoreo y foco en continuidad, cumplimiento
-                y estabilidad térmica.
+                Despacho con flota propia, monitoreo y foco en continuidad,
+                cumplimiento y estabilidad térmica.
               </p>
             </article>
           </div>
@@ -1470,16 +1546,23 @@
       <section class="section">
         <div class="container">
           <div class="cta-band reveal">
-            <h2>¿Buscás un operador logístico para productos refrigerados o congelados?</h2>
+            <h2>
+              ¿Buscás un operador logístico para productos refrigerados o
+              congelados?
+            </h2>
             <p>
-              CEA American acompaña operaciones que necesitan almacenaje, preparación
-              de pedidos y distribución con control de temperatura, trazabilidad y
-              cumplimiento operativo.
+              CEA American acompaña operaciones que necesitan almacenaje,
+              preparación de pedidos y distribución con control de temperatura,
+              trazabilidad y cumplimiento operativo.
             </p>
 
             <div class="cta-band__actions">
-              <a class="btn btn--primary" href="#contacto">Solicitar contacto</a>
-              <a class="btn btn--ghost" href="tel:+541147055757">Llamar ahora</a>
+              <a class="btn btn--primary" href="#contacto"
+                >Solicitar contacto</a
+              >
+              <a class="btn btn--ghost" href="tel:+541147055757"
+                >Llamar ahora</a
+              >
             </div>
           </div>
         </div>
@@ -1502,9 +1585,9 @@
             </h2>
 
             <p style="margin: 0; color: var(--muted); line-height: 1.75">
-              Si necesitás almacenamiento, logística o distribución para productos
-              congelados, refrigerados o secos, completá el formulario y coordinamos
-              una respuesta comercial.
+              Si necesitás almacenamiento, logística o distribución para
+              productos congelados, refrigerados o secos, completá el formulario
+              y coordinamos una respuesta comercial.
             </p>
 
             <div class="contact-list">
@@ -1520,7 +1603,9 @@
 
               <div class="contact-item">
                 <strong>Email</strong>
-                <a href="mailto:info@cea-american.com.ar">info@cea-american.com.ar</a>
+                <a href="mailto:info@cea-american.com.ar"
+                  >info@cea-american.com.ar</a
+                >
               </div>
 
               <div class="contact-item">
@@ -1542,7 +1627,13 @@
               <div class="form-grid">
                 <div class="field">
                   <label for="name">Nombre</label>
-                  <input id="name" name="name" type="text" placeholder="Tu nombre" required />
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Tu nombre"
+                    required
+                  />
                 </div>
 
                 <div class="field">
@@ -1568,7 +1659,12 @@
 
                 <div class="field">
                   <label for="phone">Teléfono</label>
-                  <input id="phone" name="phone" type="tel" placeholder="+54 11..." />
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+54 11..."
+                  />
                 </div>
 
                 <div class="field field--full">
@@ -1597,9 +1693,12 @@
 
               <div class="form-actions">
                 <span class="form-note">
-                  Este MVP valida el formulario a nivel front. Después se conecta con mail, Formspree o backend.
+                  Este MVP valida el formulario a nivel front. Después se
+                  conecta con mail, Formspree o backend.
                 </span>
-                <button type="submit" class="btn btn--primary">Enviar consulta</button>
+                <button type="submit" class="btn btn--primary">
+                  Enviar consulta
+                </button>
               </div>
 
               <p class="form-status" id="formStatus" aria-live="polite"></p>
@@ -1611,7 +1710,10 @@
 
     <footer class="footer">
       <div class="container footer__inner">
-        <p>© 2026 CEA American. Almacenaje, logística y distribución de alimentos.</p>
+        <p>
+          © 2026 CEA American. Almacenaje, logística y distribución de
+          alimentos.
+        </p>
         <p>Web institucional orientada a captación comercial B2B.</p>
       </div>
     </footer>
@@ -1647,7 +1749,7 @@
         },
         {
           threshold: 0.14,
-        }
+        },
       );
 
       reveals.forEach((item) => revealObserver.observe(item));
@@ -1672,8 +1774,7 @@
           }
 
           if (!isValidEmail) {
-            formStatus.textContent =
-              "Ingresá un email válido para continuar.";
+            formStatus.textContent = "Ingresá un email válido para continuar.";
             return;
           }
 
