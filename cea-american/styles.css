@@ -88,9 +88,9 @@ select {
 }
 
 textarea {
-  resize: vertical; 
-  min-height: 140px; 
-  max-height: 260px; 
+  resize: vertical;
+  min-height: 140px;
+  max-height: 260px;
 }
 
 .container {
@@ -1719,4 +1719,126 @@ textarea {
 .contact-card:hover::before {
   opacity: 0.3;
   transform: scale(1.08);
+}
+.footer {
+  background: linear-gradient(180deg, #071019 0%, #02050a 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 60px;
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.footer__logo {
+  width: 160px;
+  margin-bottom: 16px;
+}
+
+.footer__brand p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+.footer__col h4 {
+  margin: 0 0 16px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-strong);
+}
+
+.footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.footer__col a {
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer__col a:hover {
+  color: var(--text-strong);
+}
+
+.footer__contact li {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.footer__bottom {
+  margin-top: 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer__bottom-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+  gap: 16px;
+}
+
+.footer__bottom p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted-2);
+}
+
+.footer__legal {
+  display: flex;
+  gap: 18px;
+  margin-right: 80px;
+}
+
+.footer__legal a {
+  font-size: 0.85rem;
+  color: var(--muted-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal a:hover {
+  color: var(--text-strong);
+}
+
+@media (max-width: 1024px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.footer__cta {
+  margin-top: 24px;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer__cta:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(55,226,213,0.15);
+}
+.footer__bottom {
+  margin-top: 56px;
 }
