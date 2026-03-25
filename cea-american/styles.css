@@ -870,7 +870,7 @@ select {
     rgba(8, 26, 48, 0.98),
     rgba(13, 74, 152, 0.95)
   );
-  /* border: 1px solid rgba(255, 255, 255, 0.08); */
+
   box-shadow: var(--shadow-lg);
 }
 
@@ -1219,7 +1219,6 @@ textarea {
   }
 }
 
-/* Mobile */
 @media (max-width: 640px) {
   .whatsapp-float {
     width: 54px;
@@ -1236,7 +1235,6 @@ textarea {
   isolation: isolate;
 }
 
-/* glow suave debajo del contenido */
 .metric-card--snow-fx::before,
 .card--snow-fx::before,
 .stat-card--snow-fx::before {
@@ -1261,7 +1259,6 @@ textarea {
   opacity: 1;
 }
 
-/* el copo también por debajo del texto */
 .metric-card--snow-fx .snow-fx,
 .card--snow-fx .snow-fx,
 .stat-card--snow-fx .snow-fx {
@@ -1306,7 +1303,6 @@ textarea {
     inset 0 0 18px rgba(255, 255, 255, 0.04);
 }
 
-/* contenido por arriba */
 .metric-card--snow-fx > *:not(.snow-fx),
 .card--snow-fx > *:not(.snow-fx),
 .stat-card--snow-fx > *:not(.snow-fx) {
@@ -1411,7 +1407,6 @@ textarea {
   z-index: 1;
 }
 
-/* contenido arriba */
 .process__step > * {
   position: relative;
   z-index: 2;
@@ -1474,4 +1469,95 @@ textarea {
 
 .coverage-card:hover::before {
   transform: scale(1.12);
+}
+
+.card__badge {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--muted-2);
+}
+
+.card p {
+  max-width: 26ch;
+}
+
+.card__icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 130, 246, 0.16),
+    rgba(120, 214, 30, 0.1)
+  );
+  font-size: 1.2rem;
+}
+
+.card--image {
+  position: relative;
+  overflow: hidden;
+}
+
+.card--image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  transform: scale(1.05);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  z-index: 0;
+}
+
+.card--image:nth-child(1)::before {
+  background-image: url("img/camiones.png");
+}
+
+.card--image:nth-child(3)::before {
+  background-image: url("img/frio.png");
+}
+
+.card--image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 33, 0.2),
+    rgba(6, 19, 33, 0.9)
+  );
+  z-index: 1;
+}
+
+.card--image > * {
+  position: relative;
+  z-index: 2;
+}
+
+.card--image:hover::before {
+  transform: scale(1.12);
+  opacity: 0.6;
+}
+
+.card--highlight {
+  border-color: rgba(44, 130, 246, 0.35);
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(44, 130, 246, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(44, 130, 246, 0.25);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(44, 130, 246, 0.2);
 }
