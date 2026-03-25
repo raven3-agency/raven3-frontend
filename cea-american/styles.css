@@ -63,6 +63,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
+/* h1, h2, .section-head h2 {
+   font-family: "Sanchez", serif;
+} */
 
 img {
   display: block;
