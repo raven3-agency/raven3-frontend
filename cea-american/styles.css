@@ -920,6 +920,7 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
   gap: 22px;
+   margin-top: 22px;
 }
 
 .contact-card,
