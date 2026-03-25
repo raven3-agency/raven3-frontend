@@ -1673,3 +1673,42 @@ textarea {
   background: rgba(44, 130, 246, 0.2);
   color: #fff;
 }
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("img/contacto.png") center/cover no-repeat;
+  opacity: 0.22;
+  transform: scale(1.04);
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  z-index: 0;
+}
+
+.contact-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 19, 33, 0.32),
+    rgba(6, 19, 33, 0.493) 38%,
+    rgba(6, 19, 33, 0.842) 100%
+  );
+  z-index: 1;
+}
+
+.contact-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card:hover::before {
+  opacity: 0.3;
+  transform: scale(1.08);
+}
