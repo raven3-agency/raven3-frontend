@@ -87,6 +87,12 @@ select {
   font: inherit;
 }
 
+textarea {
+  resize: vertical; 
+  min-height: 140px; 
+  max-height: 260px; 
+}
+
 .container {
   width: min(calc(100% - 32px), var(--container));
   margin: 0 auto;
@@ -920,7 +926,7 @@ select {
   display: grid;
   grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
   gap: 22px;
-   margin-top: 22px;
+  margin-top: 22px;
 }
 
 .contact-card,
@@ -1686,7 +1692,9 @@ textarea {
   background: url("img/contacto.png") center/cover no-repeat;
   opacity: 0.22;
   transform: scale(1.04);
-  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
   z-index: 0;
 }
 
