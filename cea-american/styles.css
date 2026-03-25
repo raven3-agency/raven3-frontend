@@ -1567,3 +1567,109 @@ textarea {
     0 30px 80px rgba(0, 0, 0, 0.5),
     0 0 0 1px rgba(44, 130, 246, 0.2);
 }
+.custom-select {
+  position: relative;
+}
+
+.custom-select__trigger {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  transition:
+    border-color 0.22s ease,
+    box-shadow 0.22s ease,
+    background 0.22s ease;
+}
+
+.custom-select__trigger:hover {
+  border-color: rgba(44, 130, 246, 0.28);
+}
+
+.custom-select.is-open .custom-select__trigger,
+.custom-select__trigger:focus-visible {
+  border-color: rgba(44, 130, 246, 0.42);
+  box-shadow: 0 0 0 4px rgba(44, 130, 246, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.custom-select__value {
+  color: var(--text);
+  text-align: left;
+}
+
+.custom-select__arrow {
+  color: var(--muted);
+  font-size: 0.8rem;
+  transition: transform 0.2s ease;
+}
+
+.custom-select.is-open .custom-select__arrow {
+  transform: rotate(180deg);
+}
+
+.custom-select__dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  display: none;
+  overflow: hidden;
+
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(8, 26, 48, 0.98);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+  padding: 8px;
+}
+
+.custom-select.is-open .custom-select__dropdown {
+  display: grid;
+  gap: 4px;
+}
+
+.custom-select__option {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 14px;
+
+  display: flex;
+  align-items: center;
+  text-align: left;
+
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--text);
+
+  font: inherit;
+  cursor: pointer;
+  transition:
+    background 0.18s ease,
+    color 0.18s ease;
+}
+
+.custom-select__option:hover {
+  background: rgba(44, 130, 246, 0.14);
+  color: #fff;
+}
+
+.custom-select__option.is-selected {
+  background: rgba(44, 130, 246, 0.2);
+  color: #fff;
+}

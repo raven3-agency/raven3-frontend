@@ -778,17 +778,78 @@
                     />
                   </div>
 
-                  <div class="field field--full">
+                  <div class="field field--full custom-select-field">
                     <label for="service">Servicio de interés</label>
-                    <select id="service" name="service">
-                      <option value="">Seleccionar</option>
-                      <option>Almacenaje refrigerado</option>
-                      <option>Almacenaje congelado</option>
-                      <option>Preparación de pedidos</option>
-                      <option>Distribución</option>
-                      <option>Operación integral</option>
-                      <option>Otro</option>
-                    </select>
+
+                    <div class="custom-select" id="serviceSelect">
+                      <button
+                        type="button"
+                        class="custom-select__trigger"
+                        aria-haspopup="listbox"
+                        aria-expanded="false"
+                      >
+                        <span class="custom-select__value">Seleccionar</span>
+                        <span class="custom-select__arrow">▾</span>
+                      </button>
+
+                      <div
+                        class="custom-select__dropdown"
+                        role="listbox"
+                        tabindex="-1"
+                      >
+                        <button
+                          type="button"
+                          class="custom-select__option is-selected"
+                          data-value=""
+                        >
+                          Seleccionar
+                        </button>
+                        <button
+                          type="button"
+                          class="custom-select__option"
+                          data-value="Almacenaje refrigerado"
+                        >
+                          Almacenaje refrigerado
+                        </button>
+                        <button
+                          type="button"
+                          class="custom-select__option"
+                          data-value="Almacenaje congelado"
+                        >
+                          Almacenaje congelado
+                        </button>
+                        <button
+                          type="button"
+                          class="custom-select__option"
+                          data-value="Preparación de pedidos"
+                        >
+                          Preparación de pedidos
+                        </button>
+                        <button
+                          type="button"
+                          class="custom-select__option"
+                          data-value="Distribución"
+                        >
+                          Distribución
+                        </button>
+                        <button
+                          type="button"
+                          class="custom-select__option"
+                          data-value="Operación integral"
+                        >
+                          Operación integral
+                        </button>
+                        <button
+                          type="button"
+                          class="custom-select__option"
+                          data-value="Otro"
+                        >
+                          Otro
+                        </button>
+                      </div>
+                    </div>
+
+                    <input type="hidden" name="service" id="service" value="" />
                   </div>
 
                   <div class="field field--full">
@@ -919,6 +980,53 @@
           card.style.setProperty("--my", `${y}px`);
         });
       });
+    </script>
+    <script>
+      const serviceSelect = document.getElementById("serviceSelect");
+
+      if (serviceSelect) {
+        const trigger = serviceSelect.querySelector(".custom-select__trigger");
+        const valueText = serviceSelect.querySelector(".custom-select__value");
+        const options = serviceSelect.querySelectorAll(
+          ".custom-select__option",
+        );
+        const hiddenInput = document.getElementById("service");
+
+        const closeSelect = () => {
+          serviceSelect.classList.remove("is-open");
+          trigger.setAttribute("aria-expanded", "false");
+        };
+
+        trigger.addEventListener("click", () => {
+          const isOpen = serviceSelect.classList.toggle("is-open");
+          trigger.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        options.forEach((option) => {
+          option.addEventListener("click", () => {
+            options.forEach((opt) => opt.classList.remove("is-selected"));
+            option.classList.add("is-selected");
+
+            const value = option.dataset.value || "";
+            valueText.textContent = option.textContent.trim();
+            hiddenInput.value = value;
+
+            closeSelect();
+          });
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!serviceSelect.contains(e.target)) {
+            closeSelect();
+          }
+        });
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            closeSelect();
+          }
+        });
+      }
     </script>
   </body>
 </html>
