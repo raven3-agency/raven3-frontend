@@ -1734,8 +1734,9 @@ textarea {
 }
 
 .footer__logo {
-  width: 160px;
-  margin-bottom: 16px;
+  width: 300px;
+  margin-bottom: 26px;
+  display: block;
 }
 
 .footer__brand p {
@@ -1777,8 +1778,18 @@ textarea {
   margin-bottom: 8px;
 }
 
+.footer__cta {
+  margin-top: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.footer__cta:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(55, 226, 213, 0.15);
+}
+
 .footer__bottom {
-  margin-top: 48px;
+  margin-top: 56px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -1799,7 +1810,7 @@ textarea {
 .footer__legal {
   display: flex;
   gap: 18px;
-  margin-right: 80px;
+  margin-right: 0;
 }
 
 .footer__legal a {
@@ -1820,26 +1831,82 @@ textarea {
 }
 
 @media (max-width: 640px) {
+  .footer {
+    padding-top: 48px;
+    text-align: center;
+  }
+
   .footer__grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer__brand,
+  .footer__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__logo {
+    width: min(260px, 78vw);
+    margin: 0 auto 22px;
+  }
+
+  .footer__brand p {
+    max-width: 34ch;
+    margin: 0 auto;
+  }
+
+  .footer__col h4 {
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  .footer__col ul {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer__contact {
+    justify-items: center;
+  }
+
+  .footer__contact li {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .footer__cta {
+    margin: 22px auto 0;
+    width: 100%;
+    max-width: 260px;
+    justify-content: center;
   }
 
   .footer__bottom-inner {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .footer__bottom p {
+    text-align: center;
+  }
+
+  .footer__legal {
+    margin-right: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
   }
 }
-
-
-.footer__cta {
-  margin-top: 24px;
-  border: 1px solid rgba(255,255,255,0.15);
-}
-
-.footer__cta:hover {
-  border-color: var(--accent);
-  box-shadow: 0 0 20px rgba(55,226,213,0.15);
-}
-.footer__bottom {
-  margin-top: 56px;
+@media (max-width: 640px) {
+  .footer__brand,
+  .footer__col {
+    width: 100%;
+  }
 }
