@@ -415,111 +415,251 @@
       </section>
 
       <!-- Showcase con parallax en imágenes (puedes reemplazar los src) -->
-      <section aria-label="Showcase" data-scroll-section>
+      <section
+        class="clients-section"
+        aria-label="Showcase"
+        data-scroll-section
+      >
         <div class="container">
-          <h2 class="section-title">Marcas que confiaron en nosotros</h2>
-          <p class="section-subtitle" data-scroll data-scroll-speed="0.3">
-            Casos reales de webs, tiendas y SEO técnico que potenciaron su
-            presencia online.
-          </p>
-          <div class="showcase" style="margin-top: 30px">
-            <!-- Cliente 1 -->
-            <figure
-              class="shot"
-              itemscope
-              itemtype="https://schema.org/CreativeWork"
-            >
-              <img
-                src="assets/img/portfolio/WEB/ndbpropiedades/logo.png"
-                class="img-fluid"
-                alt="imagen del logo de ndb propiedades"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <p class="client-label" itemprop="name">NDB Propiedades</p>
-                <p class="client-outcome" itemprop="description">
-                  Plataforma inmobiliaria a medida con filtros dinámicos e
-                  integración API Tokko, optimizada para rendimiento y
-                  generación de consultas.
-                </p>
-              </figcaption>
-            </figure>
-
-            <!-- Cliente 2 -->
-            <figure
-              class="shot"
-              itemscope
-              itemtype="https://schema.org/CreativeWork"
-            >
-              <img
-                src="assets/img/portfolio/WEB/sgm/logo.png"
-                class="img-fluid"
-                alt="imagen del logo de sgm+"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <!-- <h3 class="client-name">SGM+</h3> -->
-                <p class="client-label" itemprop="name">SGM+</p>
-                <p class="client-outcome" itemprop="description">
-                  Sitio institucional con e-commerce integrado para talleres y
-                  experiencias, diseñado para escalar comunidad e inscripciones.
-                </p>
-              </figcaption>
-            </figure>
-
-            <!-- Cliente 3 -->
-            <figure
-              class="shot"
-              itemscope
-              itemtype="https://schema.org/CreativeWork"
-            >
-              <img
-                src="assets/img/portfolio/WEB/lassen/logo.png"
-                class="img-fluid"
-                alt="imagen del logo de lassenpharma"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <!-- <h3 class="client-name">LASSENPHARMA</h3> -->
-                <p class="client-label" itemprop="name">LASSENPHARMA</p>
-                <p class="client-outcome">
-                  Web corporativa con arquitectura optimizada y SEO técnico
-                  enfocado en visibilidad orgánica y performance.
-                </p>
-              </figcaption>
-            </figure>
-
-            <!-- Cliente 4 -->
-            <figure
-              class="shot"
-              itemscope
-              itemtype="https://schema.org/CreativeWork"
-            >
-              <img
-                src="assets/img/portfolio/WEB/beforce/logo.png"
-                class="img-fluid"
-                alt="imagen del logo de beforce"
-                loading="lazy"
-                decoding="async"
-              />
-              <figcaption>
-                <!-- <h3 class="client-name">BEFORCE</h3> -->
-                <p class="client-label" itemprop="name">BEFORCE</p>
-                <p class="client-outcome">
-                  Catálogo digital a medida con identidad sólida, diseñado para
-                  exhibir productos industriales con claridad y velocidad.
-                </p>
-              </figcaption>
-            </figure>
+          <div class="clients-section__head">
+            <h2 class="section-title">Marcas que confiaron en nosotros</h2>
+            <p class="section-subtitle" data-scroll data-scroll-speed="0.3">
+              Casos reales de webs, tiendas y SEO técnico que potenciaron su
+              presencia online.
+            </p>
           </div>
+
+          <div class="clients-grid" style="margin-top: 34px">
+            <!-- NDB -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="NDB Propiedades" />
+              <a
+                href="https://ndbpropiedades.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Visitar sitio de NDB Propiedades"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div class="client-flip-card__media">
+                    <img
+                      src="assets/img/portfolio/WEB/ndbpropiedades/logo.png"
+                      alt="NDB Propiedades"
+                      class="client-flip-card__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <!-- <div class="client-flip-card__content">
+                    <span class="client-flip-card__eyebrow"
+                      >NDB PROPIEDADES</span
+                    >
+                    <p class="client-flip-card__text" itemprop="description">
+                      Plataforma inmobiliaria a medida con filtros dinámicos e
+                      integración API Tokko.
+                    </p>
+                  </div> -->
+                </div>
+
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label">Plataforma inmobiliaria</span>
+                    <h3 class="client-flip-card__domain">
+                      ndbpropiedades.com.ar
+                    </h3>
+                    <p class="client-flip-card__back-text">
+                      Desarrollo web a medida · Integración Tokko Broker ·
+                      Optimización SEO
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- SGM+ -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="SGM+" />
+              <a
+                href="https://somosgrupodemujeresmas.ar"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Ver proyecto de SGM+"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div
+                    class="client-flip-card__media client-flip-card__media--logo"
+                  >
+                    <img
+                      src="assets/img/portfolio/WEB/sgm/logo.png"
+                      alt="Logo de SGM+"
+                      class="client-flip-card__image client-flip-card__image--contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <!-- <div class="client-flip-card__content">
+                    <span class="client-flip-card__eyebrow">SGM+</span>
+                    <p class="client-flip-card__text" itemprop="description">
+                      Sitio institucional con e-commerce integrado para
+                      talleres, experiencias e inscripciones.
+                    </p>
+                  </div> -->
+                </div>
+
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label">Proyecto web</span>
+                    <h3 class="client-flip-card__domain">
+                      somosgrupodemujeresmas.ar
+                    </h3>
+                    <p class="client-flip-card__back-text">
+                      Branding digital · Sitio institucional · E-commerce
+                      integrado
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- LASSENPHARMA -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="LASSENPHARMA" />
+              <a
+                href="https://lassen.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Ver proyecto de Lassenpharma"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div
+                    class="client-flip-card__media client-flip-card__media--logo"
+                  >
+                    <img
+                      src="assets/img/portfolio/WEB/lassen/logo.png"
+                      alt="Logo de Lassenpharma"
+                      class="client-flip-card__image client-flip-card__image--contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <!-- <div class="client-flip-card__content">
+                    <span class="client-flip-card__eyebrow">LASSENPHARMA</span>
+                    <p class="client-flip-card__text" itemprop="description">
+                      Web corporativa con arquitectura optimizada y SEO técnico
+                      enfocado en visibilidad orgánica.
+                    </p>
+                  </div> -->
+                </div>
+
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label"
+                      >Sitio corporativo</span
+                    >
+                    <h3 class="client-flip-card__domain">lassen.ar</h3>
+                    <p class="client-flip-card__back-text">
+                      SEO técnico · Arquitectura web · Performance y claridad de
+                      marca
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- BEFORCE -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="BEFORCE" />
+              <a
+                href="https://beforce.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Ver proyecto de BEFORCE"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div
+                    class="client-flip-card__media client-flip-card__media--logo"
+                  >
+                    <img
+                      src="assets/img/portfolio/WEB/beforce/logo.png"
+                      alt="Logo de BEFORCE"
+                      class="client-flip-card__image client-flip-card__image--contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+
+                  <!-- <div class="client-flip-card__content">
+                    <span class="client-flip-card__eyebrow">BEFORCE</span>
+                    <p class="client-flip-card__text" itemprop="description">
+                      Catálogo digital a medida con identidad sólida para
+                      exhibir productos con claridad y velocidad.
+                    </p>
+                  </div> -->
+                </div>
+
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label"
+                      >Catálogo digital</span
+                    >
+                    <h3 class="client-flip-card__domain">beforce.ar</h3>
+                    <p class="client-flip-card__back-text">
+                      Identidad visual · Presentación de productos · Navegación
+                      clara
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+
           <div
             class="cta-center"
             data-scroll
             data-scroll-speed="0.2"
-            style="margin-top: 40px"
+            style="margin-top: 44px"
           >
             <a href="clientes.html" class="btn primary">Ver más proyectos</a>
           </div>
@@ -839,6 +979,47 @@
         { rootMargin: "200px" },
       );
       io.observe(formEl);
+    </script>
+    <script>
+      (function () {
+        const cards = document.querySelectorAll(".client-flip-card");
+        const isTouchDevice = () => window.matchMedia("(hover: none)").matches;
+
+        cards.forEach((card) => {
+          const link = card.querySelector(".client-flip-card__inner");
+
+          card.addEventListener("click", function (e) {
+            if (!isTouchDevice()) return;
+
+            if (!card.classList.contains("is-flipped")) {
+              e.preventDefault();
+              document
+                .querySelectorAll(".client-flip-card.is-flipped")
+                .forEach((item) => {
+                  if (item !== card) item.classList.remove("is-flipped");
+                });
+
+              card.classList.add("is-flipped");
+            }
+          });
+
+          if (link) {
+            link.addEventListener("keydown", function (e) {
+              if (e.key === "Enter" || e.key === " ") {
+                card.classList.add("is-flipped");
+              }
+            });
+          }
+        });
+
+        document.addEventListener("click", function (e) {
+          cards.forEach((card) => {
+            if (!card.contains(e.target)) {
+              card.classList.remove("is-flipped");
+            }
+          });
+        });
+      })();
     </script>
   </body>
 </html>
