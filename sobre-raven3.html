@@ -96,8 +96,17 @@
       crossorigin
     />
 
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts: Space Grotesk + Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- CSS -->
     <link rel="preload" href="assets/css/style.css" as="style" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
 
     <script
       async
@@ -1183,68 +1192,54 @@
   </head>
 
   <body>
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="progress" aria-hidden="true"></div>
+
+    <div id="background" aria-hidden="true">
+      <canvas id="particles"></canvas>
+    </div>
+
     <div class="wasap" aria-label="WhatsApp Raven3">
-      <a
-        href="https://api.whatsapp.com/send?l=es&amp;text=Hola%20Ravens!%20Quiero%20conocer%20m%C3%A1s%20sobre%20Raven3&amp;phone=5491134568899"
-        target="_blank"
-        rel="noopener"
-        aria-label="Enviar mensaje por WhatsApp"
-      >
+      <a href="https://api.whatsapp.com/send?l=es&amp;text=Hola%20Ravens!%20Quiero%20conocer%20m%C3%A1s%20sobre%20Raven3&amp;phone=5491134568899" target="_blank" rel="noopener" aria-label="Enviar mensaje por WhatsApp">
         <img src="assets/img/svg/logo-wapp-02.svg" alt="WhatsApp Raven3" />
       </a>
     </div>
 
-    <div id="background" aria-hidden="true">
-      <canvas id="particles"></canvas>
-      <div class="progress" id="progress"></div>
-    </div>
+    <header class="topbar" role="banner">
+      <div class="container topbar__inner">
+        <a href="https://raven3.com.ar/" class="logo" aria-label="Raven3 — Inicio">
+          <img src="assets/img/logo2.png" alt="Raven3 agencia digital" class="logo-img" width="120" height="40" />
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Navegación principal">
+          <a class="topbar__link" href="/#servicios">Servicios</a>
+          <a class="topbar__link" href="/#proceso">Proceso</a>
+          <a class="topbar__link" href="/clientes.html">Clientes</a>
+          <a class="topbar__link is-active" href="/sobre-raven3.html">Nosotros</a>
+          <a class="topbar__link" href="/contacto.html">Contacto</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="/#contacto">Hablemos</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
 
-    <main class="scroll-container" data-scroll-container>
-      <header class="topbar" data-scroll-section>
-        <div class="container topbar__inner">
-          <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0">
-            <img
-              src="assets/img/logo2.png"
-              alt="logo de raven3"
-              class="logo-img"
-              width="579"
-              height="431"
-            />
-          </a>
+    <main>
 
-          <nav class="topbar__nav" aria-label="Navegación principal">
-            <a class="topbar__link is-active" href="/sobre-raven3.html"
-              >Sobre Raven3</a
-            >
-            <a class="topbar__link" href="/clientes.html">Clientes</a>
-            <a
-              class="topbar__link"
-              href="/servicios/desarrollo-web-a-medida.html"
-              >Desarrollo web</a
-            >
-            <a class="topbar__link" href="/servicios/tiendas-online.html"
-              >Tiendas online</a
-            >
-            <a class="topbar__link" href="/servicios/seo-tecnico.html"
-              >SEO técnico</a
-            >
-          </nav>
-
-          <a class="btn primary" href="contacto.html">Hablemos</a>
-        </div>
-      </header>
-
-      <section class="about-hero" data-scroll-section>
+      <section class="about-hero">
         <div class="container about-hero__inner">
           <div class="about-hero__copy">
-            <p class="eyebrow" data-scroll>Sobre Raven3</p>
+            <p class="eyebrow">Sobre Raven3</p>
 
-            <h1 data-scroll>
+            <h1>
               Desarrollo web a medida
               <span class="accent">para marcas que necesitan más.</span>
             </h1>
 
-            <p class="about-lead" data-scroll>
+            <p class="about-lead">
               <strong>Raven3</strong> es una agencia digital enfocada en
               <strong>desarrollo web custom</strong>,
               <strong>tiendas online</strong>, <strong>SEO técnico</strong>,
@@ -1264,8 +1259,8 @@
 
           <div
             class="about-hero__panel card-glow"
-            data-scroll
-            data-scroll-speed="0.6"
+           
+           
           >
             <div class="stat-grid">
               <div class="stat-item flow-card">
@@ -1302,7 +1297,7 @@
         </div>
       </section>
 
-      <section class="about-section" data-scroll-section>
+      <section class="about-section">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Qué hacemos</p>
@@ -1319,8 +1314,8 @@
           <div class="about-grid">
             <article
               class="about-card flow-card"
-              data-scroll
-              data-scroll-speed="0.15"
+             
+             
             >
               <div class="tag">Web a medida</div>
               <h3>Desarrollo sin rigidez innecesaria</h3>
@@ -1333,8 +1328,8 @@
 
             <article
               class="about-card flow-card"
-              data-scroll
-              data-scroll-speed="0.25"
+             
+             
             >
               <div class="tag">E-commerce</div>
               <h3>Tiendas pensadas para vender</h3>
@@ -1347,8 +1342,8 @@
 
             <article
               class="about-card flow-card"
-              data-scroll
-              data-scroll-speed="0.35"
+             
+             
             >
               <div class="tag">SEO técnico</div>
               <h3>Optimización desde la base</h3>
@@ -1361,8 +1356,8 @@
 
             <article
               class="about-card flow-card"
-              data-scroll
-              data-scroll-speed="0.45"
+             
+             
             >
               <div class="tag">Integraciones</div>
               <h3>Sitios conectados con el negocio</h3>
@@ -1376,7 +1371,7 @@
         </div>
       </section>
 
-      <section class="about-section" data-scroll-section>
+      <section class="about-section">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Por qué elegir Raven3</p>
@@ -1434,9 +1429,9 @@
         </div>
       </section>
 
-      <section class="about-section about-section--split" data-scroll-section>
+      <section class="about-section about-section--split">
         <div class="container split-layout">
-          <div class="split-copy" data-scroll data-scroll-speed="0.1">
+          <div class="split-copy">
             <p class="eyebrow">Quién está detrás</p>
             <h2 class="section-title">
               Raven3 está impulsada por una mirada hands-on, técnica y orientada
@@ -1460,7 +1455,7 @@
             </p>
           </div>
 
-          <div class="card-glow" data-scroll data-scroll-speed="0.35">
+          <div class="card-glow">
             <div class="stat-grid">
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Base</span>
@@ -1497,7 +1492,7 @@
         </div>
       </section>
 
-      <section class="about-section" data-scroll-section>
+      <section class="about-section">
         <div class="container">
           <div class="manifesto">
             <div class="manifesto__copy">
@@ -1548,7 +1543,7 @@
         </div>
       </section>
 
-      <section class="about-section" data-scroll-section>
+      <section class="about-section">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Comparativa</p>
@@ -1590,9 +1585,9 @@
         </div>
       </section>
 
-      <section class="about-section about-section--split" data-scroll-section>
+      <section class="about-section about-section--split">
         <div class="container split-layout">
-          <div class="split-copy" data-scroll data-scroll-speed="0.08">
+          <div class="split-copy">
             <p class="eyebrow">Nuestra forma de trabajar</p>
             <h2 class="section-title">
               No hacemos sitios genéricos para problemas específicos
@@ -1614,7 +1609,7 @@
             </p>
           </div>
 
-          <div class="principles" data-scroll data-scroll-speed="0.32">
+          <div class="principles">
             <article class="principle flow-card">
               <span>01</span>
               <div>
@@ -1659,7 +1654,7 @@
         </div>
       </section>
 
-      <section class="about-section about-section--compact" data-scroll-section>
+      <section class="about-section about-section--compact">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Servicios principales</p>
@@ -1706,7 +1701,7 @@
         </div>
       </section>
 
-      <section class="about-section" data-scroll-section>
+      <section class="about-section">
         <div class="container">
           <div class="cta-banner cta-banner--premium flow-card">
             <div>
@@ -1739,78 +1734,74 @@
         </div>
       </section>
 
-      <footer id="footer" data-scroll-section>
-        <div class="foot">
-          <div class="brand">
-            <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0">
-              <img
-                src="assets/img/logo2.png"
-                alt="logo de raven3"
-                class="logo-img"
-                width="579"
-                height="431"
-              />
-            </a>
-          </div>
-          <div>
-            <div class="section-subtitle">
-              Desarrollo web a medida, tiendas online, performance y SEO técnico
-              con foco en resultados reales.
-            </div>
-            <div class="cta-row" style="margin-top: 1rem">
-              <a class="btn primary" href="mailto:hola@raven3.com.ar">
-                Contactar por email
+      <footer id="footer" aria-label="Pie de página">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <a href="https://raven3.com.ar/" aria-label="Raven3 — Inicio" style="display: inline-block; margin-bottom: 16px;">
+                <img src="assets/img/logo2.png" alt="Raven3 agencia digital" class="logo-img" style="height: 110px; width: auto;" />
               </a>
-              <a
-                class="btn"
-                href="https://wa.me/5491134568899"
-                target="_blank"
-                rel="noopener"
-              >
-                WhatsApp
-              </a>
+              <p>Agencia digital argentina especializada en desarrollo web a medida, e-commerce, SEO técnico y arquitectura digital premium. Sin templates. Resultados reales.</p>
+              <div class="cta-row">
+                <a class="btn primary" href="mailto:hola@raven3.com.ar">Escribinos</a>
+                <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4>Servicios</h4>
+              <ul class="footer-links">
+                <li><a href="/servicios/desarrollo-web-a-medida.html">Desarrollo web</a></li>
+                <li><a href="/servicios/tiendas-online.html">Tiendas online</a></li>
+                <li><a href="/servicios/seo-tecnico.html">SEO técnico</a></li>
+                <li><a href="/#servicios">Performance &amp; CWV</a></li>
+                <li><a href="/#servicios">UX/UI Conversión</a></li>
+                <li><a href="/#servicios">Integraciones API</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contacto</h4>
+              <ul class="footer-contact-list">
+                <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+                <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener">+54 9 11 3456-8899</a></li>
+                <li>Buenos Aires, Argentina</li>
+              </ul>
+              <h4 style="margin-top: 24px;">Empresa</h4>
+              <ul class="footer-links">
+                <li><a href="/sobre-raven3.html">Sobre Raven3</a></li>
+                <li><a href="/clientes.html">Clientes</a></li>
+              </ul>
             </div>
           </div>
-
-          <nav class="footer-nav">
-            <a href="/sobre-raven3.html">Sobre Raven3</a>
-            ·
-            <a href="/clientes.html">Clientes</a>
-            ·
-            <a href="/servicios/desarrollo-web-a-medida.html">Desarrollo web</a>
-            ·
-            <a href="/servicios/tiendas-online.html">Tiendas online</a>
-            ·
-            <a href="/servicios/seo-tecnico.html">SEO técnico</a>
-          </nav>
-
-          <div class="copyright small">
-            <span id="year"></span> © Raven3. Todos los derechos reservados.
-            <span class="footer-legal">
-              ·
-              <a href="/politica-de-privacidad.html">Política de privacidad</a>
-              ·
-              <a href="/terminos-de-contratacion.html"
-                >Términos de contratación</a
-              >
+          <div class="footer-bottom small">
+            <span>
+              <span id="year"></span> © Raven3. Todos los derechos reservados.
+              <span class="footer-legal">
+                ·
+                <a href="/politica-de-privacidad.html">Política de privacidad</a>
+                ·
+                <a href="/terminos-de-contratacion.html">Términos</a>
+              </span>
             </span>
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/agencia.raven3/" target="_blank" rel="noopener" aria-label="Instagram de Raven3">ig</a>
+              <a href="https://github.com/raven3-agency/" target="_blank" rel="noopener" aria-label="GitHub de Raven3">gh</a>
+            </div>
           </div>
         </div>
       </footer>
     </main>
 
-    <script type="importmap">
-      {
-        "imports": {
-          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
-          "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
-        }
-      }
-    </script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-    <script src="assets/vendor/locomotive/locomotive-scroll.min.js"></script>
+    <!-- App modules -->
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="assets/js/particles.js"></script>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 
     <script>
       (() => {
@@ -1838,10 +1829,6 @@
           });
         });
       })();
-    </script>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>

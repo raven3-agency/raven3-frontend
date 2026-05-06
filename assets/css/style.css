@@ -8,11 +8,12 @@
   --ink-2: #c6d2db;
   --muted: #7c8a96;
 
-  --r3: #37e2d5;
-  --r3-2: #7ffaf0;
-  --r3-soft: rgba(55, 226, 213, 0.1);
-  --r3-line: rgba(55, 226, 213, 0.22);
-  --r3-line-strong: rgba(55, 226, 213, 0.38);
+  --r3: #00E5C8;
+  --r3-2: #4dfce8;
+  --r3-soft: rgba(0, 229, 200, 0.1);
+  --r3-line: rgba(0, 229, 200, 0.22);
+  --r3-line-strong: rgba(0, 229, 200, 0.38);
+  --accent: var(--r3);
 
   --line: rgba(255, 255, 255, 0.08);
   --line-soft: rgba(255, 255, 255, 0.05);
@@ -67,7 +68,7 @@ body {
     Arial,
     "Apple Color Emoji",
     "Segoe UI Emoji";
-  overflow: hidden;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -88,9 +89,7 @@ body {
   z-index: 0;
 }
 
-.scroll-container {
-  position: relative;
-}
+/* scroll-container (Locomotive Scroll removed) */
 
 .logo {
   display: flex;
@@ -102,16 +101,7 @@ body {
   width: auto;       /* mantiene proporción */
   display: block;
 }
-.progress {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 4px;
-  height: 0;
-  background: linear-gradient(var(--r3), #7aecff);
-  z-index: 50;
-  border-radius: 2px;
-}
+/* progress bar moved to animations.css */
 
 .topbar {
   position: sticky;
@@ -1267,66 +1257,12 @@ footer {
   color: var(--muted);
 }
 
-.strips {
-  position: relative;
-  width: 100%;
-  padding: 200px 0;
-  overflow: hidden;
-}
-
-.strips-wrap {
-  position: relative;
-  width: 100%;
-}
-
-.strip {
-  position: relative;
-  height: clamp(60px, 10vw, 120px);
-  margin: 28px 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(var(--rot, 0deg));
-  overflow: visible;
-}
-
-.strip-inner {
-  display: block;
-  width: 250vw;
-  margin-left: -20vw;
-  background: #fff;
-  color: #0e0f13;
-  font-weight: 900;
-  font-size: clamp(24px, 6vw, 70px);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  line-height: 1.15;
-  padding: 0.25em 2vw;
-  white-space: nowrap;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-  will-change: transform;
-  transform: translate3d(0, 0, 0);
-}
-
-@media (max-width: 600px) {
-  .strips {
-    padding: 2.5rem 0;
-  }
-
-  .strip {
-    width: 140vw;
-  }
-
-  .strip-track {
-    font-size: clamp(16px, 5vw, 22px);
-    padding: 0.6rem 0.8rem;
-  }
-}
+/* .strips / .strip — CSS marquee moved to animations.css */
 
 .wasap {
   position: fixed;
-  right: 30px;
-  bottom: 30px;
+  right: 24px;
+  bottom: 24px;
   height: 60px;
   width: 60px;
   z-index: 10000;
@@ -1391,8 +1327,8 @@ footer {
 .r3-form input:focus,
 .r3-form select:focus,
 .r3-form textarea:focus {
-  border-color: rgba(55, 226, 213, 0.6);
-  box-shadow: 0 0 0 3px rgba(55, 226, 213, 0.1);
+  border-color: rgba(0, 229, 200, 0.55);
+  box-shadow: 0 0 0 3px rgba(0, 229, 200, 0.08);
   background: linear-gradient(180deg, #12141a, #0c0d11);
 }
 
@@ -1558,7 +1494,11 @@ footer {
   }
 
   .topbar__nav {
-    display: none !important;
+    display: none;
+  }
+
+  .topbar__nav.open {
+    display: flex !important;
   }
 }
 
