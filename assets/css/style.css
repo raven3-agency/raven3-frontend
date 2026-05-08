@@ -515,25 +515,52 @@ section {
 .card-link {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-top: 22px;
-  padding-top: 4px;
-  font-weight: 700;
-  color: var(--r3);
+  gap: 10px;
+  margin-top: 18px;
   text-decoration: none;
+  color: #00e5c8;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.card-link__icon {
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 229, 200, 0.28);
+  border-radius: 999px;
+  background: rgba(0, 229, 200, 0.06);
   transition:
-    opacity 0.2s ease,
-    transform 0.2s ease,
-    color 0.2s ease;
-  align-self: flex-start;
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.card-link__icon svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .card-link:hover {
-  opacity: 1;
-  transform: translateX(2px);
-  color: var(--r3-2);
+  color: #7fffee;
+  transform: translateY(-1px);
 }
 
+.card-link:hover .card-link__icon {
+  transform: translate(2px, -2px);
+  background: rgba(0, 229, 200, 0.12);
+  border-color: rgba(0, 229, 200, 0.55);
+  box-shadow: 0 0 18px rgba(0, 229, 200, 0.18);
+}
 @media (min-width: 700px) {
   .card {
     grid-column: span 6;
