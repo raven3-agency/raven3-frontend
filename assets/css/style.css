@@ -1567,3 +1567,89 @@ footer {
     transition: none !important;
   }
 }
+/* =========================================================
+   FIX SERVICES CARDS — sin badges / sin escalonado
+   Pegar AL FINAL del CSS
+========================================================= */
+
+#servicios .grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+#servicios .card {
+  grid-column: span 12;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 245px;
+  margin: 0 !important;
+  top: auto !important;
+  align-self: stretch;
+  transform: none !important;
+}
+
+#servicios .card:hover {
+  transform: translateY(-6px) !important;
+}
+
+/* Como sacaste la badge, esto ya no tiene sentido */
+#servicios .card h3 {
+  padding-right: 0 !important;
+  margin: 0 0 14px !important;
+  max-width: 12ch;
+  min-height: 2.15em;
+  text-wrap: balance;
+}
+
+/* Texto más compacto y consistente */
+#servicios .card p {
+  flex: 1 1 auto;
+  max-width: 34ch;
+  margin: 0;
+  line-height: 1.65;
+}
+
+/* CTA siempre alineado abajo */
+#servicios .card-link {
+  margin-top: auto;
+  padding-top: 24px;
+  white-space: nowrap;
+}
+
+/* Oculta cualquier badge vieja si alguna quedó por error */
+#servicios .card .tag {
+  display: none !important;
+}
+
+@media (min-width: 700px) {
+  #servicios .card {
+    grid-column: span 6;
+  }
+}
+
+@media (min-width: 1024px) {
+  #servicios .card {
+    grid-column: span 4;
+  }
+}
+
+@media (max-width: 640px) {
+  #servicios .card {
+    min-height: auto;
+    padding: 26px 20px 22px;
+  }
+
+  #servicios .card h3 {
+    max-width: 100%;
+    min-height: 0;
+    margin-top: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  #servicios .card p {
+    max-width: 100%;
+  }
+}
