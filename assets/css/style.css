@@ -32,30 +32,14 @@
   box-sizing: border-box;
 }
 
-html,
-body {
-  height: 100%;
-}
-
-html {
-  scroll-behavior: auto;
+html{
+   scroll-behavior: auto;
 }
 
 body {
+   height: 100%;
   margin: 0;
-  background:
-    radial-gradient(circle at top, rgba(55, 226, 213, 0.08), transparent 28%),
-    radial-gradient(
-      circle at 18% 78%,
-      rgba(55, 226, 213, 0.04),
-      transparent 24%
-    ),
-    radial-gradient(
-      circle at 88% 18%,
-      rgba(127, 250, 240, 0.04),
-      transparent 22%
-    ),
-    linear-gradient(180deg, #04070d 0%, #070b12 28%, #0a1018 68%, #0b0f17 100%);
+  background: #050a0e;
   color: var(--ink);
   font:
     400 16px/1.6 Inter,
