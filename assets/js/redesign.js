@@ -142,15 +142,42 @@
 
   /* ── Premium mobile nav drawer ── */
   function buildDrawer() {
-    var navLinks = Array.from(document.querySelectorAll('.topbar__nav .topbar__link'));
-    var linksHTML = navLinks.map(function (a, i) {
-      var num = String(i + 1).padStart(2, '0');
-      return '<a class="r3-drawer__link" href="' + (a.getAttribute('href') || '#') + '">'
-        + '<span class="r3-drawer__num">' + num + '</span>'
-        + '<span class="r3-drawer__label">' + a.textContent.trim() + '</span>'
-        + '<span class="r3-drawer__arrow" aria-hidden="true">→</span>'
-        + '</a>';
-    }).join('');
+    var nav = document.querySelector('.topbar__nav');
+    var linksHTML = '';
+    var idx = 0;
+
+    if (nav) {
+      Array.from(nav.children).forEach(function (child) {
+        if (child.tagName === 'A' && child.classList.contains('topbar__link')) {
+          idx++;
+          var d = (0.06 + idx * 0.055).toFixed(2);
+          linksHTML += '<a class="r3-drawer__link" style="--d:' + d + 's" href="' + (child.getAttribute('href') || '#') + '">'
+            + '<span class="r3-drawer__num">' + String(idx).padStart(2, '0') + '</span>'
+            + '<span class="r3-drawer__label">' + child.textContent.trim() + '</span>'
+            + '<span class="r3-drawer__arrow" aria-hidden="true">→</span>'
+            + '</a>';
+        } else if (child.classList.contains('topbar__dropdown')) {
+          idx++;
+          var parentA = child.querySelector('.topbar__link--parent');
+          var href = parentA ? parentA.getAttribute('href') : '#';
+          var label = parentA ? parentA.textContent.trim() : 'Servicios';
+          var d = (0.06 + idx * 0.055).toFixed(2);
+          linksHTML += '<a class="r3-drawer__link" style="--d:' + d + 's" href="' + href + '">'
+            + '<span class="r3-drawer__num">' + String(idx).padStart(2, '0') + '</span>'
+            + '<span class="r3-drawer__label">' + label + '</span>'
+            + '</a>';
+          Array.from(child.querySelectorAll('.topbar__sub-link')).forEach(function (sub, si) {
+            idx++;
+            var ds = (0.06 + idx * 0.055).toFixed(2);
+            var subNum = sub.querySelector('.topbar__sub-num');
+            var subText = subNum ? subNum.nextSibling ? subNum.nextSibling.textContent.trim() : sub.textContent.replace(/\d+/, '').trim() : sub.textContent.trim();
+            linksHTML += '<a class="r3-drawer__sub-item" style="--d:' + ds + 's" href="' + (sub.getAttribute('href') || '#') + '">'
+              + subText
+              + '</a>';
+          });
+        }
+      });
+    }
 
     var div = document.createElement('div');
     div.id = 'r3-drawer';
@@ -220,7 +247,7 @@
     overlay.addEventListener('click', closeDrawer);
     closeBtn.addEventListener('click', closeDrawer);
 
-    drawer.querySelectorAll('.r3-drawer__link').forEach(function (link) {
+    drawer.querySelectorAll('.r3-drawer__link, .r3-drawer__sub-item').forEach(function (link) {
       link.addEventListener('click', closeDrawer);
     });
 
