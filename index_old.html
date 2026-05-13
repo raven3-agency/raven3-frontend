@@ -1,0 +1,1547 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+    <title>
+      Raven3 — Arquitectura Digital que Convierte | Buenos Aires, Argentina
+    </title>
+
+    <meta
+      name="description"
+      content="Agencia digital en Buenos Aires especializada en desarrollo web a medida, e-commerce, SEO técnico y performance. Sin templates. Código premium, resultados medibles."
+    />
+
+    <meta name="author" content="Raven3 Agency" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Spanish" />
+    <meta name="geo.region" content="AR-C" />
+    <meta name="geo.placename" content="Buenos Aires" />
+    <meta name="google-site-verification" content="21b8bd63e9ea78c5" />
+
+    <link rel="canonical" href="https://raven3.com.ar/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/" />
+    <meta
+      property="og:title"
+      content="Raven3 — Arquitectura Digital que Convierte"
+    />
+    <meta
+      property="og:description"
+      content="Desarrollo web a medida, e-commerce, SEO técnico y performance. Sin templates. Resultados medibles desde el primer día."
+    />
+    <meta
+      property="og:image"
+      content="https://www.raven3.com.ar/assets/img/fondoN.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Raven3" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://raven3.com.ar/" />
+    <meta
+      name="twitter:title"
+      content="Raven3 — Arquitectura Digital que Convierte"
+    />
+    <meta
+      name="twitter:description"
+      content="Desarrollo web a medida, e-commerce, SEO técnico y performance. Sin templates. Resultados medibles."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.raven3.com.ar/assets/img/fondoN.png"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- Fonts: Space Grotesk (headings) + Inter (body) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="preload" href="assets/css/style.css" as="style" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/swiper.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+
+    <!-- Three.js import map -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.152.2/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@0.152.2/examples/jsm/"
+        }
+      }
+    </script>
+
+    <!-- GA4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-MF63Q3JMSL");
+    </script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+            "@id": "https://raven3.com.ar/#organization",
+            "name": "Raven3",
+            "url": "https://raven3.com.ar/",
+            "logo": "https://www.raven3.com.ar/assets/img/logo.png",
+            "image": "https://www.raven3.com.ar/assets/img/fondoN.png",
+            "description": "Agencia digital argentina especializada en desarrollo web a medida, e-commerce, SEO técnico y performance. Sin templates genéricos.",
+            "email": "hola@raven3.com.ar",
+            "telephone": "+54 9 11 3456-8899",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buenos Aires",
+              "addressRegion": "CABA",
+              "addressCountry": "AR"
+            },
+            "areaServed": ["AR", "LATAM"],
+            "sameAs": [
+              "https://www.instagram.com/agencia.raven3/",
+              "https://github.com/raven3-agency/"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Servicios Digitales Raven3",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Diseño Web a Medida"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Desarrollo E-commerce"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": { "@type": "Service", "name": "SEO Técnico" }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Performance & Core Web Vitals"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "UX/UI Orientado a Conversión"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Integraciones API"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://raven3.com.ar/#website",
+            "url": "https://raven3.com.ar/",
+            "name": "Raven3",
+            "inLanguage": "es-AR",
+            "publisher": { "@id": "https://raven3.com.ar/#organization" }
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- WhatsApp CTA -->
+    <div class="wasap" aria-label="Contacto por WhatsApp">
+      <a
+        href="https://api.whatsapp.com/send?l=es&text=Hola%20Raven3!%20Quiero%20consultarles%20por%20un%20presupuesto%20%5BPagina%20Principal%5D&phone=5491134568899"
+        target="_blank"
+        rel="noopener"
+        aria-label="Enviar mensaje por WhatsApp"
+      >
+        <img
+          src="assets/img/svg/logo-wapp-02.svg"
+          alt="WhatsApp Raven3"
+          width="60"
+          height="60"
+        />
+      </a>
+    </div>
+
+    <!-- Custom cursor (hidden until mousemove) -->
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+
+    <!-- Scroll progress bar -->
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <!-- Three.js background canvas (global, fixed) -->
+    <div id="background" aria-hidden="true">
+      <canvas id="particles"></canvas>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
+         MAIN
+    ════════════════════════════════════════════════ -->
+    <main>
+      <!-- ── HEADER ─────────────────────────────────── -->
+      <header class="topbar" role="banner">
+        <div class="container topbar__inner">
+          <a
+            href="https://raven3.com.ar/"
+            class="logo"
+            aria-label="Raven3 — Inicio"
+          >
+            <img
+              src="assets/img/logo2.png"
+              alt="Raven3 agencia digital"
+              class="logo-img"
+              width="120"
+              height="40"
+            />
+          </a>
+
+          <nav
+            class="topbar__nav"
+            id="main-nav"
+            aria-label="Navegación principal"
+          >
+            <a class="topbar__link" href="#servicios">Servicios</a>
+            <a class="topbar__link" href="#proceso">Proceso</a>
+            <a class="topbar__link" href="/clientes.html">Clientes</a>
+            <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
+            <a class="topbar__link" href="contacto.html">Contacto</a>
+          </nav>
+
+          <a class="btn primary cta-desktop" href="#contacto">Hablemos</a>
+
+          <button
+            class="nav-toggle"
+            aria-label="Abrir menú"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- ── HERO ───────────────────────────────────── -->
+      <header class="hero" aria-label="Inicio">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero__inner container">
+          <p class="eyebrow">Agencia Digital · Buenos Aires, Argentina</p>
+
+          <h1>
+            Diseñamos y <span class="accent">construimos</span><br />
+            arquitectura digital<br />
+            que convierte.
+          </h1>
+
+          <p class="kicker">
+            En <strong>Raven3</strong> creamos
+            <strong>sitios web a medida</strong>,
+            <strong>tiendas online</strong> y estrategias de
+            <strong>SEO técnico</strong>
+            con performance real. Sin templates. Sin WordPress pesado.
+            Resultados medibles.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="#contacto">Auditoría gratuita →</a>
+            <a class="btn" href="#servicios">Ver servicios</a>
+          </div>
+
+          <div class="hero-trust" aria-label="Indicadores de confianza">
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              +60 proyectos entregados
+            </span>
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              +95 Lighthouse Score
+            </span>
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              LATAM &amp; Global
+            </span>
+          </div>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </header>
+
+      <!-- ── RAVEN STRIP ────────────────────────────── -->
+      <section aria-label="Decoración" aria-hidden="true">
+        <div class="container">
+          <div class="raven-strip" id="ravenStrip"></div>
+        </div>
+      </section>
+
+      <!-- ── STATEMENT ──────────────────────────────── -->
+      <section
+        class="statement"
+        id="declaracion"
+        aria-label="Propuesta de valor"
+      >
+        <div class="container">
+          <div class="statement__inner">
+            <p class="statement__text">
+              No hacemos webs lindas.<br />
+              Hacemos <em>arquitectura digital</em><br />
+              que convierte.
+            </p>
+            <div class="statement__line" aria-hidden="true"></div>
+            <p class="statement__sub">
+              Cada proyecto que tomamos nace desde la estrategia, se diseña
+              desde la experiencia y se desarrolla desde la ingeniería. El
+              resultado: plataformas digitales que generan clientes, no solo
+              visitas.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── SERVICIOS ──────────────────────────────── -->
+      <section id="servicios" aria-label="Servicios de Raven3">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Qué hacemos</p>
+            <h2 class="section-title">
+              Servicios diseñados<br />para resultados reales
+            </h2>
+          </div>
+
+          <div class="grid">
+            <article class="card">
+              <h3>Web a medida</h3>
+              <p>
+                Sitios personalizados, rápidos y modernos. Nada genérico, nada
+                pesado.
+              </p>
+              <a
+                class="card-link"
+                href="/servicios/desarrollo-web-a-medida.html"
+              >
+                <span>Ver servicio</span>
+                <span class="card-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" />
+                    <path d="M9 7H17V15" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="card">
+              <h3>Tiendas Online</h3>
+              <p>
+                E-commerce listo para vender, escalar e integrarse con pagos y
+                analítica.
+              </p>
+              <a class="card-link" href="/servicios/tiendas-online.html">
+                <span>Ver servicio</span>
+                <span class="card-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" />
+                    <path d="M9 7H17V15" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="card">
+              <h3>SEO Técnico</h3>
+              <p>
+                Mejoramos estructura, indexabilidad y rendimiento para
+                posicionar mejor.
+              </p>
+              <a class="card-link" href="/servicios/seo-tecnico.html">
+                <span>Ver servicio</span>
+                <span class="card-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" />
+                    <path d="M9 7H17V15" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="card">
+              <h3>Core Web Vitals</h3>
+              <p>
+                Optimizamos velocidad real para mejorar experiencia, SEO y
+                conversión.
+              </p>
+              <a
+                class="card-link"
+                href="/servicios/desarrollo-web-a-medida.html"
+              >
+                <span>Ver servicio</span>
+                <span class="card-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" />
+                    <path d="M9 7H17V15" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="card">
+              <h3>UX/UI Orientado a Conversión</h3>
+              <p>Diseñamos interfaces que guían, ordenan y convierten mejor.</p>
+              <a
+                class="card-link"
+                href="/servicios/desarrollo-web-a-medida.html"
+              >
+                <span>Ver servicio</span>
+                <span class="card-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" />
+                    <path d="M9 7H17V15" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+
+            <article class="card">
+              <h3>Conexiones a medida</h3>
+              <p>
+                Integramos CRMs, pagos y sistemas para automatizar procesos sin
+                fricción.
+              </p>
+              <a
+                class="card-link"
+                href="/servicios/desarrollo-web-a-medida.html"
+              >
+                <span>Ver servicio</span>
+                <span class="card-link__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M7 17L17 7" />
+                    <path d="M9 7H17V15" />
+                  </svg>
+                </span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── DIFERENCIALES ──────────────────────────── -->
+      <section
+        class="diferenciales"
+        id="diferenciales"
+        aria-label="Por qué elegir Raven3"
+      >
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Por qué Raven3</p>
+            <h2 class="section-title">Lo que nos hace<br />diferentes</h2>
+          </div>
+
+          <div class="dif-grid">
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">01</span>
+              <h3>Código 100% a medida</h3>
+              <p>
+                Sin templates genéricos ni themes de WordPress. Cada proyecto se
+                construye desde cero con propósito estratégico y arquitectura
+                limpia.
+              </p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">02</span>
+              <h3>Performance-first desde el inicio</h3>
+              <p>
+                Core Web Vitals y velocidad de carga no son un add-on de último
+                momento: son parte del proceso de arquitectura desde el día uno.
+              </p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">03</span>
+              <h3>SEO desde la estructura</h3>
+              <p>
+                El posicionamiento orgánico no se agrega al final. Semántica
+                HTML, datos estructurados y arquitectura de contenido pensados
+                desde el diseño del proyecto.
+              </p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">04</span>
+              <h3>Diseño premium sin exceso</h3>
+              <p>
+                Interfaces que transmiten valor de marca en cada detalle.
+                Estética moderna, funcional y orientada a resultados. Sin
+                decoración vacía.
+              </p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">05</span>
+              <h3>Escalabilidad real</h3>
+              <p>
+                Proyectos que crecen sin necesidad de reescribirlo todo. Código
+                modular, documentado y preparado para el siguiente nivel del
+                negocio.
+              </p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">06</span>
+              <h3>Sin WordPress pesado</h3>
+              <p>
+                Cuando tiene sentido usamos lo correcto para el proyecto. Cuando
+                no lo tiene, construimos soluciones modernas, livianas y más
+                rápidas.
+              </p>
+            </div>
+          </div>
+          <!-- /.dif-grid -->
+        </div>
+      </section>
+
+      <!-- ── PROCESO ────────────────────────────────── -->
+      <section class="proceso" id="proceso" aria-label="Metodología de trabajo">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Metodología</p>
+            <h2 class="section-title">Cómo trabajamos</h2>
+          </div>
+
+          <div class="proceso-track">
+            <div class="proceso-line" aria-hidden="true">
+              <div class="proceso-line__fill"></div>
+            </div>
+
+            <ol class="proceso-steps">
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true">
+                  <span class="paso-num">01</span>
+                </div>
+                <div class="paso-content">
+                  <h3>Diagnóstico</h3>
+                  <p>
+                    Auditoría técnica, benchmark y análisis de oportunidades de
+                    mejora.
+                  </p>
+                </div>
+              </li>
+
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true">
+                  <span class="paso-num">02</span>
+                </div>
+                <div class="paso-content">
+                  <h3>Estrategia</h3>
+                  <p>
+                    Roadmap, arquitectura de información y definición de KPIs
+                    claros.
+                  </p>
+                </div>
+              </li>
+
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true">
+                  <span class="paso-num">03</span>
+                </div>
+                <div class="paso-content">
+                  <h3>Diseño</h3>
+                  <p>
+                    Wireframes, prototipo interactivo y sistema de diseño
+                    cohesivo.
+                  </p>
+                </div>
+              </li>
+
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true">
+                  <span class="paso-num">04</span>
+                </div>
+                <div class="paso-content">
+                  <h3>Desarrollo</h3>
+                  <p>
+                    Código limpio, semántico, performante y bien documentado.
+                  </p>
+                </div>
+              </li>
+
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true">
+                  <span class="paso-num">05</span>
+                </div>
+                <div class="paso-content">
+                  <h3>Optimización</h3>
+                  <p>
+                    CWV, SEO técnico, velocidad y A/B testing de conversión.
+                  </p>
+                </div>
+              </li>
+
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true">
+                  <span class="paso-num">06</span>
+                </div>
+                <div class="paso-content">
+                  <h3>Lanzamiento</h3>
+                  <p>
+                    Deploy, monitoreo en tiempo real, analítica y soporte
+                    post-lanzamiento.
+                  </p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <!-- /.proceso-track -->
+        </div>
+      </section>
+
+      <!-- ── RESEÑAS ────────────────────────────────── -->
+      <section class="reviews-home" aria-label="Reseñas de Google">
+        <div class="container">
+          <div class="reviews-card">
+            <div class="reviews-top">
+              <div class="reviews-score" aria-label="Calificación 5 de 5">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <div class="score-line">
+                  <strong>5.0</strong>
+                  <span class="muted">· 4 reseñas en Google</span>
+                </div>
+              </div>
+
+              <div class="reviews-actions">
+                <a
+                  class="btn"
+                  href="https://share.google/tJRfccRDlb4DnvjXV"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Ver reseñas
+                </a>
+                <a
+                  class="btn primary"
+                  href="https://g.page/r/CU6KpNVr5mDuEBI/review"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Dejar una reseña
+                </a>
+              </div>
+            </div>
+
+            <div class="reviews-copy">
+              <h2>¿Trabajaste con Raven3?</h2>
+              <p class="section-subtitle">
+                Si tu proyecto mejoró en performance, posicionamiento o
+                conversión, tu reseña ayuda a que más marcas apuesten por
+                desarrollo a medida y calidad técnica real.
+              </p>
+            </div>
+
+            <div class="reviews-quotes reviews-quotes--swiper">
+              <div
+                class="swiper reviews-swiper"
+                aria-label="Reseñas destacadas"
+              >
+                <div class="swiper-wrapper" role="list">
+                  <!-- Place new review here -->
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Patricio @ Raven 3 is so smart you're guaranteed to get
+                      first a rate website. He is particularly good at helping
+                      you identify exactly what you need and then proceeds to
+                      provide it. You can "rest assured" he and Raven 3 will
+                      provide exceptional service."
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted"
+                      >— Barry Dallas, Etiennedemontebello</span
+                    >
+                  </article>
+
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Excelente trabajo. Desde el primer momento entendió lo
+                      que necesitábamos para la página de nuestra empresa. Fue
+                      muy profesional, cumplió con los tiempos y el resultado
+                      superó nuestras expectativas. Totalmente recomendable."
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted">— Noelia, CEA American</span>
+                  </article>
+
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Excelente servicio!!! Me crearon una página web de
+                      primera línea!!! Muy atentos y a disposición siempre,
+                      mejorando y proponiendo mejoras continuamente. Altamente
+                      recomendables!"
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted"
+                      >— Nicolas De Brasi, NDB Propiedades</span
+                    >
+                  </article>
+
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Recomiendo a Raven3 por el excelente trabajo que hicieron
+                      en el diseño de nuestra página web. La página es moderna,
+                      atractiva y fácil de navegar. Su equipo es profesional,
+                      creativo y atento a los detalles. Estamos muy satisfechos
+                      con el resultado."
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted">— Julián Fernandez, Okos</span>
+                  </article>
+
+                  <article class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Mi experiencia con Raven3 ha sido un éxito. Me
+                      desarrollaron un sitio web que superó ampliamente mis
+                      expectativas. Fui con una idea y me ofrecieron una
+                      solución mucho mejor. Recomiendo al 100%."
+                    </p>
+                    <button
+                      class="review-toggle"
+                      type="button"
+                      aria-expanded="false"
+                    >
+                      Leer más
+                    </button>
+                    <span class="who muted">— Agustina Menichelli, Didot</span>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CLIENTES / SHOWCASE ────────────────────── -->
+      <section
+        class="clients-section"
+        aria-label="Marcas que confiaron en Raven3"
+      >
+        <div class="container">
+          <div class="clients-section__head">
+            <h2 class="section-title">Marcas que confiaron en nosotros</h2>
+            <p class="section-subtitle">
+              Casos reales de webs, tiendas y SEO técnico que potenciaron la
+              presencia online de nuestros clientes.
+            </p>
+          </div>
+
+          <div class="clients-grid" style="margin-top: 34px">
+            <!-- NDB Propiedades -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="NDB Propiedades" />
+              <a
+                href="https://ndbpropiedades.com.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Visitar sitio de NDB Propiedades"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div class="client-flip-card__media">
+                    <img
+                      src="assets/img/portfolio/WEB/ndbpropiedades/logo.png"
+                      alt="NDB Propiedades"
+                      class="client-flip-card__image"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label"
+                      >Plataforma inmobiliaria</span
+                    >
+                    <h3 class="client-flip-card__domain">
+                      ndbpropiedades.com.ar
+                    </h3>
+                    <p class="client-flip-card__back-text">
+                      Desarrollo web a medida · Integración Tokko Broker · SEO
+                      Técnico
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- SGM+ -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="SGM+" />
+              <a
+                href="https://somosgrupodemujeresmas.ar"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Ver proyecto de SGM+"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div
+                    class="client-flip-card__media client-flip-card__media--logo"
+                  >
+                    <img
+                      src="assets/img/portfolio/WEB/sgm/logo.png"
+                      alt="Logo de SGM+"
+                      class="client-flip-card__image client-flip-card__image--contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label">Proyecto web</span>
+                    <h3 class="client-flip-card__domain">
+                      somosgrupodemujeresmas.ar
+                    </h3>
+                    <p class="client-flip-card__back-text">
+                      Branding digital · Sitio institucional · E-commerce
+                      integrado
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- Lassen Pharma -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="Lassen Pharma" />
+              <a
+                href="https://lassen.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Ver proyecto de Lassen Pharma"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div
+                    class="client-flip-card__media client-flip-card__media--logo"
+                  >
+                    <img
+                      src="assets/img/portfolio/WEB/lassen/logo.png"
+                      alt="Logo de Lassen Pharma"
+                      class="client-flip-card__image client-flip-card__image--contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label"
+                      >Sitio corporativo</span
+                    >
+                    <h3 class="client-flip-card__domain">lassen.ar</h3>
+                    <p class="client-flip-card__back-text">
+                      SEO técnico · Arquitectura web · Performance y claridad de
+                      marca
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+
+            <!-- BEFORCE -->
+            <article
+              class="client-flip-card"
+              itemscope
+              itemtype="https://schema.org/CreativeWork"
+            >
+              <meta itemprop="name" content="BEFORCE" />
+              <a
+                href="https://beforce.ar/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="client-flip-card__inner"
+                aria-label="Ver proyecto de BEFORCE"
+              >
+                <div
+                  class="client-flip-card__face client-flip-card__face--front"
+                >
+                  <div
+                    class="client-flip-card__media client-flip-card__media--logo"
+                  >
+                    <img
+                      src="assets/img/portfolio/WEB/beforce/logo.png"
+                      alt="Logo de BEFORCE"
+                      class="client-flip-card__image client-flip-card__image--contain"
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="client-flip-card__face client-flip-card__face--back"
+                >
+                  <div class="client-flip-card__back-content">
+                    <span class="client-flip-card__label"
+                      >Catálogo digital</span
+                    >
+                    <h3 class="client-flip-card__domain">beforce.ar</h3>
+                    <p class="client-flip-card__back-text">
+                      Identidad visual · Presentación de productos · Navegación
+                      clara
+                    </p>
+                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          </div>
+          <!-- /.clients-grid -->
+
+          <div class="cta-center">
+            <a href="clientes.html" class="btn primary">Ver más proyectos →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MÉTRICAS ────────────────────────────────── -->
+      <section
+        class="metricas"
+        id="metricas"
+        aria-label="Métricas y resultados"
+      >
+        <div class="container">
+          <div
+            class="section-header"
+            style="text-align: center; max-width: 640px; margin-inline: auto"
+          >
+            <p class="eyebrow">Resultados</p>
+            <h2 class="section-title">
+              Números que respaldan<br />nuestro trabajo
+            </h2>
+          </div>
+
+          <div class="metricas-grid">
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="95" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">Performance Score</div>
+              <div class="metrica-desc">Lighthouse en producción</div>
+            </div>
+
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="92" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">SEO Score</div>
+              <div class="metrica-desc">Auditoría técnica promedio</div>
+            </div>
+
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="40" data-suffix="%">0%</span>
+              </div>
+              <div class="metrica-label">Más conversión</div>
+              <div class="metrica-desc">Promedio post-optimización</div>
+            </div>
+
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="60" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">Proyectos entregados</div>
+              <div class="metrica-desc">Webs, tiendas y estrategias</div>
+            </div>
+          </div>
+          <!-- /.metricas-grid -->
+        </div>
+      </section>
+
+      <!-- ── NEWSLETTER ─────────────────────────────── -->
+      <section class="newsletter" aria-label="Newsletter de Raven3">
+        <div class="newsletter-inner">
+          <span class="newsletter-eyebrow">NEWSLETTER</span>
+          <h3>Web Performance Insights</h3>
+          <p>
+            Tips, experimentos y análisis técnicos sobre performance, SEO
+            técnico y desarrollo web a medida. Solo contenido de alto valor.
+          </p>
+
+          <form id="newsletter-form" class="newsletter-form">
+            <input
+              id="newsletter-email"
+              type="email"
+              name="email"
+              placeholder="tu@email.com"
+              autocomplete="email"
+              aria-describedby="newsletter-help"
+              required
+            />
+            <small id="newsletter-help" class="sr-only">
+              Ingresá tu email para recibir insights de performance web.
+            </small>
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo suscriptor Raven3"
+            />
+            <button
+              type="submit"
+              id="newsletter-btn"
+              class="btn primary"
+              data-idle-text="Suscribirme"
+              data-sending-text="Enviando…"
+              data-success-text="Suscripto ✓"
+              data-already-text="Ya suscripto ✓"
+              data-retry-text="Reintentar"
+            >
+              Suscribirme
+            </button>
+          </form>
+
+          <p
+            class="newsletter-msg"
+            id="newsletter-msg"
+            aria-live="polite"
+            data-sending-text="Procesando suscripción…"
+            data-success-msg="Hecho: <strong>{email}</strong> está suscripto."
+            data-already-msg="Hecho: <strong>{email}</strong> ya estaba suscripto."
+            data-error-text="Algo salió mal. Por favor, inténtalo de nuevo."
+          ></p>
+        </div>
+      </section>
+
+      <!-- ── STRIPS (CSS Marquee) ────────────────────── -->
+      <section class="strips" aria-hidden="true">
+        <div
+          class="strip"
+          style="
+            --rot: -5deg;
+            --marquee-speed: 36s;
+            --marquee-dir: marquee-left;
+          "
+        >
+          <div class="strip-track">
+            <span class="strip-item">RAVEN3.COM.AR</span>
+            <span class="strip-item">Diseño web a medida</span>
+            <span class="strip-item">Performance real</span>
+            <span class="strip-item">Experiencias digitales</span>
+            <!-- duplicate for seamless loop -->
+            <span class="strip-item" aria-hidden="true">RAVEN3.COM.AR</span>
+            <span class="strip-item" aria-hidden="true"
+              >Diseño web a medida</span
+            >
+            <span class="strip-item" aria-hidden="true">Performance real</span>
+            <span class="strip-item" aria-hidden="true"
+              >Experiencias digitales</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="strip"
+          style="
+            --rot: 4deg;
+            --marquee-speed: 28s;
+            --marquee-dir: marquee-right;
+          "
+        >
+          <div class="strip-track">
+            <span class="strip-item">Webs rápidas</span>
+            <span class="strip-item">Tiendas online</span>
+            <span class="strip-item">SEO técnico avanzado</span>
+            <span class="strip-item">Buenos Aires · Argentina</span>
+            <!-- duplicate -->
+            <span class="strip-item" aria-hidden="true">Webs rápidas</span>
+            <span class="strip-item" aria-hidden="true">Tiendas online</span>
+            <span class="strip-item" aria-hidden="true"
+              >SEO técnico avanzado</span
+            >
+            <span class="strip-item" aria-hidden="true"
+              >Buenos Aires · Argentina</span
+            >
+          </div>
+        </div>
+
+        <div
+          class="strip"
+          style="
+            --rot: -3deg;
+            --marquee-speed: 44s;
+            --marquee-dir: marquee-left;
+          "
+        >
+          <div class="strip-track">
+            <span class="strip-item">RAVEN3.COM.AR</span>
+            <span class="strip-item">Resultados reales</span>
+            <span class="strip-item">Diseño con propósito</span>
+            <span class="strip-item">Velocidad que convierte</span>
+            <!-- duplicate -->
+            <span class="strip-item" aria-hidden="true">RAVEN3.COM.AR</span>
+            <span class="strip-item" aria-hidden="true">Resultados reales</span>
+            <span class="strip-item" aria-hidden="true"
+              >Diseño con propósito</span
+            >
+            <span class="strip-item" aria-hidden="true"
+              >Velocidad que convierte</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACTO ───────────────────────────────── -->
+      <section id="contacto" aria-label="Formulario de contacto">
+        <div class="container contact-section">
+          <div class="contact-intro">
+            <p class="eyebrow">Trabajemos juntos</p>
+            <h2 class="section-title">
+              ¿Tu web está dejando<br />dinero sobre la mesa?
+            </h2>
+            <p class="section-subtitle">
+              Hacemos una auditoría técnica y de conversión gratuita. Sin
+              compromiso. Con entregables reales. Te respondemos en menos de 24
+              horas.
+            </p>
+          </div>
+
+          <form
+            class="r3-form"
+            action="https://formspree.io/f/mvoykeyq"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">¿Qué necesitás?</label>
+              <select id="service" name="service">
+                <option value="">Seleccionar servicio</option>
+                <option value="auditoria">Auditoría gratuita</option>
+                <option value="web">Web a medida</option>
+                <option value="ecommerce">Tienda online</option>
+                <option value="seo">SEO técnico</option>
+                <option value="performance">Performance / CWV</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Contanos sobre tu proyecto o pedinos la auditoría gratuita..."
+                required
+              ></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn primary">
+                Enviar mensaje →
+              </button>
+              <span
+                class="form-status"
+                id="formStatus"
+                aria-live="polite"
+              ></span>
+              <div class="recaptcha-wrapper">
+                <div
+                  class="g-recaptcha"
+                  data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq"
+                  data-theme="dark"
+                ></div>
+              </div>
+            </div>
+
+            <input type="hidden" name="form_source" value="index" />
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nueva consulta desde home Raven3"
+            />
+          </form>
+        </div>
+      </section>
+
+      <!-- ── FOOTER ─────────────────────────────────── -->
+      <footer id="footer" aria-label="Pie de página">
+        <div class="container">
+          <div class="footer-grid">
+            <!-- Brand -->
+            <div class="footer-col">
+              <a
+                href="https://raven3.com.ar/"
+                aria-label="Raven3 — Inicio"
+                style="display: inline-block; margin-bottom: 16px"
+              >
+                <img
+                  src="assets/img/logo2.png"
+                  alt="Raven3 agencia digital"
+                  class="logo-img"
+                  width="100"
+                  height="auto"
+                  style="height: 110px; width: auto"
+                />
+              </a>
+              <p>
+                Agencia digital argentina especializada en desarrollo web a
+                medida, e-commerce, SEO técnico y arquitectura digital premium.
+                Sin templates. Resultados reales.
+              </p>
+              <div class="cta-row">
+                <a class="btn primary" href="mailto:hola@raven3.com.ar"
+                  >Escribinos</a
+                >
+                <a
+                  class="btn"
+                  href="https://wa.me/5491134568899"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </div>
+            </div>
+
+            <!-- Servicios -->
+            <div class="footer-col">
+              <h4>Servicios</h4>
+              <ul class="footer-links">
+                <li>
+                  <a href="/servicios/desarrollo-web-a-medida.html"
+                    >Desarrollo web</a
+                  >
+                </li>
+                <li>
+                  <a href="/servicios/tiendas-online.html">Tiendas online</a>
+                </li>
+                <li><a href="/servicios/seo-tecnico.html">SEO técnico</a></li>
+                <li><a href="#servicios">Performance &amp; CWV</a></li>
+                <li><a href="#servicios">UX/UI Conversión</a></li>
+                <li><a href="#servicios">Integraciones API</a></li>
+              </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div class="footer-col">
+              <h4>Contacto</h4>
+              <ul class="footer-contact-list">
+                <li>
+                  <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/5491134568899"
+                    target="_blank"
+                    rel="noopener"
+                    >+54 9 11 3456-8899</a
+                  >
+                </li>
+                <li>Buenos Aires, Argentina</li>
+              </ul>
+              <h4 style="margin-top: 24px">Empresa</h4>
+              <ul class="footer-links">
+                <li><a href="/sobre-raven3.html">Sobre Raven3</a></li>
+                <li><a href="/clientes.html">Clientes</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.footer-grid -->
+
+          <div class="footer-bottom small">
+            <span>
+              <span id="year"></span> © Raven3. Todos los derechos reservados.
+              <span class="footer-legal">
+                ·
+                <a href="/politica-de-privacidad.html"
+                  >Política de privacidad</a
+                >
+                ·
+                <a href="/terminos-de-contratacion.html">Términos</a>
+              </span>
+            </span>
+
+            <div class="footer-socials">
+              <a
+                href="https://www.instagram.com/agencia.raven3/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram de Raven3"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/raven3-agency/"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub de Raven3"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.48.12-3.08 0 0 .98-.31 3.18 1.2A11.08 11.08 0 0 1 12 6.03c.98 0 1.96.13 2.88.39 2.2-1.51 3.18-1.2 3.18-1.2.64 1.6.24 2.78.12 3.08.75.82 1.2 1.85 1.2 3.12 0 4.45-2.7 5.43-5.28 5.72.42.36.79 1.07.79 2.16v3.04c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <!-- /main -->
+
+    <!-- ════════════════════════════════════════════════
+         SCRIPTS
+    ════════════════════════════════════════════════ -->
+
+    <!-- Contact form handler -->
+    <script>
+      (function () {
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("formStatus");
+        if (!form) return;
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          status.textContent = "Enviando…";
+
+          try {
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" },
+            });
+
+            if (res.ok) {
+              status.textContent = "Mensaje enviado ✓";
+              form.reset();
+              if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+            } else {
+              status.textContent = "Ocurrió un error. Intentá nuevamente.";
+            }
+          } catch {
+            status.textContent = "Error de conexión.";
+          }
+        });
+      })();
+    </script>
+
+    <!-- Lazy reCAPTCHA (loads on form focus or viewport entry) -->
+    <script>
+      (function () {
+        let loaded = false;
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          const s = document.createElement("script");
+          s.src = "https://www.google.com/recaptcha/api.js";
+          s.async = true;
+          s.defer = true;
+          document.head.appendChild(s);
+        }
+
+        const form = document.getElementById("contactForm");
+        if (form) {
+          form.addEventListener("focusin", load, { once: true });
+          new IntersectionObserver(
+            (entries) => {
+              if (entries.some((e) => e.isIntersecting)) load();
+            },
+            { rootMargin: "200px" },
+          ).observe(form);
+        }
+      })();
+    </script>
+
+    <!-- Flip cards touch support -->
+    <script>
+      (function () {
+        const cards = document.querySelectorAll(".client-flip-card");
+        const isTouch = () => window.matchMedia("(hover: none)").matches;
+
+        cards.forEach((card) => {
+          card.addEventListener("click", function (e) {
+            if (!isTouch()) return;
+            if (!card.classList.contains("is-flipped")) {
+              e.preventDefault();
+              document
+                .querySelectorAll(".client-flip-card.is-flipped")
+                .forEach((c) => {
+                  if (c !== card) c.classList.remove("is-flipped");
+                });
+              card.classList.add("is-flipped");
+            }
+          });
+
+          const link = card.querySelector(".client-flip-card__inner");
+          if (link) {
+            link.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ")
+                card.classList.add("is-flipped");
+            });
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          cards.forEach((card) => {
+            if (!card.contains(e.target)) card.classList.remove("is-flipped");
+          });
+        });
+      })();
+    </script>
+
+    <!-- GSAP + ScrollTrigger (synchronous — available before modules run) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- App modules (deferred by spec — run after DOM + above sync scripts) -->
+    <script type="module" src="assets/js/main.js"></script>
+    <script type="module" src="assets/js/particles.js"></script>
+    <script type="module" src="assets/js/reviews-swiper.js"></script>
+    <script type="module" src="assets/js/newsletter.js"></script>
+  </body>
+</html>
