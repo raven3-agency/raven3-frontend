@@ -1104,10 +1104,6 @@ section {
     min-height: 420px;
   }
 
-  .client-flip-card__media--logo {
-    padding: 34px;
-  }
-
   .client-flip-card__back-content,
   .client-flip-card__content {
     padding-left: 22px;
