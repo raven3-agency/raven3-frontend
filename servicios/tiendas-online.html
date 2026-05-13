@@ -1148,34 +1148,24 @@
   </head>
 
   <body>
-    <header class="site-header">
-      <div class="container inner">
-        <a href="https://raven3.com.ar/" class="logo me-auto me-lg-0"
-          ><img
-            src="../assets/img/logo2.png"
-            alt="logo de raven3"
-            class="logo-img"
-            width="579"
-            height="431"
-        /></a>
-
-        <nav class="nav" aria-label="Navegación principal">
-          <a class="topbar__link" href="/sobre-raven3.html">Sobre Raven3</a>
+    <header class="topbar" role="banner">
+      <div class="container topbar__inner">
+        <a href="https://raven3.com.ar/" class="logo" aria-label="Raven3 — Inicio">
+          <img src="../assets/img/logo2.png" alt="Raven3 agencia digital" class="logo-img" width="120" height="40" />
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Navegación principal">
+          <a class="topbar__link" href="/#servicios">Servicios</a>
+          <a class="topbar__link" href="/#proceso">Proceso</a>
           <a class="topbar__link" href="/clientes.html">Clientes</a>
-          <a class="topbar__link" href="/servicios/desarrollo-web-a-medida.html"
-            >Desarrollo web</a
-          >
-          <a
-            class="topbar__link is-active"
-            href="/servicios/tiendas-online.html"
-            >Tiendas online</a
-          >
-          <a class="topbar__link" href="/servicios/seo-tecnico.html"
-            >SEO técnico</a
-          >
+          <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
+          <a class="topbar__link" href="/contacto.html">Contacto</a>
         </nav>
-
-        <a class="btn" href="/contacto.html">Hablemos</a>
+        <a class="btn primary cta-desktop" href="/contacto.html">Hablemos</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 

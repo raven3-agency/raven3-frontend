@@ -140,6 +140,95 @@
     }, { passive: true });
   }
 
+  /* ── Premium mobile nav drawer ── */
+  function buildDrawer() {
+    var navLinks = Array.from(document.querySelectorAll('.topbar__nav .topbar__link'));
+    var linksHTML = navLinks.map(function (a, i) {
+      var num = String(i + 1).padStart(2, '0');
+      return '<a class="r3-drawer__link" href="' + (a.getAttribute('href') || '#') + '">'
+        + '<span class="r3-drawer__num">' + num + '</span>'
+        + '<span class="r3-drawer__label">' + a.textContent.trim() + '</span>'
+        + '<span class="r3-drawer__arrow" aria-hidden="true">→</span>'
+        + '</a>';
+    }).join('');
+
+    var div = document.createElement('div');
+    div.id = 'r3-drawer';
+    div.setAttribute('role', 'dialog');
+    div.setAttribute('aria-modal', 'true');
+    div.setAttribute('aria-label', 'Menú de navegación');
+    div.setAttribute('aria-hidden', 'true');
+    div.innerHTML =
+      '<div class="r3-drawer__overlay" aria-hidden="true"></div>'
+      + '<div class="r3-drawer__panel">'
+      +   '<div class="r3-drawer__corner r3-drawer__corner--tl" aria-hidden="true"></div>'
+      +   '<div class="r3-drawer__corner r3-drawer__corner--tr" aria-hidden="true"></div>'
+      +   '<div class="r3-drawer__corner r3-drawer__corner--bl" aria-hidden="true"></div>'
+      +   '<div class="r3-drawer__corner r3-drawer__corner--br" aria-hidden="true"></div>'
+      +   '<div class="r3-drawer__scan" aria-hidden="true"></div>'
+      +   '<div class="r3-drawer__header">'
+      +     '<div class="r3-drawer__sys">RAVEN3 // NAV</div>'
+      +     '<button class="r3-drawer__close" aria-label="Cerrar menú">✕</button>'
+      +   '</div>'
+      +   '<nav class="r3-drawer__nav" aria-label="Navegación principal">' + linksHTML + '</nav>'
+      +   '<div class="r3-drawer__cta"><a href="/#contacto">Hablemos →</a></div>'
+      +   '<div class="r3-drawer__footer">'
+      +     '<div class="r3-drawer__footer-label">CONTACTO // ARG</div>'
+      +     '<div class="r3-drawer__footer-contact">'
+      +       '<a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a><br>'
+      +       '<a href="https://wa.me/5491134568899" target="_blank" rel="noopener">+54 9 11 3456-8899</a>'
+      +     '</div>'
+      +   '</div>'
+      + '</div>';
+    return div;
+  }
+
+  function initPremiumDrawer() {
+    if (document.getElementById('r3-drawer')) return;
+    var toggle = document.querySelector('.nav-toggle');
+    if (!toggle) return;
+
+    var drawer = buildDrawer();
+    document.body.appendChild(drawer);
+
+    var overlay  = drawer.querySelector('.r3-drawer__overlay');
+    var closeBtn = drawer.querySelector('.r3-drawer__close');
+
+    function openDrawer() {
+      drawer.classList.add('open');
+      drawer.removeAttribute('aria-hidden');
+      toggle.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      drawer.setAttribute('aria-hidden', 'true');
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    /* Capture phase runs before ui.js bubble listener — prevents double-toggle */
+    toggle.addEventListener('click', function (e) {
+      if (window.innerWidth > 820) return;
+      e.stopImmediatePropagation();
+      drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+    }, true);
+
+    overlay.addEventListener('click', closeDrawer);
+    closeBtn.addEventListener('click', closeDrawer);
+
+    drawer.querySelectorAll('.r3-drawer__link').forEach(function (link) {
+      link.addEventListener('click', closeDrawer);
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
+    });
+  }
+
   /* ── Run everything on DOMContentLoaded ── */
   function init() {
     injectShell();
@@ -148,6 +237,7 @@
     initReveal();
     initDividerLines();
     initGridParallax();
+    initPremiumDrawer();
   }
 
   if (document.readyState === 'loading') {
