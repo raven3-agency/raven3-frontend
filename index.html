@@ -807,27 +807,290 @@
       }
 
       /* ────────────────────────────────────────────
-         19. CLIENT CARDS
+         19. CASE SHOWCASE
       ──────────────────────────────────────────── */
-      .client-flip-card__domain {
-        font-family: var(--font-heading) !important;
-        font-weight: 700 !important;
-        letter-spacing: 0.03em !important;
-      }
-
-      .client-flip-card__label {
-        font-family: var(--font-mono) !important;
-        font-size: 9px !important;
-        letter-spacing: 0.25em !important;
-      }
-
-      .client-flip-card__cta {
-        font-family: var(--font-mono) !important;
-        letter-spacing: 0.15em !important;
-      }
-
       .clients-section__head .section-title {
         font-family: var(--font-heading) !important;
+      }
+
+      .case-showcase {
+        margin-top: 40px;
+        position: relative;
+      }
+
+      .case-showcase__track {
+        position: relative;
+        min-height: 420px;
+      }
+
+      .case-slide {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        grid-template-columns: 1fr 1.3fr;
+        gap: clamp(32px, 5vw, 80px);
+        align-items: center;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateX(28px);
+        transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .case-slide.is-active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0);
+      }
+
+      /* Left info panel */
+      .case-slide__info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        position: relative;
+      }
+
+      .case-slide__num {
+        font-family: var(--font-mono) !important;
+        font-size: clamp(72px, 10vw, 120px);
+        font-weight: 700;
+        line-height: 1;
+        color: rgba(55, 226, 213, 0.07);
+        letter-spacing: -0.04em;
+        margin-bottom: -20px;
+        user-select: none;
+        pointer-events: none;
+      }
+
+      .case-slide__badge {
+        display: inline-flex;
+        align-items: center;
+        font-family: var(--font-mono) !important;
+        font-size: 9px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        color: rgba(55, 226, 213, 0.8);
+        border: 1px solid rgba(55, 226, 213, 0.22);
+        background: rgba(55, 226, 213, 0.06);
+        padding: 5px 10px;
+        border-radius: 999px;
+        width: fit-content;
+      }
+
+      .case-slide__title {
+        font-family: var(--font-heading) !important;
+        font-size: clamp(28px, 4vw, 44px);
+        font-weight: 700;
+        line-height: 1.05;
+        letter-spacing: -0.01em;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.95);
+      }
+
+      .case-slide__desc {
+        font-size: 14px;
+        line-height: 1.65;
+        color: rgba(255, 255, 255, 0.55);
+        margin: 0;
+        max-width: 42ch;
+      }
+
+      .case-slide__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .case-slide__tags span {
+        font-size: 11px;
+        padding: 5px 10px;
+        border-radius: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.02em;
+      }
+
+      .case-slide__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        color: rgba(55, 226, 213, 0.9);
+        text-decoration: none;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(55, 226, 213, 0.2);
+        width: fit-content;
+        transition: gap 0.2s ease, border-color 0.2s ease;
+      }
+
+      .case-slide__cta:hover {
+        gap: 14px;
+        border-color: rgba(55, 226, 213, 0.55);
+      }
+
+      /* Right visual: browser mockup */
+      .case-slide__visual {
+        position: relative;
+      }
+
+      .case-frame {
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow:
+          0 40px 80px rgba(0, 0, 0, 0.55),
+          0 0 0 1px rgba(255, 255, 255, 0.04),
+          0 0 60px rgba(55, 226, 213, 0.06);
+        transform: perspective(800px) rotateY(-4deg) rotateX(2deg);
+        transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+      }
+
+      .case-slide.is-active .case-frame {
+        transform: perspective(800px) rotateY(-2deg) rotateX(1deg);
+      }
+
+      .case-slide__visual:hover .case-frame {
+        transform: perspective(800px) rotateY(0deg) rotateX(0deg);
+        box-shadow:
+          0 50px 100px rgba(0, 0, 0, 0.6),
+          0 0 0 1px rgba(255, 255, 255, 0.07),
+          0 0 80px rgba(55, 226, 213, 0.1);
+      }
+
+      .case-frame__bar {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px 12px;
+        background: rgba(12, 20, 28, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+      }
+
+      .bbar-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .bbar-dot--r { background: rgba(255, 95, 87, 0.85); }
+      .bbar-dot--y { background: rgba(254, 188, 46, 0.85); }
+      .bbar-dot--g { background: rgba(40, 200, 64, 0.85); }
+
+      .bbar-url {
+        font-family: var(--font-mono) !important;
+        font-size: 10px;
+        color: rgba(255, 255, 255, 0.3);
+        margin-left: 8px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        flex: 1;
+      }
+
+      .case-frame__screen {
+        height: 300px;
+        overflow: hidden;
+        background: #050d14;
+      }
+
+      .case-frame__screen img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+        transition: transform 7s ease;
+      }
+
+      .case-slide.is-active .case-frame__screen img {
+        transform: translateY(-8%);
+      }
+
+      /* Navigation */
+      .case-showcase__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 28px;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .case-dots {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .case-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        cursor: pointer;
+        transition: width 0.3s ease, background 0.3s ease, border-radius 0.3s ease;
+        padding: 0;
+      }
+
+      .case-dot.is-active {
+        width: 24px;
+        border-radius: 3px;
+        background: rgba(55, 226, 213, 0.85);
+      }
+
+      .case-progress {
+        font-family: var(--font-mono) !important;
+        font-size: 10px;
+        letter-spacing: 0.15em;
+        color: rgba(255, 255, 255, 0.3);
+      }
+
+      .case-arrows {
+        display: flex;
+        gap: 8px;
+      }
+
+      .case-arrow {
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        cursor: pointer;
+        display: grid;
+        place-items: center;
+        transition: border-color 0.2s ease, background 0.2s ease, color 0.2s ease;
+      }
+
+      .case-arrow:hover {
+        border-color: rgba(55, 226, 213, 0.45);
+        background: rgba(55, 226, 213, 0.08);
+        color: rgba(55, 226, 213, 0.9);
+      }
+
+      @media (max-width: 820px) {
+        .case-showcase__track { min-height: 680px; }
+        .case-slide {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          align-items: start;
+        }
+        .case-slide__num { font-size: 64px; margin-bottom: -14px; }
+        .case-frame { transform: none !important; }
+        .case-frame__screen { height: 200px; }
+      }
+
+      @media (max-width: 480px) {
+        .case-showcase__track { min-height: 580px; }
+        .case-frame__screen { height: 160px; }
+        .case-slide__title { font-size: 26px; }
       }
 
       /* ────────────────────────────────────────────
@@ -1402,86 +1665,157 @@
             </p>
           </div>
 
-          <div class="clients-grid" style="margin-top: 34px">
-            <article class="client-flip-card" itemscope itemtype="https://schema.org/CreativeWork">
-              <meta itemprop="name" content="NDB Propiedades" />
-              <a href="https://ndbpropiedades.com.ar/" target="_blank" rel="noopener noreferrer" class="client-flip-card__inner" aria-label="Visitar sitio de NDB Propiedades">
-                <div class="client-flip-card__face client-flip-card__face--front">
-                  <div class="client-flip-card__media">
-                    <img src="assets/img/portfolio/WEB/ndbpropiedades/logo.png" alt="NDB Propiedades" class="client-flip-card__image" loading="lazy" decoding="async" />
-                  </div>
-                </div>
-                <div class="client-flip-card__face client-flip-card__face--back">
-                  <div class="client-flip-card__back-content">
-                    <span class="client-flip-card__label">Plataforma inmobiliaria</span>
-                    <h3 class="client-flip-card__domain">ndbpropiedades.com.ar</h3>
-                    <p class="client-flip-card__back-text">Desarrollo web a medida · Integración Tokko Broker · SEO Técnico</p>
-                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
-                  </div>
-                </div>
-              </a>
-            </article>
+          <div class="case-showcase" id="caseShowcase">
+            <div class="case-showcase__track">
 
-            <article class="client-flip-card" itemscope itemtype="https://schema.org/CreativeWork">
-              <meta itemprop="name" content="SGM+" />
-              <a href="https://somosgrupodemujeresmas.ar" target="_blank" rel="noopener noreferrer" class="client-flip-card__inner" aria-label="Ver proyecto de SGM+">
-                <div class="client-flip-card__face client-flip-card__face--front">
-                  <div class="client-flip-card__media client-flip-card__media--logo">
-                    <img src="assets/img/portfolio/WEB/sgm/logo.png" alt="Logo de SGM+" class="client-flip-card__image client-flip-card__image--contain" loading="lazy" decoding="async" />
+              <!-- 01 NDB Propiedades -->
+              <div class="case-slide is-active" role="group" aria-label="Proyecto 1 de 4" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="NDB Propiedades" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">01</div>
+                  <span class="case-slide__badge">Plataforma inmobiliaria</span>
+                  <h3 class="case-slide__title" itemprop="name">NDB Propiedades</h3>
+                  <p class="case-slide__desc">Plataforma inmobiliaria a medida con filtros avanzados e integración Tokko Broker, pensada para mejorar búsqueda, rendimiento y escalabilidad comercial.</p>
+                  <div class="case-slide__tags">
+                    <span>Web a medida</span>
+                    <span>API Tokko Broker</span>
+                    <span>SEO técnico</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://ndbpropiedades.com.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">ndbpropiedades.com.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/ndbpropiedades/web.png" alt="NDB Propiedades — sitio web" loading="lazy" decoding="async" />
+                    </div>
                   </div>
                 </div>
-                <div class="client-flip-card__face client-flip-card__face--back">
-                  <div class="client-flip-card__back-content">
-                    <span class="client-flip-card__label">Proyecto web</span>
-                    <h3 class="client-flip-card__domain">somosgrupodemujeresmas.ar</h3>
-                    <p class="client-flip-card__back-text">Branding digital · Sitio institucional · E-commerce integrado</p>
-                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
-                  </div>
-                </div>
-              </a>
-            </article>
+              </div>
 
-            <article class="client-flip-card" itemscope itemtype="https://schema.org/CreativeWork">
-              <meta itemprop="name" content="Lassen Pharma" />
-              <a href="https://lassen.ar/" target="_blank" rel="noopener noreferrer" class="client-flip-card__inner" aria-label="Ver proyecto de Lassen Pharma">
-                <div class="client-flip-card__face client-flip-card__face--front">
-                  <div class="client-flip-card__media client-flip-card__media--logo">
-                    <img src="assets/img/portfolio/WEB/lassen/logo.png" alt="Logo de Lassen Pharma" class="client-flip-card__image client-flip-card__image--contain" loading="lazy" decoding="async" />
+              <!-- 02 SGM+ -->
+              <div class="case-slide" role="group" aria-label="Proyecto 2 de 4" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="SGM+" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">02</div>
+                  <span class="case-slide__badge">Sitio institucional</span>
+                  <h3 class="case-slide__title">SGM+</h3>
+                  <p class="case-slide__desc">Sitio institucional con e-commerce integrado, diseñado para potenciar comunidad, optimizar inscripciones y mejorar conversión.</p>
+                  <div class="case-slide__tags">
+                    <span>Branding digital</span>
+                    <span>E-commerce</span>
+                    <span>UX conversión</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://somosgrupodemujeresmas.ar" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">somosgrupodemujeresmas.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/sgm/web.png" alt="SGM+ — sitio web" loading="lazy" decoding="async" />
+                    </div>
                   </div>
                 </div>
-                <div class="client-flip-card__face client-flip-card__face--back">
-                  <div class="client-flip-card__back-content">
-                    <span class="client-flip-card__label">Sitio corporativo</span>
-                    <h3 class="client-flip-card__domain">lassen.ar</h3>
-                    <p class="client-flip-card__back-text">SEO técnico · Arquitectura web · Performance y claridad de marca</p>
-                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
-                  </div>
-                </div>
-              </a>
-            </article>
+              </div>
 
-            <article class="client-flip-card" itemscope itemtype="https://schema.org/CreativeWork">
-              <meta itemprop="name" content="BEFORCE" />
-              <a href="https://beforce.ar/" target="_blank" rel="noopener noreferrer" class="client-flip-card__inner" aria-label="Ver proyecto de BEFORCE">
-                <div class="client-flip-card__face client-flip-card__face--front">
-                  <div class="client-flip-card__media client-flip-card__media--logo">
-                    <img src="assets/img/portfolio/WEB/beforce/logo.png" alt="Logo de BEFORCE" class="client-flip-card__image client-flip-card__image--contain" loading="lazy" decoding="async" />
+              <!-- 03 Lassen Pharma -->
+              <div class="case-slide" role="group" aria-label="Proyecto 3 de 4" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="Lassen Pharma" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">03</div>
+                  <span class="case-slide__badge">Web corporativa</span>
+                  <h3 class="case-slide__title">Lassen Pharma</h3>
+                  <p class="case-slide__desc">Web corporativa con SEO técnico y arquitectura optimizada para mejorar visibilidad orgánica, claridad institucional y performance.</p>
+                  <div class="case-slide__tags">
+                    <span>SEO técnico</span>
+                    <span>Performance</span>
+                    <span>UI a medida</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://lassen.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">lassen.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/lassen/lassen.web.png" alt="Lassen Pharma — sitio web" loading="lazy" decoding="async" />
+                    </div>
                   </div>
                 </div>
-                <div class="client-flip-card__face client-flip-card__face--back">
-                  <div class="client-flip-card__back-content">
-                    <span class="client-flip-card__label">Catálogo digital</span>
-                    <h3 class="client-flip-card__domain">beforce.ar</h3>
-                    <p class="client-flip-card__back-text">Identidad visual · Presentación de productos · Navegación clara</p>
-                    <span class="client-flip-card__cta">Ver proyecto ↗</span>
+              </div>
+
+              <!-- 04 BEFORCE -->
+              <div class="case-slide" role="group" aria-label="Proyecto 4 de 4" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="BEFORCE" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">04</div>
+                  <span class="case-slide__badge">Catálogo digital</span>
+                  <h3 class="case-slide__title">BEFORCE</h3>
+                  <p class="case-slide__desc">Catálogo digital con identidad visual sólida, creado para mostrar productos con claridad, velocidad y mejor experiencia comercial.</p>
+                  <div class="case-slide__tags">
+                    <span>Catálogo digital</span>
+                    <span>UI / Branding</span>
+                    <span>Performance</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://beforce.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">beforce.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/beforce/web.png" alt="BEFORCE — sitio web" loading="lazy" decoding="async" />
+                    </div>
                   </div>
                 </div>
-              </a>
-            </article>
+              </div>
+
+            </div>
+
+            <!-- Nav -->
+            <div class="case-showcase__nav">
+              <div class="case-dots" role="tablist" aria-label="Navegar proyectos">
+                <button class="case-dot is-active" data-goto="0" role="tab" aria-selected="true" aria-label="Proyecto 1"></button>
+                <button class="case-dot" data-goto="1" role="tab" aria-selected="false" aria-label="Proyecto 2"></button>
+                <button class="case-dot" data-goto="2" role="tab" aria-selected="false" aria-label="Proyecto 3"></button>
+                <button class="case-dot" data-goto="3" role="tab" aria-selected="false" aria-label="Proyecto 4"></button>
+              </div>
+              <span class="case-progress" aria-live="polite" aria-atomic="true">01 / 04</span>
+              <div class="case-arrows">
+                <button class="case-arrow case-arrow--prev" aria-label="Proyecto anterior">←</button>
+                <button class="case-arrow case-arrow--next" aria-label="Proyecto siguiente">→</button>
+              </div>
+            </div>
           </div>
 
-          <div class="cta-center riv">
-            <a href="clientes.html" class="btn primary">Ver más proyectos →</a>
+          <div class="cta-center riv" style="margin-top: 40px">
+            <a href="clientes.html" class="btn primary">Ver todos los proyectos →</a>
           </div>
         </div>
       </section>
@@ -1977,5 +2311,53 @@
     </script>
 
     <script src="assets/js/redesign.js" defer></script>
+    <script>
+      (function () {
+        var showcase = document.getElementById('caseShowcase');
+        if (!showcase) return;
+
+        var slides   = showcase.querySelectorAll('.case-slide');
+        var dots     = showcase.querySelectorAll('.case-dot');
+        var progress = showcase.querySelector('.case-progress');
+        var prevBtn  = showcase.querySelector('.case-arrow--prev');
+        var nextBtn  = showcase.querySelector('.case-arrow--next');
+        var current  = 0;
+        var total    = slides.length;
+        var timer;
+
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+        function goTo(n) {
+          slides[current].classList.remove('is-active');
+          dots[current].classList.remove('is-active');
+          dots[current].setAttribute('aria-selected', 'false');
+          current = (n + total) % total;
+          slides[current].classList.add('is-active');
+          dots[current].classList.add('is-active');
+          dots[current].setAttribute('aria-selected', 'true');
+          if (progress) progress.textContent = pad(current + 1) + ' / ' + pad(total);
+        }
+
+        function startAuto() {
+          clearInterval(timer);
+          timer = setInterval(function () { goTo(current + 1); }, 5500);
+        }
+
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            goTo(parseInt(this.getAttribute('data-goto'), 10));
+            startAuto();
+          });
+        });
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); startAuto(); });
+
+        showcase.addEventListener('mouseenter', function () { clearInterval(timer); });
+        showcase.addEventListener('mouseleave', startAuto);
+
+        startAuto();
+      })();
+    </script>
   </body>
 </html>
