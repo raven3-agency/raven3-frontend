@@ -1076,21 +1076,56 @@
       }
 
       @media (max-width: 820px) {
-        .case-showcase__track { min-height: 680px; }
-        .case-slide {
-          grid-template-columns: 1fr;
-          gap: 24px;
-          align-items: start;
+        /* Section-level horizontal padding */
+        .clients-section .container {
+          padding-inline: clamp(16px, 5vw, 24px);
         }
-        .case-slide__num { font-size: 64px; margin-bottom: -14px; }
+
+        /* Let track height follow the active slide naturally */
+        .case-showcase__track { min-height: 0; }
+
+        /* Inactive: zero-height hidden; active: normal flow */
+        .case-slide {
+          position: relative;
+          inset: auto;
+          grid-template-columns: 1fr;
+          gap: 14px;
+          align-items: start;
+          height: 0;
+          overflow: hidden;
+          opacity: 0;
+          pointer-events: none;
+          transform: none;
+          transition: opacity 0.35s ease;
+        }
+        .case-slide.is-active {
+          height: auto;
+          overflow: visible;
+          opacity: 1;
+          pointer-events: auto;
+          transform: none;
+        }
+
+        .case-slide__info { gap: 10px; }
+        .case-slide__num { font-size: 44px; margin-bottom: -10px; }
+        .case-slide__title { font-size: clamp(22px, 6vw, 30px); }
+        .case-slide__desc { font-size: 13px; line-height: 1.55; }
         .case-frame { transform: none !important; }
-        .case-frame__screen { height: 200px; }
+        .case-frame__screen { height: 190px; }
+
+        .case-showcase__nav {
+          margin-top: 18px;
+          padding-top: 14px;
+        }
+        .case-progress { font-size: 9px; }
       }
 
       @media (max-width: 480px) {
-        .case-showcase__track { min-height: 580px; }
         .case-frame__screen { height: 160px; }
-        .case-slide__title { font-size: 26px; }
+        .case-slide__tags { gap: 6px; }
+        .case-slide__tags span { font-size: 10px; padding: 4px 8px; }
+        .case-showcase__nav { flex-wrap: wrap; gap: 10px; }
+        .case-progress { order: 3; width: 100%; text-align: center; opacity: 0.4; }
       }
 
       /* ────────────────────────────────────────────
