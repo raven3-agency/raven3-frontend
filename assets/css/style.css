@@ -1258,6 +1258,15 @@ section {
 footer {
   padding: 6rem 2rem;
 }
+footer#footer {
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 229, 200, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 229, 200, 0.04) 1px, transparent 1px),
+    linear-gradient(180deg, #071114 0%, #050a0e 100%);
+  background-size: 80px 80px, 80px 80px, cover;
+  color: #ffffff;
+}
 /* Footer social icons */
 .footer-socials {
   display: flex;
