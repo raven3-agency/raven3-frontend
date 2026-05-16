@@ -1129,7 +1129,42 @@
       }
 
       /* ────────────────────────────────────────────
-         20. HERO SECTION LABEL (new)
+         20. SECTION BACKGROUNDS
+         Tones down particles in text-heavy sections
+      ──────────────────────────────────────────── */
+
+      /* Clientes showcase — subtle dark panel with centered radial glow */
+      .clients-section {
+        position: relative;
+        background:
+          radial-gradient(ellipse at 50% 0%, rgba(0, 229, 200, 0.05) 0%, transparent 55%),
+          linear-gradient(rgba(0, 229, 200, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 229, 200, 0.03) 1px, transparent 1px),
+          linear-gradient(180deg, #040e14 0%, #071318 60%, #040e14 100%);
+        background-size:
+          auto,
+          70px 70px,
+          70px 70px,
+          cover;
+      }
+
+      /* Proceso — slightly warmer dark, diagonal accent, tighter grid */
+      .proceso {
+        position: relative;
+        background:
+          radial-gradient(ellipse at 20% 50%, rgba(0, 229, 200, 0.04) 0%, transparent 50%),
+          linear-gradient(rgba(0, 229, 200, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 229, 200, 0.025) 1px, transparent 1px),
+          linear-gradient(160deg, #071114 0%, #04090d 50%, #060e12 100%);
+        background-size:
+          auto,
+          50px 50px,
+          50px 50px,
+          cover;
+      }
+
+      /* ────────────────────────────────────────────
+         21. HERO SECTION LABEL (new)
       ──────────────────────────────────────────── */
       .hero-section-label {
         position: absolute;
@@ -1621,7 +1656,7 @@
                 <div class="stars" aria-hidden="true">★★★★★</div>
                 <div class="score-line">
                   <strong>5.0</strong>
-                  <span class="muted">· 4 reseñas en Google</span>
+                  <span class="muted">· 5 reseñas en Google</span>
                 </div>
               </div>
               <div class="reviews-actions">
