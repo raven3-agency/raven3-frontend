@@ -508,80 +508,372 @@
       }
 
       /* ────────────────────────────────────────────
-         7. SERVICES CARDS — ENHANCED
+         7. SERVICES — EXPANDING FLEX PANELS
       ──────────────────────────────────────────── */
-      #servicios .card {
-        border: 1px solid rgba(255, 255, 255, 0.06) !important;
+
+      /* Container */
+      .svc-flex {
+        display: flex;
+        gap: 8px;
+        height: 500px;
+        margin-top: 0;
+      }
+
+      /* Panel base */
+      .svc-panel {
+        position: relative;
+        flex: 0 0 62px;
+        border-radius: 18px;
+        overflow: hidden;
+        cursor: pointer;
         transition:
-          transform 0.34s cubic-bezier(0.16, 1, 0.3, 1),
-          border-color 0.34s ease,
-          box-shadow 0.34s ease !important;
+          flex 0.58s cubic-bezier(0.4, 0, 0.2, 1),
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+        border: 1px solid rgba(0, 229, 200, 0.07);
+        background: #07101a;
+        outline: none;
+        user-select: none;
       }
 
-      #servicios .card:hover {
-        border-color: rgba(0, 229, 200, 0.3) !important;
-        box-shadow:
-          0 20px 50px rgba(0, 0, 0, 0.38),
-          0 0 0 1px rgba(0, 229, 200, 0.04),
-          0 0 40px rgba(0, 229, 200, 0.07) !important;
+      .svc-panel:focus-visible {
+        border-color: rgba(0, 229, 200, 0.38);
+        box-shadow: 0 0 0 2px rgba(0, 229, 200, 0.15);
       }
 
-      /* Service number in mono */
-      .card-svc-num {
+      /* Active panel */
+      .svc-panel.is-active {
+        flex: 1 1 0%;
+        cursor: default;
+        border-color: rgba(0, 229, 200, 0.14);
+      }
+
+      .svc-panel:hover:not(.is-active) {
+        border-color: rgba(0, 229, 200, 0.18);
+        flex: 0 0 72px;
+      }
+
+      /* ── Gradient overlay (always) ── */
+      .svc-panel::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        background: linear-gradient(
+          to top,
+          rgba(4, 8, 14, 0.96) 0%,
+          rgba(4, 8, 14, 0.55) 38%,
+          rgba(4, 8, 14, 0.08) 100%
+        );
+        pointer-events: none;
+      }
+
+      /* ── Accent line at top ── */
+      .svc-panel::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0;
+        height: 2px;
+        z-index: 4;
+        opacity: 0;
+        transition: opacity 0.32s ease;
+        border-radius: 18px 18px 0 0;
+      }
+      .svc-panel:hover::before,
+      .svc-panel.is-active::before { opacity: 1; }
+
+      .svc-panel[data-svc="01"]::before { background: linear-gradient(90deg, transparent, #00E5C8, transparent); }
+      .svc-panel[data-svc="02"]::before { background: linear-gradient(90deg, transparent, #FFA94D, transparent); }
+      .svc-panel[data-svc="03"]::before { background: linear-gradient(90deg, transparent, #4D96FF, transparent); }
+      .svc-panel[data-svc="04"]::before { background: linear-gradient(90deg, transparent, #51CF66, transparent); }
+      .svc-panel[data-svc="05"]::before { background: linear-gradient(90deg, transparent, #CC5DE8, transparent); }
+      .svc-panel[data-svc="06"]::before { background: linear-gradient(90deg, transparent, #FF6B6B, transparent); }
+
+      /* ── Backgrounds ── */
+      .svc-bg {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+      }
+
+      /* S·01 Web: circuit grid */
+      .svc-panel[data-svc="01"] .svc-bg {
+        background:
+          radial-gradient(ellipse at 30% 35%, rgba(0,229,200,0.13) 0%, transparent 55%),
+          radial-gradient(ellipse at 80% 75%, rgba(0,229,200,0.06) 0%, transparent 45%),
+          repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,229,200,0.045) 40px),
+          repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,229,200,0.045) 40px),
+          #07101a;
+      }
+
+      /* S·02 Tiendas: diagonal amber stripes */
+      .svc-panel[data-svc="02"] .svc-bg {
+        background:
+          radial-gradient(ellipse at 40% 30%, rgba(255,169,77,0.16) 0%, transparent 52%),
+          radial-gradient(ellipse at 85% 80%, rgba(255,169,77,0.07) 0%, transparent 38%),
+          repeating-linear-gradient(135deg, transparent, transparent 18px, rgba(255,169,77,0.04) 19px, rgba(255,169,77,0.04) 20px),
+          #0c0a07;
+      }
+
+      /* S·03 SEO: concentric pulse rings */
+      .svc-panel[data-svc="03"] .svc-bg {
+        background:
+          radial-gradient(circle at 42% 45%, rgba(77,150,255,0.20) 0%, transparent 28%),
+          radial-gradient(circle at 42% 45%, transparent 32%, rgba(77,150,255,0.07) 37%, transparent 42%),
+          radial-gradient(circle at 42% 45%, transparent 46%, rgba(77,150,255,0.05) 51%, transparent 56%),
+          radial-gradient(circle at 42% 45%, transparent 60%, rgba(77,150,255,0.03) 65%, transparent 70%),
+          #08091a;
+      }
+
+      /* S·04 Core Web Vitals: speed lines */
+      .svc-panel[data-svc="04"] .svc-bg {
+        background:
+          radial-gradient(ellipse at 25% 55%, rgba(81,207,102,0.16) 0%, transparent 50%),
+          radial-gradient(ellipse at 75% 30%, rgba(81,207,102,0.07) 0%, transparent 35%),
+          repeating-linear-gradient(87deg, transparent, transparent 12px, rgba(81,207,102,0.035) 13px),
+          #08100a;
+      }
+
+      /* S·05 UX/UI: viewport grid violet */
+      .svc-panel[data-svc="05"] .svc-bg {
+        background:
+          radial-gradient(ellipse at 60% 35%, rgba(204,93,232,0.16) 0%, transparent 50%),
+          radial-gradient(ellipse at 15% 80%, rgba(204,93,232,0.07) 0%, transparent 40%),
+          repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(204,93,232,0.05) 29px),
+          repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(204,93,232,0.05) 29px),
+          #0b0812;
+      }
+
+      /* S·06 Conexiones: network nodes coral */
+      .svc-panel[data-svc="06"] .svc-bg {
+        background:
+          radial-gradient(circle at 50% 38%, rgba(255,107,107,0.16) 0%, transparent 42%),
+          radial-gradient(circle at 18% 72%, rgba(255,107,107,0.09) 0%, transparent 32%),
+          radial-gradient(circle at 82% 18%, rgba(255,107,107,0.07) 0%, transparent 28%),
+          radial-gradient(circle at 65% 78%, rgba(255,107,107,0.05) 0%, transparent 25%),
+          #0e0808;
+      }
+
+      /* ── Collapsed aside ── */
+      .svc-aside {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 0 0 22px;
+        gap: 14px;
+        transition: opacity 0.28s ease;
+      }
+
+      .svc-panel.is-active .svc-aside {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .svc-aside__num {
         font-family: var(--font-mono);
-        font-size: 9px;
-        letter-spacing: 0.3em;
-        color: rgba(0, 229, 200, 0.45);
-        display: block;
-        margin-bottom: 16px;
+        font-size: 8px;
+        letter-spacing: 0.28em;
+        color: rgba(0, 229, 200, 0.38);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        white-space: nowrap;
+        transition: color 0.25s ease;
       }
 
-      /* Service icon */
-      .card-icon {
-        width: 46px;
-        height: 46px;
-        border: 1px solid rgba(0, 229, 200, 0.18);
-        border-radius: 10px;
+      .svc-panel:hover:not(.is-active) .svc-aside__num {
+        color: rgba(0, 229, 200, 0.65);
+      }
+
+      .svc-aside__icon {
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(0, 229, 200, 0.13);
+        border-radius: 9px;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 22px;
-        background: rgba(0, 229, 200, 0.04);
-        transition: all 0.32s ease;
+        background: rgba(0, 0, 0, 0.35);
+        transition: border-color 0.25s, background 0.25s, box-shadow 0.25s;
         flex-shrink: 0;
       }
 
-      .card-icon svg {
-        width: 22px;
-        height: 22px;
-        stroke: var(--r3);
+      .svc-panel:hover:not(.is-active) .svc-aside__icon {
+        background: rgba(0, 0, 0, 0.5);
+      }
+
+      .svc-aside__icon svg {
+        width: 16px;
+        height: 16px;
         fill: none;
         stroke-width: 1.5;
         stroke-linecap: round;
         stroke-linejoin: round;
-        opacity: 0.8;
-        transition: opacity 0.32s ease;
       }
 
-      #servicios .card:hover .card-icon {
-        border-color: rgba(0, 229, 200, 0.45);
-        background: rgba(0, 229, 200, 0.07);
-        box-shadow: 0 0 20px rgba(0, 229, 200, 0.12);
+      .svc-panel[data-svc="01"] .svc-aside__icon { border-color: rgba(0,229,200,0.22); }
+      .svc-panel[data-svc="01"] .svc-aside__icon svg { stroke: #00E5C8; }
+      .svc-panel[data-svc="02"] .svc-aside__icon { border-color: rgba(255,169,77,0.22); }
+      .svc-panel[data-svc="02"] .svc-aside__icon svg { stroke: #FFA94D; }
+      .svc-panel[data-svc="03"] .svc-aside__icon { border-color: rgba(77,150,255,0.22); }
+      .svc-panel[data-svc="03"] .svc-aside__icon svg { stroke: #4D96FF; }
+      .svc-panel[data-svc="04"] .svc-aside__icon { border-color: rgba(81,207,102,0.22); }
+      .svc-panel[data-svc="04"] .svc-aside__icon svg { stroke: #51CF66; }
+      .svc-panel[data-svc="05"] .svc-aside__icon { border-color: rgba(204,93,232,0.22); }
+      .svc-panel[data-svc="05"] .svc-aside__icon svg { stroke: #CC5DE8; }
+      .svc-panel[data-svc="06"] .svc-aside__icon { border-color: rgba(255,107,107,0.22); }
+      .svc-panel[data-svc="06"] .svc-aside__icon svg { stroke: #FF6B6B; }
+
+      /* ── Expanded body ── */
+      .svc-body {
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        display: flex;
+        align-items: flex-end;
+        padding: 30px 32px;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.32s ease 0.12s;
       }
 
-      #servicios .card:hover .card-icon svg { opacity: 1; }
+      .svc-panel.is-active .svc-body {
+        opacity: 1;
+        pointer-events: auto;
+      }
 
-      #servicios .card h3 {
+      .svc-body__inner {
+        transform: translateY(14px);
+        transition: transform 0.42s cubic-bezier(0.16, 1, 0.3, 1) 0.16s;
+        max-width: 480px;
+      }
+
+      .svc-panel.is-active .svc-body__inner {
+        transform: translateY(0);
+      }
+
+      .svc-body__num {
+        display: block;
+        font-family: var(--font-mono);
+        font-size: 9px;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      .svc-panel[data-svc="01"] .svc-body__num { color: #00E5C8; }
+      .svc-panel[data-svc="02"] .svc-body__num { color: #FFA94D; }
+      .svc-panel[data-svc="03"] .svc-body__num { color: #4D96FF; }
+      .svc-panel[data-svc="04"] .svc-body__num { color: #51CF66; }
+      .svc-panel[data-svc="05"] .svc-body__num { color: #CC5DE8; }
+      .svc-panel[data-svc="06"] .svc-body__num { color: #FF6B6B; }
+
+      .svc-body__title {
         font-family: var(--font-heading) !important;
-        font-size: clamp(18px, 2.2vw, 26px) !important;
-        letter-spacing: 0.04em !important;
+        font-size: clamp(22px, 2.6vw, 34px) !important;
         font-weight: 700 !important;
+        letter-spacing: 0.04em !important;
+        color: #eef4f8;
+        margin: 0 0 10px;
+        line-height: 1.12;
       }
 
-      #servicios .card p {
+      .svc-body__desc {
         font-family: var(--font-body) !important;
         font-size: 14px !important;
-        line-height: 1.7 !important;
+        line-height: 1.72 !important;
+        color: rgba(178, 200, 218, 0.78);
+        margin: 0 0 22px;
+      }
+
+      .svc-body__cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 9px 18px;
+        border-radius: 8px;
+        border: 1px solid rgba(0, 229, 200, 0.22);
+        background: rgba(0, 229, 200, 0.05);
+        color: rgba(0, 229, 200, 0.88);
+        transition: background 0.22s, border-color 0.22s, box-shadow 0.22s, transform 0.18s;
+      }
+
+      .svc-body__cta:hover {
+        background: rgba(0, 229, 200, 0.11);
+        border-color: rgba(0, 229, 200, 0.45);
+        box-shadow: 0 0 22px rgba(0, 229, 200, 0.12);
+        transform: translateX(2px);
+      }
+
+      .svc-body__cta svg {
+        width: 13px;
+        height: 13px;
+        stroke: rgba(0, 229, 200, 0.88);
+        fill: none;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: transform 0.18s ease;
+      }
+
+      .svc-body__cta:hover svg {
+        transform: translate(2px, -2px);
+      }
+
+      /* ── Mobile: vertical accordion ── */
+      @media (max-width: 720px) {
+        .svc-flex {
+          flex-direction: column;
+          height: auto;
+          gap: 6px;
+        }
+
+        .svc-panel {
+          flex: none !important;
+          height: 58px;
+          border-radius: 13px;
+          transition:
+            height 0.48s cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 0.3s ease;
+        }
+
+        .svc-panel:hover:not(.is-active) {
+          flex: none !important;
+          height: 64px;
+        }
+
+        .svc-panel.is-active {
+          height: 260px;
+        }
+
+        .svc-aside {
+          flex-direction: row;
+          justify-content: flex-start;
+          padding: 0 18px;
+          gap: 14px;
+        }
+
+        .svc-aside__num {
+          writing-mode: horizontal-tb;
+          transform: none;
+          font-size: 9px;
+        }
+
+        .svc-body {
+          padding: 20px 20px;
+        }
+
+        .svc-body__desc {
+          display: none;
+        }
       }
 
       /* ────────────────────────────────────────────
@@ -1400,128 +1692,146 @@
             </h2>
           </div>
 
-          <div class="grid">
+          <div class="svc-flex" id="svc-accordion">
+
             <!-- S·01 Web a medida -->
-            <article class="card">
-              <span class="card-svc-num">S·01</span>
-              <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                </svg>
+            <article class="svc-panel is-active" data-svc="01"
+                     tabindex="0" role="button" aria-expanded="true" aria-label="Web a medida">
+              <div class="svc-bg"></div>
+              <div class="svc-aside">
+                <span class="svc-aside__num">S·01</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
               </div>
-              <h3>Web a medida</h3>
-              <p>Sitios personalizados, rápidos y modernos. Nada genérico, nada pesado.</p>
-              <a class="card-link" href="/servicios/desarrollo-web-a-medida.html">
-                <span>Ver servicio</span>
-                <span class="card-link__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
-                </span>
-              </a>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·01</span>
+                  <h3 class="svc-body__title">Web a medida</h3>
+                  <p class="svc-body__desc">Sitios personalizados, rápidos y modernos. Nada genérico, nada pesado.</p>
+                  <a class="svc-body__cta" href="/servicios/desarrollo-web-a-medida.html">
+                    Ver servicio
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
             <!-- S·02 Tiendas Online -->
-            <article class="card">
-              <span class="card-svc-num">S·02</span>
-              <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-                  <line x1="3" y1="6" x2="21" y2="6"></line>
-                  <path d="M16 10a4 4 0 0 1-8 0"></path>
-                </svg>
+            <article class="svc-panel" data-svc="02"
+                     tabindex="0" role="button" aria-expanded="false" aria-label="Tiendas Online">
+              <div class="svc-bg"></div>
+              <div class="svc-aside">
+                <span class="svc-aside__num">S·02</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
               </div>
-              <h3>Tiendas Online</h3>
-              <p>E-commerce listo para vender, escalar e integrarse con pagos y analítica.</p>
-              <a class="card-link" href="/servicios/tiendas-online.html">
-                <span>Ver servicio</span>
-                <span class="card-link__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
-                </span>
-              </a>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·02</span>
+                  <h3 class="svc-body__title">Tiendas Online</h3>
+                  <p class="svc-body__desc">E-commerce listo para vender, escalar e integrarse con pagos y analítica.</p>
+                  <a class="svc-body__cta" href="/servicios/tiendas-online.html">
+                    Ver servicio
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
             <!-- S·03 SEO Técnico -->
-            <article class="card">
-              <span class="card-svc-num">S·03</span>
-              <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  <line x1="11" y1="8" x2="11" y2="14"></line>
-                  <line x1="8" y1="11" x2="14" y2="11"></line>
-                </svg>
+            <article class="svc-panel" data-svc="03"
+                     tabindex="0" role="button" aria-expanded="false" aria-label="SEO Técnico">
+              <div class="svc-bg"></div>
+              <div class="svc-aside">
+                <span class="svc-aside__num">S·03</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
               </div>
-              <h3>SEO Técnico</h3>
-              <p>Mejoramos estructura, indexabilidad y rendimiento para posicionar mejor.</p>
-              <a class="card-link" href="/servicios/seo-tecnico.html">
-                <span>Ver servicio</span>
-                <span class="card-link__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
-                </span>
-              </a>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·03</span>
+                  <h3 class="svc-body__title">SEO Técnico</h3>
+                  <p class="svc-body__desc">Mejoramos estructura, indexabilidad y rendimiento para posicionar mejor.</p>
+                  <a class="svc-body__cta" href="/servicios/seo-tecnico.html">
+                    Ver servicio
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
             <!-- S·04 Core Web Vitals -->
-            <article class="card">
-              <span class="card-svc-num">S·04</span>
-              <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
+            <article class="svc-panel" data-svc="04"
+                     tabindex="0" role="button" aria-expanded="false" aria-label="Core Web Vitals">
+              <div class="svc-bg"></div>
+              <div class="svc-aside">
+                <span class="svc-aside__num">S·04</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
               </div>
-              <h3>Core Web Vitals</h3>
-              <p>Optimizamos velocidad real para mejorar experiencia, SEO y conversión.</p>
-              <a class="card-link" href="/servicios/desarrollo-web-a-medida.html">
-                <span>Ver servicio</span>
-                <span class="card-link__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
-                </span>
-              </a>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·04</span>
+                  <h3 class="svc-body__title">Core Web Vitals</h3>
+                  <p class="svc-body__desc">Optimizamos velocidad real para mejorar experiencia, SEO y conversión.</p>
+                  <a class="svc-body__cta" href="/servicios/desarrollo-web-a-medida.html">
+                    Ver servicio
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
             <!-- S·05 UX/UI -->
-            <article class="card">
-              <span class="card-svc-num">S·05</span>
-              <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                  <line x1="3" y1="9" x2="21" y2="9"></line>
-                  <line x1="9" y1="21" x2="9" y2="9"></line>
-                </svg>
+            <article class="svc-panel" data-svc="05"
+                     tabindex="0" role="button" aria-expanded="false" aria-label="UX/UI Orientado a Conversión">
+              <div class="svc-bg"></div>
+              <div class="svc-aside">
+                <span class="svc-aside__num">S·05</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
               </div>
-              <h3>UX/UI Orientado a Conversión</h3>
-              <p>Diseñamos interfaces que guían, ordenan y convierten mejor.</p>
-              <a class="card-link" href="/servicios/desarrollo-web-a-medida.html">
-                <span>Ver servicio</span>
-                <span class="card-link__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
-                </span>
-              </a>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·05</span>
+                  <h3 class="svc-body__title">UX/UI Conversión</h3>
+                  <p class="svc-body__desc">Diseñamos interfaces que guían, ordenan y convierten mejor.</p>
+                  <a class="svc-body__cta" href="/servicios/desarrollo-web-a-medida.html">
+                    Ver servicio
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
             </article>
 
             <!-- S·06 Conexiones a medida -->
-            <article class="card">
-              <span class="card-svc-num">S·06</span>
-              <div class="card-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <circle cx="12" cy="5" r="3"></circle>
-                  <circle cx="5" cy="19" r="3"></circle>
-                  <circle cx="19" cy="19" r="3"></circle>
-                  <line x1="12" y1="8" x2="12" y2="12"></line>
-                  <line x1="12" y1="12" x2="5" y2="16"></line>
-                  <line x1="12" y1="12" x2="19" y2="16"></line>
-                </svg>
+            <article class="svc-panel" data-svc="06"
+                     tabindex="0" role="button" aria-expanded="false" aria-label="Conexiones a medida">
+              <div class="svc-bg"></div>
+              <div class="svc-aside">
+                <span class="svc-aside__num">S·06</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"></circle><circle cx="5" cy="19" r="3"></circle><circle cx="19" cy="19" r="3"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="12" x2="5" y2="16"></line><line x1="12" y1="12" x2="19" y2="16"></line></svg>
+                </div>
               </div>
-              <h3>Conexiones a medida</h3>
-              <p>Integramos CRMs, pagos y sistemas para automatizar procesos sin fricción.</p>
-              <a class="card-link" href="/servicios/desarrollo-web-a-medida.html">
-                <span>Ver servicio</span>
-                <span class="card-link__icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
-                </span>
-              </a>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·06</span>
+                  <h3 class="svc-body__title">Conexiones a medida</h3>
+                  <p class="svc-body__desc">Integramos CRMs, pagos y sistemas para automatizar procesos sin fricción.</p>
+                  <a class="svc-body__cta" href="/servicios/desarrollo-web-a-medida.html">
+                    Ver servicio
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
             </article>
+
           </div>
         </div>
       </section>
@@ -2373,9 +2683,46 @@
           }, 100);
         }
 
-        /* ── Service card stagger override ──
-           GSAP already handles cards via animations.js.
-           We only activate .riv classes on NON-card elements. */
+        /* ── Expanding Service Panels ── */
+        (function () {
+          var panels = document.querySelectorAll('#svc-accordion .svc-panel');
+          if (!panels.length) return;
+
+          function activatePanel(target) {
+            if (target.classList.contains('is-active')) return;
+            panels.forEach(function (p) {
+              p.classList.remove('is-active');
+              p.setAttribute('aria-expanded', 'false');
+            });
+            target.classList.add('is-active');
+            target.setAttribute('aria-expanded', 'true');
+          }
+
+          panels.forEach(function (panel) {
+            panel.addEventListener('click', function () {
+              activatePanel(panel);
+            });
+            panel.addEventListener('keydown', function (e) {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                activatePanel(panel);
+              }
+              /* Arrow key navigation between panels */
+              if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                var idx = Array.prototype.indexOf.call(panels, panel);
+                var next = panels[idx + 1];
+                if (next) { next.focus(); activatePanel(next); }
+              }
+              if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                var idx = Array.prototype.indexOf.call(panels, panel);
+                var prev = panels[idx - 1];
+                if (prev) { prev.focus(); activatePanel(prev); }
+              }
+            });
+          });
+        })();
 
       })();
     </script>
