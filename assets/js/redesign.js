@@ -198,7 +198,7 @@
       +     '<button class="r3-drawer__close" aria-label="Cerrar menú">✕</button>'
       +   '</div>'
       +   '<nav class="r3-drawer__nav" aria-label="Navegación principal">' + linksHTML + '</nav>'
-      +   '<div class="r3-drawer__cta"><a href="/#contacto">Hablemos →</a></div>'
+
       +   '<div class="r3-drawer__footer">'
       +     '<div class="r3-drawer__footer-label">CONTACTO // ARG</div>'
       +     '<div class="r3-drawer__footer-contact">'
