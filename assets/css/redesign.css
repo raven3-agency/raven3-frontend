@@ -1498,13 +1498,13 @@ html { overflow-x: clip; }
   pointer-events: none;
 }
 
-/* Entrance animation when page loads */
+/* Entrance animation — trigger only (never the whole wrapper) */
 @keyframes wa-entry {
-  from { transform: scale(0.5) translateY(20px); opacity: 0; }
+  from { transform: scale(0.3) translateY(24px); opacity: 0; }
   to   { transform: scale(1) translateY(0);      opacity: 1; }
 }
 
-.wa-float {
+.wa-trigger {
   animation: wa-entry 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s both;
 }
 
