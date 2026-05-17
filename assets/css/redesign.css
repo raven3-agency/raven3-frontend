@@ -1077,3 +1077,455 @@ html { overflow-x: clip; }
   .topbar__dropdown { height: auto; }
   .topbar__sub { display: none; }
 }
+
+/* ── 24. PREMIUM WHATSAPP FLOAT ──────────────────────────── */
+
+/* Suppress original button */
+.wasap { display: none !important; }
+
+/* Root wrapper */
+.wa-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 10001;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/* ── Panel ── */
+.wa-panel {
+  width: 304px;
+  background: rgba(4, 12, 18, 0.97);
+  border: 1px solid rgba(0, 229, 200, 0.14);
+  border-radius: 18px;
+  box-shadow:
+    0 28px 56px rgba(0, 0, 0, 0.65),
+    0 0 0 1px rgba(0, 229, 200, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  overflow: hidden;
+  transform-origin: bottom right;
+  transform: scale(0.88) translateY(14px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.26s ease;
+  will-change: transform, opacity;
+}
+
+.wa-panel.is-open {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Panel — Header */
+.wa-panel__head {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 14px 14px 13px;
+  background: rgba(0, 229, 200, 0.035);
+  border-bottom: 1px solid rgba(0, 229, 200, 0.08);
+}
+
+.wa-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #0d2530 0%, #071318 100%);
+  border: 1.5px solid rgba(0, 229, 200, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-shrink: 0;
+  font-family: var(--font-display, 'Orbitron', monospace);
+  font-size: 11px;
+  font-weight: 700;
+  color: rgba(0, 229, 200, 0.9);
+  letter-spacing: 0.05em;
+}
+
+.wa-avatar::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 11px;
+  height: 11px;
+  background: #25d366;
+  border-radius: 50%;
+  border: 2px solid rgba(4, 12, 18, 0.97);
+  animation: wa-blink 2.8s ease-in-out infinite;
+}
+
+@keyframes wa-blink {
+  0%, 85%, 100% { opacity: 1; }
+  42% { opacity: 0.35; }
+}
+
+.wa-panel__meta {
+  flex: 1;
+  min-width: 0;
+}
+
+.wa-panel__name {
+  display: block;
+  font-family: var(--font-heading, 'Rajdhani', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: #e8f4f8;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.wa-panel__status {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-mono, 'Share Tech Mono', monospace);
+  font-size: 10.5px;
+  color: #25d366;
+  margin-top: 2px;
+}
+
+.wa-panel__status::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #25d366;
+  border-radius: 50%;
+  flex-shrink: 0;
+  animation: wa-blink 2.8s ease-in-out infinite;
+}
+
+.wa-close {
+  background: none;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  color: rgba(232, 244, 248, 0.38);
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background 0.2s;
+  flex-shrink: 0;
+}
+
+.wa-close:hover {
+  color: rgba(0, 229, 200, 0.85);
+  background: rgba(0, 229, 200, 0.08);
+}
+
+/* Panel — Chat area */
+.wa-panel__chat {
+  padding: 14px 14px 10px;
+}
+
+.wa-timestamp {
+  text-align: center;
+  font-family: var(--font-mono, 'Share Tech Mono', monospace);
+  font-size: 9.5px;
+  color: rgba(232, 244, 248, 0.2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.wa-bubble {
+  background: rgba(0, 229, 200, 0.055);
+  border: 1px solid rgba(0, 229, 200, 0.1);
+  border-radius: 3px 14px 14px 14px;
+  padding: 11px 13px 10px;
+  position: relative;
+  transform: translateY(8px);
+  opacity: 0;
+  transition:
+    transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.12s,
+    opacity 0.3s ease 0.12s;
+}
+
+.wa-panel.is-open .wa-bubble {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.wa-bubble p {
+  font-family: var(--font-body, 'Outfit', sans-serif);
+  font-size: 13px;
+  color: rgba(232, 244, 248, 0.82);
+  line-height: 1.55;
+  margin: 0 0 7px;
+}
+
+.wa-bubble__meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.wa-bubble__time {
+  font-size: 10px;
+  color: rgba(232, 244, 248, 0.28);
+  font-family: var(--font-mono, 'Share Tech Mono', monospace);
+}
+
+.wa-bubble__checks {
+  color: #25d366;
+  font-size: 11px;
+}
+
+/* Panel — CTA */
+.wa-panel__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 4px 14px 14px;
+  padding: 13px 18px;
+  background: #25d366;
+  color: #fff;
+  border-radius: 11px;
+  font-family: var(--font-heading, 'Rajdhani', sans-serif);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:
+    background 0.22s,
+    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.22s;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.28);
+  transform: translateY(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    background 0.22s,
+    box-shadow 0.22s,
+    transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s,
+    opacity 0.3s ease 0.2s;
+}
+
+.wa-panel.is-open .wa-panel__cta {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.wa-panel__cta:hover {
+  background: #1fb85a;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 28px rgba(37, 211, 102, 0.38);
+}
+
+.wa-panel__cta svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+  flex-shrink: 0;
+}
+
+/* Panel — Teal scan line effect */
+.wa-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 229, 200, 0.4), transparent);
+  animation: wa-scan 3s ease-in-out infinite;
+}
+
+@keyframes wa-scan {
+  0%, 100% { opacity: 0; transform: translateX(-100%); }
+  50% { opacity: 1; }
+  60% { opacity: 0; transform: translateX(100%); }
+}
+
+/* ── Trigger button ── */
+.wa-trigger {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #0c2230 0%, #071318 100%);
+  border: 1.5px solid rgba(0, 229, 200, 0.32);
+  box-shadow:
+    0 6px 24px rgba(0, 0, 0, 0.55),
+    0 0 0 0 rgba(0, 229, 200, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s,
+    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1);
+  flex-shrink: 0;
+}
+
+.wa-trigger:hover {
+  border-color: rgba(0, 229, 200, 0.6);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.65),
+    0 0 28px rgba(0, 229, 200, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  transform: scale(1.06);
+}
+
+.wa-trigger:active {
+  transform: scale(0.93);
+}
+
+/* WhatsApp & X icons */
+.wa-icon {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  transition:
+    transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.25s ease;
+}
+
+.wa-icon--wa {
+  fill: #25d366;
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+.wa-icon--x {
+  fill: none;
+  stroke: rgba(232, 244, 248, 0.65);
+  stroke-width: 2;
+  stroke-linecap: round;
+  transform: scale(0.3) rotate(-90deg);
+  opacity: 0;
+}
+
+.wa-float.is-open .wa-icon--wa {
+  transform: scale(0.3) rotate(90deg);
+  opacity: 0;
+}
+
+.wa-float.is-open .wa-icon--x {
+  transform: scale(1) rotate(0deg);
+  opacity: 1;
+}
+
+/* Pulse rings */
+.wa-ring {
+  position: absolute;
+  inset: -7px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(0, 229, 200, 0.45);
+  animation: wa-pulse 2.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  pointer-events: none;
+}
+
+.wa-ring--2 {
+  animation-delay: 1.3s;
+}
+
+@keyframes wa-pulse {
+  0%   { transform: scale(1);    opacity: 0.7; }
+  100% { transform: scale(1.6);  opacity: 0; }
+}
+
+.wa-float.is-open .wa-ring {
+  animation-play-state: paused;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Notification badge */
+.wa-badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 19px;
+  height: 19px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--font-body, 'Outfit', sans-serif);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid #071318;
+  opacity: 0;
+  transform: scale(0.4) rotate(-12deg);
+  transition:
+    opacity 0.4s ease,
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.wa-badge.is-visible {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.wa-float.is-open .wa-badge {
+  opacity: 0 !important;
+  transform: scale(0.4) rotate(-12deg) !important;
+  transition: opacity 0.18s ease, transform 0.18s ease !important;
+}
+
+/* Corner accent on trigger */
+.wa-trigger::after {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 200, 0.08);
+  pointer-events: none;
+}
+
+/* Entrance animation when page loads */
+@keyframes wa-entry {
+  from { transform: scale(0.5) translateY(20px); opacity: 0; }
+  to   { transform: scale(1) translateY(0);      opacity: 1; }
+}
+
+.wa-float {
+  animation: wa-entry 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s both;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .wa-float {
+    right: 16px;
+    bottom: 16px;
+  }
+  .wa-panel {
+    width: 284px;
+  }
+  .wa-trigger {
+    width: 52px;
+    height: 52px;
+  }
+  .wa-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .wa-ring {
+    inset: -5px;
+  }
+}
