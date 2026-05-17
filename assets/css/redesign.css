@@ -1078,6 +1078,166 @@ html { overflow-x: clip; }
   .topbar__sub { display: none; }
 }
 
+/* ── 23. PREMIUM HAMBURGER — SIGNAL TERMINAL ────────────── */
+
+/* Shimmer keyframe for line hover effect */
+@keyframes ham-shimmer {
+  0%   { background-position: -60px 0; }
+  100% { background-position: 60px 0; }
+}
+
+@media (max-width: 820px) {
+
+  /* ── Container ── */
+  .nav-toggle {
+    width: 42px !important;
+    height: 42px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    padding: 11px 11px !important;
+    background: rgba(0, 229, 200, 0.04) !important;
+    border: 1px solid rgba(0, 229, 200, 0.12) !important;
+    border-radius: 10px !important;
+    cursor: pointer !important;
+    position: relative !important;
+    z-index: 1001 !important;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    transition:
+      background  0.25s ease,
+      border-color 0.25s ease,
+      box-shadow  0.25s ease,
+      transform   0.16s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  }
+
+  .nav-toggle:hover {
+    background:    rgba(0, 229, 200, 0.07) !important;
+    border-color:  rgba(0, 229, 200, 0.28) !important;
+    box-shadow:    0 0 18px rgba(0, 229, 200, 0.12) !important;
+  }
+
+  .nav-toggle:active {
+    transform: scale(0.90) !important;
+  }
+
+  /* ── Corner bracket accents ── */
+  .nav-toggle::before,
+  .nav-toggle::after {
+    content: '' !important;
+    position: absolute !important;
+    width: 6px !important;
+    height: 6px !important;
+    opacity: 0 !important;
+    transition: opacity 0.28s ease, transform 0.28s ease !important;
+    pointer-events: none !important;
+  }
+
+  .nav-toggle::before {
+    top: 5px !important;
+    left: 5px !important;
+    border-top:  1.5px solid rgba(0, 229, 200, 0.75) !important;
+    border-left: 1.5px solid rgba(0, 229, 200, 0.75) !important;
+    transform: translate(-2px, -2px) !important;
+  }
+
+  .nav-toggle::after {
+    bottom: 5px !important;
+    right: 5px !important;
+    border-bottom: 1.5px solid rgba(0, 229, 200, 0.75) !important;
+    border-right:  1.5px solid rgba(0, 229, 200, 0.75) !important;
+    transform: translate(2px, 2px) !important;
+  }
+
+  .nav-toggle:hover::before,
+  .nav-toggle:hover::after {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+  }
+
+  .nav-toggle.active::before,
+  .nav-toggle.active::after {
+    opacity: 1 !important;
+    transform: translate(0, 0) !important;
+    border-color: rgba(0, 229, 200, 1) !important;
+  }
+
+  /* ── Lines ── */
+  .nav-toggle span {
+    display: block !important;
+    height: 1.5px !important;
+    border-radius: 2px !important;
+    background: rgba(224, 240, 248, 0.82) !important;
+    transform-origin: left center !important;
+    transition:
+      transform    0.4s  cubic-bezier(0.34, 1.56, 0.64, 1),
+      width        0.32s cubic-bezier(0.34, 1.56, 0.64, 1),
+      opacity      0.22s ease,
+      background   0.3s  ease,
+      margin-left  0.32s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+    position: relative !important;
+  }
+
+  /* Line 1: full — top */
+  .nav-toggle span:nth-child(1) {
+    width: 20px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Line 2: short, right-offset — signal character */
+  .nav-toggle span:nth-child(2) {
+    width: 12px !important;
+    margin-left: 8px !important;
+    margin-bottom: 5px !important;
+  }
+
+  /* Line 3: full — bottom */
+  .nav-toggle span:nth-child(3) {
+    width: 20px !important;
+  }
+
+  /* ── Hover: line 2 extends to full ── */
+  .nav-toggle:hover span:nth-child(2) {
+    width: 20px !important;
+    margin-left: 0 !important;
+  }
+
+  /* ── Active (open drawer): morph to X ── */
+  .nav-toggle.active {
+    background:   rgba(0, 229, 200, 0.07) !important;
+    border-color: rgba(0, 229, 200, 0.32) !important;
+    box-shadow:   0 0 22px rgba(0, 229, 200, 0.14) !important;
+  }
+
+  .nav-toggle.active span {
+    background: rgba(0, 229, 200, 0.92) !important;
+    transform-origin: center center !important;
+  }
+
+  .nav-toggle.active span:nth-child(1) {
+    width: 18px !important;
+    margin-left: 1px !important;
+    margin-bottom: 0 !important;
+    transform: translateY(6.5px) rotate(45deg) !important;
+  }
+
+  .nav-toggle.active span:nth-child(2) {
+    width: 0 !important;
+    opacity: 0 !important;
+    margin-bottom: 0 !important;
+    transform: scaleX(0) !important;
+    margin-left: 10px !important;
+  }
+
+  .nav-toggle.active span:nth-child(3) {
+    width: 18px !important;
+    margin-left: 1px !important;
+    transform: translateY(-6.5px) rotate(-45deg) !important;
+  }
+}
+
 /* ── 24. PREMIUM WHATSAPP FLOAT ──────────────────────────── */
 
 /* Suppress original button */
@@ -1095,6 +1255,17 @@ html { overflow-x: clip; }
   gap: 10px;
 }
 
+/* ── Panel open/close keyframes (animations, not transitions — immune to compositor conflicts) ── */
+@keyframes wa-panel-in {
+  from { opacity: 0; transform: scale(0.86) translateY(16px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes wa-panel-out {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to   { opacity: 0; transform: scale(0.9) translateY(10px); }
+}
+
 /* ── Panel ── */
 .wa-panel {
   width: 304px;
@@ -1109,19 +1280,22 @@ html { overflow-x: clip; }
   -webkit-backdrop-filter: blur(28px);
   overflow: hidden;
   transform-origin: bottom right;
-  transform: scale(0.88) translateY(14px);
-  opacity: 0;
+  display: none;         /* Hidden by default, no opacity tricks */
   pointer-events: none;
-  transition:
-    transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1),
-    opacity 0.26s ease;
-  will-change: transform, opacity;
 }
 
 .wa-panel.is-open {
-  transform: scale(1) translateY(0);
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
   pointer-events: auto;
+  animation: wa-panel-in 0.38s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.wa-panel.is-closing {
+  display: flex;
+  flex-direction: column;
+  pointer-events: none;
+  animation: wa-panel-out 0.24s ease forwards;
 }
 
 /* Panel — Header */
@@ -1249,16 +1423,10 @@ html { overflow-x: clip; }
   border-radius: 3px 14px 14px 14px;
   padding: 11px 13px 10px;
   position: relative;
-  transform: translateY(8px);
-  opacity: 0;
-  transition:
-    transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.12s,
-    opacity 0.3s ease 0.12s;
 }
 
 .wa-panel.is-open .wa-bubble {
-  transform: translateY(0);
-  opacity: 1;
+  animation: wa-sub-in 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.1s both;
 }
 
 .wa-bubble p {
@@ -1287,6 +1455,12 @@ html { overflow-x: clip; }
   font-size: 11px;
 }
 
+/* Sub-element stagger keyframe */
+@keyframes wa-sub-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
 /* Panel — CTA */
 .wa-panel__cta {
   display: flex;
@@ -1304,30 +1478,17 @@ html { overflow-x: clip; }
   letter-spacing: 0.07em;
   text-transform: uppercase;
   text-decoration: none;
-  transition:
-    background 0.22s,
-    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
-    box-shadow 0.22s;
   box-shadow: 0 4px 20px rgba(37, 211, 102, 0.28);
-  transform: translateY(6px);
-  opacity: 0;
-  pointer-events: none;
-  transition:
-    background 0.22s,
-    box-shadow 0.22s,
-    transform 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s,
-    opacity 0.3s ease 0.2s;
+  transition: background 0.22s, transform 0.22s ease, box-shadow 0.22s;
 }
 
 .wa-panel.is-open .wa-panel__cta {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
+  animation: wa-sub-in 0.42s cubic-bezier(0.34, 1.56, 0.64, 1) 0.19s both;
 }
 
 .wa-panel__cta:hover {
   background: #1fb85a;
-  transform: translateY(-2px) !important;
+  transform: translateY(-2px);
   box-shadow: 0 8px 28px rgba(37, 211, 102, 0.38);
 }
 
@@ -1498,15 +1659,7 @@ html { overflow-x: clip; }
   pointer-events: none;
 }
 
-/* Entrance animation — trigger only (never the whole wrapper) */
-@keyframes wa-entry {
-  from { transform: scale(0.3) translateY(24px); opacity: 0; }
-  to   { transform: scale(1) translateY(0);      opacity: 1; }
-}
-
-.wa-trigger {
-  animation: wa-entry 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 1.8s both;
-}
+/* No entrance animation needed — pulse rings provide all visual life */
 
 /* Mobile */
 @media (max-width: 640px) {

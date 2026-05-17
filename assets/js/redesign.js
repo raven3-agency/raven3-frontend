@@ -328,36 +328,27 @@
     var closeBtn = document.getElementById('waClose');
     var badge   = document.getElementById('waBadge');
 
-    /* Explicitly set initial state via inline style — immune to parent animation conflicts */
-    panel.style.opacity = '0';
-    panel.style.transform = 'scale(0.88) translateY(14px)';
-    panel.style.pointerEvents = 'none';
-    panel.style.transition = 'transform 0.38s cubic-bezier(0.34,1.56,0.64,1), opacity 0.28s ease';
-
     var panelClosing = false;
 
     function openPanel() {
-      wrap.classList.add('is-open');
+      if (panelClosing) return;
+      panel.classList.remove('is-closing');
       panel.classList.add('is-open');
+      wrap.classList.add('is-open');
       trigger.setAttribute('aria-expanded', 'true');
-      /* Drive opacity/transform via inline style so parent animation can't interfere */
-      panel.style.opacity = '1';
-      panel.style.transform = 'scale(1) translateY(0)';
-      panel.style.pointerEvents = 'auto';
     }
 
     function closePanel() {
-      if (panelClosing) return;
+      if (!panel.classList.contains('is-open') || panelClosing) return;
       panelClosing = true;
-      panel.style.opacity = '0';
-      panel.style.transform = 'scale(0.88) translateY(14px)';
-      panel.style.pointerEvents = 'none';
+      panel.classList.add('is-closing');
       trigger.setAttribute('aria-expanded', 'false');
       setTimeout(function () {
-        wrap.classList.remove('is-open');
         panel.classList.remove('is-open');
+        panel.classList.remove('is-closing');
+        wrap.classList.remove('is-open');
         panelClosing = false;
-      }, 300);
+      }, 260);
     }
 
     trigger.addEventListener('click', function () {
