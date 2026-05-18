@@ -328,6 +328,38 @@
       ──────────────────────────────────────────── */
       .hero {
         overflow: hidden;
+        position: relative;
+      }
+
+      /* Dark radial vignette — improves text legibility
+         over the particle field without hiding it */
+      .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse 72% 92% at 27% 50%,
+            rgba(4, 8, 14, 0.84) 0%,
+            rgba(4, 8, 14, 0.60) 38%,
+            rgba(4, 8, 14, 0.22) 62%,
+            transparent 78%
+          );
+      }
+
+      /* Ensure hero content stays above vignette */
+      .hero__inner { position: relative; z-index: 2; }
+
+      /* Text-shadow crispness on hero copy */
+      .hero h1 {
+        text-shadow:
+          0 2px 32px rgba(4, 8, 14, 0.98),
+          0 1px 8px  rgba(4, 8, 14, 0.85);
+      }
+
+      .hero .kicker {
+        text-shadow: 0 1px 18px rgba(4, 8, 14, 0.95);
       }
 
       /* Hide the per-hero grid — the global #blueprint-grid already covers everything */
@@ -1309,7 +1341,6 @@
         justify-content: space-between;
         margin-top: 28px;
         padding-top: 20px;
-        border-top: 1px solid rgba(255, 255, 255, 0.06);
       }
 
       .case-dots {
