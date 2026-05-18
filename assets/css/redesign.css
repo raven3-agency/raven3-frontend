@@ -1682,3 +1682,135 @@ html { overflow-x: clip; }
     inset: -5px;
   }
 }
+
+/* ── Footer Newsletter Strip ───────────────────────────── */
+.footer-newsletter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(0, 229, 200, 0.1);
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter__copy {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-newsletter__label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 0.35em;
+  color: rgba(0, 229, 200, 0.7);
+  text-transform: uppercase;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.footer-newsletter__label svg {
+  width: 13px;
+  height: 13px;
+  stroke: rgba(0, 229, 200, 0.7);
+  flex-shrink: 0;
+}
+
+.footer-newsletter__tagline {
+  font-size: 13px;
+  color: rgba(160, 185, 200, 0.58);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.footer-newsletter__field {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 229, 200, 0.18);
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(0, 229, 200, 0.03);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+  flex-shrink: 0;
+}
+
+.footer-newsletter__field:focus-within {
+  border-color: rgba(0, 229, 200, 0.4);
+  box-shadow: 0 0 20px rgba(0, 229, 200, 0.08);
+}
+
+.footer-newsletter__field input[type="email"] {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: rgba(220, 235, 245, 0.9);
+  width: 210px;
+  min-width: 0;
+}
+
+.footer-newsletter__field input[type="email"]::placeholder {
+  color: rgba(0, 229, 200, 0.28);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.footer-newsletter__field button {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 18px;
+  background: rgba(0, 229, 200, 0.09);
+  border: none;
+  border-left: 1px solid rgba(0, 229, 200, 0.18);
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 229, 200, 0.85);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.22s, color 0.22s;
+}
+
+.footer-newsletter__field button:hover {
+  background: rgba(0, 229, 200, 0.18);
+  color: #00E5C8;
+}
+
+.footer-newsletter__field button svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.footer-newsletter__field button:hover svg {
+  transform: translateX(3px);
+}
+
+.footer-newsletter__msg {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: rgba(0, 229, 200, 0.6);
+  margin: 6px 0 0;
+  min-height: 14px;
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .footer-newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .footer-newsletter__field input[type="email"] {
+    width: 155px;
+  }
+}

@@ -1662,6 +1662,28 @@
 
     <footer id="footer" aria-label="Pie de página">
       <div class="container">
+        <!-- ── Newsletter strip ── -->
+        <div class="footer-newsletter">
+          <div class="footer-newsletter__copy">
+            <span class="footer-newsletter__label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              NEWSLETTER
+            </span>
+            <p class="footer-newsletter__tagline">Web Performance Insights — solo contenido técnico de alto valor.</p>
+          </div>
+          <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+            <div class="footer-newsletter__field">
+              <input id="newsletter-email" type="email" name="email" placeholder="tu@email.com" autocomplete="email" aria-label="Tu email para el newsletter" required />
+              <input type="hidden" name="_subject" value="Nuevo suscriptor Raven3" />
+              <button type="submit" id="newsletter-btn" data-idle-text="Suscribirme" data-sending-text="…" data-success-text="Suscripto ✓" data-already-text="Ya suscripto ✓" data-retry-text="Reintentar">
+                Suscribirme
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+            <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite" data-sending-text="Procesando…" data-success-msg="Hecho: <strong>{email}</strong> suscripto." data-already-msg="<strong>{email}</strong> ya estaba suscripto." data-error-text="Algo salió mal. Intentá de nuevo."></p>
+          </form>
+        </div>
+
         <div class="footer-grid">
           <div class="footer-col">
             <a
