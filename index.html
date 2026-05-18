@@ -340,11 +340,18 @@
         z-index: 1;
         pointer-events: none;
         background:
-          radial-gradient(ellipse 72% 92% at 27% 50%,
+          /* Centre-left: covers h1 + kicker */
+          radial-gradient(ellipse 72% 88% at 27% 46%,
             rgba(4, 8, 14, 0.84) 0%,
             rgba(4, 8, 14, 0.60) 38%,
             rgba(4, 8, 14, 0.22) 62%,
             transparent 78%
+          ),
+          /* Bottom-left: covers CTAs, trust items & stat bar */
+          radial-gradient(ellipse 85% 42% at 27% 94%,
+            rgba(4, 8, 14, 0.80) 0%,
+            rgba(4, 8, 14, 0.50) 42%,
+            transparent 70%
           );
       }
 
@@ -360,6 +367,16 @@
 
       .hero .kicker {
         text-shadow: 0 1px 18px rgba(4, 8, 14, 0.95);
+      }
+
+      /* Trust items + stat bar legibility */
+      .trust-item {
+        text-shadow: 0 1px 14px rgba(4, 8, 14, 0.98) !important;
+      }
+
+      .stat-bar-label,
+      .stat-bar-value {
+        text-shadow: 0 1px 10px rgba(4, 8, 14, 0.95);
       }
 
       /* Hide the per-hero grid — the global #blueprint-grid already covers everything */
@@ -911,12 +928,64 @@
       /* ────────────────────────────────────────────
          8. STATEMENT SECTION
       ──────────────────────────────────────────── */
+
+      /* Hero-style background: particles show through, teal glow + dark vignette */
+      .statement {
+        position: relative;
+        overflow: hidden;
+        background: transparent !important;
+      }
+
+      /* Teal radial glow — same as hero__inner::before */
+      .statement::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -8%;
+        transform: translateY(-50%);
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(
+          circle,
+          rgba(0, 229, 200, 0.07) 0%,
+          rgba(0, 229, 200, 0.025) 38%,
+          transparent 68%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      /* Dark vignette — same structure as hero::before */
+      .statement::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse 75% 95% at 28% 50%,
+            rgba(4, 8, 14, 0.80) 0%,
+            rgba(4, 8, 14, 0.52) 40%,
+            rgba(4, 8, 14, 0.18) 62%,
+            transparent 78%
+          );
+      }
+
+      /* Content sits above overlays */
+      .statement .container {
+        position: relative;
+        z-index: 1;
+      }
+
       .statement__text {
         font-family: var(--font-heading) !important;
         font-size: clamp(30px, 5vw, 70px) !important;
         font-weight: 700 !important;
         letter-spacing: 0.02em !important;
         line-height: 1.1 !important;
+        text-shadow:
+          0 2px 28px rgba(4, 8, 14, 0.95),
+          0 1px 8px rgba(4, 8, 14, 0.8);
       }
 
       .statement__text em {
@@ -927,6 +996,7 @@
 
       .statement__sub {
         font-family: var(--font-body) !important;
+        text-shadow: 0 1px 16px rgba(4, 8, 14, 0.95);
       }
 
       /* ────────────────────────────────────────────
@@ -1009,18 +1079,145 @@
       }
 
       /* ────────────────────────────────────────────
-         13. NEWSLETTER
+         13. NEWSLETTER — Footer Strip
       ──────────────────────────────────────────── */
-      .newsletter-eyebrow {
-        font-family: var(--font-mono) !important;
-        letter-spacing: 0.4em !important;
-        font-size: 10px !important;
+
+      /* Hide old standalone newsletter section */
+      section.newsletter { display: none !important; }
+
+      /* ── Footer newsletter strip ── */
+      .footer-newsletter {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 22px 0;
+        border-bottom: 1px solid rgba(0, 229, 200, 0.1);
+        margin-bottom: 40px;
+        flex-wrap: wrap;
       }
 
-      .newsletter h3 {
-        font-family: var(--font-heading) !important;
-        letter-spacing: 0.03em !important;
-        font-weight: 700 !important;
+      .footer-newsletter__copy {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .footer-newsletter__label {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-family: var(--font-mono);
+        font-size: 9px;
+        letter-spacing: 0.35em;
+        color: rgba(0, 229, 200, 0.7);
+        text-transform: uppercase;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .footer-newsletter__label svg {
+        width: 13px;
+        height: 13px;
+        stroke: rgba(0, 229, 200, 0.7);
+        flex-shrink: 0;
+      }
+
+      .footer-newsletter__tagline {
+        font-family: var(--font-body) !important;
+        font-size: 13px !important;
+        color: rgba(160, 185, 200, 0.58);
+        line-height: 1.4;
+        margin: 0;
+      }
+
+      .footer-newsletter__field {
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(0, 229, 200, 0.18);
+        border-radius: 8px;
+        overflow: hidden;
+        background: rgba(0, 229, 200, 0.03);
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+        flex-shrink: 0;
+      }
+
+      .footer-newsletter__field:focus-within {
+        border-color: rgba(0, 229, 200, 0.4);
+        box-shadow: 0 0 20px rgba(0, 229, 200, 0.08);
+      }
+
+      .footer-newsletter__field input[type="email"] {
+        background: transparent;
+        border: none;
+        outline: none;
+        padding: 10px 16px;
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: rgba(220, 235, 245, 0.9);
+        width: 210px;
+        min-width: 0;
+      }
+
+      .footer-newsletter__field input[type="email"]::placeholder {
+        color: rgba(0, 229, 200, 0.28);
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+      }
+
+      .footer-newsletter__field button {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 10px 18px;
+        background: rgba(0, 229, 200, 0.09);
+        border: none;
+        border-left: 1px solid rgba(0, 229, 200, 0.18);
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(0, 229, 200, 0.85);
+        cursor: pointer;
+        white-space: nowrap;
+        transition: background 0.22s, color 0.22s;
+      }
+
+      .footer-newsletter__field button:hover {
+        background: rgba(0, 229, 200, 0.18);
+        color: #00E5C8;
+      }
+
+      .footer-newsletter__field button svg {
+        width: 12px;
+        height: 12px;
+        stroke: currentColor;
+        transition: transform 0.2s ease;
+      }
+
+      .footer-newsletter__field button:hover svg {
+        transform: translateX(3px);
+      }
+
+      .footer-newsletter__msg {
+        font-family: var(--font-mono) !important;
+        font-size: 10px !important;
+        letter-spacing: 0.15em;
+        color: rgba(0, 229, 200, 0.6);
+        margin: 6px 0 0;
+        min-height: 14px;
+        text-align: right;
+      }
+
+      @media (max-width: 760px) {
+        .footer-newsletter {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .footer-newsletter__field input[type="email"] { width: 155px; }
       }
 
       /* ────────────────────────────────────────────
@@ -1514,6 +1711,7 @@
         letter-spacing: 0.3em !important;
         font-size: 9px !important;
       }
+
     </style>
   </head>
 
@@ -1568,6 +1766,7 @@
             <a class="topbar__link" href="#proceso">Proceso</a>
             <a class="topbar__link" href="/clientes.html">Clientes</a>
             <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
+            <a class="topbar__link" href="/blog/">Blog</a>
             <a class="topbar__link" href="contacto.html">Contacto</a>
           </nav>
 
@@ -1678,12 +1877,6 @@
         </div>
       </header>
 
-      <!-- ── RAVEN STRIP ────────────────────────────── -->
-      <section aria-label="Decoración" aria-hidden="true">
-        <div class="container">
-          <div class="raven-strip" id="ravenStrip"></div>
-        </div>
-      </section>
 
       <!-- ── STATEMENT ──────────────────────────────── -->
       <section class="statement" id="declaracion" aria-label="Propuesta de valor">
@@ -1709,12 +1902,259 @@
         </div>
       </section>
 
+      <!-- ── MÉTRICAS ────────────────────────────────── -->
+      <section class="metricas" id="metricas" aria-label="Métricas y resultados">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.02 // METRICAS</span>
+          </div>
+          <div class="section-header" style="text-align: center; max-width: 640px; margin-inline: auto">
+            <p class="eyebrow">Resultados</p>
+            <h2 class="section-title">Números que respaldan<br />nuestro trabajo</h2>
+          </div>
+
+          <div class="metricas-grid">
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="95" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">Performance Score</div>
+              <div class="metrica-desc">Lighthouse en producción</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="92" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">SEO Score</div>
+              <div class="metrica-desc">Auditoría técnica promedio</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="40" data-suffix="%">0%</span>
+              </div>
+              <div class="metrica-label">Más conversión</div>
+              <div class="metrica-desc">Promedio post-optimización</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="60" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">Proyectos entregados</div>
+              <div class="metrica-desc">Webs, tiendas y estrategias</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CLIENTES / SHOWCASE ────────────────────── -->
+      <section class="clients-section" aria-label="Marcas que confiaron en Raven3">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.03 // CLIENTES</span>
+          </div>
+          <div class="clients-section__head">
+            <h2 class="section-title">Marcas que confiaron en nosotros</h2>
+            <p class="section-subtitle">
+              Casos reales de webs, tiendas y SEO técnico que potenciaron la presencia online de nuestros clientes.
+            </p>
+          </div>
+
+          <div class="case-showcase" id="caseShowcase">
+            <div class="case-showcase__track">
+
+              <!-- 01 NDB Propiedades -->
+              <div class="case-slide is-active" role="group" aria-label="Proyecto 1 de 5" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="NDB Propiedades" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">01</div>
+                  <span class="case-slide__badge">Plataforma inmobiliaria</span>
+                  <h3 class="case-slide__title" itemprop="name">NDB Propiedades</h3>
+                  <p class="case-slide__desc">Plataforma inmobiliaria a medida con filtros avanzados e integración Tokko Broker, pensada para mejorar búsqueda, rendimiento y escalabilidad comercial.</p>
+                  <div class="case-slide__tags">
+                    <span>Web a medida</span>
+                    <span>API Tokko Broker</span>
+                    <span>SEO técnico</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://ndbpropiedades.com.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">ndbpropiedades.com.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/ndbpropiedades/web.png" alt="NDB Propiedades — sitio web" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 02 CEA American -->
+              <div class="case-slide" role="group" aria-label="Proyecto 2 de 5" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="CEA American" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">02</div>
+                  <span class="case-slide__badge">Sitio institucional</span>
+                  <h3 class="case-slide__title">CEA American</h3>
+                  <p class="case-slide__desc">Sitio institucional desarrollado con foco en profesionalismo, claridad de información y cumplimiento de tiempos. Resultado que superó las expectativas del cliente.</p>
+                  <div class="case-slide__tags">
+                    <span>Web institucional</span>
+                    <span>UI a medida</span>
+                    <span>Performance</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://cea-american.com.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">cea-american.com.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/cea-american/cea-american.web.png" alt="CEA American — sitio web" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 03 Lassen Pharma -->
+              <div class="case-slide" role="group" aria-label="Proyecto 3 de 5" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="Lassen Pharma" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">03</div>
+                  <span class="case-slide__badge">Web corporativa</span>
+                  <h3 class="case-slide__title">Lassen Pharma</h3>
+                  <p class="case-slide__desc">Web corporativa con SEO técnico y arquitectura optimizada para mejorar visibilidad orgánica, claridad institucional y performance.</p>
+                  <div class="case-slide__tags">
+                    <span>SEO técnico</span>
+                    <span>Performance</span>
+                    <span>UI a medida</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://lassen.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">lassen.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/lassen/lassen.web.png" alt="Lassen Pharma — sitio web" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 04 Etienne de Montebello -->
+              <div class="case-slide" role="group" aria-label="Proyecto 4 de 5" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="Etienne de Montebello" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">04</div>
+                  <span class="case-slide__badge">Web de lujo</span>
+                  <h3 class="case-slide__title">Etienne de Montebello</h3>
+                  <p class="case-slide__desc">Sitio de categoría premium con foco en calidad técnica excepcional. Arquitectura pensada para identificar necesidades del negocio y traducirlas en una experiencia digital de primer nivel.</p>
+                  <div class="case-slide__tags">
+                    <span>Web premium</span>
+                    <span>UI / Branding</span>
+                    <span>Performance</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://etiennedemontebello.com/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">etiennedemontebello.com</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/etienne/etienne.web.png" alt="Etienne de Montebello — sitio web" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 05 art1 -->
+              <div class="case-slide" role="group" aria-label="Proyecto 5 de 5" itemscope itemtype="https://schema.org/CreativeWork">
+                <meta itemprop="name" content="art1" />
+                <div class="case-slide__info">
+                  <div class="case-slide__num" aria-hidden="true">05</div>
+                  <span class="case-slide__badge">Web creativa</span>
+                  <h3 class="case-slide__title">art1</h3>
+                  <p class="case-slide__desc">Sitio web con identidad visual propia, diseñado para destacar en un sector competitivo con una propuesta estética diferenciada y alto rendimiento técnico.</p>
+                  <div class="case-slide__tags">
+                    <span>Web a medida</span>
+                    <span>UI / Branding</span>
+                    <span>Core Web Vitals</span>
+                  </div>
+                  <a class="case-slide__cta" href="https://www.art1.com.ar/" target="_blank" rel="noopener" itemprop="url">
+                    Ver proyecto <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+                <div class="case-slide__visual">
+                  <div class="case-frame">
+                    <div class="case-frame__bar" aria-hidden="true">
+                      <span class="bbar-dot bbar-dot--r"></span>
+                      <span class="bbar-dot bbar-dot--y"></span>
+                      <span class="bbar-dot bbar-dot--g"></span>
+                      <span class="bbar-url">art1.com.ar</span>
+                    </div>
+                    <div class="case-frame__screen">
+                      <img src="assets/img/portfolio/WEB/art1/web_art1.png" alt="art1 — sitio web" loading="lazy" decoding="async" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Nav -->
+            <div class="case-showcase__nav">
+              <div class="case-dots" role="tablist" aria-label="Navegar proyectos">
+                <button class="case-dot is-active" data-goto="0" role="tab" aria-selected="true" aria-label="Proyecto 1"></button>
+                <button class="case-dot" data-goto="1" role="tab" aria-selected="false" aria-label="Proyecto 2"></button>
+                <button class="case-dot" data-goto="2" role="tab" aria-selected="false" aria-label="Proyecto 3"></button>
+                <button class="case-dot" data-goto="3" role="tab" aria-selected="false" aria-label="Proyecto 4"></button>
+                <button class="case-dot" data-goto="4" role="tab" aria-selected="false" aria-label="Proyecto 5"></button>
+              </div>
+              <span class="case-progress" aria-live="polite" aria-atomic="true">01 / 05</span>
+              <div class="case-arrows">
+                <button class="case-arrow case-arrow--prev" aria-label="Proyecto anterior">←</button>
+                <button class="case-arrow case-arrow--next" aria-label="Proyecto siguiente">→</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-center riv" style="margin-top: 40px">
+            <a href="clientes.html" class="btn primary">Ver todos los proyectos →</a>
+          </div>
+        </div>
+      </section>
+
       <!-- ── SERVICIOS ──────────────────────────────── -->
       <section id="servicios" aria-label="Servicios de Raven3">
         <div class="container">
           <div class="section-divider riv">
             <div class="section-divider__line"></div>
-            <span class="section-divider__label">SYS.02 // SERVICIOS</span>
+            <span class="section-divider__label">SYS.04 // SERVICIOS</span>
           </div>
           <div class="section-header">
             <p class="eyebrow">Qué hacemos</p>
@@ -1867,123 +2307,6 @@
         </div>
       </section>
 
-      <!-- ── DIFERENCIALES ──────────────────────────── -->
-      <section class="diferenciales" id="diferenciales" aria-label="Por qué elegir Raven3">
-        <div class="container">
-          <div class="section-divider riv">
-            <div class="section-divider__line"></div>
-            <span class="section-divider__label">SYS.03 // DIFERENCIALES</span>
-          </div>
-          <div class="section-header">
-            <p class="eyebrow">Por qué Raven3</p>
-            <h2 class="section-title">Lo que nos hace<br />diferentes</h2>
-          </div>
-
-          <div class="dif-grid">
-            <div class="dif-item">
-              <span class="dif-num" aria-hidden="true">01</span>
-              <h3>Código 100% a medida</h3>
-              <p>Sin templates genéricos ni themes de WordPress. Cada proyecto se construye desde cero con propósito estratégico y arquitectura limpia.</p>
-            </div>
-
-            <div class="dif-item">
-              <span class="dif-num" aria-hidden="true">02</span>
-              <h3>Performance-first desde el inicio</h3>
-              <p>Core Web Vitals y velocidad de carga no son un add-on de último momento: son parte del proceso de arquitectura desde el día uno.</p>
-            </div>
-
-            <div class="dif-item">
-              <span class="dif-num" aria-hidden="true">03</span>
-              <h3>SEO desde la estructura</h3>
-              <p>El posicionamiento orgánico no se agrega al final. Semántica HTML, datos estructurados y arquitectura de contenido pensados desde el diseño del proyecto.</p>
-            </div>
-
-            <div class="dif-item">
-              <span class="dif-num" aria-hidden="true">04</span>
-              <h3>Diseño premium sin exceso</h3>
-              <p>Interfaces que transmiten valor de marca en cada detalle. Estética moderna, funcional y orientada a resultados. Sin decoración vacía.</p>
-            </div>
-
-            <div class="dif-item">
-              <span class="dif-num" aria-hidden="true">05</span>
-              <h3>Escalabilidad real</h3>
-              <p>Proyectos que crecen sin necesidad de reescribirlo todo. Código modular, documentado y preparado para el siguiente nivel del negocio.</p>
-            </div>
-
-            <div class="dif-item">
-              <span class="dif-num" aria-hidden="true">06</span>
-              <h3>Sin WordPress pesado</h3>
-              <p>Cuando tiene sentido usamos lo correcto para el proyecto. Cuando no lo tiene, construimos soluciones modernas, livianas y más rápidas.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ── PROCESO ────────────────────────────────── -->
-      <section class="proceso" id="proceso" aria-label="Metodología de trabajo">
-        <div class="container">
-          <div class="section-divider riv">
-            <div class="section-divider__line"></div>
-            <span class="section-divider__label">SYS.04 // METODOLOGIA</span>
-          </div>
-          <div class="section-header">
-            <p class="eyebrow">Metodología</p>
-            <h2 class="section-title">Cómo trabajamos</h2>
-          </div>
-
-          <div class="proceso-track">
-            <div class="proceso-line" aria-hidden="true">
-              <div class="proceso-line__fill"></div>
-            </div>
-
-            <ol class="proceso-steps">
-              <li class="proceso-step">
-                <div class="paso-dot" aria-hidden="true"><span class="paso-num">01</span></div>
-                <div class="paso-content">
-                  <h3>Diagnóstico</h3>
-                  <p>Auditoría técnica, benchmark y análisis de oportunidades de mejora.</p>
-                </div>
-              </li>
-              <li class="proceso-step">
-                <div class="paso-dot" aria-hidden="true"><span class="paso-num">02</span></div>
-                <div class="paso-content">
-                  <h3>Estrategia</h3>
-                  <p>Roadmap, arquitectura de información y definición de KPIs claros.</p>
-                </div>
-              </li>
-              <li class="proceso-step">
-                <div class="paso-dot" aria-hidden="true"><span class="paso-num">03</span></div>
-                <div class="paso-content">
-                  <h3>Diseño</h3>
-                  <p>Wireframes, prototipo interactivo y sistema de diseño cohesivo.</p>
-                </div>
-              </li>
-              <li class="proceso-step">
-                <div class="paso-dot" aria-hidden="true"><span class="paso-num">04</span></div>
-                <div class="paso-content">
-                  <h3>Desarrollo</h3>
-                  <p>Código limpio, semántico, performante y bien documentado.</p>
-                </div>
-              </li>
-              <li class="proceso-step">
-                <div class="paso-dot" aria-hidden="true"><span class="paso-num">05</span></div>
-                <div class="paso-content">
-                  <h3>Optimización</h3>
-                  <p>CWV, SEO técnico, velocidad y A/B testing de conversión.</p>
-                </div>
-              </li>
-              <li class="proceso-step">
-                <div class="paso-dot" aria-hidden="true"><span class="paso-num">06</span></div>
-                <div class="paso-content">
-                  <h3>Lanzamiento</h3>
-                  <p>Deploy, monitoreo en tiempo real, analítica y soporte post-lanzamiento.</p>
-                </div>
-              </li>
-            </ol>
-          </div>
-        </div>
-      </section>
-
       <!-- ── RESEÑAS ────────────────────────────────── -->
       <section class="reviews-home" aria-label="Reseñas de Google">
         <div class="container">
@@ -2062,268 +2385,123 @@
         </div>
       </section>
 
-      <!-- ── CLIENTES / SHOWCASE ────────────────────── -->
-      <section class="clients-section" aria-label="Marcas que confiaron en Raven3">
+      <!-- ── DIFERENCIALES ──────────────────────────── -->
+      <section class="diferenciales" id="diferenciales" aria-label="Por qué elegir Raven3">
         <div class="container">
           <div class="section-divider riv">
             <div class="section-divider__line"></div>
-            <span class="section-divider__label">SYS.06 // CLIENTES</span>
+            <span class="section-divider__label">SYS.06 // DIFERENCIALES</span>
           </div>
-          <div class="clients-section__head">
-            <h2 class="section-title">Marcas que confiaron en nosotros</h2>
-            <p class="section-subtitle">
-              Casos reales de webs, tiendas y SEO técnico que potenciaron la presencia online de nuestros clientes.
-            </p>
+          <div class="section-header">
+            <p class="eyebrow">Por qué Raven3</p>
+            <h2 class="section-title">Lo que nos hace<br />diferentes</h2>
           </div>
 
-          <div class="case-showcase" id="caseShowcase">
-            <div class="case-showcase__track">
-
-              <!-- 01 NDB Propiedades -->
-              <div class="case-slide is-active" role="group" aria-label="Proyecto 1 de 4" itemscope itemtype="https://schema.org/CreativeWork">
-                <meta itemprop="name" content="NDB Propiedades" />
-                <div class="case-slide__info">
-                  <div class="case-slide__num" aria-hidden="true">01</div>
-                  <span class="case-slide__badge">Plataforma inmobiliaria</span>
-                  <h3 class="case-slide__title" itemprop="name">NDB Propiedades</h3>
-                  <p class="case-slide__desc">Plataforma inmobiliaria a medida con filtros avanzados e integración Tokko Broker, pensada para mejorar búsqueda, rendimiento y escalabilidad comercial.</p>
-                  <div class="case-slide__tags">
-                    <span>Web a medida</span>
-                    <span>API Tokko Broker</span>
-                    <span>SEO técnico</span>
-                  </div>
-                  <a class="case-slide__cta" href="https://ndbpropiedades.com.ar/" target="_blank" rel="noopener" itemprop="url">
-                    Ver proyecto <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-                <div class="case-slide__visual">
-                  <div class="case-frame">
-                    <div class="case-frame__bar" aria-hidden="true">
-                      <span class="bbar-dot bbar-dot--r"></span>
-                      <span class="bbar-dot bbar-dot--y"></span>
-                      <span class="bbar-dot bbar-dot--g"></span>
-                      <span class="bbar-url">ndbpropiedades.com.ar</span>
-                    </div>
-                    <div class="case-frame__screen">
-                      <img src="assets/img/portfolio/WEB/ndbpropiedades/web.png" alt="NDB Propiedades — sitio web" loading="lazy" decoding="async" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 02 SGM+ -->
-              <div class="case-slide" role="group" aria-label="Proyecto 2 de 4" itemscope itemtype="https://schema.org/CreativeWork">
-                <meta itemprop="name" content="SGM+" />
-                <div class="case-slide__info">
-                  <div class="case-slide__num" aria-hidden="true">02</div>
-                  <span class="case-slide__badge">Sitio institucional</span>
-                  <h3 class="case-slide__title">SGM+</h3>
-                  <p class="case-slide__desc">Sitio institucional con e-commerce integrado, diseñado para potenciar comunidad, optimizar inscripciones y mejorar conversión.</p>
-                  <div class="case-slide__tags">
-                    <span>Branding digital</span>
-                    <span>E-commerce</span>
-                    <span>UX conversión</span>
-                  </div>
-                  <a class="case-slide__cta" href="https://somosgrupodemujeresmas.ar" target="_blank" rel="noopener" itemprop="url">
-                    Ver proyecto <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-                <div class="case-slide__visual">
-                  <div class="case-frame">
-                    <div class="case-frame__bar" aria-hidden="true">
-                      <span class="bbar-dot bbar-dot--r"></span>
-                      <span class="bbar-dot bbar-dot--y"></span>
-                      <span class="bbar-dot bbar-dot--g"></span>
-                      <span class="bbar-url">somosgrupodemujeresmas.ar</span>
-                    </div>
-                    <div class="case-frame__screen">
-                      <img src="assets/img/portfolio/WEB/sgm/web.png" alt="SGM+ — sitio web" loading="lazy" decoding="async" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 03 Lassen Pharma -->
-              <div class="case-slide" role="group" aria-label="Proyecto 3 de 4" itemscope itemtype="https://schema.org/CreativeWork">
-                <meta itemprop="name" content="Lassen Pharma" />
-                <div class="case-slide__info">
-                  <div class="case-slide__num" aria-hidden="true">03</div>
-                  <span class="case-slide__badge">Web corporativa</span>
-                  <h3 class="case-slide__title">Lassen Pharma</h3>
-                  <p class="case-slide__desc">Web corporativa con SEO técnico y arquitectura optimizada para mejorar visibilidad orgánica, claridad institucional y performance.</p>
-                  <div class="case-slide__tags">
-                    <span>SEO técnico</span>
-                    <span>Performance</span>
-                    <span>UI a medida</span>
-                  </div>
-                  <a class="case-slide__cta" href="https://lassen.ar/" target="_blank" rel="noopener" itemprop="url">
-                    Ver proyecto <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-                <div class="case-slide__visual">
-                  <div class="case-frame">
-                    <div class="case-frame__bar" aria-hidden="true">
-                      <span class="bbar-dot bbar-dot--r"></span>
-                      <span class="bbar-dot bbar-dot--y"></span>
-                      <span class="bbar-dot bbar-dot--g"></span>
-                      <span class="bbar-url">lassen.ar</span>
-                    </div>
-                    <div class="case-frame__screen">
-                      <img src="assets/img/portfolio/WEB/lassen/lassen.web.png" alt="Lassen Pharma — sitio web" loading="lazy" decoding="async" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- 04 BEFORCE -->
-              <div class="case-slide" role="group" aria-label="Proyecto 4 de 4" itemscope itemtype="https://schema.org/CreativeWork">
-                <meta itemprop="name" content="BEFORCE" />
-                <div class="case-slide__info">
-                  <div class="case-slide__num" aria-hidden="true">04</div>
-                  <span class="case-slide__badge">Catálogo digital</span>
-                  <h3 class="case-slide__title">BEFORCE</h3>
-                  <p class="case-slide__desc">Catálogo digital con identidad visual sólida, creado para mostrar productos con claridad, velocidad y mejor experiencia comercial.</p>
-                  <div class="case-slide__tags">
-                    <span>Catálogo digital</span>
-                    <span>UI / Branding</span>
-                    <span>Performance</span>
-                  </div>
-                  <a class="case-slide__cta" href="https://beforce.ar/" target="_blank" rel="noopener" itemprop="url">
-                    Ver proyecto <span aria-hidden="true">↗</span>
-                  </a>
-                </div>
-                <div class="case-slide__visual">
-                  <div class="case-frame">
-                    <div class="case-frame__bar" aria-hidden="true">
-                      <span class="bbar-dot bbar-dot--r"></span>
-                      <span class="bbar-dot bbar-dot--y"></span>
-                      <span class="bbar-dot bbar-dot--g"></span>
-                      <span class="bbar-url">beforce.ar</span>
-                    </div>
-                    <div class="case-frame__screen">
-                      <img src="assets/img/portfolio/WEB/beforce/web.png" alt="BEFORCE — sitio web" loading="lazy" decoding="async" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
+          <div class="dif-grid">
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">01</span>
+              <h3>Código 100% a medida</h3>
+              <p>Sin templates genéricos ni themes de WordPress. Cada proyecto se construye desde cero con propósito estratégico y arquitectura limpia.</p>
             </div>
 
-            <!-- Nav -->
-            <div class="case-showcase__nav">
-              <div class="case-dots" role="tablist" aria-label="Navegar proyectos">
-                <button class="case-dot is-active" data-goto="0" role="tab" aria-selected="true" aria-label="Proyecto 1"></button>
-                <button class="case-dot" data-goto="1" role="tab" aria-selected="false" aria-label="Proyecto 2"></button>
-                <button class="case-dot" data-goto="2" role="tab" aria-selected="false" aria-label="Proyecto 3"></button>
-                <button class="case-dot" data-goto="3" role="tab" aria-selected="false" aria-label="Proyecto 4"></button>
-              </div>
-              <span class="case-progress" aria-live="polite" aria-atomic="true">01 / 04</span>
-              <div class="case-arrows">
-                <button class="case-arrow case-arrow--prev" aria-label="Proyecto anterior">←</button>
-                <button class="case-arrow case-arrow--next" aria-label="Proyecto siguiente">→</button>
-              </div>
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">02</span>
+              <h3>Performance-first desde el inicio</h3>
+              <p>Core Web Vitals y velocidad de carga no son un add-on de último momento: son parte del proceso de arquitectura desde el día uno.</p>
             </div>
-          </div>
 
-          <div class="cta-center riv" style="margin-top: 40px">
-            <a href="clientes.html" class="btn primary">Ver todos los proyectos →</a>
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">03</span>
+              <h3>SEO desde la estructura</h3>
+              <p>El posicionamiento orgánico no se agrega al final. Semántica HTML, datos estructurados y arquitectura de contenido pensados desde el diseño del proyecto.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">04</span>
+              <h3>Diseño premium sin exceso</h3>
+              <p>Interfaces que transmiten valor de marca en cada detalle. Estética moderna, funcional y orientada a resultados. Sin decoración vacía.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">05</span>
+              <h3>Escalabilidad real</h3>
+              <p>Proyectos que crecen sin necesidad de reescribirlo todo. Código modular, documentado y preparado para el siguiente nivel del negocio.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">06</span>
+              <h3>Sin WordPress pesado</h3>
+              <p>Cuando tiene sentido usamos lo correcto para el proyecto. Cuando no lo tiene, construimos soluciones modernas, livianas y más rápidas.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- ── MÉTRICAS ────────────────────────────────── -->
-      <section class="metricas" id="metricas" aria-label="Métricas y resultados">
+      <!-- ── PROCESO ────────────────────────────────── -->
+      <section class="proceso" id="proceso" aria-label="Metodología de trabajo">
         <div class="container">
           <div class="section-divider riv">
             <div class="section-divider__line"></div>
-            <span class="section-divider__label">SYS.07 // METRICAS</span>
+            <span class="section-divider__label">SYS.07 // METODOLOGIA</span>
           </div>
-          <div class="section-header" style="text-align: center; max-width: 640px; margin-inline: auto">
-            <p class="eyebrow">Resultados</p>
-            <h2 class="section-title">Números que respaldan<br />nuestro trabajo</h2>
+          <div class="section-header">
+            <p class="eyebrow">Metodología</p>
+            <h2 class="section-title">Cómo trabajamos</h2>
           </div>
 
-          <div class="metricas-grid">
-            <div class="metrica-card">
-              <div class="metrica-value">
-                <span class="counter" data-count="95" data-suffix="+">0+</span>
-              </div>
-              <div class="metrica-label">Performance Score</div>
-              <div class="metrica-desc">Lighthouse en producción</div>
+          <div class="proceso-track">
+            <div class="proceso-line" aria-hidden="true">
+              <div class="proceso-line__fill"></div>
             </div>
-            <div class="metrica-card">
-              <div class="metrica-value">
-                <span class="counter" data-count="92" data-suffix="+">0+</span>
-              </div>
-              <div class="metrica-label">SEO Score</div>
-              <div class="metrica-desc">Auditoría técnica promedio</div>
-            </div>
-            <div class="metrica-card">
-              <div class="metrica-value">
-                <span class="counter" data-count="40" data-suffix="%">0%</span>
-              </div>
-              <div class="metrica-label">Más conversión</div>
-              <div class="metrica-desc">Promedio post-optimización</div>
-            </div>
-            <div class="metrica-card">
-              <div class="metrica-value">
-                <span class="counter" data-count="60" data-suffix="+">0+</span>
-              </div>
-              <div class="metrica-label">Proyectos entregados</div>
-              <div class="metrica-desc">Webs, tiendas y estrategias</div>
-            </div>
+
+            <ol class="proceso-steps">
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">01</span></div>
+                <div class="paso-content">
+                  <h3>Diagnóstico</h3>
+                  <p>Auditoría técnica, benchmark y análisis de oportunidades de mejora.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">02</span></div>
+                <div class="paso-content">
+                  <h3>Estrategia</h3>
+                  <p>Roadmap, arquitectura de información y definición de KPIs claros.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">03</span></div>
+                <div class="paso-content">
+                  <h3>Diseño</h3>
+                  <p>Wireframes, prototipo interactivo y sistema de diseño cohesivo.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">04</span></div>
+                <div class="paso-content">
+                  <h3>Desarrollo</h3>
+                  <p>Código limpio, semántico, performante y bien documentado.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">05</span></div>
+                <div class="paso-content">
+                  <h3>Optimización</h3>
+                  <p>CWV, SEO técnico, velocidad y A/B testing de conversión.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">06</span></div>
+                <div class="paso-content">
+                  <h3>Lanzamiento</h3>
+                  <p>Deploy, monitoreo en tiempo real, analítica y soporte post-lanzamiento.</p>
+                </div>
+              </li>
+            </ol>
           </div>
         </div>
       </section>
 
-      <!-- ── NEWSLETTER ─────────────────────────────── -->
-      <section class="newsletter" aria-label="Newsletter de Raven3">
-        <div class="newsletter-inner riv">
-          <span class="newsletter-eyebrow">NEWSLETTER</span>
-          <h3>Web Performance Insights</h3>
-          <p>
-            Tips, experimentos y análisis técnicos sobre performance, SEO técnico y desarrollo web a medida. Solo contenido de alto valor.
-          </p>
-
-          <form id="newsletter-form" class="newsletter-form">
-            <input
-              id="newsletter-email"
-              type="email"
-              name="email"
-              placeholder="tu@email.com"
-              autocomplete="email"
-              aria-describedby="newsletter-help"
-              required
-            />
-            <small id="newsletter-help" class="sr-only">
-              Ingresá tu email para recibir insights de performance web.
-            </small>
-            <input type="hidden" name="_subject" value="Nuevo suscriptor Raven3" />
-            <button
-              type="submit"
-              id="newsletter-btn"
-              class="btn primary"
-              data-idle-text="Suscribirme"
-              data-sending-text="Enviando…"
-              data-success-text="Suscripto ✓"
-              data-already-text="Ya suscripto ✓"
-              data-retry-text="Reintentar"
-            >
-              Suscribirme
-            </button>
-          </form>
-
-          <p
-            class="newsletter-msg"
-            id="newsletter-msg"
-            aria-live="polite"
-            data-sending-text="Procesando suscripción…"
-            data-success-msg="Hecho: <strong>{email}</strong> está suscripto."
-            data-already-msg="Hecho: <strong>{email}</strong> ya estaba suscripto."
-            data-error-text="Algo salió mal. Por favor, inténtalo de nuevo."
-          ></p>
-        </div>
-      </section>
 
       <!-- ── STRIPS (CSS Marquee) ────────────────────── -->
       <section class="strips" aria-hidden="true">
@@ -2436,6 +2614,49 @@
       <!-- ── FOOTER ─────────────────────────────────── -->
       <footer id="footer" aria-label="Pie de página">
         <div class="container">
+
+          <!-- ── Newsletter strip ── -->
+          <div class="footer-newsletter">
+            <div class="footer-newsletter__copy">
+              <span class="footer-newsletter__label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                NEWSLETTER
+              </span>
+              <p class="footer-newsletter__tagline">Web Performance Insights — solo contenido técnico de alto valor.</p>
+            </div>
+            <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+              <div class="footer-newsletter__field">
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  name="email"
+                  placeholder="tu@email.com"
+                  autocomplete="email"
+                  aria-label="Tu email para el newsletter"
+                  required
+                />
+                <input type="hidden" name="_subject" value="Nuevo suscriptor Raven3" />
+                <button
+                  type="submit"
+                  id="newsletter-btn"
+                  data-idle-text="Suscribirme"
+                  data-sending-text="…"
+                  data-success-text="Suscripto ✓"
+                  data-already-text="Ya suscripto ✓"
+                  data-retry-text="Reintentar"
+                >
+                  Suscribirme
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+              <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite"
+                 data-sending-text="Procesando…"
+                 data-success-msg="Hecho: <strong>{email}</strong> suscripto."
+                 data-already-msg="<strong>{email}</strong> ya estaba suscripto."
+                 data-error-text="Algo salió mal. Intentá de nuevo."></p>
+            </form>
+          </div>
+
           <div class="footer-grid">
             <div class="footer-col">
               <a href="https://raven3.com.ar/" aria-label="Raven3 — Inicio" style="display: inline-block; margin-bottom: 16px">
