@@ -1,0 +1,9 @@
+{
+  "name": "raven3-blog-generator",
+  "version": "1.0.0",
+  "description": "Generador automático de posts para el blog de Raven3",
+  "main": "generate-post.js",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0"
+  }
+}
