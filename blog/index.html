@@ -354,8 +354,22 @@
     </div>
   </footer>
 
-  <script src="../assets/js/main.js" defer></script>
   <script src="../assets/js/newsletter.js" defer></script>
+  <script>
+    // Nav toggle (main.js not needed — blog has no Three.js canvas)
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav   = document.getElementById('main-nav');
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', () => {
+        const open = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!open));
+        mainNav.classList.toggle('open', !open);
+      });
+    }
+    // Topbar scroll
+    const topbar = document.querySelector('.topbar');
+    if (topbar) window.addEventListener('scroll', () => topbar.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -386,7 +400,7 @@
         const res = await fetch('./data/posts.json');
         const data = await res.json();
         allPosts = data.posts;
-        buildFilters(data.categories);
+        buildFilters();
         renderAll();
       } catch(e) {
         console.error('Error cargando posts:', e);
@@ -394,23 +408,36 @@
     }
 
     // ── FILTERS ──────────────────────────────────────
-    function buildFilters(categories) {
+    const CAT_LABELS = {
+      all:         'Todos',
+      performance: 'Performance',
+      seo:         'SEO Técnico',
+      desarrollo:  'Desarrollo Web',
+      ecommerce:   'E-Commerce',
+      ux:          'UX / CRO'
+    };
+    const CAT_ORDER = ['all', 'desarrollo', 'seo', 'ecommerce', 'ux', 'performance'];
+
+    function buildFilters() {
       const container = document.getElementById('filters-inner');
-      categories.forEach(cat => {
+
+      // Count posts per category from the actual data
+      const countMap = {};
+      allPosts.forEach(p => { countMap[p.category] = (countMap[p.category] || 0) + 1; });
+
+      CAT_ORDER.forEach(id => {
+        const count = id === 'all' ? allPosts.length : (countMap[id] || 0);
+        if (count === 0) return; // hide categories with no posts
         const btn = document.createElement('button');
-        btn.className = 'filter-tab' + (cat.id === 'all' ? ' active' : '');
-        btn.dataset.filter = cat.id;
-        const liveCount = cat.id === 'all'
-          ? allPosts.length
-          : allPosts.filter(p => p.category === cat.id).length;
-        btn.innerHTML = `${cat.label} <span class="filter-count">${liveCount}</span>`;
-        btn.addEventListener('click', () => setFilter(cat.id));
+        btn.className = 'filter-tab' + (id === 'all' ? ' active' : '');
+        btn.dataset.filter = id;
+        btn.innerHTML = `${CAT_LABELS[id] || id} <span class="filter-count">${count}</span>`;
+        btn.addEventListener('click', () => setFilter(id));
         container.appendChild(btn);
       });
 
-      // update stats
       document.getElementById('stat-total').textContent = allPosts.length;
-      document.getElementById('stat-cats').textContent = categories.length - 1; // minus "all"
+      document.getElementById('stat-cats').textContent = Object.keys(countMap).length;
     }
 
     function setFilter(id) {
