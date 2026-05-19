@@ -1,434 +1,354 @@
-[
-  {
-    "id": 1,
-    "slug": "rediseno-web-constructora-bosco",
-    "title": "Rediseño Web para Constructora Bosco: Más Leads, Mejor Imagen",
-    "excerpt": "Cómo transformamos el sitio de una constructora con años de trayectoria en una plataforma digital moderna que genera consultas reales.",
-    "category": "desarrollo",
-    "tags": ["rediseño", "constructora", "generación de leads"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2024-11-15",
-    "readTime": 6,
-       "author": {
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "cea-american-cadena-frio-web-corporativa",
+      "title": "CEA American: cómo diseñamos una web corporativa para una empresa de cadena de frío",
+      "excerpt": "Un proyecto pensado para transmitir solidez operativa, trazabilidad y control integral en logística, almacenaje y distribución de productos refrigerados, congelados y secos.",
+      "category": "desarrollo",
+      "tags": ["CEA American", "Cadena de frío", "Desarrollo Web", "UI Corporativa", "Logística"],
+      "date": "2026-05-19",
+      "dateFormatted": "19 de mayo, 2026",
+      "readTime": 7,
+      "featured": true,
+      "thumbClass": "thumb-art--web",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "Desarrollo Web · UI",
         "initials": "R3"
       },
-    "content": "<h2>El desafío</h2><p>Constructora Bosco llegó a nosotros con un sitio web desactualizado que no reflejaba la calidad de sus obras. El diseño antiguo generaba desconfianza y pocas consultas orgánicas.</p><h2>La solución</h2><p>Desarrollamos un sitio moderno con galería de proyectos, formulario de contacto optimizado y SEO local. El resultado: un 40% más de consultas en los primeros 3 meses.</p><h2>Tecnologías utilizadas</h2><p>HTML5, CSS3, JavaScript vanilla, optimización de imágenes con WebP y lazy loading para máxima performance.</p>"
-  },
-  {
-    "id": 2,
-    "slug": "ecommerce-indumentaria-femenina",
-    "title": "E-Commerce de Indumentaria: De Cero a Ventas Online",
-    "excerpt": "Lanzamos la tienda online de una marca de ropa femenina con integración de pagos, gestión de stock y diseño mobile-first.",
-    "category": "ecommerce",
-    "tags": ["ecommerce", "tienda online", "moda"],
-    "thumbClass": "thumb-art--ecomm",
-    "featured": false,
-    "date": "2024-10-28",
-    "readTime": 7,
-       "author": {
+      "content": "<h2>El desafío</h2><p>CEA American necesitaba una presencia digital que estuviera a la altura de una operación logística seria: almacenaje refrigerado, congelado, productos secos, distribución y control de cadena de frío.</p><p>El objetivo no era solo crear una web institucional, sino construir una plataforma clara, confiable y comercialmente útil.</p><h2>El enfoque de Raven3</h2><p>Trabajamos una estética corporativa sólida, con mensajes orientados a operación, seguridad, trazabilidad y cumplimiento. La estructura fue pensada para que un potencial cliente entienda rápidamente qué hace la empresa, qué servicios ofrece y por qué puede confiar en ella.</p><h2>Qué se priorizó</h2><ul><li>Claridad en los servicios principales</li><li>Jerarquía visual profesional</li><li>Mensajes comerciales directos</li><li>Formulario de contacto integrado</li><li>Diseño responsive y rápido</li></ul><h2>Resultado</h2><p>El sitio posiciona a CEA American como una empresa preparada para operaciones exigentes, con foco en control, infraestructura y confianza comercial.</p>"
+    },
+    {
+      "id": 2,
+      "slug": "cea-american-conversion-logistica-b2b",
+      "title": "Diseño B2B para logística: cómo una web puede generar más confianza comercial",
+      "excerpt": "En proyectos como CEA American, la conversión no depende de botones llamativos, sino de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional.",
+      "category": "ux",
+      "tags": ["B2B", "UX", "Logística", "Conversión", "Web Corporativa"],
+      "date": "2026-05-18",
+      "dateFormatted": "18 de mayo, 2026",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "UX · Conversión B2B",
         "initials": "R3"
       },
-    "content": "<h2>El proyecto</h2><p>Una marca de indumentaria femenina quería dar el salto al mundo digital. Necesitaban una tienda online que transmitiera su identidad de marca y facilitara las compras desde el celular.</p><h2>Desarrollo e integración</h2><p>Construimos la tienda con WooCommerce, integración con Mercado Pago y sistema de gestión de stock. El diseño mobile-first logró que el 70% de las ventas provengan de dispositivos móviles.</p><h2>Resultados</h2><p>En el primer mes, la tienda generó ingresos equivalentes a 2 semanas de ventas físicas, con un ticket promedio 15% mayor al de la tienda presencial.</p>"
-  },
-  {
-    "id": 3,
-    "slug": "posicionamiento-seo-estudio-juridico",
-    "title": "SEO para Estudio Jurídico: Primeros Resultados en Google",
-    "excerpt": "Estrategia de SEO local y contenido que llevó a un estudio jurídico de Buenos Aires a la primera página de Google en menos de 4 meses.",
-    "category": "seo",
-    "tags": ["seo local", "abogados", "Google"],
-    "thumbClass": "thumb-art--seo",
-    "featured": false,
-    "date": "2024-10-10",
-    "readTime": 8,
-       "author": {
+      "content": "<h2>La conversión en B2B es distinta</h2><p>Una web para logística no se vende igual que una tienda online. El usuario no compra en el momento: evalúa confianza, capacidad, cumplimiento, estructura y experiencia.</p><h2>Qué debe comunicar una web logística</h2><ul><li>Qué servicios ofrece la empresa</li><li>Qué tipo de productos puede manejar</li><li>Qué nivel de control operativo tiene</li><li>Qué tan simple es contactar o pedir una cotización</li></ul><h2>El caso CEA American</h2><p>En CEA American, el diseño fue construido alrededor de una idea central: transmitir control. Cada sección debía reforzar que la empresa puede manejar productos sensibles bajo condiciones específicas.</p><h2>Conclusión</h2><p>Una web B2B efectiva no solo muestra información. Ordena la percepción de la empresa y reduce la fricción antes del primer contacto comercial.</p>"
+    },
+    {
+      "id": 3,
+      "slug": "etienne-de-montebello-experiencia-editorial-interactiva",
+      "title": "Etienne de Montebello: una experiencia editorial interactiva para una obra literaria premium",
+      "excerpt": "Cómo construimos un sitio inmersivo con storytelling visual, foco editorial y una experiencia digital pensada para presentar y vender un eBook.",
+      "category": "desarrollo",
+      "tags": ["Etienne de Montebello", "Storytelling", "Three.js", "Editorial", "eBook"],
+      "date": "2026-05-17",
+      "dateFormatted": "17 de mayo, 2026",
+      "readTime": 8,
+      "featured": true,
+      "thumbClass": "thumb-art--web",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "Desarrollo Web · Storytelling",
         "initials": "R3"
       },
-    "content": "<h2>El problema</h2><p>El estudio jurídico tenía presencia online pero era invisible en los buscadores. Sus potenciales clientes los buscaban en Google pero encontraban a la competencia.</p><h2>Nuestra estrategia SEO</h2><p>Realizamos una auditoría técnica completa, optimizamos el contenido existente con palabras clave de alta intención y desarrollamos una estrategia de contenido local.</p><h2>Resultados concretos</h2><p>En 4 meses, el sitio alcanzó la primera página para 12 keywords clave. Las consultas orgánicas crecieron un 180% y el costo de adquisición bajó un 60% comparado con publicidad paga.</p>"
-  },
-  {
-    "id": 4,
-    "slug": "sitio-web-clinica-estetica",
-    "title": "Web para Clínica Estética: Diseño que Transmite Confianza",
-    "excerpt": "Diseño y desarrollo de un sitio web para clínica de estética médica con sistema de turnos online y galería de resultados.",
-    "category": "desarrollo",
-    "tags": ["salud", "estética", "turnos online"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2024-09-22",
-    "readTime": 5,
-       "author": {
+      "content": "<h2>Un sitio para vender una obra, no solo mostrarla</h2><p>El proyecto de Etienne de Montebello necesitaba una presencia digital con una sensibilidad distinta: editorial, elegante, inmersiva y orientada a conversión.</p><p>La web debía acompañar el universo de la obra y generar una experiencia memorable para el lector potencial.</p><h2>La solución</h2><p>Diseñamos una experiencia visual a medida con foco en storytelling, presentación del libro, contexto del autor y acceso a la compra del eBook.</p><h2>Qué trabajamos</h2><ul><li>Experiencia editorial premium</li><li>Diseño visual inmersivo</li><li>Secciones orientadas a lectura y conversión</li><li>Optimización mobile</li><li>Integración comercial para el eBook</li></ul><h2>Resultado</h2><p>El sitio funciona como una pieza editorial digital: presenta la obra, construye atmósfera y guía al usuario hacia la acción comercial.</p>"
+    },
+    {
+      "id": 4,
+      "slug": "storytelling-visual-web-literaria",
+      "title": "Storytelling visual aplicado a una web literaria: aprendizajes del proyecto Etienne de Montebello",
+      "excerpt": "Cuando el producto es una obra literaria, la web tiene que hacer más que informar: debe construir clima, ritmo, deseo de lectura y confianza.",
+      "category": "ux",
+      "tags": ["Storytelling Visual", "UX Editorial", "Diseño Web", "Conversión", "Literatura"],
+      "date": "2026-05-16",
+      "dateFormatted": "16 de mayo, 2026",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "UX · Storytelling",
         "initials": "R3"
       },
-    "content": "<h2>La necesidad</h2><p>La clínica tenía una agenda ocupada pero gestionaba turnos por WhatsApp de forma caótica. Necesitaban un sitio que automatizara el proceso y transmitiera profesionalismo.</p><h2>Solución implementada</h2><p>Desarrollamos un sitio con galería de antes/después, fichas detalladas de tratamientos y sistema de turnos integrado con Google Calendar.</p><h2>Impacto</h2><p>La automatización de turnos liberó 2 horas diarias del staff administrativo. Las consultas web aumentaron un 55% gracias al diseño confiable y la galería de resultados reales.</p>"
-  },
-  {
-    "id": 5,
-    "slug": "optimizacion-performance-ecommerce",
-    "title": "Performance: Cómo Reducimos el Tiempo de Carga de una Tienda en un 60%",
-    "excerpt": "Un e-commerce lento pierde ventas. Descubrí cómo optimizamos una tienda WooCommerce y multiplicamos su velocidad de carga.",
-    "category": "performance",
-    "tags": ["performance", "WooCommerce", "velocidad web"],
-    "thumbClass": "thumb-art--perf",
-    "featured": false,
-    "date": "2024-09-05",
-    "readTime": 9,
-       "author": {
+      "content": "<h2>La web como extensión del libro</h2><p>En un proyecto editorial, el sitio no puede sentirse genérico. Tiene que acompañar el tono de la obra, presentar al autor y convertir la curiosidad en lectura.</p><h2>Decisiones clave</h2><ul><li>Usar una estructura visual más narrativa que corporativa</li><li>Crear pausas entre secciones para favorecer la lectura</li><li>Evitar saturar al usuario con llamadas comerciales agresivas</li><li>Construir una experiencia mobile limpia y legible</li></ul><h2>Qué aprendimos</h2><p>El storytelling visual no es decoración. Es una forma de ordenar la percepción del usuario para que entienda el valor de una obra antes de comprarla.</p>"
+    },
+    {
+      "id": 5,
+      "slug": "lassen-pharma-web-corporativa-seo-tecnico",
+      "title": "Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base",
+      "excerpt": "Un sitio institucional creado para mejorar claridad, performance, visibilidad orgánica y estructura técnica en una marca del sector farmacéutico.",
+      "category": "seo",
+      "tags": ["Lassen Pharma", "SEO Técnico", "Web Corporativa", "Performance", "Arquitectura Web"],
+      "date": "2026-05-15",
+      "dateFormatted": "15 de mayo, 2026",
+      "readTime": 7,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "SEO Técnico · Desarrollo",
         "initials": "R3"
       },
-    "content": "<h2>El diagnóstico</h2><p>La tienda tardaba más de 8 segundos en cargar en mobile. Cada segundo extra significa un 7% menos de conversiones según estudios de Google. El problema era urgente.</p><h2>Las optimizaciones aplicadas</h2><p>Implementamos lazy loading de imágenes, conversión a formato WebP, minificación de CSS/JS, caché del servidor y CDN. También eliminamos plugins innecesarios que pesaban mucho.</p><h2>Resultado final</h2><p>El tiempo de carga bajó de 8.2s a 2.9s. El Core Web Vitals pasó a verde. Las conversiones aumentaron un 23% en el primer mes post-optimización.</p>"
-  },
-  {
-    "id": 6,
-    "slug": "rediseno-ux-plataforma-educativa",
-    "title": "Rediseño UX para Plataforma Educativa Online",
-    "excerpt": "Cómo mejorar la experiencia de usuario aumentó la retención de alumnos en un 35% para una plataforma de cursos online.",
-    "category": "ux",
-    "tags": ["ux", "educación online", "retención"],
-    "thumbClass": "thumb-art--ux",
-    "featured": false,
-    "date": "2024-08-18",
-    "readTime": 7,
-       "author": {
+      "content": "<h2>Una web institucional con exigencia técnica</h2><p>Lassen Pharma requería una web corporativa clara, profesional y optimizada técnicamente para mejorar su presencia digital.</p><p>El trabajo combinó arquitectura de contenido, estructura semántica, performance y una interfaz institucional sobria.</p><h2>Prioridades del proyecto</h2><ul><li>Claridad institucional</li><li>SEO técnico desde la estructura</li><li>Performance web</li><li>Diseño responsive</li><li>Jerarquía de contenidos</li></ul><h2>Por qué importa la arquitectura</h2><p>En una web corporativa, el SEO no empieza cuando se escribe un blog. Empieza en la estructura HTML, los títulos, la organización de secciones, la velocidad y la forma en que Google puede interpretar el sitio.</p>"
+    },
+    {
+      "id": 6,
+      "slug": "seo-tecnico-web-corporativa-lassen",
+      "title": "SEO técnico en webs corporativas: lo que aplicamos en proyectos como Lassen Pharma",
+      "excerpt": "Una web institucional puede ser visualmente correcta y aun así estar mal preparada para Google. La diferencia está en la arquitectura técnica.",
+      "category": "seo",
+      "tags": ["SEO Técnico", "HTML Semántico", "Performance", "Web Institucional", "Indexación"],
+      "date": "2026-05-14",
+      "dateFormatted": "14 de mayo, 2026",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "SEO · Performance",
         "initials": "R3"
       },
-    "content": "<h2>El problema de UX</h2><p>La plataforma tenía buen contenido pero los alumnos abandonaban antes de completar los cursos. Las métricas mostraban drop-offs en puntos específicos del flujo de usuario.</p><h2>El proceso de rediseño</h2><p>Realizamos entrevistas con usuarios, mapeo de flujos y pruebas de usabilidad. Identificamos 3 fricciones críticas: navegación confusa, progreso poco visible y checkout complejo.</p><h2>Los cambios y su impacto</h2><p>Rediseñamos la navegación, agregamos indicadores de progreso gamificados y simplificamos el checkout a 2 pasos. La retención de alumnos creció un 35% y los reviews positivos aumentaron un 45%.</p>"
-  },
-  {
-    "id": 7,
-    "slug": "ndb-propiedades-presencia-digital",
-    "title": "NDB Propiedades: Construyendo Presencia Digital desde Cero",
-    "excerpt": "De no tener sitio web a dominar las búsquedas locales de propiedades. El caso de NDB Propiedades y su transformación digital completa.",
-    "category": "desarrollo",
-    "tags": ["inmobiliaria", "SEO local", "presencia digital"],
-    "thumbClass": "thumb-art--dev",
-    "featured": true,
-    "date": "2024-08-01",
-    "readTime": 10,
-       "author": {
+      "content": "<h2>El error más común</h2><p>Muchas webs institucionales se diseñan como piezas visuales, pero se olvidan de la estructura técnica. Eso limita su capacidad de posicionar, cargar rápido y ser interpretadas correctamente por buscadores.</p><h2>Qué revisamos en Raven3</h2><ul><li>Jerarquía correcta de headings</li><li>Metadatos claros y únicos</li><li>Imágenes optimizadas</li><li>HTML semántico</li><li>URLs simples</li><li>Contenido orientado a intención de búsqueda</li></ul><h2>El punto clave</h2><p>El SEO técnico no es un agregado posterior. Es parte de la construcción del sitio desde el primer día.</p>"
+    },
+    {
+      "id": 7,
+      "slug": "ndb-propiedades-integracion-tokko-broker",
+      "title": "NDB Propiedades: una plataforma inmobiliaria integrada con Tokko Broker",
+      "excerpt": "Cómo desarrollamos una experiencia inmobiliaria a medida con filtros avanzados, consumo de API y estructura preparada para escalar propiedades.",
+      "category": "desarrollo",
+      "tags": ["NDB Propiedades", "Tokko Broker", "API", "Inmobiliaria", "Filtros Avanzados"],
+      "date": "2026-05-13",
+      "dateFormatted": "13 de mayo, 2026",
+      "readTime": 8,
+      "featured": true,
+      "thumbClass": "thumb-art--dev",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "API · Desarrollo Web",
         "initials": "R3"
       },
-    "content": "<h2>El punto de partida</h2><p>NDB Propiedades era una inmobiliaria consolidada en su zona pero completamente ausente en el mundo digital. Sin sitio web, sin Google Business, sin redes sociales activas.</p><h2>La estrategia integral</h2><p>Desarrollamos un sitio web con buscador de propiedades integrado, optimización SEO local completa y configuración de Google Business Profile. También creamos contenido para posicionar términos como 'propiedades en [zona]'.</p><h2>Resultados a 6 meses</h2><p>NDB Propiedades aparece en el top 3 de búsquedas locales relevantes. El sitio recibe 1.200 visitas mensuales orgánicas y genera en promedio 8 consultas cualificadas por semana.</p><h2>Lección aprendida</h2><p>En el mercado inmobiliario, la confianza digital es tan importante como la trayectoria. Un sitio profesional con testimonios reales y listings actualizados genera más consultas que cualquier publicidad paga.</p>"
-  },
-  {
-    "id": 8,
-    "slug": "estrategia-contenidos-marca-personal",
-    "title": "Estrategia de Contenidos para Marca Personal Profesional",
-    "excerpt": "Cómo ayudamos a un consultor independiente a posicionarse como referente de su industria mediante contenido estratégico y SEO.",
-    "category": "seo",
-    "tags": ["marca personal", "contenido", "LinkedIn"],
-    "thumbClass": "thumb-art--seo",
-    "featured": false,
-    "date": "2024-07-14",
-    "readTime": 6,
-       "author": {
+      "content": "<h2>El desafío inmobiliario</h2><p>Una web inmobiliaria no puede depender de cargar propiedades manualmente si el negocio necesita escalar. Para NDB Propiedades, el objetivo fue conectar la experiencia visual del sitio con datos reales provenientes de Tokko Broker.</p><h2>Qué desarrollamos</h2><ul><li>Listado de propiedades dinámico</li><li>Filtros por operación, zona y tipología</li><li>Cards inmobiliarias optimizadas</li><li>Estructura preparada para detalle de propiedad</li><li>Consumo de API Tokko Broker</li></ul><h2>UX aplicada a búsqueda</h2><p>El usuario inmobiliario quiere encontrar rápido. Por eso la experiencia debía priorizar filtros claros, información visible y navegación fluida.</p><h2>Resultado</h2><p>La plataforma permite presentar propiedades de forma ordenada, profesional y escalable, evitando una administración manual pesada.</p>"
+    },
+    {
+      "id": 8,
+      "slug": "ux-inmobiliaria-filtros-propiedades",
+      "title": "UX inmobiliaria: cómo diseñar filtros de propiedades que realmente ayudan al usuario",
+      "excerpt": "En proyectos como NDB Propiedades, los filtros no son un detalle visual: son el corazón de la experiencia de búsqueda.",
+      "category": "ux",
+      "tags": ["UX Inmobiliaria", "Filtros", "Propiedades", "Tokko Broker", "Conversión"],
+      "date": "2026-05-12",
+      "dateFormatted": "12 de mayo, 2026",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "UX · Inmobiliarias",
         "initials": "R3"
       },
-    "content": "<h2>El consultor sin visibilidad</h2><p>Nuestro cliente tenía 15 años de experiencia en consultoría empresarial pero cero presencia online. Sus clientes llegaban solo por referidos, limitando su crecimiento.</p><h2>La estrategia de contenido</h2><p>Desarrollamos un plan de contenidos mensual combinando artículos de blog SEO-optimizados y posts de LinkedIn. Cada pieza apuntaba a keywords específicas que sus clientes ideales buscaban.</p><h2>El resultado</h2><p>En 6 meses, el blog generaba 800 visitas mensuales orgánicas. LinkedIn pasó de 200 a 2.400 seguidores. Lo más importante: 3 nuevos clientes llegaron directamente desde el contenido.</p>"
-  },
-  {
-    "id": 9,
-    "slug": "ecommerce-gastronomia-delivery",
-    "title": "Tienda Online para Negocio Gastronómico con Sistema de Delivery",
-    "excerpt": "Lanzamos un sistema de pedidos online para un restaurante que quería independizarse de las apps de delivery y sus comisiones.",
-    "category": "ecommerce",
-    "tags": ["gastronomía", "delivery", "pedidos online"],
-    "thumbClass": "thumb-art--ecomm",
-    "featured": false,
-    "date": "2024-07-02",
-    "readTime": 7,
-       "author": {
+      "content": "<h2>El usuario no quiere navegar: quiere encontrar</h2><p>En una web inmobiliaria, la búsqueda es la experiencia principal. Si los filtros son confusos, lentos o poco visibles, el usuario abandona.</p><h2>Filtros que importan</h2><ul><li>Operación: venta, alquiler o temporal</li><li>Tipo de propiedad</li><li>Zona o ubicación</li><li>Orden por precio o relevancia</li><li>Acceso rápido en mobile</li></ul><h2>El caso NDB Propiedades</h2><p>El proyecto se pensó con una lógica de búsqueda dinámica, donde cada propiedad se presenta con datos relevantes y una interfaz clara para comparar opciones.</p><h2>Conclusión</h2><p>Una buena UX inmobiliaria reduce fricción, mejora la exploración y aumenta la probabilidad de contacto.</p>"
+    },
+    {
+      "id": 9,
+      "slug": "beforce-catalogo-digital-identidad-visual",
+      "title": "BEFORCE: catálogo digital con identidad visual sólida y experiencia comercial clara",
+      "excerpt": "Un proyecto enfocado en presentar productos de forma rápida, ordenada y profesional, con una identidad visual fuerte y estructura de catálogo.",
+      "category": "desarrollo",
+      "tags": ["BEFORCE", "Catálogo Digital", "Branding", "Performance", "Producto"],
+      "date": "2026-05-11",
+      "dateFormatted": "11 de mayo, 2026",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--web",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "UI · Catálogo Digital",
         "initials": "R3"
       },
-    "content": "<h2>El problema de las comisiones</h2><p>El restaurante pagaba hasta un 30% de comisión a las apps de delivery. Con márgenes ajustados en gastronomía, esto hacía insostenible el canal online.</p><h2>La solución propia</h2><p>Desarrollamos un sistema de pedidos online propio integrado al sitio web existente. Menu digital, personalización de pedidos, pago online y coordinación de delivery propio.</p><h2>El ahorro real</h2><p>En el primer trimestre, el 40% de los pedidos online migraron al canal propio. El ahorro en comisiones representó el equivalente a un sueldo mensual extra para el negocio.</p>"
-  },
-  {
-    "id": 10,
-    "slug": "auditoria-seo-empresa-logistica",
-    "title": "Auditoría SEO Completa: El Caso de una Empresa de Logística",
-    "excerpt": "Una auditoría SEO reveló problemas técnicos críticos que impedían el posicionamiento de una empresa de logística B2B.",
-    "category": "seo",
-    "tags": ["auditoría SEO", "logística", "B2B"],
-    "thumbClass": "thumb-art--seo",
-    "featured": false,
-    "date": "2024-06-20",
-    "readTime": 8,
-       "author": {
+      "content": "<h2>Un catálogo no es solo una galería</h2><p>BEFORCE necesitaba una presencia digital capaz de mostrar productos con claridad, velocidad y una identidad visual reconocible.</p><h2>Qué se trabajó</h2><ul><li>Diseño visual alineado a la marca</li><li>Presentación ordenada de productos</li><li>Experiencia rápida y responsive</li><li>Estructura comercial simple</li><li>Enfoque en claridad y consulta</li></ul><h2>El objetivo</h2><p>Cuando el usuario entra a un catálogo, necesita entender qué se ofrece, cómo se organiza la línea de productos y cómo avanzar hacia una consulta. El diseño tiene que ayudar, no competir con el producto.</p>"
+    },
+    {
+      "id": 10,
+      "slug": "catalogo-digital-productos-performance",
+      "title": "Catálogos digitales performantes: por qué BEFORCE no necesitaba una web pesada",
+      "excerpt": "Para mostrar productos de forma efectiva, muchas marcas no necesitan una plataforma compleja: necesitan estructura, velocidad y claridad comercial.",
+      "category": "performance",
+      "tags": ["Catálogo Digital", "Performance", "UX", "Producto", "Desarrollo a medida"],
+      "date": "2026-05-10",
+      "dateFormatted": "10 de mayo, 2026",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "Performance · UI",
         "initials": "R3"
       },
-    "content": "<h2>Los síntomas</h2><p>La empresa tenía un sitio de 5 años, invirtía en contenido pero no lograba posicionar. Las visitas orgánicas estaban estancadas hace 18 meses.</p><h2>Lo que encontramos</h2><p>La auditoría reveló: contenido duplicado entre páginas de servicios, imágenes sin atributos alt, velocidad de carga crítica en mobile y estructura de URLs que canibaliza keywords.</p><h2>El plan de acción</h2><p>Desarrollamos un roadmap de 90 días con prioridades claras: primero los problemas técnicos, luego el contenido. En 60 días, el tráfico orgánico creció un 45%.</p>"
-  },
-  {
-    "id": 11,
-    "slug": "landing-page-alta-conversion",
-    "title": "Landing Page de Alta Conversión: Metodología y Resultados",
-    "excerpt": "Cómo diseñamos una landing page que convirtió al 12% de las visitas en leads cualificados para una empresa de software.",
-    "category": "ux",
-    "tags": ["landing page", "conversión", "CRO"],
-    "thumbClass": "thumb-art--ux",
-    "featured": false,
-    "date": "2024-06-05",
-    "readTime": 8,
-       "author": {
+      "content": "<h2>Menos peso, más claridad</h2><p>Un catálogo digital efectivo no necesita estar sobrecargado de plugins, animaciones innecesarias o estructuras difíciles de mantener.</p><h2>Qué priorizamos</h2><ul><li>Carga rápida</li><li>Diseño responsive</li><li>Productos bien presentados</li><li>Interfaz simple</li><li>Recorrido comercial directo</li></ul><h2>Aprendizaje</h2><p>En proyectos como BEFORCE, la performance es parte de la experiencia comercial. Si el catálogo carga rápido y se entiende rápido, el usuario tiene más posibilidades de avanzar.</p>"
+    },
+    {
+      "id": 11,
+      "slug": "sgm-sitio-institucional-ecommerce-comunidad",
+      "title": "SGM+: sitio institucional con e-commerce para potenciar comunidad e inscripciones",
+      "excerpt": "Un proyecto que combina presencia institucional, venta online, comunidad y una experiencia orientada a conversión.",
+      "category": "ecommerce",
+      "tags": ["SGM+", "E-commerce", "Comunidad", "Inscripciones", "UX"],
+      "date": "2026-05-09",
+      "dateFormatted": "9 de mayo, 2026",
+      "readTime": 7,
+      "featured": true,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "E-commerce · UX",
         "initials": "R3"
       },
-    "content": "<h2>El punto de partida</h2><p>La empresa de software tenía una landing page con 2% de conversión. Invertían en publicidad pero el costo por lead era demasiado alto para ser rentable.</p><h2>El proceso de optimización</h2><p>Aplicamos metodología CRO: análisis heatmaps, pruebas A/B del headline, simplificación del formulario de 8 a 3 campos y adición de prueba social con testimonios reales.</p><h2>Los resultados</h2><p>La nueva landing logró 12% de conversión. Con el mismo presupuesto de publicidad, generan 6 veces más leads. El costo por lead bajó de $45 a $7.5 USD.</p>"
-  },
-  {
-    "id": 12,
-    "slug": "web-arquitecto-portfolio-digital",
-    "title": "Portfolio Digital para Estudio de Arquitectura Premiado",
-    "excerpt": "Diseño y desarrollo de un portfolio web que comunica la visión artística de un estudio de arquitectura con proyección internacional.",
-    "category": "desarrollo",
-    "tags": ["portfolio", "arquitectura", "diseño editorial"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2024-05-22",
-    "readTime": 6,
-       "author": {
+      "content": "<h2>Más que una web institucional</h2><p>SGM+ necesitaba una plataforma capaz de comunicar una propuesta, sostener una comunidad y facilitar acciones concretas como inscripciones o compras.</p><h2>Qué se resolvió</h2><ul><li>Diseño institucional claro</li><li>E-commerce integrado</li><li>Estructura orientada a conversión</li><li>Comunicación de comunidad</li><li>Escalabilidad digital</li></ul><h2>UX para comunidad</h2><p>Cuando una web combina contenido institucional y venta, la clave es no separar artificialmente ambos mundos. La experiencia debe guiar al usuario desde el interés hacia la acción.</p>"
+    },
+    {
+      "id": 12,
+      "slug": "ecommerce-con-comunidad-sgm",
+      "title": "E-commerce con comunidad: lo que aprendimos desarrollando SGM+",
+      "excerpt": "No todos los e-commerce venden productos de la misma manera. Algunos venden pertenencia, formación, experiencia y comunidad.",
+      "category": "ecommerce",
+      "tags": ["E-commerce", "Comunidad", "Conversión", "Inscripciones", "UX"],
+      "date": "2026-05-08",
+      "dateFormatted": "8 de mayo, 2026",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "E-commerce · Estrategia",
         "initials": "R3"
       },
-    "content": "<h2>El desafío creativo</h2><p>El estudio de arquitectura necesitaba un portfolio que estuviera a la altura de su trabajo. No querían algo genérico: buscaban una experiencia visual que se sintiera como caminar por sus obras.</p><h2>El enfoque de diseño</h2><p>Desarrollamos un sitio con navegación horizontal inmersiva, galería full-screen y transiciones cinematográficas. La tipografía editorial y el uso de espacio en blanco reflejan la filosofía del estudio.</p><h2>El impacto profesional</h2><p>El portfolio fue mencionado en una publicación de diseño internacional. El estudio reportó 3 consultas de proyectos internacionales en los primeros 2 meses post-lanzamiento.</p>"
-  },
-  {
-    "id": 13,
-    "slug": "optimizacion-core-web-vitals",
-    "title": "Core Web Vitals: Cómo Pasamos de Rojo a Verde en 30 Días",
-    "excerpt": "Guía práctica de cómo resolvimos los problemas de LCP, FID y CLS en un sitio de noticias con alto tráfico.",
-    "category": "performance",
-    "tags": ["Core Web Vitals", "LCP", "CLS"],
-    "thumbClass": "thumb-art--perf",
-    "featured": false,
-    "date": "2024-05-08",
-    "readTime": 10,
-       "author": {
+      "content": "<h2>Vender no siempre es mostrar un producto</h2><p>En proyectos como SGM+, la conversión depende de comunicar confianza, comunidad y propósito. El usuario necesita entender qué representa la marca antes de avanzar.</p><h2>Elementos clave</h2><ul><li>Mensaje institucional claro</li><li>Accesos visibles a inscripción o compra</li><li>Diseño mobile-first</li><li>Jerarquía de contenido</li><li>Confianza y continuidad visual</li></ul><h2>Conclusión</h2><p>Un e-commerce con comunidad requiere una arquitectura distinta: menos catálogo frío y más recorrido emocional, informativo y comercial.</p>"
+    },
+    {
+      "id": 13,
+      "slug": "okos-sitio-institucional-minimalista",
+      "title": "OKOS: sitio institucional minimalista con foco en claridad, velocidad e identidad",
+      "excerpt": "Un proyecto donde la simpleza visual fue una decisión estratégica para comunicar mejor, cargar más rápido y sostener una identidad clara.",
+      "category": "desarrollo",
+      "tags": ["OKOS", "Minimalismo", "Performance", "Identidad de Marca", "Web Institucional"],
+      "date": "2026-05-07",
+      "dateFormatted": "7 de mayo, 2026",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--web",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "UI · Performance",
         "initials": "R3"
       },
-    "content": "<h2>El problema de los Core Web Vitals</h2><p>Desde que Google incorporó los Core Web Vitals como factor de ranking, el sitio de noticias vio caer su tráfico orgánico un 25%. Urgía resolver los problemas técnicos.</p><h2>Los tres problemas</h2><p>LCP de 6.2s por imágenes hero sin optimizar. CLS de 0.35 por anuncios sin dimensiones definidas. FID alto por scripts de terceros bloqueando el hilo principal.</p><h2>Las soluciones aplicadas</h2><p>Implementamos preload de imágenes críticas, skeleton screens para anuncios y defer de scripts no críticos. También migramos imágenes a formato AVIF con fallback WebP.</p><h2>El resultado</h2><p>En 30 días: LCP a 2.1s, CLS a 0.02, FID bajo 50ms. El tráfico orgánico se recuperó completamente y creció un 12% adicional en los 2 meses siguientes.</p>"
-  },
-  {
-    "id": 14,
-    "slug": "rediseno-ecommerce-aumento-ventas",
-    "title": "Rediseño de E-Commerce: +68% en Ventas sin Más Tráfico",
-    "excerpt": "Cómo el rediseño de la experiencia de compra de una tienda online generó más ventas con el mismo nivel de tráfico.",
-    "category": "ecommerce",
-    "tags": ["rediseño", "CRO", "checkout"],
-    "thumbClass": "thumb-art--ecomm",
-    "featured": false,
-    "date": "2024-04-25",
-    "readTime": 8,
-       "author": {
+      "content": "<h2>Minimalismo con intención</h2><p>OKOS requería un sitio institucional limpio, directo y rápido. La decisión no fue hacer menos por simplicidad, sino eliminar ruido para que la marca se entienda mejor.</p><h2>Qué se priorizó</h2><ul><li>Claridad de marca</li><li>Velocidad de carga</li><li>UI limpia</li><li>Estructura técnica optimizada</li><li>Experiencia responsive</li></ul><h2>Resultado</h2><p>El sitio transmite profesionalismo sin sobrecargar al usuario, manteniendo una experiencia rápida y enfocada.</p>"
+    },
+    {
+      "id": 14,
+      "slug": "minimalismo-web-performance-okos",
+      "title": "Minimalismo web y performance: por qué menos interfaz puede convertir mejor",
+      "excerpt": "El caso OKOS muestra cómo una web minimalista puede mejorar claridad, velocidad y percepción de marca sin perder presencia visual.",
+      "category": "performance",
+      "tags": ["Minimalismo", "Performance", "UX", "Web Institucional", "UI"],
+      "date": "2026-05-06",
+      "dateFormatted": "6 de mayo, 2026",
+      "readTime": 4,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "Performance · UX",
         "initials": "R3"
       },
-    "content": "<h2>El problema</h2><p>La tienda tenía tráfico estable pero la tasa de conversión era del 1.2%, muy por debajo del promedio del sector. El problema no era la publicidad, era la experiencia de compra.</p><h2>El análisis previo</h2><p>Usamos Hotjar para analizar grabaciones de sesiones. Encontramos: 80% de usuarios abandonaba en la página de producto, principalmente por falta de información y fotos de baja calidad.</p><h2>Los cambios implementados</h2><p>Rediseñamos las fichas de producto con más fotos, videos, guía de tallas y reviews verificados. Simplificamos el checkout a 3 pasos y agregamos opciones de pago en cuotas prominentes.</p><h2>El resultado</h2><p>La tasa de conversión subió al 2.0%. Con el mismo tráfico, las ventas crecieron un 68%. El ticket promedio también subió un 22% gracias a la mejora en la presentación de productos.</p>"
-  },
-  {
-    "id": 15,
-    "slug": "seo-local-restaurante-zona-norte",
-    "title": "SEO Local para Restaurante: Cómo Llenar Mesas con Google",
-    "excerpt": "Estrategia de SEO local que posicionó a un restaurante de zona norte de Buenos Aires como la opción más buscada de su categoría.",
-    "category": "seo",
-    "tags": ["SEO local", "restaurante", "Google Business"],
-    "thumbClass": "thumb-art--seo",
-    "featured": false,
-    "date": "2024-04-10",
-    "readTime": 6,
-       "author": {
+      "content": "<h2>Menos elementos, menos fricción</h2><p>Una interfaz minimalista bien diseñada reduce distracciones, mejora los tiempos de carga y ayuda a que el usuario entienda antes qué ofrece la marca.</p><h2>El riesgo</h2><p>Minimalista no significa vacío. Una web demasiado pobre puede parecer incompleta. La clave está en trabajar jerarquía, contraste, espaciado y contenido.</p><h2>Lo que aplicamos</h2><ul><li>Secciones claras</li><li>Diseño liviano</li><li>Buena legibilidad</li><li>Arquitectura simple</li><li>Foco en identidad</li></ul>"
+    },
+    {
+      "id": 15,
+      "slug": "art1-web-corporativa-seo-accesibilidad",
+      "title": "ART1: web corporativa con estructura SEO, accesibilidad y rendimiento optimizado",
+      "excerpt": "Un proyecto para ordenar la presencia digital de una empresa de comunicación visual, gráfica, ambientaciones y soluciones corporativas.",
+      "category": "seo",
+      "tags": ["ART1", "SEO Técnico", "Accesibilidad", "Web Corporativa", "Performance"],
+      "date": "2026-05-05",
+      "dateFormatted": "5 de mayo, 2026",
+      "readTime": 7,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "SEO Técnico · Accesibilidad",
         "initials": "R3"
       },
-    "content": "<h2>El desafío local</h2><p>El restaurante tenía excelente reputación por boca a boca pero era invisible en búsquedas de Google. Buscar 'restaurante [zona]' no los mostraba ni en la primera ni en la segunda página.</p><h2>La estrategia de SEO local</h2><p>Optimizamos el Google Business Profile con fotos profesionales, horarios actualizados y respuestas a reviews. Creamos páginas de contenido local con keywords de intención de búsqueda alta.</p><h2>La campaña de reviews</h2><p>Implementamos un proceso para solicitar reviews a clientes satisfechos. En 3 meses, pasaron de 45 a 180 reviews con promedio de 4.7 estrellas.</p><h2>Resultados</h2><p>Aparecen en el top 3 del Local Pack de Google para sus keywords principales. Las reservas online crecieron un 40% y los viernes/sábados ahora están al 100% de capacidad.</p>"
-  },
-  {
-    "id": 16,
-    "slug": "sistema-gestion-turnos-medicos",
-    "title": "Sistema de Turnos Online para Centro Médico",
-    "excerpt": "Desarrollamos un sistema de gestión de turnos que eliminó las llamadas telefónicas y redujo los no-shows en un centro médico.",
-    "category": "desarrollo",
-    "tags": ["turnos online", "salud", "automatización"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2024-03-28",
-    "readTime": 7,
-       "author": {
+      "content": "<h2>Ordenar una oferta amplia</h2><p>ART1 cuenta con múltiples líneas de servicio: gráfica, impresiones, ambientaciones, letras corpóreas, diseño, branding, corte y grabado. La web debía organizar esa oferta de forma clara y escalable.</p><h2>Qué trabajamos</h2><ul><li>Estructura SEO por servicios</li><li>Secciones claras para cada línea comercial</li><li>Accesibilidad web</li><li>Rendimiento optimizado</li><li>Estabilidad visual</li></ul><h2>Por qué la estructura importa</h2><p>Cuando una empresa ofrece muchos servicios, una landing genérica no alcanza. Cada servicio necesita una página o sección capaz de posicionar, explicar y convertir.</p>"
+    },
+    {
+      "id": 16,
+      "slug": "estructura-seo-servicios-art1",
+      "title": "Cómo estructurar una web de servicios gráficos para posicionar mejor: el caso ART1",
+      "excerpt": "Una empresa con múltiples servicios necesita arquitectura SEO, no solo diseño visual. Cada servicio debe tener su propio espacio, intención y mensaje.",
+      "category": "seo",
+      "tags": ["SEO Servicios", "ART1", "Arquitectura Web", "Diseño Web", "Posicionamiento"],
+      "date": "2026-05-04",
+      "dateFormatted": "4 de mayo, 2026",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "SEO · Arquitectura",
         "initials": "R3"
       },
-    "content": "<h2>El caos de la agenda telefónica</h2><p>El centro médico gestionaba 150 turnos diarios por teléfono. El personal administrativo pasaba el 60% del tiempo en llamadas. Los no-shows llegaban al 25%.</p><h2>El sistema desarrollado</h2><p>Construimos un sistema de turnos integrado al sitio web con selección de especialidad, médico y horario en tiempo real. Recordatorios automáticos por WhatsApp 24hs antes del turno.</p><h2>El impacto operativo</h2><p>Las llamadas telefónicas bajaron un 70%. Los no-shows se redujeron al 8% gracias a los recordatorios automáticos. El personal ahora dedica ese tiempo a la atención en el consultorio.</p>"
-  },
-  {
-    "id": 17,
-    "slug": "estrategia-digital-pyme-manufactura",
-    "title": "Estrategia Digital Integral para PyME de Manufactura",
-    "excerpt": "Cómo llevamos a una PyME manufacturera argentina al mercado digital B2B con un sitio web, SEO y presencia en buscadores internacionales.",
-    "category": "desarrollo",
-    "tags": ["B2B", "manufactura", "exportación"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2024-03-12",
-    "readTime": 8,
-       "author": {
+      "content": "<h2>El problema de las webs genéricas</h2><p>Cuando todos los servicios se explican en una sola página, Google tiene menos señales para entender qué ofrece la empresa y el usuario tiene más dificultad para encontrar lo que busca.</p><h2>La solución</h2><p>En proyectos como ART1, conviene construir una arquitectura por servicios: gráfica, impresiones, ambientaciones, letras corpóreas, diseño y branding, corte y grabado.</p><h2>Beneficios</h2><ul><li>Mejor indexación</li><li>Mayor claridad comercial</li><li>Más oportunidades de posicionamiento</li><li>Contenido más específico</li><li>Mejor experiencia de navegación</li></ul>"
+    },
+    {
+      "id": 17,
+      "slug": "knots-ecommerce-tienda-nube-ux-producto",
+      "title": "Knots: optimización de e-commerce en Tienda Nube con foco en UX de compra",
+      "excerpt": "Una tienda online optimizada sobre Tienda Nube, con mejoras en presentación de producto, estructura comercial y experiencia de compra.",
+      "category": "ecommerce",
+      "tags": ["Knots", "Tienda Nube", "E-commerce", "UX de Compra", "Catálogo"],
+      "date": "2026-05-03",
+      "dateFormatted": "3 de mayo, 2026",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "E-commerce · UX",
         "initials": "R3"
       },
-    "content": "<h2>El potencial desaprovechado</h2><p>La empresa manufacturera producía componentes de alta calidad y exportaba de forma esporádica por contactos. Sin presencia digital, perdían oportunidades de negocio internacional constantemente.</p><h2>La estrategia implementada</h2><p>Desarrollamos un sitio bilingüe (español/inglés) con catálogo de productos técnico, certificaciones y formulario de cotización. Implementamos SEO en ambos idiomas apuntando a compradores internacionales.</p><h2>Los primeros resultados</h2><p>En 6 meses, el sitio recibió visitas de 24 países. Cerraron 2 contratos de exportación nuevos con compradores que los encontraron en Google. El inglés representa el 35% del tráfico total.</p>"
-  },
-  {
-    "id": 18,
-    "slug": "app-web-gestion-inventario",
-    "title": "App Web de Gestión de Inventario para Empresa Distribuidora",
-    "excerpt": "Desarrollamos una aplicación web a medida que reemplazó las planillas de Excel y automatizó el control de inventario de una distribuidora.",
-    "category": "desarrollo",
-    "tags": ["app web", "inventario", "automatización"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2024-02-20",
-    "readTime": 9,
-       "author": {
+      "content": "<h2>Optimizar sobre una plataforma existente</h2><p>Knots trabaja sobre Tienda Nube, una plataforma que resuelve gran parte de la infraestructura e-commerce. El desafío está en mejorar la experiencia, la presentación de producto y la estructura comercial dentro de ese marco.</p><h2>Qué se priorizó</h2><ul><li>Presentación clara del catálogo</li><li>UX de compra</li><li>Jerarquía visual de productos</li><li>Claridad comercial</li><li>Optimización de navegación</li></ul><h2>Conclusión</h2><p>Una tienda online no mejora solo por tener productos cargados. Mejora cuando cada producto se entiende, se compara fácilmente y el camino hacia la compra es simple.</p>"
+    },
+    {
+      "id": 18,
+      "slug": "tienda-nube-ux-conversion-knots",
+      "title": "UX en Tienda Nube: pequeñas decisiones que pueden mejorar la conversión",
+      "excerpt": "En e-commerce, la experiencia de compra se define por detalles: fotos, títulos, jerarquía, categorías, confianza y claridad en el recorrido.",
+      "category": "ecommerce",
+      "tags": ["Tienda Nube", "UX", "Conversión", "E-commerce", "Producto"],
+      "date": "2026-05-02",
+      "dateFormatted": "2 de mayo, 2026",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
         "name": "Equipo Raven3",
-        "role": "Performance · SEO",
+        "role": "UX · E-commerce",
         "initials": "R3"
       },
-    "content": "<h2>El problema de las planillas</h2><p>La distribuidora gestionaba su inventario en múltiples archivos de Excel. Errores, datos desactualizados y la imposibilidad de acceder desde múltiples dispositivos generaban pérdidas y fricciones constantes.</p><h2>La aplicación desarrollada</h2><p>Construimos una app web con dashboard en tiempo real, gestión de entradas/salidas, alertas de stock mínimo y reportes exportables. Accesible desde cualquier dispositivo con conexión a internet.</p><h2>La transición y adopción</h2><p>Capacitamos al equipo y migramos 3 años de datos históricos. La adopción fue total en 2 semanas. El equipo elimino 4 horas semanales de trabajo administrativo por persona.</p><h2>El ROI</h2><p>En 4 meses, la app se pagó sola con el ahorro en tiempo y la reducción de errores de inventario. Los pedidos a proveedores ahora se hacen con datos precisos, reduciendo el sobre-stock un 30%.</p>"
-  },
-  {
-    "id": 19,
-    "slug": "guia-performance-web-2024",
-    "title": "Guía Definitiva de Performance Web: Carga Rápida = Más Ventas",
-    "excerpt": "Todo lo que necesitás saber sobre optimización de velocidad web en 2024. Técnicas probadas que mejoran Core Web Vitals y aumentan conversiones.",
-    "category": "performance",
-    "tags": ["performance", "velocidad web", "Core Web Vitals", "optimización"],
-    "thumbClass": "thumb-art--perf",
-    "featured": false,
-    "date": "2025-01-10",
-    "readTime": 12,
-       "author": {
-        "name": "Equipo Raven3",
-        "role": "Performance · SEO",
-        "initials": "R3"
-      },
-    "content": "<h2>Por qué la velocidad web importa más que nunca</h2><p>Google usa la velocidad como factor de ranking desde 2021. Pero más allá del SEO, cada segundo de carga extra reduce las conversiones entre un 7% y un 20%. En un e-commerce que factura $100.000 mensuales, mejorar de 5s a 2s de carga puede significar $20.000 adicionales por mes.</p><h2>Los Core Web Vitals que Google mide</h2><p>Los tres indicadores clave son: <strong>LCP (Largest Contentful Paint)</strong>: tiempo hasta que el contenido principal es visible, debe estar bajo 2.5s. <strong>FID/INP (Interaction to Next Paint)</strong>: respuesta a la primera interacción del usuario, debe estar bajo 200ms. <strong>CLS (Cumulative Layout Shift)</strong>: estabilidad visual de la página, debe estar bajo 0.1.</p><h2>Las 10 optimizaciones de mayor impacto</h2><p><strong>1. Optimización de imágenes</strong>: Convertí todas las imágenes a WebP o AVIF. Son 30-50% más livianas que JPEG sin pérdida de calidad visible. Usá siempre los atributos width y height para evitar CLS.</p><p><strong>2. Lazy loading inteligente</strong>: Las imágenes fuera del viewport inicial no deberían cargarse hasta que el usuario las necesite. El atributo loading='lazy' hace esto nativamente en todos los browsers modernos.</p><p><strong>3. Preload de recursos críticos</strong>: El font principal, la imagen hero y el CSS crítico deben precargarse. Usá la etiqueta link rel='preload' en el head para recursos above-the-fold.</p><p><strong>4. Minificación y compresión</strong>: Minificá CSS, JavaScript y HTML. Habilitá Gzip o Brotli en el servidor. Estos cambios solos pueden reducir el peso de transferencia un 60-70%.</p><p><strong>5. Caché del navegador</strong>: Configurá headers de caché apropiados. Los recursos estáticos (imágenes, fonts, CSS) deberían cachearse por al menos 1 año con cache-control: max-age=31536000.</p><p><strong>6. CDN para recursos estáticos</strong>: Servir recursos estáticos desde un CDN reduce la latencia para usuarios lejanos. Cloudflare ofrece CDN gratuito para sitios pequeños.</p><p><strong>7. Defer de JavaScript no crítico</strong>: Todo JS que no sea necesario para el render inicial debe cargarse con defer o async. Analytics, chat widgets y scripts de terceros son candidatos perfectos.</p><p><strong>8. Eliminar render-blocking resources</strong>: CSS y JS en el head bloquean el render. Inliná el CSS crítico y cargá el resto de forma asíncrona.</p><p><strong>9. Optimización de fuentes web</strong>: Usá font-display: swap para que el texto sea visible mientras cargan las fuentes. Precargá solo los subsets que usás (por ejemplo, solo caracteres latinos).</p><p><strong>10. Server-Side Rendering o Static Generation</strong>: Para sitios con mucho JavaScript, SSR o SSG entregan HTML ya renderizado, mejorando dramáticamente el tiempo a primer byte (TTFB).</p><h2>Cómo medir tu performance actual</h2><p>Usá estas herramientas gratuitas para diagnosticar tu sitio: <strong>Google PageSpeed Insights</strong> (pagespeed.web.dev): muestra Core Web Vitals reales y oportunidades de mejora. <strong>WebPageTest.org</strong>: análisis detallado con waterfall de carga. <strong>Lighthouse</strong> (incluido en Chrome DevTools): auditoría completa de performance, accesibilidad y SEO.</p><h2>El plan de acción recomendado</h2><p>No trates de hacer todo a la vez. Priorizá las optimizaciones de mayor impacto: primero imágenes (mayor ganancia), luego JavaScript (menor bloqueo), luego caché y CDN (menor latencia). Medí antes y después de cada cambio para confirmar el impacto real.</p>"
-  },
-  {
-    "id": 20,
-    "slug": "seo-tecnico-guia-completa",
-    "title": "SEO Técnico en 2024: La Guía Completa para Desarrolladores",
-    "excerpt": "De la arquitectura de URLs al structured data: todo lo que un desarrollador necesita saber para que Google indexe y posicione su sitio correctamente.",
-    "category": "seo",
-    "tags": ["SEO técnico", "indexación", "structured data", "sitemap"],
-    "thumbClass": "thumb-art--seo",
-    "featured": false,
-    "date": "2025-01-24",
-    "readTime": 14,
-       "author": {
-        "name": "Equipo Raven3",
-        "role": "Performance · SEO",
-        "initials": "R3"
-      },
-    "content": "<h2>¿Qué es el SEO técnico y por qué importa?</h2><p>El SEO técnico es la base sobre la que se construye todo lo demás. Podés tener el mejor contenido del mundo, pero si Google no puede crawlear, indexar o entender tu sitio, no aparecerás en los resultados. Es el trabajo invisible que hace posible todo lo visible.</p><h2>Arquitectura del sitio y estructura de URLs</h2><p>Una buena arquitectura de sitio facilita el crawleo de Google y la navegación del usuario. Las reglas fundamentales: URLs descriptivas y cortas (/guia-seo-tecnico/ en vez de /post?id=247), estructura jerárquica clara (dominio > categoría > artículo), evitar parámetros de URL innecesarios y asegurar que ninguna página importante esté a más de 3 clicks del home.</p><h2>Crawleabilidad e indexación</h2><p>Google envía bots (Googlebot) a crawlear tu sitio. Para asegurarte de que encuentran lo que querés: <strong>robots.txt</strong>: indicá qué partes del sitio no crawlear (panel admin, páginas de utilidad). <strong>Sitemap XML</strong>: generá un sitemap con todas las URLs importantes y envialo en Google Search Console. <strong>Internal linking</strong>: las páginas sin links internos (huérfanas) son difíciles de encontrar para Googlebot. Cada página importante debe tener al menos un link desde otra página del sitio.</p><h2>Core Web Vitals como factor de ranking</h2><p>Desde 2021, Google usa los Core Web Vitals (LCP, CLS, INP) como señal de ranking. Un sitio lento no solo pierde usuarios, pierde posiciones. Ver nuestra guía de performance para los detalles técnicos.</p><h2>HTTPS y seguridad</h2><p>HTTPS es requisito mínimo. Google penaliza sitios HTTP y Chrome los marca como 'no seguros'. Asegurate también de: redirigir HTTP a HTTPS con 301, configurar HSTS, evitar contenido mixto (recursos HTTP en páginas HTTPS).</p><h2>Structured Data (Schema.org)</h2><p>El structured data ayuda a Google a entender el contexto de tu contenido y habilita rich results (resultados enriquecidos) en los SERPs. Los tipos más útiles: <strong>Article</strong> para posts de blog, <strong>Product</strong> para e-commerce, <strong>LocalBusiness</strong> para negocios locales, <strong>FAQ</strong> para preguntas frecuentes y <strong>BreadcrumbList</strong> para navegación. Implementalo en formato JSON-LD en el head de cada página.</p><h2>Optimización para mobile</h2><p>Google usa mobile-first indexing: evalúa tu sitio basándose en la versión mobile. Verificá que: el contenido mobile sea idéntico al desktop, los elementos interactivos sean fácilmente tappeables (mínimo 48x48px), el viewport esté configurado correctamente y las fuentes sean legibles sin hacer zoom.</p><h2>Canonical tags y contenido duplicado</h2><p>El contenido duplicado confunde a Google sobre qué URL posicionar. Usá canonical tags para señalar la versión preferida de cada página. Casos comunes donde se genera contenido duplicado: parámetros de URL de filtros/paginación, versiones www y no-www, URLs con y sin trailing slash.</p><h2>Velocidad del servidor y TTFB</h2><p>El Time to First Byte (TTFB) es el tiempo desde que el navegador hace el request hasta que recibe el primer byte de respuesta. Google recomienda bajo 800ms. Para mejorar TTFB: usá un hosting de calidad, implementá caché del servidor, usá CDN y optimizá las consultas a base de datos.</p><h2>Herramientas esenciales de SEO técnico</h2><p><strong>Google Search Console</strong>: el punto de partida. Muestra errores de indexación, Core Web Vitals reales y consultas de búsqueda. <strong>Screaming Frog</strong>: crawler que analiza el sitio como Googlebot. Detecta links rotos, redirects, duplicados y más. <strong>Ahrefs / SEMrush</strong>: análisis de backlinks, keywords y competencia. <strong>Google PageSpeed Insights</strong>: performance y Core Web Vitals.</p><h2>El checklist de SEO técnico</h2><p>Antes de lanzar cualquier sitio, verificá: HTTPS activo y redireccion HTTP→HTTPS, sitemap.xml generado y enviado a GSC, robots.txt configurado correctamente, structured data implementado, canonical tags en todas las páginas, velocidad mobile bajo 3s, sin errores 404 en links internos, sin contenido duplicado y Google Analytics / GSC configurados.</p>"
-  },
-  {
-    "id": 21,
-    "slug": "ecommerce-aumentar-ventas-sin-mas-trafico",
-    "title": "E-Commerce: 8 Estrategias para Vender Más sin Más Tráfico",
-    "excerpt": "La mayoría de los e-commerce se obsesionan con atraer tráfico cuando el problema real es la conversión. Estas 8 estrategias aumentan ventas con los visitantes que ya tenés.",
-    "category": "ecommerce",
-    "tags": ["e-commerce", "conversión", "CRO", "ventas online", "carrito abandonado"],
-    "thumbClass": "thumb-art--ecomm",
-    "featured": false,
-    "date": "2025-02-07",
-    "readTime": 11,
-       "author": {
-        "name": "Equipo Raven3",
-        "role": "Performance · SEO",
-        "initials": "R3"
-      },
-    "content": "<h2>El error más común del e-commerce</h2><p>La mayoría de los dueños de tiendas online piensan que necesitan más tráfico para vender más. La realidad es que si tu tasa de conversión es del 1% y la llevas al 2%, duplicás las ventas sin gastar un peso más en publicidad. El tráfico es caro; optimizar lo que ya tenés es mucho más eficiente.</p><h2>1. Optimizá las fichas de producto</h2><p>Las fichas de producto son donde se toman las decisiones de compra. Los elementos críticos: fotos de alta calidad desde múltiples ángulos (incluir foto en contexto de uso), descripción que resuelve objeciones antes de que surjan, especificaciones técnicas completas, política de cambios y devoluciones visible, disponibilidad de stock en tiempo real y opciones de pago en cuotas destacadas.</p><h2>2. Reducí la fricción en el checkout</h2><p>Cada campo extra en el checkout reduce conversiones. Las mejores prácticas: permitir compra sin registro (guest checkout), autocompletar datos de tarjeta y dirección, mostrar el total con impuestos y envío desde el principio (los costos sorpresa son la causa #1 de abandono), ofrecer múltiples métodos de pago y mostrar sellos de seguridad (SSL, Mercado Pago, etc.).</p><h2>3. Implementá recuperación de carrito abandonado</h2><p>El 70% de los carritos se abandonan antes de completar la compra. Un flujo de recuperación básico pero efectivo: email a los 30 minutos con recordatorio, email a las 24hs con propuesta de valor reforzada y email a las 72hs con descuento o incentivo. Bien implementado, recupera entre el 5% y el 15% de los carritos abandonados.</p><h2>4. Usá social proof de forma estratégica</h2><p>Las reviews y testimonios reducen la incertidumbre de compra. Pero no basta con tenerlos, hay que ubicarlos estratégicamente: reviews en la ficha de producto (cerca del botón de compra), contador de compras recientes ('24 personas compraron esto hoy'), testimonios en el checkout para reducir ansiedad de último momento.</p><h2>5. Creá urgencia genuina</h2><p>La urgencia funciona pero debe ser real. Estrategias éticas: mostrar stock real cuando es bajo ('Quedan 3 unidades'), ofertas con fecha de vencimiento real, envío gratis solo hasta determinado horario. Evitá crear urgencia falsa: los usuarios experimentados lo detectan y daña la confianza.</p><h2>6. Mejorá la búsqueda interna del sitio</h2><p>Hasta el 30% de los visitantes usan la búsqueda interna. Si no encuentran lo que buscan, se van. Optimizaciones clave: autocomplete con imágenes, resultados tolerantes a errores de escritura, búsqueda por sinónimos y filtros de refinamiento relevantes.</p><h2>7. Implementá cross-selling y upselling inteligente</h2><p>Amazon atribuye el 35% de sus ingresos al motor de recomendaciones. Las tácticas más efectivas: 'Llevalo con esto' (productos complementarios en la ficha), 'También te puede interesar' (productos similares de mayor precio o margen), kit de productos con descuento (bundle) y upgrade de producto en el checkout.</p><h2>8. Optimizá para mobile primero</h2><p>En Argentina, más del 60% del tráfico e-commerce es mobile pero las conversiones mobile son 3x menores que desktop. La brecha se explica por UX deficiente. Check básico: botones de suficiente tamaño para tocar, formularios adaptados para teclado mobile, imágenes que cargan rápido en 4G y proceso de pago simplificado para mobile.</p><h2>Por dónde empezar</h2><p>No intentes implementar las 8 estrategias a la vez. Priorizá según tu situación actual: si tu tasa de conversión es menor al 1%, empezá por las fichas de producto y el checkout. Si es entre 1% y 2%, enfocate en recuperación de carritos y social proof. Si es mayor al 2%, trabajá el ticket promedio con cross-selling y upselling.</p>"
-  },
-  {
-    "id": 22,
-    "slug": "ux-principios-que-aumentan-conversiones",
-    "title": "UX que Convierte: 7 Principios de Diseño que Aumentan Resultados",
-    "excerpt": "La diferencia entre un sitio bonito y uno que vende está en la experiencia de usuario. Estos 7 principios de UX son los que más impactan en conversiones reales.",
-    "category": "ux",
-    "tags": ["UX", "diseño web", "conversión", "CRO", "usabilidad"],
-    "thumbClass": "thumb-art--ux",
-    "featured": false,
-    "date": "2025-02-21",
-    "readTime": 10,
-       "author": {
-        "name": "Equipo Raven3",
-        "role": "Performance · SEO",
-        "initials": "R3"
-      },
-    "content": "<h2>UX no es solo diseño visual</h2><p>Un sitio puede ser visualmente impresionante y tener una UX terrible. La experiencia de usuario es cómo se siente usar un producto digital: si es intuitivo, si genera confianza, si elimina fricciones. Un buen diseño UX hace que el usuario haga lo que vos querés que haga, sin que se dé cuenta de que lo estás guiando.</p><h2>Principio 1: Jerarquía visual clara</h2><p>El ojo humano escanea las páginas web en patrones predecibles (F-pattern, Z-pattern). La jerarquía visual guía ese escaneo hacia los elementos más importantes. Aplicación práctica: el headline principal debe ser el elemento más grande y contrastado. El CTA (call to action) debe ser visualmente destacado y único. La información secundaria debe ser visualmente subordinada. Nunca compitas con múltiples elementos del mismo peso visual.</p><h2>Principio 2: Ley de Hick - Menos opciones, más decisiones</h2><p>A mayor cantidad de opciones, mayor tiempo de decisión (y mayor probabilidad de no decidir nada). En e-commerce, un menú con 4 categorías convierte mejor que uno con 12. En formularios, menos campos = más envíos. En landing pages, un solo CTA supera a múltiples llamadas a la acción.</p><h2>Principio 3: Feedback inmediato</h2><p>El usuario necesita saber que sus acciones tuvieron efecto. Ejemplos de buen feedback: botón que cambia visualmente al hacer click, mensaje de confirmación al enviar un formulario, animación al agregar producto al carrito, barra de progreso en procesos de múltiples pasos. La ausencia de feedback genera ansiedad y clicks repetidos.</p><h2>Principio 4: Carga cognitiva mínima</h2><p>El cerebro humano tiene capacidad de procesamiento limitada. Cada elemento extra en pantalla consume esa capacidad. Principios para reducir carga cognitiva: usar convenciones conocidas (logo a la izquierda, búsqueda a la derecha), agrupar elementos relacionados, usar iconos familiares con texto explicativo y mostrar información en el momento en que se necesita, no antes.</p><h2>Principio 5: Mobile-first real, no mobile-afterthought</h2><p>Diseñar mobile-first no es achicar el diseño de escritorio. Es pensar primero en la experiencia táctil y de pantalla pequeña: zonas de toque de mínimo 44x44px, navegación accesible con el pulgar, formularios optimizados para teclado virtual y acciones principales en la mitad inferior de la pantalla (thumb zone).</p><h2>Principio 6: Confianza a través del diseño</h2><p>La confianza se comunica visualmente antes de que el usuario lea una sola palabra. Elementos que construyen confianza: diseño profesional y consistente (tipografía, colores coherentes), fotos reales de personas y del negocio, testimonios con nombre y foto, información de contacto visible y sellos de seguridad y certificaciones.</p><h2>Principio 7: El principio del menor esfuerzo</h2><p>Los usuarios siempre toman el camino de menor resistencia. Tu trabajo es hacer que el camino de menor resistencia coincida con la acción que querés que tomen. Técnicas: precompletar campos cuando sea posible, recordar las preferencias del usuario, ofrecer opciones rápidas ('pedir lo mismo que la última vez'), eliminar pasos innecesarios en flujos clave.</p><h2>Cómo medir si tu UX funciona</h2><p>Los datos que te dicen si tu UX está bien: tasa de conversión por página, tasa de rebote y tiempo en página, mapas de calor (Hotjar, Microsoft Clarity), grabaciones de sesiones de usuario y resultados de pruebas de usabilidad. Una UX bien diseñada se ve en los números: menos rebote, más tiempo en página y más conversiones.</p>"
-  },
-  {
-    "id": 23,
-    "slug": "desarrollo-web-moderno-stack-2024",
-    "title": "Stack de Desarrollo Web en 2025: Qué Tecnologías Elegir y Por Qué",
-    "excerpt": "El ecosistema de desarrollo web es enorme. Esta guía te ayuda a elegir el stack correcto según el tipo de proyecto, evitando sobre-ingeniería y bajo-ingeniería.",
-    "category": "desarrollo",
-    "tags": ["desarrollo web", "stack tecnológico", "Next.js", "WordPress", "JavaScript"],
-    "thumbClass": "thumb-art--dev",
-    "featured": false,
-    "date": "2025-03-07",
-    "readTime": 13,
-       "author": {
-        "name": "Equipo Raven3",
-        "role": "Performance · SEO",
-        "initials": "R3"
-      },
-    "content": "<h2>El error de elegir la tecnología equivocada</h2><p>Uno de los errores más caros en desarrollo web es elegir un stack demasiado complejo para el problema a resolver, o demasiado simple para los requerimientos reales. Un blog personal no necesita microservicios en Kubernetes. Un e-commerce con 50.000 productos no debería estar en un page builder de arrastrar y soltar. La clave es hacer coincidir la complejidad de la solución con la complejidad del problema.</p><h2>Para sitios institucionales y blogs: WordPress sigue siendo la respuesta</h2><p>WordPress gestiona el 43% de todos los sitios web del mundo. Para sitios institucionales, portfolios y blogs, sigue siendo la opción más pragmática: ecosistema maduro con miles de plugins, clientes pueden editar contenido sin ayuda técnica, hosting accesible y bien documentado y comunidad enorme con soluciones para casi cualquier problema. El secreto está en no sobre-cargar WordPress con plugins innecesarios y usar un tema bien optimizado o desarrollar uno a medida.</p><h2>Para aplicaciones web complejas: React + Next.js</h2><p>Next.js se consolidó como el framework de referencia para aplicaciones React en producción. Sus ventajas: SSR y SSG para mejor SEO y performance, file-based routing intuitivo, API routes incluidas, optimización de imágenes y fuentes incorporada y el nuevo App Router con React Server Components. Ideal para: e-commerce de escala mediana a grande, plataformas SaaS, portales con autenticación y dashboards complejos.</p><h2>Para landing pages y sitios de alta performance: HTML/CSS/JS vanilla o Astro</h2><p>Para sitios donde la performance es crítica y el contenido no cambia frecuentemente, nada supera al HTML estático bien optimizado. Astro es una excelente opción moderna: genera HTML estático por defecto, permite usar componentes de React/Vue/Svelte si se necesitan y tiene una filosofía de 'zero JavaScript by default'. El resultado son sitios con scores de performance perfectos.</p><h2>Para e-commerce: WooCommerce vs Shopify vs solución custom</h2><p><strong>WooCommerce</strong>: ideal para tiendas medianas que necesitan personalización total y quieren controlar sus datos. Requiere más mantenimiento técnico. <strong>Shopify</strong>: mejor opción para comenzar rápido y escalar. Menos personalizable pero más fácil de gestionar. Comisiones por transacción a considerar. <strong>Solución custom</strong>: solo justificada para proyectos con requerimientos muy específicos que ninguna plataforma existente puede cubrir. Alto costo inicial.</p><h2>Para aplicaciones móviles: React Native o Flutter</h2><p>Si el proyecto requiere una app móvil, hoy la mayoría de los casos se pueden resolver con tecnología cross-platform: <strong>React Native</strong>: ideal si el equipo ya usa React. Acceso a APIs nativas, gran ecosistema. <strong>Flutter</strong>: mejor performance visual, curva de aprendizaje si no conocés Dart. Buena opción si la UI es muy customizada. Solo considerá desarrollo nativo (Swift/Kotlin) si necesitás acceso a hardware específico o performance de juego.</p><h2>El stack que usamos en Raven3</h2><p>Para la mayoría de nuestros proyectos usamos: WordPress + Elementor o tema custom para sitios institucionales, Next.js + Prisma + PostgreSQL para aplicaciones web, WooCommerce para e-commerce con necesidades de personalización y HTML/CSS/JS vanilla para landing pages y proyectos de máxima performance. No existe un 'mejor stack'. Existe el stack más adecuado para cada proyecto específico.</p><h2>Principios para elegir tecnología</h2><p>Antes de elegir un stack, respondé estas preguntas: ¿Cuánta escala necesita el proyecto? ¿El cliente necesita editar contenido sin ayuda técnica? ¿Hay requerimientos de performance o SEO estrictos? ¿Cuál es el presupuesto de mantenimiento a largo plazo? ¿El equipo ya conoce la tecnología o hay curva de aprendizaje? Las respuestas a estas preguntas determinan el stack, no las tendencias del momento.</p>"
-  },
-  {
-    "id": 24,
-    "slug": "seo-local-guia-completa-negocios",
-    "title": "SEO Local: La Guía Completa para Negocios que Quieren Dominar su Zona",
-    "excerpt": "Cómo aparecer en Google Maps y las búsquedas locales. Estrategia paso a paso de SEO local para negocios físicos y servicios con cobertura geográfica.",
-    "category": "seo",
-    "tags": ["SEO local", "Google Maps", "Google Business Profile", "negocios locales"],
-    "thumbClass": "thumb-art--seo",
-    "featured": false,
-    "date": "2025-03-21",
-    "readTime": 11,
-       "author": {
-        "name": "Equipo Raven3",
-        "role": "Performance · SEO",
-        "initials": "R3"
-      },
-    "content": "<h2>¿Qué es el SEO local y cuándo aplica?</h2><p>El SEO local es la optimización para aparecer en búsquedas con intención geográfica: 'restaurante en Palermo', 'plomero zona norte', 'abogado laboral Buenos Aires'. Si tu negocio tiene una ubicación física o atiende clientes en una zona geográfica específica, el SEO local es probablemente la inversión de marketing digital más rentable que podés hacer.</p><h2>El Local Pack: el elemento más valioso de Google</h2><p>Cuando alguien busca un negocio local, Google muestra el 'Local Pack': un bloque de 3 resultados con mapa, rating, horario y dirección, antes de los resultados orgánicos regulares. Aparecer en el Local Pack genera más clicks que estar en el primer resultado orgánico. La clave para entrar al Local Pack es optimizar tu Google Business Profile.</p><h2>Google Business Profile: la base de todo</h2><p>El Google Business Profile (antes Google My Business) es gratis y es lo más impactante que podés hacer para el SEO local. Pasos para optimizarlo completamente: <strong>Información básica</strong>: nombre exacto del negocio (sin keywords stuffing), categoría principal y secundarias correctas, dirección exacta y área de servicio si hacés delivery, horarios actualizados incluyendo feriados y número de teléfono local (no 0800). <strong>Descripción</strong>: 750 caracteres que incluyan las keywords principales y lo que te diferencia de la competencia. <strong>Fotos</strong>: mínimo 10 fotos de calidad: exterior, interior, equipo, productos/servicios. Los perfiles con fotos reciben 42% más solicitudes de direcciones. <strong>Posts regulares</strong>: publicar novedades, ofertas y eventos en el perfil mantiene la actividad y puede mejorar el ranking.</p><h2>Reviews: el factor de ranking más subestimado</h2><p>Las reviews impactan directamente en el ranking del Local Pack y en la tasa de conversión de los usuarios que encuentran tu negocio. La estrategia de reviews que funciona: crear un proceso sistemático para pedirle reviews a cada cliente satisfecho (presencialmente, por WhatsApp o por email), responder TODAS las reviews, tanto positivas como negativas, resolver problemas mencionados en reviews negativas públicamente y nunca comprar reviews falsas (Google las detecta y penaliza).</p><h2>Optimización on-page para SEO local</h2><p>Tu sitio web y tu perfil de Google Business deben estar sincronizados. En el sitio web: NAP consistente (Name, Address, Phone) exactamente igual en el sitio y en Google Business, página de contacto con dirección en texto (no solo en imagen), embed del mapa de Google, schema.org LocalBusiness con toda la información del negocio y páginas dedicadas a cada zona o barrio si cubrís múltiples áreas.</p><h2>Keywords locales: cómo encontrarlas</h2><p>Las keywords locales de mayor intención de compra siguen el patrón: [servicio] + [zona/ciudad]. Ejemplos: 'dentista en Belgrano', 'delivery sushi Recoleta', 'estudio contable zona oeste. Herramientas para encontrar keywords locales: Google Search Console (qué búsquedas ya generan impresiones), Google Keyword Planner con filtro de región y el autocompletado de Google (empezá a escribir y mirá las sugerencias).</p><h2>Citaciones locales: consistencia ante todo</h2><p>Las citaciones son menciones de tu negocio en otros sitios web (directorios, cámaras de comercio, guías locales). Lo crítico es que el NAP sea idéntico en todas partes. Una sola variación (Av. vs Avenida, o un número de teléfono diferente) puede perjudicar el ranking. Directorios relevantes para Argentina: Páginas Amarillas, Infobae clasificados, Mercado Libre (si aplica), directorios de tu industria específica y sitios de noticias locales.</p><h2>Métricas de SEO local para medir el éxito</h2><p>En Google Business Profile: búsquedas directas vs por descubrimiento, views del perfil y las fotos, clicks en llamadas, sitio web y direcciones. En Google Search Console: impresiones y clicks para keywords con nombre de ciudad/barrio, posición promedio para búsquedas locales. Establecé una línea base al inicio y revisá mensualmente. El SEO local tarda entre 3 y 6 meses en mostrar resultados sólidos, pero el efecto es acumulativo y duradero.</p>"
-  }
-]
+      "content": "<h2>La plataforma no hace todo</h2><p>Tienda Nube facilita vender online, pero la conversión depende de cómo se presenta la marca, cómo se ordenan los productos y qué tan fácil es avanzar hacia la compra.</p><h2>Qué revisar en una tienda</h2><ul><li>Títulos claros de producto</li><li>Fotos consistentes</li><li>Categorías simples</li><li>Información visible</li><li>Confianza antes del checkout</li></ul><h2>El aprendizaje</h2><p>En proyectos como Knots, la optimización no siempre requiere rehacer todo. Muchas veces alcanza con mejorar la estructura, la claridad y la experiencia de navegación.</p>"
+    }
+  ],
+  "categories": [
+    { "id": "all", "label": "Todos", "count": 18 },
+    { "id": "performance", "label": "Performance", "count": 3 },
+    { "id": "seo", "label": "SEO Técnico", "count": 5 },
+    { "id": "ecommerce", "label": "E-Commerce", "count": 4 },
+    { "id": "desarrollo", "label": "Desarrollo Web", "count": 4 },
+    { "id": "ux", "label": "UX / CRO", "count": 2 }
+  ]
+}
