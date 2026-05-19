@@ -3,1193 +3,238 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-
   <title>Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web</title>
   <meta name="description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
-  <meta name="author" content="Raven3 Agency" />
-  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://raven3.com.ar/blog/" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://raven3.com.ar/blog/" />
-  <meta property="og:title" content="Blog Raven3 — Performance, SEO y Desarrollo Web" />
-  <meta property="og:description" content="Artículos técnicos de alto valor. Sin relleno." />
-  <meta property="og:image" content="https://www.raven3.com.ar/assets/img/fondoN.png" />
-  <meta property="og:locale" content="es_AR" />
-  <meta property="og:site_name" content="Raven3" />
-
-  <!-- Favicons -->
   <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
-  <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
-
-  <!-- Preconnects -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
-
-  <!-- Shared CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../assets/css/redesign.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/animations.css" />
 
   <style>
-    /* ─────────────────────────────────────────────────────
-       BLOG — TOKENS & OVERRIDES
-    ───────────────────────────────────────────────────── */
     :root {
-      --blog-bg:          #04080E;
-      --blog-surface:     #070e17;
-      --blog-surface-2:   #0a1520;
-      --blog-border:      rgba(0, 229, 200, 0.10);
-      --blog-border-hover:rgba(0, 229, 200, 0.28);
-      --blog-accent:      #00E5C8;
-      --blog-accent-dim:  rgba(0, 229, 200, 0.55);
-      --blog-text:        rgba(200, 220, 230, 0.88);
-      --blog-text-muted:  rgba(140, 170, 185, 0.52);
-      --blog-mono:        'Share Tech Mono', monospace;
-      --blog-serif:       'DM Serif Display', Georgia, serif;
-      --blog-sans:        'Outfit', sans-serif;
-      --blog-display:     'Orbitron', sans-serif;
-      --blog-radius:      20px;
-      --blog-radius-sm:   12px;
+      --ba: #00E5C8;
+      --ba-dim: rgba(0,229,200,0.55);
+      --bs: #070e17;
+      --bs2: #0a1520;
+      --bb: rgba(0,229,200,0.10);
+      --bb-h: rgba(0,229,200,0.28);
+      --bt: rgba(200,220,230,0.88);
+      --bt-m: rgba(140,170,185,0.52);
+      --mono: 'Share Tech Mono', monospace;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --sans: 'Outfit', sans-serif;
+      --disp: 'Orbitron', sans-serif;
+      --rad: 20px;
     }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--blog-bg);
-      color: var(--blog-text);
-      font-family: var(--blog-sans);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       TOPBAR — reuse existing but override active link
-    ───────────────────────────────────────────────────── */
-    .topbar {
-      background: rgba(5, 10, 14, 0.9) !important;
-      backdrop-filter: blur(18px) !important;
-      border-bottom: 1px solid var(--blog-border) !important;
-    }
-    .topbar.scrolled {
-      background: rgba(3, 7, 11, 0.97) !important;
-      box-shadow: 0 1px 0 var(--blog-border) !important;
-    }
-    .topbar__link {
-      font-family: var(--blog-mono) !important;
-      font-size: 10px !important;
-      letter-spacing: 0.12em !important;
-      text-transform: uppercase !important;
-    }
-    .topbar__link.active-page {
-      color: var(--blog-accent) !important;
-    }
-    .topbar-sys {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      color: rgba(0,229,200,0.45);
-      text-transform: uppercase;
-    }
-    .topbar-sys-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--blog-accent);
-      box-shadow: 0 0 8px var(--blog-accent);
-      animation: sysPulse 2.8s ease-in-out infinite;
-    }
-    @keyframes sysPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%       { opacity: 0.4; transform: scale(0.7); }
-    }
-    @media (max-width: 900px) { .topbar-sys { display: none; } }
-
-    /* ─────────────────────────────────────────────────────
-       BLOG MASTHEAD
-    ───────────────────────────────────────────────────── */
-    .blog-masthead {
-      padding: 128px 0 56px;
-      position: relative;
-      overflow: hidden;
-      border-bottom: 1px solid var(--blog-border);
-    }
-
-    .blog-masthead::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(ellipse 70% 60% at 15% 50%, rgba(0,229,200,0.04) 0%, transparent 65%),
-        radial-gradient(ellipse 50% 80% at 85% 20%, rgba(0,100,180,0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
-
-    /* Scanline texture */
-    .blog-masthead::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 3px,
-        rgba(0,229,200,0.012) 3px,
-        rgba(0,229,200,0.012) 4px
-      );
-      pointer-events: none;
-    }
-
-    .blog-masthead__inner {
-      position: relative;
-      z-index: 2;
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-    }
-
-    .blog-masthead__sys {
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.35em;
-      color: var(--blog-accent-dim);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-
-    .blog-masthead__sys::before {
-      content: '';
-      display: inline-block;
-      width: 32px;
-      height: 1px;
-      background: var(--blog-accent-dim);
-    }
-
-    .blog-masthead__title {
-      font-family: var(--blog-display);
-      font-size: clamp(52px, 8vw, 108px);
-      font-weight: 900;
-      line-height: 0.92;
-      letter-spacing: -0.02em;
-      color: #fff;
-      margin-bottom: 0;
-    }
-
-    .blog-masthead__title em {
-      font-style: normal;
-      color: var(--blog-accent);
-      -webkit-text-stroke: 0px;
-    }
-
-    .blog-masthead__title .hollow {
-      -webkit-text-stroke: 1.5px rgba(0,229,200,0.5);
-      color: transparent;
-    }
-
-    .blog-masthead__meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 28px;
-      padding-top: 24px;
-      border-top: 1px solid var(--blog-border);
-    }
-
-    .blog-masthead__tagline {
-      font-family: var(--blog-sans);
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--blog-text-muted);
-      max-width: 440px;
-      line-height: 1.6;
-    }
-
-    .blog-masthead__stats {
-      display: flex;
-      gap: 32px;
-    }
-
-    .blog-stat {
-      text-align: right;
-    }
-    .blog-stat__num {
-      font-family: var(--blog-display);
-      font-size: 24px;
-      font-weight: 700;
-      color: #fff;
-      line-height: 1;
-    }
-    .blog-stat__label {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.25em;
-      color: var(--blog-text-muted);
-      text-transform: uppercase;
-      margin-top: 4px;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       CATEGORY FILTERS
-    ───────────────────────────────────────────────────── */
-    .blog-filters {
-      position: sticky;
-      top: 64px;
-      z-index: 10;
-      background: rgba(4,8,14,0.94);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--blog-border);
-      padding: 0;
-    }
-
-    .blog-filters__inner {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px;
-      display: flex;
-      align-items: center;
-      gap: 0;
-      overflow-x: auto;
-      scrollbar-width: none;
-    }
-    .blog-filters__inner::-webkit-scrollbar { display: none; }
-
-    .filter-tab {
-      flex-shrink: 0;
-      padding: 16px 20px;
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--blog-text-muted);
-      background: none;
-      border: none;
-      border-bottom: 2px solid transparent;
-      cursor: pointer;
-      transition: color 0.2s, border-color 0.2s;
-      white-space: nowrap;
-    }
-    .filter-tab:hover {
-      color: rgba(0,229,200,0.75);
-    }
-    .filter-tab.active {
-      color: var(--blog-accent);
-      border-bottom-color: var(--blog-accent);
-    }
-
-    .filter-count {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 16px;
-      height: 16px;
-      border-radius: 4px;
-      background: rgba(0,229,200,0.12);
-      font-size: 7px;
-      color: var(--blog-accent);
-      margin-left: 6px;
-      vertical-align: middle;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       MAIN LAYOUT WRAPPER
-    ───────────────────────────────────────────────────── */
-    .blog-body {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding: 0 32px 80px;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       FEATURED ARTICLE — COVER CARD
-    ───────────────────────────────────────────────────── */
-    .featured-section {
-      padding: 56px 0 0;
-    }
-
-    .featured-label {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.35em;
-      color: var(--blog-accent-dim);
-      text-transform: uppercase;
-      margin-bottom: 20px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .featured-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--blog-border);
-    }
-
-    .featured-card {
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 500px;
-      border-radius: var(--blog-radius);
-      overflow: hidden;
-      border: 1px solid var(--blog-border);
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.35s, box-shadow 0.35s;
-    }
-
-    .featured-card:hover {
-      border-color: var(--blog-border-hover);
-      box-shadow: 0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,229,200,0.08);
-    }
-
-    /* Visual panel — gradient art */
-    .featured-card__visual {
-      position: relative;
-      background:
-        radial-gradient(ellipse 80% 70% at 30% 40%, rgba(0,229,200,0.12) 0%, transparent 55%),
-        radial-gradient(ellipse 60% 80% at 80% 70%, rgba(0,80,160,0.18) 0%, transparent 55%),
-        linear-gradient(160deg, #050f1a 0%, #040810 60%, #07141e 100%);
-      overflow: hidden;
-    }
-
-    .featured-card__visual::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(0,229,200,0.06) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,229,200,0.06) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 75%);
-    }
-
-    /* Animated glyph decoration */
-    .featured-card__glyph {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 220px;
-      height: 220px;
-      opacity: 0.18;
-    }
-
-    .featured-card__glyph circle {
-      stroke: var(--blog-accent);
-      stroke-width: 0.5;
-      fill: none;
-      animation: glyphRotate 18s linear infinite;
-      transform-origin: center;
-    }
-
-    .featured-card__glyph circle:nth-child(2) {
-      animation-duration: 28s;
-      animation-direction: reverse;
-    }
-
-    @keyframes glyphRotate {
-      from { transform: rotate(0deg); }
-      to   { transform: rotate(360deg); }
-    }
-
-    .featured-card__badge {
-      position: absolute;
-      top: 24px;
-      left: 24px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: 99px;
-      background: rgba(0,229,200,0.12);
-      border: 1px solid rgba(0,229,200,0.25);
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.2em;
-      color: var(--blog-accent);
-      text-transform: uppercase;
-    }
-
-    .featured-card__badge-dot {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--blog-accent);
-      box-shadow: 0 0 8px var(--blog-accent);
-      animation: sysPulse 2s ease-in-out infinite;
-    }
-
-    /* Data viz decorative element */
-    .featured-card__chart {
-      position: absolute;
-      bottom: 32px;
-      left: 32px;
-      right: 32px;
-      height: 56px;
-      display: flex;
-      align-items: flex-end;
-      gap: 4px;
-      opacity: 0.35;
-    }
-
-    .chart-bar {
-      flex: 1;
-      background: linear-gradient(to top, var(--blog-accent), rgba(0,229,200,0.3));
-      border-radius: 3px 3px 0 0;
-      min-height: 4px;
-      transition: opacity 0.3s;
-    }
-
-    /* Content panel */
-    .featured-card__content {
-      padding: 48px 48px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background: var(--blog-surface);
-      position: relative;
-    }
-
-    .featured-card__content::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 0;
-      background: linear-gradient(to bottom, var(--blog-accent), transparent);
-      transition: height 0.5s ease;
-    }
-
-    .featured-card:hover .featured-card__content::before {
-      height: 100%;
-    }
-
-    .featured-card__top {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .featured-card__meta {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      background: rgba(0,229,200,0.07);
-      border: 1px solid rgba(0,229,200,0.15);
-      color: var(--blog-accent);
-      white-space: nowrap;
-      transition: background 0.2s, border-color 0.2s;
-    }
-
-    .tag:hover {
-      background: rgba(0,229,200,0.14);
-      border-color: rgba(0,229,200,0.3);
-    }
-
-    .tag--seo    { --tag-color: #00E5C8; }
-    .tag--perf   { --tag-color: #f59e0b; background: rgba(245,158,11,0.07); border-color: rgba(245,158,11,0.18); color: #f59e0b; }
-    .tag--dev    { --tag-color: #818cf8; background: rgba(129,140,248,0.07); border-color: rgba(129,140,248,0.18); color: #818cf8; }
-    .tag--ecomm  { --tag-color: #34d399; background: rgba(52,211,153,0.07); border-color: rgba(52,211,153,0.18); color: #34d399; }
-    .tag--ux     { --tag-color: #f472b6; background: rgba(244,114,182,0.07); border-color: rgba(244,114,182,0.18); color: #f472b6; }
-
-    .meta-sep { width: 3px; height: 3px; border-radius: 50%; background: var(--blog-text-muted); }
-
-    .meta-text {
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.12em;
-      color: var(--blog-text-muted);
-    }
-
-    .featured-card__heading {
-      font-family: var(--blog-serif);
-      font-size: clamp(26px, 2.8vw, 38px);
-      font-weight: 400;
-      line-height: 1.18;
-      color: #fff;
-      letter-spacing: -0.01em;
-    }
-
-    .featured-card__excerpt {
-      font-family: var(--blog-sans);
-      font-size: 14px;
-      font-weight: 300;
-      color: var(--blog-text-muted);
-      line-height: 1.7;
-    }
-
-    .featured-card__footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 24px;
-      border-top: 1px solid var(--blog-border);
-    }
-
-    .author-chip {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .author-avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(0,229,200,0.3), rgba(0,80,160,0.4));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: var(--blog-mono);
-      font-size: 11px;
-      color: var(--blog-accent);
-      border: 1px solid rgba(0,229,200,0.2);
-      flex-shrink: 0;
-    }
-
-    .author-info__name {
-      font-family: var(--blog-sans);
-      font-size: 12px;
-      font-weight: 500;
-      color: rgba(200,220,230,0.75);
-      line-height: 1;
-    }
-
-    .author-info__role {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.15em;
-      color: var(--blog-text-muted);
-      margin-top: 3px;
-      text-transform: uppercase;
-    }
-
-    .read-more-arrow {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--blog-accent-dim);
-      transition: color 0.2s, gap 0.2s;
-    }
-
-    .featured-card:hover .read-more-arrow {
-      color: var(--blog-accent);
-      gap: 14px;
-    }
-
-    .read-more-arrow svg {
-      width: 14px;
-      height: 14px;
-      transition: transform 0.25s;
-    }
-
-    .featured-card:hover .read-more-arrow svg {
-      transform: translateX(4px);
-    }
-
-    /* ─────────────────────────────────────────────────────
-       SECTION LABEL (reusable)
-    ───────────────────────────────────────────────────── */
-    .section-label {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.35em;
-      color: var(--blog-accent-dim);
-      text-transform: uppercase;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding-top: 56px;
-    }
-
-    .section-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--blog-border);
-    }
-
-    /* ─────────────────────────────────────────────────────
-       EDITORIAL GRID
-    ───────────────────────────────────────────────────── */
-    .editorial-grid {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      grid-auto-rows: auto;
-      gap: 20px;
-    }
-
-    /* ─── Post Card Base ─── */
-    .post-card {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      background: var(--blog-surface);
-      border: 1px solid var(--blog-border);
-      border-radius: var(--blog-radius);
-      overflow: hidden;
-      cursor: pointer;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
-    }
-
-    .post-card:hover {
-      border-color: var(--blog-border-hover);
-      transform: translateY(-4px);
-      box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,229,200,0.06);
-    }
-
-    /* Teal accent bar on hover */
-    .post-card::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--blog-accent), transparent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .post-card:hover::after {
-      transform: scaleX(1);
-    }
-
-    /* Grid span variants */
-    .col-span-4  { grid-column: span 4; }
-    .col-span-5  { grid-column: span 5; }
-    .col-span-6  { grid-column: span 6; }
-    .col-span-7  { grid-column: span 7; }
-    .col-span-8  { grid-column: span 8; }
-    .col-span-12 { grid-column: span 12; }
-
-    /* ─── Card Thumbnail ─── */
-    .post-card__thumb {
-      position: relative;
-      aspect-ratio: 16 / 9;
-      overflow: hidden;
-      background: var(--blog-surface-2);
-      flex-shrink: 0;
-    }
-
-    .post-card__thumb--tall {
-      aspect-ratio: 4 / 3;
-    }
-
-    .post-card__thumb--short {
-      aspect-ratio: 21 / 9;
-    }
-
-    .thumb-art {
-      position: absolute;
-      inset: 0;
-      transition: transform 0.5s ease;
-    }
-
-    .post-card:hover .thumb-art {
-      transform: scale(1.03);
-    }
-
-    /* Unique gradient arts per category */
-    .thumb-art--seo {
-      background:
-        radial-gradient(ellipse 60% 55% at 25% 45%, rgba(0,229,200,0.22) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 60% at 80% 65%, rgba(0,100,180,0.18) 0%, transparent 50%),
-        linear-gradient(145deg, #040d14 0%, #061422 100%);
-    }
-
-    .thumb-art--perf {
-      background:
-        radial-gradient(ellipse 55% 50% at 70% 35%, rgba(245,158,11,0.2) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 55% at 20% 70%, rgba(200,80,0,0.12) 0%, transparent 50%),
-        linear-gradient(155deg, #0a0b04 0%, #100c02 100%);
-    }
-
-    .thumb-art--dev {
-      background:
-        radial-gradient(ellipse 60% 50% at 30% 55%, rgba(129,140,248,0.2) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 50% at 75% 25%, rgba(80,0,180,0.15) 0%, transparent 50%),
-        linear-gradient(135deg, #040610 0%, #080514 100%);
-    }
-
-    .thumb-art--ecomm {
-      background:
-        radial-gradient(ellipse 55% 50% at 60% 40%, rgba(52,211,153,0.2) 0%, transparent 55%),
-        radial-gradient(ellipse 40% 55% at 15% 70%, rgba(0,160,100,0.12) 0%, transparent 50%),
-        linear-gradient(145deg, #030f0a 0%, #051412 100%);
-    }
-
-    .thumb-art--ux {
-      background:
-        radial-gradient(ellipse 55% 50% at 45% 35%, rgba(244,114,182,0.18) 0%, transparent 55%),
-        radial-gradient(ellipse 45% 55% at 80% 70%, rgba(160,0,100,0.12) 0%, transparent 50%),
-        linear-gradient(145deg, #0a0408 0%, #100510 100%);
-    }
-
-    /* Thumb decorative grid */
-    .thumb-art::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 32px 32px;
-    }
-
-    /* Thumb index number */
-    .thumb-num {
-      position: absolute;
-      bottom: 12px;
-      right: 14px;
-      font-family: var(--blog-display);
-      font-size: 36px;
-      font-weight: 900;
-      color: rgba(255,255,255,0.06);
-      line-height: 1;
-      user-select: none;
-    }
-
-    /* ─── Card Body ─── */
-    .post-card__body {
-      padding: 24px 24px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      flex: 1;
-    }
-
-    .post-card__meta {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .post-card__title {
-      font-family: var(--blog-serif);
-      font-size: clamp(17px, 1.6vw, 22px);
-      font-weight: 400;
-      line-height: 1.25;
-      color: rgba(240,250,255,0.92);
-      letter-spacing: -0.01em;
-      transition: color 0.2s;
-    }
-
-    .post-card:hover .post-card__title {
-      color: #fff;
-    }
-
-    .post-card__excerpt {
-      font-family: var(--blog-sans);
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--blog-text-muted);
-      line-height: 1.65;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-    }
-
-    .post-card__footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: auto;
-      padding-top: 16px;
-      border-top: 1px solid var(--blog-border);
-    }
-
-    .post-date {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.18em;
-      color: var(--blog-text-muted);
-      text-transform: uppercase;
-    }
-
-    .read-time {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.15em;
-      color: var(--blog-text-muted);
-      text-transform: uppercase;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
-
-    .read-time svg {
-      width: 10px;
-      height: 10px;
-      opacity: 0.5;
-    }
-
-    /* ─── Horizontal card variant ─── */
-    .post-card--horizontal {
-      flex-direction: row;
-    }
-
-    .post-card--horizontal .post-card__thumb {
-      width: 220px;
-      flex-shrink: 0;
-      aspect-ratio: unset;
-    }
-
-    .post-card--horizontal .post-card__body {
-      padding: 28px 28px 24px;
-    }
-
-    /* ─── Compact / list variant ─── */
-    .post-card--compact .post-card__body {
-      padding: 20px 20px 16px;
-      gap: 8px;
-    }
-
-    .post-card--compact .post-card__title {
-      font-size: 16px;
-    }
-
-    .post-card--compact .post-card__excerpt {
-      -webkit-line-clamp: 2;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       TRENDING SIDEBAR (inside grid)
-    ───────────────────────────────────────────────────── */
-    .trending-panel {
-      grid-column: span 4;
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      position: relative;
-    }
-
-    .trending-panel__header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 0 0 16px;
-      border-bottom: 1px solid var(--blog-border);
-      margin-bottom: 4px;
-    }
-
-    .trending-panel__title {
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.28em;
-      color: var(--blog-accent-dim);
-      text-transform: uppercase;
-    }
-
-    .trending-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-      padding: 16px 0;
-      border-bottom: 1px solid rgba(0,229,200,0.05);
-      text-decoration: none;
-      color: inherit;
-      transition: padding-left 0.25s;
-    }
-
-    .trending-item:hover {
-      padding-left: 6px;
-    }
-
-    .trending-item:last-child { border-bottom: none; }
-
-    .trending-num {
-      font-family: var(--blog-display);
-      font-size: 20px;
-      font-weight: 900;
-      color: rgba(0,229,200,0.12);
-      line-height: 1;
-      flex-shrink: 0;
-      width: 28px;
-      text-align: right;
-      transition: color 0.25s;
-    }
-
-    .trending-item:hover .trending-num {
-      color: rgba(0,229,200,0.28);
-    }
-
-    .trending-text {
-      flex: 1;
-    }
-
-    .trending-title {
-      font-family: var(--blog-sans);
-      font-size: 13px;
-      font-weight: 500;
-      color: rgba(200,220,230,0.78);
-      line-height: 1.35;
-      margin-bottom: 6px;
-      transition: color 0.2s;
-    }
-
-    .trending-item:hover .trending-title {
-      color: #fff;
-    }
-
-    .trending-meta {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.15em;
-      color: var(--blog-text-muted);
-      text-transform: uppercase;
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       INLINE NEWSLETTER CTA (woven into feed)
-    ───────────────────────────────────────────────────── */
-    .inline-newsletter {
-      grid-column: span 12;
-      background:
-        radial-gradient(ellipse 60% 100% at 100% 50%, rgba(0,229,200,0.05) 0%, transparent 60%),
-        linear-gradient(90deg, rgba(0,229,200,0.04) 0%, transparent 40%),
-        var(--blog-surface);
-      border: 1px solid var(--blog-border);
-      border-left: 3px solid rgba(0,229,200,0.4);
-      border-radius: var(--blog-radius);
-      padding: 40px 48px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-      flex-wrap: wrap;
-    }
-
-    .inline-newsletter__copy {
-      flex: 1;
-      min-width: 240px;
-    }
-
-    .inline-newsletter__eyebrow {
-      font-family: var(--blog-mono);
-      font-size: 8px;
-      letter-spacing: 0.35em;
-      color: var(--blog-accent-dim);
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .inline-newsletter__headline {
-      font-family: var(--blog-serif);
-      font-size: clamp(20px, 2vw, 28px);
-      font-weight: 400;
-      color: #fff;
-      line-height: 1.2;
-      margin-bottom: 6px;
-    }
-
-    .inline-newsletter__sub {
-      font-family: var(--blog-sans);
-      font-size: 13px;
-      font-weight: 300;
-      color: var(--blog-text-muted);
-    }
-
-    .inline-newsletter__form {
-      display: flex;
-      gap: 0;
-      border: 1px solid rgba(0,229,200,0.2);
-      border-radius: 12px;
-      overflow: hidden;
-      background: rgba(0,229,200,0.03);
-      transition: border-color 0.25s, box-shadow 0.25s;
-      min-width: 320px;
-    }
-
-    .inline-newsletter__form:focus-within {
-      border-color: rgba(0,229,200,0.45);
-      box-shadow: 0 0 28px rgba(0,229,200,0.1);
-    }
-
-    .inline-newsletter__input {
-      flex: 1;
-      padding: 14px 18px;
-      background: transparent;
-      border: none;
-      outline: none;
-      font-family: var(--blog-sans);
-      font-size: 13px;
-      color: #fff;
-    }
-
-    .inline-newsletter__input::placeholder {
-      color: rgba(0,229,200,0.28);
-    }
-
-    .inline-newsletter__btn {
-      padding: 14px 20px;
-      background: rgba(0,229,200,0.1);
-      border: none;
-      border-left: 1px solid rgba(0,229,200,0.18);
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--blog-accent);
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      align-self: stretch;
-      gap: 7px;
-      white-space: nowrap;
-      transition: background 0.2s;
-    }
-
-    .inline-newsletter__btn:hover {
-      background: rgba(0,229,200,0.18);
-    }
-
-    /* ─────────────────────────────────────────────────────
-       LOAD MORE
-    ───────────────────────────────────────────────────── */
-    .load-more-row {
-      display: flex;
-      justify-content: center;
-      padding: 48px 0 0;
-    }
-
-    .btn-load-more {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 14px 32px;
-      background: transparent;
-      border: 1px solid var(--blog-border-hover);
-      border-radius: 10px;
-      font-family: var(--blog-mono);
-      font-size: 9px;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: rgba(0,229,200,0.65);
-      cursor: pointer;
-      transition: background 0.25s, border-color 0.25s, color 0.25s;
-    }
-
-    .btn-load-more:hover {
-      background: rgba(0,229,200,0.06);
-      border-color: rgba(0,229,200,0.4);
-      color: var(--blog-accent);
-    }
-
-    /* ─────────────────────────────────────────────────────
-       FOOTER (match site)
-    ───────────────────────────────────────────────────── */
-    .footer-newsletter {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-      padding: 22px 0;
-      border-bottom: 1px solid rgba(0,229,200,0.1);
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    /* ─────────────────────────────────────────────────────
-       SCROLL REVEAL ANIMATION
-    ───────────────────────────────────────────────────── */
-    .reveal {
-      opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.65s cubic-bezier(0.16,1,0.3,1), transform 0.65s cubic-bezier(0.16,1,0.3,1);
-    }
-
-    .reveal.in-view {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    /* Staggered delays */
-    .reveal-d1 { transition-delay: 0.05s; }
-    .reveal-d2 { transition-delay: 0.12s; }
-    .reveal-d3 { transition-delay: 0.20s; }
-    .reveal-d4 { transition-delay: 0.28s; }
-    .reveal-d5 { transition-delay: 0.36s; }
-
-    /* ─────────────────────────────────────────────────────
-       RESPONSIVE
-    ───────────────────────────────────────────────────── */
-    @media (max-width: 1100px) {
-      .featured-card { grid-template-columns: 1fr; min-height: auto; }
-      .featured-card__visual { min-height: 280px; }
-      .col-span-7, .col-span-8 { grid-column: span 12; }
-      .col-span-5, .col-span-4 { grid-column: span 12; }
-      .trending-panel { grid-column: span 12; }
-      .post-card--horizontal { flex-direction: column; }
-      .post-card--horizontal .post-card__thumb { width: 100%; aspect-ratio: 16/9; }
-    }
-
-    @media (max-width: 760px) {
-      .blog-masthead { padding: 104px 0 40px; }
-      .blog-masthead__inner { padding: 0 20px; }
-      .blog-masthead__title { font-size: 52px; }
-      .blog-masthead__meta { flex-direction: column; align-items: flex-start; gap: 16px; }
-      .blog-masthead__stats { gap: 20px; }
-      .blog-body { padding: 0 20px 56px; }
-      .editorial-grid { grid-template-columns: 1fr; gap: 16px; }
-      .col-span-4, .col-span-5, .col-span-6, .col-span-7, .col-span-8, .col-span-12 { grid-column: span 1; }
-      .inline-newsletter { padding: 28px 24px; flex-direction: column; }
-      .inline-newsletter__form { min-width: unset; width: 100%; }
-      .blog-filters__inner { padding: 0 20px; }
-    }
+    body { background: #04080E; color: var(--bt); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+    /* ── Topbar ── */
+    .topbar { background: rgba(5,10,14,0.9) !important; backdrop-filter: blur(18px) !important; border-bottom: 1px solid var(--bb) !important; }
+    .topbar.scrolled { background: rgba(3,7,11,0.97) !important; }
+    .topbar__link { font-family: var(--mono) !important; font-size: 10px !important; letter-spacing: 0.12em !important; text-transform: uppercase !important; }
+    .topbar__link.active-page { color: var(--ba) !important; }
+    .topbar-sys { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 9px; letter-spacing: 0.22em; color: rgba(0,229,200,0.45); text-transform: uppercase; }
+    .topbar-sys-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--ba); box-shadow: 0 0 8px var(--ba); animation: pulse 2.8s ease-in-out infinite; }
+    @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.4;transform:scale(.7)} }
+    @media(max-width:900px){.topbar-sys{display:none}}
+
+    /* ── Masthead ── */
+    .blog-masthead { padding: 128px 0 56px; position: relative; overflow: hidden; border-bottom: 1px solid var(--bb); }
+    .blog-masthead::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 15% 50%, rgba(0,229,200,0.04) 0%, transparent 65%), radial-gradient(ellipse 50% 80% at 85% 20%, rgba(0,100,180,0.05) 0%, transparent 60%); pointer-events:none; }
+    .blog-masthead::after { content:''; position:absolute; inset:0; background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(0,229,200,0.012) 3px, rgba(0,229,200,0.012) 4px); pointer-events:none; }
+    .masthead-inner { position:relative; z-index:2; max-width:1280px; margin:0 auto; padding:0 32px; }
+    .masthead-sys { font-family:var(--mono); font-size:9px; letter-spacing:.35em; color:var(--ba-dim); text-transform:uppercase; margin-bottom:20px; display:flex; align-items:center; gap:16px; }
+    .masthead-sys::before { content:''; display:inline-block; width:32px; height:1px; background:var(--ba-dim); }
+    .masthead-title { font-family:var(--disp); font-size:clamp(52px,8vw,108px); font-weight:900; line-height:.92; letter-spacing:-.02em; color:#fff; }
+    .masthead-title em { font-style:normal; color:var(--ba); }
+    .masthead-title .hollow { -webkit-text-stroke:1.5px rgba(0,229,200,0.5); color:transparent; }
+    .masthead-meta { display:flex; align-items:center; justify-content:space-between; margin-top:28px; padding-top:24px; border-top:1px solid var(--bb); }
+    .masthead-tagline { font-size:14px; font-weight:300; color:var(--bt-m); max-width:440px; }
+    .masthead-stats { display:flex; gap:32px; }
+    .blog-stat__num { font-family:var(--disp); font-size:24px; font-weight:700; color:#fff; line-height:1; }
+    .blog-stat__label { font-family:var(--mono); font-size:8px; letter-spacing:.25em; color:var(--bt-m); text-transform:uppercase; margin-top:4px; }
+
+    /* ── Filters ── */
+    .blog-filters { position:sticky; top:64px; z-index:10; background:rgba(4,8,14,0.94); backdrop-filter:blur(20px); border-bottom:1px solid var(--bb); }
+    .filters-inner { max-width:1280px; margin:0 auto; padding:0 32px; display:flex; overflow-x:auto; scrollbar-width:none; }
+    .filters-inner::-webkit-scrollbar { display:none; }
+    .filter-tab { flex-shrink:0; padding:16px 20px; font-family:var(--mono); font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:var(--bt-m); background:none; border:none; border-bottom:2px solid transparent; cursor:pointer; transition:color .2s, border-color .2s; white-space:nowrap; }
+    .filter-tab:hover { color:rgba(0,229,200,0.75); }
+    .filter-tab.active { color:var(--ba); border-bottom-color:var(--ba); }
+    .filter-count { display:inline-flex; align-items:center; justify-content:center; width:16px; height:16px; border-radius:4px; background:rgba(0,229,200,0.12); font-size:7px; color:var(--ba); margin-left:6px; vertical-align:middle; }
+
+    /* ── Body ── */
+    .blog-body { max-width:1280px; margin:0 auto; padding:0 32px 80px; }
+    .section-lbl { font-family:var(--mono); font-size:8px; letter-spacing:.35em; color:var(--ba-dim); text-transform:uppercase; margin-bottom:24px; display:flex; align-items:center; gap:12px; padding-top:56px; }
+    .section-lbl::after { content:''; flex:1; height:1px; background:var(--bb); }
+
+    /* ── Tags ── */
+    .tag { display:inline-flex; align-items:center; padding:4px 10px; border-radius:6px; font-family:var(--mono); font-size:8px; letter-spacing:.18em; text-transform:uppercase; background:rgba(0,229,200,0.07); border:1px solid rgba(0,229,200,0.15); color:var(--ba); white-space:nowrap; text-decoration:none; }
+    .tag--perf  { background:rgba(245,158,11,0.07); border-color:rgba(245,158,11,0.18); color:#f59e0b; }
+    .tag--dev   { background:rgba(129,140,248,0.07); border-color:rgba(129,140,248,0.18); color:#818cf8; }
+    .tag--ecomm { background:rgba(52,211,153,0.07); border-color:rgba(52,211,153,0.18); color:#34d399; }
+    .tag--ux    { background:rgba(244,114,182,0.07); border-color:rgba(244,114,182,0.18); color:#f472b6; }
+    .meta-sep { width:3px; height:3px; border-radius:50%; background:var(--bt-m); display:inline-block; }
+    .meta-text { font-family:var(--mono); font-size:9px; letter-spacing:.12em; color:var(--bt-m); }
+
+    /* ── Featured card ── */
+    .featured-wrap { padding:56px 0 0; }
+    .featured-lbl { font-family:var(--mono); font-size:8px; letter-spacing:.35em; color:var(--ba-dim); text-transform:uppercase; margin-bottom:20px; display:flex; align-items:center; gap:12px; }
+    .featured-lbl::after { content:''; flex:1; height:1px; background:var(--bb); }
+
+    .featured-card { position:relative; display:grid; grid-template-columns:1fr 1fr; min-height:480px; border-radius:var(--rad); overflow:hidden; border:1px solid var(--bb); cursor:pointer; text-decoration:none; color:inherit; transition:border-color .35s, box-shadow .35s; }
+    .featured-card:hover { border-color:var(--bb-h); box-shadow:0 32px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(0,229,200,0.08); }
+
+    .fc-visual { position:relative; overflow:hidden; }
+    .fc-visual-bg { position:absolute; inset:0; background: radial-gradient(ellipse 80% 70% at 30% 40%, rgba(245,158,11,0.14) 0%, transparent 55%), radial-gradient(ellipse 60% 80% at 80% 70%, rgba(200,80,0,0.1) 0%, transparent 55%), linear-gradient(155deg,#0a0b04 0%,#100c02 100%); transition:transform .5s ease; }
+    .featured-card:hover .fc-visual-bg { transform:scale(1.03); }
+    .fc-visual-bg::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px); background-size:48px 48px; }
+    .fc-badge { position:absolute; top:24px; left:24px; display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:99px; background:rgba(0,229,200,0.12); border:1px solid rgba(0,229,200,0.25); font-family:var(--mono); font-size:8px; letter-spacing:.2em; color:var(--ba); text-transform:uppercase; }
+    .fc-badge-dot { width:5px; height:5px; border-radius:50%; background:var(--ba); box-shadow:0 0 8px var(--ba); animation:pulse 2s ease-in-out infinite; }
+
+    .fc-glyph { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:200px; height:200px; opacity:.18; }
+    .fc-glyph circle { stroke:var(--ba); stroke-width:.5; fill:none; }
+    .fc-glyph circle:nth-child(1) { animation:gRot 18s linear infinite; transform-origin:center; }
+    .fc-glyph circle:nth-child(2) { animation:gRot 28s linear infinite reverse; transform-origin:center; }
+    @keyframes gRot { to { transform:rotate(360deg); } }
+
+    .fc-chart { position:absolute; bottom:28px; left:28px; right:28px; height:52px; display:flex; align-items:flex-end; gap:4px; opacity:.3; }
+    .chart-bar { flex:1; background:linear-gradient(to top, var(--ba), rgba(0,229,200,0.3)); border-radius:3px 3px 0 0; min-height:4px; }
+
+    .fc-content { padding:44px 44px 36px; display:flex; flex-direction:column; justify-content:space-between; background:var(--bs); position:relative; }
+    .fc-content::before { content:''; position:absolute; top:0; left:0; width:3px; height:0; background:linear-gradient(to bottom, var(--ba), transparent); transition:height .5s; }
+    .featured-card:hover .fc-content::before { height:100%; }
+
+    .fc-meta { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
+    .fc-title { font-family:var(--serif); font-size:clamp(24px,2.6vw,36px); font-weight:400; line-height:1.18; color:#fff; letter-spacing:-.01em; margin-bottom:16px; }
+    .fc-excerpt { font-size:13px; font-weight:300; color:var(--bt-m); line-height:1.7; }
+    .fc-footer { display:flex; align-items:center; justify-content:space-between; padding-top:24px; border-top:1px solid var(--bb); margin-top:auto; }
+
+    .author-chip { display:flex; align-items:center; gap:10px; }
+    .author-avatar { width:32px; height:32px; border-radius:50%; background:linear-gradient(135deg,rgba(0,229,200,0.3),rgba(0,80,160,0.4)); display:flex; align-items:center; justify-content:center; font-family:var(--mono); font-size:11px; color:var(--ba); border:1px solid rgba(0,229,200,0.2); flex-shrink:0; }
+    .author-name { font-size:12px; font-weight:500; color:rgba(200,220,230,0.75); line-height:1; }
+    .author-role { font-family:var(--mono); font-size:8px; letter-spacing:.15em; color:var(--bt-m); margin-top:3px; text-transform:uppercase; }
+    .read-arrow { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--ba-dim); transition:color .2s, gap .2s; }
+    .featured-card:hover .read-arrow { color:var(--ba); gap:14px; }
+    .read-arrow svg { width:14px; height:14px; transition:transform .25s; }
+    .featured-card:hover .read-arrow svg { transform:translateX(4px); }
+
+    /* ── Editorial grid ── */
+    .e-grid { display:grid; grid-template-columns:repeat(12,1fr); gap:20px; }
+    .c4  { grid-column:span 4; }
+    .c5  { grid-column:span 5; }
+    .c6  { grid-column:span 6; }
+    .c7  { grid-column:span 7; }
+    .c8  { grid-column:span 8; }
+    .c12 { grid-column:span 12; }
+
+    /* Post card */
+    .post-card { position:relative; display:flex; flex-direction:column; background:var(--bs); border:1px solid var(--bb); border-radius:var(--rad); overflow:hidden; cursor:pointer; text-decoration:none; color:inherit; transition:border-color .3s, transform .3s, box-shadow .3s; }
+    .post-card:hover { border-color:var(--bb-h); transform:translateY(-4px); box-shadow:0 24px 60px rgba(0,0,0,0.5); }
+    .post-card::after { content:''; position:absolute; bottom:0; left:0; right:0; height:2px; background:linear-gradient(90deg,var(--ba),transparent); transform:scaleX(0); transform-origin:left; transition:transform .4s ease; }
+    .post-card:hover::after { transform:scaleX(1); }
+
+    .pc-thumb { position:relative; aspect-ratio:16/9; overflow:hidden; background:var(--bs2); flex-shrink:0; }
+    .pc-thumb--tall { aspect-ratio:4/3; }
+    .pc-thumb--short { aspect-ratio:21/9; }
+    .thumb-art { position:absolute; inset:0; transition:transform .5s ease; }
+    .post-card:hover .thumb-art { transform:scale(1.03); }
+    .thumb-art::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px); background-size:32px 32px; }
+    .thumb-art--seo  { background:radial-gradient(ellipse 60% 55% at 25% 45%,rgba(0,229,200,0.22) 0%,transparent 55%),radial-gradient(ellipse 40% 60% at 80% 65%,rgba(0,100,180,0.18) 0%,transparent 50%),linear-gradient(145deg,#040d14 0%,#061422 100%); }
+    .thumb-art--perf { background:radial-gradient(ellipse 55% 50% at 70% 35%,rgba(245,158,11,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 55% at 20% 70%,rgba(200,80,0,0.12) 0%,transparent 50%),linear-gradient(155deg,#0a0b04 0%,#100c02 100%); }
+    .thumb-art--dev  { background:radial-gradient(ellipse 60% 50% at 30% 55%,rgba(129,140,248,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 50% at 75% 25%,rgba(80,0,180,0.15) 0%,transparent 50%),linear-gradient(135deg,#040610 0%,#080514 100%); }
+    .thumb-art--ecomm{ background:radial-gradient(ellipse 55% 50% at 60% 40%,rgba(52,211,153,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 55% at 15% 70%,rgba(0,160,100,0.12) 0%,transparent 50%),linear-gradient(145deg,#030f0a 0%,#051412 100%); }
+    .thumb-art--ux   { background:radial-gradient(ellipse 55% 50% at 45% 35%,rgba(244,114,182,0.18) 0%,transparent 55%),radial-gradient(ellipse 45% 55% at 80% 70%,rgba(160,0,100,0.12) 0%,transparent 50%),linear-gradient(145deg,#0a0408 0%,#100510 100%); }
+    .thumb-num { position:absolute; bottom:12px; right:14px; font-family:var(--disp); font-size:36px; font-weight:900; color:rgba(255,255,255,0.06); line-height:1; user-select:none; }
+
+    .pc-body { padding:24px 24px 20px; display:flex; flex-direction:column; gap:12px; flex:1; }
+    .pc-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+    .pc-title { font-family:var(--serif); font-size:clamp(17px,1.6vw,22px); font-weight:400; line-height:1.25; color:rgba(240,250,255,0.92); letter-spacing:-.01em; transition:color .2s; }
+    .post-card:hover .pc-title { color:#fff; }
+    .pc-excerpt { font-size:13px; font-weight:300; color:var(--bt-m); line-height:1.65; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .pc-footer { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:16px; border-top:1px solid var(--bb); }
+    .post-date { font-family:var(--mono); font-size:8px; letter-spacing:.18em; color:var(--bt-m); text-transform:uppercase; }
+    .read-time { font-family:var(--mono); font-size:8px; letter-spacing:.15em; color:var(--bt-m); text-transform:uppercase; display:flex; align-items:center; gap:5px; }
+
+    /* Horizontal card */
+    .pc--horiz { flex-direction:row; }
+    .pc--horiz .pc-thumb { width:220px; flex-shrink:0; aspect-ratio:unset; }
+    .pc--horiz .pc-body { padding:28px 28px 24px; }
+    .pc--compact .pc-body { padding:20px 20px 16px; gap:8px; }
+    .pc--compact .pc-title { font-size:16px; }
+    .pc--compact .pc-excerpt { -webkit-line-clamp:2; }
+
+    /* Trending panel */
+    .trending-panel { grid-column:span 4; display:flex; flex-direction:column; gap:2px; }
+    .trending-head { display:flex; align-items:center; gap:10px; padding:0 0 16px; border-bottom:1px solid var(--bb); margin-bottom:4px; }
+    .trending-head-label { font-family:var(--mono); font-size:9px; letter-spacing:.28em; color:var(--ba-dim); text-transform:uppercase; }
+    .trending-item { display:flex; align-items:flex-start; gap:14px; padding:14px 0; border-bottom:1px solid rgba(0,229,200,0.05); text-decoration:none; color:inherit; transition:padding-left .25s; }
+    .trending-item:hover { padding-left:6px; }
+    .trending-item:last-child { border-bottom:none; }
+    .trend-num { font-family:var(--disp); font-size:20px; font-weight:900; color:rgba(0,229,200,0.12); line-height:1; flex-shrink:0; width:28px; text-align:right; transition:color .25s; }
+    .trending-item:hover .trend-num { color:rgba(0,229,200,0.28); }
+    .trend-title { font-size:13px; font-weight:500; color:rgba(200,220,230,0.78); line-height:1.35; margin-bottom:6px; transition:color .2s; }
+    .trending-item:hover .trend-title { color:#fff; }
+    .trend-meta { font-family:var(--mono); font-size:8px; letter-spacing:.15em; color:var(--bt-m); text-transform:uppercase; display:flex; gap:8px; align-items:center; }
+
+    /* Inline newsletter */
+    .inline-nl { grid-column:span 12; background:radial-gradient(ellipse 60% 100% at 100% 50%,rgba(0,229,200,0.05) 0%,transparent 60%), var(--bs); border:1px solid var(--bb); border-left:3px solid rgba(0,229,200,0.4); border-radius:var(--rad); padding:40px 48px; display:flex; align-items:center; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+    .nl-eyebrow { font-family:var(--mono); font-size:8px; letter-spacing:.35em; color:var(--ba-dim); text-transform:uppercase; margin-bottom:10px; }
+    .nl-headline { font-family:var(--serif); font-size:clamp(20px,2vw,28px); font-weight:400; color:#fff; line-height:1.2; margin-bottom:6px; }
+    .nl-sub { font-size:13px; font-weight:300; color:var(--bt-m); }
+    .nl-form { display:flex; border:1px solid rgba(0,229,200,0.2); border-radius:12px; overflow:hidden; background:rgba(0,229,200,0.03); transition:border-color .25s, box-shadow .25s; min-width:320px; }
+    .nl-form:focus-within { border-color:rgba(0,229,200,0.45); box-shadow:0 0 28px rgba(0,229,200,0.1); }
+    .nl-input { flex:1; padding:14px 18px; background:transparent; border:none; outline:none; font-family:var(--sans); font-size:13px; color:#fff; }
+    .nl-input::placeholder { color:rgba(0,229,200,0.28); }
+    .nl-btn { padding:0 20px; background:rgba(0,229,200,0.1); border:none; border-left:1px solid rgba(0,229,200,0.18); font-family:var(--mono); font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:var(--ba); cursor:pointer; display:flex; align-items:center; align-self:stretch; gap:7px; white-space:nowrap; transition:background .2s; }
+    .nl-btn:hover { background:rgba(0,229,200,0.18); }
+
+    /* Load more */
+    .load-more-row { display:flex; justify-content:center; padding:48px 0 0; }
+    .btn-load-more { display:flex; align-items:center; gap:10px; padding:14px 32px; background:transparent; border:1px solid var(--bb-h); border-radius:10px; font-family:var(--mono); font-size:9px; letter-spacing:.22em; text-transform:uppercase; color:rgba(0,229,200,0.65); cursor:pointer; transition:background .25s, border-color .25s, color .25s; }
+    .btn-load-more:hover { background:rgba(0,229,200,0.06); border-color:rgba(0,229,200,0.4); color:var(--ba); }
+
+    /* Reveal */
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity .65s cubic-bezier(.16,1,.3,1), transform .65s cubic-bezier(.16,1,.3,1); }
+    .reveal.in-view { opacity:1; transform:translateY(0); }
+    .d1{transition-delay:.05s} .d2{transition-delay:.12s} .d3{transition-delay:.20s} .d4{transition-delay:.28s}
+
+    /* Responsive */
+    @media(max-width:1100px){
+      .featured-card{grid-template-columns:1fr;min-height:auto}
+      .fc-visual{min-height:260px}
+      .c7,.c8{grid-column:span 12} .c4,.c5{grid-column:span 12}
+      .trending-panel{grid-column:span 12}
+      .pc--horiz{flex-direction:column} .pc--horiz .pc-thumb{width:100%;aspect-ratio:16/9}
+    }
+    @media(max-width:760px){
+      .blog-masthead{padding:104px 0 40px}
+      .masthead-inner,.blog-body,.filters-inner{padding-left:20px;padding-right:20px}
+      .masthead-title{font-size:52px}
+      .masthead-meta{flex-direction:column;align-items:flex-start;gap:16px}
+      .e-grid{grid-template-columns:1fr;gap:16px}
+      .c4,.c5,.c6,.c7,.c8,.c12{grid-column:span 1}
+      .inline-nl{padding:28px 24px;flex-direction:column}
+      .nl-form{min-width:unset;width:100%}
+    }
+    /* Empty state */
+    .no-posts { grid-column:span 12; text-align:center; padding:80px 0; }
+    .no-posts p { font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--bt-m); text-transform:uppercase; }
   </style>
 </head>
 <body>
 
-  <!-- ── TOPBAR ──────────────────────────────────────── -->
+  <!-- TOPBAR -->
   <header class="topbar scrolled" role="banner">
     <div class="container topbar__inner">
       <a href="https://raven3.com.ar/" class="logo" aria-label="Raven3 — Inicio">
-        <img src="../assets/img/logo2.png" alt="Raven3 agencia digital" class="logo-img" width="120" height="40" />
+        <img src="../assets/img/logo2.png" alt="Raven3" class="logo-img" width="120" height="40" />
       </a>
-
       <nav class="topbar__nav" id="main-nav" aria-label="Navegación principal">
         <div class="topbar__dropdown">
           <a class="topbar__link topbar__link--parent" href="/index.html#servicios">Servicios</a>
@@ -1205,526 +250,59 @@
         <a class="topbar__link active-page" href="/blog/">Blog</a>
         <a class="topbar__link" href="/contacto.html">Contacto</a>
       </nav>
-
-      <div class="topbar-sys" aria-hidden="true">
-        <span class="topbar-sys-dot"></span>
-        SYS NOMINAL
-      </div>
-
+      <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
       <a class="btn primary cta-desktop" href="/contacto.html">Hablemos</a>
-
-      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
   </header>
 
   <main>
-
-    <!-- ── BLOG MASTHEAD ───────────────────────────── -->
+    <!-- MASTHEAD -->
     <section class="blog-masthead" aria-label="Blog de Raven3">
-      <div class="blog-masthead__inner">
-
-        <p class="blog-masthead__sys">SYS.BLOG // EDITORIAL // RAVEN3</p>
-
-        <h1 class="blog-masthead__title">
-          INSIGHTS<br />
-          <span class="hollow">TÉCNICOS</span><br />
-          <em>SIN FILTRO.</em>
-        </h1>
-
-        <div class="blog-masthead__meta">
-          <p class="blog-masthead__tagline">
-            Performance web, SEO de fondo, arquitectura digital y e-commerce.
-            Todo lo que nadie te explica, escrito por quienes lo implementan.
-          </p>
-
-          <div class="blog-masthead__stats">
-            <div class="blog-stat">
-              <div class="blog-stat__num">24</div>
-              <div class="blog-stat__label">Artículos</div>
-            </div>
-            <div class="blog-stat">
-              <div class="blog-stat__num">5</div>
-              <div class="blog-stat__label">Categorías</div>
-            </div>
-            <div class="blog-stat">
-              <div class="blog-stat__num">8K</div>
-              <div class="blog-stat__label">Lectores / mes</div>
-            </div>
+      <div class="masthead-inner">
+        <p class="masthead-sys">SYS.BLOG // EDITORIAL // RAVEN3</p>
+        <h1 class="masthead-title">INSIGHTS<br><span class="hollow">TÉCNICOS</span><br><em>SIN FILTRO.</em></h1>
+        <div class="masthead-meta">
+          <p class="masthead-tagline">Performance web, SEO de fondo, arquitectura digital y e-commerce. Todo lo que nadie te explica, escrito por quienes lo implementan.</p>
+          <div class="masthead-stats" id="masthead-stats">
+            <div class="blog-stat"><div class="blog-stat__num" id="stat-total">—</div><div class="blog-stat__label">Artículos</div></div>
+            <div class="blog-stat"><div class="blog-stat__num" id="stat-cats">—</div><div class="blog-stat__label">Categorías</div></div>
+            <div class="blog-stat"><div class="blog-stat__num">8K</div><div class="blog-stat__label">Lectores / mes</div></div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- ── CATEGORY FILTERS ────────────────────────── -->
-    <div class="blog-filters" role="navigation" aria-label="Filtros por categoría">
-      <div class="blog-filters__inner">
-        <button class="filter-tab active" data-filter="all">
-          Todos <span class="filter-count">24</span>
-        </button>
-        <button class="filter-tab" data-filter="performance">
-          Performance <span class="filter-count">7</span>
-        </button>
-        <button class="filter-tab" data-filter="seo">
-          SEO Técnico <span class="filter-count">6</span>
-        </button>
-        <button class="filter-tab" data-filter="desarrollo">
-          Desarrollo Web <span class="filter-count">5</span>
-        </button>
-        <button class="filter-tab" data-filter="ecommerce">
-          E-Commerce <span class="filter-count">4</span>
-        </button>
-        <button class="filter-tab" data-filter="ux">
-          UX / CRO <span class="filter-count">2</span>
+    <!-- FILTERS -->
+    <div class="blog-filters" role="navigation" aria-label="Filtrar por categoría">
+      <div class="filters-inner" id="filters-inner"></div>
+    </div>
+
+    <!-- BODY -->
+    <div class="blog-body">
+      <!-- Featured -->
+      <section class="featured-wrap reveal" id="featured-section">
+        <p class="featured-lbl">SYS.01 // Artículo destacado</p>
+        <div id="featured-card-container"></div>
+      </section>
+
+      <!-- Grid -->
+      <p class="section-lbl reveal" id="grid-label">SYS.02 // Últimos artículos</p>
+      <div class="e-grid" id="posts-grid"></div>
+
+      <div class="load-more-row reveal" id="load-more-row" style="display:none">
+        <button class="btn-load-more" id="load-more-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+          Cargar más artículos
+          <span id="remaining-count" class="meta-text"></span>
         </button>
       </div>
     </div>
-
-    <!-- ── BLOG BODY ────────────────────────────────── -->
-    <div class="blog-body">
-
-      <!-- FEATURED -->
-      <section class="featured-section reveal">
-        <p class="featured-label">SYS.01 // Artículo destacado</p>
-
-        <a class="featured-card" href="#" aria-label="Leer: Core Web Vitals 2025">
-          <!-- Visual -->
-          <div class="featured-card__visual" aria-hidden="true">
-            <div class="featured-card__badge">
-              <span class="featured-card__badge-dot"></span>
-              Destacado
-            </div>
-
-            <!-- Decorative SVG circles -->
-            <svg class="featured-card__glyph" viewBox="0 0 220 220" aria-hidden="true">
-              <circle cx="110" cy="110" r="90" stroke-dasharray="4 8" />
-              <circle cx="110" cy="110" r="65" stroke-dasharray="2 6" />
-              <circle cx="110" cy="110" r="40" stroke-dasharray="6 12" />
-              <line x1="20" y1="110" x2="200" y2="110" stroke="rgba(0,229,200,0.3)" stroke-width="0.5" />
-              <line x1="110" y1="20" x2="110" y2="200" stroke="rgba(0,229,200,0.3)" stroke-width="0.5" />
-              <circle cx="110" cy="110" r="4" fill="rgba(0,229,200,0.5)" />
-            </svg>
-
-            <!-- Mini bar chart decoration -->
-            <div class="featured-card__chart" aria-hidden="true">
-              <div class="chart-bar" style="height: 35%"></div>
-              <div class="chart-bar" style="height: 58%"></div>
-              <div class="chart-bar" style="height: 44%"></div>
-              <div class="chart-bar" style="height: 72%"></div>
-              <div class="chart-bar" style="height: 55%"></div>
-              <div class="chart-bar" style="height: 88%"></div>
-              <div class="chart-bar" style="height: 66%"></div>
-              <div class="chart-bar" style="height: 42%"></div>
-              <div class="chart-bar" style="height: 78%"></div>
-              <div class="chart-bar" style="height: 95%"></div>
-              <div class="chart-bar" style="height: 82%"></div>
-              <div class="chart-bar" style="height: 60%"></div>
-            </div>
-          </div>
-
-          <!-- Content -->
-          <div class="featured-card__content">
-            <div class="featured-card__top">
-              <div class="featured-card__meta">
-                <span class="tag tag--perf">Performance</span>
-                <span class="meta-sep"></span>
-                <span class="meta-text">12 min de lectura</span>
-                <span class="meta-sep"></span>
-                <span class="meta-text">May 2025</span>
-              </div>
-
-              <h2 class="featured-card__heading">
-                Core Web Vitals 2025: Lo que Google no te Cuenta (y por qué tu sitio pierde posiciones)
-              </h2>
-
-              <p class="featured-card__excerpt">
-                INP reemplazó FID y la mayoría de las agencias todavía no saben qué hacer al respecto.
-                Analizamos los cambios reales en el ranking de 40 sitios argentinos tras la actualización
-                de mayo — y qué se puede hacer en las próximas 48 horas.
-              </p>
-            </div>
-
-            <div class="featured-card__footer">
-              <div class="author-chip">
-                <div class="author-avatar" aria-hidden="true">R3</div>
-                <div class="author-info">
-                  <div class="author-info__name">Equipo Raven3</div>
-                  <div class="author-info__role">Performance · SEO</div>
-                </div>
-              </div>
-              <span class="read-more-arrow">
-                Leer artículo
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <line x1="5" y1="12" x2="19" y2="12"/>
-                  <polyline points="12 5 19 12 12 19"/>
-                </svg>
-              </span>
-            </div>
-          </div>
-        </a>
-      </section>
-
-      <!-- ─── EDITORIAL GRID ROW 1 ─── -->
-      <p class="section-label reveal">SYS.02 // Últimos artículos</p>
-
-      <div class="editorial-grid">
-
-        <!-- Card 1 — wide -->
-        <a class="post-card col-span-8 reveal reveal-d1" href="#" aria-label="Leer: Cómo auditamos la velocidad">
-          <div class="post-card__thumb">
-            <div class="thumb-art thumb-art--perf"></div>
-            <div class="thumb-num" aria-hidden="true">01</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--perf">Performance</span>
-              <span class="meta-sep" aria-hidden="true"></span>
-              <span class="meta-text">8 min</span>
-            </div>
-            <h2 class="post-card__title">
-              Cómo auditamos la velocidad de un e-commerce en menos de 2 horas — metodología completa
-            </h2>
-            <p class="post-card__excerpt">
-              Nuestra checklist interna para detectar los 12 cuellos de botella más frecuentes en Tiendanube y WooCommerce.
-              Con herramientas gratuitas y pasos accionables que cualquier dev puede seguir.
-            </p>
-            <div class="post-card__footer">
-              <span class="post-date">14 May 2025</span>
-              <span class="read-time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                8 min lectura
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <!-- Card 2 — narrow -->
-        <a class="post-card col-span-4 reveal reveal-d2" href="#" aria-label="Leer: SEO técnico vs. contenido">
-          <div class="post-card__thumb post-card__thumb--tall">
-            <div class="thumb-art thumb-art--seo"></div>
-            <div class="thumb-num" aria-hidden="true">02</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--seo">SEO Técnico</span>
-            </div>
-            <h2 class="post-card__title">
-              SEO Técnico vs. Contenido: cuál priorizamos y por qué
-            </h2>
-            <p class="post-card__excerpt">
-              La dicotomía que divide a todas las agencias. Nuestra respuesta luego de 60+ proyectos.
-            </p>
-            <div class="post-card__footer">
-              <span class="post-date">08 May 2025</span>
-              <span class="read-time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                5 min
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <!-- ─── ROW 2 — 3 equal ─── -->
-        <a class="post-card col-span-4 reveal reveal-d1" href="#" aria-label="Leer: JavaScript que nadie pidió">
-          <div class="post-card__thumb">
-            <div class="thumb-art thumb-art--dev"></div>
-            <div class="thumb-num" aria-hidden="true">03</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--dev">Desarrollo</span>
-              <span class="meta-sep" aria-hidden="true"></span>
-              <span class="meta-text">6 min</span>
-            </div>
-            <h2 class="post-card__title">
-              El JavaScript que nadie pidió: cómo los plugins matan tu LCP
-            </h2>
-            <p class="post-card__excerpt">
-              Un análisis de waterfall real de un e-commerce que cargaba 11 scripts de terceros sin saberlo.
-            </p>
-            <div class="post-card__footer">
-              <span class="post-date">29 Abr 2025</span>
-              <span class="read-time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                6 min
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <a class="post-card col-span-4 reveal reveal-d2" href="#" aria-label="Leer: Checkout de una sola pantalla">
-          <div class="post-card__thumb">
-            <div class="thumb-art thumb-art--ecomm"></div>
-            <div class="thumb-num" aria-hidden="true">04</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--ecomm">E-Commerce</span>
-              <span class="meta-sep" aria-hidden="true"></span>
-              <span class="meta-text">7 min</span>
-            </div>
-            <h2 class="post-card__title">
-              Checkout de una pantalla: cómo subimos la conversión un 23% en un cliente
-            </h2>
-            <p class="post-card__excerpt">
-              El caso de un cliente de indumentaria que tenía 78% de abandono en el paso 3. Lo que cambiamos y los resultados.
-            </p>
-            <div class="post-card__footer">
-              <span class="post-date">22 Abr 2025</span>
-              <span class="read-time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                7 min
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <a class="post-card col-span-4 reveal reveal-d3" href="#" aria-label="Leer: Estructura de URLs en 2025">
-          <div class="post-card__thumb">
-            <div class="thumb-art thumb-art--seo"></div>
-            <div class="thumb-num" aria-hidden="true">05</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--seo">SEO Técnico</span>
-              <span class="meta-sep" aria-hidden="true"></span>
-              <span class="meta-text">4 min</span>
-            </div>
-            <h2 class="post-card__title">
-              Estructura de URLs en 2025: lo que Google realmente usa para rankear
-            </h2>
-            <p class="post-card__excerpt">
-              Testeamos 200 dominios argentinos y el patrón es claro. Los slugs cortos siguen ganando por margen amplio.
-            </p>
-            <div class="post-card__footer">
-              <span class="post-date">15 Abr 2025</span>
-              <span class="read-time">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                4 min
-              </span>
-            </div>
-          </div>
-        </a>
-
-        <!-- ─── INLINE NEWSLETTER ─── -->
-        <div class="inline-newsletter reveal">
-          <div class="inline-newsletter__copy">
-            <p class="inline-newsletter__eyebrow">SYS.NEWS // Suscribite</p>
-            <h3 class="inline-newsletter__headline">
-              Performance Insights,<br />
-              <em style="font-style:italic; color: var(--blog-accent);">sin relleno.</em>
-            </h3>
-            <p class="inline-newsletter__sub">Un artículo técnico por semana. Sin spam. Podés darte de baja cuando quieras.</p>
-          </div>
-          <form class="inline-newsletter__form" novalidate>
-            <input
-              type="email"
-              placeholder="tu@email.com"
-              class="inline-newsletter__input"
-              autocomplete="email"
-              aria-label="Email para newsletter"
-            />
-            <button type="submit" class="inline-newsletter__btn">
-              Suscribirme
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-          </form>
-        </div>
-
-        <!-- ─── ROW 3 — wide + trending ─── -->
-        <div class="col-span-8 reveal reveal-d1" style="display: flex; flex-direction: column; gap: 20px;">
-          <a class="post-card post-card--horizontal" href="#" aria-label="Leer: Schema Markup para e-commerce">
-            <div class="post-card__thumb" style="width: 240px; flex-shrink: 0;">
-              <div class="thumb-art thumb-art--ecomm"></div>
-              <div class="thumb-num" aria-hidden="true">06</div>
-            </div>
-            <div class="post-card__body">
-              <div class="post-card__meta">
-                <span class="tag tag--seo">SEO Técnico</span>
-                <span class="tag tag--ecomm">E-Commerce</span>
-              </div>
-              <h2 class="post-card__title">
-                Schema Markup para e-commerce: los 4 tipos que realmente impactan en CTR
-              </h2>
-              <p class="post-card__excerpt">
-                Product, BreadcrumbList, FAQPage y Review Schema. Cuáles implementar primero y cómo validarlos sin errores en Search Console.
-              </p>
-              <div class="post-card__footer">
-                <span class="post-date">08 Abr 2025</span>
-                <span class="read-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  9 min
-                </span>
-              </div>
-            </div>
-          </a>
-
-          <a class="post-card post-card--horizontal" href="#" aria-label="Leer: next/image no es magia">
-            <div class="post-card__thumb" style="width: 240px; flex-shrink: 0;">
-              <div class="thumb-art thumb-art--dev"></div>
-              <div class="thumb-num" aria-hidden="true">07</div>
-            </div>
-            <div class="post-card__body">
-              <div class="post-card__meta">
-                <span class="tag tag--dev">Desarrollo</span>
-                <span class="tag tag--perf">Performance</span>
-              </div>
-              <h2 class="post-card__title">
-                next/image no es magia: por qué todavía tenés un LCP de 4.2s
-              </h2>
-              <p class="post-card__excerpt">
-                El componente de Next.js optimiza, pero no hace todo solo. Los 6 errores de configuración que cometemos todos.
-              </p>
-              <div class="post-card__footer">
-                <span class="post-date">01 Abr 2025</span>
-                <span class="read-time">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                  6 min
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <!-- TRENDING SIDEBAR -->
-        <aside class="trending-panel reveal reveal-d2" aria-label="Artículos más leídos">
-          <div class="trending-panel__header">
-            <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.55)" stroke-width="2" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-            <span class="trending-panel__title">Más Leídos</span>
-          </div>
-
-          <a class="trending-item" href="#">
-            <span class="trending-num" aria-hidden="true">01</span>
-            <div class="trending-text">
-              <p class="trending-title">Core Web Vitals 2025: La guía definitiva para Argentina</p>
-              <div class="trending-meta">
-                <span class="tag tag--perf" style="font-size: 7px; padding: 2px 6px;">Performance</span>
-                <span>12 min</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="trending-item" href="#">
-            <span class="trending-num" aria-hidden="true">02</span>
-            <div class="trending-text">
-              <p class="trending-title">Cómo migrar de WordPress sin perder posicionamiento</p>
-              <div class="trending-meta">
-                <span class="tag tag--seo" style="font-size: 7px; padding: 2px 6px;">SEO</span>
-                <span>15 min</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="trending-item" href="#">
-            <span class="trending-num" aria-hidden="true">03</span>
-            <div class="trending-text">
-              <p class="trending-title">Checkout de una pantalla: el caso de estudio +23%</p>
-              <div class="trending-meta">
-                <span class="tag tag--ecomm" style="font-size: 7px; padding: 2px 6px;">E-Commerce</span>
-                <span>7 min</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="trending-item" href="#">
-            <span class="trending-num" aria-hidden="true">04</span>
-            <div class="trending-text">
-              <p class="trending-title">Schema Markup: los 4 tipos que impactan en CTR</p>
-              <div class="trending-meta">
-                <span class="tag tag--seo" style="font-size: 7px; padding: 2px 6px;">SEO</span>
-                <span>9 min</span>
-              </div>
-            </div>
-          </a>
-
-          <a class="trending-item" href="#">
-            <span class="trending-num" aria-hidden="true">05</span>
-            <div class="trending-text">
-              <p class="trending-title">JavaScript que nadie pidió: 11 scripts ocultos</p>
-              <div class="trending-meta">
-                <span class="tag tag--dev" style="font-size: 7px; padding: 2px 6px;">Dev</span>
-                <span>6 min</span>
-              </div>
-            </div>
-          </a>
-        </aside>
-
-        <!-- ─── ROW 4 — 3 compactas ─── -->
-        <a class="post-card post-card--compact col-span-4 reveal reveal-d1" href="#" aria-label="Leer: Fuentes variables">
-          <div class="post-card__thumb post-card__thumb--short">
-            <div class="thumb-art thumb-art--dev"></div>
-            <div class="thumb-num" aria-hidden="true">08</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--dev">Desarrollo</span>
-            </div>
-            <h2 class="post-card__title">Fuentes variables: el truco para reducir 60KB por página</h2>
-            <p class="post-card__excerpt">Una sola fuente variable vs. 4 pesos separados. El impacto en TTFB es medible.</p>
-            <div class="post-card__footer">
-              <span class="post-date">25 Mar 2025</span>
-              <span class="read-time">3 min</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="post-card post-card--compact col-span-4 reveal reveal-d2" href="#" aria-label="Leer: Heatmaps para CRO">
-          <div class="post-card__thumb post-card__thumb--short">
-            <div class="thumb-art thumb-art--ux"></div>
-            <div class="thumb-num" aria-hidden="true">09</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--ux">UX / CRO</span>
-            </div>
-            <h2 class="post-card__title">Cómo leer heatmaps para mejorar conversión (sin suposiciones)</h2>
-            <p class="post-card__excerpt">Los patrones que más se repiten en e-commerce argentino y qué cambios generan impacto real.</p>
-            <div class="post-card__footer">
-              <span class="post-date">18 Mar 2025</span>
-              <span class="read-time">5 min</span>
-            </div>
-          </div>
-        </a>
-
-        <a class="post-card post-card--compact col-span-4 reveal reveal-d3" href="#" aria-label="Leer: Canonical tags">
-          <div class="post-card__thumb post-card__thumb--short">
-            <div class="thumb-art thumb-art--seo"></div>
-            <div class="thumb-num" aria-hidden="true">10</div>
-          </div>
-          <div class="post-card__body">
-            <div class="post-card__meta">
-              <span class="tag tag--seo">SEO Técnico</span>
-            </div>
-            <h2 class="post-card__title">Canonical tags: el error que comete el 80% de los e-commerce</h2>
-            <p class="post-card__excerpt">Paginación, filtros de producto y parámetros UTM. Todo puede crear contenido duplicado silencioso.</p>
-            <div class="post-card__footer">
-              <span class="post-date">11 Mar 2025</span>
-              <span class="read-time">4 min</span>
-            </div>
-          </div>
-        </a>
-
-      </div><!-- /editorial-grid -->
-
-      <!-- LOAD MORE -->
-      <div class="load-more-row reveal">
-        <button class="btn-load-more" type="button" aria-label="Cargar más artículos">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
-          Cargar más artículos
-          <span class="meta-text" style="margin-left: 4px;">(14 restantes)</span>
-        </button>
-      </div>
-
-    </div><!-- /blog-body -->
-
   </main>
 
-  <!-- ── FOOTER ────────────────────────────────────── -->
+  <!-- FOOTER -->
   <footer id="footer" aria-label="Pie de página">
     <div class="container">
-
       <div class="footer-newsletter">
         <div class="footer-newsletter__copy">
           <span class="footer-newsletter__label">
@@ -1735,41 +313,26 @@
         </div>
         <form id="newsletter-form" class="footer-newsletter__form" novalidate>
           <div class="footer-newsletter__field">
-            <input id="newsletter-email" type="email" name="email" placeholder="tu@email.com" autocomplete="email" aria-label="Tu email para el newsletter" required />
-            <input type="hidden" name="_subject" value="Nuevo suscriptor Raven3" />
-            <button type="submit" id="newsletter-btn">
-              Suscribirme
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
+            <input id="newsletter-email" type="email" name="email" placeholder="tu@email.com" autocomplete="email" aria-label="Email para newsletter" required />
+            <button type="submit" id="newsletter-btn">Suscribirme <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
           </div>
           <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite"></p>
         </form>
       </div>
-
       <div class="footer-grid">
         <div class="footer-col">
-          <a href="https://raven3.com.ar/" aria-label="Raven3 — Inicio" style="display: inline-block; margin-bottom: 16px">
-            <img src="../assets/img/logo2.png" alt="Raven3 agencia digital" class="logo-img" width="100" height="auto" style="height: 110px; width: auto" />
-          </a>
-          <p>Agencia digital argentina especializada en desarrollo web a medida, e-commerce, SEO técnico y arquitectura digital premium. Sin templates. Resultados reales.</p>
-          <div class="cta-row">
-            <a class="btn primary" href="mailto:hola@raven3.com.ar">Escribinos</a>
-            <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener">WhatsApp</a>
-          </div>
+          <a href="https://raven3.com.ar/" style="display:inline-block;margin-bottom:16px"><img src="../assets/img/logo2.png" alt="Raven3" class="logo-img" width="100" style="height:110px;width:auto" /></a>
+          <p>Agencia digital argentina especializada en desarrollo web, e-commerce y SEO técnico. Sin templates. Resultados reales.</p>
+          <div class="cta-row"><a class="btn primary" href="mailto:hola@raven3.com.ar">Escribinos</a><a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener">WhatsApp</a></div>
         </div>
-
         <div class="footer-col">
           <h4>Servicios</h4>
           <ul class="footer-links">
             <li><a href="/servicios/desarrollo-web-a-medida.html">Desarrollo web</a></li>
             <li><a href="/servicios/tiendas-online.html">Tiendas online</a></li>
             <li><a href="/servicios/seo-tecnico.html">SEO técnico</a></li>
-            <li><a href="/index.html#servicios">Performance &amp; CWV</a></li>
-            <li><a href="/index.html#servicios">UX/UI Conversión</a></li>
-            <li><a href="/index.html#servicios">Integraciones API</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h4>Contacto</h4>
           <ul class="footer-contact-list">
@@ -1777,75 +340,290 @@
             <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener">+54 9 11 3456-8899</a></li>
             <li>Buenos Aires, Argentina</li>
           </ul>
-          <h4 style="margin-top: 24px">Empresa</h4>
-          <ul class="footer-links">
-            <li><a href="/sobre-raven3.html">Sobre Raven3</a></li>
-            <li><a href="/clientes.html">Clientes</a></li>
-            <li><a href="/blog/">Blog</a></li>
-          </ul>
+          <h4 style="margin-top:24px">Empresa</h4>
+          <ul class="footer-links"><li><a href="/sobre-raven3.html">Sobre Raven3</a></li><li><a href="/clientes.html">Clientes</a></li><li><a href="/blog/">Blog</a></li></ul>
         </div>
       </div>
-
       <div class="footer-bottom small">
-        <span>
-          <span id="year"></span> © Raven3. Todos los derechos reservados.
-          <span class="footer-legal">
-            · <a href="/politica-de-privacidad.html">Política de privacidad</a>
-            · <a href="/terminos-de-contratacion.html">Términos</a>
-          </span>
-        </span>
+        <span><span id="year"></span> © Raven3. Todos los derechos reservados. <span class="footer-legal">· <a href="/politica-de-privacidad.html">Política de privacidad</a> · <a href="/terminos-de-contratacion.html">Términos</a></span></span>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/agencia.raven3/" target="_blank" rel="noopener" aria-label="Instagram de Raven3">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z" />
-            </svg>
-          </a>
-          <a href="https://github.com/raven3-agency/" target="_blank" rel="noopener" aria-label="GitHub de Raven3">
-            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z" />
-            </svg>
-          </a>
+          <a href="https://www.instagram.com/agencia.raven3/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg></a>
+          <a href="https://github.com/raven3-agency/" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg></a>
         </div>
       </div>
-
     </div>
   </footer>
 
-  <!-- ── SCRIPTS ────────────────────────────────────── -->
   <script src="../assets/js/main.js" defer></script>
   <script src="../assets/js/newsletter.js" defer></script>
 
   <script>
-    // Year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Category filter tabs
-    const tabs = document.querySelectorAll('.filter-tab');
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-      });
-    });
+    // ── CONFIG ──────────────────────────────────────
+    const POSTS_PER_PAGE = 6;
+    const TAG_CLASSES = { seo:'tag', performance:'tag tag--perf', desarrollo:'tag tag--dev', ecommerce:'tag tag--ecomm', ux:'tag tag--ux' };
 
-    // Scroll reveal
-    const revealEls = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('in-view');
-          observer.unobserve(entry.target);
+    function tagClass(cat) { return TAG_CLASSES[cat] || 'tag'; }
+    function tagLabel(cat) {
+      const map = { seo:'SEO Técnico', performance:'Performance', desarrollo:'Desarrollo', ecommerce:'E-Commerce', ux:'UX / CRO' };
+      return map[cat] || cat;
+    }
+    function formatDate(iso) {
+      const d = new Date(iso + 'T00:00:00');
+      return d.toLocaleDateString('es-AR', { day:'numeric', month:'short', year:'numeric' });
+    }
+
+    // ── STATE ────────────────────────────────────────
+    let allPosts = [];
+    let filtered = [];
+    let visibleCount = POSTS_PER_PAGE;
+    let activeFilter = 'all';
+
+    // ── FETCH ────────────────────────────────────────
+    async function loadPosts() {
+      try {
+        const res = await fetch('./data/posts.json');
+        const data = await res.json();
+        allPosts = data.posts;
+        buildFilters(data.categories);
+        renderAll();
+      } catch(e) {
+        console.error('Error cargando posts:', e);
+      }
+    }
+
+    // ── FILTERS ──────────────────────────────────────
+    function buildFilters(categories) {
+      const container = document.getElementById('filters-inner');
+      categories.forEach(cat => {
+        const btn = document.createElement('button');
+        btn.className = 'filter-tab' + (cat.id === 'all' ? ' active' : '');
+        btn.dataset.filter = cat.id;
+        const liveCount = cat.id === 'all'
+          ? allPosts.length
+          : allPosts.filter(p => p.category === cat.id).length;
+        btn.innerHTML = `${cat.label} <span class="filter-count">${liveCount}</span>`;
+        btn.addEventListener('click', () => setFilter(cat.id));
+        container.appendChild(btn);
+      });
+
+      // update stats
+      document.getElementById('stat-total').textContent = allPosts.length;
+      document.getElementById('stat-cats').textContent = categories.length - 1; // minus "all"
+    }
+
+    function setFilter(id) {
+      activeFilter = id;
+      visibleCount = POSTS_PER_PAGE;
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.toggle('active', t.dataset.filter === id));
+      renderAll();
+    }
+
+    // ── RENDER ALL ───────────────────────────────────
+    function renderAll() {
+      filtered = activeFilter === 'all'
+        ? [...allPosts]
+        : allPosts.filter(p => p.category === activeFilter);
+
+      renderFeatured();
+      renderGrid();
+      updateLoadMore();
+    }
+
+    // ── FEATURED ─────────────────────────────────────
+    function renderFeatured() {
+      const container = document.getElementById('featured-card-container');
+      const section = document.getElementById('featured-section');
+      const post = filtered.find(p => p.featured) || filtered[0];
+
+      if (!post) { container.innerHTML = ''; section.style.display = 'none'; return; }
+      section.style.display = '';
+
+      const heights = [35,58,44,72,55,88,66,42,78,95,82,60];
+      const bars = heights.map(h => `<div class="chart-bar" style="height:${h}%"></div>`).join('');
+
+      container.innerHTML = `
+        <a class="featured-card" href="post.html?slug=${post.slug}" aria-label="Leer: ${post.title}">
+          <div class="fc-visual">
+            <div class="fc-visual-bg ${post.thumbClass || ''}"></div>
+            <div class="fc-badge"><span class="fc-badge-dot"></span>Destacado</div>
+            <svg class="fc-glyph" viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="80" stroke-dasharray="4 8"/>
+              <circle cx="100" cy="100" r="55" stroke-dasharray="2 6"/>
+              <circle cx="100" cy="100" r="30" stroke-dasharray="6 12"/>
+              <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(0,229,200,0.3)" stroke-width="0.5"/>
+              <line x1="100" y1="20" x2="100" y2="180" stroke="rgba(0,229,200,0.3)" stroke-width="0.5"/>
+              <circle cx="100" cy="100" r="4" fill="rgba(0,229,200,0.5)"/>
+            </svg>
+            <div class="fc-chart" aria-hidden="true">${bars}</div>
+          </div>
+          <div class="fc-content">
+            <div>
+              <div class="fc-meta">
+                <span class="${tagClass(post.category)}">${tagLabel(post.category)}</span>
+                <span class="meta-sep" aria-hidden="true"></span>
+                <span class="meta-text">${post.readTime} min de lectura</span>
+                <span class="meta-sep" aria-hidden="true"></span>
+                <span class="meta-text">${post.dateFormatted}</span>
+              </div>
+              <h2 class="fc-title">${post.title}</h2>
+              <p class="fc-excerpt">${post.excerpt}</p>
+            </div>
+            <div class="fc-footer">
+              <div class="author-chip">
+                <div class="author-avatar" aria-hidden="true">${post.author.initials}</div>
+                <div><div class="author-name">${post.author.name}</div><div class="author-role">${post.author.role}</div></div>
+              </div>
+              <span class="read-arrow">Leer artículo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </div>
+          </div>
+        </a>`;
+    }
+
+    // ── GRID ─────────────────────────────────────────
+    function renderGrid() {
+      const grid = document.getElementById('posts-grid');
+      const nonFeatured = filtered.filter(p => !p.featured || activeFilter !== 'all');
+      const toShow = nonFeatured.slice(0, visibleCount);
+
+      if (!toShow.length) {
+        grid.innerHTML = '<div class="no-posts c12"><p>No hay artículos en esta categoría todavía.</p></div>';
+        return;
+      }
+
+      // Layout pattern: wide+narrow, 3col, horiz+horiz+trending, newsletter, 3compact
+      let html = '';
+      const total = toShow.length;
+
+      toShow.forEach((post, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        const tc = tagClass(post.category);
+        const tl = tagLabel(post.category);
+
+        // Decide layout slot
+        if (i === 0) {
+          // Wide card
+          html += `
+          <a class="post-card c8 reveal d1" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else if (i === 1) {
+          // Narrow card (completes 8+4 row)
+          html += `
+          <a class="post-card c4 reveal d2" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb pc-thumb--tall"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else if (i >= 2 && i <= 4) {
+          // 3-column row
+          const delay = ['d1','d2','d3'][i-2];
+          html += `
+          <a class="post-card c4 reveal ${delay}" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else if (i === 5) {
+          // Newsletter inline break
+          html += `
+          <div class="inline-nl c12 reveal">
+            <div><p class="nl-eyebrow">SYS.NEWS // Suscribite</p><h3 class="nl-headline">Performance Insights, <em style="font-style:italic;color:var(--ba)">sin relleno.</em></h3><p class="nl-sub">Un artículo técnico por semana. Sin spam.</p></div>
+            <form class="nl-form" novalidate>
+              <input type="email" placeholder="tu@email.com" class="nl-input" autocomplete="email" aria-label="Email" />
+              <button type="submit" class="nl-btn">Suscribirme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+            </form>
+          </div>
+          <a class="post-card c8 pc--horiz reveal d1" href="post.html?slug=${post.slug}" style="align-self:start">
+            <div class="pc-thumb" style="width:220px;flex-shrink:0;aspect-ratio:unset"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else {
+          // Compact
+          const delay = ['d1','d2','d3','d4'][i % 4];
+          html += `
+          <a class="post-card c4 pc--compact reveal ${delay}" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb pc-thumb--short"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
         }
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
 
-    revealEls.forEach(el => observer.observe(el));
+      // Trending sidebar (after first batch)
+      if (total >= 5) {
+        const trending = allPosts.slice(0, 5);
+        const trendItems = trending.map((p,i) => `
+          <a class="trending-item" href="post.html?slug=${p.slug}">
+            <span class="trend-num" aria-hidden="true">${String(i+1).padStart(2,'0')}</span>
+            <div><p class="trend-title">${p.title}</p>
+            <div class="trend-meta"><span class="${tagClass(p.category)}" style="font-size:7px;padding:2px 6px">${tagLabel(p.category)}</span><span>${p.readTime} min</span></div></div>
+          </a>`).join('');
 
-    // Masthead animate in immediately
-    document.querySelectorAll('.blog-masthead .reveal, .featured-section.reveal').forEach(el => {
-      el.classList.add('in-view');
+        // Insert trending after the first 8 items in the html if we have a slot
+        html += `
+        <aside class="trending-panel c4 reveal d2" aria-label="Más leídos">
+          <div class="trending-head"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.55)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span class="trending-head-label">Más leídos</span></div>
+          ${trendItems}
+        </aside>`;
+      }
+
+      grid.innerHTML = html;
+
+      // Re-observe new reveal elements
+      grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    // ── LOAD MORE ────────────────────────────────────
+    function updateLoadMore() {
+      const nonFeatured = filtered.filter(p => !p.featured || activeFilter !== 'all');
+      const remaining = nonFeatured.length - visibleCount;
+      const row = document.getElementById('load-more-row');
+      row.style.display = remaining > 0 ? 'flex' : 'none';
+      document.getElementById('remaining-count').textContent = remaining > 0 ? `(${remaining} restantes)` : '';
+    }
+
+    document.getElementById('load-more-btn').addEventListener('click', () => {
+      visibleCount += POSTS_PER_PAGE;
+      renderGrid();
+      updateLoadMore();
     });
-  </script>
 
+    // ── SCROLL REVEAL ────────────────────────────────
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── BOOT ─────────────────────────────────────────
+    loadPosts();
+  </script>
 </body>
 </html>
