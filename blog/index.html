@@ -399,7 +399,7 @@
       try {
         const res = await fetch('./data/posts.json');
         const data = await res.json();
-        allPosts = data.posts;
+        allPosts = Array.isArray(data) ? data : data.posts;
         buildFilters();
         renderAll();
       } catch(e) {
