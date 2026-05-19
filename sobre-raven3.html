@@ -202,7 +202,44 @@
     <style>
       .about-hero {
         position: relative;
+        overflow: hidden;
         padding: 132px 0 72px;
+      }
+
+      /* Dark radial vignette — mejora legibilidad sobre el campo de partículas */
+      .about-hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse 80% 90% at 28% 45%,
+            rgba(4, 8, 14, 0.88) 0%,
+            rgba(4, 8, 14, 0.65) 38%,
+            rgba(4, 8, 14, 0.28) 62%,
+            transparent 78%
+          ),
+          radial-gradient(ellipse 90% 45% at 28% 96%,
+            rgba(4, 8, 14, 0.82) 0%,
+            rgba(4, 8, 14, 0.52) 42%,
+            transparent 70%
+          );
+      }
+
+      /* Contenido por encima del vignette */
+      .about-hero__inner { position: relative; z-index: 2; }
+
+      /* Text-shadow para crisp sobre fondo oscuro */
+      .about-hero h1 {
+        text-shadow:
+          0 2px 32px rgba(4, 8, 14, 0.98),
+          0 1px 8px  rgba(4, 8, 14, 0.85);
+      }
+
+      .about-hero .eyebrow,
+      .about-hero p {
+        text-shadow: 0 1px 18px rgba(4, 8, 14, 0.95);
       }
 
       .about-hero__inner {
@@ -335,6 +372,27 @@
 
       .about-section {
         padding: 44px 0 32px;
+      }
+
+      .about-section--split {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .about-section--split::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse 90% 80% at 50% 50%, rgba(4,8,14,0.72) 0%, rgba(4,8,14,0.44) 45%, rgba(4,8,14,0.18) 68%, transparent 82%),
+          radial-gradient(ellipse 70% 40% at 50% 100%, rgba(4,8,14,0.65) 0%, rgba(4,8,14,0.38) 50%, transparent 72%);
+      }
+
+      .about-section--split .container {
+        position: relative;
+        z-index: 2;
       }
 
       .about-section--compact {
