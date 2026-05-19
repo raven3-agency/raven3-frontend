@@ -369,77 +369,46 @@
         transform: scaleX(1);
       }
 
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 0 20px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        background: rgba(255, 255, 255, 0.025);
-        color: var(--text);
-        font-weight: 700;
-        letter-spacing: -0.01em;
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-      }
-
-      .btn:hover {
-        transform: translateY(-1px);
-        border-color: rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.045);
-        color: var(--text-strong);
-      }
-
-      .btn.primary {
-        color: #041015;
-        background: linear-gradient(
-          135deg,
-          var(--accent) 0%,
-          var(--accent-2) 100%
-        );
-        border-color: transparent;
-        box-shadow:
-          0 10px 30px var(--accent-glow),
-          inset 0 1px 0 rgba(255, 255, 255, 0.16);
-      }
-
-      .btn.primary:hover {
-        filter: brightness(1.04);
-        box-shadow:
-          0 14px 34px var(--accent-glow-strong),
-          inset 0 1px 0 rgba(255, 255, 255, 0.2);
-      }
-
       .hero {
         position: relative;
         overflow: hidden;
         padding: 34px 0 74px;
       }
 
-      .hero::before,
-      .hero::after {
-        content: "";
-        position: absolute;
-        border-radius: 999px;
-        filter: blur(80px);
-        pointer-events: none;
-      }
-
+      /* Dark radial vignette — mejora legibilidad sobre el campo de partículas */
       .hero::before {
-        width: 320px;
-        height: 320px;
-        background: rgba(55, 226, 213, 0.09);
-        top: -90px;
-        left: -90px;
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        pointer-events: none;
+        background:
+          radial-gradient(ellipse 80% 90% at 30% 45%,
+            rgba(4, 8, 14, 0.88) 0%,
+            rgba(4, 8, 14, 0.65) 38%,
+            rgba(4, 8, 14, 0.28) 62%,
+            transparent 78%
+          ),
+          radial-gradient(ellipse 90% 45% at 30% 96%,
+            rgba(4, 8, 14, 0.82) 0%,
+            rgba(4, 8, 14, 0.52) 42%,
+            transparent 70%
+          );
       }
 
-      .hero::after {
-        width: 300px;
-        height: 300px;
-        background: rgba(127, 250, 240, 0.06);
-        right: -90px;
-        top: 20px;
+      /* Contenido por encima del vignette */
+      .hero .container { position: relative; z-index: 2; }
+
+      /* Text-shadow para crisp sobre fondo oscuro */
+      .hero h1 {
+        text-shadow:
+          0 2px 32px rgba(4, 8, 14, 0.98),
+          0 1px 8px  rgba(4, 8, 14, 0.85);
+      }
+
+      .hero .hero-copy,
+      .hero .eyebrow {
+        text-shadow: 0 1px 18px rgba(4, 8, 14, 0.95);
       }
 
       .eyebrow {
