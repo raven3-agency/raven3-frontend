@@ -3,8 +3,25 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Títulé y meta se setean por JS -->
-  <title>Cargando... — Raven3 Blog</title>
+  <!-- Meta base — JS sobreescribe title, description, canonical y OG por artículo -->
+  <title>Blog — Raven3 | Desarrollo Web, SEO y Performance</title>
+  <meta name="description" content="Artículos técnicos sobre desarrollo web, SEO técnico, performance y e-commerce. Raven3 — agencia digital argentina." />
+  <link rel="canonical" href="https://raven3.com.ar/blog/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#04080E" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Raven3" />
+  <meta property="og:title" content="Blog — Raven3" />
+  <meta property="og:description" content="Artículos técnicos sobre desarrollo web, SEO técnico, performance y e-commerce." />
+  <meta property="og:url" content="https://raven3.com.ar/blog/" />
+  <meta property="og:image" content="https://raven3.com.ar/assets/og/og-raven3.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — Raven3" />
+  <meta name="twitter:description" content="Artículos técnicos sobre desarrollo web, SEO técnico, performance y e-commerce." />
+  <meta name="twitter:image" content="https://raven3.com.ar/assets/og/og-raven3.jpg" />
+
   <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -339,8 +356,63 @@
     }
 
     function renderPost(post, related) {
-      // Update page meta
-      document.title = `${post.title} — Raven3 Blog`;
+      // ── Update page meta ──────────────────────────────────────────────────
+      const postUrl = `https://raven3.com.ar/blog/post.html?slug=${post.slug}`;
+      const postTitle = `${post.title} — Raven3 Blog`;
+
+      document.title = postTitle;
+
+      function setMetaTag(attr, val, content) {
+        let el = document.querySelector(`meta[${attr}="${val}"]`);
+        if (!el) { el = document.createElement('meta'); el.setAttribute(attr, val); document.head.appendChild(el); }
+        el.content = content;
+      }
+      function setLinkTag(rel, href) {
+        let el = document.querySelector(`link[rel="${rel}"]`);
+        if (!el) { el = document.createElement('link'); el.rel = rel; document.head.appendChild(el); }
+        el.href = href;
+      }
+
+      setLinkTag('canonical', postUrl);
+      setMetaTag('name', 'description', post.excerpt);
+      setMetaTag('property', 'og:title', postTitle);
+      setMetaTag('property', 'og:description', post.excerpt);
+      setMetaTag('property', 'og:url', postUrl);
+      setMetaTag('name', 'twitter:title', postTitle);
+      setMetaTag('name', 'twitter:description', post.excerpt);
+
+      // JSON-LD BlogPosting schema
+      const existingLd = document.getElementById('post-jsonld');
+      if (existingLd) existingLd.remove();
+      const ldScript = document.createElement('script');
+      ldScript.id = 'post-jsonld';
+      ldScript.type = 'application/ld+json';
+      ldScript.textContent = JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BlogPosting',
+        'headline': post.title,
+        'description': post.excerpt,
+        'datePublished': post.date,
+        'dateModified': post.date,
+        'url': postUrl,
+        'mainEntityOfPage': { '@type': 'WebPage', '@id': postUrl },
+        'author': { '@type': 'Organization', 'name': 'Raven3', 'url': 'https://raven3.com.ar' },
+        'publisher': {
+          '@type': 'Organization',
+          'name': 'Raven3',
+          'url': 'https://raven3.com.ar',
+          'logo': { '@type': 'ImageObject', 'url': 'https://raven3.com.ar/assets/img/logo2.png' }
+        },
+        'breadcrumb': {
+          '@type': 'BreadcrumbList',
+          'itemListElement': [
+            { '@type': 'ListItem', 'position': 1, 'name': 'Blog', 'item': 'https://raven3.com.ar/blog/' },
+            { '@type': 'ListItem', 'position': 2, 'name': post.title, 'item': postUrl }
+          ]
+        }
+      });
+      document.head.appendChild(ldScript);
+      // ─────────────────────────────────────────────────────────────────────
 
       const main = document.getElementById('main-content');
 

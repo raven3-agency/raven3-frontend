@@ -11,4 +11,4 @@ Allow: /*.js$
 Allow: /*.jpg$
 Allow: /*.png$
 
-Sitemap: https://www.raven3.com.ar/sitemap.xml
+Sitemap: https://raven3.com.ar/sitemap.xml

@@ -72,231 +72,231 @@
   <!-- Blog posts — newest first -->
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=tendencias-desarrollo-web-2026</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=design-systems-proyectos-web</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web</loc>
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=email-marketing-ecommerce-estrategia</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=email-marketing-ecommerce-estrategia</loc>
     <lastmod>2025-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=ia-seo-google-2025</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=ia-seo-google-2025</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=monitoreo-performance-produccion</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=monitoreo-performance-produccion</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=apis-rest-javascript-frontend</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=apis-rest-javascript-frontend</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=psicologia-color-diseno-web</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=psicologia-color-diseno-web</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=tienda-online-hot-sale-black-friday</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=tienda-online-hot-sale-black-friday</loc>
     <lastmod>2024-12-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=google-search-console-como-usarlo</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=google-search-console-como-usarlo</loc>
     <lastmod>2024-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=optimizacion-imagenes-webp-avif-2024</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=optimizacion-imagenes-webp-avif-2024</loc>
     <lastmod>2024-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=html-semantico-accesibilidad-web</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=html-semantico-accesibilidad-web</loc>
     <lastmod>2024-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=formularios-web-que-convierten</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=formularios-web-que-convierten</loc>
     <lastmod>2024-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=abandono-carrito-ecommerce-como-recuperarlo</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=abandono-carrito-ecommerce-como-recuperarlo</loc>
     <lastmod>2024-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=seo-local-argentina-guia-2024</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=seo-local-argentina-guia-2024</loc>
     <lastmod>2023-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=core-web-vitals-2024-guia-practica</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica</loc>
     <lastmod>2023-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=cea-american-conversion-logistica-b2b</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=cea-american-conversion-logistica-b2b</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=cea-american-cadena-frio-web-corporativa</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa</loc>
     <lastmod>2023-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=storytelling-visual-web-literaria</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=storytelling-visual-web-literaria</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=etienne-de-montebello-experiencia-editorial-interactiva</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva</loc>
     <lastmod>2021-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=seo-tecnico-web-corporativa-lassen</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=seo-tecnico-web-corporativa-lassen</loc>
     <lastmod>2019-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=lassen-pharma-web-corporativa-seo-tecnico</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico</loc>
     <lastmod>2019-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=ux-inmobiliaria-filtros-propiedades</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=ux-inmobiliaria-filtros-propiedades</loc>
     <lastmod>2018-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=ndb-propiedades-integracion-tokko-broker</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker</loc>
     <lastmod>2018-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=catalogo-digital-productos-performance</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=catalogo-digital-productos-performance</loc>
     <lastmod>2017-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=beforce-catalogo-digital-identidad-visual</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual</loc>
     <lastmod>2017-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=ecommerce-con-comunidad-sgm</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=ecommerce-con-comunidad-sgm</loc>
     <lastmod>2015-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=sgm-sitio-institucional-ecommerce-comunidad</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad</loc>
     <lastmod>2015-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=minimalismo-web-performance-okos</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=minimalismo-web-performance-okos</loc>
     <lastmod>2014-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=okos-sitio-institucional-minimalista</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista</loc>
     <lastmod>2014-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=tienda-nube-ux-conversion-knots</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=tienda-nube-ux-conversion-knots</loc>
     <lastmod>2013-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=knots-ecommerce-tienda-nube-ux-producto</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto</loc>
     <lastmod>2013-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=estructura-seo-servicios-art1</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=estructura-seo-servicios-art1</loc>
     <lastmod>2012-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?post=art1-web-corporativa-seo-accesibilidad</loc>
+    <loc>https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad</loc>
     <lastmod>2012-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
