@@ -446,9 +446,17 @@
         ? [...allPosts]
         : allPosts.filter(p => p.category === activeFilter);
 
+      // Sort newest first
+      filtered.sort((a, b) => b.date.localeCompare(a.date));
+
       renderFeatured();
       renderGrid();
       updateLoadMore();
+    }
+
+    // Helper: returns the post being shown in the featured slot
+    function getFeaturedPost() {
+      return filtered.find(p => p.featured) || filtered[0] || null;
     }
 
     // ── FEATURED ─────────────────────────────────────
@@ -504,7 +512,9 @@
     // ── GRID ─────────────────────────────────────────
     function renderGrid() {
       const grid = document.getElementById('posts-grid');
-      const nonFeatured = filtered.filter(p => !p.featured || activeFilter !== 'all');
+      // Always exclude whichever post is in the featured slot
+      const featuredPost = getFeaturedPost();
+      const nonFeatured = filtered.filter(p => p !== featuredPost);
       const toShow = nonFeatured.slice(0, visibleCount);
 
       if (!toShow.length) {
@@ -620,7 +630,8 @@
 
     // ── LOAD MORE ────────────────────────────────────
     function updateLoadMore() {
-      const nonFeatured = filtered.filter(p => !p.featured || activeFilter !== 'all');
+      const featuredPost = getFeaturedPost();
+      const nonFeatured = filtered.filter(p => p !== featuredPost);
       const remaining = nonFeatured.length - visibleCount;
       const row = document.getElementById('load-more-row');
       row.style.display = remaining > 0 ? 'flex' : 'none';
