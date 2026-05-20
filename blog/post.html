@@ -298,17 +298,8 @@
   </footer>
 
   <script src="../assets/js/newsletter.js" defer></script>
+  <script src="../assets/js/redesign.js" defer></script>
   <script>
-    // Nav toggle (main.js not needed — blog has no Three.js canvas)
-    const navToggle = document.querySelector('.nav-toggle');
-    const mainNav   = document.getElementById('main-nav');
-    if (navToggle && mainNav) {
-      navToggle.addEventListener('click', () => {
-        const open = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', String(!open));
-        mainNav.classList.toggle('open', !open);
-      });
-    }
     const topbar = document.querySelector('.topbar');
     if (topbar) window.addEventListener('scroll', () => topbar.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
   </script>
