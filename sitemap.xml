@@ -1,39 +1,323 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
-<url>
-<loc>https://raven3.com.ar/</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>1.00</priority>
-</url>
-<url>
-<loc>https://raven3.com.ar/servicios/desarrollo-web-a-medida.html</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://raven3.com.ar/servicios/tiendas-online.html</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://raven3.com.ar/servicios/seo-tecnico.html</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://raven3.com.ar/clientes.html</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>0.80</priority>
-</url>
-<url>
-<loc>https://raven3.com.ar/index.html</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>0.64</priority>
-</url>
-<url>
-<loc>https://raven3.com.ar/contacto.html</loc>
-<lastmod>2026-03-10T00:30:13+00:00</lastmod>
-<priority>0.64</priority>
-</url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ══════════════════════════════════════════
+       PÁGINAS PRINCIPALES
+  ══════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://raven3.com.ar/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/sobre-raven3.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/clientes.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/contacto.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════
+       SERVICIOS
+  ══════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://raven3.com.ar/servicios/desarrollo-web-a-medida.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/servicios/tiendas-online.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/servicios/seo-tecnico.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════
+       BLOG
+  ══════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://raven3.com.ar/blog/</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Blog posts — newest first -->
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=tendencias-desarrollo-web-2026</loc>
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=design-systems-proyectos-web</loc>
+    <lastmod>2026-01-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=email-marketing-ecommerce-estrategia</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=ia-seo-google-2025</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=monitoreo-performance-produccion</loc>
+    <lastmod>2025-06-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=apis-rest-javascript-frontend</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=psicologia-color-diseno-web</loc>
+    <lastmod>2025-02-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=tienda-online-hot-sale-black-friday</loc>
+    <lastmod>2024-12-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=google-search-console-como-usarlo</loc>
+    <lastmod>2024-10-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=optimizacion-imagenes-webp-avif-2024</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=html-semantico-accesibilidad-web</loc>
+    <lastmod>2024-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=formularios-web-que-convierten</loc>
+    <lastmod>2024-04-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=abandono-carrito-ecommerce-como-recuperarlo</loc>
+    <lastmod>2024-02-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=seo-local-argentina-guia-2024</loc>
+    <lastmod>2023-12-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=core-web-vitals-2024-guia-practica</loc>
+    <lastmod>2023-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=cea-american-conversion-logistica-b2b</loc>
+    <lastmod>2023-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=cea-american-cadena-frio-web-corporativa</loc>
+    <lastmod>2023-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=storytelling-visual-web-literaria</loc>
+    <lastmod>2021-05-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=etienne-de-montebello-experiencia-editorial-interactiva</loc>
+    <lastmod>2021-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=seo-tecnico-web-corporativa-lassen</loc>
+    <lastmod>2019-09-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=lassen-pharma-web-corporativa-seo-tecnico</loc>
+    <lastmod>2019-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=ux-inmobiliaria-filtros-propiedades</loc>
+    <lastmod>2018-12-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=ndb-propiedades-integracion-tokko-broker</loc>
+    <lastmod>2018-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=catalogo-digital-productos-performance</loc>
+    <lastmod>2017-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=beforce-catalogo-digital-identidad-visual</loc>
+    <lastmod>2017-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=ecommerce-con-comunidad-sgm</loc>
+    <lastmod>2015-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=sgm-sitio-institucional-ecommerce-comunidad</loc>
+    <lastmod>2015-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=minimalismo-web-performance-okos</loc>
+    <lastmod>2014-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=okos-sitio-institucional-minimalista</loc>
+    <lastmod>2014-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=tienda-nube-ux-conversion-knots</loc>
+    <lastmod>2013-06-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=knots-ecommerce-tienda-nube-ux-producto</loc>
+    <lastmod>2013-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=estructura-seo-servicios-art1</loc>
+    <lastmod>2012-09-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?post=art1-web-corporativa-seo-accesibilidad</loc>
+    <lastmod>2012-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════
+       LEGALES
+  ══════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://raven3.com.ar/politica-de-privacidad.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/terminos-de-contratacion.html</loc>
+    <lastmod>2026-05-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+
 </urlset>
