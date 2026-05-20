@@ -449,6 +449,382 @@
         "initials": "R3"
       },
       "content": "<h2>La plataforma no hace todo</h2><p>Tienda Nube facilita vender online, pero la conversión depende de cómo se presenta la marca, cómo se ordenan los productos y qué tan fácil es avanzar hacia la compra.</p><h2>Qué revisar en una tienda</h2><ul><li>Títulos claros de producto</li><li>Fotos consistentes</li><li>Categorías simples</li><li>Información visible</li><li>Confianza antes del checkout</li></ul><h2>El aprendizaje</h2><p>En proyectos como Knots, la optimización no siempre requiere rehacer todo. Muchas veces alcanza con mejorar la estructura, la claridad y la experiencia de navegación.</p>"
+    },
+    {
+      "id": 19,
+      "slug": "core-web-vitals-2024-guia-practica",
+      "title": "Core Web Vitals en 2024: qué mide Google y cómo mejorar tu puntaje",
+      "excerpt": "LCP, CLS e INP son los tres indicadores que Google usa para medir la experiencia real del usuario. Esta guía explica qué significa cada uno y cómo mejorarlo con cambios concretos.",
+      "category": "performance",
+      "tags": [
+        "Core Web Vitals",
+        "LCP",
+        "CLS",
+        "INP",
+        "Google",
+        "Performance Web"
+      ],
+      "date": "2023-10-05",
+      "dateFormatted": "5 de octubre, 2023",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Performance Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>¿Por qué Core Web Vitals importa para tu negocio?</h2><p>Desde 2021, Google usa los Core Web Vitals como señal de ranking. Pero más allá del SEO, estos indicadores miden algo real: qué tan rápido y estable se siente tu sitio para un usuario en un celular con conexión 4G.</p><p>Un sitio que pasa los umbrales de Core Web Vitals convierte mejor, rebota menos y posiciona más alto. Los tres indicadores actuales son LCP, CLS e INP.</p><h2>LCP: Largest Contentful Paint</h2><p>Mide cuánto tarda en aparecer el elemento más grande visible en pantalla (generalmente la imagen hero o el titular principal). El umbral de Google es <strong>2.5 segundos o menos</strong>.</p><p>Las causas más comunes de LCP lento: imágenes sin optimizar, servidor lento (TTFB alto), CSS o JS que bloquean el render, y fuentes web que retrasan el texto visible.</p><p>Soluciones concretas: precargar la imagen hero con <code>link rel='preload'</code>, convertir imágenes a WebP o AVIF, usar CDN para recursos estáticos y habilitar compresión Brotli en el servidor.</p><h2>CLS: Cumulative Layout Shift</h2><p>Mide los saltos visuales inesperados durante la carga: ese momento en que el texto salta porque cargó una imagen sin dimensiones. El umbral es <strong>0.1 o menos</strong>.</p><p>Causas frecuentes: imágenes y videos sin atributos width y height definidos, contenido que se inyecta dinámicamente (banners, pop-ups), y fuentes web que cambian el layout al cargar.</p><p>Fix directo: siempre incluir width y height en las etiquetas img. Para fuentes, usar font-display: swap. Para contenido dinámico, reservar el espacio antes de que cargue.</p><h2>INP: Interaction to Next Paint</h2><p>Reemplazó al FID en 2024. Mide el tiempo que tarda la página en responder a cualquier interacción del usuario (click, tap, teclado). El umbral es <strong>200ms o menos</strong>.</p><p>Un INP alto generalmente se debe a JavaScript pesado que bloquea el hilo principal. Soluciones: dividir tareas largas en chunks más pequeños, diferir JS no crítico, y evitar librerías pesadas cuando hay alternativas nativas más livianas.</p><h2>Cómo medir tus Core Web Vitals ahora mismo</h2><p>Tres herramientas gratuitas: <strong>PageSpeed Insights</strong> (pagespeed.web.dev) muestra datos reales de usuarios del campo. <strong>Search Console</strong> bajo 'Experiencia de página' muestra qué URLs tienen problemas. <strong>Chrome DevTools</strong> con Lighthouse permite analizar en tiempo real durante el desarrollo.</p><p>Importante: los datos de campo (CrUX) son los que Google usa para ranking. Los datos de laboratorio (Lighthouse) son útiles para diagnóstico pero no son los mismos que se usan en el algoritmo.</p><h2>Plan de acción por prioridad</h2><p>Si tus Core Web Vitals están en rojo, este es el orden de impacto: primero optimizá las imágenes (mayor ganancia con menos esfuerzo), luego corregí el CLS definiendo dimensiones, después trabajá el TTFB con mejor hosting o CDN, y finalmente auditá el JavaScript si el INP sigue alto.</p>"
+    },
+    {
+      "id": 20,
+      "slug": "seo-local-argentina-guia-2024",
+      "title": "SEO local en Argentina: cómo aparecer en Google Maps y capturar búsquedas de tu zona",
+      "excerpt": "Para negocios con presencia física o cobertura geográfica, el SEO local es la inversión de marketing digital más rentable. Esta guía explica cómo dominarlo en el contexto argentino.",
+      "category": "seo",
+      "tags": [
+        "SEO Local",
+        "Google Maps",
+        "Google Business Profile",
+        "Argentina",
+        "Negocios Locales"
+      ],
+      "date": "2023-12-14",
+      "dateFormatted": "14 de diciembre, 2023",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El Local Pack: el resultado más valioso de Google</h2><p>Cuando alguien busca 'dentista en Palermo' o 'ferretería zona norte', Google muestra un bloque de 3 resultados con mapa, rating y dirección antes de los resultados orgánicos. Ese bloque se llama Local Pack y tiene una tasa de clicks mucho mayor que cualquier posición orgánica tradicional.</p><p>Para aparecer en el Local Pack necesitás dos cosas: un Google Business Profile optimizado y señales de relevancia local en tu sitio web.</p><h2>Google Business Profile: la base de todo</h2><p>El GBP (antes Google My Business) es gratuito y es lo más impactante que podés hacer para el SEO local. Puntos clave para optimizarlo: usá el nombre real del negocio sin agregar keywords extras (Google penaliza el keyword stuffing en el nombre). Elegí la categoría principal más específica posible y agregá categorías secundarias. Mantené la dirección exactamente igual a como aparece en tu sitio web. Actualizá los horarios incluyendo feriados nacionales argentinos. Sumá mínimo 10 fotos de calidad del local, el equipo y los servicios.</p><h2>La estrategia de reviews que funciona</h2><p>Las reviews son el factor de conversión más importante del Local Pack. Proceso para conseguir reviews consistentemente: después de cada servicio exitoso, enviá un mensaje de WhatsApp con el link directo a dejar review en Google. Respondé todas las reviews, positivas y negativas, dentro de las 48 horas. Nunca compres reviews falsas: Google las detecta y penaliza.</p><h2>Optimización on-page para SEO local</h2><p>Tu sitio web y tu GBP deben estar sincronizados. El nombre, dirección y teléfono (NAP) deben ser <strong>idénticos</strong> en el sitio y en Google. Incluí la dirección en texto visible, no solo en una imagen. Agregá un embed del mapa de Google en la página de contacto. Implementá el schema LocalBusiness con JSON-LD.</p><h2>Keywords locales: cómo encontrarlas</h2><p>Las búsquedas locales con mayor intención siguen el patrón: [servicio] + [barrio o ciudad]. Para encontrar las más buscadas: mirá el autocompletado de Google mientras escribís tus servicios, revisá en Search Console qué consultas con nombre de zona ya generan impresiones, y usá Keyword Planner con filtro de ciudad.</p><h2>Directorios locales relevantes en Argentina</h2><p>Las citaciones en directorios externos refuerzan la relevancia local. Directorios importantes para el mercado argentino: Páginas Amarillas, Infonegocios, la cámara de comercio de tu zona, directorios específicos de tu industria y portales de noticias locales. Lo crítico: el NAP debe ser exactamente igual en todos.</p>"
+    },
+    {
+      "id": 21,
+      "slug": "abandono-carrito-ecommerce-como-recuperarlo",
+      "title": "Abandono de carrito en e-commerce: causas reales y cómo recuperar esas ventas",
+      "excerpt": "El 70% de los carritos se abandonan antes de completar la compra. Esta guía explica por qué ocurre y qué acciones concretas reducen ese número.",
+      "category": "ecommerce",
+      "tags": [
+        "Abandono de Carrito",
+        "E-commerce",
+        "Conversión",
+        "Email Marketing",
+        "Checkout"
+      ],
+      "date": "2024-02-08",
+      "dateFormatted": "8 de febrero, 2024",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El problema más costoso del e-commerce</h2><p>De cada 10 usuarios que agregan un producto al carrito, 7 se van sin comprar. Reducir el abandono de carrito del 70% al 60% puede significar un 15% más de ingresos sin invertir un peso extra en publicidad.</p><h2>Por qué abandona el usuario: las causas reales</h2><p>Las principales razones son: costos de envío inesperados al llegar al checkout, obligación de crear una cuenta antes de comprar, proceso de checkout demasiado largo, no poder ver el total con impuestos desde el principio, y desconfianza en la seguridad del sitio.</p><p>La mayoría son problemas del checkout, no del producto ni del precio.</p><h2>Fixes de checkout que impactan inmediatamente</h2><p><strong>Guest checkout:</strong> permitir comprar sin crear cuenta puede subir la conversión hasta un 35%. La cuenta se puede ofrecer después de la compra.</p><p><strong>Mostrar costos totales desde el principio:</strong> incluí una calculadora de envío desde la ficha de producto o el carrito. La sorpresa de precio en el último paso es la causa número uno de abandono.</p><p><strong>Reducir pasos:</strong> el checkout ideal tiene 3 pasos: datos personales, envío, pago. Cada paso extra reduce conversiones.</p><p><strong>Múltiples medios de pago:</strong> en Argentina, ofrecer Mercado Pago, transferencia bancaria y cuotas sin interés es prácticamente obligatorio para no perder ventas.</p><h2>Flujo de recuperación por email</h2><p>Un flujo de 3 emails bien configurado recupera entre el 5% y el 15% de los carritos perdidos: Email 1 a la hora con recordatorio y foto del producto. Email 2 a las 24 horas reforzando el valor y agregando reviews. Email 3 a las 72 horas con un incentivo concreto como descuento o envío gratis.</p><h2>Remarketing: recordarles fuera del sitio</h2><p>Combinado con los emails, el remarketing en Meta Ads o Google Ads a usuarios que abandonaron el carrito tiene un ROI altísimo porque el usuario ya conoce el producto. El mensaje debe ser específico al producto que vieron, no genérico.</p>"
+    },
+    {
+      "id": 22,
+      "slug": "formularios-web-que-convierten",
+      "title": "Formularios web que convierten: principios de UX y errores que cuestan leads",
+      "excerpt": "El formulario es el último paso antes de que un visitante se convierta en lead o cliente. Estos principios de UX reducen la fricción y aumentan los envíos.",
+      "category": "ux",
+      "tags": [
+        "UX",
+        "Formularios Web",
+        "Conversión",
+        "Leads",
+        "Diseño Web"
+      ],
+      "date": "2024-04-18",
+      "dateFormatted": "18 de abril, 2024",
+      "readTime": 8,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "UX · CRO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El formulario es el cuello de botella más ignorado</h2><p>Podés tener el mejor diseño, el mejor copy y el mejor producto, pero si el formulario de contacto genera fricción, perdés el lead. La mayoría de los sitios tienen formularios diseñados por conveniencia del desarrollador, no del usuario.</p><h2>Cuántos campos es demasiado</h2><p>La regla general: pedí solo lo que realmente necesitás en este momento. Cada campo extra reduce la tasa de conversión. Estudios muestran que bajar de 6 campos a 3 puede aumentar los envíos un 50%.</p><p>Campos que casi nunca deberían estar en un primer contacto: teléfono si no lo vas a llamar de inmediato, empresa, presupuesto estimado, y cualquier campo de 'cómo nos conociste' a menos que realmente uses esa data.</p><h2>Orden y agrupación de campos</h2><p>El cerebro procesa mejor la información agrupada. Los campos más fáciles van primero para generar momentum: primero nombre y email, después el mensaje o el servicio de interés.</p><h2>Labels y placeholders: el error más común</h2><p>Usar solo el placeholder como label es un error de accesibilidad y usabilidad. Cuando el usuario empieza a escribir, el placeholder desaparece y ya no sabe qué puso. Siempre usá un label visible, ya sea estático arriba del campo o flotante.</p><h2>Validación en tiempo real</h2><p>La validación debe ocurrir campo por campo, no solo al enviar. Si el usuario ingresa un email con formato incorrecto, avisale cuando sale del campo, no cuando intenta enviar el formulario completo. La validación solo al enviar genera frustración y abandono.</p><h2>El botón de envío importa más de lo que creés</h2><p>'Enviar' es el peor texto para el botón. Usá texto orientado al beneficio: 'Solicitar presupuesto', 'Quiero que me contacten', 'Comenzar proyecto'. El texto del botón es el último micro-copy antes de la conversión.</p><h2>Confirmar el envío correctamente</h2><p>Después del envío exitoso, mostrá una pantalla de confirmación que explique cuándo y cómo van a responder. Nunca dejes al usuario en la misma página con el formulario vacío.</p>"
+    },
+    {
+      "id": 23,
+      "slug": "html-semantico-accesibilidad-web",
+      "title": "HTML semántico y accesibilidad: el código que Google y tus usuarios agradecen",
+      "excerpt": "El HTML semántico no es solo buena práctica: mejora el SEO, facilita el mantenimiento y hace tu sitio accesible para millones de usuarios con discapacidades.",
+      "category": "desarrollo",
+      "tags": [
+        "HTML Semántico",
+        "Accesibilidad Web",
+        "WCAG",
+        "SEO",
+        "Desarrollo Web"
+      ],
+      "date": "2024-06-27",
+      "dateFormatted": "27 de junio, 2024",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Desarrollo Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El problema del HTML sin semántica</h2><p>Un sitio construido con divs anidados puede verse igual que uno con HTML semántico. Pero para Google, para lectores de pantalla y para el desarrollador que lo mantiene meses después, la diferencia es enorme.</p><h2>Las etiquetas semánticas que más importan</h2><p><strong>header:</strong> encabezado de la página o sección, con logo y navegación principal. <strong>nav:</strong> bloque de navegación, permite a lectores de pantalla saltar directo a la navegación. <strong>main:</strong> contenido principal, solo debe haber uno por página. <strong>article:</strong> contenido autónomo como un post de blog o una noticia. <strong>section:</strong> agrupación temática que siempre debe tener un heading. <strong>aside:</strong> contenido relacionado pero no esencial como sidebar o widgets. <strong>footer:</strong> pie de página con datos de contacto y links legales.</p><h2>La jerarquía de headings: el error más frecuente</h2><p>Solo debe haber un h1 por página. Los h2 son secciones principales, los h3 son subsecciones de esos h2. Nunca saltes niveles por razones visuales: si querés un texto más pequeño, usá CSS. Google usa los headings para entender la estructura del contenido.</p><h2>Accesibilidad básica que todo sitio debería tener</h2><ul><li>Todas las imágenes deben tener alt text descriptivo, o alt vacío si son decorativas.</li><li>Los links deben tener texto descriptivo. 'Hacé click aquí' no dice nada fuera de contexto.</li><li>El contraste entre texto y fondo debe cumplir un ratio mínimo de 4.5:1.</li><li>El sitio debe ser navegable solo con teclado (Tab, Enter, flechas).</li><li>Los formularios deben tener labels asociados a cada input.</li></ul><h2>ARIA: cuándo usarlo y cuándo no</h2><p>La regla de oro: no uses ARIA si hay un elemento HTML nativo que hace lo mismo. Un button con role='button' es redundante. Un div con role='button' es un parche que indica que deberías usar un button real.</p>"
+    },
+    {
+      "id": 24,
+      "slug": "optimizacion-imagenes-webp-avif-2024",
+      "title": "Imágenes web en 2024: WebP, AVIF y las técnicas que reducen el peso a la mitad",
+      "excerpt": "Las imágenes son el recurso más pesado de la mayoría de los sitios web. Esta guía explica los formatos modernos y las técnicas de optimización que más impactan en la performance.",
+      "category": "performance",
+      "tags": [
+        "Optimización de Imágenes",
+        "WebP",
+        "AVIF",
+        "Performance Web",
+        "Lazy Loading"
+      ],
+      "date": "2024-08-15",
+      "dateFormatted": "15 de agosto, 2024",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Performance Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Por qué las imágenes son el problema principal de performance</h2><p>En promedio, las imágenes representan el 50-60% del peso total de una página web. Una foto tomada con un celular moderno puede pesar 4-8MB. Sin optimización, esa imagen puede destruir el LCP y hacer que el sitio se sienta lento incluso con buen hosting.</p><h2>Los formatos modernos: WebP y AVIF</h2><p><strong>WebP:</strong> desarrollado por Google, tiene soporte en todos los browsers modernos. Comprime imágenes entre un 25% y 35% mejor que JPEG sin pérdida visible de calidad. Es el mínimo que deberías estar usando hoy.</p><p><strong>AVIF:</strong> más nuevo y más eficiente. Comprime entre un 50% y 60% mejor que JPEG. El soporte de browsers ya es amplio. La estrategia recomendada es ofrecer AVIF con fallback a WebP y JPEG usando la etiqueta picture.</p><h2>Responsive images: entregar el tamaño correcto</h2><p>No tiene sentido cargar una imagen de 1920px en un celular con pantalla de 400px. El atributo srcset permite especificar múltiples versiones de la imagen para que el navegador elija la más apropiada. Usá versiones de 400w, 800w y 1200w para servir el tamaño correcto según el dispositivo.</p><h2>Lazy loading: no cargar lo que no se ve</h2><p>El atributo loading='lazy' hace que las imágenes fuera del viewport inicial no se carguen hasta que el usuario se acerque. Una línea de código que puede mejorar significativamente el tiempo de carga inicial. Nunca uses lazy loading en la imagen hero: esa debe cargarse de inmediato.</p><h2>Dimensiones siempre definidas</h2><p>Definir siempre los atributos width y height en las imágenes evita el CLS. Sin dimensiones, el navegador no sabe cuánto espacio reservar y el contenido salta cuando la imagen carga, impactando directamente en Core Web Vitals.</p><h2>Herramientas para optimizar imágenes</h2><p>Squoosh (squoosh.app) para optimización manual con preview en tiempo real. ImageMagick para procesamiento en batch. En WordPress, plugins como ShortPixel o Imagify automatizan el proceso. En proyectos custom, la librería Sharp para Node.js es la más rápida.</p>"
+    },
+    {
+      "id": 25,
+      "slug": "google-search-console-como-usarlo",
+      "title": "Google Search Console: cómo leer los datos y tomar decisiones de SEO",
+      "excerpt": "Search Console es la herramienta gratuita más poderosa para entender cómo Google ve tu sitio. Esta guía explica los reportes más importantes y qué hacer con cada uno.",
+      "category": "seo",
+      "tags": [
+        "Google Search Console",
+        "SEO",
+        "Indexación",
+        "Keywords",
+        "Análisis Web"
+      ],
+      "date": "2024-10-03",
+      "dateFormatted": "3 de octubre, 2024",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>La herramienta que pocos aprovechan bien</h2><p>Google Search Console es gratuita, oficial y muestra datos que ninguna otra herramienta tiene: las consultas de búsqueda reales que llevan tráfico a tu sitio, los problemas de indexación que Google detecta y el estado de los Core Web Vitals según datos reales de usuarios.</p><h2>El reporte de Rendimiento: el más valioso</h2><p>En 'Rendimiento en la Búsqueda' encontrás clics, impresiones, CTR y posición promedio. Lo más útil en Consultas: keywords donde tenés muchas impresiones pero CTR bajo (necesitan mejores meta títulos y descripciones), y keywords en posición 8-15 que son las de mayor oportunidad para subir al top 5.</p><h2>Cobertura: identificar problemas de indexación</h2><p>El reporte de Cobertura muestra qué URLs indexó Google y cuáles tienen problemas. Los estados son: Válidas (indexadas), Excluidas (no indexadas, puede ser intencional) y Errores (Google quiere indexarlas pero no puede). Los errores más comunes: páginas 404 sin redirect y URLs bloqueadas por robots.txt accidentalmente.</p><h2>Core Web Vitals en Search Console</h2><p>A diferencia de Lighthouse que mide en condiciones de laboratorio, los Core Web Vitals de Search Console son datos reales de usuarios. Son los datos que Google usa para ranking. Revisá este reporte mensualmente: cuando una URL pasa de 'Mala' a 'Buena', el efecto en el ranking suele verse en 2-4 semanas.</p><h2>Flujo de revisión mensual recomendado</h2><p>15 minutos por mes pueden hacer una gran diferencia: revisá nuevos errores de cobertura, identificá las 5 keywords más cercanas al top 3 para optimizar esas páginas, compará el tráfico con el mes anterior y detectá caídas, y verificá si alguna página importante bajó de posición.</p>"
+    },
+    {
+      "id": 26,
+      "slug": "tienda-online-hot-sale-black-friday",
+      "title": "Hot Sale y Black Friday: cómo preparar tu tienda online para las fechas de mayor venta",
+      "excerpt": "Las fechas de descuentos generan picos de tráfico que pueden hacer o arruinar un mes entero. Esta guía explica cómo preparar la parte técnica, comercial y operativa de tu tienda.",
+      "category": "ecommerce",
+      "tags": [
+        "Hot Sale",
+        "Black Friday",
+        "E-commerce",
+        "Descuentos",
+        "Preparación Tienda Online"
+      ],
+      "date": "2024-12-05",
+      "dateFormatted": "5 de diciembre, 2024",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El pico de tráfico que muy pocas tiendas aprovechan bien</h2><p>El Hot Sale en Argentina mueve miles de millones de pesos en pocos días. Pero muchas tiendas online pierden ventas en estas fechas no por falta de demanda, sino por problemas técnicos, operativos o de comunicación que se podían haber evitado.</p><h2>Preparación técnica: lo que no puede fallar</h2><p><strong>Performance bajo carga:</strong> tu tienda carga normal en días tranquilos, pero el Hot Sale puede traer 10 veces más tráfico simultáneo. Verificá que tu hosting soporte esos picos o considerá escalar temporalmente el plan.</p><p><strong>Checkout probado:</strong> hacé una compra de prueba completa una semana antes. Es sorprendente la cantidad de tiendas que tienen el checkout roto y no lo saben hasta que una oleada de clientes intenta comprar.</p><h2>Preparación comercial: la oferta que convierte</h2><p>Las ofertas genéricas de '20% en todo' convierten menos que las ofertas específicas. Estrategias que funcionan mejor: descuento progresivo (más unidades, mayor descuento), bundle de productos a precio especial, y urgencia real con countdown y stock visible cuando queda poco.</p><h2>Comunicación antes, durante y después</h2><p>El 80% de las ventas en fechas especiales vienen de la base de datos existente, no de tráfico nuevo. Antes de la fecha: email de pre-aviso. Durante: email de apertura y recordatorio. Después: email de agradecimiento con oferta de continuidad para los que compraron.</p><h2>Logística y atención al cliente</h2><p>El mayor problema post-compra en fechas especiales es la demora en envíos. Comunicá los plazos de entrega claramente antes de la compra, no después. Si sabés que el volumen va a demorar los envíos, indicalo en la ficha de producto y en el checkout.</p>"
+    },
+    {
+      "id": 27,
+      "slug": "psicologia-color-diseno-web",
+      "title": "Psicología del color en diseño web: qué transmite cada color y cómo usarlo en tu marca",
+      "excerpt": "El color es la primera decisión visual que procesa el cerebro. Entender qué comunica cada tono ayuda a diseñar interfaces que generan la emoción correcta en el usuario.",
+      "category": "ux",
+      "tags": [
+        "Psicología del Color",
+        "Diseño Web",
+        "UX",
+        "Branding",
+        "UI"
+      ],
+      "date": "2025-02-13",
+      "dateFormatted": "13 de febrero, 2025",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "UX · Diseño · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El color comunica antes de que el usuario lea una palabra</h2><p>El 90% de las decisiones sobre un producto se toman en base al color en los primeros 90 segundos. El color no es decoración: es el primer mensaje que recibe el usuario, antes del logo, antes del copy, antes de cualquier otro elemento visual.</p><h2>Lo que transmite cada color</h2><p><strong>Azul:</strong> confianza, seguridad, profesionalismo. No por casualidad es el color dominante en bancos, seguros y tecnología. Cuando necesitás que el usuario sienta que puede confiar, el azul es la opción más directa.</p><p><strong>Verde:</strong> crecimiento, salud, éxito. Funciona bien para marcas sustentables, de salud y finanzas personales. Es el color del botón de confirmación por excelencia.</p><p><strong>Rojo:</strong> urgencia, pasión, energía. Genera respuesta emocional inmediata. Efectivo para CTAs, ofertas de tiempo limitado y marcas de comida rápida. Usar con moderación.</p><p><strong>Naranja:</strong> optimismo, creatividad, calidez. Comunica acción sin la agresividad del rojo. Popular en marcas de consumo masivo.</p><p><strong>Negro:</strong> lujo, exclusividad, sofisticación. Las marcas premium lo usan para comunicar que el producto no necesita justificarse.</p><p><strong>Blanco:</strong> limpieza, simplicidad, espacio. No es 'sin color': es la decisión de dejar que el contenido respire.</p><h2>Contraste y accesibilidad</h2><p>El contraste entre texto y fondo debe cumplir los estándares WCAG: ratio mínimo de 4.5:1 para texto normal. El 8% de los hombres tiene algún tipo de daltonismo, por eso nunca comuniques información usando solo el color.</p><h2>Paleta de colores: menos es más</h2><p>Una paleta web efectiva tiene: 1 color primario de marca, 1 color de acento para CTAs y elementos importantes, y neutrales para texto y backgrounds. Más colores sin jerarquía genera ruido visual y reduce la percepción de profesionalismo.</p>"
+    },
+    {
+      "id": 28,
+      "slug": "apis-rest-javascript-frontend",
+      "title": "Consumir APIs REST desde el frontend: guía práctica con JavaScript moderno",
+      "excerpt": "Fetch, async/await, manejo de errores y buenas prácticas para integrar cualquier API en un proyecto web. Todo lo que necesitás saber sin frameworks.",
+      "category": "desarrollo",
+      "tags": [
+        "APIs REST",
+        "JavaScript",
+        "Fetch API",
+        "Async Await",
+        "Frontend"
+      ],
+      "date": "2025-04-10",
+      "dateFormatted": "10 de abril, 2025",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Desarrollo Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>¿Qué es una API REST y por qué importa en el frontend?</h2><p>Una API REST es una interfaz que permite a tu frontend comunicarse con un servidor: traer datos, enviarlos, actualizarlos o eliminarlos. Integrar APIs es una habilidad fundamental en el desarrollo web moderno, desde mostrar propiedades de una inmobiliaria hasta procesar pagos o cargar posts de un blog.</p><h2>Fetch API: la forma nativa y moderna</h2><p>El navegador incluye la Fetch API de forma nativa desde 2015. No necesitás librerías externas para la mayoría de los casos. Una petición GET básica: usá fetch() con la URL, esperá la respuesta con await, convertí a JSON con response.json() y manejá el resultado. Si la API requiere autenticación, pasá el token en los headers de la petición.</p><h2>Async/Await: el estándar actual</h2><p>Async/await hace que el código asíncrono se lea de forma casi idéntica al código síncrono. Siempre envolvé las llamadas a APIs en un bloque try/catch para capturar errores. Un error de red (sin conexión) y un error de la API (respuesta 404 o 500) son distintos y deben manejarse diferente.</p><h2>Los métodos HTTP más usados</h2><p><strong>GET:</strong> traer datos, no modifica nada. <strong>POST:</strong> crear un recurso nuevo o enviar un formulario. <strong>PUT/PATCH:</strong> actualizar un recurso existente. PUT reemplaza todo, PATCH modifica solo algunos campos. <strong>DELETE:</strong> eliminar un recurso.</p><h2>Manejo de estados en la UI</h2><p>Toda llamada a una API tiene tres estados: loading (petición en curso), success (llegaron los datos) y error (algo falló). La UI debe reflejar los tres. Un skeleton screen durante el loading, el contenido en success, y un mensaje descriptivo en error.</p><h2>Buenas prácticas para producción</h2><p>Nunca expongas API keys en el frontend: cualquiera que inspeccione el código puede verlas. Implementá debounce en búsquedas en tiempo real para no hacer una petición por cada tecla. Cacheá respuestas que no cambian frecuentemente para mejorar la performance.</p>"
+    },
+    {
+      "id": 29,
+      "slug": "monitoreo-performance-produccion",
+      "title": "Cómo monitorear la performance de tu sitio en producción: métricas y herramientas",
+      "excerpt": "Optimizar una vez no es suficiente. La performance cambia con el tiempo: nuevo contenido, plugins, cambios de código. Esta guía explica cómo detectar regresiones antes de que afecten a los usuarios.",
+      "category": "performance",
+      "tags": [
+        "Monitoreo Web",
+        "Performance",
+        "RUM",
+        "Lighthouse CI",
+        "Web Vitals"
+      ],
+      "date": "2025-06-19",
+      "dateFormatted": "19 de junio, 2025",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Performance Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El problema del 'lo optimicé una vez'</h2><p>Un sitio que pasa los Core Web Vitals hoy puede fallarlos en tres meses si se agrega una imagen pesada, un nuevo script de terceros o un plugin con CSS bloqueante. Sin monitoreo continuo, las regresiones pasan desapercibidas hasta que Google las penaliza o los usuarios se quejan.</p><h2>Dos tipos de monitoreo: lab y field</h2><p><strong>Lab (laboratorio):</strong> tests en condiciones controladas como Lighthouse. Útiles para detectar problemas durante el desarrollo, reproducibles y fáciles de automatizar.</p><p><strong>Field (campo):</strong> datos reales de usuarios reales en sus dispositivos y conexiones. Es lo que mide Google para el ranking. Se obtiene a través de herramientas de RUM (Real User Monitoring).</p><h2>Herramientas de monitoreo continuo</h2><p><strong>Google Search Console:</strong> el punto de partida gratuito. Muestra Core Web Vitals reales agrupados por URL. Revisarlo mensualmente revela tendencias y problemas emergentes.</p><p><strong>Lighthouse CI:</strong> integra Lighthouse en tu pipeline de CI/CD. Cada deploy corre automáticamente una auditoría y puede bloquearlo si el score cae por debajo de un umbral.</p><p><strong>WebPageTest:</strong> tests detallados desde múltiples ubicaciones geográficas. Ideal para diagnóstico profundo de regresiones específicas.</p><h2>Alertas: cuándo notificarte</h2><p>Configurá alertas para que te avisen cuando algo cambia. Umbrales recomendados: alerta si el LCP supera 3 segundos en más del 20% de los usuarios, si el CLS supera 0.15, o si el TTFB supera 1 segundo de promedio.</p><h2>Performance budget: definir límites antes de que se superen</h2><p>Un performance budget es un conjunto de límites que el equipo acuerda no superar: peso máximo de la página, número máximo de requests, score mínimo de Lighthouse. Definirlo antes de empezar el proyecto y automatizar su control evita la acumulación de deuda de performance.</p>"
+    },
+    {
+      "id": 30,
+      "slug": "ia-seo-google-2025",
+      "title": "IA y SEO en 2025: cómo los AI Overviews de Google cambian el juego",
+      "excerpt": "Google está mostrando respuestas generadas por IA antes de los resultados orgánicos. Esto cambia qué tipo de contenido posiciona y cómo hay que escribir para seguir siendo visible.",
+      "category": "seo",
+      "tags": [
+        "SEO 2025",
+        "AI Overviews",
+        "Google SGE",
+        "Contenido SEO",
+        "Inteligencia Artificial"
+      ],
+      "date": "2025-08-21",
+      "dateFormatted": "21 de agosto, 2025",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Qué son los AI Overviews y por qué cambian el SEO</h2><p>Google AI Overviews es el bloque de respuesta generada por inteligencia artificial que aparece en la parte superior de los resultados para muchas consultas. En lugar de mostrar links, Google genera una respuesta directa usando información de múltiples fuentes.</p><p>Esto tiene un impacto directo: para consultas informativas simples, el usuario puede obtener la respuesta sin hacer click en ningún sitio.</p><h2>Qué tipo de búsquedas disparan AI Overviews</h2><p>No todas las búsquedas los muestran. Aparecen principalmente para preguntas de tipo 'cómo hacer' o 'qué es', consultas de comparación, búsquedas de definición e investigación. Las búsquedas con intención de compra directa, búsquedas de marca y búsquedas locales siguen mostrando resultados orgánicos con mayor frecuencia.</p><h2>Cómo posicionar en AI Overviews</h2><p>Google extrae información de los sitios que ya posicionan bien orgánicamente. Las características que aumentan la probabilidad de ser citado: respuestas directas y concisas al principio del contenido, estructura clara con headings descriptivos, contenido E-E-A-T (Experiencia, Expertise, Autoridad, Confianza) y datos específicos con ejemplos concretos.</p><h2>El contenido que NO reemplaza la IA</h2><p>La IA genera respuestas genéricas. Lo que no puede replicar: experiencias reales y casos de estudio propios, opiniones editoriales genuinas, contenido local y regional específico, actualizaciones en tiempo real, y contenido que requiere confianza en una persona o marca específica.</p><p>El contenido basado en experiencia real (como los casos de proyectos de una agencia) tiene más valor que nunca.</p>"
+    },
+    {
+      "id": 31,
+      "slug": "email-marketing-ecommerce-estrategia",
+      "title": "Email marketing para e-commerce: la estrategia que genera ventas mientras dormís",
+      "excerpt": "El email tiene el mayor ROI de todos los canales de marketing digital. Esta guía explica los flujos automáticos que todo e-commerce debería tener configurados.",
+      "category": "ecommerce",
+      "tags": [
+        "Email Marketing",
+        "E-commerce",
+        "Automatización",
+        "ROI",
+        "Fidelización"
+      ],
+      "date": "2025-10-16",
+      "dateFormatted": "16 de octubre, 2025",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Por qué el email sigue siendo el canal con mejor ROI</h2><p>Por cada peso invertido en email marketing, el retorno promedio es de 36 a 1. Esto supera ampliamente a las redes sociales, el SEO y la publicidad paga. La razón: estás comunicándote con personas que ya eligieron escucharte, en su canal más personal, sin pagar por cada impresión.</p><h2>Los flujos automáticos que no pueden faltar</h2><p><strong>Bienvenida:</strong> se envía cuando alguien se suscribe o compra por primera vez. Es el email con mayor tasa de apertura (50-60% de open rate). Debe presentar la marca y ofrecer un incentivo para la primera compra.</p><p><strong>Carrito abandonado:</strong> secuencia de 3 emails cuando alguien agrega productos pero no compra. Email 1 a la hora (recordatorio con foto del producto), Email 2 a las 24hs (valor + reviews), Email 3 a las 72hs (incentivo concreto). Recupera entre el 5% y el 15% de los carritos perdidos.</p><p><strong>Post-compra:</strong> Email 1 con confirmación del pedido, Email 2 a los 3-5 días con guía de uso, Email 3 a las 2-3 semanas solicitando review y mostrando productos complementarios.</p><p><strong>Reactivación:</strong> para suscriptores o compradores que llevan 90+ días sin interacción. Un email de 'te extrañamos' con una oferta concreta. Si no reaccionan a 2-3 intentos, es mejor eliminarlos para mantener buena reputación de envío.</p><h2>Segmentación: el multiplicador de efectividad</h2><p>Un email enviado a toda la lista convierte mucho menos que el mismo email enviado al segmento correcto. Segmentaciones básicas: compradores vs solo suscriptores, compradores recurrentes vs de una sola vez, y por categoría de producto comprado.</p>"
+    },
+    {
+      "id": 32,
+      "slug": "design-systems-proyectos-web",
+      "title": "Design systems para proyectos web: cuándo implementarlos y por dónde empezar",
+      "excerpt": "Un design system acelera el desarrollo, mejora la consistencia visual y reduce la deuda de diseño. Esta guía explica cuándo vale la pena el esfuerzo y cómo construir el tuyo.",
+      "category": "ux",
+      "tags": [
+        "Design System",
+        "UI",
+        "Componentes",
+        "Consistencia Visual",
+        "Diseño Web"
+      ],
+      "date": "2026-01-08",
+      "dateFormatted": "8 de enero, 2026",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "UX · Diseño · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>¿Qué es un design system y qué no es?</h2><p>Un design system es el conjunto de decisiones de diseño documentadas y compartidas que un equipo usa para construir productos digitales de forma consistente: tokens de diseño (colores, tipografías, espaciado), componentes reutilizables, patrones de interacción y guías de uso.</p><p>Lo que NO es: un archivo de Figma con componentes bonitos. Sin documentación, sin criterios de uso y sin mantenimiento activo, es solo una galería.</p><h2>Cuándo vale la pena tener uno</h2><p>Tiene sentido cuando: hay más de una persona trabajando en diseño o desarrollo, el proyecto tiene múltiples páginas con patrones repetidos, el producto va a evolucionar con el tiempo, o hay inconsistencias visuales que generan retrabajos frecuentes. Para un sitio de 5 páginas estático, el overhead no vale la pena.</p><h2>Los componentes del design system más básico</h2><p><strong>Tokens de diseño:</strong> las variables fundamentales. Colores (primario, secundario, neutros, semánticos), tipografía (familias, tamaños, pesos), espaciado (escala de 8px) y sombras. En código, se implementan como variables CSS. Cambiar un token actualiza toda la interfaz.</p><p><strong>Componentes base:</strong> botones con todos sus estados (default, hover, active, disabled, loading), inputs y formularios, cards, modales, navegación y estados vacíos y de error.</p><h2>Documentación: la parte que nadie quiere hacer</h2><p>Un componente sin documentación es un componente que se va a usar mal. La documentación mínima: cuándo usarlo y cuándo no, variantes disponibles y ejemplos de uso correcto e incorrecto.</p><h2>Por dónde empezar sin abrumarse</h2><p>Empezá con los tokens (colores y tipografía). Después extraé los componentes que ya existen en el diseño en lugar de crearlos desde cero. Documentá mientras construís. Un design system que nace del proyecto real es mucho más útil que uno diseñado en el vacío.</p>"
+    },
+    {
+      "id": 33,
+      "slug": "tendencias-desarrollo-web-2026",
+      "title": "Tendencias de desarrollo web en 2026: qué está cambiando y cómo prepararse",
+      "excerpt": "El ecosistema web evoluciona rápido. Estas son las tendencias técnicas que están definiendo cómo se construyen los sitios y aplicaciones web en 2026.",
+      "category": "desarrollo",
+      "tags": [
+        "Tendencias Web 2026",
+        "Desarrollo Web",
+        "JavaScript",
+        "IA en Desarrollo",
+        "Web Components"
+      ],
+      "date": "2026-03-12",
+      "dateFormatted": "12 de marzo, 2026",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Desarrollo Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El contexto: un ecosistema que madura</h2><p>2026 encuentra al ecosistema de desarrollo web en un momento de maduración. Después de años de explosión de frameworks y herramientas, hay una tendencia visible hacia la simplificación: menos JavaScript innecesario, más plataforma nativa, más enfoque en la performance y la accesibilidad como requisitos, no como extras.</p><h2>IA como copiloto de desarrollo</h2><p>Las herramientas de asistencia con IA (GitHub Copilot, Cursor y sus competidores) pasaron de ser curiosidad a ser parte del flujo de trabajo de la mayoría de los desarrolladores profesionales. El cambio no es que la IA escriba el código: es que permite dedicar menos tiempo al código repetitivo y más tiempo al diseño de arquitecturas y a resolver problemas complejos.</p><h2>Web Components y el renacimiento de la plataforma nativa</h2><p>Los Web Components nativos del navegador están ganando tracción. Son compatibles con todos los browsers modernos, no requieren framework, tienen excelente performance y funcionan en cualquier proyecto. No van a reemplazar a React para aplicaciones complejas, pero para componentes de UI reutilizables en múltiples proyectos, son cada vez más la opción correcta.</p><h2>CSS nativo: cada vez menos necesitamos preprocesadores</h2><p>CSS moderno tiene características que antes requerían Sass: variables nativas, nesting, container queries y la función color-mix(). En 2026, empezar un proyecto nuevo con Sass es una decisión que vale la pena cuestionar.</p><h2>Edge computing y performance de servidor</h2><p>Los edge functions permiten ejecutar código del servidor en ubicaciones geográficamente cercanas al usuario, reduciendo dramáticamente la latencia. Para aplicaciones que necesitan personalización server-side, el edge es el estándar emergente.</p><h2>Accesibilidad como requisito legal y técnico</h2><p>En varios países existen regulaciones que obligan a cumplir estándares de accesibilidad web (WCAG 2.1 AA como mínimo). En Argentina el marco regulatorio evoluciona en la misma dirección. Construir con accesibilidad desde el principio es más barato que remediarlo después.</p>"
     }
   ],
   "categories": [
