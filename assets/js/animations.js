@@ -186,6 +186,7 @@ function scheduleCounters(instant) {
 
 /* ── Client flip cards ───────────────────────────────── */
 function animateClients() {
+  if (!document.querySelector('.clients-grid')) return;
   gsap.from('.client-flip-card', {
     y: 44, opacity: 0, duration: 0.72, stagger: 0.1, ease: 'power3.out',
     scrollTrigger: {
