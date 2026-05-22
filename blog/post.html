@@ -47,14 +47,7 @@
     #progress-bar { position:fixed; top:0; left:0; z-index:9999; height:2px; width:0%; background:linear-gradient(90deg,var(--ba),rgba(0,229,200,0.4)); transition:width .1s linear; pointer-events:none; }
 
     /* ── Topbar ── */
-    .topbar { background:rgba(5,10,14,0.9) !important; backdrop-filter:blur(18px) !important; border-bottom:1px solid var(--bb) !important; }
-    .topbar.scrolled { background:rgba(3,7,11,0.97) !important; }
-    .topbar__link { font-family:var(--mono) !important; font-size:10px !important; letter-spacing:.12em !important; text-transform:uppercase !important; }
-    .topbar__link.active-page { color:var(--ba) !important; }
-    .topbar-sys { display:flex; align-items:center; gap:8px; font-family:var(--mono); font-size:9px; letter-spacing:.22em; color:rgba(0,229,200,0.45); text-transform:uppercase; }
-    .topbar-sys-dot { width:5px; height:5px; border-radius:50%; background:var(--ba); box-shadow:0 0 8px var(--ba); animation:pulse 2.8s ease-in-out infinite; }
-    @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
-    @media(max-width:900px){.topbar-sys{display:none}}
+    /* topbar — estilos globales en redesign.css */
 
     /* ── Hero del artículo ── */
     .post-hero { padding:120px 0 0; position:relative; overflow:hidden; }

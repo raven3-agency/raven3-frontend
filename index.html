@@ -275,54 +275,6 @@
       }
 
       /* ────────────────────────────────────────────
-         4. TOPBAR REDESIGN
-      ──────────────────────────────────────────── */
-      .topbar {
-        background: rgba(5, 10, 14, 0.9) !important;
-        backdrop-filter: blur(24px) saturate(1.4) !important;
-        border-bottom: 1px solid rgba(0, 229, 200, 0.07) !important;
-      }
-
-      .topbar.scrolled {
-        background: rgba(3, 7, 11, 0.95) !important;
-        border-bottom-color: rgba(0, 229, 200, 0.12) !important;
-      }
-
-      .topbar__link {
-        font-family: var(--font-mono) !important;
-        font-size: 0.78rem !important;
-        letter-spacing: 0.14em !important;
-      }
-
-      .topbar-sys {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        font-family: var(--font-mono);
-        font-size: 9px;
-        letter-spacing: 0.22em;
-        color: rgba(0, 229, 200, 0.45);
-        white-space: nowrap;
-      }
-
-      .topbar-sys-dot {
-        width: 5px;
-        height: 5px;
-        background: var(--r3);
-        border-radius: 50%;
-        flex-shrink: 0;
-        box-shadow: 0 0 6px rgba(0, 229, 200, 0.8);
-        animation: sys-pulse 2.5s ease-in-out infinite;
-      }
-
-      @keyframes sys-pulse {
-        0%, 100% { opacity: 1; box-shadow: 0 0 6px rgba(0, 229, 200, 0.8); }
-        50%       { opacity: 0.5; box-shadow: 0 0 3px rgba(0, 229, 200, 0.4); }
-      }
-
-      @media (max-width: 900px) { .topbar-sys { display: none; } }
-
-      /* ────────────────────────────────────────────
          5. HERO REDESIGN
       ──────────────────────────────────────────── */
       .hero {
