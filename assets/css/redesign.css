@@ -537,6 +537,11 @@ p { font-family: var(--font-body); }
   letter-spacing: 0.12em !important;
 }
 
+/* ── MÉTRICAS ───────────────────────────────────────────── */
+section.metricas {
+  margin-bottom: 12rem;
+}
+
 /* ── 17. STRIPS ──────────────────────────────────────────── */
 section.strips {
   margin-top: 12rem;
@@ -1040,6 +1045,15 @@ html { overflow-x: clip; }
 }
 
 .topbar__sub::before {
+  content: '';
+  position: absolute;
+  top: -8px; left: -20px; right: -20px;
+  height: 12px;
+  background: transparent;
+  z-index: -1;
+}
+
+.topbar__sub::after {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
