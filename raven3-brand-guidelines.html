@@ -1,2149 +1,1870 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Raven3 · Brand Guidelines v1.0</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-<style>
-  /* ============================================================
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Raven3 · Brand Guidelines v1.0</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ============================================================
      CSS CUSTOM PROPERTIES — RAVEN3 BRAND TOKENS
   ============================================================ */
-  :root {
-    --bg:              #0b0f17;
-    --bg-2:            #060910;
-    --panel:           rgba(8, 12, 19, 0.72);
-    --panel-2:         rgba(10, 15, 24, 0.88);
-    --ink:             #e9eef2;
-    --ink-2:           #c6d2db;
-    --muted:           #7c8a96;
-    --r3:              #00e5c8;
-    --r3-2:            #4dfce8;
-    --r3-soft:         rgba(0, 229, 200, 0.10);
-    --r3-line:         rgba(0, 229, 200, 0.22);
-    --r3-line-strong:  rgba(0, 229, 200, 0.38);
-    --line:            rgba(255, 255, 255, 0.08);
-    --line-soft:       rgba(255, 255, 255, 0.05);
-    --shadow-sm:       0 10px 24px rgba(0,0,0,0.22);
-    --shadow-md:       0 20px 44px rgba(0,0,0,0.30);
-    --shadow-lg:       0 28px 80px rgba(0,0,0,0.38);
-    --radius-sm:       14px;
-    --radius-md:       18px;
-    --radius-lg:       22px;
-    --font-display:    'Orbitron', monospace;
-    --font-heading:    'Rajdhani', sans-serif;
-    --font-body:       'Outfit', sans-serif;
-    --font-mono:       'Share Tech Mono', monospace;
-    --toc-width:       240px;
-    --scan-speed:      4s;
-  }
+      :root {
+        --bg: #0b0f17;
+        --bg-2: #060910;
+        --panel: rgba(8, 12, 19, 0.72);
+        --panel-2: rgba(10, 15, 24, 0.88);
+        --ink: #e9eef2;
+        --ink-2: #c6d2db;
+        --muted: #7c8a96;
+        --r3: #00e5c8;
+        --r3-2: #4dfce8;
+        --r3-soft: rgba(0, 229, 200, 0.1);
+        --r3-line: rgba(0, 229, 200, 0.22);
+        --r3-line-strong: rgba(0, 229, 200, 0.38);
+        --line: rgba(255, 255, 255, 0.08);
+        --line-soft: rgba(255, 255, 255, 0.05);
+        --shadow-sm: 0 10px 24px rgba(0, 0, 0, 0.22);
+        --shadow-md: 0 20px 44px rgba(0, 0, 0, 0.3);
+        --shadow-lg: 0 28px 80px rgba(0, 0, 0, 0.38);
+        --radius-sm: 14px;
+        --radius-md: 18px;
+        --radius-lg: 22px;
+        --font-display: "Orbitron", monospace;
+        --font-heading: "Rajdhani", sans-serif;
+        --font-body: "Outfit", sans-serif;
+        --font-mono: "Share Tech Mono", monospace;
+        --toc-width: 240px;
+        --scan-speed: 4s;
+      }
 
-  /* ============================================================
+      /* ============================================================
      RESET & BASE
   ============================================================ */
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-  html { scroll-behavior: smooth; }
+      html {
+        scroll-behavior: smooth;
+      }
 
-  body {
-    background: var(--bg-2);
-    color: var(--ink);
-    font-family: var(--font-body);
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+      body {
+        background: var(--bg-2);
+        color: var(--ink);
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.7;
+        overflow-x: hidden;
+      }
 
-  ::selection { background: var(--r3); color: var(--bg-2); }
+      ::selection {
+        background: var(--r3);
+        color: var(--bg-2);
+      }
 
-  /* ============================================================
+      /* ============================================================
      SCROLLBAR
   ============================================================ */
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--bg-2); }
-  ::-webkit-scrollbar-thumb { background: var(--r3-line-strong); border-radius: 2px; }
-  ::-webkit-scrollbar-thumb:hover { background: var(--r3); }
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--bg-2);
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--r3-line-strong);
+        border-radius: 2px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: var(--r3);
+      }
 
-  /* ============================================================
+      /* ============================================================
      LAYOUT
   ============================================================ */
-  .layout {
-    display: flex;
-    min-height: 100vh;
-  }
+      .layout {
+        display: flex;
+        min-height: 100vh;
+      }
 
-  /* ============================================================
+      /* ============================================================
      TOC SIDEBAR
   ============================================================ */
-  .toc {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: var(--toc-width);
-    height: 100vh;
-    background: var(--bg-2);
-    border-right: 1px solid var(--r3-line);
-    display: flex;
-    flex-direction: column;
-    z-index: 100;
-    overflow-y: auto;
-    padding: 32px 0 32px;
-  }
+      .toc {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: var(--toc-width);
+        height: 100vh;
+        background: var(--bg-2);
+        border-right: 1px solid var(--r3-line);
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        overflow-y: auto;
+        padding: 32px 0 32px;
+      }
 
-  .toc__logo {
-    padding: 0 24px 28px;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 24px;
-  }
+      .toc__logo {
+        padding: 0 24px 28px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 24px;
+      }
 
-  .toc__logo-text {
-    font-family: var(--font-display);
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: 0.05em;
-  }
+      .toc__logo-text {
+        font-family: var(--font-display);
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--ink);
+        letter-spacing: 0.05em;
+      }
 
-  .toc__logo-text span {
-    color: var(--r3);
-  }
+      .toc__logo-text span {
+        color: var(--r3);
+      }
 
-  .toc__label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    padding: 0 24px;
-    margin-bottom: 12px;
-    display: block;
-  }
+      .toc__label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        padding: 0 24px;
+        margin-bottom: 12px;
+        display: block;
+      }
 
-  .toc__nav { list-style: none; }
+      .toc__nav {
+        list-style: none;
+      }
 
-  .toc__nav li a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 9px 24px;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--muted);
-    text-decoration: none;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    transition: color 0.2s, background 0.2s, border-color 0.2s;
-    border-left: 2px solid transparent;
-    position: relative;
-  }
+      .toc__nav li a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 9px 24px;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--muted);
+        text-decoration: none;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition:
+          color 0.2s,
+          background 0.2s,
+          border-color 0.2s;
+        border-left: 2px solid transparent;
+        position: relative;
+      }
 
-  .toc__nav li a:hover,
-  .toc__nav li a.active {
-    color: var(--r3);
-    background: var(--r3-soft);
-    border-left-color: var(--r3);
-  }
+      .toc__nav li a:hover,
+      .toc__nav li a.active {
+        color: var(--r3);
+        background: var(--r3-soft);
+        border-left-color: var(--r3);
+      }
 
-  .toc__nav li a .num {
-    color: var(--r3);
-    font-size: 9px;
-    opacity: 0.7;
-  }
+      .toc__nav li a .num {
+        color: var(--r3);
+        font-size: 9px;
+        opacity: 0.7;
+      }
 
-  .toc__footer {
-    margin-top: auto;
-    padding: 24px 24px 0;
-    border-top: 1px solid var(--line);
-  }
+      .toc__footer {
+        margin-top: auto;
+        padding: 24px 24px 0;
+        border-top: 1px solid var(--line);
+      }
 
-  .toc__footer p {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    line-height: 1.8;
-  }
+      .toc__footer p {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+        line-height: 1.8;
+      }
 
-  /* ============================================================
+      /* ============================================================
      MAIN CONTENT
   ============================================================ */
-  .main {
-    margin-left: var(--toc-width);
-    flex: 1;
-    min-height: 100vh;
-  }
+      .main {
+        margin-left: var(--toc-width);
+        flex: 1;
+        min-height: 100vh;
+      }
 
-  /* ============================================================
+      /* ============================================================
      SECTIONS
   ============================================================ */
-  .section {
-    min-height: 100vh;
-    padding: 80px 72px 80px 80px;
-    position: relative;
-    border-bottom: 1px solid var(--line);
-  }
+      .section {
+        min-height: 100vh;
+        padding: 80px 72px 80px 80px;
+        position: relative;
+        border-bottom: 1px solid var(--line);
+      }
 
-  .section:last-child { border-bottom: none; }
+      .section:last-child {
+        border-bottom: none;
+      }
 
-  /* ============================================================
+      /* ============================================================
      SECTION LABEL (SYS.XX)
   ============================================================ */
-  .sys-label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--r3);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+      .sys-label {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--r3);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
 
-  .sys-label::after {
-    content: '';
-    flex: 1;
-    max-width: 120px;
-    height: 1px;
-    background: var(--r3-line);
-  }
+      .sys-label::after {
+        content: "";
+        flex: 1;
+        max-width: 120px;
+        height: 1px;
+        background: var(--r3-line);
+      }
 
-  /* ============================================================
+      /* ============================================================
      SECTION HEADINGS
   ============================================================ */
-  .section-title {
-    font-family: var(--font-heading);
-    font-size: clamp(32px, 5vw, 56px);
-    font-weight: 700;
-    color: var(--ink);
-    line-height: 1.1;
-    margin-bottom: 12px;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-  }
+      .section-title {
+        font-family: var(--font-heading);
+        font-size: clamp(32px, 5vw, 56px);
+        font-weight: 700;
+        color: var(--ink);
+        line-height: 1.1;
+        margin-bottom: 12px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
 
-  .section-title .accent { color: var(--r3); }
+      .section-title .accent {
+        color: var(--r3);
+      }
 
-  .section-subtitle {
-    font-family: var(--font-body);
-    font-size: 16px;
-    color: var(--ink-2);
-    max-width: 560px;
-    line-height: 1.7;
-    margin-bottom: 56px;
-  }
+      .section-subtitle {
+        font-family: var(--font-body);
+        font-size: 16px;
+        color: var(--ink-2);
+        max-width: 560px;
+        line-height: 1.7;
+        margin-bottom: 56px;
+      }
 
-  /* ============================================================
+      /* ============================================================
      CORNER BRACKET DECORATION
   ============================================================ */
-  .bracket-box {
-    position: relative;
-    padding: 28px 32px;
-  }
+      .bracket-box {
+        position: relative;
+        padding: 28px 32px;
+      }
 
-  .bracket-box::before,
-  .bracket-box::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border-color: var(--r3);
-    border-style: solid;
-    opacity: 0.5;
-  }
+      .bracket-box::before,
+      .bracket-box::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-color: var(--r3);
+        border-style: solid;
+        opacity: 0.5;
+      }
 
-  .bracket-box::before {
-    top: 0; left: 0;
-    border-width: 2px 0 0 2px;
-  }
+      .bracket-box::before {
+        top: 0;
+        left: 0;
+        border-width: 2px 0 0 2px;
+      }
 
-  .bracket-box::after {
-    bottom: 0; right: 0;
-    border-width: 0 2px 2px 0;
-  }
+      .bracket-box::after {
+        bottom: 0;
+        right: 0;
+        border-width: 0 2px 2px 0;
+      }
 
-  /* ============================================================
+      /* ============================================================
      COVER SECTION
   ============================================================ */
-  #cover {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--bg-2);
-    overflow: hidden;
-    padding: 80px 72px 80px 80px;
-    position: relative;
-  }
+      #cover {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: var(--bg-2);
+        overflow: hidden;
+        padding: 80px 72px 80px 80px;
+        position: relative;
+      }
 
-  /* Starfield canvas */
-  #starfield {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
+      /* Starfield canvas */
+      #starfield {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        pointer-events: none;
+      }
 
-  /* Scanning line */
-  .scan-line {
-    position: absolute;
-    top: -2px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--r3), transparent);
-    box-shadow: 0 0 20px var(--r3), 0 0 40px rgba(0,229,200,0.3);
-    animation: scan var(--scan-speed) linear infinite;
-    z-index: 1;
-    pointer-events: none;
-  }
+      /* Scanning line */
+      .scan-line {
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--r3), transparent);
+        box-shadow:
+          0 0 20px var(--r3),
+          0 0 40px rgba(0, 229, 200, 0.3);
+        animation: scan var(--scan-speed) linear infinite;
+        z-index: 1;
+        pointer-events: none;
+      }
 
-  @keyframes scan {
-    0%   { top: -2px; opacity: 0; }
-    5%   { opacity: 1; }
-    95%  { opacity: 1; }
-    100% { top: 100%; opacity: 0; }
-  }
+      @keyframes scan {
+        0% {
+          top: -2px;
+          opacity: 0;
+        }
+        5% {
+          opacity: 1;
+        }
+        95% {
+          opacity: 1;
+        }
+        100% {
+          top: 100%;
+          opacity: 0;
+        }
+      }
 
-  /* Grid overlay */
-  .grid-overlay {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(0,229,200,0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,229,200,0.035) 1px, transparent 1px);
-    background-size: 60px 60px;
-    z-index: 0;
-    pointer-events: none;
-  }
+      /* Grid overlay */
+      .grid-overlay {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(0, 229, 200, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 229, 200, 0.035) 1px, transparent 1px);
+        background-size: 60px 60px;
+        z-index: 0;
+        pointer-events: none;
+      }
 
-  .cover__content {
-    position: relative;
-    z-index: 2;
-  }
+      .cover__content {
+        position: relative;
+        z-index: 2;
+      }
 
-  .cover__eyebrow {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--r3);
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    margin-bottom: 32px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-  }
+      .cover__eyebrow {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--r3);
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
 
-  .cover__eyebrow::before {
-    content: '';
-    width: 40px;
-    height: 1px;
-    background: var(--r3);
-  }
+      .cover__eyebrow::before {
+        content: "";
+        width: 40px;
+        height: 1px;
+        background: var(--r3);
+      }
 
-  .cover__logo {
-    font-family: var(--font-display);
-    font-size: clamp(64px, 12vw, 140px);
-    font-weight: 900;
-    color: var(--ink);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    margin-bottom: 8px;
-  }
+      .cover__logo {
+        font-family: var(--font-display);
+        font-size: clamp(64px, 12vw, 140px);
+        font-weight: 900;
+        color: var(--ink);
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin-bottom: 8px;
+      }
 
-  .cover__logo .dot {
-    color: var(--r3);
-    text-shadow: 0 0 30px var(--r3), 0 0 60px rgba(0,229,200,0.4);
-  }
+      .cover__logo .dot {
+        color: var(--r3);
+        text-shadow:
+          0 0 30px var(--r3),
+          0 0 60px rgba(0, 229, 200, 0.4);
+      }
 
-  .cover__tagline {
-    font-family: var(--font-heading);
-    font-size: clamp(18px, 3vw, 28px);
-    font-weight: 300;
-    color: var(--ink-2);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 60px;
-  }
+      .cover__tagline {
+        font-family: var(--font-heading);
+        font-size: clamp(18px, 3vw, 28px);
+        font-weight: 300;
+        color: var(--ink-2);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 60px;
+      }
 
-  .cover__meta {
-    display: flex;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
+      .cover__meta {
+        display: flex;
+        gap: 48px;
+        flex-wrap: wrap;
+      }
 
-  .cover__meta-item {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
+      .cover__meta-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
 
-  .cover__meta-item .label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-  }
+      .cover__meta-item .label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+      }
 
-  .cover__meta-item .value {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--r3);
-  }
+      .cover__meta-item .value {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--r3);
+      }
 
-  .cover__corner-tl,
-  .cover__corner-br {
-    position: absolute;
-    z-index: 2;
-  }
+      .cover__corner-tl,
+      .cover__corner-br {
+        position: absolute;
+        z-index: 2;
+      }
 
-  .cover__corner-tl {
-    top: 32px; left: var(--toc-width);
-    margin-left: 32px;
-  }
+      .cover__corner-tl {
+        top: 32px;
+        left: var(--toc-width);
+        margin-left: 32px;
+      }
 
-  .cover__corner-br {
-    bottom: 32px; right: 32px;
-  }
+      .cover__corner-br {
+        bottom: 32px;
+        right: 32px;
+      }
 
-  .corner-svg { opacity: 0.35; }
+      .corner-svg {
+        opacity: 0.35;
+      }
 
-  /* ============================================================
+      /* ============================================================
      IDENTITY SECTION
   ============================================================ */
-  .identity-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    margin-bottom: 48px;
-  }
+      .identity-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        margin-bottom: 48px;
+      }
 
-  .identity-card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    padding: 32px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s;
-  }
+      .identity-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 32px;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s;
+      }
 
-  .identity-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--r3), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+      .identity-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--r3), transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
 
-  .identity-card:hover { border-color: var(--r3-line-strong); }
-  .identity-card:hover::before { opacity: 1; }
+      .identity-card:hover {
+        border-color: var(--r3-line-strong);
+      }
+      .identity-card:hover::before {
+        opacity: 1;
+      }
 
-  .identity-card__num {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--r3);
-    letter-spacing: 0.2em;
-    margin-bottom: 12px;
-    display: block;
-  }
+      .identity-card__num {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--r3);
+        letter-spacing: 0.2em;
+        margin-bottom: 12px;
+        display: block;
+      }
 
-  .identity-card__title {
-    font-family: var(--font-heading);
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
-  }
+      .identity-card__title {
+        font-family: var(--font-heading);
+        font-size: 22px;
+        font-weight: 700;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 12px;
+      }
 
-  .identity-card__text {
-    font-family: var(--font-body);
-    font-size: 15px;
-    color: var(--ink-2);
-    line-height: 1.7;
-  }
+      .identity-card__text {
+        font-family: var(--font-body);
+        font-size: 15px;
+        color: var(--ink-2);
+        line-height: 1.7;
+      }
 
-  .statement-block {
-    background: var(--bg);
-    border: 1px solid var(--r3-line);
-    border-radius: var(--radius-lg);
-    padding: 48px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
+      .statement-block {
+        background: var(--bg);
+        border: 1px solid var(--r3-line);
+        border-radius: var(--radius-lg);
+        padding: 48px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-  .statement-block::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 50% 0%, rgba(0,229,200,0.07) 0%, transparent 70%);
-    pointer-events: none;
-  }
+      .statement-block::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 50% 0%,
+          rgba(0, 229, 200, 0.07) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+      }
 
-  .statement-block .quote {
-    font-family: var(--font-heading);
-    font-size: clamp(22px, 4vw, 40px);
-    font-weight: 700;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-    line-height: 1.2;
-  }
+      .statement-block .quote {
+        font-family: var(--font-heading);
+        font-size: clamp(22px, 4vw, 40px);
+        font-weight: 700;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.03em;
+        line-height: 1.2;
+      }
 
-  .statement-block .quote .hl { color: var(--r3); }
+      .statement-block .quote .hl {
+        color: var(--r3);
+      }
 
-  /* ============================================================
+      /* ============================================================
      LOGO SECTION
   ============================================================ */
-  .logo-demos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    margin-bottom: 48px;
-  }
+      .logo-demos {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-bottom: 48px;
+      }
 
-  .logo-demo {
-    border-radius: var(--radius-md);
-    padding: 48px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
+      .logo-demo {
+        border-radius: var(--radius-md);
+        padding: 48px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
 
-  .logo-demo--dark {
-    background: var(--bg-2);
-    border: 1px solid var(--line);
-  }
+      .logo-demo--dark {
+        background: var(--bg-2);
+        border: 1px solid var(--line);
+      }
 
-  .logo-demo--panel {
-    background: var(--panel);
-    border: 1px solid var(--r3-line);
-  }
+      .logo-demo--panel {
+        background: var(--panel);
+        border: 1px solid var(--r3-line);
+      }
 
-  .logo-demo--light {
-    background: #e9eef2;
-    border: 1px solid rgba(0,0,0,0.08);
-  }
+      .logo-demo--light {
+        background: #e9eef2;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+      }
 
-  .logo-demo__label {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-top: 12px;
-  }
+      .logo-demo__label {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-top: 12px;
+      }
 
-  .logo-mark {
-    font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: 0.03em;
-  }
+      .logo-mark {
+        font-family: var(--font-display);
+        font-weight: 700;
+        letter-spacing: 0.03em;
+      }
 
-  .logo-mark--lg { font-size: 48px; }
-  .logo-mark--md { font-size: 36px; }
-  .logo-mark--sm { font-size: 24px; }
+      .logo-mark--lg {
+        font-size: 48px;
+      }
+      .logo-mark--md {
+        font-size: 36px;
+      }
+      .logo-mark--sm {
+        font-size: 24px;
+      }
 
-  .logo-mark--on-dark { color: #e9eef2; }
-  .logo-mark--on-dark .dot { color: var(--r3); }
+      .logo-mark--on-dark {
+        color: #e9eef2;
+      }
+      .logo-mark--on-dark .dot {
+        color: var(--r3);
+      }
 
-  .logo-mark--on-light { color: #0b0f17; }
-  .logo-mark--on-light .dot { color: #00a890; }
+      .logo-mark--on-light {
+        color: #0b0f17;
+      }
+      .logo-mark--on-light .dot {
+        color: #00a890;
+      }
 
-  .logo-rules {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
+      .logo-rules {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
 
-  .rule-card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    padding: 28px 32px;
-  }
+      .rule-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 28px 32px;
+      }
 
-  .rule-card__head {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+      .rule-card__head {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
 
-  .rule-card__head .dot-good { color: #4ade80; }
-  .rule-card__head .dot-bad  { color: #f87171; }
+      .rule-card__head .dot-good {
+        color: #4ade80;
+      }
+      .rule-card__head .dot-bad {
+        color: #f87171;
+      }
 
-  .rule-card ul {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
+      .rule-card ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
 
-  .rule-card ul li {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--ink-2);
-    padding-left: 20px;
-    position: relative;
-  }
+      .rule-card ul li {
+        font-family: var(--font-body);
+        font-size: 14px;
+        color: var(--ink-2);
+        padding-left: 20px;
+        position: relative;
+      }
 
-  .rule-card ul li::before {
-    position: absolute;
-    left: 0;
-    font-family: var(--font-mono);
-    font-size: 12px;
-  }
+      .rule-card ul li::before {
+        position: absolute;
+        left: 0;
+        font-family: var(--font-mono);
+        font-size: 12px;
+      }
 
-  .rule-card--good ul li::before { content: '✓'; color: #4ade80; }
-  .rule-card--bad  ul li::before { content: '✗'; color: #f87171; }
+      .rule-card--good ul li::before {
+        content: "✓";
+        color: #4ade80;
+      }
+      .rule-card--bad ul li::before {
+        content: "✗";
+        color: #f87171;
+      }
 
-  /* ============================================================
+      /* ============================================================
      COLOR SECTION
   ============================================================ */
-  .color-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    margin-bottom: 48px;
-  }
+      .color-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 48px;
+      }
 
-  .color-swatch {
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    border: 1px solid var(--line);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
+      .color-swatch {
+        border-radius: var(--radius-md);
+        overflow: hidden;
+        border: 1px solid var(--line);
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
 
-  .color-swatch:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
-  }
+      .color-swatch:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--shadow-md);
+      }
 
-  .color-swatch__chip {
-    height: 100px;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    padding: 12px;
-  }
+      .color-swatch__chip {
+        height: 100px;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        padding: 12px;
+      }
 
-  .color-swatch__chip-label {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.1em;
-    opacity: 0.7;
-  }
+      .color-swatch__chip-label {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.1em;
+        opacity: 0.7;
+      }
 
-  .color-swatch__info {
-    background: var(--panel);
-    padding: 16px;
-  }
+      .color-swatch__info {
+        background: var(--panel);
+        padding: 16px;
+      }
 
-  .color-swatch__name {
-    font-family: var(--font-heading);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 4px;
-  }
+      .color-swatch__name {
+        font-family: var(--font-heading);
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 4px;
+      }
 
-  .color-swatch__hex {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    color: var(--r3);
-    margin-bottom: 8px;
-  }
+      .color-swatch__hex {
+        font-family: var(--font-mono);
+        font-size: 12px;
+        color: var(--r3);
+        margin-bottom: 8px;
+      }
 
-  .color-swatch__usage {
-    font-family: var(--font-body);
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.5;
-  }
+      .color-swatch__usage {
+        font-family: var(--font-body);
+        font-size: 12px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
 
-  /* ============================================================
+      /* ============================================================
      TYPOGRAPHY SECTION
   ============================================================ */
-  .type-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-  }
+      .type-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
 
-  .type-card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-  }
+      .type-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+      }
 
-  .type-card__header {
-    padding: 20px 32px;
-    border-bottom: 1px solid var(--line);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: rgba(0,229,200,0.03);
-  }
+      .type-card__header {
+        padding: 20px 32px;
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: rgba(0, 229, 200, 0.03);
+      }
 
-  .type-card__name {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--r3);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
+      .type-card__name {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--r3);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
 
-  .type-card__meta {
-    display: flex;
-    gap: 12px;
-  }
+      .type-card__meta {
+        display: flex;
+        gap: 12px;
+      }
 
-  .type-badge {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--muted);
-    background: var(--r3-soft);
-    border: 1px solid var(--r3-line);
-    border-radius: 6px;
-    padding: 3px 10px;
-    letter-spacing: 0.1em;
-  }
+      .type-badge {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--muted);
+        background: var(--r3-soft);
+        border: 1px solid var(--r3-line);
+        border-radius: 6px;
+        padding: 3px 10px;
+        letter-spacing: 0.1em;
+      }
 
-  .type-card__body {
-    padding: 32px;
-  }
+      .type-card__body {
+        padding: 32px;
+      }
 
-  .type-specimen {
-    margin-bottom: 24px;
-  }
+      .type-specimen {
+        margin-bottom: 24px;
+      }
 
-  .type-specimen__label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
+      .type-specimen__label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
 
-  .type-scale {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    padding: 24px;
-    background: var(--bg);
-    border-radius: var(--radius-sm);
-    border: 1px solid var(--line-soft);
-  }
+      .type-scale {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px;
+        background: var(--bg);
+        border-radius: var(--radius-sm);
+        border: 1px solid var(--line-soft);
+      }
 
-  .type-scale-row {
-    display: flex;
-    align-items: baseline;
-    gap: 24px;
-  }
+      .type-scale-row {
+        display: flex;
+        align-items: baseline;
+        gap: 24px;
+      }
 
-  .type-scale-row .sz {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--muted);
-    width: 40px;
-    flex-shrink: 0;
-  }
+      .type-scale-row .sz {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--muted);
+        width: 40px;
+        flex-shrink: 0;
+      }
 
-  /* ============================================================
+      /* ============================================================
      VOICE & TONE
   ============================================================ */
-  .voice-pillars {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 48px;
-  }
+      .voice-pillars {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-bottom: 48px;
+      }
 
-  .voice-pillar {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    padding: 28px 24px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s;
-  }
+      .voice-pillar {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 28px 24px;
+        position: relative;
+        overflow: hidden;
+        transition: border-color 0.3s;
+      }
 
-  .voice-pillar::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--r3), transparent);
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
+      .voice-pillar::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background: linear-gradient(90deg, var(--r3), transparent);
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
 
-  .voice-pillar:hover { border-color: var(--r3-line); }
-  .voice-pillar:hover::after { opacity: 1; }
+      .voice-pillar:hover {
+        border-color: var(--r3-line);
+      }
+      .voice-pillar:hover::after {
+        opacity: 1;
+      }
 
-  .voice-pillar__icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
-  }
+      .voice-pillar__icon {
+        font-size: 28px;
+        margin-bottom: 16px;
+        display: block;
+      }
 
-  .voice-pillar__title {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 8px;
-  }
+      .voice-pillar__title {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 8px;
+      }
 
-  .voice-pillar__desc {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--ink-2);
-    line-height: 1.6;
-  }
+      .voice-pillar__desc {
+        font-family: var(--font-body);
+        font-size: 14px;
+        color: var(--ink-2);
+        line-height: 1.6;
+      }
 
-  .do-dont {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-  }
+      .do-dont {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
 
-  .do-dont__col {
-    background: var(--panel);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-  }
+      .do-dont__col {
+        background: var(--panel);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
 
-  .do-dont__head {
-    padding: 16px 24px;
-    font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-  }
+      .do-dont__head {
+        padding: 16px 24px;
+        font-family: var(--font-mono);
+        font-size: 11px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+      }
 
-  .do-dont__col--do .do-dont__head   { background: rgba(74,222,128,0.08); color: #4ade80; border-bottom: 1px solid rgba(74,222,128,0.15); }
-  .do-dont__col--dont .do-dont__head { background: rgba(248,113,113,0.08); color: #f87171; border-bottom: 1px solid rgba(248,113,113,0.15); }
+      .do-dont__col--do .do-dont__head {
+        background: rgba(74, 222, 128, 0.08);
+        color: #4ade80;
+        border-bottom: 1px solid rgba(74, 222, 128, 0.15);
+      }
+      .do-dont__col--dont .do-dont__head {
+        background: rgba(248, 113, 113, 0.08);
+        color: #f87171;
+        border-bottom: 1px solid rgba(248, 113, 113, 0.15);
+      }
 
-  .do-dont__items {
-    padding: 20px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
+      .do-dont__items {
+        padding: 20px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
 
-  .do-dont__item {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--ink-2);
-    padding-left: 22px;
-    position: relative;
-    line-height: 1.5;
-  }
+      .do-dont__item {
+        font-family: var(--font-body);
+        font-size: 14px;
+        color: var(--ink-2);
+        padding-left: 22px;
+        position: relative;
+        line-height: 1.5;
+      }
 
-  .do-dont__col--do   .do-dont__item::before { content: '→'; position: absolute; left: 0; color: #4ade80; }
-  .do-dont__col--dont .do-dont__item::before { content: '✗'; position: absolute; left: 0; color: #f87171; }
+      .do-dont__col--do .do-dont__item::before {
+        content: "→";
+        position: absolute;
+        left: 0;
+        color: #4ade80;
+      }
+      .do-dont__col--dont .do-dont__item::before {
+        content: "✗";
+        position: absolute;
+        left: 0;
+        color: #f87171;
+      }
 
-  /* ============================================================
+      /* ============================================================
      VISUAL LANGUAGE
   ============================================================ */
-  .visual-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-bottom: 48px;
-  }
+      .visual-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-bottom: 48px;
+      }
 
-  .visual-card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-  }
+      .visual-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        overflow: hidden;
+      }
 
-  .visual-card__demo {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--bg-2);
-    position: relative;
-    overflow: hidden;
-  }
+      .visual-card__demo {
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--bg-2);
+        position: relative;
+        overflow: hidden;
+      }
 
-  .visual-card__info {
-    padding: 20px 24px;
-  }
+      .visual-card__info {
+        padding: 20px 24px;
+      }
 
-  .visual-card__title {
-    font-family: var(--font-heading);
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 6px;
-  }
+      .visual-card__title {
+        font-family: var(--font-heading);
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 6px;
+      }
 
-  .visual-card__desc {
-    font-family: var(--font-body);
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.6;
-  }
+      .visual-card__desc {
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
 
-  /* HUD Demo */
-  .hud-demo {
-    width: 180px;
-    height: 140px;
-    border: 1px solid var(--r3-line);
-    position: relative;
-  }
+      /* HUD Demo */
+      .hud-demo {
+        width: 180px;
+        height: 140px;
+        border: 1px solid var(--r3-line);
+        position: relative;
+      }
 
-  .hud-demo::before,
-  .hud-demo::after {
-    content: '';
-    position: absolute;
-    width: 16px;
-    height: 16px;
-    border-color: var(--r3);
-    border-style: solid;
-    opacity: 0.8;
-  }
+      .hud-demo::before,
+      .hud-demo::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-color: var(--r3);
+        border-style: solid;
+        opacity: 0.8;
+      }
 
-  .hud-demo::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
-  .hud-demo::after  { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+      .hud-demo::before {
+        top: -1px;
+        left: -1px;
+        border-width: 2px 0 0 2px;
+      }
+      .hud-demo::after {
+        bottom: -1px;
+        right: -1px;
+        border-width: 0 2px 2px 0;
+      }
 
-  .hud-demo__label {
-    position: absolute;
-    top: 8px; left: 12px;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--r3);
-    letter-spacing: 0.15em;
-    opacity: 0.7;
-  }
+      .hud-demo__label {
+        position: absolute;
+        top: 8px;
+        left: 12px;
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--r3);
+        letter-spacing: 0.15em;
+        opacity: 0.7;
+      }
 
-  .hud-demo__data {
-    position: absolute;
-    bottom: 12px; left: 12px;
-    right: 12px;
-  }
+      .hud-demo__data {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+      }
 
-  .hud-demo__line {
-    height: 1px;
-    background: var(--r3-line);
-    margin-bottom: 8px;
-  }
+      .hud-demo__line {
+        height: 1px;
+        background: var(--r3-line);
+        margin-bottom: 8px;
+      }
 
-  .hud-demo__row {
-    display: flex;
-    justify-content: space-between;
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-  }
+      .hud-demo__row {
+        display: flex;
+        justify-content: space-between;
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+      }
 
-  .hud-demo__row span { color: var(--r3); }
+      .hud-demo__row span {
+        color: var(--r3);
+      }
 
-  /* Glow Demo */
-  .glow-demo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-  }
+      /* Glow Demo */
+      .glow-demo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
 
-  .glow-orb {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background: var(--r3);
-    box-shadow: 0 0 20px var(--r3), 0 0 40px rgba(0,229,200,0.4), 0 0 80px rgba(0,229,200,0.2);
-    animation: pulse 2s ease-in-out infinite;
-  }
+      .glow-orb {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background: var(--r3);
+        box-shadow:
+          0 0 20px var(--r3),
+          0 0 40px rgba(0, 229, 200, 0.4),
+          0 0 80px rgba(0, 229, 200, 0.2);
+        animation: pulse 2s ease-in-out infinite;
+      }
 
-  @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 20px var(--r3), 0 0 40px rgba(0,229,200,0.4), 0 0 80px rgba(0,229,200,0.2); }
-    50%       { box-shadow: 0 0 40px var(--r3), 0 0 80px rgba(0,229,200,0.6), 0 0 120px rgba(0,229,200,0.3); }
-  }
+      @keyframes pulse {
+        0%,
+        100% {
+          box-shadow:
+            0 0 20px var(--r3),
+            0 0 40px rgba(0, 229, 200, 0.4),
+            0 0 80px rgba(0, 229, 200, 0.2);
+        }
+        50% {
+          box-shadow:
+            0 0 40px var(--r3),
+            0 0 80px rgba(0, 229, 200, 0.6),
+            0 0 120px rgba(0, 229, 200, 0.3);
+        }
+      }
 
-  .glow-text {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--r3);
-    letter-spacing: 0.2em;
-    text-shadow: 0 0 10px var(--r3);
-  }
+      .glow-text {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--r3);
+        letter-spacing: 0.2em;
+        text-shadow: 0 0 10px var(--r3);
+      }
 
-  /* Grid Demo */
-  .grid-demo {
-    width: 100%;
-    height: 100%;
-    background-image:
-      linear-gradient(rgba(0,229,200,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,229,200,0.07) 1px, transparent 1px);
-    background-size: 30px 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+      /* Grid Demo */
+      .grid-demo {
+        width: 100%;
+        height: 100%;
+        background-image:
+          linear-gradient(rgba(0, 229, 200, 0.07) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(0, 229, 200, 0.07) 1px, transparent 1px);
+        background-size: 30px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-  .grid-demo__dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--r3);
-    box-shadow: 0 0 12px var(--r3);
-  }
+      .grid-demo__dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--r3);
+        box-shadow: 0 0 12px var(--r3);
+      }
 
-  /* Star Demo */
-  .star-demo {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-  }
+      /* Star Demo */
+      .star-demo {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
 
-  /* ============================================================
+      /* ============================================================
      UI COMPONENTS SECTION
   ============================================================ */
-  .component-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-  }
+      .component-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
 
-  .component-group__title {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--r3);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--r3-line);
-  }
+      .component-group__title {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--r3);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid var(--r3-line);
+      }
 
-  .comp-row {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-    padding: 32px;
-    background: var(--bg);
-    border-radius: var(--radius-md);
-    border: 1px solid var(--line);
-  }
+      .comp-row {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        padding: 32px;
+        background: var(--bg);
+        border-radius: var(--radius-md);
+        border: 1px solid var(--line);
+      }
 
-  /* Buttons */
-  .btn-primary {
-    font-family: var(--font-heading);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--r3);
-    background: transparent;
-    border: 1.5px solid var(--r3);
-    border-radius: 50px;
-    padding: 12px 28px;
-    cursor: pointer;
-    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-    position: relative;
-    overflow: hidden;
-  }
+      /* Buttons */
+      .btn-primary {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--r3);
+        background: transparent;
+        border: 1.5px solid var(--r3);
+        border-radius: 50px;
+        padding: 12px 28px;
+        cursor: pointer;
+        transition:
+          background 0.2s,
+          color 0.2s,
+          box-shadow 0.2s;
+        position: relative;
+        overflow: hidden;
+      }
 
-  .btn-primary:hover {
-    background: var(--r3);
-    color: var(--bg-2);
-    box-shadow: 0 0 20px rgba(0,229,200,0.35);
-  }
+      .btn-primary:hover {
+        background: var(--r3);
+        color: var(--bg-2);
+        box-shadow: 0 0 20px rgba(0, 229, 200, 0.35);
+      }
 
-  .btn-ghost {
-    font-family: var(--font-heading);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--ink-2);
-    background: transparent;
-    border: 1px solid var(--line);
-    border-radius: 50px;
-    padding: 12px 28px;
-    cursor: pointer;
-    transition: border-color 0.2s, color 0.2s;
-  }
+      .btn-ghost {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--ink-2);
+        background: transparent;
+        border: 1px solid var(--line);
+        border-radius: 50px;
+        padding: 12px 28px;
+        cursor: pointer;
+        transition:
+          border-color 0.2s,
+          color 0.2s;
+      }
 
-  .btn-ghost:hover {
-    border-color: var(--r3-line-strong);
-    color: var(--ink);
-  }
+      .btn-ghost:hover {
+        border-color: var(--r3-line-strong);
+        color: var(--ink);
+      }
 
-  .btn-solid {
-    font-family: var(--font-heading);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--bg-2);
-    background: var(--r3);
-    border: 1.5px solid var(--r3);
-    border-radius: 50px;
-    padding: 12px 28px;
-    cursor: pointer;
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
+      .btn-solid {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--bg-2);
+        background: var(--r3);
+        border: 1.5px solid var(--r3);
+        border-radius: 50px;
+        padding: 12px 28px;
+        cursor: pointer;
+        transition:
+          box-shadow 0.2s,
+          transform 0.2s;
+      }
 
-  .btn-solid:hover {
-    box-shadow: 0 0 24px rgba(0,229,200,0.5);
-    transform: translateY(-1px);
-  }
+      .btn-solid:hover {
+        box-shadow: 0 0 24px rgba(0, 229, 200, 0.5);
+        transform: translateY(-1px);
+      }
 
-  /* Badges */
-  .badge {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 50px;
-    border: 1px solid;
-  }
+      /* Badges */
+      .badge {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 50px;
+        border: 1px solid;
+      }
 
-  .badge--teal  { color: var(--r3);    border-color: var(--r3-line-strong);    background: var(--r3-soft); }
-  .badge--green { color: #4ade80;      border-color: rgba(74,222,128,0.3);     background: rgba(74,222,128,0.08); }
-  .badge--muted { color: var(--muted); border-color: var(--line);              background: transparent; }
+      .badge--teal {
+        color: var(--r3);
+        border-color: var(--r3-line-strong);
+        background: var(--r3-soft);
+      }
+      .badge--green {
+        color: #4ade80;
+        border-color: rgba(74, 222, 128, 0.3);
+        background: rgba(74, 222, 128, 0.08);
+      }
+      .badge--muted {
+        color: var(--muted);
+        border-color: var(--line);
+        background: transparent;
+      }
 
-  /* Stat block */
-  .stat-block {
-    display: flex;
-    gap: 1px;
-    background: var(--r3-line);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    margin-top: 24px;
-  }
+      /* Stat block */
+      .stat-block {
+        display: flex;
+        gap: 1px;
+        background: var(--r3-line);
+        border-radius: var(--radius-sm);
+        overflow: hidden;
+        margin-top: 24px;
+      }
 
-  .stat-item {
-    flex: 1;
-    background: var(--panel);
-    padding: 20px 24px;
-    text-align: center;
-  }
+      .stat-item {
+        flex: 1;
+        background: var(--panel);
+        padding: 20px 24px;
+        text-align: center;
+      }
 
-  .stat-item__label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
+      .stat-item__label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
 
-  .stat-item__value {
-    font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 700;
-    color: var(--r3);
-    line-height: 1;
-    text-shadow: 0 0 20px rgba(0,229,200,0.4);
-  }
+      .stat-item__value {
+        font-family: var(--font-display);
+        font-size: 28px;
+        font-weight: 700;
+        color: var(--r3);
+        line-height: 1;
+        text-shadow: 0 0 20px rgba(0, 229, 200, 0.4);
+      }
 
-  /* Panel Card */
-  .ui-card {
-    background: var(--panel);
-    border: 1px solid var(--r3-line);
-    border-radius: var(--radius-md);
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
-    max-width: 320px;
-  }
+      /* Panel Card */
+      .ui-card {
+        background: var(--panel);
+        border: 1px solid var(--r3-line);
+        border-radius: var(--radius-md);
+        padding: 24px;
+        position: relative;
+        overflow: hidden;
+        max-width: 320px;
+      }
 
-  .ui-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, var(--r3), transparent);
-  }
+      .ui-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, var(--r3), transparent);
+      }
 
-  .ui-card::after {
-    content: '';
-    position: absolute;
-    bottom: 0; right: 0;
-    width: 40px; height: 40px;
-    border-color: var(--r3-line);
-    border-style: solid;
-    border-width: 0 1px 1px 0;
-    pointer-events: none;
-  }
+      .ui-card::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border-color: var(--r3-line);
+        border-style: solid;
+        border-width: 0 1px 1px 0;
+        pointer-events: none;
+      }
 
-  .ui-card__label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--r3);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    display: block;
-  }
+      .ui-card__label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--r3);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        display: block;
+      }
 
-  .ui-card__title {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 10px;
-  }
+      .ui-card__title {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+      }
 
-  .ui-card__text {
-    font-family: var(--font-body);
-    font-size: 13px;
-    color: var(--ink-2);
-    line-height: 1.6;
-    margin-bottom: 20px;
-  }
+      .ui-card__text {
+        font-family: var(--font-body);
+        font-size: 13px;
+        color: var(--ink-2);
+        line-height: 1.6;
+        margin-bottom: 20px;
+      }
 
-  /* ============================================================
+      /* ============================================================
      SERVICES SECTION
   ============================================================ */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
 
-  .service-card {
-    background: var(--panel);
-    border: 1px solid var(--line);
-    border-radius: var(--radius-md);
-    padding: 32px 28px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.3s, transform 0.3s;
-  }
+      .service-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        padding: 32px 28px;
+        position: relative;
+        overflow: hidden;
+        transition:
+          border-color 0.3s,
+          transform 0.3s;
+      }
 
-  .service-card:hover {
-    border-color: var(--r3-line-strong);
-    transform: translateY(-4px);
-  }
+      .service-card:hover {
+        border-color: var(--r3-line-strong);
+        transform: translateY(-4px);
+      }
 
-  .service-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(ellipse at 0% 0%, rgba(0,229,200,0.06) 0%, transparent 60%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    pointer-events: none;
-  }
+      .service-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          ellipse at 0% 0%,
+          rgba(0, 229, 200, 0.06) 0%,
+          transparent 60%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+      }
 
-  .service-card:hover::before { opacity: 1; }
+      .service-card:hover::before {
+        opacity: 1;
+      }
 
-  .service-card__num {
-    font-family: var(--font-mono);
-    font-size: 11px;
-    color: var(--r3);
-    letter-spacing: 0.2em;
-    margin-bottom: 20px;
-    display: block;
-  }
+      .service-card__num {
+        font-family: var(--font-mono);
+        font-size: 11px;
+        color: var(--r3);
+        letter-spacing: 0.2em;
+        margin-bottom: 20px;
+        display: block;
+      }
 
-  .service-card__icon {
-    font-size: 32px;
-    margin-bottom: 16px;
-    display: block;
-  }
+      .service-card__icon {
+        font-size: 32px;
+        margin-bottom: 16px;
+        display: block;
+      }
 
-  .service-card__title {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--ink);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 10px;
-  }
+      .service-card__title {
+        font-family: var(--font-heading);
+        font-size: 20px;
+        font-weight: 700;
+        color: var(--ink);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 10px;
+      }
 
-  .service-card__desc {
-    font-family: var(--font-body);
-    font-size: 14px;
-    color: var(--ink-2);
-    line-height: 1.6;
-  }
+      .service-card__desc {
+        font-family: var(--font-body);
+        font-size: 14px;
+        color: var(--ink-2);
+        line-height: 1.6;
+      }
 
-  /* ============================================================
+      /* ============================================================
      FOOTER
   ============================================================ */
-  #footer {
-    background: var(--bg-2);
-    border-top: 1px solid var(--r3-line);
-    min-height: auto;
-    padding: 64px 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
-  }
+      #footer {
+        background: var(--bg-2);
+        border-top: 1px solid var(--r3-line);
+        min-height: auto;
+        padding: 64px 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
 
-  .footer-top {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 48px;
-    flex-wrap: wrap;
-  }
+      .footer-top {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 48px;
+        flex-wrap: wrap;
+      }
 
-  .footer-logo {
-    font-family: var(--font-display);
-    font-size: 42px;
-    font-weight: 900;
-    color: var(--ink);
-    letter-spacing: -0.02em;
-    line-height: 1;
-  }
+      .footer-logo {
+        font-family: var(--font-display);
+        font-size: 42px;
+        font-weight: 900;
+        color: var(--ink);
+        letter-spacing: -0.02em;
+        line-height: 1;
+      }
 
-  .footer-logo .dot {
-    color: var(--r3);
-    text-shadow: 0 0 20px var(--r3);
-  }
+      .footer-logo .dot {
+        color: var(--r3);
+        text-shadow: 0 0 20px var(--r3);
+      }
 
-  .footer-tagline {
-    font-family: var(--font-heading);
-    font-size: 14px;
-    font-weight: 300;
-    color: var(--muted);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    margin-top: 8px;
-  }
+      .footer-tagline {
+        font-family: var(--font-heading);
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--muted);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-top: 8px;
+      }
 
-  .footer-meta {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    gap: 48px;
-  }
+      .footer-meta {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        gap: 48px;
+      }
 
-  .footer-meta__col {}
+      .footer-meta__label {
+        font-family: var(--font-mono);
+        font-size: 9px;
+        color: var(--muted);
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
 
-  .footer-meta__label {
-    font-family: var(--font-mono);
-    font-size: 9px;
-    color: var(--muted);
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-  }
+      .footer-meta__val {
+        font-family: var(--font-mono);
+        font-size: 13px;
+        color: var(--ink-2);
+      }
 
-  .footer-meta__val {
-    font-family: var(--font-mono);
-    font-size: 13px;
-    color: var(--ink-2);
-  }
+      .footer-meta__val a {
+        color: var(--r3);
+        text-decoration: none;
+      }
 
-  .footer-meta__val a {
-    color: var(--r3);
-    text-decoration: none;
-  }
+      .footer-bottom {
+        border-top: 1px solid var(--line);
+        padding-top: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
 
-  .footer-bottom {
-    border-top: 1px solid var(--line);
-    padding-top: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+      .footer-bottom p {
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--muted);
+        letter-spacing: 0.1em;
+      }
 
-  .footer-bottom p {
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--muted);
-    letter-spacing: 0.1em;
-  }
+      .footer-bottom .signal {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--r3);
+        letter-spacing: 0.15em;
+      }
 
-  .footer-bottom .signal {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--r3);
-    letter-spacing: 0.15em;
-  }
+      .signal-dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--r3);
+        animation: blink 1.5s ease-in-out infinite;
+      }
 
-  .signal-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--r3);
-    animation: blink 1.5s ease-in-out infinite;
-  }
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+      }
 
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50%       { opacity: 0.3; }
-  }
-
-  /* ============================================================
+      /* ============================================================
      MISC UTILITIES
   ============================================================ */
-  .divider {
-    height: 1px;
-    background: var(--line);
-    margin: 48px 0;
-  }
+      .divider {
+        height: 1px;
+        background: var(--line);
+        margin: 48px 0;
+      }
 
-  .tag {
-    display: inline-block;
-    font-family: var(--font-mono);
-    font-size: 10px;
-    color: var(--r3);
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    background: var(--r3-soft);
-    border: 1px solid var(--r3-line);
-    border-radius: 6px;
-    padding: 3px 10px;
-    margin: 4px;
-  }
+      .tag {
+        display: inline-block;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        color: var(--r3);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        background: var(--r3-soft);
+        border: 1px solid var(--r3-line);
+        border-radius: 6px;
+        padding: 3px 10px;
+        margin: 4px;
+      }
 
-  /* Stars canvas inside visual demo */
-  canvas.star-canvas {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-  }
+      /* Stars canvas inside visual demo */
+      canvas.star-canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-  /* ============================================================
+      /* ============================================================
      RESPONSIVE
   ============================================================ */
-  @media (max-width: 1100px) {
-    .toc { display: none; }
-    .main { margin-left: 0; }
-    .section { padding: 60px 40px; }
-    #cover { padding: 60px 40px; }
-    #footer { padding: 60px 40px; }
-    .logo-demos { grid-template-columns: 1fr 1fr; }
-    .services-grid { grid-template-columns: 1fr 1fr; }
-    .voice-pillars { grid-template-columns: 1fr 1fr; }
-  }
+      @media (max-width: 1100px) {
+        .toc {
+          display: none;
+        }
+        .main {
+          margin-left: 0;
+        }
+        .section {
+          padding: 60px 40px;
+        }
+        #cover {
+          padding: 60px 40px;
+        }
+        #footer {
+          padding: 60px 40px;
+        }
+        .logo-demos {
+          grid-template-columns: 1fr 1fr;
+        }
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .voice-pillars {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
 
-  @media (max-width: 768px) {
-    .identity-grid,
-    .color-grid,
-    .logo-rules,
-    .do-dont,
-    .visual-grid,
-    .services-grid,
-    .voice-pillars,
-    .logo-demos { grid-template-columns: 1fr; }
-    .stat-block { flex-direction: column; gap: 1px; }
-    .footer-meta { grid-template-columns: 1fr; }
-  }
-</style>
-</head>
-<body>
-
-<!-- ============================================================
+      @media (max-width: 768px) {
+        .identity-grid,
+        .color-grid,
+        .logo-rules,
+        .do-dont,
+        .visual-grid,
+        .services-grid,
+        .voice-pillars,
+        .logo-demos {
+          grid-template-columns: 1fr;
+        }
+        .stat-block {
+          flex-direction: column;
+          gap: 1px;
+        }
+        .footer-meta {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ============================================================
      TOC SIDEBAR
 ============================================================ -->
-<nav class="toc" id="toc">
-  <div class="toc__logo">
-    <div class="toc__logo-text">RAVEN3<span>.</span></div>
-    <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:0.15em;margin-top:4px;">BRAND GUIDELINES V1.0</div>
-  </div>
-  <span class="toc__label">// NAVEGACIÓN</span>
-  <ul class="toc__nav">
-    <li><a href="#cover"    class="active"><span class="num">00</span> Portada</a></li>
-    <li><a href="#identity"><span class="num">01</span> Identidad</a></li>
-    <li><a href="#logo">    <span class="num">02</span> Logotipo</a></li>
-    <li><a href="#colors">  <span class="num">03</span> Colores</a></li>
-    <li><a href="#typo">    <span class="num">04</span> Tipografía</a></li>
-    <li><a href="#voice">   <span class="num">05</span> Voz & Tono</a></li>
-    <li><a href="#visual">  <span class="num">06</span> Lenguaje Visual</a></li>
-    <li><a href="#ui">      <span class="num">07</span> UI Components</a></li>
-    <li><a href="#services"><span class="num">08</span> Servicios</a></li>
-  </ul>
-  <div class="toc__footer">
-    <p>RAVEN3.COM.AR<br>Buenos Aires, Argentina<br>LAT -34.6037° LONG -58.3816°</p>
-  </div>
-</nav>
+    <nav class="toc" id="toc">
+      <div class="toc__logo">
+        <div class="toc__logo-text">RAVEN3<span>.</span></div>
+        <div
+          style="
+            font-family: var(--font-mono);
+            font-size: 9px;
+            color: var(--muted);
+            letter-spacing: 0.15em;
+            margin-top: 4px;
+          "
+        >
+          BRAND GUIDELINES V1.0
+        </div>
+      </div>
+      <span class="toc__label">// NAVEGACIÓN</span>
+      <ul class="toc__nav">
+        <li>
+          <a href="#cover" class="active"
+            ><span class="num">00</span> Portada</a
+          >
+        </li>
+        <li>
+          <a href="#identity"><span class="num">01</span> Identidad</a>
+        </li>
+        <li>
+          <a href="#logo"> <span class="num">02</span> Logotipo</a>
+        </li>
+        <li>
+          <a href="#colors"> <span class="num">03</span> Colores</a>
+        </li>
+        <li>
+          <a href="#typo"> <span class="num">04</span> Tipografía</a>
+        </li>
+        <li>
+          <a href="#voice"> <span class="num">05</span> Voz & Tono</a>
+        </li>
+        <li>
+          <a href="#visual"> <span class="num">06</span> Lenguaje Visual</a>
+        </li>
+        <li>
+          <a href="#ui"> <span class="num">07</span> UI Components</a>
+        </li>
+        <li>
+          <a href="#services"><span class="num">08</span> Servicios</a>
+        </li>
+      </ul>
+      <div class="toc__footer">
+        <p>
+          RAVEN3.COM.AR<br />Buenos Aires, Argentina<br />LAT -34.6037° LONG
+          -58.3816°
+        </p>
+      </div>
+    </nav>
 
-<!-- ============================================================
+    <!-- ============================================================
      MAIN CONTENT
 ============================================================ -->
-<main class="main">
-
-  <!-- ══════════════════════════════════════════
+    <main class="main">
+      <!-- ══════════════════════════════════════════
        SECTION 00 · COVER
   ══════════════════════════════════════════ -->
-  <section id="cover" class="section" style="border-bottom:1px solid var(--r3-line);">
-    <canvas id="starfield"></canvas>
-    <div class="grid-overlay"></div>
-    <div class="scan-line"></div>
+      <section
+        id="cover"
+        class="section"
+        style="border-bottom: 1px solid var(--r3-line)"
+      >
+        <canvas id="starfield"></canvas>
+        <div class="grid-overlay"></div>
+        <div class="scan-line"></div>
 
-    <svg class="cover__corner-tl corner-svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-      <path d="M0 40 L0 0 L40 0" stroke="#00e5c8" stroke-width="2" fill="none"/>
-    </svg>
-    <svg class="cover__corner-br corner-svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-      <path d="M0 0 L40 0 L40 40" stroke="#00e5c8" stroke-width="2" fill="none"/>
-    </svg>
+        <svg
+          class="cover__corner-tl corner-svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
+          <path
+            d="M0 40 L0 0 L40 0"
+            stroke="#00e5c8"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
+        <svg
+          class="cover__corner-br corner-svg"
+          width="40"
+          height="40"
+          viewBox="0 0 40 40"
+          fill="none"
+        >
+          <path
+            d="M0 0 L40 0 L40 40"
+            stroke="#00e5c8"
+            stroke-width="2"
+            fill="none"
+          />
+        </svg>
 
-    <div class="cover__content">
-      <div class="cover__eyebrow">RAVEN3 // BRAND GUIDELINES // V1.0</div>
-      <div class="cover__logo">RAVEN3<span class="dot">.</span></div>
-      <div class="cover__tagline">Arquitectura Digital que Convierte</div>
-      <div class="cover__meta">
-        <div class="cover__meta-item">
-          <span class="label">Versión</span>
-          <span class="value">V1.0 · 2025</span>
+        <div class="cover__content">
+          <div class="cover__eyebrow">RAVEN3 // BRAND GUIDELINES // V1.0</div>
+          <div class="cover__logo">RAVEN3<span class="dot">.</span></div>
+          <div class="cover__tagline">Arquitectura Digital que Convierte</div>
+          <div class="cover__meta">
+            <div class="cover__meta-item">
+              <span class="label">Versión</span>
+              <span class="value">V1.0 · 2025</span>
+            </div>
+            <div class="cover__meta-item">
+              <span class="label">Localización</span>
+              <span class="value">Buenos Aires, Argentina</span>
+            </div>
+            <div class="cover__meta-item">
+              <span class="label">Coordenadas</span>
+              <span class="value">LAT -34.6037° / LONG -58.3816°</span>
+            </div>
+            <div class="cover__meta-item">
+              <span class="label">Estado del sistema</span>
+              <span
+                class="value"
+                style="display: flex; align-items: center; gap: 8px"
+                ><span class="signal-dot"></span> SYS NOMINAL</span
+              >
+            </div>
+          </div>
         </div>
-        <div class="cover__meta-item">
-          <span class="label">Localización</span>
-          <span class="value">Buenos Aires, Argentina</span>
-        </div>
-        <div class="cover__meta-item">
-          <span class="label">Coordenadas</span>
-          <span class="value">LAT -34.6037° / LONG -58.3816°</span>
-        </div>
-        <div class="cover__meta-item">
-          <span class="label">Estado del sistema</span>
-          <span class="value" style="display:flex;align-items:center;gap:8px;"><span class="signal-dot"></span> SYS NOMINAL</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <!-- ══════════════════════════════════════════
+      <!-- ══════════════════════════════════════════
        SECTION 01 · IDENTIDAD DE MARCA
   ══════════════════════════════════════════ -->
-  <section id="identity" class="section">
-    <div class="sys-label">SYS.01 // IDENTIDAD DE MARCA</div>
-    <h2 class="section-title">Quiénes <span class="accent">Somos</span></h2>
-    <p class="section-subtitle">Raven3 es una agencia digital de Buenos Aires especializada en arquitectura web de alto rendimiento. No hacemos templates, hacemos ingeniería.</p>
+      <section id="identity" class="section">
+        <div class="sys-label">SYS.01 // IDENTIDAD DE MARCA</div>
+        <h2 class="section-title">Quiénes <span class="accent">Somos</span></h2>
+        <p class="section-subtitle">
+          Raven3 es una agencia digital de Buenos Aires especializada en
+          arquitectura web de alto rendimiento. No hacemos templates, hacemos
+          ingeniería.
+        </p>
 
-    <div class="identity-grid">
-      <div class="identity-card">
-        <span class="identity-card__num">01 // MISIÓN</span>
-        <div class="identity-card__title">Misión</div>
-        <p class="identity-card__text">Diseñar y construir plataformas digitales que generan resultados medibles. Cada proyecto nace desde la estrategia, se diseña desde la experiencia del usuario y se construye con ingeniería real.</p>
-      </div>
-      <div class="identity-card">
-        <span class="identity-card__num">02 // VISIÓN</span>
-        <div class="identity-card__title">Visión</div>
-        <p class="identity-card__text">Ser la referencia de arquitectura digital en LATAM: donde performance, diseño y conversión convergen en una sola disciplina, sin compromisos técnicos ni creativos.</p>
-      </div>
-      <div class="identity-card">
-        <span class="identity-card__num">03 // VALORES</span>
-        <div class="identity-card__title">Valores</div>
-        <p class="identity-card__text">Precisión técnica · Resultados medibles · Transparencia radical · Sin templates · Código limpio · Calidad sobre cantidad · Ingeniería primero</p>
-      </div>
-      <div class="identity-card">
-        <span class="identity-card__num">04 // DIFERENCIAL</span>
-        <div class="identity-card__title">Diferencial</div>
-        <p class="identity-card__text">Mientras otros agentes venden "páginas web", Raven3 entrega arquitectura digital: sistemas rápidos, escalables, integrados y orientados a conversión. Performance real, sin atajos.</p>
-      </div>
-    </div>
-
-    <div class="statement-block">
-      <div class="quote">"No hacemos webs lindas.<br><span class="hl">Hacemos arquitectura digital</span><br>que convierte."</div>
-    </div>
-
-    <div class="stat-block" style="margin-top:48px;">
-      <div class="stat-item">
-        <div class="stat-item__label">Proyectos</div>
-        <div class="stat-item__value">+60</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__label">Lighthouse</div>
-        <div class="stat-item__value">95+</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__label">LCP</div>
-        <div class="stat-item__value">&lt;1.2s</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__label">CLS</div>
-        <div class="stat-item__value">0.00</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__label">SEO Score</div>
-        <div class="stat-item__value">92+</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-item__label">Google</div>
-        <div class="stat-item__value">5★</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 02 · LOGOTIPO
-  ══════════════════════════════════════════ -->
-  <section id="logo" class="section">
-    <div class="sys-label">SYS.02 // LOGOTIPO</div>
-    <h2 class="section-title">Logo &amp; <span class="accent">Wordmark</span></h2>
-    <p class="section-subtitle">El wordmark "Raven3." utiliza fuente Orbitron en negrita. El punto final es parte integral del logotipo y siempre aparece en color Raven Teal (#00e5c8). No se elimina ni se reemplaza.</p>
-
-    <div class="logo-demos">
-      <div class="logo-demo logo-demo--dark">
-        <div class="logo-mark logo-mark--lg logo-mark--on-dark">RAVEN3<span class="dot">.</span></div>
-        <div class="logo-demo__label">Sobre fondo oscuro (preferido)</div>
-      </div>
-      <div class="logo-demo logo-demo--panel">
-        <div class="logo-mark logo-mark--lg logo-mark--on-dark">RAVEN3<span class="dot">.</span></div>
-        <div class="logo-demo__label">Sobre panel semi-transparente</div>
-      </div>
-      <div class="logo-demo logo-demo--light">
-        <div class="logo-mark logo-mark--lg logo-mark--on-light">RAVEN3<span class="dot" style="color:#007a68">.</span></div>
-        <div class="logo-demo__label" style="color:#7c8a96;">Sobre fondo claro (uso limitado)</div>
-      </div>
-    </div>
-
-    <div class="sys-label" style="margin-bottom:20px;">ESCALAS TIPOGRÁFICAS DEL LOGO</div>
-    <div style="background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-md);padding:40px;display:flex;flex-direction:column;gap:24px;margin-bottom:48px;">
-      <div style="display:flex;align-items:center;gap:32px;border-bottom:1px solid var(--line-soft);padding-bottom:20px;">
-        <span style="font-family:var(--font-mono);font-size:10px;color:var(--muted);width:60px;">LG · 48px</span>
-        <div class="logo-mark logo-mark--lg logo-mark--on-dark">RAVEN3<span class="dot">.</span></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:32px;border-bottom:1px solid var(--line-soft);padding-bottom:20px;">
-        <span style="font-family:var(--font-mono);font-size:10px;color:var(--muted);width:60px;">MD · 32px</span>
-        <div class="logo-mark logo-mark--md logo-mark--on-dark">RAVEN3<span class="dot">.</span></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:32px;">
-        <span style="font-family:var(--font-mono);font-size:10px;color:var(--muted);width:60px;">SM · 22px</span>
-        <div class="logo-mark logo-mark--sm logo-mark--on-dark">RAVEN3<span class="dot">.</span></div>
-      </div>
-    </div>
-
-    <div class="logo-rules">
-      <div class="rule-card rule-card--good">
-        <div class="rule-card__head"><span class="dot-good">●</span> Usos correctos</div>
-        <ul>
-          <li>Usar siempre Orbitron Bold o Black</li>
-          <li>Mantener el punto final en color Raven Teal</li>
-          <li>Usar sobre fondos oscuros (#0b0f17 o #060910)</li>
-          <li>Respetar el espacio mínimo de ½× la altura del logo</li>
-          <li>Usar la versión en oscuro sobre fondos claros con la versión ajustada</li>
-        </ul>
-      </div>
-      <div class="rule-card rule-card--bad">
-        <div class="rule-card__head"><span class="dot-bad">●</span> Usos incorrectos</div>
-        <ul>
-          <li>No eliminar el punto final del logotipo</li>
-          <li>No cambiar el color del punto por otro que no sea Raven Teal</li>
-          <li>No usar fuentes alternativas al wordmark</li>
-          <li>No deformar, rotar ni aplicar efectos no autorizados</li>
-          <li>No usar sobre fondos con poco contraste o imágenes complejas</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 03 · SISTEMA DE COLOR
-  ══════════════════════════════════════════ -->
-  <section id="colors" class="section">
-    <div class="sys-label">SYS.03 // SISTEMA DE COLOR</div>
-    <h2 class="section-title">Paleta <span class="accent">Cromática</span></h2>
-    <p class="section-subtitle">El sistema de color de Raven3 se construye sobre fondos oscuros profundos con un único acento primario: el Raven Teal. Toda la paleta está definida como custom properties CSS.</p>
-
-    <div class="color-grid">
-      <!-- Backgrounds -->
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:#060910;">
-          <span class="color-swatch__chip-label" style="color:rgba(255,255,255,0.4);">--bg-2</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Void Black</div>
-          <div class="color-swatch__hex">#060910</div>
-          <div class="color-swatch__usage">Fondo más oscuro. Secciones hero, footer, fondos de canvas.</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:#0b0f17;">
-          <span class="color-swatch__chip-label" style="color:rgba(255,255,255,0.4);">--bg</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Deep Space</div>
-          <div class="color-swatch__hex">#0b0f17</div>
-          <div class="color-swatch__usage">Fondo principal del sitio. Base de todas las secciones.</div>
-        </div>
-      </div>
-      <!-- Accent -->
-      <div class="color-swatch" style="border-color:var(--r3-line-strong);">
-        <div class="color-swatch__chip" style="background:#00e5c8;box-shadow:inset 0 0 40px rgba(0,229,200,0.5);">
-          <span class="color-swatch__chip-label" style="color:rgba(0,20,18,0.7);">--r3 · PRIMARY</span>
-        </div>
-        <div class="color-swatch__info" style="border-top:2px solid var(--r3);">
-          <div class="color-swatch__name" style="color:var(--r3);">Raven Teal ★</div>
-          <div class="color-swatch__hex">#00e5c8</div>
-          <div class="color-swatch__usage">Acento primario de marca. CTAs, highlights, iconos, logotipo.</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:#4dfce8;box-shadow:inset 0 0 30px rgba(77,252,232,0.4);">
-          <span class="color-swatch__chip-label" style="color:rgba(0,20,18,0.7);">--r3-2</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Electric Cyan</div>
-          <div class="color-swatch__hex">#4dfce8</div>
-          <div class="color-swatch__usage">Acento secundario. Hover states, highlights claros, glow.</div>
-        </div>
-      </div>
-      <!-- Text -->
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:#e9eef2;">
-          <span class="color-swatch__chip-label" style="color:rgba(0,0,0,0.4);">--ink</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Light Slate</div>
-          <div class="color-swatch__hex">#e9eef2</div>
-          <div class="color-swatch__usage">Texto principal. Títulos, contenido de lectura prioritaria.</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:#c6d2db;">
-          <span class="color-swatch__chip-label" style="color:rgba(0,0,0,0.3);">--ink-2</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Soft Blue-Gray</div>
-          <div class="color-swatch__hex">#c6d2db</div>
-          <div class="color-swatch__usage">Texto secundario. Descripciones, subtítulos, copy de apoyo.</div>
-        </div>
-      </div>
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:#7c8a96;">
-          <span class="color-swatch__chip-label" style="color:rgba(255,255,255,0.6);">--muted</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Muted Steel</div>
-          <div class="color-swatch__hex">#7c8a96</div>
-          <div class="color-swatch__usage">Texto terciario. Labels, placeholders, metadatos, coordenadas.</div>
-        </div>
-      </div>
-      <!-- Panel -->
-      <div class="color-swatch">
-        <div class="color-swatch__chip" style="background:rgba(8,12,19,0.88);border:1px solid rgba(255,255,255,0.06);">
-          <span class="color-swatch__chip-label" style="color:rgba(255,255,255,0.3);">--panel</span>
-        </div>
-        <div class="color-swatch__info">
-          <div class="color-swatch__name">Dark Glass</div>
-          <div class="color-swatch__hex">rgba(8,12,19,0.72)</div>
-          <div class="color-swatch__usage">Tarjetas, modales, paneles UI. Efecto glassmorphism oscuro.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sys-label" style="margin-bottom:20px;">VARIABLES CSS COMPLETAS</div>
-    <div style="background:var(--bg-2);border:1px solid var(--r3-line);border-radius:var(--radius-md);padding:32px;font-family:var(--font-mono);font-size:13px;line-height:2;overflow-x:auto;">
-      <div style="color:var(--muted);">:root &#123;</div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--bg</span><span style="color:var(--muted);">: </span><span style="color:var(--ink-2);">#0b0f17</span><span style="color:var(--muted);">;</span></div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--bg-2</span><span style="color:var(--muted);">: </span><span style="color:var(--ink-2);">#060910</span><span style="color:var(--muted);">;</span></div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--r3</span><span style="color:var(--muted);">: </span><span style="color:#00e5c8;">#00e5c8</span><span style="color:var(--muted);">;</span></div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--r3-2</span><span style="color:var(--muted);">: </span><span style="color:#4dfce8;">#4dfce8</span><span style="color:var(--muted);">;</span></div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--ink</span><span style="color:var(--muted);">: </span><span style="color:var(--ink-2);">#e9eef2</span><span style="color:var(--muted);">;</span></div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--ink-2</span><span style="color:var(--muted);">: </span><span style="color:var(--ink-2);">#c6d2db</span><span style="color:var(--muted);">;</span></div>
-      <div style="padding-left:24px;"><span style="color:var(--r3);">--muted</span><span style="color:var(--muted);">: </span><span style="color:var(--ink-2);">#7c8a96</span><span style="color:var(--muted);">;</span></div>
-      <div style="color:var(--muted);">&#125;</div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 04 · TIPOGRAFÍA
-  ══════════════════════════════════════════ -->
-  <section id="typo" class="section">
-    <div class="sys-label">SYS.04 // TIPOGRAFÍA</div>
-    <h2 class="section-title">Sistema <span class="accent">Tipográfico</span></h2>
-    <p class="section-subtitle">Raven3 utiliza cuatro fuentes de Google Fonts, cada una con un rol específico dentro de la arquitectura visual. Juntas crean la tensión entre lo técnico y lo legible.</p>
-
-    <div class="type-grid">
-
-      <!-- Orbitron -->
-      <div class="type-card">
-        <div class="type-card__header">
-          <span class="type-card__name">01 // ORBITRON — DISPLAY & LOGOTIPO</span>
-          <div class="type-card__meta">
-            <span class="type-badge">Google Fonts</span>
-            <span class="type-badge">Monospace</span>
+        <div class="identity-grid">
+          <div class="identity-card">
+            <span class="identity-card__num">01 // MISIÓN</span>
+            <div class="identity-card__title">Misión</div>
+            <p class="identity-card__text">
+              Diseñar y construir plataformas digitales que generan resultados
+              medibles. Cada proyecto nace desde la estrategia, se diseña desde
+              la experiencia del usuario y se construye con ingeniería real.
+            </p>
+          </div>
+          <div class="identity-card">
+            <span class="identity-card__num">02 // VISIÓN</span>
+            <div class="identity-card__title">Visión</div>
+            <p class="identity-card__text">
+              Ser la referencia de arquitectura digital en LATAM: donde
+              performance, diseño y conversión convergen en una sola disciplina,
+              sin compromisos técnicos ni creativos.
+            </p>
+          </div>
+          <div class="identity-card">
+            <span class="identity-card__num">03 // VALORES</span>
+            <div class="identity-card__title">Valores</div>
+            <p class="identity-card__text">
+              Precisión técnica · Resultados medibles · Transparencia radical ·
+              Sin templates · Código limpio · Calidad sobre cantidad ·
+              Ingeniería primero
+            </p>
+          </div>
+          <div class="identity-card">
+            <span class="identity-card__num">04 // DIFERENCIAL</span>
+            <div class="identity-card__title">Diferencial</div>
+            <p class="identity-card__text">
+              Mientras otros agentes venden "páginas web", Raven3 entrega
+              arquitectura digital: sistemas rápidos, escalables, integrados y
+              orientados a conversión. Performance real, sin atajos.
+            </p>
           </div>
         </div>
-        <div class="type-card__body">
-          <div class="type-scale">
-            <div class="type-scale-row">
-              <span class="sz">72px</span>
-              <span style="font-family:var(--font-display);font-size:clamp(32px,5vw,72px);font-weight:900;color:var(--ink);line-height:1;">RAVEN3.</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">48px</span>
-              <span style="font-family:var(--font-display);font-size:clamp(24px,3.5vw,48px);font-weight:700;color:var(--ink-2);line-height:1.1;">ARQUITECTURA DIGITAL</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">28px</span>
-              <span style="font-family:var(--font-display);font-size:clamp(16px,2.2vw,28px);font-weight:400;color:var(--muted);">CONVIERTE.</span>
-            </div>
-          </div>
-          <div style="margin-top:20px;font-family:var(--font-body);font-size:13px;color:var(--muted);">Uso: Logotipo, titulares hero, covers de presentación, números destacados. Pesos: 400 · 600 · 700 · 900.</div>
-        </div>
-      </div>
 
-      <!-- Rajdhani -->
-      <div class="type-card">
-        <div class="type-card__header">
-          <span class="type-card__name">02 // RAJDHANI — HEADINGS</span>
-          <div class="type-card__meta">
-            <span class="type-badge">Google Fonts</span>
-            <span class="type-badge">Sans-serif</span>
+        <div class="statement-block">
+          <div class="quote">
+            "No hacemos webs lindas.<br /><span class="hl"
+              >Hacemos arquitectura digital</span
+            ><br />que convierte."
           </div>
         </div>
-        <div class="type-card__body">
-          <div class="type-scale">
-            <div class="type-scale-row">
-              <span class="sz">56px</span>
-              <span style="font-family:var(--font-heading);font-size:clamp(28px,4.5vw,56px);font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:0.02em;line-height:1.1;">DISEÑAMOS QUE CONVIERTE</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">32px</span>
-              <span style="font-family:var(--font-heading);font-size:clamp(20px,2.8vw,32px);font-weight:600;color:var(--ink-2);text-transform:uppercase;letter-spacing:0.05em;">Servicios Digitales</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">20px</span>
-              <span style="font-family:var(--font-heading);font-size:20px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:0.1em;">Subtítulo de sección</span>
-            </div>
-          </div>
-          <div style="margin-top:20px;font-family:var(--font-body);font-size:13px;color:var(--muted);">Uso: Títulos de sección H2–H4, navegación, etiquetas destacadas, CTAs. Pesos: 300 · 400 · 500 · 600 · 700.</div>
-        </div>
-      </div>
 
-      <!-- Outfit -->
-      <div class="type-card">
-        <div class="type-card__header">
-          <span class="type-card__name">03 // OUTFIT — BODY & COPY</span>
-          <div class="type-card__meta">
-            <span class="type-badge">Google Fonts</span>
-            <span class="type-badge">Sans-serif</span>
-          </div>
-        </div>
-        <div class="type-card__body">
-          <div class="type-scale">
-            <div class="type-scale-row">
-              <span class="sz">18px</span>
-              <span style="font-family:var(--font-body);font-size:18px;font-weight:400;color:var(--ink);line-height:1.7;max-width:600px;">En Raven3 creamos sitios web a medida, tiendas online y estrategias de SEO técnico con performance real. Sin templates. Sin WordPress pesado. Resultados medibles.</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">15px</span>
-              <span style="font-family:var(--font-body);font-size:15px;font-weight:400;color:var(--ink-2);line-height:1.7;max-width:500px;">Texto secundario: Cada proyecto que tomamos nace desde la estrategia, se diseña desde la experiencia y se desarrolla desde la ingeniería.</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">13px</span>
-              <span style="font-family:var(--font-body);font-size:13px;color:var(--muted);line-height:1.6;">Texto terciario / captions / notas / metadatos de contenido</span>
-            </div>
-          </div>
-          <div style="margin-top:20px;font-family:var(--font-body);font-size:13px;color:var(--muted);">Uso: Body copy, párrafos, descripciones de servicios, testimoniales, contenido de blog. Pesos: 300 · 400 · 500 · 600.</div>
-        </div>
-      </div>
-
-      <!-- Share Tech Mono -->
-      <div class="type-card">
-        <div class="type-card__header">
-          <span class="type-card__name">04 // SHARE TECH MONO — UI & SISTEMA</span>
-          <div class="type-card__meta">
-            <span class="type-badge">Google Fonts</span>
-            <span class="type-badge">Monospace</span>
-          </div>
-        </div>
-        <div class="type-card__body">
-          <div class="type-scale">
-            <div class="type-scale-row">
-              <span class="sz">14px</span>
-              <span style="font-family:var(--font-mono);font-size:14px;color:var(--r3);letter-spacing:0.2em;">SYS.01 // ARQUITECTURA DIGITAL</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">11px</span>
-              <span style="font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.15em;">LAT -34.6037° // LONG -58.3816° // SIGNAL NOMINAL</span>
-            </div>
-            <div class="type-scale-row" style="border-top:1px solid var(--line-soft);padding-top:12px;">
-              <span class="sz">10px</span>
-              <span style="font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:0.12em;">PERF · 95+ &nbsp;&nbsp; SEO · 92+ &nbsp;&nbsp; LCP · &lt;1.2s &nbsp;&nbsp; CLS · 0.00</span>
-            </div>
-          </div>
-          <div style="margin-top:20px;font-family:var(--font-body);font-size:13px;color:var(--muted);">Uso: System labels (SYS.XX), coordenadas, métricas HUD, código, etiquetas de navegación lateral, timestamps. Peso único (Regular 400).</div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 05 · VOZ Y TONO
-  ══════════════════════════════════════════ -->
-  <section id="voice" class="section">
-    <div class="sys-label">SYS.05 // VOZ & TONO</div>
-    <h2 class="section-title">Voz de <span class="accent">Marca</span></h2>
-    <p class="section-subtitle">Raven3 comunica con precisión y confianza. Sin relleno, sin jerga vacía. Cada palabra tiene un propósito técnico o emocional — preferiblemente ambos.</p>
-
-    <div class="voice-pillars">
-      <div class="voice-pillar">
-        <span class="voice-pillar__icon">⚡</span>
-        <div class="voice-pillar__title">Directo</div>
-        <p class="voice-pillar__desc">Sin rodeos. La primer oración debe comunicar el valor principal. Nunca usamos frases genéricas de agencias. "Hacemos arquitectura digital", no "somos un equipo apasionado".</p>
-      </div>
-      <div class="voice-pillar">
-        <span class="voice-pillar__icon">🎯</span>
-        <div class="voice-pillar__title">Orientado a resultados</div>
-        <p class="voice-pillar__desc">Hablamos de métricas reales: Lighthouse, LCP, conversión. Prometemos cosas medibles. Los adjetivos sin datos son marketing vacío.</p>
-      </div>
-      <div class="voice-pillar">
-        <span class="voice-pillar__icon">🔧</span>
-        <div class="voice-pillar__title">Técnico &amp; accesible</div>
-        <p class="voice-pillar__desc">Usamos vocabulario técnico preciso sin alienar al cliente no-técnico. Explicamos el "por qué" detrás de cada decisión de ingeniería.</p>
-      </div>
-      <div class="voice-pillar">
-        <span class="voice-pillar__icon">🚫</span>
-        <div class="voice-pillar__title">Anti-template</div>
-        <p class="voice-pillar__desc">Nos diferenciamos activamente de las soluciones de bajo costo. No somos para todos — somos para quien quiere calidad técnica real.</p>
-      </div>
-      <div class="voice-pillar">
-        <span class="voice-pillar__icon">📊</span>
-        <div class="voice-pillar__title">Data-driven</div>
-        <p class="voice-pillar__desc">Cada afirmación viene respaldada por datos. Mostramos scores, porcentajes, proyectos entregados. Los números construyen credibilidad.</p>
-      </div>
-      <div class="voice-pillar">
-        <span class="voice-pillar__icon">💡</span>
-        <div class="voice-pillar__title">Confiado</div>
-        <p class="voice-pillar__desc">No pedimos disculpas por nuestra especialización. No somos "la opción más económica". Somos la opción correcta para quien valora el resultado.</p>
-      </div>
-    </div>
-
-    <div class="do-dont">
-      <div class="do-dont__col do-dont__col--do">
-        <div class="do-dont__head">✓ Decimos esto</div>
-        <div class="do-dont__items">
-          <div class="do-dont__item">"Construimos sitios con Lighthouse 95+, LCP &lt;1.2s y CLS 0.00."</div>
-          <div class="do-dont__item">"No hacemos webs lindas. Hacemos arquitectura digital que convierte."</div>
-          <div class="do-dont__item">"Sin templates. Sin WordPress pesado. Resultados medibles."</div>
-          <div class="do-dont__item">"Auditoría técnica, benchmark y análisis de oportunidades de mejora."</div>
-          <div class="do-dont__item">"Código limpio, semántico, performante y bien documentado."</div>
-          <div class="do-dont__item">"AGENCIA DIGITAL · BUENOS AIRES, ARGENTINA"</div>
-        </div>
-      </div>
-      <div class="do-dont__col do-dont__col--dont">
-        <div class="do-dont__head">✗ Nunca decimos esto</div>
-        <div class="do-dont__items">
-          <div class="do-dont__item">"Somos un equipo apasionado por el diseño web."</div>
-          <div class="do-dont__item">"Soluciones digitales a medida para tu negocio."</div>
-          <div class="do-dont__item">"Trabajamos con las últimas tecnologías del mercado."</div>
-          <div class="do-dont__item">"Te acompañamos en tu viaje digital."</div>
-          <div class="do-dont__item">"¡Precios accesibles para todos los presupuestos!"</div>
-          <div class="do-dont__item">"Somos creativos innovadores y disruptivos."</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 06 · LENGUAJE VISUAL
-  ══════════════════════════════════════════ -->
-  <section id="visual" class="section">
-    <div class="sys-label">SYS.06 // LENGUAJE VISUAL</div>
-    <h2 class="section-title">Identidad <span class="accent">Visual</span></h2>
-    <p class="section-subtitle">El lenguaje visual de Raven3 es una fusión entre la estética de los sistemas de control aeroespacial (HUD), la oscuridad del espacio profundo y el glow tecnológico del ciberespacio.</p>
-
-    <div class="visual-grid">
-      <!-- HUD Corners -->
-      <div class="visual-card">
-        <div class="visual-card__demo">
-          <div class="hud-demo">
-            <span class="hud-demo__label">RAVEN3 // SYS.00</span>
-            <div class="hud-demo__data">
-              <div class="hud-demo__line"></div>
-              <div class="hud-demo__row"><span>STATUS</span> NOMINAL</div>
-              <div class="hud-demo__row" style="margin-top:4px;"><span>PERF</span> 95+</div>
-            </div>
-          </div>
-        </div>
-        <div class="visual-card__info">
-          <div class="visual-card__title">Corner Brackets (HUD)</div>
-          <div class="visual-card__desc">Decoración de esquinas en color Raven Teal con 20–24px de tamaño. Delimitan zonas de información y aportan el lenguaje de panel de control. Opacidad 35–50%.</div>
-        </div>
-      </div>
-
-      <!-- Teal Glow -->
-      <div class="visual-card">
-        <div class="visual-card__demo">
-          <div class="glow-demo">
-            <div class="glow-orb"></div>
-            <span class="glow-text">RAVEN TEAL GLOW</span>
-          </div>
-        </div>
-        <div class="visual-card__info">
-          <div class="visual-card__title">Teal Glow Effect</div>
-          <div class="visual-card__desc">El glow teal se aplica sobre elementos activos, CTAs en hover, y el punto del logotipo. Box-shadow en tres capas (10px, 30px, 60px) con opacidades decrecientes.</div>
-        </div>
-      </div>
-
-      <!-- Grid Overlay -->
-      <div class="visual-card">
-        <div class="visual-card__demo" style="padding:0;">
-          <div class="grid-demo" style="width:100%;height:100%;">
-            <div style="text-align:center;">
-              <div class="grid-demo__dot"></div>
-              <div style="font-family:var(--font-mono);font-size:9px;color:var(--r3);margin-top:8px;letter-spacing:0.2em;">GRID · 60px</div>
-            </div>
-          </div>
-        </div>
-        <div class="visual-card__info">
-          <div class="visual-card__title">Grid Overlay</div>
-          <div class="visual-card__desc">Grid de 60×60px en color rgba(0,229,200,0.035–0.07) sobre fondos oscuros. Evoca sistemas de coordenadas y cartografía digital. Se usa en hero sections.</div>
-        </div>
-      </div>
-
-      <!-- System Labels -->
-      <div class="visual-card">
-        <div class="visual-card__demo" style="flex-direction:column;align-items:flex-start;padding:24px;gap:12px;">
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--r3);letter-spacing:0.2em;">SYS.01 // IDENTIDAD</div>
-          <div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:0.15em;">LAT -34.6037° // LONG -58.3816°</div>
-          <div style="width:80px;height:1px;background:var(--r3-line);"></div>
-          <div style="font-family:var(--font-mono);font-size:10px;color:var(--r3);letter-spacing:0.1em;">● SIGNAL NOMINAL</div>
-          <div style="font-family:var(--font-mono);font-size:9px;color:var(--muted);letter-spacing:0.12em;">RAVEN3 // SYS.00 // INICIO</div>
-        </div>
-        <div class="visual-card__info">
-          <div class="visual-card__title">System Labels</div>
-          <div class="visual-card__desc">Etiquetas tipo sistema en Share Tech Mono. Formato: "SYS.XX // NOMBRE_SECCIÓN". Se usan como marcadores de sección y aportan el lenguaje de interfaz de misión.</div>
-        </div>
-      </div>
-
-      <!-- Scanning Line -->
-      <div class="visual-card">
-        <div class="visual-card__demo" style="overflow:hidden;position:relative;">
-          <div style="position:absolute;width:100%;height:2px;background:linear-gradient(90deg,transparent,#00e5c8,transparent);box-shadow:0 0 20px #00e5c8;top:50%;animation:scan 2s linear infinite;"></div>
-          <div style="font-family:var(--font-mono);font-size:11px;color:var(--muted);letter-spacing:0.15em;position:relative;z-index:1;">SCANNING...</div>
-        </div>
-        <div class="visual-card__info">
-          <div class="visual-card__title">Scanning Line</div>
-          <div class="visual-card__desc">Línea de escaneo animada en teal con glow. Traversa secciones verticalmente. Refuerza la narrativa de sistema activo y monitoreo en tiempo real.</div>
-        </div>
-      </div>
-
-      <!-- Starfield -->
-      <div class="visual-card">
-        <div class="visual-card__demo" style="padding:0;position:relative;">
-          <canvas id="mini-stars" style="position:absolute;inset:0;width:100%;height:100%;"></canvas>
-          <div style="position:relative;z-index:1;font-family:var(--font-mono);font-size:10px;color:var(--r3);letter-spacing:0.15em;">DEEP SPACE BG</div>
-        </div>
-        <div class="visual-card__info">
-          <div class="visual-card__title">Starfield Background</div>
-          <div class="visual-card__desc">Canvas con 300–600 partículas/estrellas en color teal con variación de opacidad y tamaño. Crea profundidad y escala cósmica. Sutileza es clave: máx opacidad 0.7.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="sys-label" style="margin-bottom:20px;">VOCABULARIO DE PATRONES</div>
-    <div style="display:flex;flex-wrap:wrap;gap:8px;">
-      <span class="tag">Dark Background</span>
-      <span class="tag">HUD Corners</span>
-      <span class="tag">Teal Glow</span>
-      <span class="tag">Grid Overlay</span>
-      <span class="tag">Scan Lines</span>
-      <span class="tag">Starfield</span>
-      <span class="tag">System Labels</span>
-      <span class="tag">Glassmorphism</span>
-      <span class="tag">Monospace UI</span>
-      <span class="tag">Coordinate Data</span>
-      <span class="tag">Panel Cards</span>
-      <span class="tag">Metric Blocks</span>
-      <span class="tag">Corner Brackets</span>
-      <span class="tag">Particle FX</span>
-    </div>
-  </section>
-
-  <!-- ══════════════════════════════════════════
-       SECTION 07 · UI COMPONENTS
-  ══════════════════════════════════════════ -->
-  <section id="ui" class="section">
-    <div class="sys-label">SYS.07 // UI COMPONENTS</div>
-    <h2 class="section-title">Componentes <span class="accent">UI</span></h2>
-    <p class="section-subtitle">El sistema de componentes de Raven3 prioriza la claridad, el contraste y la interacción táctil. Todos los elementos activos usan Raven Teal como color de estado.</p>
-
-    <div class="component-grid">
-
-      <!-- BUTTONS -->
-      <div>
-        <div class="component-group__title">01 // BOTONES</div>
-        <div class="comp-row">
-          <button class="btn-primary">HABLEMOS</button>
-          <button class="btn-ghost">VER SERVICIOS</button>
-          <button class="btn-solid">AUDITORÍA GRATUITA →</button>
-        </div>
-        <div style="margin-top:16px;background:var(--panel);border-radius:var(--radius-sm);padding:20px 24px;border:1px solid var(--line);">
-          <div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);letter-spacing:0.15em;margin-bottom:12px;">SPECS</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;">
-            <div>
-              <div style="font-family:var(--font-heading);font-size:13px;font-weight:600;color:var(--r3);text-transform:uppercase;margin-bottom:4px;">Primary</div>
-              <div style="font-family:var(--font-body);font-size:12px;color:var(--muted);">Border: 1.5px r3 · Color: r3 · Radius: 50px · Hover: fill r3</div>
-            </div>
-            <div>
-              <div style="font-family:var(--font-heading);font-size:13px;font-weight:600;color:var(--ink-2);text-transform:uppercase;margin-bottom:4px;">Ghost</div>
-              <div style="font-family:var(--font-body);font-size:12px;color:var(--muted);">Border: 1px line · Color: ink-2 · Radius: 50px · Hover: border r3-line</div>
-            </div>
-            <div>
-              <div style="font-family:var(--font-heading);font-size:13px;font-weight:600;color:var(--ink);text-transform:uppercase;margin-bottom:4px;">Solid</div>
-              <div style="font-family:var(--font-body);font-size:12px;color:var(--muted);">Bg: r3 · Color: bg-2 · Radius: 50px · Hover: glow shadow</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- BADGES -->
-      <div>
-        <div class="component-group__title">02 // BADGES & TAGS</div>
-        <div class="comp-row">
-          <span class="badge badge--teal">TÉCNICO</span>
-          <span class="badge badge--teal">SYS NOMINAL</span>
-          <span class="badge badge--green">ACTIVO</span>
-          <span class="badge badge--muted">DEPRECATED</span>
-          <span class="badge badge--teal">LATAM &amp; GLOBAL</span>
-        </div>
-      </div>
-
-      <!-- METRIC BLOCK -->
-      <div>
-        <div class="component-group__title">03 // BLOQUE DE MÉTRICAS</div>
-        <div class="stat-block">
+        <div class="stat-block" style="margin-top: 48px">
           <div class="stat-item">
-            <div class="stat-item__label">PERF</div>
+            <div class="stat-item__label">Proyectos</div>
+            <div class="stat-item__value">+60</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__label">Lighthouse</div>
             <div class="stat-item__value">95+</div>
-          </div>
-          <div class="stat-item">
-            <div class="stat-item__label">SEO</div>
-            <div class="stat-item__value">92+</div>
           </div>
           <div class="stat-item">
             <div class="stat-item__label">LCP</div>
@@ -2153,204 +1874,1520 @@
             <div class="stat-item__label">CLS</div>
             <div class="stat-item__value">0.00</div>
           </div>
-        </div>
-      </div>
-
-      <!-- PANEL CARD -->
-      <div>
-        <div class="component-group__title">04 // PANEL CARD</div>
-        <div class="comp-row" style="flex-direction:column;align-items:flex-start;gap:24px;">
-          <div class="ui-card">
-            <span class="ui-card__label">S·01 // DESARROLLO WEB</span>
-            <div class="ui-card__title">Desarrollo Web</div>
-            <p class="ui-card__text">Sitios a medida con código limpio, performante y semántico. Sin templates, sin WordPress pesado.</p>
-            <button class="btn-primary" style="font-size:12px;padding:9px 20px;">VER SERVICIO</button>
+          <div class="stat-item">
+            <div class="stat-item__label">SEO Score</div>
+            <div class="stat-item__value">92+</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-item__label">Google</div>
+            <div class="stat-item__value">5★</div>
           </div>
         </div>
-      </div>
+      </section>
 
-    </div>
-  </section>
+      <!-- ══════════════════════════════════════════
+       SECTION 02 · LOGOTIPO
+  ══════════════════════════════════════════ -->
+      <section id="logo" class="section">
+        <div class="sys-label">SYS.02 // LOGOTIPO</div>
+        <h2 class="section-title">
+          Logo &amp; <span class="accent">Wordmark</span>
+        </h2>
+        <p class="section-subtitle">
+          El wordmark "Raven3." utiliza fuente Orbitron en negrita. El punto
+          final es parte integral del logotipo y siempre aparece en color Raven
+          Teal (#00e5c8). No se elimina ni se reemplaza.
+        </p>
 
-  <!-- ══════════════════════════════════════════
+        <div class="logo-demos">
+          <div class="logo-demo logo-demo--dark">
+            <div class="logo-mark logo-mark--lg logo-mark--on-dark">
+              RAVEN3<span class="dot">.</span>
+            </div>
+            <div class="logo-demo__label">Sobre fondo oscuro (preferido)</div>
+          </div>
+          <div class="logo-demo logo-demo--panel">
+            <div class="logo-mark logo-mark--lg logo-mark--on-dark">
+              RAVEN3<span class="dot">.</span>
+            </div>
+            <div class="logo-demo__label">Sobre panel semi-transparente</div>
+          </div>
+          <div class="logo-demo logo-demo--light">
+            <div class="logo-mark logo-mark--lg logo-mark--on-light">
+              RAVEN3<span class="dot" style="color: #007a68">.</span>
+            </div>
+            <div class="logo-demo__label" style="color: #7c8a96">
+              Sobre fondo claro (uso limitado)
+            </div>
+          </div>
+        </div>
+
+        <div class="sys-label" style="margin-bottom: 20px">
+          ESCALAS TIPOGRÁFICAS DEL LOGO
+        </div>
+        <div
+          style="
+            background: var(--bg);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-md);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            margin-bottom: 48px;
+          "
+        >
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 32px;
+              border-bottom: 1px solid var(--line-soft);
+              padding-bottom: 20px;
+            "
+          >
+            <span
+              style="
+                font-family: var(--font-mono);
+                font-size: 10px;
+                color: var(--muted);
+                width: 60px;
+              "
+              >LG · 48px</span
+            >
+            <div class="logo-mark logo-mark--lg logo-mark--on-dark">
+              RAVEN3<span class="dot">.</span>
+            </div>
+          </div>
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 32px;
+              border-bottom: 1px solid var(--line-soft);
+              padding-bottom: 20px;
+            "
+          >
+            <span
+              style="
+                font-family: var(--font-mono);
+                font-size: 10px;
+                color: var(--muted);
+                width: 60px;
+              "
+              >MD · 32px</span
+            >
+            <div class="logo-mark logo-mark--md logo-mark--on-dark">
+              RAVEN3<span class="dot">.</span>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 32px">
+            <span
+              style="
+                font-family: var(--font-mono);
+                font-size: 10px;
+                color: var(--muted);
+                width: 60px;
+              "
+              >SM · 22px</span
+            >
+            <div class="logo-mark logo-mark--sm logo-mark--on-dark">
+              RAVEN3<span class="dot">.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-rules">
+          <div class="rule-card rule-card--good">
+            <div class="rule-card__head">
+              <span class="dot-good">●</span> Usos correctos
+            </div>
+            <ul>
+              <li>Usar siempre Orbitron Bold o Black</li>
+              <li>Mantener el punto final en color Raven Teal</li>
+              <li>Usar sobre fondos oscuros (#0b0f17 o #060910)</li>
+              <li>Respetar el espacio mínimo de ½× la altura del logo</li>
+              <li>
+                Usar la versión en oscuro sobre fondos claros con la versión
+                ajustada
+              </li>
+            </ul>
+          </div>
+          <div class="rule-card rule-card--bad">
+            <div class="rule-card__head">
+              <span class="dot-bad">●</span> Usos incorrectos
+            </div>
+            <ul>
+              <li>No eliminar el punto final del logotipo</li>
+              <li>
+                No cambiar el color del punto por otro que no sea Raven Teal
+              </li>
+              <li>No usar fuentes alternativas al wordmark</li>
+              <li>No deformar, rotar ni aplicar efectos no autorizados</li>
+              <li>
+                No usar sobre fondos con poco contraste o imágenes complejas
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       SECTION 03 · SISTEMA DE COLOR
+  ══════════════════════════════════════════ -->
+      <section id="colors" class="section">
+        <div class="sys-label">SYS.03 // SISTEMA DE COLOR</div>
+        <h2 class="section-title">
+          Paleta <span class="accent">Cromática</span>
+        </h2>
+        <p class="section-subtitle">
+          El sistema de color de Raven3 se construye sobre fondos oscuros
+          profundos con un único acento primario: el Raven Teal. Toda la paleta
+          está definida como custom properties CSS.
+        </p>
+
+        <div class="color-grid">
+          <!-- Backgrounds -->
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background: #060910">
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(255, 255, 255, 0.4)"
+                >--bg-2</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Void Black</div>
+              <div class="color-swatch__hex">#060910</div>
+              <div class="color-swatch__usage">
+                Fondo más oscuro. Secciones hero, footer, fondos de canvas.
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background: #0b0f17">
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(255, 255, 255, 0.4)"
+                >--bg</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Deep Space</div>
+              <div class="color-swatch__hex">#0b0f17</div>
+              <div class="color-swatch__usage">
+                Fondo principal del sitio. Base de todas las secciones.
+              </div>
+            </div>
+          </div>
+          <!-- Accent -->
+          <div class="color-swatch" style="border-color: var(--r3-line-strong)">
+            <div
+              class="color-swatch__chip"
+              style="
+                background: #00e5c8;
+                box-shadow: inset 0 0 40px rgba(0, 229, 200, 0.5);
+              "
+            >
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(0, 20, 18, 0.7)"
+                >--r3 · PRIMARY</span
+              >
+            </div>
+            <div
+              class="color-swatch__info"
+              style="border-top: 2px solid var(--r3)"
+            >
+              <div class="color-swatch__name" style="color: var(--r3)">
+                Raven Teal ★
+              </div>
+              <div class="color-swatch__hex">#00e5c8</div>
+              <div class="color-swatch__usage">
+                Acento primario de marca. CTAs, highlights, iconos, logotipo.
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div
+              class="color-swatch__chip"
+              style="
+                background: #4dfce8;
+                box-shadow: inset 0 0 30px rgba(77, 252, 232, 0.4);
+              "
+            >
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(0, 20, 18, 0.7)"
+                >--r3-2</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Electric Cyan</div>
+              <div class="color-swatch__hex">#4dfce8</div>
+              <div class="color-swatch__usage">
+                Acento secundario. Hover states, highlights claros, glow.
+              </div>
+            </div>
+          </div>
+          <!-- Text -->
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background: #e9eef2">
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(0, 0, 0, 0.4)"
+                >--ink</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Light Slate</div>
+              <div class="color-swatch__hex">#e9eef2</div>
+              <div class="color-swatch__usage">
+                Texto principal. Títulos, contenido de lectura prioritaria.
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background: #c6d2db">
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(0, 0, 0, 0.3)"
+                >--ink-2</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Soft Blue-Gray</div>
+              <div class="color-swatch__hex">#c6d2db</div>
+              <div class="color-swatch__usage">
+                Texto secundario. Descripciones, subtítulos, copy de apoyo.
+              </div>
+            </div>
+          </div>
+          <div class="color-swatch">
+            <div class="color-swatch__chip" style="background: #7c8a96">
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(255, 255, 255, 0.6)"
+                >--muted</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Muted Steel</div>
+              <div class="color-swatch__hex">#7c8a96</div>
+              <div class="color-swatch__usage">
+                Texto terciario. Labels, placeholders, metadatos, coordenadas.
+              </div>
+            </div>
+          </div>
+          <!-- Panel -->
+          <div class="color-swatch">
+            <div
+              class="color-swatch__chip"
+              style="
+                background: rgba(8, 12, 19, 0.88);
+                border: 1px solid rgba(255, 255, 255, 0.06);
+              "
+            >
+              <span
+                class="color-swatch__chip-label"
+                style="color: rgba(255, 255, 255, 0.3)"
+                >--panel</span
+              >
+            </div>
+            <div class="color-swatch__info">
+              <div class="color-swatch__name">Dark Glass</div>
+              <div class="color-swatch__hex">rgba(8,12,19,0.72)</div>
+              <div class="color-swatch__usage">
+                Tarjetas, modales, paneles UI. Efecto glassmorphism oscuro.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sys-label" style="margin-bottom: 20px">
+          VARIABLES CSS COMPLETAS
+        </div>
+        <div
+          style="
+            background: var(--bg-2);
+            border: 1px solid var(--r3-line);
+            border-radius: var(--radius-md);
+            padding: 32px;
+            font-family: var(--font-mono);
+            font-size: 13px;
+            line-height: 2;
+            overflow-x: auto;
+          "
+        >
+          <div style="color: var(--muted)">:root &#123;</div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--bg</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: var(--ink-2)">#0b0f17</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--bg-2</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: var(--ink-2)">#060910</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--r3</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: #00e5c8">#00e5c8</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--r3-2</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: #4dfce8">#4dfce8</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--ink</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: var(--ink-2)">#e9eef2</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--ink-2</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: var(--ink-2)">#c6d2db</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="padding-left: 24px">
+            <span style="color: var(--r3)">--muted</span
+            ><span style="color: var(--muted)">: </span
+            ><span style="color: var(--ink-2)">#7c8a96</span
+            ><span style="color: var(--muted)">;</span>
+          </div>
+          <div style="color: var(--muted)">&#125;</div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       SECTION 04 · TIPOGRAFÍA
+  ══════════════════════════════════════════ -->
+      <section id="typo" class="section">
+        <div class="sys-label">SYS.04 // TIPOGRAFÍA</div>
+        <h2 class="section-title">
+          Sistema <span class="accent">Tipográfico</span>
+        </h2>
+        <p class="section-subtitle">
+          Raven3 utiliza cuatro fuentes de Google Fonts, cada una con un rol
+          específico dentro de la arquitectura visual. Juntas crean la tensión
+          entre lo técnico y lo legible.
+        </p>
+
+        <div class="type-grid">
+          <!-- Orbitron -->
+          <div class="type-card">
+            <div class="type-card__header">
+              <span class="type-card__name"
+                >01 // ORBITRON — DISPLAY & LOGOTIPO</span
+              >
+              <div class="type-card__meta">
+                <span class="type-badge">Google Fonts</span>
+                <span class="type-badge">Monospace</span>
+              </div>
+            </div>
+            <div class="type-card__body">
+              <div class="type-scale">
+                <div class="type-scale-row">
+                  <span class="sz">72px</span>
+                  <span
+                    style="
+                      font-family: var(--font-display);
+                      font-size: clamp(32px, 5vw, 72px);
+                      font-weight: 900;
+                      color: var(--ink);
+                      line-height: 1;
+                    "
+                    >RAVEN3.</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">48px</span>
+                  <span
+                    style="
+                      font-family: var(--font-display);
+                      font-size: clamp(24px, 3.5vw, 48px);
+                      font-weight: 700;
+                      color: var(--ink-2);
+                      line-height: 1.1;
+                    "
+                    >ARQUITECTURA DIGITAL</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">28px</span>
+                  <span
+                    style="
+                      font-family: var(--font-display);
+                      font-size: clamp(16px, 2.2vw, 28px);
+                      font-weight: 400;
+                      color: var(--muted);
+                    "
+                    >CONVIERTE.</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  margin-top: 20px;
+                  font-family: var(--font-body);
+                  font-size: 13px;
+                  color: var(--muted);
+                "
+              >
+                Uso: Logotipo, titulares hero, covers de presentación, números
+                destacados. Pesos: 400 · 600 · 700 · 900.
+              </div>
+            </div>
+          </div>
+
+          <!-- Rajdhani -->
+          <div class="type-card">
+            <div class="type-card__header">
+              <span class="type-card__name">02 // RAJDHANI — HEADINGS</span>
+              <div class="type-card__meta">
+                <span class="type-badge">Google Fonts</span>
+                <span class="type-badge">Sans-serif</span>
+              </div>
+            </div>
+            <div class="type-card__body">
+              <div class="type-scale">
+                <div class="type-scale-row">
+                  <span class="sz">56px</span>
+                  <span
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: clamp(28px, 4.5vw, 56px);
+                      font-weight: 700;
+                      color: var(--ink);
+                      text-transform: uppercase;
+                      letter-spacing: 0.02em;
+                      line-height: 1.1;
+                    "
+                    >DISEÑAMOS QUE CONVIERTE</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">32px</span>
+                  <span
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: clamp(20px, 2.8vw, 32px);
+                      font-weight: 600;
+                      color: var(--ink-2);
+                      text-transform: uppercase;
+                      letter-spacing: 0.05em;
+                    "
+                    >Servicios Digitales</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">20px</span>
+                  <span
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: 20px;
+                      font-weight: 500;
+                      color: var(--muted);
+                      text-transform: uppercase;
+                      letter-spacing: 0.1em;
+                    "
+                    >Subtítulo de sección</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  margin-top: 20px;
+                  font-family: var(--font-body);
+                  font-size: 13px;
+                  color: var(--muted);
+                "
+              >
+                Uso: Títulos de sección H2–H4, navegación, etiquetas destacadas,
+                CTAs. Pesos: 300 · 400 · 500 · 600 · 700.
+              </div>
+            </div>
+          </div>
+
+          <!-- Outfit -->
+          <div class="type-card">
+            <div class="type-card__header">
+              <span class="type-card__name">03 // OUTFIT — BODY & COPY</span>
+              <div class="type-card__meta">
+                <span class="type-badge">Google Fonts</span>
+                <span class="type-badge">Sans-serif</span>
+              </div>
+            </div>
+            <div class="type-card__body">
+              <div class="type-scale">
+                <div class="type-scale-row">
+                  <span class="sz">18px</span>
+                  <span
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 18px;
+                      font-weight: 400;
+                      color: var(--ink);
+                      line-height: 1.7;
+                      max-width: 600px;
+                    "
+                    >En Raven3 creamos sitios web a medida, tiendas online y
+                    estrategias de SEO técnico con performance real. Sin
+                    templates. Sin WordPress pesado. Resultados medibles.</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">15px</span>
+                  <span
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 15px;
+                      font-weight: 400;
+                      color: var(--ink-2);
+                      line-height: 1.7;
+                      max-width: 500px;
+                    "
+                    >Texto secundario: Cada proyecto que tomamos nace desde la
+                    estrategia, se diseña desde la experiencia y se desarrolla
+                    desde la ingeniería.</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">13px</span>
+                  <span
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 13px;
+                      color: var(--muted);
+                      line-height: 1.6;
+                    "
+                    >Texto terciario / captions / notas / metadatos de
+                    contenido</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  margin-top: 20px;
+                  font-family: var(--font-body);
+                  font-size: 13px;
+                  color: var(--muted);
+                "
+              >
+                Uso: Body copy, párrafos, descripciones de servicios,
+                testimoniales, contenido de blog. Pesos: 300 · 400 · 500 · 600.
+              </div>
+            </div>
+          </div>
+
+          <!-- Share Tech Mono -->
+          <div class="type-card">
+            <div class="type-card__header">
+              <span class="type-card__name"
+                >04 // SHARE TECH MONO — UI & SISTEMA</span
+              >
+              <div class="type-card__meta">
+                <span class="type-badge">Google Fonts</span>
+                <span class="type-badge">Monospace</span>
+              </div>
+            </div>
+            <div class="type-card__body">
+              <div class="type-scale">
+                <div class="type-scale-row">
+                  <span class="sz">14px</span>
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 14px;
+                      color: var(--r3);
+                      letter-spacing: 0.2em;
+                    "
+                    >SYS.01 // ARQUITECTURA DIGITAL</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">11px</span>
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 11px;
+                      color: var(--muted);
+                      letter-spacing: 0.15em;
+                    "
+                    >LAT -34.6037° // LONG -58.3816° // SIGNAL NOMINAL</span
+                  >
+                </div>
+                <div
+                  class="type-scale-row"
+                  style="
+                    border-top: 1px solid var(--line-soft);
+                    padding-top: 12px;
+                  "
+                >
+                  <span class="sz">10px</span>
+                  <span
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 10px;
+                      color: var(--muted);
+                      letter-spacing: 0.12em;
+                    "
+                    >PERF · 95+ &nbsp;&nbsp; SEO · 92+ &nbsp;&nbsp; LCP ·
+                    &lt;1.2s &nbsp;&nbsp; CLS · 0.00</span
+                  >
+                </div>
+              </div>
+              <div
+                style="
+                  margin-top: 20px;
+                  font-family: var(--font-body);
+                  font-size: 13px;
+                  color: var(--muted);
+                "
+              >
+                Uso: System labels (SYS.XX), coordenadas, métricas HUD, código,
+                etiquetas de navegación lateral, timestamps. Peso único (Regular
+                400).
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       SECTION 05 · VOZ Y TONO
+  ══════════════════════════════════════════ -->
+      <section id="voice" class="section">
+        <div class="sys-label">SYS.05 // VOZ & TONO</div>
+        <h2 class="section-title">Voz de <span class="accent">Marca</span></h2>
+        <p class="section-subtitle">
+          Raven3 comunica con precisión y confianza. Sin relleno, sin jerga
+          vacía. Cada palabra tiene un propósito técnico o emocional —
+          preferiblemente ambos.
+        </p>
+
+        <div class="voice-pillars">
+          <div class="voice-pillar">
+            <span class="voice-pillar__icon">⚡</span>
+            <div class="voice-pillar__title">Directo</div>
+            <p class="voice-pillar__desc">
+              Sin rodeos. La primer oración debe comunicar el valor principal.
+              Nunca usamos frases genéricas de agencias. "Hacemos arquitectura
+              digital", no "somos un equipo apasionado".
+            </p>
+          </div>
+          <div class="voice-pillar">
+            <span class="voice-pillar__icon">🎯</span>
+            <div class="voice-pillar__title">Orientado a resultados</div>
+            <p class="voice-pillar__desc">
+              Hablamos de métricas reales: Lighthouse, LCP, conversión.
+              Prometemos cosas medibles. Los adjetivos sin datos son marketing
+              vacío.
+            </p>
+          </div>
+          <div class="voice-pillar">
+            <span class="voice-pillar__icon">🔧</span>
+            <div class="voice-pillar__title">Técnico &amp; accesible</div>
+            <p class="voice-pillar__desc">
+              Usamos vocabulario técnico preciso sin alienar al cliente
+              no-técnico. Explicamos el "por qué" detrás de cada decisión de
+              ingeniería.
+            </p>
+          </div>
+          <div class="voice-pillar">
+            <span class="voice-pillar__icon">🚫</span>
+            <div class="voice-pillar__title">Anti-template</div>
+            <p class="voice-pillar__desc">
+              Nos diferenciamos activamente de las soluciones de bajo costo. No
+              somos para todos — somos para quien quiere calidad técnica real.
+            </p>
+          </div>
+          <div class="voice-pillar">
+            <span class="voice-pillar__icon">📊</span>
+            <div class="voice-pillar__title">Data-driven</div>
+            <p class="voice-pillar__desc">
+              Cada afirmación viene respaldada por datos. Mostramos scores,
+              porcentajes, proyectos entregados. Los números construyen
+              credibilidad.
+            </p>
+          </div>
+          <div class="voice-pillar">
+            <span class="voice-pillar__icon">💡</span>
+            <div class="voice-pillar__title">Confiado</div>
+            <p class="voice-pillar__desc">
+              No pedimos disculpas por nuestra especialización. No somos "la
+              opción más económica". Somos la opción correcta para quien valora
+              el resultado.
+            </p>
+          </div>
+        </div>
+
+        <div class="do-dont">
+          <div class="do-dont__col do-dont__col--do">
+            <div class="do-dont__head">✓ Decimos esto</div>
+            <div class="do-dont__items">
+              <div class="do-dont__item">
+                "Construimos sitios con Lighthouse 95+, LCP &lt;1.2s y CLS
+                0.00."
+              </div>
+              <div class="do-dont__item">
+                "No hacemos webs lindas. Hacemos arquitectura digital que
+                convierte."
+              </div>
+              <div class="do-dont__item">
+                "Sin templates. Sin WordPress pesado. Resultados medibles."
+              </div>
+              <div class="do-dont__item">
+                "Auditoría técnica, benchmark y análisis de oportunidades de
+                mejora."
+              </div>
+              <div class="do-dont__item">
+                "Código limpio, semántico, performante y bien documentado."
+              </div>
+              <div class="do-dont__item">
+                "AGENCIA DIGITAL · BUENOS AIRES, ARGENTINA"
+              </div>
+            </div>
+          </div>
+          <div class="do-dont__col do-dont__col--dont">
+            <div class="do-dont__head">✗ Nunca decimos esto</div>
+            <div class="do-dont__items">
+              <div class="do-dont__item">
+                "Somos un equipo apasionado por el diseño web."
+              </div>
+              <div class="do-dont__item">
+                "Soluciones digitales a medida para tu negocio."
+              </div>
+              <div class="do-dont__item">
+                "Trabajamos con las últimas tecnologías del mercado."
+              </div>
+              <div class="do-dont__item">
+                "Te acompañamos en tu viaje digital."
+              </div>
+              <div class="do-dont__item">
+                "¡Precios accesibles para todos los presupuestos!"
+              </div>
+              <div class="do-dont__item">
+                "Somos creativos innovadores y disruptivos."
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       SECTION 06 · LENGUAJE VISUAL
+  ══════════════════════════════════════════ -->
+      <section id="visual" class="section">
+        <div class="sys-label">SYS.06 // LENGUAJE VISUAL</div>
+        <h2 class="section-title">
+          Identidad <span class="accent">Visual</span>
+        </h2>
+        <p class="section-subtitle">
+          El lenguaje visual de Raven3 es una fusión entre la estética de los
+          sistemas de control aeroespacial (HUD), la oscuridad del espacio
+          profundo y el glow tecnológico del ciberespacio.
+        </p>
+
+        <div class="visual-grid">
+          <!-- HUD Corners -->
+          <div class="visual-card">
+            <div class="visual-card__demo">
+              <div class="hud-demo">
+                <span class="hud-demo__label">RAVEN3 // SYS.00</span>
+                <div class="hud-demo__data">
+                  <div class="hud-demo__line"></div>
+                  <div class="hud-demo__row"><span>STATUS</span> NOMINAL</div>
+                  <div class="hud-demo__row" style="margin-top: 4px">
+                    <span>PERF</span> 95+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visual-card__info">
+              <div class="visual-card__title">Corner Brackets (HUD)</div>
+              <div class="visual-card__desc">
+                Decoración de esquinas en color Raven Teal con 20–24px de
+                tamaño. Delimitan zonas de información y aportan el lenguaje de
+                panel de control. Opacidad 35–50%.
+              </div>
+            </div>
+          </div>
+
+          <!-- Teal Glow -->
+          <div class="visual-card">
+            <div class="visual-card__demo">
+              <div class="glow-demo">
+                <div class="glow-orb"></div>
+                <span class="glow-text">RAVEN TEAL GLOW</span>
+              </div>
+            </div>
+            <div class="visual-card__info">
+              <div class="visual-card__title">Teal Glow Effect</div>
+              <div class="visual-card__desc">
+                El glow teal se aplica sobre elementos activos, CTAs en hover, y
+                el punto del logotipo. Box-shadow en tres capas (10px, 30px,
+                60px) con opacidades decrecientes.
+              </div>
+            </div>
+          </div>
+
+          <!-- Grid Overlay -->
+          <div class="visual-card">
+            <div class="visual-card__demo" style="padding: 0">
+              <div class="grid-demo" style="width: 100%; height: 100%">
+                <div style="text-align: center">
+                  <div class="grid-demo__dot"></div>
+                  <div
+                    style="
+                      font-family: var(--font-mono);
+                      font-size: 9px;
+                      color: var(--r3);
+                      margin-top: 8px;
+                      letter-spacing: 0.2em;
+                    "
+                  >
+                    GRID · 60px
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="visual-card__info">
+              <div class="visual-card__title">Grid Overlay</div>
+              <div class="visual-card__desc">
+                Grid de 60×60px en color rgba(0,229,200,0.035–0.07) sobre fondos
+                oscuros. Evoca sistemas de coordenadas y cartografía digital. Se
+                usa en hero sections.
+              </div>
+            </div>
+          </div>
+
+          <!-- System Labels -->
+          <div class="visual-card">
+            <div
+              class="visual-card__demo"
+              style="
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+                gap: 12px;
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 11px;
+                  color: var(--r3);
+                  letter-spacing: 0.2em;
+                "
+              >
+                SYS.01 // IDENTIDAD
+              </div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  color: var(--muted);
+                  letter-spacing: 0.15em;
+                "
+              >
+                LAT -34.6037° // LONG -58.3816°
+              </div>
+              <div
+                style="width: 80px; height: 1px; background: var(--r3-line)"
+              ></div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  color: var(--r3);
+                  letter-spacing: 0.1em;
+                "
+              >
+                ● SIGNAL NOMINAL
+              </div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 9px;
+                  color: var(--muted);
+                  letter-spacing: 0.12em;
+                "
+              >
+                RAVEN3 // SYS.00 // INICIO
+              </div>
+            </div>
+            <div class="visual-card__info">
+              <div class="visual-card__title">System Labels</div>
+              <div class="visual-card__desc">
+                Etiquetas tipo sistema en Share Tech Mono. Formato: "SYS.XX //
+                NOMBRE_SECCIÓN". Se usan como marcadores de sección y aportan el
+                lenguaje de interfaz de misión.
+              </div>
+            </div>
+          </div>
+
+          <!-- Scanning Line -->
+          <div class="visual-card">
+            <div
+              class="visual-card__demo"
+              style="overflow: hidden; position: relative"
+            >
+              <div
+                style="
+                  position: absolute;
+                  width: 100%;
+                  height: 2px;
+                  background: linear-gradient(
+                    90deg,
+                    transparent,
+                    #00e5c8,
+                    transparent
+                  );
+                  box-shadow: 0 0 20px #00e5c8;
+                  top: 50%;
+                  animation: scan 2s linear infinite;
+                "
+              ></div>
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 11px;
+                  color: var(--muted);
+                  letter-spacing: 0.15em;
+                  position: relative;
+                  z-index: 1;
+                "
+              >
+                SCANNING...
+              </div>
+            </div>
+            <div class="visual-card__info">
+              <div class="visual-card__title">Scanning Line</div>
+              <div class="visual-card__desc">
+                Línea de escaneo animada en teal con glow. Traversa secciones
+                verticalmente. Refuerza la narrativa de sistema activo y
+                monitoreo en tiempo real.
+              </div>
+            </div>
+          </div>
+
+          <!-- Starfield -->
+          <div class="visual-card">
+            <div
+              class="visual-card__demo"
+              style="padding: 0; position: relative"
+            >
+              <canvas
+                id="mini-stars"
+                style="position: absolute; inset: 0; width: 100%; height: 100%"
+              ></canvas>
+              <div
+                style="
+                  position: relative;
+                  z-index: 1;
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  color: var(--r3);
+                  letter-spacing: 0.15em;
+                "
+              >
+                DEEP SPACE BG
+              </div>
+            </div>
+            <div class="visual-card__info">
+              <div class="visual-card__title">Starfield Background</div>
+              <div class="visual-card__desc">
+                Canvas con 300–600 partículas/estrellas en color teal con
+                variación de opacidad y tamaño. Crea profundidad y escala
+                cósmica. Sutileza es clave: máx opacidad 0.7.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sys-label" style="margin-bottom: 20px">
+          VOCABULARIO DE PATRONES
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <span class="tag">Dark Background</span>
+          <span class="tag">HUD Corners</span>
+          <span class="tag">Teal Glow</span>
+          <span class="tag">Grid Overlay</span>
+          <span class="tag">Scan Lines</span>
+          <span class="tag">Starfield</span>
+          <span class="tag">System Labels</span>
+          <span class="tag">Glassmorphism</span>
+          <span class="tag">Monospace UI</span>
+          <span class="tag">Coordinate Data</span>
+          <span class="tag">Panel Cards</span>
+          <span class="tag">Metric Blocks</span>
+          <span class="tag">Corner Brackets</span>
+          <span class="tag">Particle FX</span>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
+       SECTION 07 · UI COMPONENTS
+  ══════════════════════════════════════════ -->
+      <section id="ui" class="section">
+        <div class="sys-label">SYS.07 // UI COMPONENTS</div>
+        <h2 class="section-title">
+          Componentes <span class="accent">UI</span>
+        </h2>
+        <p class="section-subtitle">
+          El sistema de componentes de Raven3 prioriza la claridad, el contraste
+          y la interacción táctil. Todos los elementos activos usan Raven Teal
+          como color de estado.
+        </p>
+
+        <div class="component-grid">
+          <!-- BUTTONS -->
+          <div>
+            <div class="component-group__title">01 // BOTONES</div>
+            <div class="comp-row">
+              <button class="btn-primary">HABLEMOS</button>
+              <button class="btn-ghost">VER SERVICIOS</button>
+              <button class="btn-solid">AUDITORÍA GRATUITA →</button>
+            </div>
+            <div
+              style="
+                margin-top: 16px;
+                background: var(--panel);
+                border-radius: var(--radius-sm);
+                padding: 20px 24px;
+                border: 1px solid var(--line);
+              "
+            >
+              <div
+                style="
+                  font-family: var(--font-mono);
+                  font-size: 10px;
+                  color: var(--muted);
+                  letter-spacing: 0.15em;
+                  margin-bottom: 12px;
+                "
+              >
+                SPECS
+              </div>
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(3, 1fr);
+                  gap: 16px;
+                "
+              >
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: var(--r3);
+                      text-transform: uppercase;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    Primary
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 12px;
+                      color: var(--muted);
+                    "
+                  >
+                    Border: 1.5px r3 · Color: r3 · Radius: 50px · Hover: fill r3
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: var(--ink-2);
+                      text-transform: uppercase;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    Ghost
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 12px;
+                      color: var(--muted);
+                    "
+                  >
+                    Border: 1px line · Color: ink-2 · Radius: 50px · Hover:
+                    border r3-line
+                  </div>
+                </div>
+                <div>
+                  <div
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: 13px;
+                      font-weight: 600;
+                      color: var(--ink);
+                      text-transform: uppercase;
+                      margin-bottom: 4px;
+                    "
+                  >
+                    Solid
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--font-body);
+                      font-size: 12px;
+                      color: var(--muted);
+                    "
+                  >
+                    Bg: r3 · Color: bg-2 · Radius: 50px · Hover: glow shadow
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BADGES -->
+          <div>
+            <div class="component-group__title">02 // BADGES & TAGS</div>
+            <div class="comp-row">
+              <span class="badge badge--teal">TÉCNICO</span>
+              <span class="badge badge--teal">SYS NOMINAL</span>
+              <span class="badge badge--green">ACTIVO</span>
+              <span class="badge badge--muted">DEPRECATED</span>
+              <span class="badge badge--teal">LATAM &amp; GLOBAL</span>
+            </div>
+          </div>
+
+          <!-- METRIC BLOCK -->
+          <div>
+            <div class="component-group__title">03 // BLOQUE DE MÉTRICAS</div>
+            <div class="stat-block">
+              <div class="stat-item">
+                <div class="stat-item__label">PERF</div>
+                <div class="stat-item__value">95+</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-item__label">SEO</div>
+                <div class="stat-item__value">92+</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-item__label">LCP</div>
+                <div class="stat-item__value">&lt;1.2s</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-item__label">CLS</div>
+                <div class="stat-item__value">0.00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL CARD -->
+          <div>
+            <div class="component-group__title">04 // PANEL CARD</div>
+            <div
+              class="comp-row"
+              style="flex-direction: column; align-items: flex-start; gap: 24px"
+            >
+              <div class="ui-card">
+                <span class="ui-card__label">S·01 // DESARROLLO WEB</span>
+                <div class="ui-card__title">Desarrollo Web</div>
+                <p class="ui-card__text">
+                  Sitios a medida con código limpio, performante y semántico.
+                  Sin templates, sin WordPress pesado.
+                </p>
+                <button
+                  class="btn-primary"
+                  style="font-size: 12px; padding: 9px 20px"
+                >
+                  VER SERVICIO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══════════════════════════════════════════
        SECTION 08 · SERVICIOS
   ══════════════════════════════════════════ -->
-  <section id="services" class="section">
-    <div class="sys-label">SYS.08 // SERVICIOS</div>
-    <h2 class="section-title">Servicios <span class="accent">Principales</span></h2>
-    <p class="section-subtitle">Las seis líneas de servicio de Raven3 cubren el ciclo completo de la arquitectura digital: desde el desarrollo hasta la optimización continua.</p>
+      <section id="services" class="section">
+        <div class="sys-label">SYS.08 // SERVICIOS</div>
+        <h2 class="section-title">
+          Servicios <span class="accent">Principales</span>
+        </h2>
+        <p class="section-subtitle">
+          Las seis líneas de servicio de Raven3 cubren el ciclo completo de la
+          arquitectura digital: desde el desarrollo hasta la optimización
+          continua.
+        </p>
 
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="service-card__num">S·01</span>
-        <span class="service-card__icon">🌐</span>
-        <div class="service-card__title">Desarrollo Web</div>
-        <p class="service-card__desc">Sitios a medida con código limpio, performante y semántico. Sin templates. Sin WordPress pesado. Arquitectura escalable y bien documentada.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-card__num">S·02</span>
-        <span class="service-card__icon">🛒</span>
-        <div class="service-card__title">Tiendas Online</div>
-        <p class="service-card__desc">E-commerce listo para vender, escalar e integrarse con pagos y analítica. Enfocado en conversión y experiencia de compra real.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-card__num">S·03</span>
-        <span class="service-card__icon">🔍</span>
-        <div class="service-card__title">SEO Técnico</div>
-        <p class="service-card__desc">Mejoramos estructura, indexabilidad y rendimiento técnico para posicionar mejor en buscadores. SEO real, no contenido vacío.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-card__num">S·04</span>
-        <span class="service-card__icon">⚡</span>
-        <div class="service-card__title">Core Web Vitals</div>
-        <p class="service-card__desc">Optimizamos velocidad real para mejorar experiencia de usuario, SEO y conversión. LCP &lt;1.2s · CLS 0.00 · FID mínimo.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-card__num">S·05</span>
-        <span class="service-card__icon">🎨</span>
-        <div class="service-card__title">UX/UI Conversión</div>
-        <p class="service-card__desc">Diseñamos interfaces que guían, ordenan y convierten mejor. Wireframes, prototipado interactivo y sistemas de diseño cohesivos.</p>
-      </div>
-      <div class="service-card">
-        <span class="service-card__num">S·06</span>
-        <span class="service-card__icon">🔗</span>
-        <div class="service-card__title">Integraciones</div>
-        <p class="service-card__desc">Integramos CRMs, pasarelas de pago y sistemas externos para automatizar procesos sin fricción. Conexiones a medida para el negocio.</p>
-      </div>
-    </div>
-  </section>
+        <div class="services-grid">
+          <div class="service-card">
+            <span class="service-card__num">S·01</span>
+            <span class="service-card__icon">🌐</span>
+            <div class="service-card__title">Desarrollo Web</div>
+            <p class="service-card__desc">
+              Sitios a medida con código limpio, performante y semántico. Sin
+              templates. Sin WordPress pesado. Arquitectura escalable y bien
+              documentada.
+            </p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__num">S·02</span>
+            <span class="service-card__icon">🛒</span>
+            <div class="service-card__title">Tiendas Online</div>
+            <p class="service-card__desc">
+              E-commerce listo para vender, escalar e integrarse con pagos y
+              analítica. Enfocado en conversión y experiencia de compra real.
+            </p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__num">S·03</span>
+            <span class="service-card__icon">🔍</span>
+            <div class="service-card__title">SEO Técnico</div>
+            <p class="service-card__desc">
+              Mejoramos estructura, indexabilidad y rendimiento técnico para
+              posicionar mejor en buscadores. SEO real, no contenido vacío.
+            </p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__num">S·04</span>
+            <span class="service-card__icon">⚡</span>
+            <div class="service-card__title">Core Web Vitals</div>
+            <p class="service-card__desc">
+              Optimizamos velocidad real para mejorar experiencia de usuario,
+              SEO y conversión. LCP &lt;1.2s · CLS 0.00 · FID mínimo.
+            </p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__num">S·05</span>
+            <span class="service-card__icon">🎨</span>
+            <div class="service-card__title">UX/UI Conversión</div>
+            <p class="service-card__desc">
+              Diseñamos interfaces que guían, ordenan y convierten mejor.
+              Wireframes, prototipado interactivo y sistemas de diseño
+              cohesivos.
+            </p>
+          </div>
+          <div class="service-card">
+            <span class="service-card__num">S·06</span>
+            <span class="service-card__icon">🔗</span>
+            <div class="service-card__title">Integraciones</div>
+            <p class="service-card__desc">
+              Integramos CRMs, pasarelas de pago y sistemas externos para
+              automatizar procesos sin fricción. Conexiones a medida para el
+              negocio.
+            </p>
+          </div>
+        </div>
+      </section>
 
-  <!-- ══════════════════════════════════════════
+      <!-- ══════════════════════════════════════════
        FOOTER
   ══════════════════════════════════════════ -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div>
-        <div class="footer-logo">RAVEN3<span class="dot">.</span></div>
-        <div class="footer-tagline">Arquitectura Digital que Convierte</div>
-      </div>
-      <div class="footer-meta">
-        <div class="footer-meta__col">
-          <div class="footer-meta__label">Documento</div>
-          <div class="footer-meta__val">Brand Guidelines v1.0</div>
+      <footer id="footer">
+        <div class="footer-top">
+          <div>
+            <div class="footer-logo">RAVEN3<span class="dot">.</span></div>
+            <div class="footer-tagline">Arquitectura Digital que Convierte</div>
+          </div>
+          <div class="footer-meta">
+            <div class="footer-meta__col">
+              <div class="footer-meta__label">Documento</div>
+              <div class="footer-meta__val">Brand Guidelines v1.0</div>
+            </div>
+            <div class="footer-meta__col">
+              <div class="footer-meta__label">Año</div>
+              <div class="footer-meta__val">2025</div>
+            </div>
+            <div class="footer-meta__col">
+              <div class="footer-meta__label">Web</div>
+              <div class="footer-meta__val">
+                <a href="https://raven3.com.ar" target="_blank"
+                  >raven3.com.ar</a
+                >
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="footer-meta__col">
-          <div class="footer-meta__label">Año</div>
-          <div class="footer-meta__val">2025</div>
+        <div class="footer-bottom">
+          <p>
+            © 2025 Raven3 · Todos los derechos reservados · Buenos Aires,
+            Argentina · raven3.com.ar
+          </p>
+          <div class="signal">
+            <span class="signal-dot"></span>
+            SYS NOMINAL
+          </div>
         </div>
-        <div class="footer-meta__col">
-          <div class="footer-meta__label">Web</div>
-          <div class="footer-meta__val"><a href="https://raven3.com.ar" target="_blank">raven3.com.ar</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2025 Raven3 · Todos los derechos reservados · Buenos Aires, Argentina · raven3.com.ar</p>
-      <div class="signal">
-        <span class="signal-dot"></span>
-        SYS NOMINAL
-      </div>
-    </div>
-  </footer>
+      </footer>
+    </main>
+    <!-- /main -->
 
-</main><!-- /main -->
-
-<!-- ============================================================
+    <!-- ============================================================
      JAVASCRIPT
 ============================================================ -->
-<script>
-// ─── STARFIELD (cover) ──────────────────────────────────────
-(function() {
-  const canvas = document.getElementById('starfield');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let stars = [];
-  let W, H;
+    <script>
+      // ─── STARFIELD (cover) ──────────────────────────────────────
+      (function () {
+        const canvas = document.getElementById("starfield");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        let stars = [];
+        let W, H;
 
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth;
-    H = canvas.height = canvas.offsetHeight;
-    stars = [];
-    for (let i = 0; i < 500; i++) {
-      stars.push({
-        x: Math.random() * W,
-        y: Math.random() * H,
-        r: Math.random() * 1.2 + 0.2,
-        o: Math.random() * 0.6 + 0.1,
-        s: Math.random() * 0.3 + 0.05
-      });
-    }
-  }
+        function resize() {
+          W = canvas.width = canvas.offsetWidth;
+          H = canvas.height = canvas.offsetHeight;
+          stars = [];
+          for (let i = 0; i < 500; i++) {
+            stars.push({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              r: Math.random() * 1.2 + 0.2,
+              o: Math.random() * 0.6 + 0.1,
+              s: Math.random() * 0.3 + 0.05,
+            });
+          }
+        }
 
-  function draw() {
-    ctx.clearRect(0, 0, W, H);
-    stars.forEach(star => {
-      ctx.beginPath();
-      ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(0,229,200,${star.o})`;
-      ctx.fill();
-      star.o += star.s * (Math.random() > 0.5 ? 1 : -1);
-      if (star.o > 0.7) star.o = 0.7;
-      if (star.o < 0.05) star.o = 0.05;
-    });
-    requestAnimationFrame(draw);
-  }
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          stars.forEach((star) => {
+            ctx.beginPath();
+            ctx.arc(star.x, star.y, star.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0,229,200,${star.o})`;
+            ctx.fill();
+            star.o += star.s * (Math.random() > 0.5 ? 1 : -1);
+            if (star.o > 0.7) star.o = 0.7;
+            if (star.o < 0.05) star.o = 0.05;
+          });
+          requestAnimationFrame(draw);
+        }
 
-  new ResizeObserver(resize).observe(canvas.parentElement);
-  resize();
-  draw();
-})();
+        new ResizeObserver(resize).observe(canvas.parentElement);
+        resize();
+        draw();
+      })();
 
-// ─── MINI STARFIELD (visual section demo) ────────────────────
-(function() {
-  const canvas = document.getElementById('mini-stars');
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  let stars = [];
-  let W, H;
+      // ─── MINI STARFIELD (visual section demo) ────────────────────
+      (function () {
+        const canvas = document.getElementById("mini-stars");
+        if (!canvas) return;
+        const ctx = canvas.getContext("2d");
+        let stars = [];
+        let W, H;
 
-  function resize() {
-    W = canvas.width  = canvas.offsetWidth  || 200;
-    H = canvas.height = canvas.offsetHeight || 160;
-    stars = [];
-    for (let i = 0; i < 120; i++) {
-      stars.push({ x: Math.random()*W, y: Math.random()*H, r: Math.random()*1+0.2, o: Math.random()*0.5+0.1, s: Math.random()*0.4+0.05 });
-    }
-  }
+        function resize() {
+          W = canvas.width = canvas.offsetWidth || 200;
+          H = canvas.height = canvas.offsetHeight || 160;
+          stars = [];
+          for (let i = 0; i < 120; i++) {
+            stars.push({
+              x: Math.random() * W,
+              y: Math.random() * H,
+              r: Math.random() * 1 + 0.2,
+              o: Math.random() * 0.5 + 0.1,
+              s: Math.random() * 0.4 + 0.05,
+            });
+          }
+        }
 
-  function draw() {
-    ctx.clearRect(0,0,W,H);
-    stars.forEach(st => {
-      ctx.beginPath();
-      ctx.arc(st.x, st.y, st.r, 0, Math.PI*2);
-      ctx.fillStyle = `rgba(0,229,200,${st.o})`;
-      ctx.fill();
-      st.o += st.s * (Math.random() > 0.5 ? 1 : -1);
-      st.o = Math.max(0.05, Math.min(0.65, st.o));
-    });
-    requestAnimationFrame(draw);
-  }
+        function draw() {
+          ctx.clearRect(0, 0, W, H);
+          stars.forEach((st) => {
+            ctx.beginPath();
+            ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(0,229,200,${st.o})`;
+            ctx.fill();
+            st.o += st.s * (Math.random() > 0.5 ? 1 : -1);
+            st.o = Math.max(0.05, Math.min(0.65, st.o));
+          });
+          requestAnimationFrame(draw);
+        }
 
-  setTimeout(() => { resize(); draw(); }, 200);
-})();
+        setTimeout(() => {
+          resize();
+          draw();
+        }, 200);
+      })();
 
-// ─── TOC ACTIVE STATE ──────────────────────────────────────
-(function() {
-  const links = document.querySelectorAll('.toc__nav a');
-  const sections = document.querySelectorAll('section[id], footer[id]');
+      // ─── TOC ACTIVE STATE ──────────────────────────────────────
+      (function () {
+        const links = document.querySelectorAll(".toc__nav a");
+        const sections = document.querySelectorAll("section[id], footer[id]");
 
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        links.forEach(l => l.classList.remove('active'));
-        const active = document.querySelector(`.toc__nav a[href="#${entry.target.id}"]`);
-        if (active) active.classList.add('active');
-      }
-    });
-  }, { rootMargin: '-30% 0px -60% 0px' });
+        const obs = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                links.forEach((l) => l.classList.remove("active"));
+                const active = document.querySelector(
+                  `.toc__nav a[href="#${entry.target.id}"]`,
+                );
+                if (active) active.classList.add("active");
+              }
+            });
+          },
+          { rootMargin: "-30% 0px -60% 0px" },
+        );
 
-  sections.forEach(s => obs.observe(s));
-})();
-</script>
-</body>
+        sections.forEach((s) => obs.observe(s));
+      })();
+    </script>
+  </body>
 </html>
