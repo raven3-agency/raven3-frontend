@@ -32,13 +32,13 @@
   <style>
     :root {
       --ba: #00E5C8;
-      --ba-dim: rgba(0,229,200,0.55);
-      --bs: #070e17;
-      --bs2: #0a1520;
-      --bb: rgba(0,229,200,0.10);
-      --bb-h: rgba(0,229,200,0.28);
-      --bt: rgba(200,220,230,0.88);
-      --bt-m: rgba(140,170,185,0.52);
+      --ba-dim: rgba(0,229,200,0.65);
+      --bs: #0a1624;
+      --bs2: #0d1e30;
+      --bb: rgba(0,229,200,0.14);
+      --bb-h: rgba(0,229,200,0.35);
+      --bt: rgba(215,232,245,0.92);
+      --bt-m: rgba(160,190,215,0.72);
       --mono: 'Share Tech Mono', monospace;
       --serif: 'DM Serif Display', Georgia, serif;
       --sans: 'Outfit', sans-serif;
@@ -46,7 +46,7 @@
       --rad: 20px;
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #04080E; color: var(--bt); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    body { background: #060c16; color: var(--bt); font-family: var(--sans); line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
     /* ── Topbar ── */
     /* topbar — estilos globales en redesign.css */
@@ -152,21 +152,42 @@
     .pc-thumb--short { aspect-ratio:21/9; }
     .thumb-art { position:absolute; inset:0; transition:transform .5s ease; }
     .post-card:hover .thumb-art { transform:scale(1.03); }
-    .thumb-art::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.04) 1px,transparent 1px); background-size:32px 32px; }
-    .thumb-art--seo  { background:radial-gradient(ellipse 60% 55% at 25% 45%,rgba(0,229,200,0.22) 0%,transparent 55%),radial-gradient(ellipse 40% 60% at 80% 65%,rgba(0,100,180,0.18) 0%,transparent 50%),linear-gradient(145deg,#040d14 0%,#061422 100%); }
-    .thumb-art--perf { background:radial-gradient(ellipse 55% 50% at 70% 35%,rgba(245,158,11,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 55% at 20% 70%,rgba(200,80,0,0.12) 0%,transparent 50%),linear-gradient(155deg,#0a0b04 0%,#100c02 100%); }
-    .thumb-art--dev  { background:radial-gradient(ellipse 60% 50% at 30% 55%,rgba(129,140,248,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 50% at 75% 25%,rgba(80,0,180,0.15) 0%,transparent 50%),linear-gradient(135deg,#040610 0%,#080514 100%); }
-    .thumb-art--ecomm{ background:radial-gradient(ellipse 55% 50% at 60% 40%,rgba(52,211,153,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 55% at 15% 70%,rgba(0,160,100,0.12) 0%,transparent 50%),linear-gradient(145deg,#030f0a 0%,#051412 100%); }
-    .thumb-art--ux   { background:radial-gradient(ellipse 55% 50% at 45% 35%,rgba(244,114,182,0.18) 0%,transparent 55%),radial-gradient(ellipse 45% 55% at 80% 70%,rgba(160,0,100,0.12) 0%,transparent 50%),linear-gradient(145deg,#0a0408 0%,#100510 100%); }
-    .thumb-art--web  { background:radial-gradient(ellipse 60% 50% at 30% 55%,rgba(99,179,237,0.22) 0%,transparent 55%),radial-gradient(ellipse 45% 55% at 78% 25%,rgba(49,130,206,0.15) 0%,transparent 50%),linear-gradient(135deg,#030810 0%,#060c18 100%); }
-    .thumb-art--ecom { background:radial-gradient(ellipse 55% 50% at 60% 40%,rgba(52,211,153,0.2) 0%,transparent 55%),radial-gradient(ellipse 40% 55% at 15% 70%,rgba(0,160,100,0.12) 0%,transparent 50%),linear-gradient(145deg,#030f0a 0%,#051412 100%); }
-    .thumb-num { position:absolute; bottom:12px; right:14px; font-family:var(--disp); font-size:36px; font-weight:900; color:rgba(255,255,255,0.06); line-height:1; user-select:none; }
+    .thumb-art::before { content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(255,255,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.07) 1px,transparent 1px); background-size:32px 32px; }
+    .thumb-art--seo  { background:radial-gradient(ellipse 65% 60% at 25% 45%,rgba(0,229,200,0.38) 0%,transparent 55%),radial-gradient(ellipse 45% 65% at 80% 65%,rgba(0,140,220,0.28) 0%,transparent 50%),linear-gradient(145deg,#061520 0%,#081e30 100%); }
+    .thumb-art--perf { background:radial-gradient(ellipse 60% 55% at 70% 35%,rgba(245,158,11,0.38) 0%,transparent 55%),radial-gradient(ellipse 45% 60% at 20% 70%,rgba(220,80,0,0.22) 0%,transparent 50%),linear-gradient(155deg,#120e02 0%,#181205 100%); }
+    .thumb-art--dev  { background:radial-gradient(ellipse 65% 55% at 30% 55%,rgba(129,140,248,0.38) 0%,transparent 55%),radial-gradient(ellipse 45% 55% at 75% 25%,rgba(100,30,220,0.28) 0%,transparent 50%),linear-gradient(135deg,#060818 0%,#0a0820 100%); }
+    .thumb-art--ecomm{ background:radial-gradient(ellipse 60% 55% at 60% 40%,rgba(52,211,153,0.38) 0%,transparent 55%),radial-gradient(ellipse 45% 60% at 15% 70%,rgba(0,180,110,0.22) 0%,transparent 50%),linear-gradient(145deg,#051610 0%,#071e18 100%); }
+    .thumb-art--ux   { background:radial-gradient(ellipse 60% 55% at 45% 35%,rgba(244,114,182,0.36) 0%,transparent 55%),radial-gradient(ellipse 50% 60% at 80% 70%,rgba(180,20,120,0.22) 0%,transparent 50%),linear-gradient(145deg,#120610 0%,#1a0618 100%); }
+    .thumb-art--web  { background:radial-gradient(ellipse 65% 55% at 30% 55%,rgba(99,179,237,0.38) 0%,transparent 55%),radial-gradient(ellipse 50% 60% at 78% 25%,rgba(49,130,206,0.28) 0%,transparent 50%),linear-gradient(135deg,#050c18 0%,#080f22 100%); }
+    .thumb-art--ecom { background:radial-gradient(ellipse 60% 55% at 60% 40%,rgba(52,211,153,0.38) 0%,transparent 55%),radial-gradient(ellipse 45% 60% at 15% 70%,rgba(0,180,110,0.22) 0%,transparent 50%),linear-gradient(145deg,#051610 0%,#071e18 100%); }
+    .thumb-num { position:absolute; bottom:12px; right:14px; font-family:var(--disp); font-size:36px; font-weight:900; color:rgba(255,255,255,0.10); line-height:1; user-select:none; }
 
-    .pc-body { padding:24px 24px 20px; display:flex; flex-direction:column; gap:12px; flex:1; }
+    /* ── Category icons in thumbnails ── */
+    .thumb-icon { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); opacity:0.22; pointer-events:none; transition:opacity .4s; }
+    .post-card:hover .thumb-icon { opacity:0.32; }
+    .thumb-icon svg { display:block; }
+
+    /* ── Real image thumbnails (DALL-E generated) ── */
+    .pc-thumb img, .fc-visual > img {
+      position:absolute; inset:0; width:100%; height:100%;
+      object-fit:cover; transition:transform .5s ease;
+    }
+    .post-card:hover .pc-thumb img { transform:scale(1.03); }
+    .featured-card:hover .fc-visual > img { transform:scale(1.03); }
+    .pc-thumb img + .thumb-num { z-index:2; }
+    /* Overlay oscuro sobre la imagen para mantener la estética */
+    .pc-thumb::after {
+      content:''; position:absolute; inset:0; z-index:1;
+      background:linear-gradient(to top, rgba(6,12,22,0.7) 0%, rgba(6,12,22,0.1) 60%);
+      pointer-events:none;
+    }
+    .pc-thumb img ~ .thumb-num { z-index:2; }
+
+    .pc-body { padding:24px 24px 20px; display:flex; flex-direction:column; gap:14px; flex:1; }
     .pc-meta { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
-    .pc-title { font-family:var(--serif); font-size:clamp(17px,1.6vw,22px); font-weight:400; line-height:1.25; color:rgba(240,250,255,0.92); letter-spacing:-.01em; transition:color .2s; }
+    .pc-title { font-family:var(--serif); font-size:clamp(17px,1.6vw,22px); font-weight:400; line-height:1.28; color:rgba(225,242,255,0.95); letter-spacing:-.01em; transition:color .2s; }
     .post-card:hover .pc-title { color:#fff; }
-    .pc-excerpt { font-size:13px; font-weight:300; color:var(--bt-m); line-height:1.65; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+    .pc-excerpt { font-size:13.5px; font-weight:400; color:var(--bt-m); line-height:1.7; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
     .pc-footer { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:16px; border-top:1px solid var(--bb); }
     .post-date { font-family:var(--mono); font-size:8px; letter-spacing:.18em; color:var(--bt-m); text-transform:uppercase; }
     .read-time { font-family:var(--mono); font-size:8px; letter-spacing:.15em; color:var(--bt-m); text-transform:uppercase; display:flex; align-items:center; gap:5px; }
@@ -377,6 +398,27 @@
 
     // ── CONFIG ──────────────────────────────────────
     const POSTS_PER_PAGE = 6;
+
+    // ── THUMB CONTENT (imagen real o CSS fallback) ───
+    function thumbContent(post, iconSize) {
+      if (post.imageUrl) {
+        return `<img src="${post.imageUrl}" alt="${post.title}" loading="lazy" decoding="async">`;
+      }
+      return `<div class="thumb-art ${post.thumbClass}">${thumbIcon(post.category, iconSize)}</div>`;
+    }
+
+    // ── THUMB ICONS ──────────────────────────────────
+    function thumbIcon(category, size = 80) {
+      const s = size;
+      const icons = {
+        seo: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`,
+        performance: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(245,158,11,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+        desarrollo: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(129,140,248,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+        ecommerce: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(52,211,153,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
+        ux: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(244,114,182,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
+      };
+      return `<span class="thumb-icon">${icons[category] || icons.desarrollo}</span>`;
+    }
     const TAG_CLASSES = { seo:'tag', performance:'tag tag--perf', desarrollo:'tag tag--dev', ecommerce:'tag tag--ecomm', ux:'tag tag--ux' };
 
     function tagClass(cat) { return TAG_CLASSES[cat] || 'tag'; }
@@ -482,8 +524,12 @@
       container.innerHTML = `
         <a class="featured-card" href="post.html?slug=${post.slug}" aria-label="Leer: ${post.title}">
           <div class="fc-visual">
-            <div class="fc-visual-bg ${post.thumbClass || ''}"></div>
+            ${post.imageUrl
+              ? `<img src="${post.imageUrl}" alt="${post.title}" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55">`
+              : `<div class="fc-visual-bg ${post.thumbClass || ''}"></div>`
+            }
             <div class="fc-badge"><span class="fc-badge-dot"></span>Destacado</div>
+            ${!post.imageUrl ? `<span class="thumb-icon" style="opacity:0.28">${(thumbIcon(post.category, 120)).replace('<span class="thumb-icon">','').replace('</span>','')}</span>` : ''}
             <svg class="fc-glyph" viewBox="0 0 200 200" aria-hidden="true">
               <circle cx="100" cy="100" r="80" stroke-dasharray="4 8"/>
               <circle cx="100" cy="100" r="55" stroke-dasharray="2 6"/>
@@ -544,7 +590,7 @@
           // Wide card
           html += `
           <a class="post-card c8 reveal d1" href="post.html?slug=${post.slug}">
-            <div class="pc-thumb"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-thumb">${thumbContent(post, 80)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
             <div class="pc-body">
               <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
               <h2 class="pc-title">${post.title}</h2>
@@ -556,7 +602,7 @@
           // Narrow card (completes 8+4 row)
           html += `
           <a class="post-card c4 reveal d2" href="post.html?slug=${post.slug}">
-            <div class="pc-thumb pc-thumb--tall"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-thumb pc-thumb--tall">${thumbContent(post, 70)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
             <div class="pc-body">
               <div class="pc-meta"><span class="${tc}">${tl}</span></div>
               <h2 class="pc-title">${post.title}</h2>
@@ -569,7 +615,7 @@
           const delay = ['d1','d2','d3'][i-2];
           html += `
           <a class="post-card c4 reveal ${delay}" href="post.html?slug=${post.slug}">
-            <div class="pc-thumb"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-thumb">${thumbContent(post, 64)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
             <div class="pc-body">
               <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
               <h2 class="pc-title">${post.title}</h2>
@@ -588,7 +634,7 @@
             </form>
           </div>
           <a class="post-card c8 pc--horiz reveal d1" href="post.html?slug=${post.slug}" style="align-self:start">
-            <div class="pc-thumb" style="width:220px;flex-shrink:0;aspect-ratio:unset"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-thumb" style="width:220px;flex-shrink:0;aspect-ratio:unset">${thumbContent(post, 56)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
             <div class="pc-body">
               <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
               <h2 class="pc-title">${post.title}</h2>
@@ -601,7 +647,7 @@
           const delay = ['d1','d2','d3','d4'][i % 4];
           html += `
           <a class="post-card c4 pc--compact reveal ${delay}" href="post.html?slug=${post.slug}">
-            <div class="pc-thumb pc-thumb--short"><div class="thumb-art ${post.thumbClass}"></div><div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-thumb pc-thumb--short">${thumbContent(post, 48)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
             <div class="pc-body">
               <div class="pc-meta"><span class="${tc}">${tl}</span></div>
               <h2 class="pc-title">${post.title}</h2>
