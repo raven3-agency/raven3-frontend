@@ -2,7 +2,7 @@ name: 📝 Generador de Post Semanal
 
 on:
   schedule:
-    - cron: '0 10 * * 1'   # Todos los lunes a las 10am UTC (7am Argentina)
+    - cron: '0 10 1,15 * *'   # El 1 y el 15 de cada mes a las 10am UTC (7am Argentina)
   workflow_dispatch:         # También se puede ejecutar manualmente desde GitHub
 
 jobs:
