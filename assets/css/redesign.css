@@ -181,6 +181,49 @@ p { font-family: var(--font-body); }
 
 @media (max-width: 900px) { .topbar-sys { display: none; } }
 
+/* ── TOPBAR CONTAINER NORMALIZATION ──────────────────────── */
+/* Prevents inline .container overrides (auto-margin) from shifting the logo */
+.topbar .container {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ── TOPBAR WORDMARK ──────────────────────────────────────── */
+a.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.topbar-wordmark {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 26px;
+  color: #e9eef2;
+  line-height: 1;
+  text-transform: uppercase;
+  user-select: none;
+}
+.topbar-dot {
+  color: #00e5c8;
+}
+.footer-wordmark {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  font-size: 26px;
+  color: #e9eef2;
+  line-height: 1;
+  text-transform: uppercase;
+  user-select: none;
+  display: inline-block;
+}
+.footer-dot {
+  color: #00e5c8;
+}
+
 /* ── 5. HERO ─────────────────────────────────────────────── */
 /* Suppress existing hero-grid — blueprint-grid covers it */
 .hero-grid {
