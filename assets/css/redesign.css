@@ -136,10 +136,11 @@ p { font-family: var(--font-body); }
 
 .topbar__link {
   font-family: var(--font-mono) !important;
-  font-size: 10px !important;
+  font-size: 13px !important;
   letter-spacing: 0.13em !important;
   text-transform: uppercase !important;
   color: rgba(195, 215, 228, 0.62) !important;
+  padding-inline: 0 !important;
 }
 
 .topbar__link:hover {
