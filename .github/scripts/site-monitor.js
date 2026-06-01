@@ -19,23 +19,30 @@ const FROM_EMAIL         = 'Raven3 Monitor <monitor@raven3.com.ar>';
 const ALERT_COOLDOWN_MS  = 4 * 60 * 60 * 1000;  // recordatorio cada 4hs si sigue caído
 const STATE_FILE         = path.join(__dirname, '..', '..', '.monitor-state.json');
 
+// Umbrales de alerta de vencimiento de dominio (días antes del vencimiento).
+// Se envía una alerta por cada umbral cruzado, sin repeticiones.
+const EXPIRY_THRESHOLDS  = [60, 30, 7];
+
 // ── SITIOS ────────────────────────────────────────────────────────────────────
 // Completá stakeholderEmail con el email del cliente de cada sitio.
 // Si está vacío, solo se notifica a Raven3.
 
+// domainExpiry: fecha de vencimiento del dominio en formato 'YYYY-MM-DD'.
+// Completar con los datos del panel del registrar (NIC Argentina u otro).
+// Dejar null si no se conoce la fecha.
 const SITES = [
-  { name: 'NDB Propiedades',         url: 'https://ndbpropiedades.com.ar',                      category: 'Inmobiliaria', stakeholderEmail: '' },
-  { name: 'Art1',                    url: 'https://art1.com.ar',                                 category: 'Arte',         stakeholderEmail: '' },
-  { name: 'Somos Grupos de Mujeres', url: 'https://somosgrupodemujeresmas.ar',                   category: 'Comunidad',    stakeholderEmail: '' },
-  { name: 'CEA American',            url: 'https://cea-american.com.ar',                         category: 'Educación',    stakeholderEmail: '' },
-  { name: 'OKOS',                    url: 'https://okos.com.ar',                                 category: 'E-commerce',   stakeholderEmail: '' },
-  { name: 'Perniles Cochon',         url: 'https://pernilescochon.com.ar',                       category: 'Gastronomía',  stakeholderEmail: '' },
-  { name: 'Ibarra Propiedades',      url: 'https://ibarraprop.com.ar',                           category: 'Inmobiliaria', stakeholderEmail: '' },
-  { name: 'Etienne de Montebello',   url: 'https://etiennedemontebello.com',                     category: 'Moda',         stakeholderEmail: '' },
-  { name: 'Lassen',                  url: 'https://lassen.ar',                                   category: 'Empresa',      stakeholderEmail: '' },
-  { name: 'Beforce',                 url: 'https://beforce.ar',                                  category: 'Fitness',      stakeholderEmail: '' },
-  { name: 'Knots4',                  url: 'https://knots4.mitiendanube.com',                     category: 'E-commerce',   stakeholderEmail: '' },
-  // { name: 'Didot Estudio',           url: 'https://didot.com.ar',                                category: 'Diseño',       stakeholderEmail: '' },
+  { name: 'NDB Propiedades',         url: 'https://ndbpropiedades.com.ar',          category: 'Inmobiliaria', stakeholderEmail: '', domainExpiry: '2027-04-23' },
+  { name: 'Art1',                    url: 'https://art1.com.ar',                    category: 'Arte',         stakeholderEmail: '', domainExpiry: '2026-04-29' },
+  { name: 'Somos Grupos de Mujeres', url: 'https://somosgrupodemujeresmas.ar',       category: 'Comunidad',    stakeholderEmail: '', domainExpiry: null          },
+  { name: 'CEA American',            url: 'https://cea-american.com.ar',            category: 'Educación',    stakeholderEmail: '', domainExpiry: null          },
+  { name: 'OKOS',                    url: 'https://okos.com.ar',                    category: 'E-commerce',   stakeholderEmail: '', domainExpiry: null          },
+  { name: 'Perniles Cochon',         url: 'https://pernilescochon.com.ar',          category: 'Gastronomía',  stakeholderEmail: '', domainExpiry: null          },
+  { name: 'Ibarra Propiedades',      url: 'https://ibarraprop.com.ar',              category: 'Inmobiliaria', stakeholderEmail: '', domainExpiry: null          },
+  { name: 'Etienne de Montebello',   url: 'https://etiennedemontebello.com',        category: 'Moda',         stakeholderEmail: '', domainExpiry: null          },
+  { name: 'Lassen',                  url: 'https://lassen.ar',                      category: 'Empresa',      stakeholderEmail: '', domainExpiry: null          },
+  { name: 'Beforce',                 url: 'https://beforce.ar',                     category: 'Fitness',      stakeholderEmail: '', domainExpiry: null          },
+  { name: 'Knots4',                  url: 'https://knots4.mitiendanube.com',        category: 'E-commerce',   stakeholderEmail: '', domainExpiry: null          },
+  // { name: 'Didot Estudio',        url: 'https://didot.com.ar',                   category: 'Diseño',       stakeholderEmail: '', domainExpiry: null          },
 ];
 
 // ── DNS CHECK ─────────────────────────────────────────────────────────────────
@@ -190,6 +197,68 @@ function emailRecovery(site, result) {
   </div>
   <div style="padding:14px 28px;background:#111827;border-top:1px solid rgba(255,255,255,0.05);font-size:11px;color:#334155;">
     Raven3 Web Monitor · Checks automáticos cada 5 min
+  </div>
+</div>`,
+  };
+}
+
+// ── DOMAIN EXPIRY ─────────────────────────────────────────────────────────────
+
+function daysUntilExpiry(dateStr) {
+  const expiry  = new Date(dateStr);
+  expiry.setHours(0, 0, 0, 0);
+  const today   = new Date();
+  today.setHours(0, 0, 0, 0);
+  return Math.round((expiry - today) / (1000 * 60 * 60 * 24));
+}
+
+// Retorna el umbral que debe disparar alerta, o null si no corresponde.
+// Se basa en el último umbral ya notificado (lastExpiryThreshold en state).
+function pendingExpiryThreshold(daysLeft, lastThreshold) {
+  if (daysLeft <= 0)  return lastThreshold === 'expired' ? null : 'expired';
+  for (const t of EXPIRY_THRESHOLDS) {
+    if (daysLeft <= t && (lastThreshold === null || lastThreshold > t)) return t;
+  }
+  return null;
+}
+
+function emailDomainExpiry(site, daysLeft) {
+  const expired     = daysLeft <= 0;
+  const accentColor = expired ? '#ef4444' : daysLeft <= 7 ? '#f97316' : '#eab308';
+  const icon        = expired ? '💀' : daysLeft <= 7 ? '🔥' : '⚠️';
+  const subject     = expired
+    ? `${icon} DOMINIO VENCIDO — ${site.name} (${new URL(site.url).hostname})`
+    : `${icon} Dominio por vencer — ${site.name} vence en ${daysLeft} días`;
+  const bodyMsg = expired
+    ? `El dominio <strong>${new URL(site.url).hostname}</strong> ya está <strong style="color:${accentColor}">vencido</strong>. Renovalo cuanto antes para evitar que el sitio deje de funcionar.`
+    : `El dominio <strong>${new URL(site.url).hostname}</strong> vence en <strong style="color:${accentColor}">${daysLeft} día${daysLeft !== 1 ? 's' : ''}</strong> (${new Date(site.domainExpiry).toLocaleDateString('es-AR')}). Coordiná la renovación a tiempo.`;
+
+  return {
+    subject,
+    html: `
+<div style="font-family:Arial,sans-serif;max-width:580px;margin:0 auto;background:#0b0f17;color:#d7e8f5;border-radius:12px;overflow:hidden;border:1px solid ${accentColor}33;">
+  <div style="background:#111827;padding:20px 28px;border-bottom:1px solid rgba(0,229,200,0.12);">
+    <span style="font-size:10px;letter-spacing:0.3em;color:#00e5c8;text-transform:uppercase;font-weight:700;">RAVEN3 · WEB MONITOR</span>
+  </div>
+  <div style="padding:28px;">
+    <h2 style="margin:0 0 6px;color:${accentColor};font-size:20px;">${icon} ${expired ? 'Dominio vencido' : 'Dominio por vencer'}</h2>
+    <p style="color:#64748b;margin:0 0 24px;font-size:13px;">${arTime()}</p>
+    <table style="width:100%;border-collapse:collapse;font-size:14px;">
+      <tr><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#64748b;width:130px;">Sitio</td>
+          <td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-weight:600;">${site.name}</td></tr>
+      <tr><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#64748b;">Dominio</td>
+          <td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);font-family:monospace;font-size:13px;">${new URL(site.url).hostname}</td></tr>
+      <tr><td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);color:#64748b;">Vencimiento</td>
+          <td style="padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.06);">${new Date(site.domainExpiry).toLocaleDateString('es-AR')}</td></tr>
+      <tr><td style="padding:10px 0;color:#64748b;">Días restantes</td>
+          <td style="padding:10px 0;color:${accentColor};font-weight:700;font-size:16px;">${expired ? 'VENCIDO' : daysLeft}</td></tr>
+    </table>
+    <div style="margin-top:20px;padding:14px 16px;background:${accentColor}11;border-radius:8px;border:1px solid ${accentColor}30;font-size:13px;color:#fde68a;line-height:1.5;">
+      ${bodyMsg}
+    </div>
+  </div>
+  <div style="padding:14px 28px;background:#111827;border-top:1px solid rgba(255,255,255,0.05);font-size:11px;color:#334155;">
+    Raven3 Web Monitor · Alertas de vencimiento: 60, 30 y 7 días antes
   </div>
 </div>`,
   };
