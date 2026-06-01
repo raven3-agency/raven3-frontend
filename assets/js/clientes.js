@@ -16,6 +16,20 @@
 
   const pluralize = (n, singular, plural) => (n === 1 ? singular : plural);
 
+  function sanitizeLightboxSrc(raw) {
+    if (!raw) return "";
+    try {
+      const url = new URL(raw, window.location.href);
+      const isHttp = url.protocol === "http:" || url.protocol === "https:";
+      const isSameOriginRelative = !/^[a-zA-Z][a-zA-Z\d+\-.]*:/.test(raw) && url.origin === window.location.origin;
+      return isHttp && (url.origin === window.location.origin || /^https?:$/.test(url.protocol))
+        ? url.href
+        : (isSameOriginRelative ? url.href : "");
+    } catch {
+      return "";
+    }
+  }
+
   function openLightbox(src, alt) {
     if (!lb || !lbImg) return;
     lbImg.src = src;
@@ -39,9 +53,10 @@
       const trigger = e.target.closest("[data-lightbox]");
       if (!trigger) return;
 
-      const src = trigger.getAttribute("data-lightbox");
+      const src = sanitizeLightboxSrc(trigger.getAttribute("data-lightbox"));
       const img = trigger.querySelector("img") || trigger.closest(".client-card")?.querySelector("img");
 
+      if (!src) return;
       openLightbox(src, img?.alt);
     });
   }
