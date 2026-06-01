@@ -41,19 +41,21 @@ document.addEventListener(
     const src = trigger.getAttribute("data-lightbox");
     if (!src) return;
 
+    let validatedSrc;
     try {
       const url = new URL(src, location.href);
       if (url.protocol !== "https:" && url.protocol !== "http:") return;
+      validatedSrc = url.href;
     } catch {
       return;
     }
 
-    if (!sizeCache.has(src)) sizeCache.set(src, getImageSize(src));
-    const { w, h } = await sizeCache.get(src);
+    if (!sizeCache.has(validatedSrc)) sizeCache.set(validatedSrc, getImageSize(validatedSrc));
+    const { w, h } = await sizeCache.get(validatedSrc);
 
     proxy.replaceChildren();
     const a = document.createElement("a");
-    a.href = src;
+    a.href = validatedSrc;
     a.dataset.pswpWidth = String(w);
     a.dataset.pswpHeight = String(h);
     proxy.appendChild(a);
