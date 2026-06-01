@@ -224,10 +224,10 @@ Respondé ÚNICAMENTE con un objeto JSON válido con esta estructura exacta:
 El campo "readTime" es un número entero de minutos estimados de lectura.
 El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
 
-  console.log(`🤖 Llamando a Gemini 2.0 Flash para generar post sobre: "${topic}"`);
+  console.log(`🤖 Llamando a Gemini 1.5 Flash 8B para generar post sobre: "${topic}"`);
 
   const model = genAI.getGenerativeModel({
-    model: 'gemini-2.0-flash',
+    model: 'gemini-1.5-flash-8b',
     generationConfig: {
       responseMimeType: 'application/json',
       maxOutputTokens: 4096,
@@ -235,7 +235,18 @@ El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
     }
   });
 
-  const result = await model.generateContent(prompt);
+  let result;
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    try {
+      result = await model.generateContent(prompt);
+      break;
+    } catch (err) {
+      if (attempt === 3) throw err;
+      const wait = attempt * 35000;
+      console.log(`⏳ Rate limit (intento ${attempt}/3), reintentando en ${wait / 1000}s...`);
+      await new Promise(r => setTimeout(r, wait));
+    }
+  }
   const rawText = result.response.text().trim();
 
   const jsonMatch = rawText.match(/\{[\s\S]*\}/);
