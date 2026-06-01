@@ -321,6 +321,7 @@
     const TAG_LABELS  = { seo:'SEO Técnico', performance:'Performance', desarrollo:'Desarrollo', ecommerce:'E-Commerce', ux:'UX / CRO' };
     function tc(cat){ return TAG_CLASSES[cat]||'tag'; }
     function tl(cat){ return TAG_LABELS[cat]||cat; }
+    function e(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
     // Reading progress bar
     window.addEventListener('scroll', () => {
@@ -418,20 +419,20 @@
         const id = 'h-' + i;
         h.id = id;
         const level = h.tagName.toLowerCase();
-        tocHtml += `<li class="toc-item toc-item--${level}"><a href="#${id}" data-id="${id}">${h.textContent}</a></li>`;
+        tocHtml += `<li class="toc-item toc-item--${level}"><a href="#${id}" data-id="${id}">${e(h.textContent)}</a></li>`;
       });
 
       // Tags HTML
-      const tagsHtml = post.tags.map(t => `<span class="tag" style="font-size:9px">${t}</span>`).join('');
+      const tagsHtml = post.tags.map(t => `<span class="tag" style="font-size:9px">${e(t)}</span>`).join('');
 
       // Related cards
       const relatedCards = related.map(r => `
-        <a class="post-card" href="post.html?slug=${r.slug}">
-          <div class="pc-thumb"><div class="thumb-art ${r.thumbClass||'thumb-art--seo'}"></div></div>
+        <a class="post-card" href="post.html?slug=${encodeURIComponent(r.slug)}">
+          <div class="pc-thumb"><div class="thumb-art ${e(r.thumbClass||'thumb-art--seo')}"></div></div>
           <div class="pc-body">
-            <span class="${tc(r.category)}" style="font-size:8px">${tl(r.category)}</span>
-            <h3 class="pc-title">${r.title}</h3>
-            <div class="pc-footer"><span class="post-date">${r.dateFormatted}</span><span class="read-time">${r.readTime} min</span></div>
+            <span class="${e(tc(r.category))}" style="font-size:8px">${e(tl(r.category))}</span>
+            <h3 class="pc-title">${e(r.title)}</h3>
+            <div class="pc-footer"><span class="post-date">${e(r.dateFormatted)}</span><span class="read-time">${e(r.readTime)} min</span></div>
           </div>
         </a>`).join('');
 
@@ -442,33 +443,33 @@
             <nav class="post-breadcrumb" aria-label="Breadcrumb">
               <a href="/blog/">Blog</a>
               <span aria-hidden="true">›</span>
-              <a href="/blog/?filter=${post.category}">${tl(post.category)}</a>
+              <a href="/blog/?filter=${encodeURIComponent(post.category)}">${e(tl(post.category))}</a>
               <span aria-hidden="true">›</span>
-              <span style="color:var(--bt-m)">${post.title.substring(0,40)}…</span>
+              <span style="color:var(--bt-m)">${e(post.title.substring(0,40))}…</span>
             </nav>
 
             <div class="post-eyebrow">
-              <span class="${tc(post.category)}">${tl(post.category)}</span>
+              <span class="${e(tc(post.category))}">${e(tl(post.category))}</span>
               ${post.featured ? '<span class="tag" style="background:rgba(0,229,200,0.12);border-color:rgba(0,229,200,0.3)">Destacado</span>' : ''}
             </div>
 
-            <h1 class="post-hero__title">${post.title}</h1>
-            <p class="post-hero__excerpt">${post.excerpt}</p>
+            <h1 class="post-hero__title">${e(post.title)}</h1>
+            <p class="post-hero__excerpt">${e(post.excerpt)}</p>
 
             <div class="post-hero__meta">
               <div class="author-chip">
-                <div class="author-avatar">${post.author.initials}</div>
-                <div><div class="author-name">${post.author.name}</div><div class="author-role">${post.author.role}</div></div>
+                <div class="author-avatar">${e(post.author.initials)}</div>
+                <div><div class="author-name">${e(post.author.name)}</div><div class="author-role">${e(post.author.role)}</div></div>
               </div>
               <div class="post-meta-sep" aria-hidden="true"></div>
               <div class="post-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                ${post.dateFormatted}
+                ${e(post.dateFormatted)}
               </div>
               <div class="post-meta-sep" aria-hidden="true"></div>
               <div class="post-meta-item">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                ${post.readTime} min de lectura
+                ${e(post.readTime)} min de lectura
               </div>
             </div>
           </div>
@@ -477,7 +478,7 @@
         <!-- COVER ART -->
         <div class="post-cover">
           <div class="post-cover__art">
-            <div class="post-cover__art-bg thumb-art ${post.thumbClass||'thumb-art--seo'}"></div>
+            <div class="post-cover__art-bg thumb-art ${e(post.thumbClass||'thumb-art--seo')}"></div>
             <svg class="cover-glyph" viewBox="0 0 240 240" aria-hidden="true">
               <circle cx="120" cy="120" r="100" stroke-dasharray="4 8"/>
               <circle cx="120" cy="120" r="70" stroke-dasharray="2 6"/>
@@ -485,7 +486,7 @@
               <line x1="20" y1="120" x2="220" y2="120" stroke="rgba(0,229,200,0.3)" stroke-width="0.5"/>
               <line x1="120" y1="20" x2="120" y2="220" stroke="rgba(0,229,200,0.3)" stroke-width="0.5"/>
             </svg>
-            <span class="cover-sys">SYS.BLOG // ${post.category.toUpperCase()} // ${post.slug.toUpperCase()}</span>
+            <span class="cover-sys">SYS.BLOG // ${e(post.category.toUpperCase())} // ${e(post.slug.toUpperCase())}</span>
           </div>
         </div>
 
@@ -533,9 +534,9 @@
             </div>` : ''}
             <div class="sidebar-info" style="margin-top:${tocHtml?'20px':'0'}">
               <p class="sidebar-info__label">Detalles</p>
-              <p class="sidebar-info__date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>${post.dateFormatted}</p>
-              <p class="sidebar-info__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${post.readTime} min de lectura</p>
-              <p class="sidebar-info__cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span class="${tc(post.category)}" style="font-size:8px">${tl(post.category)}</span></p>
+              <p class="sidebar-info__date"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>${e(post.dateFormatted)}</p>
+              <p class="sidebar-info__time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${e(post.readTime)} min de lectura</p>
+              <p class="sidebar-info__cat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg><span class="${e(tc(post.category))}" style="font-size:8px">${e(tl(post.category))}</span></p>
             </div>
           </aside>
         </div>

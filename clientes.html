@@ -1088,9 +1088,9 @@
         if (!stage || !btn) return;
         btn.addEventListener('click', function () {
           var yt = stage.getAttribute('data-youtube');
-          if (!yt) return;
+          if (!yt || !/^[\w-]{1,20}$/.test(yt)) return;
           var iframe = document.createElement('iframe');
-          iframe.src = 'https://www.youtube.com/embed/' + yt + '?autoplay=1&rel=0';
+          iframe.src = 'https://www.youtube.com/embed/' + encodeURIComponent(yt) + '?autoplay=1&rel=0';
           iframe.allow = 'autoplay; encrypted-media';
           iframe.allowFullscreen = true;
           stage.appendChild(iframe);
