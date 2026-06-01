@@ -2,7 +2,7 @@
  * Generador automático de posts para el blog de Raven3
  * Se ejecuta cada lunes via GitHub Actions
  *
- * Texto  → Google Gemini 1.5 Flash (tier GRATUITO, sin tarjeta)
+ * Texto  → Google Gemini 2.0 Flash (tier GRATUITO, sin tarjeta)
  * Imagen → Pollinations.ai         (100% gratis, sin cuenta ni API key)
  */
 
@@ -224,10 +224,10 @@ Respondé ÚNICAMENTE con un objeto JSON válido con esta estructura exacta:
 El campo "readTime" es un número entero de minutos estimados de lectura.
 El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
 
-  console.log(`🤖 Llamando a Gemini 1.5 Flash para generar post sobre: "${topic}"`);
+  console.log(`🤖 Llamando a Gemini 2.0 Flash para generar post sobre: "${topic}"`);
 
   const model = genAI.getGenerativeModel({
-    model: 'gemini-1.5-flash',
+    model: 'gemini-2.0-flash',
     generationConfig: {
       responseMimeType: 'application/json',
       maxOutputTokens: 4096,
