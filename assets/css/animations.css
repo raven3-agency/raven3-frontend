@@ -21,13 +21,12 @@
   position: fixed;
   width: 40px;
   height: 40px;
-  border: 1px solid rgba(0, 229, 200, 0.45);
+  border: 1.5px solid rgba(0, 229, 200, 0.75);
   border-radius: 50%;
   pointer-events: none;
   z-index: 99999;
   opacity: 0;
   transition: opacity 0.2s ease, transform 0.08s ease, border-color 0.2s ease;
-  mix-blend-mode: exclusion;
   transform: translate(-100px, -100px);
 }
 
@@ -49,7 +48,11 @@
   opacity: 0.6 !important;
 }
 
-@media (hover: none), (pointer: coarse) {
+@media (pointer: fine) {
+  body, a, button, [role="button"] { cursor: none; }
+}
+
+@media (pointer: coarse) {
   #cursor,
   #cursor-dot { display: none; }
 }

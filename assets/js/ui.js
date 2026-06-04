@@ -88,7 +88,7 @@ function initSmoothScrollLinks() {
 }
 
 /* ── Custom cursor ──────────────────────────────────── */
-function initCustomCursor() {
+export function initCustomCursor() {
   if (!window.matchMedia('(pointer: fine)').matches) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
