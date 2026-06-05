@@ -178,11 +178,15 @@ const App = (() => {
       btn.disabled = true;
       btn.textContent = 'Agregado';
       btn.style.opacity = '0.5';
-      btn.closest('.result-card')?.classList.add('already-added');
-      const tag = document.createElement('span');
-      tag.className = 'added-tag';
-      tag.textContent = 'Agregado';
-      btn.closest('.result-card')?.appendChild(tag);
+      const card = btn.closest('.result-card');
+      card?.classList.add('already-added');
+      const badges = card?.querySelector('.result-card-badges');
+      if (badges && !badges.querySelector('.added-tag')) {
+        const tag = document.createElement('span');
+        tag.className = 'added-tag';
+        tag.textContent = 'Agregado';
+        badges.insertBefore(tag, badges.firstChild);
+      }
     }
   };
 

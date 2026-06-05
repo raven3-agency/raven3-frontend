@@ -795,8 +795,6 @@ img { max-width: 100%; display: block; }
 }
 
 .added-tag {
-  position: absolute;
-  top: 12px; right: 12px;
   background: var(--accent-dim);
   border: 1px solid var(--accent-border);
   color: var(--accent);
@@ -805,6 +803,15 @@ img { max-width: 100%; display: block; }
   padding: 2px 8px;
   border-radius: 99px;
   letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.result-card-badges {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
 }
 
 /* Loading skeleton */

@@ -254,14 +254,16 @@ const UI = (() => {
   const renderResultCard = (l, alreadyAdded) => {
     return `
       <div class="result-card${alreadyAdded ? ' already-added' : ''}">
-        ${alreadyAdded ? '<span class="added-tag">Agregado</span>' : ''}
         <div class="result-card-header">
           ${scorePill(l.opportunityScore)}
           <div class="result-card-info">
             <div class="result-card-name">${l.businessName}</div>
             <div class="result-card-meta">${l.category} · ${l.zone}</div>
           </div>
-          ${priorityBadge(l.priority)}
+          <div class="result-card-badges">
+            ${alreadyAdded ? '<span class="added-tag">Agregado</span>' : ''}
+            ${priorityBadge(l.priority)}
+          </div>
         </div>
         <div class="result-card-body">
           ${ratingHtml(l.rating, l.reviewsCount)}
