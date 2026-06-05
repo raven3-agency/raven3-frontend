@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lead Radar — Raven3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ SIDEBAR ═══ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-logo">
+      <div class="logo-mark">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+          <path d="M15 2L26 8.5V21.5L15 28L4 21.5V8.5L15 2Z" stroke="#00E5C8" stroke-width="1.5" fill="none"/>
+          <path d="M15 2L26 8.5V21.5L15 28" stroke="#00E5C8" stroke-width="1.5" opacity="0.35"/>
+          <circle cx="15" cy="15" r="3.5" fill="#00E5C8"/>
+          <path d="M15 11.5V2M15 18.5V28M11.5 13.5L4 8.5M18.5 16.5L26 21.5M11.5 16.5L4 21.5M18.5 13.5L26 8.5" stroke="#00E5C8" stroke-width="0.8" opacity="0.45"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-brand">RAVEN3</span>
+        <span class="logo-product">Lead Radar</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="nav-item active" data-section="dashboard" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span>Dashboard</span>
+      </a>
+      <a class="nav-item" data-section="search" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <circle cx="9" cy="9" r="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M13.5 13.5L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Buscar Leads</span>
+      </a>
+      <a class="nav-item" data-section="leads" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M4 5H16M4 10H16M4 15H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Leads</span>
+        <span class="nav-badge" id="navLeadCount">0</span>
+      </a>
+      <a class="nav-item" data-section="kanban" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <rect x="2" y="3" width="4" height="14" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="8" y="3" width="4" height="10" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="14" y="3" width="4" height="7" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+        <span>Pipeline</span>
+      </a>
+      <a class="nav-item" data-section="templates" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <path d="M4 4C4 2.9 4.9 2 6 2H12L16 6V16C16 17.1 15.1 18 14 18H6C4.9 18 4 17.1 4 16V4Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M12 2V6H16" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M7 10H13M7 13H10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Templates</span>
+      </a>
+      <a class="nav-item" data-section="settings" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M10 2.5V4.5M10 15.5V17.5M2.5 10H4.5M15.5 10H17.5M4.4 4.4L5.8 5.8M14.2 14.2L15.6 15.6M4.4 15.6L5.8 14.2M14.2 5.8L15.6 4.4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span>Configuración</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="sidebar-user">
+        <div class="user-avatar">P</div>
+        <div class="user-info">
+          <span class="user-name">Patricio</span>
+          <span class="user-role">Admin · Raven3</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- ═══════════════════════════════════ MAIN ═══ -->
+  <main class="main" id="main">
+
+    <header class="topbar">
+      <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M3 5H17M3 10H17M3 15H17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="topbar-breadcrumb">
+        <span class="topbar-title" id="topbarTitle">Dashboard</span>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn-icon-sm" id="btnAddLead" title="Agregar lead manual">
+          <svg viewBox="0 0 18 18" fill="none">
+            <circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.4"/>
+            <path d="M9 6V12M6 9H12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <button class="btn-icon-sm" id="btnExport" title="Exportar CSV">
+          <svg viewBox="0 0 18 18" fill="none">
+            <path d="M3.5 12V15H14.5V12M9 3V11M6 8.5L9 11.5L12 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="topbar-status">
+          <span class="status-dot"></span>
+          <span class="status-label">LocalDB</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ─── DASHBOARD ─── -->
+    <section class="section active" id="sec-dashboard">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Dashboard</h1>
+          <p class="page-subtitle">Resumen de oportunidades y pipeline</p>
+        </div>
+        <div class="page-header-right">
+          <button class="btn-primary" onclick="App.navigate('search')">
+            <svg viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M11 11L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Nueva búsqueda
+          </button>
+        </div>
+      </div>
+      <div id="dashboardContent"></div>
+    </section>
+
+    <!-- ─── SEARCH ─── -->
+    <section class="section" id="sec-search">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Buscar Oportunidades</h1>
+          <p class="page-subtitle">Encontrá negocios locales con potencial de mejora web</p>
+        </div>
+      </div>
+
+      <div class="card search-card">
+        <div class="search-grid">
+          <div class="form-group">
+            <label class="form-label" for="searchCategory">Rubro / Categoría</label>
+            <select class="form-select" id="searchCategory">
+              <option value="">Seleccionar rubro...</option>
+              <option value="Restaurante">Restaurante</option>
+              <option value="Bar">Bar</option>
+              <option value="Cafetería">Cafetería</option>
+              <option value="Peluquería">Peluquería / Barbería</option>
+              <option value="Veterinaria">Veterinaria</option>
+              <option value="Ferretería">Ferretería</option>
+              <option value="Panadería">Panadería / Pastelería</option>
+              <option value="Odontología">Odontología / Dentista</option>
+              <option value="Gimnasio">Gimnasio / Fitness</option>
+              <option value="Farmacia">Farmacia</option>
+              <option value="Mecánica">Mecánica / Taller</option>
+              <option value="Hotel">Hotel / Alojamiento</option>
+              <option value="Estética">Estética / Spa</option>
+              <option value="Psicología">Psicología / Terapia</option>
+              <option value="Inmobiliaria">Inmobiliaria</option>
+              <option value="Arquitectura">Arquitectura / Diseño</option>
+              <option value="Contabilidad">Estudio Contable</option>
+              <option value="Abogado">Estudio Jurídico</option>
+              <option value="Clínica">Clínica / Centro Médico</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="searchZone">Zona / Ciudad</label>
+            <input class="form-input" type="text" id="searchZone" placeholder="Ej: Palermo, Rosario, Córdoba...">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="searchRadius">Radio</label>
+            <select class="form-select" id="searchRadius">
+              <option value="1">1 km</option>
+              <option value="2">2 km</option>
+              <option value="5" selected>5 km</option>
+              <option value="10">10 km</option>
+              <option value="20">20 km</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="searchLimit">Cantidad</label>
+            <select class="form-select" id="searchLimit">
+              <option value="5">5 resultados</option>
+              <option value="10" selected>10 resultados</option>
+              <option value="20">20 resultados</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="search-filters-row">
+          <span class="filter-row-label">Filtrar por:</span>
+          <div class="filter-chips">
+            <label class="filter-chip"><input type="radio" name="searchFilter" value="all" checked><span>Todos</span></label>
+            <label class="filter-chip"><input type="radio" name="searchFilter" value="no_website"><span>Sin web</span></label>
+            <label class="filter-chip"><input type="radio" name="searchFilter" value="poor_website"><span>Web mejorable</span></label>
+            <label class="filter-chip"><input type="radio" name="searchFilter" value="has_instagram"><span>Con Instagram</span></label>
+            <label class="filter-chip"><input type="radio" name="searchFilter" value="high_score"><span>Alto potencial</span></label>
+          </div>
+        </div>
+
+        <div class="search-action-row">
+          <button class="btn-primary btn-lg" id="btnSearch">
+            <svg viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="5" stroke="currentColor" stroke-width="1.6"/><path d="M12.5 12.5L16 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            Buscar oportunidades
+          </button>
+          <p class="search-disclaimer">
+            <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 6.5V9.5M7 4.5V5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Datos de demostración. Conectá Google Places API en Configuración para datos reales.
+          </p>
+        </div>
+      </div>
+
+      <div id="searchResults"></div>
+    </section>
+
+    <!-- ─── LEADS TABLE ─── -->
+    <section class="section" id="sec-leads">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Leads</h1>
+          <p class="page-subtitle" id="leadsSubtitle">Gestión de prospectos</p>
+        </div>
+        <div class="page-header-right">
+          <button class="btn-ghost" id="btnBulkDelete" style="display:none">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 4H13M6 4V2.5H10V4M4.5 4L5 13H11L11.5 4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Eliminar selección
+          </button>
+          <button class="btn-primary" onclick="App.navigate('search')">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M8 2V14M2 8H14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Buscar más
+          </button>
+        </div>
+      </div>
+
+      <div class="card table-controls">
+        <div class="table-search-wrap">
+          <svg viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M11 11L14 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <input type="text" id="tableSearch" placeholder="Buscar por nombre, rubro, zona..." class="table-search-input">
+        </div>
+        <div class="table-filter-row">
+          <select class="form-select sm" id="filterStatus">
+            <option value="">Todos los estados</option>
+            <option value="nuevo">Nuevo</option>
+            <option value="investigar">Investigar</option>
+            <option value="sin_web">Sin web</option>
+            <option value="web_mejorable">Web mejorable</option>
+            <option value="contactado">Contactado</option>
+            <option value="respondio">Respondió</option>
+            <option value="propuesta_enviada">Propuesta enviada</option>
+            <option value="ganado">Ganado</option>
+            <option value="perdido">Perdido</option>
+          </select>
+          <select class="form-select sm" id="filterPriority">
+            <option value="">Toda prioridad</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+          <select class="form-select sm" id="filterWebsite">
+            <option value="">Sitio web</option>
+            <option value="none">Sin web</option>
+            <option value="poor">Deficiente</option>
+            <option value="average">Promedio</option>
+            <option value="good">Buena</option>
+          </select>
+          <select class="form-select sm" id="sortBy">
+            <option value="opportunityScore_desc">Score ↓</option>
+            <option value="opportunityScore_asc">Score ↑</option>
+            <option value="rating_desc">Rating ↓</option>
+            <option value="reviewsCount_desc">Reseñas ↓</option>
+            <option value="createdAt_desc">Más recientes</option>
+            <option value="createdAt_asc">Más antiguos</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="leadsTableWrapper"></div>
+    </section>
+
+    <!-- ─── KANBAN ─── -->
+    <section class="section" id="sec-kanban">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Pipeline</h1>
+          <p class="page-subtitle">Flujo de trabajo por estado</p>
+        </div>
+      </div>
+      <div class="kanban-board" id="kanbanBoard"></div>
+    </section>
+
+    <!-- ─── TEMPLATES ─── -->
+    <section class="section" id="sec-templates">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Templates de Mensajes</h1>
+          <p class="page-subtitle">Plantillas editables para contactar leads</p>
+        </div>
+        <div class="page-header-right">
+          <button class="btn-primary" id="btnSaveTemplates">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M2.5 2.5H11L13.5 5V13.5H2.5V2.5Z" stroke="currentColor" stroke-width="1.3"/><rect x="5" y="8.5" width="6" height="5" rx="0.5" stroke="currentColor" stroke-width="1.3"/><rect x="5" y="2.5" width="4.5" height="3" rx="0.5" stroke="currentColor" stroke-width="1.3"/></svg>
+            Guardar cambios
+          </button>
+        </div>
+      </div>
+      <div id="templatesLayout"></div>
+    </section>
+
+    <!-- ─── SETTINGS ─── -->
+    <section class="section" id="sec-settings">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Configuración</h1>
+          <p class="page-subtitle">Integración de API y ajustes del sistema</p>
+        </div>
+      </div>
+      <div id="settingsContent"></div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════ LEAD DRAWER ═══ -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="drawer" id="leadDrawer">
+      <div class="drawer-header">
+        <div class="drawer-header-left">
+          <button class="btn-icon-sm" id="btnDrawerClose" title="Cerrar">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M10 4L6 8L10 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <h3 class="drawer-title" id="drawerTitle">Detalle del Lead</h3>
+        </div>
+        <div class="drawer-header-actions" id="drawerHeaderActions"></div>
+      </div>
+      <div class="drawer-body" id="drawerBody"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ ADD LEAD MODAL ═══ -->
+  <div class="modal-overlay" id="addLeadOverlay">
+    <div class="modal" id="addLeadModal">
+      <div class="modal-header">
+        <h3 class="modal-title">Agregar Lead</h3>
+        <button class="btn-icon-sm" id="btnCloseAddLead">
+          <svg viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="addLeadModalBody"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════ TOASTS ═══ -->
+  <div class="toasts" id="toasts"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/scoring.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
