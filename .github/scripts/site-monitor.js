@@ -31,18 +31,18 @@ const EXPIRY_THRESHOLDS  = [60, 30, 7];
 // Completar con los datos del panel del registrar (NIC Argentina u otro).
 // Dejar null si no se conoce la fecha.
 const SITES = [
-  { name: 'NDB Propiedades',         url: 'https://ndbpropiedades.com.ar',          category: 'Inmobiliaria', stakeholderEmail: '', domainExpiry: '2027-04-23' },
-  { name: 'Art1',                    url: 'https://art1.com.ar',                    category: 'Arte',         stakeholderEmail: '', domainExpiry: '2026-04-29' },
-  { name: 'Somos Grupos de Mujeres', url: 'https://somosgrupodemujeresmas.ar',       category: 'Comunidad',    stakeholderEmail: '', domainExpiry: null          },
-  { name: 'CEA American',            url: 'https://cea-american.com.ar',            category: 'Educación',    stakeholderEmail: '', domainExpiry: null          },
-  { name: 'OKOS',                    url: 'https://okos.com.ar',                    category: 'E-commerce',   stakeholderEmail: '', domainExpiry: null          },
-  { name: 'Perniles Cochon',         url: 'https://pernilescochon.com.ar',          category: 'Gastronomía',  stakeholderEmail: '', domainExpiry: null          },
-  { name: 'Ibarra Propiedades',      url: 'https://ibarraprop.com.ar',              category: 'Inmobiliaria', stakeholderEmail: '', domainExpiry: null          },
-  { name: 'Etienne de Montebello',   url: 'https://etiennedemontebello.com',        category: 'Moda',         stakeholderEmail: '', domainExpiry: null          },
-  { name: 'Lassen',                  url: 'https://lassen.ar',                      category: 'Empresa',      stakeholderEmail: '', domainExpiry: null          },
-  { name: 'Beforce',                 url: 'https://beforce.ar',                     category: 'Fitness',      stakeholderEmail: '', domainExpiry: null          },
-  { name: 'Knots4',                  url: 'https://knots4.mitiendanube.com',        category: 'E-commerce',   stakeholderEmail: '', domainExpiry: null          },
-  // { name: 'Didot Estudio',        url: 'https://didot.com.ar',                   category: 'Diseño',       stakeholderEmail: '', domainExpiry: null          },
+  { name: 'NDB Propiedades',         url: 'https://ndbpropiedades.com.ar',          category: 'Inmobiliaria', stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: '2027-04-23' },
+  { name: 'Art1',                    url: 'https://art1.com.ar',                    category: 'Arte',         stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: '2026-04-29' },
+  { name: 'Somos Grupos de Mujeres', url: 'https://somosgrupodemujeresmas.ar',       category: 'Comunidad',    stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'CEA American',            url: 'https://cea-american.com.ar',            category: 'Educación',    stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'OKOS',                    url: 'https://okos.com.ar',                    category: 'E-commerce',   stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Perniles Cochon',         url: 'https://pernilescochon.com.ar',          category: 'Gastronomía',  stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Ibarra Propiedades',      url: 'https://ibarraprop.com.ar',              category: 'Inmobiliaria', stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Etienne de Montebello',   url: 'https://etiennedemontebello.com',        category: 'Moda',         stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Lassen',                  url: 'https://lassen.ar',                      category: 'Empresa',      stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Beforce',                 url: 'https://beforce.ar',                     category: 'Fitness',      stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Knots4',                  url: 'https://knots4.mitiendanube.com',        category: 'E-commerce',   stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  // { name: 'Didot Estudio',        url: 'https://didot.com.ar',                   category: 'Diseño',       stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
 ];
 
 // ── DNS CHECK ─────────────────────────────────────────────────────────────────
