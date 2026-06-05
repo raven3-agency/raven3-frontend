@@ -560,7 +560,7 @@ const UI = (() => {
             <div class="info-item"><div class="info-label">Fuente</div><div class="info-value">${lead.source || '—'}</div></div>
             <div class="info-item"><div class="info-label">Instagram</div><div class="info-value">${lead.instagram || '—'}</div></div>
             <div class="info-item"><div class="info-label">WhatsApp</div><div class="info-value">${lead.whatsapp || '—'}</div></div>
-            <div class="info-item"><div class="info-label">Sitio web</div><div class="info-value">${lead.website ? `<a href="https://${lead.website}" target="_blank" rel="noopener">${lead.website}</a>` : '—'}</div></div>
+            <div class="info-item"><div class="info-label">Sitio web</div><div class="info-value">${lead.website ? `<a href="${/^https?:\/\//i.test(lead.website) ? lead.website : 'https://' + lead.website}" target="_blank" rel="noopener">${lead.website}</a>` : '—'}</div></div>
             <div class="info-item"><div class="info-label">Calidad web</div><div class="info-value">${webQualityBadge(lead)}</div></div>
           </div>
         </div>
