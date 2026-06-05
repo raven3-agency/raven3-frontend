@@ -247,6 +247,13 @@ const UI = (() => {
         App.addLeadFromSearch(id);
       });
     });
+    container.querySelectorAll('.result-card').forEach(card => {
+      const addrEl = card.querySelector('.result-address');
+      if (!addrEl) return;
+      card.addEventListener('click', () => {
+        openMapPanel(addrEl.dataset.address, addrEl.dataset.name);
+      });
+    });
     document.getElementById('btnImportAll').addEventListener('click', () => App.importSearchResults(results, false));
     document.getElementById('btnImportNew').addEventListener('click', () => App.importSearchResults(results, true));
   };
@@ -267,7 +274,7 @@ const UI = (() => {
         </div>
         <div class="result-card-body">
           ${ratingHtml(l.rating, l.reviewsCount)}
-          <div class="result-detail">
+          <div class="result-detail result-address" data-address="${l.address}" data-name="${l.businessName}" title="Ver en mapa">
             <svg viewBox="0 0 14 14" fill="none"><path d="M7 1.5C4.5 1.5 2.5 3.5 2.5 6C2.5 9 7 12.5 7 12.5C7 12.5 11.5 9 11.5 6C11.5 3.5 9.5 1.5 7 1.5Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
             ${l.address}
           </div>
@@ -476,6 +483,31 @@ const UI = (() => {
       });
     });
   };
+
+  /* ────────────────────────────────────────────────
+     MAP PANEL
+  ──────────────────────────────────────────────── */
+  const openMapPanel = (address, name) => {
+    const encoded = encodeURIComponent(address);
+    document.getElementById('mapPanelTitle').textContent = name || 'Ubicación';
+    document.getElementById('mapPanelAddress').textContent = address;
+    document.getElementById('mapPanelLink').href = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
+    document.getElementById('mapPanelIframe').src = `https://maps.google.com/maps?q=${encoded}&output=embed&z=15`;
+    document.getElementById('mapPanelOverlay').classList.add('open');
+  };
+
+  const closeMapPanel = () => {
+    const overlay = document.getElementById('mapPanelOverlay');
+    overlay.classList.remove('open');
+    overlay.addEventListener('transitionend', () => {
+      document.getElementById('mapPanelIframe').src = '';
+    }, { once: true });
+  };
+
+  document.getElementById('btnCloseMapPanel').addEventListener('click', closeMapPanel);
+  document.getElementById('mapPanelOverlay').addEventListener('click', (e) => {
+    if (e.target === document.getElementById('mapPanelOverlay')) closeMapPanel();
+  });
 
   /* ────────────────────────────────────────────────
      LEAD DETAIL DRAWER
@@ -1012,6 +1044,7 @@ const UI = (() => {
     renderDashboard, renderSearchLoading, renderSearchResults,
     renderLeadsTable, renderKanban,
     openDrawer, closeDrawer, renderDrawer,
+    openMapPanel, closeMapPanel,
     openAddModal, closeAddModal, getModalFormData,
     renderTemplates, insertTemplateVar, saveTemplates,
     renderSettings, updateNavBadge,

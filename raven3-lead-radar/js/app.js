@@ -426,6 +426,7 @@ const App = (() => {
     if (e.key === 'Escape') {
       UI.closeDrawer();
       UI.closeAddModal();
+      UI.closeMapPanel();
     }
   });
 

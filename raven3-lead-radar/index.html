@@ -407,6 +407,30 @@
     </div>
   </div>
 
+  <!-- ═══════════════════════════════════ MAP PANEL ═══ -->
+  <div class="map-panel-overlay" id="mapPanelOverlay">
+    <div class="map-panel" id="mapPanel">
+      <div class="map-panel-header">
+        <div class="map-panel-header-info">
+          <div class="map-panel-title" id="mapPanelTitle">Ubicación</div>
+          <div class="map-panel-address" id="mapPanelAddress"></div>
+        </div>
+        <div class="map-panel-header-actions">
+          <a class="btn-secondary map-panel-ext-btn" id="mapPanelLink" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M10 2H14V6M14 2L7 9M6 4H3C2.4 4 2 4.4 2 5V13C2 13.6 2.4 14 3 14H11C11.6 14 12 13.6 12 13V10" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Abrir en Maps
+          </a>
+          <button class="btn-icon-sm" id="btnCloseMapPanel">
+            <svg viewBox="0 0 16 16" fill="none"><path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="map-panel-body">
+        <iframe id="mapPanelIframe" src="" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════ TOASTS ═══ -->
   <div class="toasts" id="toasts"></div>
 

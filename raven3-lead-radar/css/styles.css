@@ -1652,3 +1652,61 @@ img { max-width: 100%; display: block; }
 }
 .sidebar-user:hover .logout-btn { opacity: 1; }
 .logout-btn:hover { color: var(--danger) !important; }
+
+/* ─── MAP PANEL ─────────────────────────────────── */
+.map-panel-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,10,0.75);
+  backdrop-filter: blur(6px);
+  z-index: 400;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+.map-panel-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.map-panel {
+  width: min(560px, 100vw);
+  height: 100vh;
+  background: var(--bg-2);
+  border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  transform: translateX(40px);
+  opacity: 0;
+  transition: transform 0.3s cubic-bezier(.4,0,.2,1), opacity 0.25s ease;
+}
+.map-panel-overlay.open .map-panel {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.map-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+.map-panel-header-info { flex: 1; min-width: 0; }
+.map-panel-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 3px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.map-panel-address { font-size: 11px; color: var(--text-4); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.map-panel-header-actions { display: flex; gap: 6px; align-items: center; flex-shrink: 0; }
+.map-panel-ext-btn { display: flex; align-items: center; gap: 6px; font-size: 12px; padding: 5px 10px; text-decoration: none; }
+.map-panel-ext-btn svg { width: 13px; height: 13px; }
+
+.map-panel-body { flex: 1; overflow: hidden; }
+.map-panel-body iframe { width: 100%; height: 100%; display: block; border: none; }
+
+.result-address { cursor: pointer; }
+.result-address:hover { color: var(--info) !important; }
+.result-address:hover svg { opacity: 1 !important; color: var(--info); }
