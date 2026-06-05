@@ -110,6 +110,23 @@ const App = (() => {
     document.getElementById('btnExport')?.addEventListener('click', exportCSV);
     document.getElementById('btnSaveTemplates')?.addEventListener('click', UI.saveTemplates);
     document.getElementById('btnBulkDelete')?.addEventListener('click', bulkDelete);
+    setupThemeToggle();
+  };
+
+  const setupThemeToggle = () => {
+    const btn = document.getElementById('btnThemeToggle');
+    if (!btn) return;
+
+    const applyTheme = (light) => {
+      document.documentElement.setAttribute('data-theme', light ? 'light' : 'dark');
+      localStorage.setItem('lr-theme', light ? 'light' : 'dark');
+    };
+
+    applyTheme(localStorage.getItem('lr-theme') === 'light');
+
+    btn.addEventListener('click', () => {
+      applyTheme(document.documentElement.getAttribute('data-theme') !== 'light');
+    });
   };
 
   /* ═══════════════════════════════════════
