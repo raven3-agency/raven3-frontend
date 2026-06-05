@@ -458,6 +458,17 @@ document.addEventListener('DOMContentLoaded', async () => {
   /* Show login screen */
   overlay.classList.remove('hidden');
 
+  /* Password visibility toggle */
+  const toggleBtn = document.getElementById('togglePassword');
+  const pwdInput  = document.getElementById('loginPassword');
+  toggleBtn.addEventListener('click', () => {
+    const show = pwdInput.type === 'password';
+    pwdInput.type = show ? 'text' : 'password';
+    toggleBtn.querySelector('.eye-off').classList.toggle('hidden', show);
+    toggleBtn.querySelector('.eye-on').classList.toggle('hidden', !show);
+    toggleBtn.setAttribute('aria-label', show ? 'Ocultar contraseña' : 'Mostrar contraseña');
+  });
+
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email    = document.getElementById('loginEmail').value.trim();
