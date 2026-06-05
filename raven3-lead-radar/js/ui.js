@@ -502,108 +502,118 @@ const UI = (() => {
 
     document.getElementById('drawerBody').innerHTML = `
 
-      <!-- Info principal -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">Información general</div>
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          ${scorePill(lead.opportunityScore)}
-          <div>
-            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px">${lead.businessName}</div>
-            <div style="font-size:12px;color:var(--text-3)">${lead.category} · ${lead.zone}</div>
-          </div>
-          <div style="margin-left:auto;display:flex;gap:6px">
-            ${statusBadge(lead.status)}
-            ${priorityBadge(lead.priority)}
-          </div>
-        </div>
-        <div class="info-grid">
-          <div class="info-item"><div class="info-label">Dirección</div><div class="info-value">${lead.address || '—'}</div></div>
-          <div class="info-item"><div class="info-label">Teléfono</div><div class="info-value">${lead.phone ? `<a href="tel:${lead.phone}">${lead.phone}</a>` : '—'}</div></div>
-          <div class="info-item"><div class="info-label">Rating</div><div class="info-value">${ratingHtml(lead.rating, lead.reviewsCount)}</div></div>
-          <div class="info-item"><div class="info-label">Fuente</div><div class="info-value">${lead.source || '—'}</div></div>
-          <div class="info-item"><div class="info-label">Instagram</div><div class="info-value">${lead.instagram || '—'}</div></div>
-          <div class="info-item"><div class="info-label">WhatsApp</div><div class="info-value">${lead.whatsapp || '—'}</div></div>
-          <div class="info-item"><div class="info-label">Sitio web</div><div class="info-value">${lead.website ? `<a href="https://${lead.website}" target="_blank" rel="noopener">${lead.website}</a>` : '—'}</div></div>
-          <div class="info-item"><div class="info-label">Calidad web</div><div class="info-value">${webQualityBadge(lead)}</div></div>
-        </div>
-      </div>
+      <!-- Columna izquierda: Info + Score + Diagnóstico -->
+      <div class="drawer-col">
 
-      <!-- Score -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">Score de oportunidad</div>
-        <div class="score-breakdown">
-          ${breakdown.map(b => `
-            <div class="breakdown-item">
-              <span class="breakdown-label">${b.label}</span>
-              <span class="breakdown-points ${b.pts > 0 ? 'positive' : 'negative'}">${b.pts > 0 ? '+' : ''}${b.pts} pts</span>
-            </div>`).join('')}
-          <div class="score-total-row">
-            <span class="score-total-label">Score total</span>
+        <!-- Info principal -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Información general</div>
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
             ${scorePill(lead.opportunityScore)}
+            <div>
+              <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:18px">${lead.businessName}</div>
+              <div style="font-size:12px;color:var(--text-3)">${lead.category} · ${lead.zone}</div>
+            </div>
+            <div style="margin-left:auto;display:flex;gap:6px">
+              ${statusBadge(lead.status)}
+              ${priorityBadge(lead.priority)}
+            </div>
+          </div>
+          <div class="info-grid">
+            <div class="info-item"><div class="info-label">Dirección</div><div class="info-value">${lead.address || '—'}</div></div>
+            <div class="info-item"><div class="info-label">Teléfono</div><div class="info-value">${lead.phone ? `<a href="tel:${lead.phone}">${lead.phone}</a>` : '—'}</div></div>
+            <div class="info-item"><div class="info-label">Rating</div><div class="info-value">${ratingHtml(lead.rating, lead.reviewsCount)}</div></div>
+            <div class="info-item"><div class="info-label">Fuente</div><div class="info-value">${lead.source || '—'}</div></div>
+            <div class="info-item"><div class="info-label">Instagram</div><div class="info-value">${lead.instagram || '—'}</div></div>
+            <div class="info-item"><div class="info-label">WhatsApp</div><div class="info-value">${lead.whatsapp || '—'}</div></div>
+            <div class="info-item"><div class="info-label">Sitio web</div><div class="info-value">${lead.website ? `<a href="https://${lead.website}" target="_blank" rel="noopener">${lead.website}</a>` : '—'}</div></div>
+            <div class="info-item"><div class="info-label">Calidad web</div><div class="info-value">${webQualityBadge(lead)}</div></div>
           </div>
         </div>
-        <div class="pitch-box" style="margin-top:10px">${lead.recommendedPitch}</div>
+
+        <!-- Score -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Score de oportunidad</div>
+          <div class="score-breakdown">
+            ${breakdown.map(b => `
+              <div class="breakdown-item">
+                <span class="breakdown-label">${b.label}</span>
+                <span class="breakdown-points ${b.pts > 0 ? 'positive' : 'negative'}">${b.pts > 0 ? '+' : ''}${b.pts} pts</span>
+              </div>`).join('')}
+            <div class="score-total-row">
+              <span class="score-total-label">Score total</span>
+              ${scorePill(lead.opportunityScore)}
+            </div>
+          </div>
+          <div class="pitch-box" style="margin-top:10px">${lead.recommendedPitch}</div>
+        </div>
+
+        <!-- Diagnóstico -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Diagnóstico</div>
+          <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--r-md);padding:14px;font-size:13px;color:var(--text-2);line-height:1.6">${lead.diagnosis}</div>
+        </div>
+
       </div>
 
-      <!-- Diagnóstico -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">Diagnóstico</div>
-        <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--r-md);padding:14px;font-size:13px;color:var(--text-2);line-height:1.6">${lead.diagnosis}</div>
-      </div>
+      <!-- Columna derecha: Gestión + Mensajes -->
+      <div class="drawer-col">
 
-      <!-- Gestión -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">Gestión del lead</div>
-        <div class="drawer-form-grid">
-          <div class="form-group">
-            <label class="form-label">Estado</label>
-            <select class="form-select" id="drawerStatus">
-              ${Object.entries(Data.STATUS_META).map(([k,v]) => `<option value="${k}" ${lead.status === k ? 'selected' : ''}>${v.label}</option>`).join('')}
-            </select>
+        <!-- Gestión -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Gestión del lead</div>
+          <div class="drawer-form-grid">
+            <div class="form-group">
+              <label class="form-label">Estado</label>
+              <select class="form-select" id="drawerStatus">
+                ${Object.entries(Data.STATUS_META).map(([k,v]) => `<option value="${k}" ${lead.status === k ? 'selected' : ''}>${v.label}</option>`).join('')}
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Prioridad</label>
+              <select class="form-select" id="drawerPriority">
+                <option value="alta"  ${lead.priority === 'alta'  ? 'selected' : ''}>Alta</option>
+                <option value="media" ${lead.priority === 'media' ? 'selected' : ''}>Media</option>
+                <option value="baja"  ${lead.priority === 'baja'  ? 'selected' : ''}>Baja</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Último contacto</label>
+              <input type="date" class="form-input" id="drawerLastContact" value="${lead.lastContactDate || ''}">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Próxima acción</label>
+              <input type="date" class="form-input" id="drawerNextAction" value="${lead.nextActionDate || ''}">
+            </div>
           </div>
-          <div class="form-group">
-            <label class="form-label">Prioridad</label>
-            <select class="form-select" id="drawerPriority">
-              <option value="alta"  ${lead.priority === 'alta'  ? 'selected' : ''}>Alta</option>
-              <option value="media" ${lead.priority === 'media' ? 'selected' : ''}>Media</option>
-              <option value="baja"  ${lead.priority === 'baja'  ? 'selected' : ''}>Baja</option>
-            </select>
+          <div class="form-group" style="margin-top:12px">
+            <label class="form-label">Notas internas</label>
+            <textarea class="form-textarea" id="drawerNotes" rows="4" placeholder="Agrega notas sobre este lead...">${lead.notes || ''}</textarea>
           </div>
-          <div class="form-group">
-            <label class="form-label">Último contacto</label>
-            <input type="date" class="form-input" id="drawerLastContact" value="${lead.lastContactDate || ''}">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Próxima acción</label>
-            <input type="date" class="form-input" id="drawerNextAction" value="${lead.nextActionDate || ''}">
+          <div class="drawer-actions" style="margin-top:12px">
+            <button class="btn-primary" id="btnSaveDrawer" data-id="${lead.id}">Guardar cambios</button>
+            <button class="btn-secondary" id="btnDeleteDrawer" data-id="${lead.id}">Eliminar</button>
           </div>
         </div>
-        <div class="form-group" style="margin-top:12px">
-          <label class="form-label">Notas internas</label>
-          <textarea class="form-textarea" id="drawerNotes" rows="3" placeholder="Agrega notas sobre este lead...">${lead.notes || ''}</textarea>
-        </div>
-        <div class="drawer-actions" style="margin-top:12px">
-          <button class="btn-primary" id="btnSaveDrawer" data-id="${lead.id}">Guardar cambios</button>
-          <button class="btn-secondary" id="btnDeleteDrawer" data-id="${lead.id}">Eliminar</button>
-        </div>
-      </div>
 
-      <!-- Mensajes -->
-      <div class="drawer-section">
-        <div class="drawer-section-title">Mensajes personalizados</div>
-        <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px">WhatsApp</div>
-        <div class="msg-preview" id="waPreview">${waMsg}</div>
-        <button class="btn-secondary" id="btnCopyWa" style="margin-top:8px;padding:7px 12px;font-size:12px">
-          <svg viewBox="0 0 14 14" fill="none"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Copiar mensaje WhatsApp
-        </button>
+        <!-- Mensajes -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Mensajes personalizados</div>
+          <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px">WhatsApp</div>
+          <div class="msg-preview" id="waPreview">${waMsg}</div>
+          <button class="btn-secondary" id="btnCopyWa" style="margin-top:8px;padding:7px 12px;font-size:12px">
+            <svg viewBox="0 0 14 14" fill="none"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Copiar mensaje WhatsApp
+          </button>
 
-        <div style="font-size:12px;font-weight:600;color:var(--text-3);margin:16px 0 6px">Email inicial</div>
-        <div class="msg-preview" id="emailPreview">${emailMsg}</div>
-        <button class="btn-secondary" id="btnCopyEmail" style="margin-top:8px;padding:7px 12px;font-size:12px">
-          <svg viewBox="0 0 14 14" fill="none"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-          Copiar email
-        </button>
+          <div style="font-size:12px;font-weight:600;color:var(--text-3);margin:16px 0 6px">Email inicial</div>
+          <div class="msg-preview" id="emailPreview">${emailMsg}</div>
+          <button class="btn-secondary" id="btnCopyEmail" style="margin-top:8px;padding:7px 12px;font-size:12px">
+            <svg viewBox="0 0 14 14" fill="none"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+            Copiar email
+          </button>
+        </div>
+
       </div>
 
     `;
