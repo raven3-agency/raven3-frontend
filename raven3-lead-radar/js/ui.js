@@ -791,11 +791,61 @@ const UI = (() => {
      SETTINGS SECTION
   ──────────────────────────────────────────────── */
   const renderSettings = () => {
-    const s = Storage.getSettings();
+    const s         = Storage.getSettings();
     const apiActive = !!s.backendUrl;
+    const sbCfg     = Storage.getSupabaseConfig();
+    const sbConn    = Storage.isConnected();
+    const lsLeads   = (() => { try { return JSON.parse(localStorage.getItem('r3lr_leads') || '[]'); } catch { return []; } })();
+    const hasLsData = lsLeads.length > 0;
+
     document.getElementById('settingsContent').innerHTML = `
       <div class="settings-layout">
 
+        <!-- ── SUPABASE ── -->
+        <div class="settings-card settings-card-accent" style="grid-column:span 2">
+          <div class="settings-card-title" style="color:var(--accent)">Supabase — Persistencia en la nube</div>
+          <div class="settings-card-desc">Guardá tus leads en Supabase para que persistan entre dispositivos y no dependas del localStorage del browser.</div>
+
+          <div class="settings-status ${sbConn ? 'active' : 'inactive'}" style="margin:12px 0 16px">
+            ${sbConn
+              ? `<svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7L6 8.5L9.5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                 Conectado a Supabase`
+              : `<svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                 Sin conexión — usando localStorage`}
+          </div>
+
+          <div class="settings-field" style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:14px">
+            <div class="form-group">
+              <label class="form-label">URL del proyecto</label>
+              <input class="form-input" id="settingSbUrl" value="${sbCfg.url}" placeholder="https://xxxxxxxxxxx.supabase.co">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Clave anon / public</label>
+              <input class="form-input" id="settingSbKey" value="${sbCfg.key}" placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...">
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+            <button class="btn-primary" id="btnConnectSupabase">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M13 8A5 5 0 1 1 3 8a5 5 0 0 1 10 0Z" stroke="currentColor" stroke-width="1.3"/><path d="M8 5v3l2 2" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+              ${sbConn ? 'Reconectar' : 'Conectar'}
+            </button>
+            ${sbConn && hasLsData ? `
+            <button class="btn-secondary" id="btnMigrateData">
+              <svg viewBox="0 0 16 16" fill="none"><path d="M3 8H13M10 5l3 3-3 3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Migrar ${lsLeads.length} leads de localStorage
+            </button>` : ''}
+          </div>
+
+          <div class="api-endpoint-box" style="margin-top:16px;font-size:12px"><span class="api-method">Setup</span> Cómo crear el proyecto Supabase (una sola vez)
+
+  1. <span class="api-key">supabase.com</span> → New project (plan gratuito disponible)
+  2. Settings → API → copiar <span class="api-val">Project URL</span> y <span class="api-val">anon public key</span>
+  3. SQL Editor → pegar y ejecutar el contenido de <span class="api-key">supabase-schema.sql</span> (en el repo)
+  4. Pegá URL y clave arriba → Conectar</div>
+        </div>
+
+        <!-- ── GOOGLE PLACES ── -->
         <div class="settings-card">
           <div class="settings-card-title">Estado de integración</div>
           <div class="settings-card-desc">Google Places API (New) vía Cloudflare Workers. La clave vive como secret en el worker — nunca expuesta al browser.</div>
@@ -810,7 +860,7 @@ const UI = (() => {
 
         <div class="settings-card">
           <div class="settings-card-title">Worker URL</div>
-          <div class="settings-card-desc">URL del Cloudflare Worker que actúa como proxy seguro hacia Google Places API. Seguí los pasos de la derecha para obtenerla.</div>
+          <div class="settings-card-desc">URL del Cloudflare Worker que actúa como proxy seguro hacia Google Places API. Seguí los pasos de abajo para obtenerla.</div>
           <div class="settings-field">
             <div class="form-group">
               <label class="form-label">URL del worker</label>
@@ -850,7 +900,7 @@ const UI = (() => {
 
         <div class="settings-card">
           <div class="settings-card-title">Datos</div>
-          <div class="settings-card-desc">Gestión de datos almacenados localmente.</div>
+          <div class="settings-card-desc">Gestión de datos almacenados.</div>
           <button class="btn-secondary" id="btnExportCSV" style="margin-bottom:10px">
             <svg viewBox="0 0 16 16" fill="none"><path d="M3.5 12V15H12.5V12M8 3V10M5.5 7.5L8 10.5L10.5 7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
             Exportar leads CSV
@@ -866,7 +916,7 @@ const UI = (() => {
 
         <div class="settings-card">
           <div class="settings-card-title">Guardar configuración</div>
-          <div class="settings-card-desc">Los cambios en API Key y Backend URL se guardan localmente.</div>
+          <div class="settings-card-desc">Guardá los cambios de Worker URL.</div>
           <button class="btn-primary" id="btnSaveSettings">
             <svg viewBox="0 0 16 16" fill="none"><path d="M2.5 2.5H11L13.5 5V13.5H2.5V2.5Z" stroke="currentColor" stroke-width="1.3"/><rect x="5" y="8.5" width="6" height="5" rx="0.5" stroke="currentColor" stroke-width="1.3"/><rect x="5" y="2.5" width="4.5" height="3" rx="0.5" stroke="currentColor" stroke-width="1.3"/></svg>
             Guardar cambios
@@ -875,6 +925,46 @@ const UI = (() => {
 
       </div>`;
 
+    /* ── Supabase connect ── */
+    document.getElementById('btnConnectSupabase')?.addEventListener('click', async () => {
+      const url = document.getElementById('settingSbUrl').value.trim();
+      const key = document.getElementById('settingSbKey').value.trim();
+      if (!url || !key) { toast('Completá la URL y la clave anon', 'warning'); return; }
+
+      const btn = document.getElementById('btnConnectSupabase');
+      btn.disabled = true;
+      btn.textContent = 'Conectando...';
+
+      try {
+        await Storage.connectSupabase(url, key);
+        toast('Conexión exitosa', 'success');
+
+        /* Reload after short delay so status bar updates */
+        setTimeout(() => location.reload(), 800);
+      } catch (err) {
+        toast(`Error: ${err.message}`, 'error');
+        btn.disabled = false;
+        btn.textContent = 'Conectar';
+      }
+    });
+
+    /* ── Migrate localStorage → Supabase ── */
+    document.getElementById('btnMigrateData')?.addEventListener('click', async () => {
+      const btn = document.getElementById('btnMigrateData');
+      btn.disabled = true;
+      btn.textContent = 'Migrando...';
+      try {
+        const count = await Storage.migrateFromLocalStorage();
+        toast(`${count} leads migrados a Supabase`, 'success');
+        setTimeout(() => location.reload(), 1000);
+      } catch (err) {
+        toast(`Error al migrar: ${err.message}`, 'error');
+        btn.disabled = false;
+        btn.textContent = 'Migrar datos de localStorage';
+      }
+    });
+
+    /* ── Save Worker URL ── */
     document.getElementById('btnSaveSettings')?.addEventListener('click', () => {
       Storage.saveSettings({
         ...Storage.getSettings(),
@@ -883,12 +973,13 @@ const UI = (() => {
       toast('Configuración guardada', 'success');
     });
 
-    document.getElementById('btnClearData')?.addEventListener('click', () => {
-      if (confirm('¿Seguro? Se eliminarán TODOS los leads y datos locales.')) {
-        Storage.clearAll();
-        toast('Datos eliminados. Recargando...', 'warning');
-        setTimeout(() => location.reload(), 1200);
-      }
+    /* ── Clear all data (async for Supabase) ── */
+    document.getElementById('btnClearData')?.addEventListener('click', async () => {
+      const target = Storage.isConnected() ? 'Supabase + localStorage' : 'localStorage';
+      if (!confirm(`¿Seguro? Se eliminarán TODOS los leads y datos de ${target}.`)) return;
+      await Storage.clearAll();
+      toast('Datos eliminados. Recargando...', 'warning');
+      setTimeout(() => location.reload(), 1200);
     });
 
     document.getElementById('btnExportCSV')?.addEventListener('click', App.exportCSV);

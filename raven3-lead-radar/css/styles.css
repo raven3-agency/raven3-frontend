@@ -262,11 +262,21 @@ img { max-width: 100%; display: block; }
   box-shadow: 0 0 6px var(--success);
   animation: pulse-dot 2s infinite;
 }
+.topbar-status.supabase .status-dot {
+  background: var(--accent);
+  box-shadow: 0 0 6px var(--accent);
+}
+.topbar-status.loading .status-dot {
+  background: var(--warning);
+  box-shadow: 0 0 6px var(--warning);
+  animation: pulse-dot 0.7s infinite;
+}
 @keyframes pulse-dot {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  50% { opacity: 0.3; }
 }
 .status-label { font-size: 11px; color: var(--text-3); font-family: 'DM Mono', monospace; }
+.topbar-status.supabase .status-label { color: var(--accent); }
 
 /* ─── SECTIONS ────────────────────────────────────── */
 .section {
@@ -1333,6 +1343,10 @@ img { max-width: 100%; display: block; }
   border: 1px solid var(--border);
   border-radius: var(--r-lg);
   padding: 20px;
+}
+.settings-card-accent {
+  border-color: var(--accent-border);
+  background: linear-gradient(135deg, var(--bg-3) 0%, rgba(0,229,200,0.03) 100%);
 }
 .settings-card-title {
   font-family: 'Syne', sans-serif;

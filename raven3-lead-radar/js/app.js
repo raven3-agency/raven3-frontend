@@ -12,7 +12,19 @@ const App = (() => {
   /* ═══════════════════════════════════════
      INIT
   ═══════════════════════════════════════ */
-  const init = () => {
+  const init = async () => {
+    /* Show loading state before Supabase resolves */
+    const statusEl    = document.querySelector('.topbar-status');
+    const statusLabel = document.querySelector('.topbar-status .status-label');
+    if (statusEl)    statusEl.classList.add('loading');
+    if (statusLabel) statusLabel.textContent = 'Conectando...';
+
+    const connected = await Storage.init();
+
+    if (statusEl)    statusEl.classList.remove('loading');
+    if (statusLabel) statusLabel.textContent = connected ? 'Supabase' : 'LocalDB';
+    if (statusEl)    statusEl.classList.toggle('supabase', connected);
+
     seedIfNeeded();
     setupNav();
     setupTopbarActions();
@@ -22,6 +34,7 @@ const App = (() => {
     setupTableFilters();
     setupMobile();
     navigate('dashboard');
+    UI.updateNavBadge();
   };
 
   /* ── Seed initial data ── */
@@ -408,11 +421,6 @@ const App = (() => {
       UI.closeDrawer();
       UI.closeAddModal();
     }
-  });
-
-  /* ── Initial nav badge ── */
-  document.addEventListener('DOMContentLoaded', () => {
-    UI.updateNavBadge();
   });
 
   return {

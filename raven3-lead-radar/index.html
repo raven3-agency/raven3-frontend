@@ -114,9 +114,9 @@
             <path d="M3.5 12V15H14.5V12M9 3V11M6 8.5L9 11.5L12 8.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
-        <div class="topbar-status">
+        <div class="topbar-status loading" id="topbarStatus">
           <span class="status-dot"></span>
-          <span class="status-label">LocalDB</span>
+          <span class="status-label">...</span>
         </div>
       </div>
     </header>
@@ -362,6 +362,7 @@
   <!-- ═══════════════════════════════════ TOASTS ═══ -->
   <div class="toasts" id="toasts"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/scoring.js"></script>
   <script src="js/data.js"></script>
