@@ -11,6 +11,38 @@
 </head>
 <body>
 
+  <!-- ═══════════════════════════════════ LOGIN ═══ -->
+  <div class="login-overlay hidden" id="loginOverlay">
+    <div class="login-card">
+      <div class="login-brand">
+        <svg width="32" height="32" viewBox="0 0 30 30" fill="none">
+          <path d="M15 2L26 8.5V21.5L15 28L4 21.5V8.5L15 2Z" stroke="#00E5C8" stroke-width="1.5" fill="none"/>
+          <path d="M15 2L26 8.5V21.5L15 28" stroke="#00E5C8" stroke-width="1.5" opacity="0.35"/>
+          <circle cx="15" cy="15" r="3.5" fill="#00E5C8"/>
+          <path d="M15 11.5V2M15 18.5V28M11.5 13.5L4 8.5M18.5 16.5L26 21.5M11.5 16.5L4 21.5M18.5 13.5L26 8.5" stroke="#00E5C8" stroke-width="0.8" opacity="0.45"/>
+        </svg>
+        <div class="login-brand-text">
+          <span class="login-brand-name">RAVEN3</span>
+          <span class="login-brand-product">Lead Radar</span>
+        </div>
+      </div>
+      <h1 class="login-title">Bienvenido</h1>
+      <p class="login-subtitle">Acceso restringido. Ingresá con tu cuenta.</p>
+      <form class="login-form" id="loginForm" autocomplete="on" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input class="form-input" type="email" id="loginEmail" name="email" placeholder="tu@email.com" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Contraseña</label>
+          <input class="form-input" type="password" id="loginPassword" name="password" placeholder="••••••••" autocomplete="current-password" required>
+        </div>
+        <div class="login-error" id="loginError"></div>
+        <button class="btn-primary login-btn" type="submit" id="loginBtn">Ingresar</button>
+      </form>
+    </div>
+  </div>
+
   <!-- ═══════════════════════════════════ SIDEBAR ═══ -->
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-logo">
@@ -79,11 +111,16 @@
 
     <div class="sidebar-footer">
       <div class="sidebar-user">
-        <div class="user-avatar">P</div>
+        <div class="user-avatar" id="sidebarAvatar">?</div>
         <div class="user-info">
-          <span class="user-name">Patricio</span>
-          <span class="user-role">Admin · Raven3</span>
+          <span class="user-name" id="sidebarUserName">—</span>
+          <span class="user-role">Raven3</span>
         </div>
+        <button class="btn-icon-sm logout-btn" id="btnLogout" title="Cerrar sesión">
+          <svg viewBox="0 0 16 16" fill="none">
+            <path d="M6 3H3V13H6M10 5L13 8L10 11M13 8H6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
       </div>
     </div>
   </aside>
@@ -363,6 +400,7 @@
   <div class="toasts" id="toasts"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="js/auth.js"></script>
   <script src="js/storage.js"></script>
   <script src="js/scoring.js"></script>
   <script src="js/data.js"></script>

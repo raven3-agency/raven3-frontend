@@ -25,6 +25,20 @@ const App = (() => {
     if (statusLabel) statusLabel.textContent = connected ? 'Supabase' : 'LocalDB';
     if (statusEl)    statusEl.classList.toggle('supabase', connected);
 
+    /* Update sidebar with logged-in user */
+    const user = Auth.getUser();
+    if (user) {
+      const avatarEl = document.getElementById('sidebarAvatar');
+      const nameEl   = document.getElementById('sidebarUserName');
+      if (avatarEl) avatarEl.textContent = Auth.getAvatarLetter(user);
+      if (nameEl)   nameEl.textContent   = Auth.getDisplayName(user);
+    }
+
+    /* Logout button */
+    document.getElementById('btnLogout')?.addEventListener('click', async () => {
+      await Auth.signOut();
+    });
+
     setupNav();
     setupTopbarActions();
     setupDrawer();
@@ -427,4 +441,41 @@ const App = (() => {
 })();
 
 /* ── Bootstrap ── */
-document.addEventListener('DOMContentLoaded', () => App.init());
+document.addEventListener('DOMContentLoaded', async () => {
+  const overlay  = document.getElementById('loginOverlay');
+  const form     = document.getElementById('loginForm');
+  const errorEl  = document.getElementById('loginError');
+  const loginBtn = document.getElementById('loginBtn');
+
+  /* Check existing session */
+  const authenticated = await Auth.checkSession();
+  if (authenticated) {
+    overlay.classList.add('hidden');
+    await App.init();
+    return;
+  }
+
+  /* Show login screen */
+  overlay.classList.remove('hidden');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email    = document.getElementById('loginEmail').value.trim();
+    const password = document.getElementById('loginPassword').value;
+
+    errorEl.classList.remove('visible');
+    loginBtn.disabled    = true;
+    loginBtn.textContent = 'Ingresando...';
+
+    try {
+      await Auth.signIn(email, password);
+      overlay.classList.add('hidden');
+      await App.init();
+    } catch {
+      errorEl.textContent = 'Email o contraseña incorrectos.';
+      errorEl.classList.add('visible');
+      loginBtn.disabled    = false;
+      loginBtn.textContent = 'Ingresar';
+    }
+  });
+});
