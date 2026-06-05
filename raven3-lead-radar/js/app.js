@@ -141,8 +141,8 @@ const App = (() => {
         searchResults = [];
       }
     } else {
-      await delay(900 + Math.random() * 600);
-      searchResults = Data.generateSearchResults(category, zone, limit, filter);
+      UI.toast('Configurá el Backend URL en Ajustes para buscar leads', 'warning');
+      searchResults = [];
     }
 
     const existingIds = new Set(Storage.getLeads().map(l => l.id));
@@ -402,8 +402,6 @@ const App = (() => {
       case 'kanban':    UI.renderKanban(); break;
     }
   };
-
-  const delay = (ms) => new Promise(r => setTimeout(r, ms));
 
   /* ── Keyboard shortcuts ── */
   document.addEventListener('keydown', (e) => {
