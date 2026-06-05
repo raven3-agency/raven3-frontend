@@ -107,12 +107,43 @@ const App = (() => {
 
     UI.renderSearchLoading();
 
-    await delay(900 + Math.random() * 600);
+    const settings   = Storage.getSettings();
+    const useRealApi = !!settings.backendUrl;
 
-    searchResults = Data.generateSearchResults(category, zone, limit, filter);
+    if (useRealApi) {
+      try {
+        const res = await fetch(settings.backendUrl, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify({ category, zone, radius: radius * 1000, limit }),
+        });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
+          throw new Error(err.error || `HTTP ${res.status}`);
+        }
+        const data = await res.json();
+        let results = (data.leads || []).map(l => Scoring.enrich(l));
+        if (filter !== 'all') {
+          results = results.filter(l => {
+            if (filter === 'no_website')    return !l.hasWebsite;
+            if (filter === 'poor_website')  return l.websiteQuality === 'poor';
+            if (filter === 'has_instagram') return !!l.instagram;
+            if (filter === 'high_score')    return l.opportunityScore >= 70;
+            return true;
+          });
+        }
+        searchResults = results.sort((a, b) => b.opportunityScore - a.opportunityScore);
+      } catch (err) {
+        UI.toast(`Error al buscar: ${err.message}`, 'error');
+        searchResults = [];
+      }
+    } else {
+      await delay(900 + Math.random() * 600);
+      searchResults = Data.generateSearchResults(category, zone, limit, filter);
+    }
+
     const existingIds = new Set(Storage.getLeads().map(l => l.id));
     UI.renderSearchResults(searchResults, existingIds);
-
     Storage.addActivity({ msg: `Búsqueda: ${category} en ${zone} → ${searchResults.length} resultados`, color: '' });
   };
 

@@ -792,61 +792,60 @@ const UI = (() => {
   ──────────────────────────────────────────────── */
   const renderSettings = () => {
     const s = Storage.getSettings();
+    const apiActive = !!s.backendUrl;
     document.getElementById('settingsContent').innerHTML = `
       <div class="settings-layout">
 
         <div class="settings-card">
-          <div class="settings-card-title">Google Places API</div>
-          <div class="settings-card-desc">Conectá la API oficial para obtener datos reales de negocios locales. Requiere una clave de API de Google Cloud con el servicio Places habilitado.</div>
-          <div class="settings-field">
-            <div class="form-group">
-              <label class="form-label">API Key</label>
-              <input class="form-input" type="password" id="settingApiKey" value="${s.apiKey||''}" placeholder="AIzaSy...">
-            </div>
-          </div>
-          <div class="settings-status inactive">
-            <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-            API no conectada — usando datos de demostración
-          </div>
-          <div class="warning-banner" style="margin-top:12px">
-            <svg viewBox="0 0 14 14" fill="none"><path d="M7 1.5L13 12.5H1L7 1.5Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M7 5.5V8.5M7 10V10.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-            <span>No expongas claves de API en frontend de producción. Usa un backend proxy para las llamadas a la API.</span>
+          <div class="settings-card-title">Estado de integración</div>
+          <div class="settings-card-desc">Google Places API (New) vía Cloudflare Workers. La clave vive como secret en el worker — nunca expuesta al browser.</div>
+          <div class="settings-status ${apiActive ? 'active' : 'inactive'}" style="margin-top:14px">
+            ${apiActive
+              ? `<svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 7L6 8.5L9.5 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                 API real activa — Google Places`
+              : `<svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                 Modo demo — configurá el Worker URL para activar datos reales`}
           </div>
         </div>
 
         <div class="settings-card">
-          <div class="settings-card-title">Backend Proxy</div>
-          <div class="settings-card-desc">URL del servidor backend que actúa como proxy seguro para las llamadas a Google Places API. Recomendado para producción.</div>
+          <div class="settings-card-title">Worker URL</div>
+          <div class="settings-card-desc">URL del Cloudflare Worker que actúa como proxy seguro hacia Google Places API. Seguí los pasos de la derecha para obtenerla.</div>
           <div class="settings-field">
             <div class="form-group">
-              <label class="form-label">Backend URL</label>
-              <input class="form-input" id="settingBackendUrl" value="${s.backendUrl||''}" placeholder="https://api.raven3.dev">
+              <label class="form-label">URL del worker</label>
+              <input class="form-input" id="settingBackendUrl" value="${s.backendUrl||''}" placeholder="https://search-leads.TU-USUARIO.workers.dev">
             </div>
-          </div>
-          <div class="settings-status inactive" style="margin-top:8px">
-            <svg viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 4.5L9.5 9.5M9.5 4.5L4.5 9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
-            Backend no configurado
           </div>
         </div>
 
         <div class="settings-card" style="grid-column:span 2">
-          <div class="settings-card-title">Endpoint de integración futura</div>
-          <div class="settings-card-desc" style="margin-bottom:12px">Cuando el backend esté configurado, la búsqueda de leads usará este endpoint en lugar de los datos de demostración:</div>
-          <div class="api-endpoint-box"><span class="api-method">POST</span> /api/search-leads
+          <div class="settings-card-title">Cómo activar Google Places real</div>
+          <div class="settings-card-desc" style="margin-bottom:16px">Cuatro pasos — una sola vez. No requiere instalar nada.</div>
+          <div class="api-endpoint-box"><span class="api-method">1</span> Obtener clave de API de Google
 
-Headers:
-  <span class="api-key">Content-Type</span>: <span class="api-val">application/json</span>
-  <span class="api-key">Authorization</span>: <span class="api-val">Bearer {API_KEY}</span>
+  console.cloud.google.com → APIs &amp; Services → Enable APIs
+  Habilitar: <span class="api-key">Places API (New)</span>
+  Credentials → Create API Key → copiar el valor
 
-Body:
-  {
-    <span class="api-key">"category"</span>: <span class="api-val">"Restaurante"</span>,
-    <span class="api-key">"zone"</span>: <span class="api-val">"Palermo, Buenos Aires"</span>,
-    <span class="api-key">"radius"</span>: <span class="api-val">5000</span>,
-    <span class="api-key">"limit"</span>: <span class="api-val">20</span>
-  }
+<span class="api-method">2</span> Crear el Cloudflare Worker (gratis, 100k req/día)
 
-Response: Array&lt;Lead&gt;</div>
+  workers.cloudflare.com → crear cuenta → Create a Worker
+  Reemplazar todo el código con el contenido de:
+  <span class="api-key">api-worker/search-leads.js</span> (en el repo)
+  → Save and Deploy
+
+<span class="api-method">3</span> Agregar el secret al Worker
+
+  Workers → tu worker → Settings → Variables → Add variable:
+  <span class="api-key">GOOGLE_PLACES_API_KEY</span> = <span class="api-val">AIzaSy...</span>  (marcar como secret)
+  → Save and Deploy
+
+<span class="api-method">4</span> Configurar en Lead Radar
+
+  Copiar la URL del worker: <span class="api-val">https://search-leads.TU-USUARIO.workers.dev</span>
+  Pegarla en el campo "Worker URL" (arriba) → Guardar cambios
+  La próxima búsqueda usará datos reales de Google.</div>
         </div>
 
         <div class="settings-card">
@@ -879,7 +878,6 @@ Response: Array&lt;Lead&gt;</div>
     document.getElementById('btnSaveSettings')?.addEventListener('click', () => {
       Storage.saveSettings({
         ...Storage.getSettings(),
-        apiKey:     document.getElementById('settingApiKey').value.trim(),
         backendUrl: document.getElementById('settingBackendUrl').value.trim(),
       });
       toast('Configuración guardada', 'success');

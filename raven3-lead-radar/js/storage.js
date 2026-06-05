@@ -52,9 +52,11 @@ const Storage = (() => {
   const saveTemplates = (tpls) => localStorage.setItem(K.TEMPLATES, JSON.stringify(tpls));
 
   /* ── SETTINGS ── */
+  const DEFAULTS = { backendUrl: 'https://weathered-tree-bfc3.inforaven3.workers.dev' };
+
   const getSettings = () => {
-    try { return JSON.parse(localStorage.getItem(K.SETTINGS) || '{}'); }
-    catch { return {}; }
+    try { return { ...DEFAULTS, ...JSON.parse(localStorage.getItem(K.SETTINGS) || '{}') }; }
+    catch { return { ...DEFAULTS }; }
   };
   const saveSettings = (s) => localStorage.setItem(K.SETTINGS, JSON.stringify(s));
   const mergeSetting = (key, val) => {
