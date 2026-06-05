@@ -43,7 +43,7 @@ const Data = (() => {
     { id: 'perdido',           label: 'Perdido',           color: '#556670' },
   ];
 
-  /* ── NAME POOLS BY CATEGORY ── */
+  /* ── NAME POOLS (used by mock search generator when no real API is configured) ── */
   const NAME_POOLS = {
     Restaurante:    ['El Rancho','Don Fermín','La Estancia','Comedor La Esquina','El Asadito','La Parrilla de Juan','Sabores del Sur','La Fonda Criolla','El Bodegón de Miguel','Rincón Porteño','Los Trigales','La Cantina','El Fogón','Casa de Campo','El Quincho'],
     Bar:            ['Bar El Federal','La Biela','El Preferido','Bar Sur','La Cigale','El Toro','Barra 10','The Craft','Bar Notturno','El Reloj','Subsuelo Bar','La Cervecería','El Viejo Almacén','Bar Palermo','Bodega Norte'],
@@ -72,146 +72,7 @@ const Data = (() => {
   /* ── UUID ── */
   const uid = () => `ld_${Date.now().toString(36)}_${Math.random().toString(36).slice(2,7)}`;
 
-  /* ── SEEDED LEADS ── */
-  const SEED_LEADS = [
-    {
-      id: 'seed_001', businessName: 'Panadería Roma', category: 'Panadería',
-      zone: 'Flores', address: 'Av. Rivadavia 6234, Flores', phone: '+54 11 4631-2200',
-      rating: 4.7, reviewsCount: 183, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@panaderiaroma', whatsapp: '+54 11 4631-2200',
-      source: 'Google Maps (mock)', status: 'sin_web', notes: '', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(12), updatedAt: ago(12),
-    },
-    {
-      id: 'seed_002', businessName: 'Barber Kings', category: 'Peluquería',
-      zone: 'Palermo', address: 'Thames 1842, Palermo', phone: '+54 11 4831-9900',
-      rating: 4.5, reviewsCount: 97, website: 'barberkings.wixsite.com', hasWebsite: true,
-      websiteQuality: 'poor', instagram: '@barberkingsba', whatsapp: '+54 9 11 4831-9900',
-      source: 'Google Maps (mock)', status: 'investigar', notes: 'Web hecha en Wix, muy lenta.', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(10), updatedAt: ago(10),
-    },
-    {
-      id: 'seed_003', businessName: 'Vet Amigos', category: 'Veterinaria',
-      zone: 'Belgrano', address: 'Cabildo 2301, Belgrano', phone: '+54 11 4783-5500',
-      rating: 4.8, reviewsCount: 241, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@vetamigos', whatsapp: null,
-      source: 'Google Maps (mock)', status: 'nuevo', notes: '', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(8), updatedAt: ago(8),
-    },
-    {
-      id: 'seed_004', businessName: 'Ferretería El Tornillo', category: 'Ferretería',
-      zone: 'Almagro', address: 'Corrientes 3800, Almagro', phone: '+54 11 4862-1100',
-      rating: 4.2, reviewsCount: 45, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: null, whatsapp: '+54 9 11 4862-1100',
-      source: 'Google Maps (mock)', status: 'contactado', notes: 'Hablar con el dueño, Mario. Muy interesado.', lastContactDate: ago(3), nextActionDate: tomorrow(4),
-      createdAt: ago(7), updatedAt: ago(3),
-    },
-    {
-      id: 'seed_005', businessName: 'AutoService Norte', category: 'Mecánica',
-      zone: 'Núñez', address: 'Av. del Libertador 7100, Núñez', phone: '+54 11 4702-3344',
-      rating: 4.6, reviewsCount: 128, website: 'autoservice.com.ar', hasWebsite: true,
-      websiteQuality: 'poor', instagram: '@autoservicenorte', whatsapp: '+54 9 11 4702-3344',
-      source: 'Google Maps (mock)', status: 'propuesta_enviada', notes: 'Enviamos propuesta el martes. Esperando respuesta.', lastContactDate: ago(2), nextActionDate: tomorrow(7),
-      createdAt: ago(14), updatedAt: ago(2),
-    },
-    {
-      id: 'seed_006', businessName: 'Café Tortoni Centro', category: 'Cafetería',
-      zone: 'San Telmo', address: 'Av. de Mayo 825, San Telmo', phone: '+54 11 4342-4328',
-      rating: 4.4, reviewsCount: 1892, website: 'cafetortoni.com.ar', hasWebsite: true,
-      websiteQuality: 'average', instagram: '@cafetortoni_oficial', whatsapp: null,
-      source: 'Google Maps (mock)', status: 'respondio', notes: 'Gerente respondió, quieren una reunión.', lastContactDate: ago(1), nextActionDate: tomorrow(3),
-      createdAt: ago(9), updatedAt: ago(1),
-    },
-    {
-      id: 'seed_007', businessName: 'Clínica Dental Norte', category: 'Odontología',
-      zone: 'Villa Crespo', address: 'Av. Corrientes 5200, Villa Crespo', phone: '+54 11 4854-2200',
-      rating: 4.9, reviewsCount: 312, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@clinicadentalnorte', whatsapp: '+54 9 11 4854-2200',
-      source: 'Google Maps (mock)', status: 'nuevo', notes: '', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(5), updatedAt: ago(5),
-    },
-    {
-      id: 'seed_008', businessName: 'FitCenter Palermo', category: 'Gimnasio',
-      zone: 'Palermo', address: 'Santa Fe 3600, Palermo', phone: '+54 11 4826-7700',
-      rating: 4.3, reviewsCount: 74, website: 'fitcenterpalermo.negocio.site', hasWebsite: true,
-      websiteQuality: 'poor', instagram: '@fitcenterba', whatsapp: '+54 9 11 4826-7700',
-      source: 'Google Maps (mock)', status: 'web_mejorable', notes: 'Web en Google Sites. Sin SSL.', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(6), updatedAt: ago(6),
-    },
-    {
-      id: 'seed_009', businessName: 'Boutique Hotel Sur', category: 'Hotel',
-      zone: 'San Telmo', address: 'Defensa 1195, San Telmo', phone: '+54 11 4300-1188',
-      rating: 4.7, reviewsCount: 456, website: 'hotelsur.com', hasWebsite: true,
-      websiteQuality: 'good', instagram: '@hotelbouttiquesur', whatsapp: null,
-      source: 'Google Maps (mock)', status: 'perdido', notes: 'Ya tienen agencia. No interesados.', lastContactDate: ago(20), nextActionDate: null,
-      createdAt: ago(22), updatedAt: ago(20),
-    },
-    {
-      id: 'seed_010', businessName: 'Spa Zen Recoleta', category: 'Estética',
-      zone: 'Recoleta', address: 'Callao 1800, Recoleta', phone: '+54 11 4811-3300',
-      rating: 4.6, reviewsCount: 88, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@spazenrecoleta', whatsapp: '+54 9 11 4811-3300',
-      source: 'Google Maps (mock)', status: 'nuevo', notes: '', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(4), updatedAt: ago(4),
-    },
-    {
-      id: 'seed_011', businessName: 'Estudio Contable García', category: 'Contabilidad',
-      zone: 'Microcentro', address: 'Av. Corrientes 330 Piso 4, Microcentro', phone: '+54 11 4394-2200',
-      rating: 4.5, reviewsCount: 32, website: 'estudiogarciacpn.com.ar', hasWebsite: true,
-      websiteQuality: 'poor', instagram: null, whatsapp: '+54 9 11 15-4394-2200',
-      source: 'Google Maps (mock)', status: 'contactado', notes: 'Primer mail enviado.', lastContactDate: ago(5), nextActionDate: tomorrow(5),
-      createdAt: ago(11), updatedAt: ago(5),
-    },
-    {
-      id: 'seed_012', businessName: 'Don Fermín Parrilla', category: 'Restaurante',
-      zone: 'Caballito', address: 'Av. Rivadavia 5001, Caballito', phone: '+54 11 4903-5500',
-      rating: 4.8, reviewsCount: 567, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@donferminparrilla', whatsapp: '+54 9 11 4903-5500',
-      source: 'Google Maps (mock)', status: 'ganado', notes: '¡Cliente! Firmamos contrato el 15/01.', lastContactDate: ago(15), nextActionDate: null,
-      createdAt: ago(30), updatedAt: ago(15),
-    },
-    {
-      id: 'seed_013', businessName: 'Inmobiliaria Horizonte', category: 'Inmobiliaria',
-      zone: 'Rosario Centro', address: 'Córdoba 1250, Rosario', phone: '+54 341 422-3300',
-      rating: 4.2, reviewsCount: 28, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: null, whatsapp: '+54 9 341 422-3300',
-      source: 'Google Maps (mock)', status: 'investigar', notes: '', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(3), updatedAt: ago(3),
-    },
-    {
-      id: 'seed_014', businessName: 'Centro Médico Familiar', category: 'Clínica',
-      zone: 'Lomas de Zamora', address: 'Gorriti 220, Lomas de Zamora', phone: '+54 11 4292-1100',
-      rating: 4.4, reviewsCount: 119, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@centromedicofamiliar', whatsapp: '+54 9 11 4292-1100',
-      source: 'Google Maps (mock)', status: 'nuevo', notes: '', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(2), updatedAt: ago(2),
-    },
-    {
-      id: 'seed_015', businessName: 'Urban Barbers', category: 'Peluquería',
-      zone: 'Palermo', address: 'Honduras 4900, Palermo', phone: '+54 11 4833-6600',
-      rating: 4.9, reviewsCount: 203, website: null, hasWebsite: false,
-      websiteQuality: 'none', instagram: '@urbanbarbers_ba', whatsapp: '+54 9 11 4833-6600',
-      source: 'Google Maps (mock)', status: 'sin_web', notes: 'Perfil de Google impecable. Sin web.', lastContactDate: null, nextActionDate: null,
-      createdAt: ago(1), updatedAt: ago(1),
-    },
-  ];
-
-  /* ── HELPER: dates ── */
-  function ago(days) {
-    const d = new Date();
-    d.setDate(d.getDate() - days);
-    return d.toISOString();
-  }
-  function tomorrow(days) {
-    const d = new Date();
-    d.setDate(d.getDate() + days);
-    return d.toISOString().split('T')[0];
-  }
-
-  /* ── SEED LEADS (enrich with scoring) ── */
-  const getSeedLeads = () => SEED_LEADS.map(l => Scoring.enrich(l));
-
-  /* ── MOCK SEARCH GENERATOR ── */
+  /* ── MOCK SEARCH GENERATOR (used when no Google Places API is configured) ── */
   const generateSearchResults = (category, zone, limit, filter) => {
     const pool = NAME_POOLS[category] || NAME_POOLS['Otro'];
     const z = zone || 'Buenos Aires';
@@ -298,6 +159,6 @@ const Data = (() => {
   return {
     STATUS_META, PRIORITY_META, WEB_QUALITY_META,
     KANBAN_COLUMNS,
-    getSeedLeads, generateSearchResults,
+    generateSearchResults,
   };
 })();

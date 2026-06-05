@@ -25,7 +25,6 @@ const App = (() => {
     if (statusLabel) statusLabel.textContent = connected ? 'Supabase' : 'LocalDB';
     if (statusEl)    statusEl.classList.toggle('supabase', connected);
 
-    seedIfNeeded();
     setupNav();
     setupTopbarActions();
     setupDrawer();
@@ -35,15 +34,6 @@ const App = (() => {
     setupMobile();
     navigate('dashboard');
     UI.updateNavBadge();
-  };
-
-  /* ── Seed initial data ── */
-  const seedIfNeeded = () => {
-    if (!Storage.isSeeded()) {
-      Data.getSeedLeads().forEach(l => Storage.upsertLead(l));
-      Storage.markSeeded();
-      Storage.addActivity({ msg: '15 leads de demostración importados', color: '' });
-    }
   };
 
   /* ═══════════════════════════════════════

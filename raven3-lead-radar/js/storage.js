@@ -16,6 +16,10 @@ const Storage = (() => {
 
   const DEFAULTS = { backendUrl: 'https://weathered-tree-bfc3.inforaven3.workers.dev' };
 
+  /* ── Supabase defaults (pre-configured project) ── */
+  const SB_DEFAULT_URL = 'https://tuoovkvocpporpodupxf.supabase.co';
+  const SB_DEFAULT_KEY = 'sb_publishable_31jetXGeLWVDqs7g5IN-_w_63IHJDSf';
+
   /* ── localStorage keys ── */
   const K = {
     LEADS:     'r3lr_leads',
@@ -31,8 +35,8 @@ const Storage = (() => {
      INIT
   ═══════════════════════════════════ */
   const init = async () => {
-    const sbUrl = localStorage.getItem(K.SB_URL);
-    const sbKey = localStorage.getItem(K.SB_KEY);
+    const sbUrl = localStorage.getItem(K.SB_URL) || SB_DEFAULT_URL;
+    const sbKey = localStorage.getItem(K.SB_KEY) || SB_DEFAULT_KEY;
 
     if (sbUrl && sbKey && window.supabase) {
       try {
@@ -212,8 +216,8 @@ const Storage = (() => {
      SUPABASE CONFIGURATION
   ═══════════════════════════════════ */
   const getSupabaseConfig = () => ({
-    url: localStorage.getItem(K.SB_URL) || '',
-    key: localStorage.getItem(K.SB_KEY) || '',
+    url: localStorage.getItem(K.SB_URL) || SB_DEFAULT_URL,
+    key: localStorage.getItem(K.SB_KEY) || SB_DEFAULT_KEY,
   });
 
   /* Test connection, then save credentials */
