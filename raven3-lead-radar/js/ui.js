@@ -967,6 +967,46 @@ const UI = (() => {
           </button>
         </div>
 
+        <!-- ── USUARIOS ── -->
+        <div class="settings-card" style="grid-column:span 2">
+          <div class="settings-card-title">Usuarios</div>
+          <div class="settings-card-desc">Usuarios registrados y sus roles en el sistema.</div>
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>Usuario</th>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div class="user-cell-row">
+                    <div class="user-table-avatar" style="background:linear-gradient(135deg,var(--accent),var(--accent-dark))">P</div>
+                    <span>Patricio</span>
+                  </div>
+                </td>
+                <td class="user-email">patricio.monpelat@gmail.com</td>
+                <td><span class="role-badge role-admin">Admin</span></td>
+                <td><span class="user-status-active"><span class="user-status-dot"></span>Activo</span></td>
+              </tr>
+              <tr>
+                <td>
+                  <div class="user-cell-row">
+                    <div class="user-table-avatar" style="background:linear-gradient(135deg,var(--purple),#9B8FE8)">C</div>
+                    <span>Constanza</span>
+                  </div>
+                </td>
+                <td class="user-email">—</td>
+                <td><span class="role-badge role-user">Usuario</span></td>
+                <td><span class="user-status-active"><span class="user-status-dot"></span>Activo</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
       </div>`;
 
     /* ── Supabase connect ── */

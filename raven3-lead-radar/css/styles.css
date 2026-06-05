@@ -1390,6 +1390,21 @@ img { max-width: 100%; display: block; }
 .settings-status.pending  { background: var(--warning-dim); color: var(--warning); border: 1px solid rgba(244,200,66,0.15); }
 .settings-status svg { width: 14px; height: 14px; flex-shrink: 0; }
 
+/* users table */
+.users-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 4px; }
+.users-table thead th { text-align: left; padding: 8px 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-4); border-bottom: 1px solid var(--border); }
+.users-table tbody td { padding: 12px 12px; border-bottom: 1px solid var(--border); color: var(--text-2); vertical-align: middle; }
+.users-table tbody tr:last-child td { border-bottom: none; }
+.users-table tbody tr:hover td { background: var(--bg-hover); }
+.user-cell-row { display: flex; align-items: center; gap: 10px; }
+.user-table-avatar { width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; color: var(--bg-0); flex-shrink: 0; }
+.user-email { color: var(--text-3); font-family: 'DM Mono', monospace; font-size: 12px; }
+.role-badge { display: inline-flex; align-items: center; padding: 3px 9px; border-radius: 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.05em; }
+.role-admin { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-border); }
+.role-user  { background: var(--purple-dim); color: #9B8FE8; border: 1px solid var(--purple-border); }
+.user-status-active { display: inline-flex; align-items: center; gap: 6px; color: var(--success); font-size: 12px; }
+.user-status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--success); box-shadow: 0 0 5px var(--success); flex-shrink: 0; }
+
 .api-endpoint-box {
   background: var(--bg-0);
   border: 1px solid var(--border);

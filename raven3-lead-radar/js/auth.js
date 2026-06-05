@@ -45,5 +45,7 @@ const Auth = (() => {
 
   const getAvatarLetter = (user) => getDisplayName(user).charAt(0).toUpperCase();
 
-  return { checkSession, signIn, signOut, getUser, getDisplayName, getAvatarLetter };
+  const isAdmin = () => (_user?.email || '').toLowerCase().startsWith('patricio');
+
+  return { checkSession, signIn, signOut, getUser, getDisplayName, getAvatarLetter, isAdmin };
 })();

@@ -34,6 +34,12 @@ const App = (() => {
       if (nameEl)   nameEl.textContent   = Auth.getDisplayName(user);
     }
 
+    /* Hide settings nav for non-admin users */
+    if (!Auth.isAdmin()) {
+      const settingsNav = document.querySelector('.nav-item[data-section="settings"]');
+      if (settingsNav) settingsNav.style.display = 'none';
+    }
+
     /* Logout button */
     document.getElementById('btnLogout')?.addEventListener('click', async () => {
       await Auth.signOut();
@@ -54,6 +60,7 @@ const App = (() => {
      NAVIGATION
   ═══════════════════════════════════════ */
   const navigate = (section) => {
+    if (section === 'settings' && !Auth.isAdmin()) section = 'dashboard';
     currentSection = section;
 
     // Section visibility
