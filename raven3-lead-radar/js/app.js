@@ -291,13 +291,26 @@ const App = (() => {
   const saveDrawerChanges = (id) => {
     const lead = Storage.getLead(id);
     if (!lead) return;
+    const newNotes  = document.getElementById('drawerNotes').value;
+    const newStatus = document.getElementById('drawerStatus').value;
+    const now = new Date().toISOString();
+    const log = [...(lead.activityLog || [])];
+    if (newNotes && newNotes !== lead.notes) {
+      log.push({ type: 'note', text: 'Notas actualizadas', ts: now });
+    }
+    if (newStatus !== lead.status) {
+      const label = Data.STATUS_META[newStatus]?.label || newStatus;
+      log.push({ type: 'status', text: `Estado → ${label}`, ts: now });
+    }
+    log.push({ type: 'save', text: 'Lead guardado', ts: now });
     const updated = {
       ...lead,
-      status:          document.getElementById('drawerStatus').value,
+      status:          newStatus,
       priority:        document.getElementById('drawerPriority').value,
-      notes:           document.getElementById('drawerNotes').value,
+      notes:           newNotes,
       lastContactDate: document.getElementById('drawerLastContact').value || null,
       nextActionDate:  document.getElementById('drawerNextAction').value || null,
+      activityLog:     log,
     };
     Storage.upsertLead(updated);
     Storage.addActivity({ msg: `Lead actualizado: ${lead.businessName}`, color: 'purple' });
@@ -308,9 +321,10 @@ const App = (() => {
   const updateLeadStatus = (id, newStatus, fromKanban = false) => {
     const lead = Storage.getLead(id);
     if (!lead || lead.status === newStatus) return;
-    const updated = { ...lead, status: newStatus };
-    Storage.upsertLead(updated);
     const label = Data.STATUS_META[newStatus]?.label || newStatus;
+    const log = [...(lead.activityLog || []), { type: 'status', text: `Estado → ${label}`, ts: new Date().toISOString() }];
+    const updated = { ...lead, status: newStatus, activityLog: log };
+    Storage.upsertLead(updated);
     Storage.addActivity({ msg: `${lead.businessName} → ${label}`, color: getActivityColor(newStatus) });
     UI.toast(`Estado: ${label}`, 'info');
     refreshCurrentView();
@@ -342,13 +356,15 @@ const App = (() => {
     const data = UI.getModalFormData();
     if (!data.businessName) { UI.toast('El nombre es requerido', 'warning'); return; }
 
+    const existingLead = editId ? Storage.getLead(editId) : null;
     const enriched = Scoring.enrich({
       ...data,
       id: editId || `ld_${Date.now().toString(36)}_${Math.random().toString(36).slice(2,7)}`,
-      notes: editId ? (Storage.getLead(editId)?.notes || '') : '',
-      lastContactDate: editId ? (Storage.getLead(editId)?.lastContactDate || null) : null,
-      nextActionDate:  editId ? (Storage.getLead(editId)?.nextActionDate  || null) : null,
-      createdAt: editId ? (Storage.getLead(editId)?.createdAt || new Date().toISOString()) : new Date().toISOString(),
+      notes: existingLead?.notes || '',
+      lastContactDate: existingLead?.lastContactDate || null,
+      nextActionDate:  existingLead?.nextActionDate  || null,
+      createdAt: existingLead?.createdAt || new Date().toISOString(),
+      activityLog: existingLead?.activityLog || [{ type: 'created', text: 'Lead agregado manualmente', ts: new Date().toISOString() }],
     });
 
     Storage.upsertLead(enriched);

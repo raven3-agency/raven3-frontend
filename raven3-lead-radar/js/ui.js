@@ -523,6 +523,46 @@ const UI = (() => {
     document.getElementById('drawerOverlay').classList.remove('open');
   };
 
+  /* ── helpers for drawer ── */
+  const relativeTime = (iso) => {
+    const diff = Date.now() - new Date(iso).getTime();
+    const m = Math.floor(diff / 60000);
+    const h = Math.floor(diff / 3600000);
+    const d = Math.floor(diff / 86400000);
+    if (m < 1)  return 'hace un momento';
+    if (m < 60) return `hace ${m} min`;
+    if (h < 24) return `hace ${h}h`;
+    if (d < 7)  return `hace ${d}d`;
+    return new Date(iso).toLocaleDateString('es-AR', { day: 'numeric', month: 'short' });
+  };
+
+  const timelineDotColor = (type) => {
+    const map = { created: 'var(--text-3)', status: 'var(--accent)', note: '#a78bfa', save: 'var(--text-4)' };
+    return map[type] || 'var(--text-4)';
+  };
+
+  const actionPill = (href, label, icon, target = '_self') =>
+    `<a href="${href}" target="${target}" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;padding:6px 12px;background:var(--bg-3);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text-1);text-decoration:none;white-space:nowrap;transition:border-color .15s"
+        onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">${icon} ${label}</a>`;
+
+  const checkSiteStatus = async (website) => {
+    const el = document.getElementById('siteStatusBadge');
+    if (!el) return;
+    const settings = Storage.getSettings();
+    if (!settings.backendUrl) { el.remove(); return; }
+    try {
+      const res = await fetch(`${settings.backendUrl}/check?url=${encodeURIComponent(website)}`);
+      const d = await res.json();
+      if (d.online) {
+        el.innerHTML = `<span style="color:#26c6b0">● Online</span>&nbsp;<span style="color:var(--text-4)">${d.ms}ms</span>`;
+      } else {
+        el.innerHTML = `<span style="color:#ff6b6b">● Offline</span>`;
+      }
+    } catch {
+      el.remove();
+    }
+  };
+
   const renderDrawer = (lead) => {
     document.getElementById('drawerTitle').textContent = lead.businessName;
     document.getElementById('drawerHeaderActions').innerHTML = `
@@ -534,10 +574,52 @@ const UI = (() => {
     const waMsg = Templates.renderById('whatsapp_inicial', lead);
     const emailMsg = Templates.renderById('email_inicial', lead);
 
+    const workerUrl = (Storage.getSettings().backendUrl || '').replace(/\/$/, '');
+
+    /* Today's opening hours (Google: Mon=0 … Sun=6; JS: Sun=0 … Sat=6) */
+    const todayHours = (() => {
+      const descs = lead.openingHours?.weekdayDescriptions;
+      if (!descs?.length) return null;
+      const googleDay = (new Date().getDay() + 6) % 7;
+      const full = descs[googleDay] || '';
+      return full.includes(': ') ? full.split(': ').slice(1).join(': ') : full;
+    })();
+
+    /* WhatsApp URL */
+    const waNum = lead.whatsapp ? lead.whatsapp.replace(/\D/g, '') : null;
+    const waHref = waNum ? `https://wa.me/${waNum}` : null;
+
+    /* Website with protocol */
+    const webHref = lead.website
+      ? (/^https?:\/\//i.test(lead.website) ? lead.website : `https://${lead.website}`)
+      : null;
+
+    /* Maps URL */
+    const mapsHref = lead.address
+      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lead.address)}`
+      : null;
+
+    /* Activity log (newest first) */
+    const actLog = [...(lead.activityLog || [])].reverse();
+
     document.getElementById('drawerBody').innerHTML = `
 
-      <!-- Columna izquierda: Info + Score + Diagnóstico -->
+      <!-- Columna izquierda: Acciones + Info + Score + Diagnóstico + Actividad -->
       <div class="drawer-col">
+
+        <!-- Acciones rápidas -->
+        <div class="drawer-section" style="padding:10px 14px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            ${lead.phone  ? actionPill(`tel:${lead.phone}`, 'Llamar',
+                '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><path d="M2.5 3C2.5 3 3 5 5 7C7 9 9 9.5 9 9.5L10.5 8C10.5 8 9.5 7.5 9 7C8.5 6.5 8.5 5.5 8.5 5.5L5.5 2.5C5.5 2.5 4.5 2.5 3.5 2.5C3 2.5 2.5 3 2.5 3Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>') : ''}
+            ${waHref      ? actionPill(waHref, 'WhatsApp',
+                '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 9.5C5.5 10 8.5 10 10 8C11.5 6 10.5 3.5 8 3C5.5 2.5 3 4.5 3.5 7C3.7 8 4 8.5 4.5 9.5L3.5 11L5.5 10.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>', '_blank') : ''}
+            ${webHref     ? actionPill(webHref, 'Web',
+                '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 1.5C7 1.5 5 4 5 7C5 10 7 12.5 7 12.5M7 1.5C7 1.5 9 4 9 7C9 10 7 12.5 7 12.5M1.5 7H12.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>', '_blank') : ''}
+            ${mapsHref    ? actionPill(mapsHref, 'Maps',
+                '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><path d="M7 1.5C5 1.5 3.5 3 3.5 5C3.5 8 7 12.5 7 12.5C7 12.5 10.5 8 10.5 5C10.5 3 9 1.5 7 1.5Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="5" r="1.2" stroke="currentColor" stroke-width="1.1"/></svg>', '_blank') : ''}
+          </div>
+        </div>
 
         <!-- Info principal -->
         <div class="drawer-section">
@@ -559,10 +641,41 @@ const UI = (() => {
             <div class="info-item"><div class="info-label">Rating</div><div class="info-value">${ratingHtml(lead.rating, lead.reviewsCount)}</div></div>
             <div class="info-item"><div class="info-label">Fuente</div><div class="info-value">${lead.source || '—'}</div></div>
             <div class="info-item"><div class="info-label">Instagram</div><div class="info-value">${lead.instagram || '—'}</div></div>
-            <div class="info-item"><div class="info-label">WhatsApp</div><div class="info-value">${lead.whatsapp || '—'}</div></div>
-            <div class="info-item"><div class="info-label">Sitio web</div><div class="info-value">${lead.website ? `<a href="${/^https?:\/\//i.test(lead.website) ? lead.website : 'https://' + lead.website}" target="_blank" rel="noopener">${lead.website}</a>` : '—'}</div></div>
+            <div class="info-item"><div class="info-label">WhatsApp</div><div class="info-value">${waNum ? `<a href="${waHref}" target="_blank" rel="noopener">${lead.whatsapp}</a>` : '—'}</div></div>
+            <div class="info-item" style="grid-column:1/-1">
+              <div class="info-label">Sitio web</div>
+              <div class="info-value" style="display:flex;align-items:center;gap:8px">
+                ${webHref ? `<a href="${webHref}" target="_blank" rel="noopener">${lead.website}</a><span id="siteStatusBadge" style="font-size:11px;color:var(--text-3)">···</span>` : '—'}
+              </div>
+            </div>
             <div class="info-item"><div class="info-label">Calidad web</div><div class="info-value">${webQualityBadge(lead)}</div></div>
+            ${lead.openingHours ? `
+            <div class="info-item">
+              <div class="info-label">Horario hoy</div>
+              <div class="info-value" style="display:flex;align-items:center;gap:6px">
+                <span style="color:${lead.openingHours.openNow ? '#26c6b0' : '#ff6b6b'};font-size:10px">●</span>
+                <span>${lead.openingHours.openNow ? 'Abierto' : 'Cerrado'}${todayHours ? ` · ${todayHours}` : ''}</span>
+              </div>
+            </div>` : ''}
           </div>
+
+          ${lead.address ? `
+          <a href="${mapsHref}" target="_blank" rel="noopener" style="display:block;margin-top:12px;border-radius:var(--r-md);overflow:hidden;border:1px solid var(--border);text-decoration:none">
+            <iframe
+              src="https://maps.google.com/maps?q=${encodeURIComponent(lead.address)}&output=embed&z=15"
+              width="100%" height="160" style="border:0;display:block;pointer-events:none"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </a>` : ''}
+
+          ${lead.photos?.length && workerUrl ? `
+          <div style="display:flex;gap:8px;margin-top:10px;overflow-x:auto;padding-bottom:2px">
+            ${lead.photos.map(name => `<img
+              src="${workerUrl}/photo?name=${encodeURIComponent(name)}"
+              style="width:110px;height:78px;object-fit:cover;border-radius:8px;flex-shrink:0;border:1px solid var(--border)"
+              loading="lazy" onerror="this.style.display='none'"
+            >`).join('')}
+          </div>` : ''}
         </div>
 
         <!-- Score -->
@@ -586,6 +699,23 @@ const UI = (() => {
         <div class="drawer-section">
           <div class="drawer-section-title">Diagnóstico</div>
           <div style="background:var(--bg-3);border:1px solid var(--border);border-radius:var(--r-md);padding:14px;font-size:13px;color:var(--text-2);line-height:1.6">${lead.diagnosis}</div>
+        </div>
+
+        <!-- Actividad -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Actividad</div>
+          ${actLog.length === 0
+            ? `<div style="font-size:12px;color:var(--text-3)">Sin actividad registrada</div>`
+            : `<div style="display:flex;flex-direction:column;gap:10px">
+              ${actLog.map(e => `
+              <div style="display:flex;gap:10px;align-items:flex-start">
+                <div style="width:8px;height:8px;border-radius:50%;background:${timelineDotColor(e.type)};margin-top:4px;flex-shrink:0;box-shadow:0 0 0 2px var(--bg-2)"></div>
+                <div>
+                  <div style="font-size:12px;color:var(--text-1);line-height:1.4">${e.text}</div>
+                  <div style="font-size:11px;color:var(--text-3);margin-top:1px">${relativeTime(e.ts)}</div>
+                </div>
+              </div>`).join('')}
+            </div>`}
         </div>
 
       </div>
@@ -674,6 +804,9 @@ const UI = (() => {
     document.getElementById('btnCopyEmail').addEventListener('click', () => {
       copyToClipboard(document.getElementById('emailPreview').textContent, 'Email copiado');
     });
+
+    // Async: check website status
+    if (lead.website) checkSiteStatus(lead.website);
   };
 
   const copyToClipboard = (text, msg = 'Copiado') => {
