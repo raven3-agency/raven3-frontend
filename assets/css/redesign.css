@@ -348,6 +348,11 @@ a.logo {
 
 @media (max-width: 600px) { .hero-stat-bar { display: none; } }
 
+@media (max-width: 600px) {
+  .hero__inner { padding-bottom: 9rem; }
+  .hero-trust { margin-bottom: 2rem; }
+}
+
 /* Trust items */
 .trust-item {
   font-family: var(--font-mono) !important;

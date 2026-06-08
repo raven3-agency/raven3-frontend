@@ -98,6 +98,10 @@
   pointer-events: none;
 }
 
+@media (max-width: 600px) {
+  .hero-scroll-hint { bottom: 0; }
+}
+
 .hero-scroll-hint span {
   font-size: 0.68rem;
   letter-spacing: 0.25em;
