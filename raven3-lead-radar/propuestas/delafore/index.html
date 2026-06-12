@@ -219,7 +219,7 @@
     /* ─── Scroll to top ─── */
     #scroll-top {
       position: fixed;
-      bottom: 94px; right: 30px;
+      bottom: 94px; left: 30px;
       width: 40px; height: 40px;
       background: #1A3C2E;
       border-radius: 4px;
@@ -414,6 +414,55 @@
       backdrop-filter: blur(4px);
     }
 
+    /* ─── Carousel de propiedades destacadas ─── */
+    #featured-grid {
+      display: flex;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+    .featured-carousel-btn {
+      position: absolute;
+      top: 42%;
+      transform: translateY(-50%);
+      width: 44px; height: 44px;
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.09);
+      color: #1A3C2E;
+      transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+    }
+    .featured-carousel-btn:hover {
+      background: #1A3C2E;
+      color: white;
+      box-shadow: 0 6px 20px rgba(26,60,46,0.22);
+      transform: translateY(-50%) scale(1.06);
+    }
+    .featured-carousel-prev { left: -22px; }
+    .featured-carousel-next { right: -22px; }
+    .featured-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #A8C6B3;
+      border: none;
+      cursor: pointer;
+      transition: background 0.25s, transform 0.25s, width 0.3s, border-radius 0.3s;
+      padding: 0;
+    }
+    .featured-dot.active {
+      background: #1A3C2E;
+      transform: scale(1.15);
+      width: 24px;
+      border-radius: 4px;
+    }
+    @media (max-width: 767px) {
+      .featured-carousel-prev { left: 4px; }
+      .featured-carousel-next { right: 4px; }
+    }
+
     /* ═══════════════════════════════════════════════════
        RESPONSIVE & MOBILE POLISH
     ═══════════════════════════════════════════════════ */
@@ -436,7 +485,7 @@
     @media (max-width: 767px) {
       .wa-float { width: 50px; height: 50px; bottom: 20px; right: 16px; }
       .wa-float svg { width: 24px; height: 24px; }
-      #scroll-top { bottom: 78px; right: 18px; }
+      #scroll-top { bottom: 78px; left: 18px; }
       #video-toggle { bottom: 16px; left: 16px; }
 
       /* Reduce ligeramente el padding de las cards de servicio */
@@ -750,34 +799,52 @@
       </a>
     </div>
 
-    <!-- Grid de tarjetas — renderizado dinámicamente por search.js -->
-    <div id="featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Skeleton placeholder mientras carga el JSON -->
-      <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
-        <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
-        <div class="p-5 space-y-3">
-          <div class="skeleton h-7 w-2/3 rounded"></div>
-          <div class="skeleton h-4 w-3/4 rounded"></div>
-          <div class="skeleton h-3 w-1/2 rounded"></div>
+    <!-- Carousel de propiedades destacadas — renderizado dinámicamente por search.js -->
+    <div class="featured-carousel-outer relative px-1">
+
+      <!-- Botones prev / next -->
+      <button id="featured-prev" class="featured-carousel-btn featured-carousel-prev" aria-label="Propiedades anteriores">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <button id="featured-next" class="featured-carousel-btn featured-carousel-next" aria-label="Propiedades siguientes">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+
+      <!-- Track (overflow hidden) -->
+      <div id="featured-track-container" class="overflow-hidden">
+        <div id="featured-grid" class="flex" style="gap:24px">
+          <!-- Skeleton loaders mientras carga el JSON -->
+          <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+            <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
+            <div class="p-5 space-y-3">
+              <div class="skeleton h-7 w-2/3 rounded"></div>
+              <div class="skeleton h-4 w-3/4 rounded"></div>
+              <div class="skeleton h-3 w-1/2 rounded"></div>
+            </div>
+          </div>
+          <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+            <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
+            <div class="p-5 space-y-3">
+              <div class="skeleton h-7 w-2/3 rounded"></div>
+              <div class="skeleton h-4 w-3/4 rounded"></div>
+              <div class="skeleton h-3 w-1/2 rounded"></div>
+            </div>
+          </div>
+          <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+            <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
+            <div class="p-5 space-y-3">
+              <div class="skeleton h-7 w-2/3 rounded"></div>
+              <div class="skeleton h-4 w-3/4 rounded"></div>
+              <div class="skeleton h-3 w-1/2 rounded"></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hidden sm:block">
-        <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
-        <div class="p-5 space-y-3">
-          <div class="skeleton h-7 w-2/3 rounded"></div>
-          <div class="skeleton h-4 w-3/4 rounded"></div>
-          <div class="skeleton h-3 w-1/2 rounded"></div>
-        </div>
-      </div>
-      <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hidden lg:block">
-        <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
-        <div class="p-5 space-y-3">
-          <div class="skeleton h-7 w-2/3 rounded"></div>
-          <div class="skeleton h-4 w-3/4 rounded"></div>
-          <div class="skeleton h-3 w-1/2 rounded"></div>
-        </div>
-      </div>
-    </div><!-- fin grid -->
+
+      <!-- Dots indicadores -->
+      <div id="featured-carousel-dots" class="flex justify-center gap-2 mt-8"></div>
+
+    </div><!-- fin carousel -->
 
     <!-- CTA inferior -->
     <div class="text-center mt-12">
@@ -1735,6 +1802,86 @@
       });
     });
   };
+
+  /* ════════════════════════════════════════════
+     CAROUSEL — PROPIEDADES DESTACADAS
+     Llamado desde search.js después de renderFeatured()
+  ════════════════════════════════════════════ */
+  window.initFeaturedCarousel = function() {
+    clearInterval(window._featCarouselTimer);
+    window._featCarouselTimer = null;
+
+    const outer   = document.getElementById('featured-track-container');
+    const track   = document.getElementById('featured-grid');
+    const dotsEl  = document.getElementById('featured-carousel-dots');
+    const prevBtn = document.getElementById('featured-prev');
+    const nextBtn = document.getElementById('featured-next');
+    if (!outer || !track) return;
+
+    const GAP = 24;
+    let cur = 0;
+
+    function vc() {
+      if (window.innerWidth < 640)  return 1;
+      if (window.innerWidth < 1024) return 2;
+      return 3;
+    }
+
+    function getCards() { return Array.from(track.querySelectorAll('.prop-card')); }
+    function maxIdx()   { return Math.max(0, getCards().length - vc()); }
+    function cardW()    { return (outer.offsetWidth - GAP * (vc() - 1)) / vc(); }
+
+    function layout() {
+      const w = cardW();
+      getCards().forEach(c => { c.style.flexShrink = '0'; c.style.width = w + 'px'; });
+    }
+
+    function updateDots() {
+      if (!dotsEl) return;
+      dotsEl.innerHTML = '';
+      const max = maxIdx();
+      for (let i = 0; i <= max; i++) {
+        const d = document.createElement('button');
+        d.className = 'featured-dot' + (i === cur ? ' active' : '');
+        d.setAttribute('aria-label', 'Ir a propiedad ' + (i + 1));
+        d.addEventListener('click', () => { goTo(i); startAuto(); });
+        dotsEl.appendChild(d);
+      }
+    }
+
+    function goTo(n) {
+      cur = Math.max(0, Math.min(n, maxIdx()));
+      track.style.transform = 'translateX(-' + (cur * (cardW() + GAP)) + 'px)';
+      if (dotsEl) {
+        dotsEl.querySelectorAll('.featured-dot').forEach((d, i) => d.classList.toggle('active', i === cur));
+      }
+    }
+
+    function next() { goTo(cur < maxIdx() ? cur + 1 : 0); }
+    function prev() { goTo(cur > 0 ? cur - 1 : maxIdx()); }
+
+    function startAuto() {
+      clearInterval(window._featCarouselTimer);
+      window._featCarouselTimer = setInterval(next, 4500);
+    }
+
+    prevBtn?.addEventListener('click', () => { prev(); startAuto(); });
+    nextBtn?.addEventListener('click', () => { next(); startAuto(); });
+    outer.addEventListener('mouseenter', () => clearInterval(window._featCarouselTimer));
+    outer.addEventListener('mouseleave', startAuto);
+
+    layout();
+    updateDots();
+    goTo(0);
+    startAuto();
+
+    window.addEventListener('resize', () => { layout(); updateDots(); goTo(cur); });
+  };
+
+  /* Inicializar carousel con los skeletons mientras carga el JSON */
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof window.initFeaturedCarousel === 'function') window.initFeaturedCarousel();
+  });
 
   /* ════════════════════════════════════════════
      VIEW TOGGLE (grid / lista)

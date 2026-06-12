@@ -243,27 +243,10 @@
 
     grid.innerHTML = destacadas.map(renderCard).join('');
 
-    /* Inicializar sliders y favoritos */
+    /* Inicializar sliders, favoritos y carousel */
     if (typeof window.initSliders === 'function') window.initSliders(grid);
     if (typeof window.initFavorites === 'function') window.initFavorites(grid);
-
-    /* Fade-in para prop-cards */
-    const cardObs = new IntersectionObserver(
-      entries => entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.opacity   = '1';
-          e.target.style.transform = 'translateY(0)';
-          cardObs.unobserve(e.target);
-        }
-      }),
-      { threshold: 0.08 }
-    );
-    grid.querySelectorAll('.prop-card').forEach(c => {
-      c.style.opacity    = '0';
-      c.style.transform  = 'translateY(22px)';
-      c.style.transition = 'opacity 0.52s ease, transform 0.52s ease';
-      cardObs.observe(c);
-    });
+    if (typeof window.initFeaturedCarousel === 'function') window.initFeaturedCarousel();
   }
 
   /* ────────────────────────────────────
