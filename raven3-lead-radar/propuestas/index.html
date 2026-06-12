@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="De Laforé Bienes Raíces — Más de 30 años asesorando con profesionalismo y transparencia en Zona Norte de Buenos Aires. Venta, alquiler y tasaciones en San Isidro, Beccar, Martínez y más.">
+  <title>De Laforé Bienes Raíces | Propiedades en Zona Norte</title>
+
+  <!-- Google Fonts: Playfair Display (títulos luxury) + Inter (cuerpo limpio) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN con configuración personalizada de marca -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            /* Paleta De Laforé */
+            'dlf': {
+              /* Verde bosque — color primario */
+              'green-50':  '#EEF3F0',
+              'green-100': '#D4E3DA',
+              'green-200': '#A8C6B3',
+              'green-300': '#7DAA8D',
+              'green-400': '#528D67',
+              'green-500': '#2C5F45',
+              'green-600': '#1A3C2E', /* Principal */
+              'green-700': '#142E24',
+              'green-800': '#0E2019',
+              'green-900': '#08120E',
+            },
+            /* Oro cálido — acento y CTAs */
+            'dlf-gold': {
+              '100': '#F6EDD9',
+              '200': '#ECDAB2',
+              '300': '#E2C88C',
+              '400': '#D8B565',
+              '500': '#C9A96E', /* Principal */
+              '600': '#B5923A',
+              '700': '#967A2E',
+              '800': '#786122',
+            },
+            'dlf-cream':   '#FAFAF8', /* Fondo principal */
+            'dlf-surface': '#F4F1EC', /* Fondo secundario */
+            'dlf-text':    '#1E1E1E', /* Texto principal */
+            'dlf-muted':   '#6B7280', /* Texto secundario */
+          },
+          fontFamily: {
+            'serif': ['"Playfair Display"', 'Georgia', 'serif'],
+            'sans':  ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* ─── Reset base ─── */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #1E1E1E; background: #FAFAF8; }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+
+    /* ─── Hero: video de fondo + overlay ─── */
+    #inicio { background-color: #0E2019; } /* fallback si el video no carga */
+
+    .hero-overlay {
+      background: linear-gradient(to bottom,
+        rgba(10, 24, 18, 0.60) 0%,
+        rgba(10, 24, 18, 0.38) 50%,
+        rgba(10, 24, 18, 0.72) 100%);
+    }
+
+    /* Pausa de accesibilidad */
+    @media (prefers-reduced-motion: reduce) {
+      #hero-video { display: none; }
+    }
+
+    /* Botón pausa/play del video */
+    #video-toggle {
+      position: absolute;
+      bottom: 32px; left: 32px;
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 50%;
+      color: white;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: background 0.2s ease, transform 0.2s ease;
+      z-index: 20;
+    }
+    #video-toggle:hover {
+      background: rgba(255,255,255,0.28);
+      transform: scale(1.1);
+    }
+
+    /* ─── Navbar: transparente → sólida al scroll ─── */
+    #navbar { transition: background 0.35s ease, box-shadow 0.35s ease; }
+    #navbar.scrolled {
+      background: rgba(26, 60, 46, 0.97) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+
+    /* ─── Nav links con subrayado dorado animado ─── */
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -5px; left: 0;
+      width: 0; height: 1px;
+      background: #C9A96E;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ─── Custom select: flecha verde ─── */
+    .custom-select {
+      -webkit-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%231A3C2E' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 38px !important;
+      cursor: pointer;
+    }
+    .custom-select:focus { outline: none; border-color: #1A3C2E; box-shadow: 0 0 0 2px rgba(26,60,46,0.15); }
+
+    /* ─── Tarjetas de propiedades ─── */
+    .prop-card { transition: transform 0.32s ease, box-shadow 0.32s ease; }
+    .prop-card:hover { transform: translateY(-7px); box-shadow: 0 22px 45px rgba(26, 60, 46, 0.14); }
+    .prop-img { transition: transform 0.5s ease; }
+    .prop-card:hover .prop-img { transform: scale(1.06); }
+
+    /* ─── Cards de servicios ─── */
+    .service-card { transition: background 0.3s ease, transform 0.25s ease; }
+    .service-card:hover { background: #1A3C2E; transform: translateY(-4px); }
+    .service-card:hover .svc-icon   { color: #C9A96E; }
+    .service-card:hover .svc-title  { color: white; }
+    .service-card:hover .svc-text   { color: rgba(255,255,255,0.72); }
+
+    /* ─── Zonas: zoom en hover ─── */
+    .zone-card img { transition: transform 0.5s ease; }
+    .zone-card:hover img { transform: scale(1.07); }
+    .zone-overlay {
+      background: linear-gradient(to top,
+        rgba(10, 26, 20, 0.88) 0%,
+        rgba(10, 26, 20, 0.18) 100%);
+    }
+
+    /* ─── Línea decorativa dorada antes de labels ─── */
+    .label-line {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .label-line::before {
+      content: '';
+      display: block;
+      width: 36px; height: 1.5px;
+      background: #C9A96E;
+      flex-shrink: 0;
+    }
+
+    /* ─── Testimonios: borde izquierdo dorado ─── */
+    .testimonial-card { border-left: 3px solid #C9A96E; }
+
+    /* ─── Formulario de contacto ─── */
+    .form-input {
+      width: 100%;
+      border: 1px solid #E5E7EB;
+      border-radius: 6px;
+      padding: 12px 16px;
+      font-size: 0.875rem;
+      color: #1E1E1E;
+      background: #fff;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-input:focus {
+      outline: none;
+      border-color: #1A3C2E;
+      box-shadow: 0 0 0 2px rgba(26, 60, 46, 0.12);
+    }
+    .form-input::placeholder { color: #9CA3AF; }
+
+    /* ─── Tab activo en el buscador ─── */
+    .search-tab { transition: all 0.2s ease; }
+    .search-tab.is-active {
+      color: #1A3C2E;
+      border-bottom: 2px solid #C9A96E;
+      font-weight: 600;
+    }
+
+    /* ─── Mobile menu ─── */
+    #mobile-menu { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    #mobile-menu.open { max-height: 500px; }
+
+    /* ─── WhatsApp flotante ─── */
+    .wa-float {
+      position: fixed;
+      bottom: 28px; right: 28px;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37, 211, 102, 0.55); }
+
+    /* ─── Scroll to top ─── */
+    #scroll-top {
+      position: fixed;
+      bottom: 94px; right: 30px;
+      width: 40px; height: 40px;
+      background: #1A3C2E;
+      border-radius: 4px;
+      display: none;
+      align-items: center; justify-content: center;
+      z-index: 998;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    #scroll-top.visible { display: flex; }
+    #scroll-top:hover { background: #2C5F45; }
+
+    /* ─── Progress bar de lectura ─── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0;
+      width: 0%; height: 3px;
+      background: linear-gradient(to right, #1A3C2E 0%, #C9A96E 100%);
+      z-index: 9999;
+      transition: width 0.08s linear;
+      pointer-events: none;
+    }
+
+    /* ─── Barra superior de contacto ─── */
+    #top-bar {
+      position: fixed; top: 0; left: 0; right: 0;
+      z-index: 61; height: 40px;
+      background: #0E2019;
+      transition: transform 0.3s ease;
+    }
+    #top-bar.bar-hidden { transform: translateY(-100%); }
+
+    /* ─── Navbar: offset dinámico según top-bar ─── */
+    #navbar { top: 40px; transition: top 0.3s ease, background 0.35s ease, box-shadow 0.35s ease; }
+    #navbar.top-zero { top: 0; }
+
+    /* ─── Flecha bounce en el hero ─── */
+    @keyframes bounce-arrow {
+      0%, 100% { transform: translateY(0) translateX(-50%); }
+      55% { transform: translateY(10px) translateX(-50%); }
+    }
+    .scroll-arrow {
+      position: absolute; bottom: 32px; left: 50%;
+      transform: translateX(-50%);
+      animation: bounce-arrow 2.2s ease-in-out infinite;
+      color: rgba(255,255,255,0.55);
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+    .scroll-arrow:hover { color: #C9A96E; }
+
+    /* ─── Botón favorito en tarjeta ─── */
+    .fav-btn {
+      position: absolute; top: 10px; right: 10px;
+      width: 34px; height: 34px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      border: none;
+      color: #9CA3AF;
+      transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
+      z-index: 2;
+    }
+    .fav-btn:hover { background: white; color: #ef4444; transform: scale(1.1); }
+    .fav-btn.is-fav { color: #ef4444; background: white; }
+    @keyframes pop-heart { 0%{transform:scale(1)} 40%{transform:scale(1.45)} 100%{transform:scale(1)} }
+    .fav-btn.popping { animation: pop-heart 0.3s ease forwards; }
+
+    /* ─── CTA deslizable en imagen de tarjeta ─── */
+    .card-img-cta {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(14,32,25,0.92) 0%, transparent 100%);
+      padding: 28px 14px 12px;
+      transform: translateY(101%);
+      transition: transform 0.32s ease;
+      display: flex; gap: 8px;
+    }
+    .prop-card:hover .card-img-cta { transform: translateY(0); }
+
+    /* ─── Chips de filtros activos ─── */
+    #filter-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; min-height: 0; }
+    .filter-chip {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: #EEF3F0; color: #1A3C2E;
+      border: 1px solid #A8C6B3;
+      padding: 4px 10px 4px 12px; border-radius: 100px;
+      font-size: 11px; font-weight: 500; line-height: 1.6;
+    }
+    .filter-chip button {
+      color: #528D67; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; padding: 0;
+    }
+    .filter-chip button:hover { color: #1A3C2E; }
+
+    /* ─── Skeleton loader ─── */
+    @keyframes skeleton-pulse { 0%,100%{opacity:.45} 50%{opacity:.9} }
+    .skeleton { background: #E5E7EB; border-radius: 4px; animation: skeleton-pulse 1.5s ease-in-out infinite; }
+
+    /* ─── Vista lista en resultados ─── */
+    #results-grid.list-view { grid-template-columns: 1fr !important; }
+    #results-grid.list-view .prop-card { display: flex; flex-direction: row; }
+    #results-grid.list-view .prop-card .card-img-wrap { width: 260px; flex-shrink: 0; aspect-ratio: auto !important; height: 200px; }
+    #results-grid.list-view .prop-card .card-body { flex: 1; }
+    @media (max-width: 640px) {
+      #results-grid.list-view .prop-card { flex-direction: column; }
+      #results-grid.list-view .prop-card .card-img-wrap { width: 100%; height: auto; }
+    }
+
+    /* ─── Sección proceso: numeración ─── */
+    .step-num {
+      width: 52px; height: 52px; border-radius: 50%;
+      background: #C9A96E; color: #1A3C2E;
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; position: relative; z-index: 1;
+    }
+    .step-connector {
+      position: absolute; top: 52px; left: 26px;
+      width: 2px; height: calc(100% + 24px);
+      background: linear-gradient(to bottom, #C9A96E, transparent);
+    }
+
+    /* ─── Sección alertas de propiedades ─── */
+    .alerts-input { transition: border-color 0.2s, box-shadow 0.2s; }
+    .alerts-input:focus { outline: none; border-color: #C9A96E; box-shadow: 0 0 0 3px rgba(201,169,110,0.18); }
+
+    /* ─── Testimonios: badge verificado ─── */
+    .verified-badge {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: #EEF3F0; color: #2C5F45;
+      font-size: 10px; font-weight: 600;
+      padding: 2px 8px; border-radius: 100px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ─── Contador animado ─── */
+    .stat-num { display: inline-block; }
+
+    /* ─── SLIDER DE FOTOS ─── */
+    .slider-track {
+      transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      will-change: transform;
+    }
+    .slider-slide { min-width: 100%; flex-shrink: 0; }
+
+    /* Flechas prev/next */
+    .slider-prev, .slider-next {
+      position: absolute; top: 50%;
+      transform: translateY(-50%);
+      width: 32px; height: 32px;
+      background: rgba(0,0,0,0.48);
+      border: none; border-radius: 50%;
+      color: white; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease, background 0.2s ease;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    .slider-prev { left: 10px; }
+    .slider-next { right: 10px; }
+    .prop-card:hover .slider-prev,
+    .prop-card:hover .slider-next { opacity: 1; }
+    .slider-prev:hover, .slider-next:hover { background: rgba(0,0,0,0.72); }
+
+    /* Dots indicadores */
+    .slider-dots {
+      position: absolute; bottom: 10px; left: 50%;
+      transform: translateX(-50%);
+      display: flex; gap: 5px; z-index: 10;
+    }
+    .slider-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.45);
+      transition: background 0.25s, transform 0.25s;
+      cursor: pointer;
+    }
+    .slider-dot.active {
+      background: white;
+      transform: scale(1.25);
+    }
+
+    /* Contador de fotos */
+    .photo-counter {
+      position: absolute; bottom: 10px; right: 12px;
+      background: rgba(0,0,0,0.45);
+      color: white; font-size: 10px; font-weight: 500;
+      padding: 2px 7px; border-radius: 10px;
+      z-index: 10; letter-spacing: 0.04em;
+      backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- Barra de progreso de lectura -->
+<div id="progress-bar" role="progressbar" aria-hidden="true"></div>
+
+<!-- ═══════════════════════════════════════════════════
+     BARRA SUPERIOR DE CONTACTO
+════════════════════════════════════════════════════ -->
+<div id="top-bar" class="flex items-center justify-center px-4">
+  <div class="max-w-7xl w-full mx-auto flex items-center justify-between gap-4 text-white/55 text-[11px]">
+    <div class="hidden sm:flex items-center gap-5">
+      <a href="tel:+541147425945" class="flex items-center gap-1.5 hover:text-dlf-gold-400 transition-colors">
+        <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-3.07-3.07 19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18H5a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.76a16 16 0 006.72 6.72l1.13-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        +54 11 4742-5945
+      </a>
+      <a href="mailto:info@delafore.com" class="flex items-center gap-1.5 hover:text-dlf-gold-400 transition-colors">
+        <svg width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        info@delafore.com
+      </a>
+    </div>
+    <div class="flex items-center gap-5">
+      <span class="hidden md:inline">Lun–Vie 9–13 / 15:30–19:30 · Sáb 9:30–13</span>
+      <span class="text-white/30">|</span>
+      <span class="text-white/40 font-medium">CMCPSI 4054</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed left-0 right-0 z-50 bg-transparent">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-3 flex-shrink-0">
+        <!-- Logo ISO oficial de De Laforé -->
+        <img src="images/ISO.svg" alt="De Laforé" class="w-9 h-9 object-contain flex-shrink-0">
+        <div class="leading-none">
+          <div class="font-serif font-semibold text-[17px] text-white tracking-wider uppercase">Delaforé</div>
+          <div class="text-[9px] tracking-[0.28em] text-dlf-gold-300 font-light uppercase mt-0.5">Bienes Raíces</div>
+        </div>
+      </a>
+
+      <!-- Links desktop -->
+      <div class="hidden md:flex items-center gap-7">
+        <a href="#propiedades" class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Propiedades</a>
+        <a href="#servicios"   class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Servicios</a>
+        <a href="#zonas"       class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Zonas</a>
+        <a href="#nosotros"    class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Nosotros</a>
+        <a href="#tasaciones"  class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Tasaciones</a>
+        <a href="#contacto"    class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Contacto</a>
+      </div>
+
+      <!-- Teléfono + CTA desktop -->
+      <div class="hidden md:flex items-center gap-4">
+        <a href="tel:+541147580000" class="flex items-center gap-1.5 text-white/80 hover:text-dlf-gold-400 text-sm transition-colors">
+          <!-- phone icon -->
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.76a16 16 0 006.72 6.72l1.13-1.16a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+          +54 11 4742-5945
+        </a>
+        <a href="#contacto" class="bg-dlf-gold-500 hover:bg-dlf-gold-600 text-dlf-green-700 text-sm font-semibold px-5 py-2.5 tracking-wide transition-colors duration-200">
+          Contactanos
+        </a>
+      </div>
+
+      <!-- Hamburger mobile -->
+      <button id="hamburger-btn" aria-label="Menú" class="md:hidden p-2 text-white">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6"  x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="md:hidden bg-dlf-green-700">
+      <div class="px-4 py-2 flex flex-col divide-y divide-dlf-green-600">
+        <a href="#propiedades" class="text-white py-3.5 text-sm font-medium">Propiedades</a>
+        <a href="#servicios"   class="text-white py-3.5 text-sm font-medium">Servicios</a>
+        <a href="#zonas"       class="text-white py-3.5 text-sm font-medium">Zonas</a>
+        <a href="#nosotros"    class="text-white py-3.5 text-sm font-medium">Nosotros</a>
+        <a href="#tasaciones"  class="text-white py-3.5 text-sm font-medium">Tasaciones</a>
+        <a href="#contacto"    class="text-white py-3.5 text-sm font-medium">Contacto</a>
+        <div class="py-3">
+          <a href="tel:+541147580000" class="block text-center bg-dlf-gold-500 text-dlf-green-700 font-semibold py-3 text-sm tracking-wide">
+            +54 11 4742-5945
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+<!-- ═══════════════════════════════════════════════════
+     HERO SECTION
+════════════════════════════════════════════════════ -->
+<section id="inicio" class="relative min-h-screen flex flex-col justify-center items-center text-center px-4 pt-20 pb-16 overflow-hidden">
+
+  <!-- ── Video de fondo ── -->
+  <div class="absolute inset-0" aria-hidden="true">
+    <video
+      id="hero-video"
+      class="absolute inset-0 w-full h-full object-cover"
+      autoplay muted loop playsinline
+      poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80&auto=format&fit=crop"
+    >
+      <!--
+        ══════════════════════════════════════════════════
+        CÓMO AGREGAR TU PROPIO VIDEO:
+        1. Descargá un video gratis de https://pexels.com/videos
+           o https://mixkit.co (buscar "luxury home", "real estate")
+        2. Guardalo como videos/hero.mp4 en este mismo proyecto
+        3. Reemplazá la línea <source> con:
+              <source src="videos/hero.mp4" type="video/mp4">
+        ══════════════════════════════════════════════════
+        Mientras tanto el poster (imagen Unsplash) hace de fallback
+      -->
+      <source src="videos/hero.mp4" type="video/mp4">
+      <!-- Fuentes CDN alternativas (pueden funcionar según red/CORS) -->
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-establishing-shot-of-a-big-house-43399-large.mp4" type="video/mp4">
+      <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-shot-of-a-luxury-house-39833-large.mp4" type="video/mp4">
+    </video>
+    <!-- Overlay gradiente verde oscuro -->
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+
+  <!-- Botón pausar/reproducir -->
+  <button id="video-toggle" aria-label="Pausar video de fondo" title="Pausar video">
+    <svg id="icon-pause" width="14" height="14" fill="white" viewBox="0 0 24 24">
+      <rect x="6" y="4" width="4" height="16" rx="1"/><rect x="14" y="4" width="4" height="16" rx="1"/>
+    </svg>
+    <svg id="icon-play" width="14" height="14" fill="white" viewBox="0 0 24 24" class="hidden">
+      <path d="M5 3l14 9-14 9V3z"/>
+    </svg>
+  </button>
+
+  <!-- ── Contenido del hero ── -->
+  <div class="relative z-10 max-w-4xl mx-auto w-full">
+
+    <!-- Eyebrow label -->
+    <p class="text-dlf-gold-400 text-[11px] tracking-[0.45em] uppercase font-medium mb-5">
+      Zona Norte · Más de 30 años de trayectoria
+    </p>
+
+    <!-- Heading principal -->
+    <h1 class="font-serif text-4xl sm:text-5xl lg:text-[62px] text-white font-semibold leading-tight mb-5">
+      Encontrá la propiedad<br>
+      <span class="text-dlf-gold-400 italic">de tus sueños</span>
+    </h1>
+
+    <!-- Subtítulo -->
+    <p class="text-white/70 text-base sm:text-lg max-w-lg mx-auto mb-10 font-light leading-relaxed">
+      Asesoramiento profesional y transparente en venta, alquiler y tasación de propiedades en Zona Norte de Buenos Aires.
+    </p>
+
+    <!-- ── Buscador principal ── -->
+    <div class="bg-white rounded-lg shadow-2xl overflow-hidden text-left max-w-4xl mx-auto">
+
+      <!-- Tabs: Venta / Alquiler -->
+      <div class="flex border-b border-gray-100 px-5 pt-1">
+        <button class="search-tab is-active text-sm px-5 py-4 -mb-px border-b-2 border-dlf-gold-500 text-dlf-green-600 font-semibold" data-tab="venta">
+          Venta
+        </button>
+        <button class="search-tab text-sm px-5 py-4 -mb-px border-b-2 border-transparent text-gray-400 font-medium" data-tab="alquiler">
+          Alquiler
+        </button>
+      </div>
+
+      <div class="p-5 sm:p-6">
+        <!-- Filtros en grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-4">
+
+          <!-- Tipo de propiedad -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-gray-400 font-semibold uppercase tracking-widest">Tipo de propiedad</label>
+            <select id="select-tipo" class="custom-select form-input text-gray-700 bg-gray-50 border border-gray-200 rounded-md px-3 py-3 text-sm">
+              <option value="">Todos los tipos</option>
+              <option>Casa</option>
+              <option>Departamento</option>
+              <option>PH</option>
+              <option>Terreno / Lote</option>
+              <option>Oficina</option>
+              <option>Local comercial</option>
+              <option>Barrio privado</option>
+            </select>
+          </div>
+
+          <!-- Zona / Barrio -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-gray-400 font-semibold uppercase tracking-widest">Zona / Barrio</label>
+            <select id="select-zona" class="custom-select form-input text-gray-700 bg-gray-50 border border-gray-200 rounded-md px-3 py-3 text-sm">
+              <option value="">Todas las zonas</option>
+              <option>San Isidro</option>
+              <option>Beccar</option>
+              <option>Martínez</option>
+              <option>Acassuso</option>
+              <option>La Lucila</option>
+              <option>Victoria</option>
+              <option>Boulogne</option>
+              <option>Tigre</option>
+              <option>Don Torcuato</option>
+            </select>
+          </div>
+
+          <!-- Precio máximo -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-gray-400 font-semibold uppercase tracking-widest">Precio máximo</label>
+            <select id="select-precio" class="custom-select form-input text-gray-700 bg-gray-50 border border-gray-200 rounded-md px-3 py-3 text-sm">
+              <option value="">Sin límite</option>
+              <option>Hasta USD 100.000</option>
+              <option>Hasta USD 200.000</option>
+              <option>Hasta USD 350.000</option>
+              <option>Hasta USD 500.000</option>
+              <option>Hasta USD 750.000</option>
+              <option>Más de USD 750.000</option>
+            </select>
+          </div>
+
+          <!-- Ambientes -->
+          <div class="flex flex-col gap-1.5">
+            <label class="text-[10px] text-gray-400 font-semibold uppercase tracking-widest">Ambientes</label>
+            <select id="select-ambientes" class="custom-select form-input text-gray-700 bg-gray-50 border border-gray-200 rounded-md px-3 py-3 text-sm">
+              <option value="">Cualquier cantidad</option>
+              <option>1 ambiente</option>
+              <option>2 ambientes</option>
+              <option>3 ambientes</option>
+              <option>4 ambientes</option>
+              <option>5 o más ambientes</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Botón de búsqueda -->
+        <div class="flex justify-end">
+          <button id="search-btn" class="w-full sm:w-auto bg-dlf-green-600 hover:bg-dlf-green-500 text-white font-semibold px-8 py-3.5 rounded-md flex items-center justify-center gap-2 transition-colors duration-200 tracking-wide text-sm">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+            </svg>
+            Buscar propiedades
+          </button>
+        </div>
+
+        <!-- Chips de filtros activos -->
+        <div id="filter-chips"></div>
+      </div>
+    </div>
+
+    <!-- Estadísticas bajo el buscador -->
+    <div class="flex justify-center gap-10 sm:gap-20 mt-10 text-white">
+      <div>
+        <div class="font-serif text-4xl font-bold text-dlf-gold-400 tabular-nums stat-num" data-target="30" data-prefix="+">+30</div>
+        <div class="text-[11px] text-white/55 uppercase tracking-widest mt-1.5">Años de trayectoria</div>
+      </div>
+      <div>
+        <div id="stat-propiedades" class="font-serif text-4xl font-bold text-dlf-gold-400 tabular-nums stat-num" data-target="120" data-prefix="+">+120</div>
+        <div class="text-[11px] text-white/55 uppercase tracking-widest mt-1.5">Propiedades activas</div>
+      </div>
+      <div>
+        <div class="font-serif text-4xl font-bold text-dlf-gold-400 tabular-nums stat-num" data-target="9">9</div>
+        <div class="text-[11px] text-white/55 uppercase tracking-widest mt-1.5">Municipios</div>
+      </div>
+    </div>
+  </div>
+
+  </div><!-- fin .relative.z-10 contenido hero -->
+
+  <!-- Flecha scroll-down animada -->
+  <button class="scroll-arrow" onclick="document.getElementById('propiedades').scrollIntoView({behavior:'smooth'})" aria-label="Ver propiedades">
+    <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+      <path d="M6 9l6 6 6-6"/>
+    </svg>
+  </button>
+
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     PROPIEDADES DESTACADAS
+════════════════════════════════════════════════════ -->
+<section id="propiedades" class="py-20 bg-dlf-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header de sección -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div>
+        <p class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-2.5">Selección exclusiva</p>
+        <h2 class="font-serif text-3xl sm:text-4xl text-dlf-green-600 font-semibold">Propiedades Destacadas</h2>
+      </div>
+      <a href="#" class="self-start sm:self-auto inline-flex items-center gap-2 border border-dlf-green-600 text-dlf-green-600 hover:bg-dlf-green-600 hover:text-white text-sm font-semibold px-6 py-2.5 tracking-wide transition-all duration-200">
+        Ver todas
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <!-- Grid de tarjetas — renderizado dinámicamente por search.js -->
+    <div id="featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Skeleton placeholder mientras carga el JSON -->
+      <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100">
+        <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
+        <div class="p-5 space-y-3">
+          <div class="skeleton h-7 w-2/3 rounded"></div>
+          <div class="skeleton h-4 w-3/4 rounded"></div>
+          <div class="skeleton h-3 w-1/2 rounded"></div>
+        </div>
+      </div>
+      <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hidden sm:block">
+        <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
+        <div class="p-5 space-y-3">
+          <div class="skeleton h-7 w-2/3 rounded"></div>
+          <div class="skeleton h-4 w-3/4 rounded"></div>
+          <div class="skeleton h-3 w-1/2 rounded"></div>
+        </div>
+      </div>
+      <div class="prop-card bg-white rounded-lg overflow-hidden shadow-sm border border-gray-100 hidden lg:block">
+        <div class="skeleton w-full" style="aspect-ratio:4/3"></div>
+        <div class="p-5 space-y-3">
+          <div class="skeleton h-7 w-2/3 rounded"></div>
+          <div class="skeleton h-4 w-3/4 rounded"></div>
+          <div class="skeleton h-3 w-1/2 rounded"></div>
+        </div>
+      </div>
+    </div><!-- fin grid -->
+
+    <!-- CTA inferior -->
+    <div class="text-center mt-12">
+      <a href="#" class="inline-flex items-center gap-2 border-2 border-dlf-green-600 text-dlf-green-600 hover:bg-dlf-green-600 hover:text-white font-semibold px-10 py-3.5 transition-all duration-200 tracking-wide text-sm">
+        Explorar todas las propiedades
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     RESULTADOS DE BÚSQUEDA (oculta por defecto)
+     Se muestra al hacer click en "Buscar propiedades"
+════════════════════════════════════════════════════ -->
+<section id="resultados" class="py-20 bg-white hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header de resultados -->
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+      <div>
+        <p id="results-query" class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-2.5"></p>
+        <h2 class="font-serif text-3xl sm:text-4xl text-dlf-green-600 font-semibold">Resultados de búsqueda</h2>
+        <p id="results-count" class="text-dlf-muted text-sm mt-1.5"></p>
+      </div>
+      <button id="clear-search"
+              class="self-start sm:self-auto inline-flex items-center gap-2 border border-gray-300 text-dlf-muted hover:border-dlf-green-600 hover:text-dlf-green-600 text-sm font-medium px-5 py-2.5 rounded-md transition-all duration-200">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+        Limpiar búsqueda
+      </button>
+    </div>
+
+    <!-- Barra de ordenamiento + toggle vista -->
+    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6 pb-4 border-b border-gray-100">
+      <div class="flex items-center gap-2">
+        <span class="text-[11px] text-gray-400 uppercase tracking-widest font-semibold">Ordenar por</span>
+        <select id="sort-select" class="custom-select text-sm text-gray-700 bg-gray-50 border border-gray-200 rounded-md px-3 py-2">
+          <option value="relevancia">Relevancia</option>
+          <option value="precio-asc">Precio: menor a mayor</option>
+          <option value="precio-desc">Precio: mayor a menor</option>
+          <option value="sup-desc">Superficie: mayor a menor</option>
+        </select>
+      </div>
+      <div class="flex items-center gap-1.5">
+        <button id="view-grid-btn" aria-label="Vista grilla" title="Vista grilla"
+                class="w-8 h-8 flex items-center justify-center rounded border border-dlf-green-600 bg-dlf-green-600 text-white transition-all">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16"><path d="M1 2h6v6H1zM9 2h6v6H9zM1 10h6v6H1zM9 10h6v6H9z"/></svg>
+        </button>
+        <button id="view-list-btn" aria-label="Vista lista" title="Vista lista"
+                class="w-8 h-8 flex items-center justify-center rounded border border-gray-200 text-gray-400 hover:border-dlf-green-600 hover:text-dlf-green-600 transition-all">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Grid de resultados (generado por search.js) -->
+    <div id="results-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     SERVICIOS
+════════════════════════════════════════════════════ -->
+<section id="servicios" class="py-20 bg-dlf-surface">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <p class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-3 justify-center">Lo que hacemos</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-dlf-green-600 font-semibold mt-2">Nuestros Servicios</h2>
+      <p class="text-dlf-muted text-base mt-4 max-w-lg mx-auto leading-relaxed">
+        Acompañamos cada etapa del proceso inmobiliario con el profesionalismo y la transparencia que nos distinguen.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+      <!-- Venta -->
+      <div class="service-card bg-white border border-gray-100 rounded-lg p-8 text-center cursor-pointer">
+        <div class="svc-icon text-dlf-green-600 mb-5 flex justify-center transition-colors duration-300">
+          <svg width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24">
+            <path d="M3 9L12 3l9 6v11a1 1 0 01-1 1h-5v-6H9v6H4a1 1 0 01-1-1z"/>
+          </svg>
+        </div>
+        <h3 class="svc-title font-serif text-xl font-semibold text-dlf-green-600 mb-3 transition-colors duration-300">Venta</h3>
+        <p class="svc-text text-dlf-muted text-sm leading-relaxed transition-colors duration-300">
+          Tasación precisa, estrategia de precio y acompañamiento completo en la venta de tu propiedad.
+        </p>
+      </div>
+
+      <!-- Alquiler -->
+      <div class="service-card bg-white border border-gray-100 rounded-lg p-8 text-center cursor-pointer">
+        <div class="svc-icon text-dlf-green-600 mb-5 flex justify-center transition-colors duration-300">
+          <svg width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24">
+            <rect x="4" y="2" width="16" height="20" rx="2"/>
+            <path d="M9 7h6M9 12h6M9 17h4"/>
+          </svg>
+        </div>
+        <h3 class="svc-title font-serif text-xl font-semibold text-dlf-green-600 mb-3 transition-colors duration-300">Alquiler</h3>
+        <p class="svc-text text-dlf-muted text-sm leading-relaxed transition-colors duration-300">
+          Búsqueda de inquilinos, análisis patrimonial, contratos y administración continua del inmueble.
+        </p>
+      </div>
+
+      <!-- Tasaciones -->
+      <div class="service-card bg-white border border-gray-100 rounded-lg p-8 text-center cursor-pointer">
+        <div class="svc-icon text-dlf-green-600 mb-5 flex justify-center transition-colors duration-300">
+          <svg width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <h3 class="svc-title font-serif text-xl font-semibold text-dlf-green-600 mb-3 transition-colors duration-300">Tasaciones</h3>
+        <p class="svc-text text-dlf-muted text-sm leading-relaxed transition-colors duration-300">
+          Conocé el valor real de tu propiedad con una tasación sin cargo, basada en análisis del mercado actual.
+        </p>
+      </div>
+
+      <!-- Consultoría -->
+      <div class="service-card bg-white border border-gray-100 rounded-lg p-8 text-center cursor-pointer">
+        <div class="svc-icon text-dlf-green-600 mb-5 flex justify-center transition-colors duration-300">
+          <svg width="44" height="44" fill="none" stroke="currentColor" stroke-width="1.4" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3 class="svc-title font-serif text-xl font-semibold text-dlf-green-600 mb-3 transition-colors duration-300">Consultoría</h3>
+        <p class="svc-text text-dlf-muted text-sm leading-relaxed transition-colors duration-300">
+          Asesoramiento estratégico en inversiones inmobiliarias, urbanizaciones privadas y negocios comerciales.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CÓMO TRABAJAMOS
+════════════════════════════════════════════════════ -->
+<section id="proceso" class="py-20 bg-dlf-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-16">
+      <p class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-3 justify-center">Simple y transparente</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-dlf-green-600 font-semibold mt-2">Cómo trabajamos</h2>
+      <p class="text-dlf-muted text-base mt-4 max-w-lg mx-auto leading-relaxed">
+        Un proceso claro, sin sorpresas y con acompañamiento en cada etapa.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <div class="relative text-center sm:text-left">
+        <div class="flex justify-center sm:justify-start mb-5">
+          <div class="step-num">1</div>
+        </div>
+        <h3 class="font-serif text-xl text-dlf-green-600 font-semibold mb-2">Consulta inicial</h3>
+        <p class="text-dlf-muted text-sm leading-relaxed">
+          Nos contactás y analizamos tu necesidad: compra, venta, alquiler o tasación. Sin compromiso.
+        </p>
+      </div>
+
+      <div class="relative text-center sm:text-left">
+        <div class="flex justify-center sm:justify-start mb-5">
+          <div class="step-num">2</div>
+        </div>
+        <h3 class="font-serif text-xl text-dlf-green-600 font-semibold mb-2">Propuesta a medida</h3>
+        <p class="text-dlf-muted text-sm leading-relaxed">
+          Diseñamos una estrategia personalizada, con selección de propiedades o plan de comercialización.
+        </p>
+      </div>
+
+      <div class="relative text-center sm:text-left">
+        <div class="flex justify-center sm:justify-start mb-5">
+          <div class="step-num">3</div>
+        </div>
+        <h3 class="font-serif text-xl text-dlf-green-600 font-semibold mb-2">Negociación y oferta</h3>
+        <p class="text-dlf-muted text-sm leading-relaxed">
+          Te asesoramos en cada oferta y contraofertas. Buscamos el mejor precio para vos.
+        </p>
+      </div>
+
+      <div class="relative text-center sm:text-left">
+        <div class="flex justify-center sm:justify-start mb-5">
+          <div class="step-num">4</div>
+        </div>
+        <h3 class="font-serif text-xl text-dlf-green-600 font-semibold mb-2">Cierre y escritura</h3>
+        <p class="text-dlf-muted text-sm leading-relaxed">
+          Coordinamos toda la documentación, boleto de compraventa y escritura con escribano de confianza.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="text-center mt-14">
+      <a href="#contacto" class="inline-flex items-center gap-2 bg-dlf-green-600 hover:bg-dlf-green-500 text-white font-semibold px-8 py-3.5 transition-colors duration-200 tracking-wide text-sm">
+        Comenzar ahora
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     QUIÉNES SOMOS
+════════════════════════════════════════════════════ -->
+<section id="nosotros" class="py-20 bg-dlf-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+      <!-- Imagen izquierda -->
+      <div class="relative">
+        <!-- Borde decorativo dorado -->
+        <div class="absolute -top-5 -left-5 w-28 h-28 border-2 border-dlf-gold-400 rounded-md -z-10 hidden sm:block"></div>
+
+        <img
+          src="https://images.pexels.com/photos/7642004/pexels-photo-7642004.jpeg"
+          alt="Equipo De Laforé Bienes Raíces"
+          class="rounded-lg w-full object-cover shadow-lg"
+          style="aspect-ratio:4/3"
+          loading="lazy"
+        >
+
+        <!-- Card flotante con stat -->
+        <div class="absolute -bottom-7 -right-4 sm:-right-7 bg-dlf-green-600 text-white px-7 py-5 rounded-lg shadow-xl hidden sm:block">
+          <div class="font-serif text-5xl font-bold text-dlf-gold-400 leading-none">+30</div>
+          <div class="text-[10px] uppercase tracking-widest text-white/60 mt-2">Años en el mercado</div>
+        </div>
+      </div>
+
+      <!-- Contenido derecha -->
+      <div class="lg:pl-4">
+        <p class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-5">Sobre nosotros</p>
+        <h2 class="font-serif text-3xl sm:text-4xl text-dlf-green-600 font-semibold mb-6 leading-snug">
+          Tres décadas construyendo<br>confianza en Zona Norte
+        </h2>
+        <p class="text-dlf-muted text-base leading-relaxed mb-4">
+          De Laforé Bienes Raíces nació en Beccar hace más de 30 años con un objetivo claro: brindar asesoramiento profesional y transparente a quienes buscan comprar, vender o alquilar propiedades en el norte del Gran Buenos Aires.
+        </p>
+        <p class="text-dlf-muted text-base leading-relaxed mb-9">
+          Hoy somos un equipo consolidado con profundo conocimiento del mercado local, presencia en 9 municipios y más de 120 propiedades activas. Nos diferencia la cercanía con cada cliente y la ética que guía cada operación.
+        </p>
+
+        <!-- Valores: 2×2 grid -->
+        <div class="grid grid-cols-2 gap-x-6 gap-y-5 mb-9">
+          <div class="flex items-start gap-3">
+            <div class="w-1 h-9 bg-dlf-gold-500 flex-shrink-0 mt-0.5 rounded-full"></div>
+            <div>
+              <div class="font-semibold text-dlf-text text-sm">Transparencia</div>
+              <div class="text-dlf-muted text-xs mt-0.5 leading-relaxed">Información clara en cada paso</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-1 h-9 bg-dlf-gold-500 flex-shrink-0 mt-0.5 rounded-full"></div>
+            <div>
+              <div class="font-semibold text-dlf-text text-sm">Experiencia</div>
+              <div class="text-dlf-muted text-xs mt-0.5 leading-relaxed">Más de 3 décadas en el mercado</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-1 h-9 bg-dlf-gold-500 flex-shrink-0 mt-0.5 rounded-full"></div>
+            <div>
+              <div class="font-semibold text-dlf-text text-sm">Cercanía</div>
+              <div class="text-dlf-muted text-xs mt-0.5 leading-relaxed">Trato personalizado y directo</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-1 h-9 bg-dlf-gold-500 flex-shrink-0 mt-0.5 rounded-full"></div>
+            <div>
+              <div class="font-semibold text-dlf-text text-sm">Compromiso</div>
+              <div class="text-dlf-muted text-xs mt-0.5 leading-relaxed">Resultados que hablan por sí solos</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#contacto" class="inline-flex items-center gap-2 bg-dlf-green-600 hover:bg-dlf-green-500 text-white font-semibold px-7 py-3.5 transition-colors duration-200 tracking-wide text-sm">
+          Conocé a nuestro equipo
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ZONAS QUE CUBRIMOS
+════════════════════════════════════════════════════ -->
+<section id="zonas" class="py-20 bg-dlf-green-600">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-12">
+      <p class="label-line text-dlf-gold-400 text-[11px] tracking-[0.3em] uppercase font-semibold mb-3 justify-center">Nuestra área de influencia</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-white font-semibold mt-2">Zonas que cubrimos</h2>
+      <p class="text-white/55 text-base mt-4 max-w-lg mx-auto leading-relaxed">
+        Especialistas en el corredor norte del Gran Buenos Aires, con conocimiento profundo de cada barrio y localidad.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+
+      <div class="zone-card rounded-lg overflow-hidden relative cursor-pointer" style="aspect-ratio:3/2">
+        <img src="https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=500&q=75&auto=format&fit=crop" alt="San Isidro" class="w-full h-full object-cover" loading="lazy">
+        <div class="zone-overlay absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <h3 class="font-serif text-white text-lg sm:text-xl font-semibold">San Isidro</h3>
+          <p class="text-white/65 text-xs mt-0.5 hidden sm:block">Centro neurálgico de Zona Norte</p>
+        </div>
+      </div>
+
+      <div class="zone-card rounded-lg overflow-hidden relative cursor-pointer" style="aspect-ratio:3/2">
+        <img src="https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=500&q=75&auto=format&fit=crop" alt="Beccar" class="w-full h-full object-cover" loading="lazy">
+        <div class="zone-overlay absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <h3 class="font-serif text-white text-lg sm:text-xl font-semibold">Beccar</h3>
+          <p class="text-white/65 text-xs mt-0.5 hidden sm:block">Nuestra sede principal</p>
+        </div>
+      </div>
+
+      <div class="zone-card rounded-lg overflow-hidden relative cursor-pointer" style="aspect-ratio:3/2">
+        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=75&auto=format&fit=crop" alt="Martínez" class="w-full h-full object-cover" loading="lazy">
+        <div class="zone-overlay absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <h3 class="font-serif text-white text-lg sm:text-xl font-semibold">Martínez</h3>
+          <p class="text-white/65 text-xs mt-0.5 hidden sm:block">Residencial y tranquilo</p>
+        </div>
+      </div>
+
+      <div class="zone-card rounded-lg overflow-hidden relative cursor-pointer" style="aspect-ratio:3/2">
+        <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=500&q=75&auto=format&fit=crop" alt="Acassuso" class="w-full h-full object-cover" loading="lazy">
+        <div class="zone-overlay absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <h3 class="font-serif text-white text-lg sm:text-xl font-semibold">Acassuso</h3>
+          <p class="text-white/65 text-xs mt-0.5 hidden sm:block">Entre el río y la ciudad</p>
+        </div>
+      </div>
+
+      <div class="zone-card rounded-lg overflow-hidden relative cursor-pointer" style="aspect-ratio:3/2">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&q=75&auto=format&fit=crop" alt="Victoria" class="w-full h-full object-cover" loading="lazy">
+        <div class="zone-overlay absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <h3 class="font-serif text-white text-lg sm:text-xl font-semibold">Victoria</h3>
+          <p class="text-white/65 text-xs mt-0.5 hidden sm:block">Barrios privados y countries</p>
+        </div>
+      </div>
+
+      <div class="zone-card rounded-lg overflow-hidden relative cursor-pointer" style="aspect-ratio:3/2">
+        <img src="https://images.unsplash.com/photo-1573108724029-4c46571d6490?w=500&q=75&auto=format&fit=crop" alt="Tigre y más" class="w-full h-full object-cover" loading="lazy">
+        <div class="zone-overlay absolute inset-0"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-4 sm:p-5">
+          <h3 class="font-serif text-white text-lg sm:text-xl font-semibold">Tigre y más</h3>
+          <p class="text-white/65 text-xs mt-0.5 hidden sm:block">Toda la Zona Norte cubierta</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     TASACIONES CTA
+════════════════════════════════════════════════════ -->
+<section id="tasaciones" class="py-24 bg-dlf-surface relative overflow-hidden">
+  <!-- Círculos decorativos de fondo -->
+  <div class="absolute -top-20 -right-20 w-72 h-72 bg-dlf-gold-100 rounded-full opacity-60 pointer-events-none" aria-hidden="true"></div>
+  <div class="absolute -bottom-20 -left-20 w-56 h-56 bg-dlf-gold-100 rounded-full opacity-60 pointer-events-none" aria-hidden="true"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 text-center">
+    <p class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-5 justify-center">Sin costo · Sin compromiso</p>
+    <h2 class="font-serif text-3xl sm:text-5xl text-dlf-green-600 font-semibold mb-5 leading-tight mt-2">
+      ¿Querés saber cuánto<br>vale tu propiedad?
+    </h2>
+    <p class="text-dlf-muted text-lg max-w-xl mx-auto mb-10 leading-relaxed">
+      Realizamos tasaciones gratuitas y sin compromiso. Nuestros expertos analizan el mercado actual para darte el valor real de tu inmueble.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="#contacto"
+         class="bg-dlf-green-600 hover:bg-dlf-green-500 text-white font-semibold px-8 py-4 transition-colors duration-200 tracking-wide text-sm inline-flex items-center justify-center gap-2">
+        Solicitar tasación gratuita
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/541147425945" target="_blank" rel="noopener"
+         class="border-2 border-dlf-green-600 text-dlf-green-600 hover:bg-dlf-green-600 hover:text-white font-semibold px-8 py-4 transition-all duration-200 tracking-wide text-sm inline-flex items-center justify-center gap-2">
+        <!-- WhatsApp icon -->
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        Escribinos por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     TESTIMONIOS
+════════════════════════════════════════════════════ -->
+<section class="py-20 bg-dlf-cream">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <p class="label-line text-dlf-gold-600 text-[11px] tracking-[0.3em] uppercase font-semibold mb-3 justify-center">Lo que dicen nuestros clientes</p>
+      <h2 class="font-serif text-3xl sm:text-4xl text-dlf-green-600 font-semibold mt-2">Testimonios</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+        <div class="text-dlf-gold-500 text-lg tracking-widest mb-4">★★★★★</div>
+        <p class="text-dlf-muted text-sm leading-relaxed mb-7 italic">
+          "Vendimos nuestra casa en Beccar en menos de 3 meses y al precio que esperábamos. El equipo de De Laforé nos acompañó en cada paso con total transparencia y profesionalismo."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-dlf-green-100 rounded-full flex items-center justify-center text-dlf-green-600 font-bold text-sm flex-shrink-0">M</div>
+          <div>
+            <div class="text-dlf-text font-semibold text-sm">María G.</div>
+            <div class="text-dlf-muted text-xs mt-0.5">Beccar · 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+        <div class="text-dlf-gold-500 text-lg tracking-widest mb-4">★★★★★</div>
+        <p class="text-dlf-muted text-sm leading-relaxed mb-7 italic">
+          "Excelente profesionalismo. Encontramos el departamento ideal en San Isidro gracias al profundo conocimiento de la zona que tiene su equipo. Los recomiendo ampliamente."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-dlf-green-100 rounded-full flex items-center justify-center text-dlf-green-600 font-bold text-sm flex-shrink-0">A</div>
+          <div>
+            <div class="text-dlf-text font-semibold text-sm">Alejandro R.</div>
+            <div class="text-dlf-muted text-xs mt-0.5">San Isidro · 2024</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card bg-white p-8 rounded-lg shadow-sm">
+        <div class="text-dlf-gold-500 text-lg tracking-widest mb-4">★★★★★</div>
+        <p class="text-dlf-muted text-sm leading-relaxed mb-7 italic">
+          "La tasación de nuestra propiedad en Martínez fue exacta. Confiamos en su criterio y cerramos sin contratiempos. Trato muy cercano, humano y de total confianza."
+        </p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-dlf-green-100 rounded-full flex items-center justify-center text-dlf-green-600 font-bold text-sm flex-shrink-0">C</div>
+          <div>
+            <div class="text-dlf-text font-semibold text-sm">Carolina L.</div>
+            <div class="text-dlf-muted text-xs mt-0.5">Martínez · 2023</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     CONTACTO
+════════════════════════════════════════════════════ -->
+<section id="contacto" class="py-20 bg-dlf-green-600">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+      <!-- Columna izquierda: info -->
+      <div>
+        <p class="text-dlf-gold-400 text-[11px] tracking-[0.3em] uppercase font-semibold mb-4">Estamos para ayudarte</p>
+        <h2 class="font-serif text-3xl sm:text-4xl text-white font-semibold mb-5">Contactanos</h2>
+        <p class="text-white/60 text-base leading-relaxed mb-10">
+          Ya sea que busques comprar, vender, alquilar o tasar tu propiedad, nuestro equipo está listo para asesorarte sin compromiso.
+        </p>
+
+        <div class="space-y-6">
+
+          <!-- Dirección -->
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 bg-dlf-gold-500 flex items-center justify-center flex-shrink-0 rounded-sm">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-green-700">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Dirección</div>
+              <div class="text-white/55 text-sm leading-relaxed">Av. Centenario 1912, Beccar Alto<br>San Isidro, Buenos Aires</div>
+            </div>
+          </div>
+
+          <!-- Teléfono -->
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 bg-dlf-gold-500 flex items-center justify-center flex-shrink-0 rounded-sm">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-green-700">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-3.07-3.07 19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18H5a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.76a16 16 0 006.72 6.72l1.13-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Teléfono</div>
+              <a href="tel:+541147580000" class="text-white/55 text-sm hover:text-dlf-gold-400 transition-colors">+54 11 4742-5945</a>
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 bg-dlf-gold-500 flex items-center justify-center flex-shrink-0 rounded-sm">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-green-700">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Email</div>
+              <a href="mailto:info@delafore.com" class="text-white/55 text-sm hover:text-dlf-gold-400 transition-colors">info@delafore.com</a>
+            </div>
+          </div>
+
+          <!-- Horario -->
+          <div class="flex items-start gap-4">
+            <div class="w-11 h-11 bg-dlf-gold-500 flex items-center justify-center flex-shrink-0 rounded-sm">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-green-700">
+                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-white font-semibold text-sm mb-0.5">Horario</div>
+              <div class="text-white/55 text-sm leading-relaxed">Lun–Vie 9:00–13:00 / 15:30–19:30<br>Sáb 9:30–13:00</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redes sociales -->
+        <div class="flex gap-3 mt-9">
+          <a href="#" aria-label="Instagram" class="w-10 h-10 border border-white/20 flex items-center justify-center text-white/60 hover:bg-dlf-gold-500 hover:text-dlf-green-700 hover:border-dlf-gold-500 transition-all duration-200 rounded-sm">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="ZonaProp" class="w-10 h-10 border border-white/20 flex items-center justify-center text-white/60 hover:bg-dlf-gold-500 hover:text-dlf-green-700 hover:border-dlf-gold-500 transition-all duration-200 rounded-sm text-[9px] font-bold tracking-tight">ZP</a>
+          <a href="#" aria-label="ArgenProp" class="w-10 h-10 border border-white/20 flex items-center justify-center text-white/60 hover:bg-dlf-gold-500 hover:text-dlf-green-700 hover:border-dlf-gold-500 transition-all duration-200 rounded-sm text-[9px] font-bold tracking-tight">AP</a>
+          <a href="#" aria-label="MercadoLibre" class="w-10 h-10 border border-white/20 flex items-center justify-center text-white/60 hover:bg-dlf-gold-500 hover:text-dlf-green-700 hover:border-dlf-gold-500 transition-all duration-200 rounded-sm text-[9px] font-bold tracking-tight">ML</a>
+        </div>
+      </div>
+
+      <!-- Columna derecha: formulario -->
+      <div class="bg-white rounded-lg p-8 shadow-xl">
+        <h3 class="font-serif text-2xl text-dlf-green-600 font-semibold mb-6">Envianos un mensaje</h3>
+        <!--
+          FORMSPREE — pasos para activar:
+          1. Registrate en https://formspree.io (gratis hasta 50 envíos/mes)
+          2. Creá un form apuntando a info@delafore.com
+          3. Copiá el Form ID (ej: "xpzgdkqr") y pegalo en el action de abajo
+        -->
+        <form id="contact-form" class="space-y-4"
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST" novalidate>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5" for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" class="form-input" autocomplete="given-name" required>
+            </div>
+            <div>
+              <label class="block text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5" for="apellido">Apellido</label>
+              <input id="apellido" name="apellido" type="text" placeholder="Tu apellido" class="form-input" autocomplete="family-name">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5" for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="tu@email.com" class="form-input" autocomplete="email" required>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5" for="telefono">Teléfono</label>
+            <input id="telefono" name="telefono" type="tel" placeholder="+54 11 ..." class="form-input" autocomplete="tel">
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5" for="consulta">¿En qué podemos ayudarte?</label>
+            <select id="consulta" name="consulta" class="custom-select form-input">
+              <option value="comprar">Quiero comprar</option>
+              <option value="vender">Quiero vender</option>
+              <option value="alquilar">Quiero alquilar</option>
+              <option value="tasacion">Solicitar tasación</option>
+              <option value="info">Información general</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-[10px] text-gray-400 font-semibold uppercase tracking-widest mb-1.5" for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Contanos más sobre lo que estás buscando..." class="form-input resize-none"></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-dlf-green-600 hover:bg-dlf-green-500 text-white font-semibold py-4 rounded-md transition-colors duration-200 tracking-wide text-sm mt-2">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════ -->
+<footer class="bg-dlf-green-700 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-10">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+
+      <!-- Col 1: Logo + descripción -->
+      <div class="sm:col-span-2 lg:col-span-1">
+        <a href="#inicio" class="flex items-center gap-3 mb-5">
+          <img src="images/ISO.svg" alt="De Laforé" class="w-8 h-8 object-contain flex-shrink-0">
+          <div class="leading-none">
+            <div class="font-serif font-semibold text-base text-white tracking-wider uppercase">Delaforé</div>
+            <div class="text-[9px] tracking-[0.22em] text-dlf-gold-300 font-light uppercase mt-0.5">Bienes Raíces</div>
+          </div>
+        </a>
+        <p class="text-white/45 text-sm leading-relaxed mb-4">
+          Más de 30 años asesorando con profesionalismo y transparencia en el mercado inmobiliario de Zona Norte.
+        </p>
+        <p class="text-white/30 text-xs">CMCPSI: 4054</p>
+      </div>
+
+      <!-- Col 2: Navegación -->
+      <div>
+        <h4 class="text-dlf-gold-400 text-[10px] tracking-[0.3em] uppercase font-semibold mb-5">Navegación</h4>
+        <ul class="space-y-3">
+          <li><a href="#propiedades" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Propiedades</a></li>
+          <li><a href="#servicios"   class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Servicios</a></li>
+          <li><a href="#zonas"       class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Zonas</a></li>
+          <li><a href="#nosotros"    class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Quiénes somos</a></li>
+          <li><a href="#tasaciones"  class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Tasaciones</a></li>
+          <li><a href="#contacto"    class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Propiedades -->
+      <div>
+        <h4 class="text-dlf-gold-400 text-[10px] tracking-[0.3em] uppercase font-semibold mb-5">Propiedades</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Casas en venta</a></li>
+          <li><a href="#" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Departamentos en venta</a></li>
+          <li><a href="#" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Casas en alquiler</a></li>
+          <li><a href="#" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Terrenos y lotes</a></li>
+          <li><a href="#" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Barrios privados</a></li>
+          <li><a href="#" class="text-white/50 hover:text-dlf-gold-400 text-sm transition-colors">Oficinas y locales</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contacto -->
+      <div>
+        <h4 class="text-dlf-gold-400 text-[10px] tracking-[0.3em] uppercase font-semibold mb-5">Contacto</h4>
+        <ul class="space-y-4 text-sm text-white/50">
+          <li class="flex items-start gap-2.5">
+            <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-gold-500 mt-0.5 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Av. Centenario 1912,<br>Beccar Alto, San Isidro
+          </li>
+          <li>
+            <a href="tel:+541147580000" class="flex items-center gap-2.5 hover:text-dlf-gold-400 transition-colors">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-gold-500 flex-shrink-0"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-3.07-3.07 19.79 19.79 0 01-3.07-8.63 2 2 0 012-2.18H5a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.76a16 16 0 006.72 6.72l1.13-1.16a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              +54 11 4742-5945
+            </a>
+          </li>
+          <li>
+            <a href="mailto:info@delafore.com" class="flex items-center gap-2.5 hover:text-dlf-gold-400 transition-colors">
+              <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-dlf-gold-500 flex-shrink-0"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              info@delafore.com
+            </a>
+          </li>
+        </ul>
+
+        <!-- RRSS footer -->
+        <div class="flex gap-2 mt-6">
+          <a href="#" aria-label="Instagram" class="w-8 h-8 border border-white/15 flex items-center justify-center text-white/40 hover:border-dlf-gold-500 hover:text-dlf-gold-400 transition-all duration-200 rounded-sm">
+            <svg width="13" height="13" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98C.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="ZonaProp" class="w-8 h-8 border border-white/15 flex items-center justify-center text-white/40 hover:border-dlf-gold-500 hover:text-dlf-gold-400 transition-all duration-200 rounded-sm text-[8px] font-bold">ZP</a>
+          <a href="#" aria-label="ArgenProp" class="w-8 h-8 border border-white/15 flex items-center justify-center text-white/40 hover:border-dlf-gold-500 hover:text-dlf-gold-400 transition-all duration-200 rounded-sm text-[8px] font-bold">AP</a>
+          <a href="#" aria-label="MercadoLibre" class="w-8 h-8 border border-white/15 flex items-center justify-center text-white/40 hover:border-dlf-gold-500 hover:text-dlf-gold-400 transition-all duration-200 rounded-sm text-[8px] font-bold">ML</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-3">
+      <p class="text-white/25 text-xs">© 2025 De Laforé Bienes Raíces. Todos los derechos reservados.</p>
+      <div class="flex gap-5">
+        <a href="#" class="text-white/25 hover:text-white/50 text-xs transition-colors">Política de Privacidad</a>
+        <a href="#" class="text-white/25 hover:text-white/50 text-xs transition-colors">Términos y Condiciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════════
+     ELEMENTOS FLOTANTES
+════════════════════════════════════════════════════ -->
+
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/541147425945" target="_blank" rel="noopener" aria-label="WhatsApp" class="wa-float">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Volver al inicio" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg width="16" height="16" fill="none" stroke="white" stroke-width="2.5" viewBox="0 0 24 24">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+
+<!-- ═══════════════════════════════════════════════════
+     JAVASCRIPT
+════════════════════════════════════════════════════ -->
+<script>
+  /* ════════════════════════════════════════════
+     VIDEO HERO — pausa / play
+  ════════════════════════════════════════════ */
+  (function() {
+    const video  = document.getElementById('hero-video');
+    const btn    = document.getElementById('video-toggle');
+    const iPause = document.getElementById('icon-pause');
+    const iPlay  = document.getElementById('icon-play');
+    if (!video || !btn) return;
+
+    btn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        iPause.classList.remove('hidden');
+        iPlay.classList.add('hidden');
+        btn.setAttribute('aria-label', 'Pausar video de fondo');
+      } else {
+        video.pause();
+        iPause.classList.add('hidden');
+        iPlay.classList.remove('hidden');
+        btn.setAttribute('aria-label', 'Reproducir video de fondo');
+      }
+    });
+
+    /* Si el video no carga, ocultar el botón de pausa */
+    video.addEventListener('error', () => { btn.style.display = 'none'; });
+  })();
+
+  /* ════════════════════════════════════════════
+     BARRA SUPERIOR + PROGRESS BAR + NAVBAR
+  ════════════════════════════════════════════ */
+  const navbar    = document.getElementById('navbar');
+  const topBar    = document.getElementById('top-bar');
+  const progressBar = document.getElementById('progress-bar');
+  const scrollTopBtn = document.getElementById('scroll-top');
+
+  let lastScrollY = 0;
+
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+
+    /* Navbar sólido */
+    navbar.classList.toggle('scrolled', y > 60);
+    scrollTopBtn.classList.toggle('visible', y > 400);
+
+    /* Top bar: ocultar al bajar, mostrar al subir */
+    if (y > lastScrollY && y > 80) {
+      topBar.classList.add('bar-hidden');
+      navbar.classList.add('top-zero');
+    } else {
+      topBar.classList.remove('bar-hidden');
+      navbar.classList.remove('top-zero');
+    }
+    lastScrollY = y;
+
+    /* Progress bar de lectura */
+    const docH = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = docH > 0 ? (y / docH * 100) + '%' : '0%';
+
+  }, { passive: true });
+
+  /* ════════════════════════════════════════════
+     HAMBURGER MOBILE MENU
+  ════════════════════════════════════════════ */
+  document.getElementById('hamburger-btn').addEventListener('click', () => {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  });
+  document.querySelectorAll('#mobile-menu a').forEach(link =>
+    link.addEventListener('click', () =>
+      document.getElementById('mobile-menu').classList.remove('open')
+    )
+  );
+
+  /* ════════════════════════════════════════════
+     TABS DEL BUSCADOR — Venta / Alquiler
+     Maneja: clase is-active + opciones de precio
+  ════════════════════════════════════════════ */
+  function initTabsHandler() {
+    document.querySelectorAll('.search-tab').forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        // Remover is-active y clases activas de todos los tabs
+        document.querySelectorAll('.search-tab').forEach(t => {
+          t.classList.remove('is-active');
+          t.classList.remove('border-dlf-gold-500', 'text-dlf-green-600', 'font-semibold');
+          t.classList.add('border-transparent', 'text-gray-400', 'font-medium');
+        });
+        // Agregar is-active y clases activas solo al clickeado
+        this.classList.add('is-active');
+        this.classList.remove('border-transparent', 'text-gray-400', 'font-medium');
+        this.classList.add('border-dlf-gold-500', 'text-dlf-green-600', 'font-semibold');
+        // Actualizar opciones de precio según la tab
+        const tabName = this.dataset.tab;
+        updatePrecioOptions(tabName);
+      });
+    });
+  }
+
+  /* Se inicializa después de que el DOM esté listo */
+  function updatePrecioOptions(tab) {
+    const sel = document.getElementById('select-precio');
+    if (!sel) return;
+    const PRECIO_OPTIONS = {
+      venta: [
+        ['',                  'Sin límite'],
+        ['Hasta USD 100.000', 'Hasta USD 100.000'],
+        ['Hasta USD 200.000', 'Hasta USD 200.000'],
+        ['Hasta USD 350.000', 'Hasta USD 350.000'],
+        ['Hasta USD 500.000', 'Hasta USD 500.000'],
+        ['Hasta USD 750.000', 'Hasta USD 750.000'],
+        ['Más de USD 750.000','Más de USD 750.000'],
+      ],
+      alquiler: [
+        ['',                   'Sin límite'],
+        ['Hasta $ 300.000',    'Hasta $ 300.000/mes'],
+        ['Hasta $ 500.000',    'Hasta $ 500.000/mes'],
+        ['Hasta $ 750.000',    'Hasta $ 750.000/mes'],
+        ['Hasta $ 1.000.000',  'Hasta $ 1.000.000/mes'],
+        ['Más de $ 1.000.000', 'Más de $ 1.000.000/mes'],
+      ],
+    };
+    const opts = PRECIO_OPTIONS[tab] || PRECIO_OPTIONS.venta;
+    sel.innerHTML = opts
+      .map(([v, l]) => `<option value="${v}">${l}</option>`)
+      .join('');
+  }
+
+  /* ════════════════════════════════════════════
+     SMOOTH SCROLL
+  ════════════════════════════════════════════ */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+  /* ════════════════════════════════════════════
+     FADE-IN EN SCROLL (IntersectionObserver)
+     Se exporta como función para reutilizar
+     desde search.js al renderizar tarjetas
+  ════════════════════════════════════════════ */
+  function observeFadeIn(root) {
+    const obs = new IntersectionObserver(
+      entries => entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity   = '1';
+          entry.target.style.transform = 'translateY(0)';
+          obs.unobserve(entry.target);
+        }
+      }),
+      { threshold: 0.08 }
+    );
+    (root || document).querySelectorAll('.service-card, .testimonial-card, .zone-card, .step-card').forEach(el => {
+      el.style.opacity   = '0';
+      el.style.transform = 'translateY(22px)';
+      el.style.transition = 'opacity 0.52s ease, transform 0.52s ease';
+      obs.observe(el);
+    });
+  }
+  observeFadeIn();
+
+  /* ════════════════════════════════════════════
+     SLIDER DE FOTOS
+     initSliders() se llama desde search.js
+     también, después de renderizar tarjetas
+  ════════════════════════════════════════════ */
+  window.initSliders = function(root) {
+    const cards = (root || document).querySelectorAll('.prop-card[data-slider="true"]');
+    cards.forEach(card => {
+      const wrap  = card.querySelector('.card-img-wrap');
+      const track = card.querySelector('.slider-track');
+      if (!wrap || !track) return;
+
+      const slides = Array.from(track.querySelectorAll('.slider-slide'));
+      if (slides.length <= 1) return;
+
+      const dots  = Array.from(card.querySelectorAll('.slider-dot'));
+      const counter = card.querySelector('.photo-counter');
+      let cur = 0;
+
+      function goTo(n) {
+        cur = ((n % slides.length) + slides.length) % slides.length;
+        track.style.transform = `translateX(${-cur * wrap.offsetWidth}px)`;
+        dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+        if (counter) counter.textContent = `${cur + 1} / ${slides.length}`;
+      }
+
+      card.querySelector('.slider-prev')?.addEventListener('click', e => { e.stopPropagation(); goTo(cur - 1); });
+      card.querySelector('.slider-next')?.addEventListener('click', e => { e.stopPropagation(); goTo(cur + 1); });
+      dots.forEach((dot, i) => dot.addEventListener('click', e => { e.stopPropagation(); goTo(i); }));
+
+      /* Touch/swipe */
+      let touchX = 0;
+      track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
+      track.addEventListener('touchend', e => {
+        const diff = touchX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 38) goTo(cur + (diff > 0 ? 1 : -1));
+      });
+
+      /* Keyboard accesibility on hover */
+      card.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') goTo(cur + 1);
+        if (e.key === 'ArrowLeft')  goTo(cur - 1);
+      });
+    });
+  };
+
+  /* ════════════════════════════════════════════
+     FAVORITOS (localStorage)
+  ════════════════════════════════════════════ */
+  window.initFavorites = function(root) {
+    const favs = JSON.parse(localStorage.getItem('dlf_favs') || '[]');
+    (root || document).querySelectorAll('.fav-btn').forEach(btn => {
+      const id = Number(btn.dataset.id);
+      if (favs.includes(id)) btn.classList.add('is-fav');
+
+      btn.addEventListener('click', e => {
+        e.stopPropagation();
+        const stored = JSON.parse(localStorage.getItem('dlf_favs') || '[]');
+        const idx = stored.indexOf(id);
+        if (idx === -1) stored.push(id);
+        else stored.splice(idx, 1);
+        localStorage.setItem('dlf_favs', JSON.stringify(stored));
+        btn.classList.toggle('is-fav');
+        btn.classList.remove('popping');
+        /* forzar reflow para reiniciar animación */
+        void btn.offsetWidth;
+        btn.classList.add('popping');
+      });
+    });
+  };
+
+  /* ════════════════════════════════════════════
+     VIEW TOGGLE (grid / lista)
+  ════════════════════════════════════════════ */
+  document.addEventListener('DOMContentLoaded', () => {
+    const gridBtn = document.getElementById('view-grid-btn');
+    const listBtn = document.getElementById('view-list-btn');
+    const rGrid   = document.getElementById('results-grid');
+    if (!gridBtn || !listBtn || !rGrid) return;
+
+    gridBtn.addEventListener('click', () => {
+      rGrid.classList.remove('list-view');
+      gridBtn.classList.add('bg-dlf-green-600', 'text-white', 'border-dlf-green-600');
+      gridBtn.classList.remove('border-gray-200', 'text-gray-400');
+      listBtn.classList.remove('bg-dlf-green-600', 'text-white', 'border-dlf-green-600');
+      listBtn.classList.add('border-gray-200', 'text-gray-400');
+    });
+    listBtn.addEventListener('click', () => {
+      rGrid.classList.add('list-view');
+      listBtn.classList.add('bg-dlf-green-600', 'text-white', 'border-dlf-green-600');
+      listBtn.classList.remove('border-gray-200', 'text-gray-400');
+      gridBtn.classList.remove('bg-dlf-green-600', 'text-white', 'border-dlf-green-600');
+      gridBtn.classList.add('border-gray-200', 'text-gray-400');
+    });
+  });
+</script>
+
+<!-- Motor de búsqueda de propiedades + formulario Formspree -->
+<script src="js/search.js"></script>
+
+</body>
+</html>
