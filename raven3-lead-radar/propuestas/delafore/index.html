@@ -17,6 +17,7 @@
     tailwind.config = {
       theme: {
         extend: {
+          screens: { 'navbreak': '1085px' },
           colors: {
             /* Paleta De Laforé */
             'dlf': {
@@ -219,7 +220,7 @@
     /* ─── Scroll to top ─── */
     #scroll-top {
       position: fixed;
-      bottom: 94px; left: 30px;
+      bottom: 28px; left: 30px;
       width: 40px; height: 40px;
       background: #1A3C2E;
       border-radius: 4px;
@@ -485,7 +486,7 @@
     @media (max-width: 767px) {
       .wa-float { width: 50px; height: 50px; bottom: 20px; right: 16px; }
       .wa-float svg { width: 24px; height: 24px; }
-      #scroll-top { bottom: 78px; left: 18px; }
+      #scroll-top { bottom: 20px; left: 18px; }
       #video-toggle { bottom: 16px; left: 16px; }
 
       /* Reduce ligeramente el padding de las cards de servicio */
@@ -504,7 +505,7 @@
     /* Safe area para notch/home indicator en iOS */
     @supports (padding: env(safe-area-inset-bottom)) {
       .wa-float { bottom: max(20px, env(safe-area-inset-bottom)); }
-      #scroll-top { bottom: max(78px, calc(env(safe-area-inset-bottom) + 58px)); }
+      #scroll-top { bottom: max(28px, env(safe-area-inset-bottom)); }
     }
   </style>
 </head>
@@ -555,7 +556,7 @@
       </a>
 
       <!-- Links desktop -->
-      <div class="hidden md:flex items-center gap-7">
+      <div class="hidden navbreak:flex items-center gap-7">
         <a href="#propiedades" class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Propiedades</a>
         <a href="#servicios"   class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Servicios</a>
         <a href="#zonas"       class="nav-link text-white/90 hover:text-white text-sm font-medium tracking-wide transition-colors">Zonas</a>
@@ -565,7 +566,7 @@
       </div>
 
       <!-- Teléfono + CTA desktop -->
-      <div class="hidden md:flex items-center gap-4">
+      <div class="hidden navbreak:flex items-center gap-4">
         <a href="tel:+541147580000" class="flex items-center gap-1.5 text-white/80 hover:text-dlf-gold-400 text-sm transition-colors">
           <!-- phone icon -->
           <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -579,7 +580,7 @@
       </div>
 
       <!-- Hamburger mobile -->
-      <button id="hamburger-btn" aria-label="Menú" class="md:hidden p-2 text-white">
+      <button id="hamburger-btn" aria-label="Menú" class="navbreak:hidden p-2 text-white">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
           <line x1="3" y1="6"  x2="21" y2="6" />
           <line x1="3" y1="12" x2="21" y2="12"/>
@@ -589,7 +590,7 @@
     </div>
 
     <!-- Mobile dropdown -->
-    <div id="mobile-menu" class="md:hidden bg-dlf-green-700">
+    <div id="mobile-menu" class="navbreak:hidden bg-dlf-green-700">
       <div class="px-4 py-2 flex flex-col divide-y divide-dlf-green-600">
         <a href="#propiedades" class="text-white py-3.5 text-sm font-medium">Propiedades</a>
         <a href="#servicios"   class="text-white py-3.5 text-sm font-medium">Servicios</a>
