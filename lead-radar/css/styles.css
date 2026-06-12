@@ -949,8 +949,12 @@ img { max-width: 100%; display: block; }
   flex-shrink: 0;
 }
 .filter-select {
-  background: transparent;
-  border: none;
+  background-color: var(--bg-2);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23556670' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 6px center;
+  background-size: 8px;
+  border: 1px solid transparent;
   color: var(--text-3);
   font-size: 12.5px;
   font-family: inherit;
@@ -959,14 +963,15 @@ img { max-width: 100%; display: block; }
   cursor: pointer;
   appearance: none;
   -webkit-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 6' fill='none'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%23556670' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 6px center;
-  background-size: 8px;
-  transition: color var(--t), background-color var(--t);
+  color-scheme: dark;
+  transition: color var(--t), background-color var(--t), border-color var(--t);
 }
-.filter-select:hover { color: var(--text-2); background-color: var(--bg-hover); }
-.filter-select:focus { outline: none; color: var(--text); }
+.filter-select:hover {
+  color: var(--text-2);
+  background-color: var(--bg-hover);
+  border-color: var(--border);
+}
+.filter-select:focus { outline: none; color: var(--text); border-color: var(--accent-border); }
 .filter-select option { background: var(--bg-3); color: var(--text); }
 .filter-select--sort { color: var(--text-4); font-size: 12px; }
 
