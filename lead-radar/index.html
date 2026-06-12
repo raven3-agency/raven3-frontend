@@ -306,13 +306,13 @@
         </div>
       </div>
 
-      <div class="card table-controls">
+      <div class="table-controls">
         <div class="table-search-wrap">
           <svg viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M11 11L14 14" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
           <input type="text" id="tableSearch" placeholder="Buscar por nombre, rubro, zona..." class="table-search-input">
         </div>
         <div class="table-filter-row">
-          <select class="form-select sm" id="filterStatus">
+          <select class="filter-select" id="filterStatus">
             <option value="">Todos los estados</option>
             <option value="nuevo">Nuevo</option>
             <option value="investigar">Investigar</option>
@@ -324,20 +324,21 @@
             <option value="ganado">Ganado</option>
             <option value="perdido">Perdido</option>
           </select>
-          <select class="form-select sm" id="filterPriority">
+          <select class="filter-select" id="filterPriority">
             <option value="">Toda prioridad</option>
             <option value="alta">Alta</option>
             <option value="media">Media</option>
             <option value="baja">Baja</option>
           </select>
-          <select class="form-select sm" id="filterWebsite">
+          <select class="filter-select" id="filterWebsite">
             <option value="">Sitio web</option>
             <option value="none">Sin web</option>
             <option value="poor">Deficiente</option>
             <option value="average">Promedio</option>
             <option value="good">Buena</option>
           </select>
-          <select class="form-select sm" id="sortBy">
+          <div class="filter-divider"></div>
+          <select class="filter-select filter-select--sort" id="sortBy">
             <option value="opportunityScore_desc">Score ↓</option>
             <option value="opportunityScore_asc">Score ↑</option>
             <option value="rating_desc">Rating ↓</option>
