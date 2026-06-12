@@ -43,6 +43,13 @@ const UI = (() => {
     return `<span class="badge ${m.cls}">${m.label}</span>`;
   };
 
+  const proposalBadge = (businessName) => {
+    const p = Proposals.find(businessName);
+    if (p) return `<a href="propuestas/${p.slug}/" target="_blank" rel="noopener" class="badge badge-propuesta" style="text-decoration:none" title="Ver propuesta">
+      <svg viewBox="0 0 12 12" fill="none" style="width:9px;height:9px;margin-right:3px;flex-shrink:0"><path d="M2 6.5L4.5 9L10 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Lista</a>`;
+    return `<span class="badge badge-perdido">Pendiente</span>`;
+  };
+
   const scorePill = (score) => {
     const cls = score >= 75 ? 'high' : score >= 45 ? 'medium' : 'low';
     return `<div class="score-pill ${cls}">${score}</div>`;
@@ -321,6 +328,7 @@ const UI = (() => {
               <th>Score</th>
               <th>Prioridad</th>
               <th>Estado</th>
+              <th>Propuesta</th>
               <th style="width:110px">Acciones</th>
             </tr>
           </thead>
@@ -346,6 +354,7 @@ const UI = (() => {
       <td>${scoreBar(l.opportunityScore)}</td>
       <td>${priorityBadge(l.priority)}</td>
       <td>${statusBadge(l.status)}</td>
+      <td>${proposalBadge(l.businessName)}</td>
       <td>
         <div class="actions-cell">
           <button class="table-action-btn action-view" data-id="${l.id}" title="Ver detalle">
@@ -1233,7 +1242,7 @@ const UI = (() => {
   };
 
   return {
-    toast, statusBadge, priorityBadge, webQualityBadge, scorePill, scoreBar,
+    toast, statusBadge, priorityBadge, webQualityBadge, proposalBadge, scorePill, scoreBar,
     ratingHtml, formatDate,
     renderDashboard, renderSearchLoading, renderSearchResults,
     renderLeadsTable, renderKanban,
