@@ -477,6 +477,68 @@ a.logo {
   text-shadow: 0 0 45px rgba(0, 229, 200, 0.2) !important;
 }
 
+/* ── GLITCH effect on "vendedor digital" ────────────────── */
+.statement__text em.glitch {
+  position: relative !important;
+  display: inline-block !important;
+  animation: glitch-color 5s infinite !important;
+}
+
+.statement__text em.glitch::before,
+.statement__text em.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  font-style: normal;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: var(--r3);
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform, clip-path;
+}
+
+.statement__text em.glitch::before {
+  text-shadow: -3px 0 #ff0066;
+  animation: glitch-slice-1 5s infinite;
+}
+
+.statement__text em.glitch::after {
+  text-shadow: 3px 0 #00ffe0;
+  animation: glitch-slice-2 5s 0.12s infinite;
+}
+
+@keyframes glitch-color {
+  0%, 11%, 100% { text-shadow: 0 0 45px rgba(0, 229, 200, 0.2) !important; }
+  6%  { text-shadow: -2px 0 #ff0066, 2px 0 #00ffe0, 0 0 40px rgba(0, 229, 200, 0.5) !important; }
+  7%  { text-shadow: 2px 0 #ff0066, -2px 0 #00ffe0, 0 0 40px rgba(0, 229, 200, 0.5) !important; }
+  8%  { text-shadow: 0 0 45px rgba(0, 229, 200, 0.2) !important; }
+  9%  { text-shadow: -1px 0 #ff0066, 1px 0 #00ffe0, 0 0 40px rgba(0, 229, 200, 0.4) !important; }
+  10% { text-shadow: 0 0 45px rgba(0, 229, 200, 0.2) !important; }
+}
+
+@keyframes glitch-slice-1 {
+  0%, 5.5%, 11%, 100% { opacity: 0; transform: none; clip-path: none; }
+  6%   { opacity: 1; transform: translate(-4px, 1px);  clip-path: polygon(0 18%, 100% 18%, 100% 38%, 0 38%); }
+  6.5% { opacity: 1; transform: translate(4px, -1px);  clip-path: polygon(0 58%, 100% 58%, 100% 78%, 0 78%); }
+  7%   { opacity: 1; transform: translate(-2px, 2px);  clip-path: polygon(0 4%,  100% 4%,  100% 14%, 0 14%); }
+  7.5% { opacity: 0; }
+  9%   { opacity: 1; transform: translate(3px, 0);     clip-path: polygon(0 72%, 100% 72%, 100% 88%, 0 88%); }
+  9.5% { opacity: 0; }
+}
+
+@keyframes glitch-slice-2 {
+  0%, 5.5%, 11%, 100% { opacity: 0; transform: none; clip-path: none; }
+  6%   { opacity: 1; transform: translate(4px, -1px);  clip-path: polygon(0 62%, 100% 62%, 100% 82%, 0 82%); }
+  6.5% { opacity: 1; transform: translate(-4px, 1px);  clip-path: polygon(0 28%, 100% 28%, 100% 48%, 0 48%); }
+  7%   { opacity: 1; transform: translate(2px, -2px);  clip-path: polygon(0 82%, 100% 82%, 100% 95%, 0 95%); }
+  7.5% { opacity: 0; }
+  9%   { opacity: 1; transform: translate(-3px, 0);    clip-path: polygon(0 10%, 100% 10%, 100% 26%, 0 26%); }
+  9.5% { opacity: 0; }
+}
+
 .statement__sub {
   font-family: var(--font-body) !important;
 }
