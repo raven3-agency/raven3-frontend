@@ -271,24 +271,6 @@
     }
     .scroll-arrow:hover { color: #C9A96E; }
 
-    /* ─── Botón favorito en tarjeta ─── */
-    .fav-btn {
-      position: absolute; top: 10px; right: 10px;
-      width: 34px; height: 34px;
-      background: rgba(255,255,255,0.9);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      border: none;
-      color: #9CA3AF;
-      transition: color 0.2s ease, transform 0.2s ease, background 0.2s ease;
-      z-index: 2;
-    }
-    .fav-btn:hover { background: white; color: #ef4444; transform: scale(1.1); }
-    .fav-btn.is-fav { color: #ef4444; background: white; }
-    @keyframes pop-heart { 0%{transform:scale(1)} 40%{transform:scale(1.45)} 100%{transform:scale(1)} }
-    .fav-btn.popping { animation: pop-heart 0.3s ease forwards; }
-
     /* ─── CTA deslizable en imagen de tarjeta ─── */
     .card-img-cta {
       position: absolute; bottom: 0; left: 0; right: 0;
@@ -1775,31 +1757,6 @@
       card.addEventListener('keydown', e => {
         if (e.key === 'ArrowRight') goTo(cur + 1);
         if (e.key === 'ArrowLeft')  goTo(cur - 1);
-      });
-    });
-  };
-
-  /* ════════════════════════════════════════════
-     FAVORITOS (localStorage)
-  ════════════════════════════════════════════ */
-  window.initFavorites = function(root) {
-    const favs = JSON.parse(localStorage.getItem('dlf_favs') || '[]');
-    (root || document).querySelectorAll('.fav-btn').forEach(btn => {
-      const id = Number(btn.dataset.id);
-      if (favs.includes(id)) btn.classList.add('is-fav');
-
-      btn.addEventListener('click', e => {
-        e.stopPropagation();
-        const stored = JSON.parse(localStorage.getItem('dlf_favs') || '[]');
-        const idx = stored.indexOf(id);
-        if (idx === -1) stored.push(id);
-        else stored.splice(idx, 1);
-        localStorage.setItem('dlf_favs', JSON.stringify(stored));
-        btn.classList.toggle('is-fav');
-        btn.classList.remove('popping');
-        /* forzar reflow para reiniciar animación */
-        void btn.offsetWidth;
-        btn.classList.add('popping');
       });
     });
   };
