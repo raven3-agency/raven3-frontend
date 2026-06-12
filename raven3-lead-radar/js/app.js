@@ -19,6 +19,7 @@ const App = (() => {
     if (statusEl)    statusEl.classList.add('loading');
     if (statusLabel) statusLabel.textContent = 'Conectando...';
 
+    Proposals.load();
     const connected = await Storage.init();
 
     if (statusEl)    statusEl.classList.remove('loading');

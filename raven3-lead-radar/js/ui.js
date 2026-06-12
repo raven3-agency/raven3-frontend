@@ -599,6 +599,10 @@ const UI = (() => {
       ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lead.address)}`
       : null;
 
+    /* Proposal web */
+    const proposal = Proposals.find(lead.businessName);
+    const proposalHref = proposal ? `propuestas/${proposal.slug}/` : null;
+
     /* Activity log (newest first) */
     const actLog = [...(lead.activityLog || [])].reverse();
 
@@ -618,6 +622,8 @@ const UI = (() => {
                 '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 1.5C7 1.5 5 4 5 7C5 10 7 12.5 7 12.5M7 1.5C7 1.5 9 4 9 7C9 10 7 12.5 7 12.5M1.5 7H12.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>', '_blank') : ''}
             ${mapsHref    ? actionPill(mapsHref, 'Maps',
                 '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><path d="M7 1.5C5 1.5 3.5 3 3.5 5C3.5 8 7 12.5 7 12.5C7 12.5 10.5 8 10.5 5C10.5 3 9 1.5 7 1.5Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="5" r="1.2" stroke="currentColor" stroke-width="1.1"/></svg>', '_blank') : ''}
+            ${proposalHref ? actionPill(proposalHref, 'Ver propuesta',
+                '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><rect x="2" y="2.5" width="8" height="6" rx="1.1" stroke="currentColor" stroke-width="1.2"/><path d="M4 9.5V11.5H10V5.5H9" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>', '_blank') : ''}
           </div>
         </div>
 
@@ -677,6 +683,21 @@ const UI = (() => {
             >`).join('')}
           </div>` : ''}
         </div>
+
+        ${proposalHref ? `
+        <!-- Propuesta web -->
+        <div class="drawer-section">
+          <div class="drawer-section-title">Propuesta web</div>
+          <a href="${proposalHref}" target="_blank" rel="noopener" style="display:flex;align-items:center;gap:10px;padding:12px 14px;background:var(--bg-3);border:1px solid var(--accent);border-radius:var(--r-md);text-decoration:none;color:var(--text-1);font-size:13px;font-weight:600;transition:background .15s"
+              onmouseover="this.style.background='var(--bg-4)'" onmouseout="this.style.background='var(--bg-3)'">
+            <svg viewBox="0 0 20 20" fill="none" width="18" height="18" style="flex-shrink:0;color:var(--accent)"><rect x="2" y="3" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M6 14v2h8V7h-2" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 7.5h6M5 10h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+            <div>
+              <div>${proposal.name || lead.businessName}</div>
+              <div style="font-size:11px;font-weight:400;color:var(--text-3);margin-top:2px">propuestas/${proposal.slug}/</div>
+            </div>
+            <svg viewBox="0 0 14 14" fill="none" width="13" height="13" style="margin-left:auto;color:var(--text-3)"><path d="M3 11L11 3M11 3H6.5M11 3V7.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>` : ''}
 
         <!-- Score -->
         <div class="drawer-section">
