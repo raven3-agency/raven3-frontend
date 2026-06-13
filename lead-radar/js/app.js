@@ -77,7 +77,7 @@ const App = (() => {
     // Topbar title
     const titles = {
       dashboard: 'Dashboard', search: 'Buscar Leads', leads: 'Leads',
-      kanban: 'Pipeline', templates: 'Templates', settings: 'Configuración',
+      kanban: 'Pipeline', templates: 'Templates', inbox: 'Instagram DMs', settings: 'Configuración',
     };
     document.getElementById('topbarTitle').textContent = titles[section] || section;
 
@@ -87,6 +87,7 @@ const App = (() => {
       case 'leads':     renderLeads(); break;
       case 'kanban':    UI.renderKanban(); break;
       case 'templates': UI.renderTemplates(); break;
+      case 'inbox':     UI.renderInbox(); break;
       case 'settings':  UI.renderSettings(); break;
     }
 

@@ -111,6 +111,15 @@
         </svg>
         <span>Templates</span>
       </a>
+      <a class="nav-item" data-section="inbox" href="#">
+        <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
+          <rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="14.5" cy="5.5" r="1.2" fill="currentColor"/>
+        </svg>
+        <span>Instagram</span>
+        <span class="nav-badge" id="navIgCount" style="background:rgba(225,48,108,0.18);color:#E1306C">0</span>
+      </a>
       <a class="nav-item" data-section="settings" href="#">
         <svg class="nav-icon" viewBox="0 0 20 20" fill="none">
           <circle cx="10" cy="10" r="2.5" stroke="currentColor" stroke-width="1.5"/>
@@ -374,6 +383,28 @@
         </div>
       </div>
       <div id="templatesLayout"></div>
+    </section>
+
+    <!-- ─── INSTAGRAM INBOX ─── -->
+    <section class="section" id="sec-inbox">
+      <div class="page-header">
+        <div class="page-header-left">
+          <h1 class="page-title">Instagram DMs</h1>
+          <p class="page-subtitle">Leads con Instagram — gestión de conversaciones</p>
+        </div>
+        <div class="page-header-right">
+          <a class="btn-primary" href="https://www.instagram.com/direct/inbox/" target="_blank" rel="noopener"
+             style="background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045);border:none;color:#fff;text-decoration:none;display:inline-flex;align-items:center;gap:6px">
+            <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
+              <rect x="2" y="2" width="12" height="12" rx="3.5" stroke="currentColor" stroke-width="1.4"/>
+              <circle cx="8" cy="8" r="2.8" stroke="currentColor" stroke-width="1.3"/>
+              <circle cx="11.6" cy="4.4" r="0.9" fill="currentColor"/>
+            </svg>
+            Abrir Instagram Direct
+          </a>
+        </div>
+      </div>
+      <div id="inboxContent"></div>
     </section>
 
     <!-- ─── SETTINGS ─── -->

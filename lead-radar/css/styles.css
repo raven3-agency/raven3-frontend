@@ -1411,9 +1411,10 @@ img { max-width: 100%; display: block; }
   border-radius: 99px;
   font-weight: 600;
 }
-.type-whatsapp { background: rgba(37,211,102,0.1); color: #25D366; border: 1px solid rgba(37,211,102,0.2); }
-.type-email    { background: var(--info-dim); color: var(--info); border: 1px solid rgba(78,156,255,0.2); }
-.type-followup { background: var(--purple-dim); color: var(--purple); border: 1px solid var(--purple-border); }
+.type-whatsapp  { background: rgba(37,211,102,0.1);  color: #25D366; border: 1px solid rgba(37,211,102,0.2); }
+.type-email     { background: var(--info-dim);        color: var(--info);   border: 1px solid rgba(78,156,255,0.2); }
+.type-followup  { background: var(--purple-dim);      color: var(--purple); border: 1px solid var(--purple-border); }
+.type-instagram { background: rgba(225,48,108,0.1);   color: #E1306C;       border: 1px solid rgba(225,48,108,0.25); }
 
 .template-card-body { padding: 16px; }
 .template-vars {

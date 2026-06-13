@@ -258,7 +258,7 @@ const UI = (() => {
       const addrEl = card.querySelector('.result-address');
       if (!addrEl) return;
       card.addEventListener('click', () => {
-        openMapPanel(addrEl.dataset.address, addrEl.dataset.name);
+        openMapPanel(addrEl.dataset.address, addrEl.dataset.name, addrEl.dataset.placeId);
       });
     });
     document.getElementById('btnImportAll').addEventListener('click', () => App.importSearchResults(results, false));
@@ -281,7 +281,7 @@ const UI = (() => {
         </div>
         <div class="result-card-body">
           ${ratingHtml(l.rating, l.reviewsCount)}
-          <div class="result-detail result-address" data-address="${l.address}" data-name="${l.businessName}" title="Ver en mapa">
+          <div class="result-detail result-address" data-address="${l.address}" data-name="${l.businessName}" data-place-id="${l.googlePlaceId || ''}" title="Ver en mapa">
             <svg viewBox="0 0 14 14" fill="none"><path d="M7 1.5C4.5 1.5 2.5 3.5 2.5 6C2.5 9 7 12.5 7 12.5C7 12.5 11.5 9 11.5 6C11.5 3.5 9.5 1.5 7 1.5Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="6" r="1.5" stroke="currentColor" stroke-width="1.2"/></svg>
             ${l.address}
           </div>
@@ -496,12 +496,15 @@ const UI = (() => {
   /* ────────────────────────────────────────────────
      MAP PANEL
   ──────────────────────────────────────────────── */
-  const openMapPanel = (address, name) => {
-    const encoded = encodeURIComponent(address);
+  const openMapPanel = (address, name, placeId) => {
+    const mapsUrl = placeId
+      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}&query_place_id=${placeId}`
+      : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${name} ${address}`)}`;
+    const embedQ = encodeURIComponent(placeId ? `place_id:${placeId}` : `${name} ${address}`);
     document.getElementById('mapPanelTitle').textContent = name || 'Ubicación';
     document.getElementById('mapPanelAddress').textContent = address;
-    document.getElementById('mapPanelLink').href = `https://www.google.com/maps/search/?api=1&query=${encoded}`;
-    document.getElementById('mapPanelIframe').src = `https://maps.google.com/maps?q=${encoded}&output=embed&z=15`;
+    document.getElementById('mapPanelLink').href = mapsUrl;
+    document.getElementById('mapPanelIframe').src = `https://maps.google.com/maps?q=${embedQ}&output=embed&z=15`;
     document.getElementById('mapPanelOverlay').classList.add('open');
   };
 
@@ -582,6 +585,7 @@ const UI = (() => {
     const breakdown = Scoring.getBreakdown(lead);
     const waMsg = Templates.renderById('whatsapp_inicial', lead);
     const emailMsg = Templates.renderById('email_inicial', lead);
+    const igMsg = lead.instagram ? Templates.renderById('instagram_dm', lead) : '';
 
     const workerUrl = (Storage.getSettings().backendUrl || '').replace(/\/$/, '');
 
@@ -598,14 +602,20 @@ const UI = (() => {
     const waNum = lead.whatsapp ? lead.whatsapp.replace(/\D/g, '') : null;
     const waHref = waNum ? `https://wa.me/${waNum}` : null;
 
+    /* Instagram DM URL */
+    const igHandle = lead.instagram ? lead.instagram.replace(/^@/, '').trim() : null;
+    const igHref = igHandle ? `https://ig.me/m/${igHandle}` : null;
+
     /* Website with protocol */
     const webHref = lead.website
       ? (/^https?:\/\//i.test(lead.website) ? lead.website : `https://${lead.website}`)
       : null;
 
-    /* Maps URL */
-    const mapsHref = lead.address
-      ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lead.address)}`
+    /* Maps URL — use place_id when available for exact business match */
+    const mapsHref = (lead.address || lead.googlePlaceId)
+      ? (lead.googlePlaceId
+        ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(lead.businessName)}&query_place_id=${lead.googlePlaceId}`
+        : `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${lead.businessName} ${lead.address}`)}`)
       : null;
 
     /* Proposal web */
@@ -627,6 +637,8 @@ const UI = (() => {
                 '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><path d="M2.5 3C2.5 3 3 5 5 7C7 9 9 9.5 9 9.5L10.5 8C10.5 8 9.5 7.5 9 7C8.5 6.5 8.5 5.5 8.5 5.5L5.5 2.5C5.5 2.5 4.5 2.5 3.5 2.5C3 2.5 2.5 3 2.5 3Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg>') : ''}
             ${waHref      ? actionPill(waHref, 'WhatsApp',
                 '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M4.5 9.5C5.5 10 8.5 10 10 8C11.5 6 10.5 3.5 8 3C5.5 2.5 3 4.5 3.5 7C3.7 8 4 8.5 4.5 9.5L3.5 11L5.5 10.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round"/></svg>', '_blank') : ''}
+            ${igHref      ? actionPill(igHref, 'Instagram DM',
+                '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><rect x="1.5" y="1.5" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="7" r="2.5" stroke="currentColor" stroke-width="1.1"/><circle cx="10.2" cy="3.8" r="0.7" fill="currentColor"/></svg>', '_blank') : ''}
             ${webHref     ? actionPill(webHref, 'Web',
                 '<svg viewBox="0 0 14 14" fill="none" width="12" height="12"><circle cx="7" cy="7" r="5.5" stroke="currentColor" stroke-width="1.2"/><path d="M7 1.5C7 1.5 5 4 5 7C5 10 7 12.5 7 12.5M7 1.5C7 1.5 9 4 9 7C9 10 7 12.5 7 12.5M1.5 7H12.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>', '_blank') : ''}
             ${mapsHref    ? actionPill(mapsHref, 'Maps',
@@ -806,6 +818,24 @@ const UI = (() => {
             <svg viewBox="0 0 14 14" fill="none"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
             Copiar email
           </button>
+
+          ${igHandle ? `
+          <div style="font-size:12px;font-weight:600;color:#E1306C;margin:16px 0 6px;display:flex;align-items:center;gap:5px">
+            <svg viewBox="0 0 12 12" fill="none" width="11" height="11"><rect x="1" y="1" width="10" height="10" rx="2.8" stroke="currentColor" stroke-width="1.1"/><circle cx="6" cy="6" r="2.2" stroke="currentColor" stroke-width="1"/><circle cx="8.8" cy="3.2" r="0.6" fill="currentColor"/></svg>
+            Instagram DM
+          </div>
+          <div class="msg-preview" id="igPreview">${igMsg}</div>
+          <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">
+            <button class="btn-secondary" id="btnCopyIg" style="padding:7px 12px;font-size:12px">
+              <svg viewBox="0 0 14 14" fill="none"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              Copiar DM
+            </button>
+            <a href="${igHref}" target="_blank" rel="noopener"
+               style="display:inline-flex;align-items:center;gap:5px;padding:7px 12px;border-radius:var(--r-sm);background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.28);color:#E1306C;font-size:12px;font-weight:600;text-decoration:none;transition:var(--t)"
+               onmouseover="this.style.background='rgba(225,48,108,0.2)'" onmouseout="this.style.background='rgba(225,48,108,0.1)'">
+              Abrir chat en Instagram
+            </a>
+          </div>` : ''}
         </div>
 
       </div>
@@ -833,6 +863,9 @@ const UI = (() => {
     });
     document.getElementById('btnCopyEmail').addEventListener('click', () => {
       copyToClipboard(document.getElementById('emailPreview').textContent, 'Email copiado');
+    });
+    document.getElementById('btnCopyIg')?.addEventListener('click', () => {
+      copyToClipboard(document.getElementById('igPreview').textContent, 'DM de Instagram copiado');
     });
 
     // Async: check website status
@@ -1233,12 +1266,135 @@ const UI = (() => {
   };
 
   /* ────────────────────────────────────────────────
+     INSTAGRAM INBOX
+  ──────────────────────────────────────────────── */
+  const copyIgDm = (leadId) => {
+    const lead = Storage.getLeads().find(l => l.id === leadId);
+    if (!lead) return;
+    const msg = Templates.renderById('instagram_dm', lead) || Templates.renderById('whatsapp_inicial', lead);
+    navigator.clipboard.writeText(msg)
+      .then(() => toast('DM de Instagram copiado', 'success'))
+      .catch(() => toast('Error al copiar', 'error'));
+  };
+
+  const renderInbox = () => {
+    const leads   = Storage.getLeads();
+    const igLeads = leads.filter(l => l.instagram);
+    const el      = document.getElementById('inboxContent');
+    if (!el) return;
+
+    const total     = igLeads.length;
+    const contacted = igLeads.filter(l => ['contactado','respondio','propuesta_enviada','ganado','perdido'].includes(l.status)).length;
+    const replied   = igLeads.filter(l => ['respondio','ganado'].includes(l.status)).length;
+
+    if (!total) {
+      el.innerHTML = `
+        <div class="empty-state">
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="24" height="24" style="opacity:.5">
+              <rect x="2" y="2" width="20" height="20" rx="6" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="18" cy="6" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="empty-state-title" style="font-family:'Syne',sans-serif;font-weight:700">Sin leads con Instagram</div>
+          <div style="font-size:13px;color:var(--text-3)">Los leads con handle de Instagram aparecerán acá para gestionar sus DMs</div>
+        </div>`;
+      return;
+    }
+
+    const sorted = [...igLeads].sort((a, b) => {
+      const p = { respondio: 0, contactado: 1, propuesta_enviada: 2, investigar: 3, nuevo: 4, sin_web: 5, web_mejorable: 6, ganado: 10, perdido: 11 };
+      return (p[a.status] ?? 5) - (p[b.status] ?? 5);
+    });
+
+    el.innerHTML = `
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
+        <div class="card" style="padding:18px 20px;text-align:center">
+          <div style="font-size:28px;font-weight:800;font-family:'Syne',sans-serif;color:#E1306C">${total}</div>
+          <div style="font-size:12px;color:var(--text-3);margin-top:3px">Con Instagram</div>
+        </div>
+        <div class="card" style="padding:18px 20px;text-align:center">
+          <div style="font-size:28px;font-weight:800;font-family:'Syne',sans-serif;color:var(--warning)">${contacted}</div>
+          <div style="font-size:12px;color:var(--text-3);margin-top:3px">Contactados</div>
+        </div>
+        <div class="card" style="padding:18px 20px;text-align:center">
+          <div style="font-size:28px;font-weight:800;font-family:'Syne',sans-serif;color:var(--success)">${replied}</div>
+          <div style="font-size:12px;color:var(--text-3);margin-top:3px">Respondieron</div>
+        </div>
+      </div>
+
+      <div class="card" style="padding:14px 18px;margin-bottom:20px;display:flex;align-items:center;gap:12px;border-color:rgba(225,48,108,0.2);background:rgba(225,48,108,0.04)">
+        <svg viewBox="0 0 20 20" fill="none" width="18" height="18" style="flex-shrink:0;color:#E1306C">
+          <rect x="2" y="2" width="16" height="16" rx="4.5" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="14.2" cy="5.8" r="1" fill="currentColor"/>
+        </svg>
+        <div style="flex:1;font-size:12px;color:var(--text-3);line-height:1.5">
+          Instagram no permite embeber su bandeja. Usá <strong style="color:var(--text-2)">Abrir chat</strong> en cada lead para ir directo a esa conversación en Instagram, o abrí la bandeja completa desde el botón de arriba.
+        </div>
+        <a href="https://www.instagram.com/direct/inbox/" target="_blank" rel="noopener"
+           style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;padding:8px 14px;border-radius:var(--r-sm);background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.28);color:#E1306C;font-size:12px;font-weight:600;text-decoration:none;white-space:nowrap;transition:var(--t)"
+           onmouseover="this.style.background='rgba(225,48,108,0.22)'" onmouseout="this.style.background='rgba(225,48,108,0.1)'">
+          <svg viewBox="0 0 14 14" fill="none" width="12" height="12"><rect x="1.5" y="1.5" width="11" height="11" rx="3" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="7" r="2.5" stroke="currentColor" stroke-width="1.1"/><circle cx="10.2" cy="3.8" r="0.7" fill="currentColor"/></svg>
+          Abrir bandeja
+        </a>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
+        ${sorted.map(lead => {
+          const handle      = lead.instagram.replace(/^@/, '').trim();
+          const igChatHref  = `https://ig.me/m/${handle}`;
+          const profileHref = `https://www.instagram.com/${handle}/`;
+          const statusMeta  = Data.STATUS_META[lead.status] || Data.STATUS_META['nuevo'];
+          return `
+            <div class="card" style="padding:16px;display:flex;flex-direction:column;gap:12px">
+              <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:8px">
+                <div style="min-width:0">
+                  <a href="${profileHref}" target="_blank" rel="noopener"
+                     style="display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:99px;background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.25);color:#E1306C;font-size:11px;font-weight:600;text-decoration:none;margin-bottom:7px;max-width:100%">
+                    <svg viewBox="0 0 10 10" fill="none" width="9" height="9" style="flex-shrink:0"><rect x="1" y="1" width="8" height="8" rx="2.2" stroke="currentColor" stroke-width="1.1"/><circle cx="5" cy="5" r="1.8" stroke="currentColor" stroke-width="1"/><circle cx="7.2" cy="2.8" r="0.5" fill="currentColor"/></svg>
+                    <span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap">@${handle}</span>
+                  </a>
+                  <div style="font-size:13px;font-weight:700;font-family:'Syne',sans-serif;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${lead.businessName}</div>
+                  <div style="font-size:11px;color:var(--text-3);margin-top:2px">${lead.category} · ${lead.zone}</div>
+                </div>
+                <div style="display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0">
+                  ${scorePill(lead.opportunityScore)}
+                  <span class="badge ${statusMeta.cls}" style="font-size:10px;white-space:nowrap">${statusMeta.label}</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:6px">
+                <a href="${igChatHref}" target="_blank" rel="noopener"
+                   style="flex:1;display:inline-flex;align-items:center;justify-content:center;gap:5px;padding:8px 10px;border-radius:var(--r-sm);background:rgba(225,48,108,0.1);border:1px solid rgba(225,48,108,0.25);color:#E1306C;font-size:12px;font-weight:600;text-decoration:none;transition:var(--t)"
+                   onmouseover="this.style.background='rgba(225,48,108,0.2)'" onmouseout="this.style.background='rgba(225,48,108,0.1)'">
+                  <svg viewBox="0 0 14 14" fill="none" width="12" height="12"><path d="M10 3H4C2.9 3 2 3.9 2 5V9C2 10.1 2.9 11 4 11H5.5L7 12.5L8.5 11H10C11.1 11 12 10.1 12 9V5C12 3.9 11.1 3 10 3Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/><path d="M5 6.5H9M5 8.5H7.5" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></svg>
+                  Abrir chat
+                </a>
+                <button class="btn-secondary" style="padding:8px 10px;font-size:12px;flex-shrink:0"
+                  onclick="UI.copyIgDm('${lead.id}')" title="Copiar DM de Instagram">
+                  <svg viewBox="0 0 14 14" fill="none" width="12" height="12"><rect x="3.5" y="2" width="7" height="9" rx="1.2" stroke="currentColor" stroke-width="1.2"/><path d="M2 4.5V12H9.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+                  Copiar DM
+                </button>
+              </div>
+            </div>`;
+        }).join('')}
+      </div>`;
+  };
+
+  /* ────────────────────────────────────────────────
      NAV BADGE
   ──────────────────────────────────────────────── */
   const updateNavBadge = () => {
-    const count = Storage.getLeads().length;
+    const leads = Storage.getLeads();
     const el = document.getElementById('navLeadCount');
-    if (el) el.textContent = count;
+    if (el) el.textContent = leads.length;
+    const igEl = document.getElementById('navIgCount');
+    if (igEl) {
+      const igCount = leads.filter(l => l.instagram).length;
+      igEl.textContent = igCount;
+      igEl.style.display = igCount ? '' : 'none';
+    }
   };
 
   return {
@@ -1251,5 +1407,6 @@ const UI = (() => {
     openAddModal, closeAddModal, getModalFormData,
     renderTemplates, insertTemplateVar, saveTemplates,
     renderSettings, updateNavBadge,
+    renderInbox, copyIgDm,
   };
 })();

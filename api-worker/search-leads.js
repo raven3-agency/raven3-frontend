@@ -27,17 +27,32 @@ async function scrapeWebsiteForSocials(websiteUrl) {
         Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'es-AR,es;q=0.9',
       },
-      signal: AbortSignal.timeout(5000),
+      signal: AbortSignal.timeout(7000),
       redirect: 'follow',
     });
     if (!res.ok) return {};
     const html = await res.text();
 
+    // Check JSON-LD sameAs first (present even on JS-rendered sites, good for SEO)
+    let igFromSchema = null;
+    const jsonLdRe = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+    let ldBlock;
+    while (!igFromSchema && (ldBlock = jsonLdRe.exec(html)) !== null) {
+      try {
+        const schema = JSON.parse(ldBlock[1]);
+        const sameAs = [].concat(schema.sameAs || []);
+        for (const u of sameAs) {
+          const m = String(u).match(INSTAGRAM_RE);
+          if (m) { igFromSchema = `@${m[1]}`; break; }
+        }
+      } catch {}
+    }
+
     const igMatch = html.match(INSTAGRAM_RE);
     const waMatch = html.match(WHATSAPP_LINK_RE);
 
     return {
-      instagram: igMatch ? `@${igMatch[1]}` : null,
+      instagram: igFromSchema || (igMatch ? `@${igMatch[1]}` : null),
       whatsapp: waMatch ? waMatch[1].replace(/^\+/, '') : null,
     };
   } catch {
@@ -59,6 +74,7 @@ function mapPlace(place, category, zone) {
   const oh = place.regularOpeningHours;
   return {
     id: `gp_${place.id}`,
+    googlePlaceId: place.id,
     businessName: place.displayName?.text || 'Sin nombre',
     category,
     zone,

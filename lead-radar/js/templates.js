@@ -67,6 +67,18 @@ Si en algún momento les interesa, estoy disponible. Que les vaya muy bien 🙏
 
 Patricio · Raven3`,
     },
+    {
+      id: 'instagram_dm',
+      title: 'Instagram DM',
+      type: 'instagram',
+      body: `Hola {{businessName}}! 👋
+
+Vi que tienen muy buena presencia en Google ({{rating}}★ y {{reviewsCount}} reseñas) y me llamó la atención su negocio en {{zone}}.
+
+Soy Patricio de Raven3 — ayudamos a negocios de {{category}} a mejorar su presencia digital. Detecté una oportunidad concreta para ustedes: {{diagnosis}}
+
+¿Les cuento cómo lo haríamos? Sin compromiso 🚀`,
+    },
   ];
 
   const VARS = ['{{businessName}}', '{{category}}', '{{zone}}', '{{diagnosis}}', '{{recommendedPitch}}', '{{rating}}', '{{reviewsCount}}'];
@@ -97,9 +109,10 @@ Patricio · Raven3`,
   };
 
   const TYPE_META = {
-    whatsapp: { label: 'WhatsApp', cls: 'type-whatsapp' },
-    email:    { label: 'Email',    cls: 'type-email'    },
-    followup: { label: 'Follow-up',cls: 'type-followup' },
+    whatsapp:  { label: 'WhatsApp',  cls: 'type-whatsapp'  },
+    email:     { label: 'Email',     cls: 'type-email'     },
+    followup:  { label: 'Follow-up', cls: 'type-followup'  },
+    instagram: { label: 'Instagram', cls: 'type-instagram' },
   };
 
   return { getAll, saveAll, render, renderById, VARS, TYPE_META, DEFAULT_TEMPLATES };
