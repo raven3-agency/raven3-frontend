@@ -216,18 +216,7 @@ El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
     }
   });
 
-  let result;
-  for (let attempt = 1; attempt <= 3; attempt++) {
-    try {
-      result = await model.generateContent(prompt);
-      break;
-    } catch (err) {
-      if (attempt === 3) throw err;
-      const wait = attempt * 35000;
-      console.log(`⏳ Rate limit (intento ${attempt}/3), reintentando en ${wait / 1000}s...`);
-      await new Promise(r => setTimeout(r, wait));
-    }
-  }
+  const result = await model.generateContent(prompt);
   const rawText = result.response.text().trim();
 
   const jsonMatch = rawText.match(/\{[\s\S]*\}/);
