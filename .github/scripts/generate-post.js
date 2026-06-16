@@ -208,7 +208,7 @@ El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
   console.log(`🤖 Llamando a Gemini para generar post sobre: "${topic}"`);
 
   const model = genAI.getGenerativeModel({
-    model: 'gemini-2.0-flash-lite',
+    model: 'gemini-3.1-flash-lite',
     generationConfig: {
       responseMimeType: 'application/json',
       maxOutputTokens: 8192,
