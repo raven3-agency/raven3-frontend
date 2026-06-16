@@ -2,15 +2,13 @@
  * Generador automático de posts para el blog de Raven3
  * Se ejecuta cada lunes via GitHub Actions
  *
- * Texto  → Google Gemini 2.0 Flash (tier GRATUITO, sin tarjeta)
- * Imagen → Pollinations.ai         (100% gratis, sin cuenta ni API key)
+ * Texto → Google Gemini 2.0 Flash (tier GRATUITO, sin tarjeta)
+ * Thumbnails via CSS fallback (sin generación de imagen)
  */
 
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 const fs   = require('fs');
 const path = require('path');
-const https = require('https');
-const http  = require('http');
 
 // ── CONFIGURACIÓN ─────────────────────────────────────────────────────────────
 
@@ -135,39 +133,6 @@ function formatDateES(date) {
   });
 }
 
-function downloadUrl(url, destPath, timeoutMs = 60000) {
-  return new Promise((resolve, reject) => {
-    const protocol = url.startsWith('https') ? https : http;
-    const file = fs.createWriteStream(destPath);
-    const req = protocol.get(url, (res) => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        file.close();
-        fs.unlink(destPath, () => {});
-        return downloadUrl(res.headers.location, destPath, timeoutMs)
-          .then(resolve).catch(reject);
-      }
-      if (res.statusCode !== 200) {
-        file.close();
-        fs.unlink(destPath, () => {});
-        return reject(new Error(`HTTP ${res.statusCode} al descargar imagen`));
-      }
-      res.pipe(file);
-      file.on('finish', () => { file.close(); resolve(); });
-    });
-    req.setTimeout(timeoutMs, () => {
-      req.destroy();
-      file.close();
-      fs.unlink(destPath, () => {});
-      reject(new Error('Timeout descargando imagen'));
-    });
-    req.on('error', (err) => {
-      file.close();
-      fs.unlink(destPath, () => {});
-      reject(err);
-    });
-  });
-}
-
 // ── SELECCIÓN DE CATEGORÍA Y TEMA ─────────────────────────────────────────────
 
 function getNextCategoryAndTopic(posts) {
@@ -189,24 +154,40 @@ function getNextCategoryAndTopic(posts) {
 // ── GENERACIÓN DE TEXTO CON GEMINI (GRATIS) ───────────────────────────────────
 
 async function generatePostContent(category, meta, topic) {
-  const prompt = `Sos el equipo de contenidos de Raven3, una agencia de desarrollo web y marketing digital argentina. Escribís posts educativos para el blog de la agencia.
+  const prompt = `Sos el equipo de contenidos de Raven3, una agencia de desarrollo web y marketing digital argentina. Escribís posts educativos de alta calidad para el blog de la agencia.
 
-Tu tarea es generar un post de blog completo sobre: "${topic}"
+Tu tarea es generar un artículo de blog completo, profundo y valioso sobre: "${topic}"
 Categoría: ${meta.label}
 
-REQUISITOS DEL POST:
-- Título atractivo, con keyword principal incluida, orientado a búsquedas
-- Bajada/excerpt de 1-2 oraciones que resuma el valor del artículo
-- Entre 5 y 8 tags relevantes con palabras clave de búsqueda
-- Contenido educativo, práctico, con ejemplos concretos
+OBJETIVO DEL ARTÍCULO:
+Este artículo debe ser el mejor recurso en español sobre el tema. Alguien que lo lea tiene que sentir que aprendió algo concreto y útil que puede aplicar hoy. Debe ser el tipo de contenido que la gente guarda, comparte y vuelve a leer.
+
+REQUISITOS DE CONTENIDO:
+- Título atractivo con la keyword principal, orientado a búsquedas en Google
+- Bajada/excerpt de 2-3 oraciones que enganche al lector y resuma el valor
+- Entre 8 y 12 tags relevantes con keywords de búsqueda (long-tail incluidas)
+- Longitud: 2000 a 3000 palabras de contenido visible (artículo extenso y completo)
 - Tono profesional pero cercano, en español rioplatense (Argentina)
-- Longitud: 900 a 1400 palabras de contenido visible
-- Estructura clara con h2 y h3
-- Debe incluir listas, ejemplos y conclusiones accionables
-- Orientado a dueños de pymes, emprendedores y profesionales argentinos
+- Orientado a dueños de pymes, emprendedores, profesionales y equipos de marketing argentinos
+
+REQUISITOS DE CALIDAD:
+- Incluir datos concretos, estadísticas o referencias cuando sea relevante (ej: "según Google, el 53% de los usuarios abandona un sitio que tarda más de 3 segundos")
+- Ejemplos reales y prácticos que el lector pueda aplicar directamente
+- Comparativas o tablas cuando corresponda (ej: herramienta A vs B)
+- Al menos una sección de "errores comunes" o "mitos" sobre el tema
+- Conclusión accionable con pasos concretos que el lector puede seguir
+- Incluir keywords secundarias y variaciones semánticas de forma natural a lo largo del texto
+- Cada sección debe aportar valor real, no ser relleno
+
+ESTRUCTURA REQUERIDA:
+- Introducción que enganche y plantee el problema/oportunidad
+- Secciones temáticas claras con h2 y h3
+- Listas, comparativas y ejemplos intercalados
+- Sección de errores comunes o mitos
+- Conclusión con checklist o pasos a seguir
 
 FORMATO DEL CONTENIDO HTML:
-- Solo usar etiquetas: h2, h3, p, ul, li, ol, strong
+- Solo usar etiquetas: h2, h3, p, ul, li, ol, strong, em
 - IMPORTANTE: todos los atributos HTML deben ir con comillas SIMPLES (no dobles)
 - No incluir imágenes ni iframes
 - No incluir la etiqueta h1 (el título va aparte)
@@ -216,21 +197,21 @@ Respondé ÚNICAMENTE con un objeto JSON válido con esta estructura exacta:
 {
   "title": "Título del post",
   "excerpt": "Bajada corta del post",
-  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"],
-  "readTime": 8,
+  "tags": ["tag1", "tag2", "tag3", "tag4", "tag5", "tag6", "tag7", "tag8"],
+  "readTime": 12,
   "content": "<h2>...</h2><p>...</p>"
 }
 
 El campo "readTime" es un número entero de minutos estimados de lectura.
 El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
 
-  console.log(`🤖 Llamando a Gemini 1.5 Flash 8B para generar post sobre: "${topic}"`);
+  console.log(`🤖 Llamando a Gemini 2.0 Flash para generar post sobre: "${topic}"`);
 
   const model = genAI.getGenerativeModel({
-    model: 'gemini-1.5-flash-8b',
+    model: 'gemini-2.0-flash',
     generationConfig: {
       responseMimeType: 'application/json',
-      maxOutputTokens: 4096,
+      maxOutputTokens: 8192,
       temperature: 0.7
     }
   });
@@ -259,45 +240,6 @@ El campo "content" es HTML válido en una sola línea sin saltos de línea.`;
   }
 
   return parsed;
-}
-
-// ── GENERACIÓN DE IMAGEN CON POLLINATIONS.AI (GRATIS, SIN API KEY) ────────────
-
-const CAT_VISUAL = {
-  desarrollo:  'software code architecture, programming, dark blue tech aesthetic',
-  seo:         'search engine data visualization, analytics, digital signals',
-  ecommerce:   'online shopping, product conversion, digital commerce',
-  ux:          'user interface design, interaction patterns, digital experience',
-  performance: 'web performance speed, optimization, loading metrics'
-};
-
-async function generatePostImage(topic, category, slug) {
-  const visual = CAT_VISUAL[category] || 'digital technology abstract';
-
-  const imagePrompt = [
-    `Editorial blog thumbnail illustration.`,
-    `Topic: ${topic}. Theme: ${visual}.`,
-    `Style: dark navy background, vibrant cyan teal glowing accents,`,
-    `abstract geometric grid pattern, cinematic lighting, minimalist tech aesthetic.`,
-    `High contrast, professional, no text, no people, no faces.`
-  ].join(' ');
-
-  // Pollinations.ai: gratis, sin autenticación, genera la imagen al hacer GET
-  const seed = getWeekNumber(new Date()) * 1000 + Math.floor(Math.random() * 999);
-  const pollinationsUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(imagePrompt)}?width=1792&height=1024&seed=${seed}&nologo=true&enhance=true`;
-
-  console.log(`🎨 Generando imagen con Pollinations.ai (gratis)...`);
-
-  const imagesDir = path.join(process.cwd(), 'blog/data/images');
-  if (!fs.existsSync(imagesDir)) fs.mkdirSync(imagesDir, { recursive: true });
-
-  const imagePath = path.join(imagesDir, `${slug}.jpg`);
-
-  // Pollinations puede tardar hasta 30-60s en generar la imagen
-  await downloadUrl(pollinationsUrl, imagePath, 90000);
-
-  console.log(`✅ Imagen guardada: blog/data/images/${slug}.jpg`);
-  return `/blog/data/images/${slug}.jpg`;
 }
 
 // ── MAIN ──────────────────────────────────────────────────────────────────────
@@ -329,16 +271,7 @@ async function main() {
   }
   slug = slugCandidate;
 
-  // 2. Generar imagen con Pollinations.ai (gratis)
-  let imageUrl = null;
-  try {
-    imageUrl = await generatePostImage(topic, category, slug);
-  } catch (imgErr) {
-    console.warn(`⚠️  No se pudo generar la imagen: ${imgErr.message}`);
-    console.warn(`   El post se guardará con el thumbnail CSS de fallback.`);
-  }
-
-  // 3. Construir el post
+  // 2. Construir el post
   const today = new Date();
   const newId = Math.max(...posts.map(p => p.id)) + 1;
 
@@ -354,7 +287,6 @@ async function main() {
     readTime:      generated.readTime,
     featured:      false,
     thumbClass:    meta.thumbClass,
-    ...(imageUrl && { imageUrl }),
     author: {
       name:     'Equipo Raven3',
       role:     meta.role,
@@ -369,7 +301,7 @@ async function main() {
   console.log(`   Slug:    ${newPost.slug}`);
   console.log(`   Título:  ${newPost.title}`);
   console.log(`   Lectura: ${newPost.readTime} min`);
-  console.log(`   Imagen:  ${imageUrl || '(CSS fallback)'}\n`);
+  console.log(`   Imagen:  (CSS fallback)\n`);
 
   posts.push(newPost);
 
