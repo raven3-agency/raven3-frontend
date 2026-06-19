@@ -743,15 +743,15 @@ body::after {
   inset: 0;
   background:
     linear-gradient(to bottom,
-      rgba(12, 10, 8, 0.72) 0%,
-      rgba(12, 10, 8, 0.45) 35%,
-      rgba(12, 10, 8, 0.60) 70%,
-      rgba(12, 10, 8, 0.88) 100%
+      rgba(12, 10, 8, 0.68) 0%,
+      rgba(12, 10, 8, 0.28) 38%,
+      rgba(12, 10, 8, 0.52) 68%,
+      rgba(12, 10, 8, 0.92) 100%
     ),
     radial-gradient(ellipse at 50% 50%,
-      transparent 20%,
-      rgba(12, 10, 8, 0.55) 70%,
-      rgba(12, 10, 8, 0.88) 100%
+      transparent 28%,
+      rgba(12, 10, 8, 0.42) 65%,
+      rgba(12, 10, 8, 0.80) 100%
     );
 }
 
@@ -1050,7 +1050,7 @@ body::after {
   position: absolute;
   inset: 0;
   background-size: cover;
-  background-position: center;
+  background-position: center 25%;
   background-repeat: no-repeat;
   transition: transform 0.6s var(--ease-out);
 }
@@ -1307,6 +1307,7 @@ body::after {
 
 .menu-tab.active {
   color: var(--cream);
+  background: rgba(240, 232, 213, 0.04);
 }
 
 .menu-tab.active::after {
@@ -1602,7 +1603,7 @@ body::after {
   padding: var(--space-xxl) 0;
   background-color: var(--night);
   background-image:
-    linear-gradient(to right, rgba(12,10,8,0.98) 0%, rgba(12,10,8,0.82) 55%, rgba(12,10,8,0.40) 100%),
+    linear-gradient(to right, rgba(12,10,8,0.95) 0%, rgba(12,10,8,0.70) 40%, rgba(12,10,8,0.14) 100%),
     url('https://images.pexels.com/photos/2403392/pexels-photo-2403392.jpeg?auto=compress&cs=tinysrgb&w=1600&h=900&dpr=1');
   background-size: cover;
   background-position: center right;
@@ -1720,8 +1721,18 @@ body::after {
 .section-location {
   padding: var(--space-xl) 0;
   background: var(--charcoal);
-  border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.section-location::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-brass), transparent);
 }
 
 /* Two-column sede cards grid */
@@ -1757,7 +1768,7 @@ body::after {
   width: 100%;
   height: 100%;
   display: block;
-  filter: grayscale(20%) contrast(1.05) brightness(0.9);
+  filter: grayscale(100%) contrast(1.10) brightness(0.62) sepia(8%);
 }
 
 /* Info panel below the map */
@@ -1907,7 +1918,17 @@ body::after {
 .section-reviews {
   padding: var(--space-xl) 0;
   background: var(--night);
-  border-top: 1px solid var(--border-soft);
+  position: relative;
+}
+
+.section-reviews::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border-brass), transparent);
 }
 
 .reviews-swiper {
@@ -1992,8 +2013,8 @@ body::after {
 
 /* Stars */
 .review-stars span {
-  font-size: 15px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: 2px;
   color: #FBBC05;
 }
 
@@ -2026,39 +2047,21 @@ body::after {
   opacity: 1;
   width: 6px;
   height: 6px;
-  transition: background var(--t-base), transform var(--t-base);
+  border-radius: 3px;
+  transition: background var(--t-base), width var(--t-base) var(--ease-out), border-radius var(--t-base);
 }
 
 .reviews-pagination .swiper-pagination-bullet-active {
   background: var(--brass);
-  transform: scale(1.4);
-}
-
-/* También quitar el responsive grid que ya no aplica */
-@media (max-width: 1024px) {
-  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-  .reviews-grid { grid-template-columns: 1fr; }
+  width: 24px;
+  border-radius: 3px;
+  transform: none;
 }
 
 .reviews-cta {
   display: flex;
   justify-content: center;
   margin-top: var(--space-md);
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-  .reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .reviews-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* ─────────────────────────────────────────
@@ -2198,14 +2201,19 @@ body::after {
   line-height: 1.7;
 }
 
-/* Instagram grid */
+/* Instagram grid — bento layout */
 .instagram-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4px;
   margin-bottom: var(--space-lg);
   max-width: 100%;
   overflow: hidden;
+}
+
+.insta-tile-1 {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
 }
 
 .insta-tile {
@@ -2637,6 +2645,12 @@ body::after {
 
   .instagram-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+
+  .insta-tile-1 {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .menu-tabs {

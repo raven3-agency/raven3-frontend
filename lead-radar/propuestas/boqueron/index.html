@@ -90,6 +90,11 @@
   }
   </script>
 
+  <!-- Hero image preload (CSS background — browser won't discover it during parse) -->
+  <link rel="preload" as="image"
+        href="https://images.pexels.com/photos/18323244/pexels-photo-18323244.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+        fetchpriority="high">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -103,6 +108,8 @@
 </head>
 
 <body class="is-loading">
+
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
   <!-- ═══════════════════════════════════════════
        PRELOADER
@@ -902,7 +909,7 @@
     <section id="ubicacion" class="section-location" aria-label="Nuestras sedes">
       <div class="container">
 
-        <div class="section-header section-header--centered">
+        <div class="section-header section-header--centered" data-reveal>
           <span class="section-label">Dónde estamos</span>
           <h2 class="section-title">Dos sedes,<br>una cocina.</h2>
         </div>
@@ -1349,6 +1356,7 @@
         </div>
 
         <nav class="footer-nav" aria-label="Navegación de pie de página">
+          <h3 class="footer-col-title">Menú</h3>
           <ul role="list">
             <li><a href="#destacados">Platos</a></li>
             <li><a href="#menu">Menú</a></li>
