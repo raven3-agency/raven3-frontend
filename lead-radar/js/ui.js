@@ -63,6 +63,25 @@ const UI = (() => {
   const ratingHtml = (rating, count) =>
     `<div class="rating"><span class="rating-val">★ ${rating}</span><span class="rating-count">(${count})</span></div>`;
 
+  const _igSvg = `<svg viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>`;
+  const _globeSvg = `<svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.8"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="1.8"/></svg>`;
+  const _waSvg = `<svg viewBox="0 0 24 24" fill="none"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+  const instagramIndicator = (l) => {
+    if (l.instagram) return `<div class="social-icon si-ig" title="${l.instagram}">${_igSvg}</div>`;
+    return `<div class="social-icon si-off" title="Sin Instagram">${_igSvg}</div>`;
+  };
+
+  const whatsappIndicator = (l) => {
+    if (l.whatsapp) return `<div class="social-icon si-wa" title="${l.whatsapp}">${_waSvg}</div>`;
+    return `<div class="social-icon si-off" title="Sin WhatsApp">${_waSvg}</div>`;
+  };
+
+  const domainIndicator = (l) => {
+    if (l.website) return `<div class="social-icon si-web" title="${l.website}">${_globeSvg}</div>`;
+    return `<div class="social-icon si-off" title="Sin dominio">${_globeSvg}</div>`;
+  };
+
   const formatDate = (iso) => {
     if (!iso) return '—';
     const d = new Date(iso);
@@ -325,6 +344,9 @@ const UI = (() => {
               <th>Zona</th>
               <th>Rating</th>
               <th>Web</th>
+              <th class="col-social" title="Instagram">${_igSvg}</th>
+              <th class="col-social" title="WhatsApp">${_waSvg}</th>
+              <th class="col-social" title="Dominio">${_globeSvg}</th>
               <th>Score</th>
               <th>Prioridad</th>
               <th>Estado</th>
@@ -351,6 +373,9 @@ const UI = (() => {
       <td>${l.zone}</td>
       <td>${ratingHtml(l.rating, l.reviewsCount)}</td>
       <td>${webQualityBadge(l)}</td>
+      <td class="col-social">${instagramIndicator(l)}</td>
+      <td class="col-social">${whatsappIndicator(l)}</td>
+      <td class="col-social">${domainIndicator(l)}</td>
       <td>${scoreBar(l.opportunityScore)}</td>
       <td>${priorityBadge(l.priority)}</td>
       <td>${statusBadge(l.status)}</td>

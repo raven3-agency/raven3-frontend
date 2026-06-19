@@ -1032,6 +1032,23 @@ img { max-width: 100%; display: block; }
 .td-name { font-weight: 500; color: var(--text); }
 .td-category { color: var(--text-3); font-size: 12px; }
 
+.col-social { width: 44px; text-align: center; padding-left: 6px !important; padding-right: 6px !important; }
+.col-social svg { width: 14px; height: 14px; display: block; }
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 7px;
+  cursor: default;
+}
+.social-icon svg { width: 15px; height: 15px; }
+.si-ig  { color: #E1306C; background: rgba(225,48,108,0.12); }
+.si-wa  { color: #25D366; background: rgba(37,211,102,0.1); }
+.si-web { color: var(--info); background: var(--info-dim); }
+.si-off { color: var(--text-4); opacity: 0.3; }
+
 .actions-cell { display: flex; gap: 4px; align-items: center; }
 .table-action-btn {
   display: flex;
