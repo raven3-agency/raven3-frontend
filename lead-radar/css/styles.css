@@ -748,6 +748,13 @@ img { max-width: 100%; display: block; }
 
 /* ─── SEARCH SECTION ──────────────────────────────── */
 .search-card { margin-bottom: 24px; }
+.search-name-group { grid-column: 1 / -1; }
+.input-with-icon { position: relative; }
+.input-with-icon .input-icon {
+  position: absolute; left: 12px; top: 50%; transform: translateY(-50%);
+  width: 14px; height: 14px; color: var(--text-3); pointer-events: none;
+}
+.input-with-icon .form-input { padding-left: 34px; }
 .search-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));

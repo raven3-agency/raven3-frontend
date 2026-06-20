@@ -139,14 +139,15 @@ const App = (() => {
   };
 
   const runSearch = async () => {
-    const category = document.getElementById('searchCategory').value;
-    const zone     = document.getElementById('searchZone').value.trim();
-    const radius   = parseInt(document.getElementById('searchRadius').value);
-    const limit    = parseInt(document.getElementById('searchLimit').value);
-    const filter   = document.querySelector('input[name="searchFilter"]:checked')?.value || 'all';
+    const category     = document.getElementById('searchCategory').value;
+    const zone         = document.getElementById('searchZone').value.trim();
+    const businessName = document.getElementById('searchBusinessName').value.trim();
+    const radius       = parseInt(document.getElementById('searchRadius').value);
+    const limit        = parseInt(document.getElementById('searchLimit').value);
+    const filter       = document.querySelector('input[name="searchFilter"]:checked')?.value || 'all';
 
-    if (!category) { UI.toast('Seleccioná un rubro primero', 'warning'); return; }
-    if (!zone)     { UI.toast('Ingresá una zona o ciudad', 'warning'); return; }
+    if (!businessName && !category) { UI.toast('Ingresá un nombre de negocio o seleccioná un rubro', 'warning'); return; }
+    if (!businessName && !zone)     { UI.toast('Ingresá una zona o ciudad', 'warning'); return; }
 
     UI.renderSearchLoading();
 
@@ -155,10 +156,14 @@ const App = (() => {
 
     if (useRealApi) {
       try {
+        const body = { radius: radius * 1000, limit };
+        if (category)     body.category     = category;
+        if (zone)         body.zone         = zone;
+        if (businessName) body.businessName = businessName;
         const res = await fetch(settings.backendUrl, {
           method:  'POST',
           headers: { 'Content-Type': 'application/json' },
-          body:    JSON.stringify({ category, zone, radius: radius * 1000, limit }),
+          body:    JSON.stringify(body),
         });
         if (!res.ok) {
           const err = await res.json().catch(() => ({ error: `HTTP ${res.status}` }));
@@ -166,6 +171,10 @@ const App = (() => {
         }
         const data = await res.json();
         let results = (data.leads || []).map(l => Scoring.enrich(l));
+        if (businessName) {
+          const q = businessName.toLowerCase();
+          results = results.filter(l => l.businessName.toLowerCase().includes(q));
+        }
         if (filter !== 'all') {
           results = results.filter(l => {
             if (filter === 'no_website')    return !l.hasWebsite;
@@ -187,7 +196,8 @@ const App = (() => {
 
     const existingIds = new Set(Storage.getLeads().map(l => l.id));
     UI.renderSearchResults(searchResults, existingIds);
-    Storage.addActivity({ msg: `Búsqueda: ${category} en ${zone} → ${searchResults.length} resultados`, color: '' });
+    const searchDesc = businessName ? `"${businessName}"` : `${category} en ${zone}`;
+    Storage.addActivity({ msg: `Búsqueda: ${searchDesc} → ${searchResults.length} resultados`, color: '' });
   };
 
   const addLeadFromSearch = (id) => {
