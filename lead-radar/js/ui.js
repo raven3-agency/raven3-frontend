@@ -1328,10 +1328,13 @@ const UI = (() => {
       return;
     }
 
-    const sorted = [...igLeads].sort((a, b) => {
-      const p = { respondio: 0, contactado: 1, propuesta_enviada: 2, investigar: 3, nuevo: 4, sin_web: 5, web_mejorable: 6, ganado: 10, perdido: 11 };
-      return (p[a.status] ?? 5) - (p[b.status] ?? 5);
-    });
+    const CONTACTED = ['contactado','respondio','propuesta_enviada','ganado','perdido'];
+    const sorted = [...igLeads]
+      .filter(l => CONTACTED.includes(l.status))
+      .sort((a, b) => {
+        const p = { respondio: 0, contactado: 1, propuesta_enviada: 2, ganado: 10, perdido: 11 };
+        return (p[a.status] ?? 5) - (p[b.status] ?? 5);
+      });
 
     el.innerHTML = `
       <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:20px">
@@ -1366,6 +1369,16 @@ const UI = (() => {
         </a>
       </div>
 
+      ${sorted.length === 0 ? `
+        <div class="empty-state" style="margin-top:0">
+          <div class="empty-icon">
+            <svg viewBox="0 0 24 24" fill="none" width="24" height="24" style="opacity:.5">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="empty-state-title" style="font-family:'Syne',sans-serif;font-weight:700">Sin contactos por DM todavía</div>
+          <div style="font-size:13px;color:var(--text-3)">Las cards aparecen cuando marcás un lead como <strong>Contactado</strong> o más avanzado</div>
+        </div>` : `
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px">
         ${sorted.map(lead => {
           const handle      = lead.instagram.replace(/^@/, '').trim();
@@ -1404,7 +1417,8 @@ const UI = (() => {
               </div>
             </div>`;
         }).join('')}
-      </div>`;
+      </div>`}
+    `;
   };
 
   /* ────────────────────────────────────────────────
