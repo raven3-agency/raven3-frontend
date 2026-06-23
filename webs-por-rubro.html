@@ -152,9 +152,29 @@
         line-height: 1.7;
       }
 
+      @media (max-width: 768px) {
+        .rubros-hero { padding: 120px 0 60px; }
+        .rubros-hero h1 { font-size: clamp(1.8rem, 6vw, 2.6rem); }
+        .rubro-card { padding: 28px 24px; }
+        .rubros-cta { padding: 48px 0 72px; }
+        .rubros-grid { padding-bottom: 60px; }
+      }
+
       @media (max-width: 600px) {
-        .rubros-hero { padding: 110px 0 60px; }
         .rubros-grid { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 480px) {
+        .rubros-hero { padding: 96px 0 48px; }
+        .rubros-hero h1 { font-size: clamp(1.6rem, 7vw, 2rem); }
+        .rubros-hero p { font-size: 0.95rem; }
+        .rubro-card { padding: 22px 18px; gap: 10px; }
+        .rubro-card h2 { font-size: 1.15rem; }
+        .rubro-card p { font-size: 0.88rem; }
+        .rubro-card__tags { gap: 4px; }
+        .rubros-cta { padding: 40px 0 56px; }
+        .rubros-cta h2 { font-size: 1.4rem; }
+        .rubros-grid { gap: 14px; padding-bottom: 40px; }
       }
     </style>
 
