@@ -1,0 +1,451 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Webs por rubro | Desarrollo web especializado | Raven3</title>
+
+    <meta name="description" content="Creamos webs premium especializadas por rubro: inmobiliarias, restaurantes, médicos, abogados, arquitectos, estética, gimnasios, hoteles, colegios, contadores, emprendedores y más." />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <link rel="canonical" href="https://raven3.com.ar/webs-por-rubro" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/webs-por-rubro" />
+    <meta property="og:title" content="Webs por rubro | Desarrollo web especializado | Raven3" />
+    <meta property="og:description" content="Creamos webs premium especializadas por rubro. Cada negocio tiene necesidades distintas. Nosotros las resolvemos." />
+    <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+    <meta property="og:site_name" content="Raven3" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Webs por rubro | Raven3" />
+    <meta name="twitter:description" content="Creamos webs premium especializadas por rubro. Cada negocio tiene necesidades distintas." />
+    <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+
+    <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/css/redesign.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/landing-nichos.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MF63Q3JMSL');</script>
+
+    <style>
+      body { background: #050A0E; }
+
+      .rubros-hero {
+        padding: 140px 0 80px;
+        text-align: center;
+      }
+      .rubros-hero h1 { margin-bottom: 20px; }
+      .rubros-hero p {
+        font-size: 1.1rem;
+        color: var(--ink-2);
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      .rubros-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 24px;
+        padding-bottom: 100px;
+      }
+
+      .rubro-card {
+        background: var(--panel, rgba(8, 12, 19, 0.72));
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: var(--radius-md);
+        padding: 36px 32px;
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        transition: border-color 0.3s, transform 0.3s;
+      }
+
+      .rubro-card:hover {
+        border-color: rgba(0, 229, 200, 0.25);
+        transform: translateY(-4px);
+      }
+
+      .rubro-card__eyebrow {
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.15em;
+        color: var(--r3);
+      }
+
+      .rubro-card h2 {
+        font-size: 1.3rem;
+        color: var(--ink);
+        margin: 0;
+        line-height: 1.3;
+      }
+
+      .rubro-card p {
+        font-size: 0.9rem;
+        color: var(--ink-2);
+        line-height: 1.6;
+        margin: 0;
+        flex: 1;
+      }
+
+      .rubro-card__arrow {
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+        color: var(--r3);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+        transition: gap 0.3s;
+      }
+
+      .rubro-card:hover .rubro-card__arrow { gap: 14px; }
+
+      .rubro-card__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 2px;
+      }
+
+      .rubro-card__tag {
+        font-family: var(--font-mono);
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--ink-2);
+        background: rgba(255,255,255,0.03);
+        border: 1px solid rgba(255,255,255,0.06);
+        border-radius: 6px;
+        padding: 3px 8px;
+      }
+
+      .rubros-cta {
+        text-align: center;
+        padding: 60px 0 100px;
+      }
+
+      .rubros-cta h2 {
+        font-size: clamp(1.4rem, 2.5vw, 2.2rem);
+        margin-bottom: 16px;
+      }
+
+      .rubros-cta p {
+        color: var(--ink-2);
+        max-width: 520px;
+        margin: 0 auto 32px;
+        line-height: 1.7;
+      }
+
+      @media (max-width: 600px) {
+        .rubros-hero { padding: 110px 0 60px; }
+        .rubros-grid { grid-template-columns: 1fr; }
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Webs por rubro — Raven3",
+      "description": "Índice de servicios de desarrollo web especializados por rubro",
+      "url": "https://raven3.com.ar/webs-por-rubro",
+      "provider": {
+        "@type": "ProfessionalService",
+        "name": "Raven3",
+        "url": "https://raven3.com.ar",
+        "telephone": "+5491134568899",
+        "address": { "@type": "PostalAddress", "addressLocality": "Buenos Aires", "addressCountry": "AR" }
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <header class="topbar" role="banner">
+      <div class="container topbar__inner">
+        <a href="https://raven3.com.ar/" class="logo" aria-label="Raven3 — Inicio">
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Navegación principal">
+          <div class="topbar__dropdown">
+            <a class="topbar__link topbar__link--parent" href="/servicios/desarrollo-web-a-medida.html">Servicios</a>
+            <div class="topbar__sub" aria-hidden="true">
+              <a class="topbar__sub-link" href="/servicios/desarrollo-web-a-medida.html"><span class="topbar__sub-num">01</span>Desarrollo web</a>
+              <a class="topbar__sub-link" href="/servicios/tiendas-online.html"><span class="topbar__sub-num">02</span>Tiendas online</a>
+              <a class="topbar__sub-link" href="/servicios/seo-tecnico.html"><span class="topbar__sub-num">03</span>SEO técnico</a>
+            </div>
+          </div>
+          <a class="topbar__link" href="/clientes.html">Clientes</a>
+          <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
+          <a class="topbar__link" href="/blog/">Blog</a>
+          <a class="topbar__link" href="/contacto.html">Contacto</a>
+        </nav>
+        <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+        <a class="btn primary cta-desktop" href="/contacto.html">Consultar ahora</a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="rubros-hero">
+        <div class="container">
+          <span class="ln-section__eyebrow">WEBS ESPECIALIZADAS POR RUBRO</span>
+          <h1>Cada negocio es distinto.<br>Tu web también debería serlo<span class="accent">.</span></h1>
+          <p>No hacemos webs genéricas. Diseñamos y desarrollamos soluciones digitales pensadas para las necesidades reales de cada rubro.</p>
+        </div>
+      </section>
+
+      <section class="ln-section">
+        <div class="container">
+          <div class="rubros-grid">
+
+            <a href="/webs-para-inmobiliarias.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">01 — Inmobiliarias</span>
+              <h2>Webs para inmobiliarias</h2>
+              <p>Propiedades destacadas, integración Tokko, fichas, formulario de tasación y diseño de marca propio. Tu vidriera institucional y comercial.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Propiedades</span>
+                <span class="rubro-card__tag">Tokko</span>
+                <span class="rubro-card__tag">Tasaciones</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-restaurantes.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">02 — Restaurantes</span>
+              <h2>Webs para restaurantes</h2>
+              <p>Menú digital, reservas, galería de ambiente, horarios y ubicación. Para que el cliente decida visitarte antes de sentarse a la mesa.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Menú</span>
+                <span class="rubro-card__tag">Reservas</span>
+                <span class="rubro-card__tag">Galería</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-oficios.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">03 — Oficios</span>
+              <h2>Webs para oficios</h2>
+              <p>Servicios, zonas de cobertura, galería de trabajos y reseñas. Para electricistas, plomeros, gasistas, carpinteros y más.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Servicios</span>
+                <span class="rubro-card__tag">Zonas</span>
+                <span class="rubro-card__tag">SEO local</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-psicologos.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">04 — Psicólogos</span>
+              <h2>Webs para psicólogos</h2>
+              <p>Enfoque terapéutico, modalidad, especialidades y turnos. Presencia digital cuidada, sobria y profesional.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Enfoque</span>
+                <span class="rubro-card__tag">Turnos</span>
+                <span class="rubro-card__tag">Online/presencial</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-abogados.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">05 — Abogados</span>
+              <h2>Webs para abogados</h2>
+              <p>Áreas de práctica, perfil profesional, trayectoria y consulta inicial. Diseño institucional que transmite seriedad.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Áreas</span>
+                <span class="rubro-card__tag">Trayectoria</span>
+                <span class="rubro-card__tag">Institucional</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-medicos.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">06 — Médicos</span>
+              <h2>Webs para médicos</h2>
+              <p>Especialidades, turnos, ubicación, obras sociales y contacto. Para que tus pacientes te encuentren y confíen antes de pedir turno.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Especialidades</span>
+                <span class="rubro-card__tag">Turnos</span>
+                <span class="rubro-card__tag">Obras sociales</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-estetica.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">07 — Estética y belleza</span>
+              <h2>Webs para estética</h2>
+              <p>Servicios, tratamientos, galería visual, turnos y antes/después. Peluquerías, barberías, spa y centros de estética.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Tratamientos</span>
+                <span class="rubro-card__tag">Galería</span>
+                <span class="rubro-card__tag">Turnos</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-arquitectos.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">08 — Arquitectos</span>
+              <h2>Webs para arquitectos</h2>
+              <p>Portfolio de proyectos, galería premium, servicios y proceso de trabajo. Diseño visual de alto impacto para estudios de arquitectura.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Portfolio</span>
+                <span class="rubro-card__tag">Proyectos</span>
+                <span class="rubro-card__tag">Galería</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-contadores.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">09 — Contadores</span>
+              <h2>Webs para contadores</h2>
+              <p>Servicios contables, monotributo, empresas, impuestos y consultas. Diseño institucional que transmite orden y confianza.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Servicios</span>
+                <span class="rubro-card__tag">Empresas</span>
+                <span class="rubro-card__tag">Consultas</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-colegios.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">10 — Colegios</span>
+              <h2>Webs para colegios</h2>
+              <p>Propuesta educativa, niveles, admisiones, actividades y comunicados. Web institucional para colegios e instituciones educativas.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Admisiones</span>
+                <span class="rubro-card__tag">Niveles</span>
+                <span class="rubro-card__tag">Comunicación</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-gimnasios.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">11 — Gimnasios</span>
+              <h2>Webs para gimnasios</h2>
+              <p>Planes, horarios, clases, entrenadores y formulario de inscripción. Para gimnasios, boxes y centros de entrenamiento.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Planes</span>
+                <span class="rubro-card__tag">Horarios</span>
+                <span class="rubro-card__tag">Inscripción</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-hoteles.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">12 — Hoteles</span>
+              <h2>Webs para hoteles</h2>
+              <p>Habitaciones, galería, reservas directas, servicios y experiencias. Para hoteles, cabañas y alojamientos que quieren menos comisión.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Reservas</span>
+                <span class="rubro-card__tag">Habitaciones</span>
+                <span class="rubro-card__tag">Galería</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/webs-para-emprendedores.html" class="rubro-card ln-riv">
+              <span class="rubro-card__eyebrow">13 — Emprendedores</span>
+              <h2>Webs para emprendedores</h2>
+              <p>Presentación de marca, productos, catálogo, testimonios y contacto. Para dejar de depender solo de Instagram.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">Marca</span>
+                <span class="rubro-card__tag">Productos</span>
+                <span class="rubro-card__tag">Catálogo</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+            <a href="/web-premium.html" class="rubro-card ln-riv" style="border-color: rgba(0, 229, 200, 0.12); background: linear-gradient(145deg, rgba(0, 229, 200, 0.03), transparent);">
+              <span class="rubro-card__eyebrow">★ Premium</span>
+              <h2>Web premium para negocios</h2>
+              <p>Diseño UX/UI premium, desarrollo a medida, copy estratégico y SEO técnico. Para marcas, empresas y profesionales que quieren verse a la altura.</p>
+              <div class="rubro-card__tags">
+                <span class="rubro-card__tag">UX/UI</span>
+                <span class="rubro-card__tag">SEO</span>
+                <span class="rubro-card__tag">Copy</span>
+                <span class="rubro-card__tag">A medida</span>
+              </div>
+              <span class="rubro-card__arrow">Ver más →</span>
+            </a>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <section class="rubros-cta">
+        <div class="container">
+          <h2>¿No encontrás tu rubro?</h2>
+          <p>No importa. Trabajamos con cualquier tipo de negocio que necesite una web profesional. Contanos qué hacés y te mostramos cómo podemos ayudarte.</p>
+          <div class="cta-row" style="justify-content: center;">
+            <a class="btn primary" href="/contacto.html">Consultar ahora</a>
+            <a class="btn" href="https://api.whatsapp.com/send?phone=5491134568899&text=Hola%20Raven3%2C%20quiero%20una%20web%20profesional%20para%20mi%20negocio." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer" aria-label="Pie de página">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <a href="https://raven3.com.ar/" style="display:inline-block;margin-bottom:16px">
+                <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+              </a>
+              <p>Agencia digital especializada en desarrollo web a medida, e-commerce, SEO técnico y arquitectura digital premium.</p>
+              <div class="cta-row">
+                <a class="btn primary" href="mailto:hola@raven3.com.ar">Escribinos</a>
+                <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener">WhatsApp</a>
+              </div>
+            </div>
+            <div class="footer-col">
+              <h4>Servicios</h4>
+              <ul class="footer-links">
+                <li><a href="/servicios/desarrollo-web-a-medida.html">Desarrollo web</a></li>
+                <li><a href="/servicios/tiendas-online.html">Tiendas online</a></li>
+                <li><a href="/servicios/seo-tecnico.html">SEO técnico</a></li>
+                <li><a href="/webs-por-rubro.html">Webs por rubro</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4>Contacto</h4>
+              <ul class="footer-contact-list">
+                <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+                <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener">+54 9 11 3456-8899</a></li>
+                <li>Buenos Aires, Argentina</li>
+              </ul>
+              <h4 style="margin-top:24px">Empresa</h4>
+              <ul class="footer-links">
+                <li><a href="/sobre-raven3.html">Sobre Raven3</a></li>
+                <li><a href="/clientes.html">Clientes</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom small">
+            <span><span id="year"></span> © Raven3. Todos los derechos reservados.</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+      <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+  <script src="assets/js/landing-nichos.js"></script>
+</body>
+</html>

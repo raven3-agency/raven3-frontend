@@ -48,9 +48,6 @@
   opacity: 0.6 !important;
 }
 
-@media (pointer: fine) {
-  body, a, button, [role="button"] { cursor: none; }
-}
 
 @media (pointer: coarse) {
   #cursor,
