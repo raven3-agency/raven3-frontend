@@ -6,6 +6,10 @@
   var dot    = document.getElementById('cursor-dot');
   if (!cursor || !dot) return;
 
+  var s = document.createElement('style');
+  s.textContent = '*, *::before, *::after { cursor: none !important; }';
+  document.head.appendChild(s);
+
   var cx = -100, cy = -100, lx = -100, ly = -100, shown = false, rafId;
 
   document.addEventListener('mousemove', function (e) {

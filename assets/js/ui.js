@@ -96,6 +96,10 @@ export function initCustomCursor() {
   const dot    = document.getElementById('cursor-dot');
   if (!cursor || !dot) return;
 
+  const s = document.createElement('style');
+  s.textContent = '*, *::before, *::after { cursor: none !important; }';
+  document.head.appendChild(s);
+
   let cx = -100, cy = -100;
   let lx = -100, ly = -100;
 
