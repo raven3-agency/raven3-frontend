@@ -73,34 +73,6 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  /* ── Custom Cursor ── */
-  const ring = document.getElementById('cursor');
-  const dot  = document.getElementById('cursor-dot');
-  if (ring && dot) {
-    let cx = -100, cy = -100, lx = -100, ly = -100;
-
-    document.addEventListener('mousemove', e => {
-      cx = e.clientX; cy = e.clientY;
-      dot.style.transform = `translate(${cx - 3}px,${cy - 3}px)`;
-      ring.style.opacity = '0.85';
-      dot.style.opacity  = '1';
-    }, { passive: true });
-
-    document.addEventListener('mouseleave', () => { ring.style.opacity = dot.style.opacity = '0'; });
-    document.addEventListener('mouseenter', () => { ring.style.opacity = '0.85'; dot.style.opacity = '1'; });
-
-    document.addEventListener('mouseover', e => {
-      ring.classList.toggle('hover', !!e.target.closest('a, button, [role="button"]'));
-    }, { passive: true });
-
-    (function tick() {
-      requestAnimationFrame(tick);
-      lx += (cx - lx) * 0.13;
-      ly += (cy - ly) * 0.13;
-      ring.style.transform = `translate(${lx - 20}px,${ly - 20}px)`;
-    })();
-  }
-
   /* ── Mobile nav toggle ── */
   const toggle = document.querySelector('.nav-toggle');
   const nav = document.getElementById('main-nav');
