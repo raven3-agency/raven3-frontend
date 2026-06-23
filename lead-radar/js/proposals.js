@@ -27,7 +27,9 @@ const Proposals = (() => {
     const nameSlug = _slug(businessName);
     return _list.find(p => {
       const ps = _slug(p.slug);
-      return nameSlug === ps || nameSlug.includes(ps) || ps.includes(nameSlug);
+      const ns = p.name ? _slug(p.name) : '';
+      return nameSlug === ps || nameSlug.includes(ps) || ps.includes(nameSlug)
+        || (ns && (nameSlug === ns || nameSlug.includes(ns) || ns.includes(nameSlug)));
     }) || null;
   };
 
