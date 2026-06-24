@@ -1,14 +1,4 @@
-# Block all search engines from indexing my private directory
-
 User-agent: *
 Disallow: /private-directory/
-
-# Allow CSS and JS files
-Allow: /*.css$
-Allow: /*.js$
-
-# Allow image files
-Allow: /*.jpg$
-Allow: /*.png$
 
 Sitemap: https://raven3.com.ar/sitemap.xml
