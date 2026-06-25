@@ -303,6 +303,31 @@
   </url>
 
   <!-- ══════════════════════════════════════════
+       LANDINGS SEO
+  ══════════════════════════════════════════ -->
+
+  <url>
+    <loc>https://raven3.com.ar/paginas-web-para-empresas</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/agencia-web-buenos-aires</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/diseno-web-premium</loc>
+    <lastmod>2026-06-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ══════════════════════════════════════════
        LEGALES
   ══════════════════════════════════════════ -->
 
