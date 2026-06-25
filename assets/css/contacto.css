@@ -671,6 +671,11 @@
         color: rgba(245, 251, 255, 0.32);
       }
 
+      .contact-form select option {
+        color: #000;
+        background: #fff;
+      }
+
       .contact-form input:focus,
       .contact-form select:focus,
       .contact-form textarea:focus {
