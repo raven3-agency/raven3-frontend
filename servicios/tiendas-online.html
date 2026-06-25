@@ -1094,6 +1094,56 @@
         }
       }
     </style>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MF63Q3JMSL');
+  </script>
+  <script>
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href*="#formulario"]');
+      if (link) {
+        gtag('event', 'contact_request', {
+          'method': 'presupuesto_click',
+          'page_path': window.location.pathname
+        });
+      }
+    });
+
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href^="mailto"]');
+      if (link) {
+        gtag('event', 'email_click', {
+          'method': 'email_directo',
+          'page_path': window.location.pathname
+        });
+      }
+    });
+
+    const whatsappBtn = document.getElementById('waTrigger');
+    if (whatsappBtn) {
+      whatsappBtn.addEventListener('click', function() {
+        gtag('event', 'whatsapp_click', {
+          'method': 'whatsapp',
+          'page_path': window.location.pathname
+        });
+      });
+    }
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function() {
+        gtag('event', 'form_submission', {
+          'method': 'formulario_contacto',
+          'page_path': window.location.pathname
+        });
+      });
+    }
+  </script>
   </head>
 
   <body>
