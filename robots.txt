@@ -1,4 +1,57 @@
 User-agent: *
 Disallow: /private-directory/
 
+# OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google AI Overviews / Gemini
+User-agent: Google-Extended
+Allow: /
+
+# Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Amazon Alexa / AI
+User-agent: Amazonbot
+Allow: /
+
+# Common Crawl (entrena la mayoría de los LLMs)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /
+
+# Bytedance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://raven3.com.ar/sitemap.xml
