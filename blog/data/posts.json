@@ -825,38 +825,95 @@
         "initials": "R3"
       },
       "content": "<h2>El contexto: un ecosistema que madura</h2><p>2026 encuentra al ecosistema de desarrollo web en un momento de maduración. Después de años de explosión de frameworks y herramientas, hay una tendencia visible hacia la simplificación: menos JavaScript innecesario, más plataforma nativa, más enfoque en la performance y la accesibilidad como requisitos, no como extras.</p><h2>IA como copiloto de desarrollo</h2><p>Las herramientas de asistencia con IA (GitHub Copilot, Cursor y sus competidores) pasaron de ser curiosidad a ser parte del flujo de trabajo de la mayoría de los desarrolladores profesionales. El cambio no es que la IA escriba el código: es que permite dedicar menos tiempo al código repetitivo y más tiempo al diseño de arquitecturas y a resolver problemas complejos.</p><h2>Web Components y el renacimiento de la plataforma nativa</h2><p>Los Web Components nativos del navegador están ganando tracción. Son compatibles con todos los browsers modernos, no requieren framework, tienen excelente performance y funcionan en cualquier proyecto. No van a reemplazar a React para aplicaciones complejas, pero para componentes de UI reutilizables en múltiples proyectos, son cada vez más la opción correcta.</p><h2>CSS nativo: cada vez menos necesitamos preprocesadores</h2><p>CSS moderno tiene características que antes requerían Sass: variables nativas, nesting, container queries y la función color-mix(). En 2026, empezar un proyecto nuevo con Sass es una decisión que vale la pena cuestionar.</p><h2>Edge computing y performance de servidor</h2><p>Los edge functions permiten ejecutar código del servidor en ubicaciones geográficamente cercanas al usuario, reduciendo dramáticamente la latencia. Para aplicaciones que necesitan personalización server-side, el edge es el estándar emergente.</p><h2>Accesibilidad como requisito legal y técnico</h2><p>En varios países existen regulaciones que obligan a cumplir estándares de accesibilidad web (WCAG 2.1 AA como mínimo). En Argentina el marco regulatorio evoluciona en la misma dirección. Construir con accesibilidad desde el principio es más barato que remediarlo después.</p>"
+    },
+    {
+      "id": 34,
+      "slug": "como-mejorar-seo-pagina-web",
+      "title": "Cómo mejorar el SEO de mi página web: guía completa",
+      "excerpt": "Mejorar el posicionamiento orgánico no es magia: es el resultado de capas que trabajan juntas. Esta guía cubre el SEO técnico, la investigación de keywords, la optimización on-page, el contenido y el link building con acciones concretas.",
+      "category": "seo",
+      "tags": ["SEO", "Posicionamiento Web", "Keywords", "SEO Técnico", "Link Building"],
+      "date": "2026-04-10",
+      "dateFormatted": "10 de abril, 2026",
+      "readTime": 12,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>El SEO no es magia: es estructura, contenido y señales</h2><p>Mejorar el SEO de una web es el resultado de múltiples capas que trabajan juntas: la estructura técnica del sitio, el contenido que responde a lo que busca tu audiencia, las señales de autoridad externas y la experiencia real del usuario. Esta guía cubre cada capa con acciones concretas que podés implementar sin importar la plataforma.</p><h2>1. SEO técnico: la base que muchos ignoran</h2><p>El SEO técnico permite que Google encuentre, rastree e indexe tu sitio correctamente. Sin una base técnica sólida, el resto pierde efectividad. Los puntos clave: <strong>velocidad de carga</strong> (Google usa los Core Web Vitals — LCP, CLS e INP — como señales de ranking; medí en PageSpeed Insights y apuntá a los umbrales verdes), <strong>HTTPS</strong> obligatorio, <strong>URLs simples y descriptivas</strong> sin parámetros innecesarios, <strong>canonical tags</strong> en todas las páginas para evitar contenido duplicado, <strong>sitemap.xml</strong> actualizado enviado a Search Console, y <strong>robots.txt</strong> que no bloquee páginas que deberían indexarse.</p><h2>2. Investigación de keywords: encontrá lo que busca tu audiencia</h2><p>Antes de escribir cualquier pieza de contenido, identificá qué palabras exactas usa tu audiencia. Las cuatro intenciones de búsqueda que necesitás entender: <strong>informacional</strong> (quieren aprender), <strong>navegacional</strong> (buscan una marca), <strong>transaccional</strong> (quieren comprar) e <strong>investigación comercial</strong> (comparan opciones antes de decidir). Cada intención requiere un tipo diferente de contenido y página de destino.</p><p>Herramientas gratuitas para empezar: Google Search Console (muestra las keywords que ya te traen tráfico), Google Keyword Planner y el autocompletado de Google para identificar variaciones con intención local.</p><h2>3. Optimización on-page: cada página cuenta</h2><p><strong>Title tag:</strong> el elemento on-page más importante. Incluí la keyword principal cerca del inicio, entre 50 y 60 caracteres, único por página. <strong>Meta description:</strong> no impacta el ranking directamente pero afecta el CTR; 150-160 caracteres con propuesta de valor clara. <strong>H1 único:</strong> uno solo por página con la keyword principal. <strong>Imágenes:</strong> nombres de archivo descriptivos, atributo alt relevante y formato WebP para menor peso. <strong>E-E-A-T:</strong> Google evalúa Experiencia, Expertise, Autoridad y Confianza — el contenido con experiencia real posiciona mejor que el contenido genérico.</p><h2>4. Contenido como motor de tráfico</h2><p>El blog es la herramienta de SEO más sostenible a largo plazo. Cada artículo que responde una pregunta real de tu audiencia es una nueva puerta de entrada orgánica. El contenido bien enfocado en intención de búsqueda supera al contenido largo pero vago.</p><p>Actualizá las páginas existentes regularmente: Google premia las páginas que se mantienen relevantes con información actualizada. Una página que sube de posición 12 a posición 4 genera más tráfico que publicar una página nueva desde cero.</p><h2>5. Link building: autoridad desde afuera</h2><p>Los backlinks son votos de confianza ante Google. Un link de un medio relevante de tu industria vale más que cientos de links de sitios de baja calidad. Estrategias sostenibles: publicá contenido que otros quieran citar (guías, estadísticas propias, casos de estudio), aparecé en medios de tu sector como referente, y trabajá los links internos entre tus propias páginas para distribuir autoridad estratégicamente.</p><h2>Plan de acción: por dónde empezar</h2><p>Si tenés que priorizar: verificá en Search Console que el sitio esté correctamente indexado, corregí los errores técnicos críticos, optimizá las páginas que ya tienen tráfico para mejorar su posición, y luego sumá contenido nuevo orientado a las keywords más relevantes para tu negocio. El SEO es una inversión a largo plazo con el mejor retorno del marketing digital cuando se sostiene en el tiempo.</p>"
+    },
+    {
+      "id": 35,
+      "slug": "geo-generative-engine-optimization-argentina",
+      "title": "GEO: qué es el Generative Engine Optimization y cómo aplicarlo en Argentina",
+      "excerpt": "El GEO es la disciplina que optimiza para aparecer en respuestas de ChatGPT, Google AI Overviews y Perplexity. Qué es, por qué importa para negocios en Argentina y las estrategias concretas para implementarlo.",
+      "category": "seo",
+      "tags": ["GEO", "Generative Engine Optimization", "ChatGPT", "AI Overviews", "SEO 2026"],
+      "date": "2026-05-15",
+      "dateFormatted": "15 de mayo, 2026",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "SEO · GEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>GEO vs SEO: la diferencia que define la visibilidad en 2026</h2><p>El SEO posiciona tu sitio en Google para que los usuarios hagan click. El GEO — Generative Engine Optimization — optimiza para que los motores de búsqueda con IA como ChatGPT, Perplexity, Google AI Overviews y Gemini mencionen y recomienden tu marca en sus respuestas directamente.</p><p>La diferencia es fundamental: en el SEO el usuario visita tu sitio desde un link. En el GEO la IA cita tu contenido en su respuesta, muchas veces sin que el usuario necesite hacer click en ningún lado. Aparecer en esa cita es la nueva disputa de visibilidad digital.</p><h2>Por qué el GEO importa en Argentina ahora</h2><p>ChatGPT supera los 200 millones de usuarios activos. Google AI Overviews aparece en millones de búsquedas en español. Perplexity crece entre usuarios que buscan respuestas verificadas en lugar de listas de links para explorar.</p><p>En Argentina, el uso de estas herramientas crece especialmente para búsquedas de comparación de servicios, recomendaciones de proveedores y preguntas del tipo 'cuál es la mejor agencia de desarrollo web en Buenos Aires'. Son exactamente las búsquedas donde tu empresa puede o no estar en la respuesta de la IA.</p><h2>Cómo las IAs eligen sus fuentes</h2><p>Los modelos como GPT-4, Claude o Gemini fueron entrenados con contenido de internet y acceden a búsquedas en tiempo real. Las señales que priorizan para citar una fuente: autoridad percibida del dominio, contenido claro y específico que responde preguntas directamente, datos concretos y verificables, presencia del sitio en múltiples fuentes confiables, y schema markup que identifica claramente la entidad y sus servicios.</p><h2>Estrategias de GEO que funcionan</h2><p><strong>Formato pregunta-respuesta:</strong> las FAQ con respuestas concisas tienen alta probabilidad de ser citadas en AI Overviews y por ChatGPT. Estructurá secciones de tu sitio respondiendo preguntas específicas de tu industria de forma directa. <strong>E-E-A-T reforzado:</strong> la Experiencia, Expertise, Autoridad y Confianza que pide Google también es lo que busca la IA. Autores identificables, casos reales, datos con fuentes y opiniones editoriales genuinas — la IA no cita contenido genérico. <strong>Datos propios:</strong> publicar estadísticas originales, casos de clientes o análisis del sector convierte tu sitio en una fuente que otros citan. <strong>Schema markup detallado:</strong> implementá JSON-LD con Organization, LocalBusiness, FAQPage y Service según corresponda. El structured data le dice explícitamente a los sistemas de IA qué hacés, dónde estás y por qué sos relevante.</p><h2>Robots.txt: permitir el acceso a los bots de IA</h2><p>Muchos sitios bloquean inadvertidamente a los crawlers de IA. Para aparecer en respuestas de ChatGPT (GPTBot), Google AI Overviews (Google-Extended), Claude (ClaudeBot, anthropic-ai) o Perplexity (PerplexityBot), tu robots.txt debe permitirlos explícitamente. También son relevantes CCBot (Common Crawl, entrena a la mayoría de los LLMs), Meta-ExternalAgent para Meta AI y Applebot-Extended para Apple Intelligence.</p><h2>GEO y SEO: una estrategia integrada</h2><p>El SEO técnico sólido es la base del GEO. El SEO puede rankear con contenido informativo bien optimizado. El GEO requiere contenido con profundidad real, perspectiva propia y datos verificables.</p><p>La estrategia para 2026: no reemplaces tu SEO, extendelo. Publicá contenido que responda preguntas específicas de tu industria, reforzá el E-E-A-T con casos reales, implementá schema detallado y asegurate de que los bots de IA puedan rastrear tu sitio sin restricciones. La presencia en IA no es el futuro: es el presente.</p>"
+    },
+    {
+      "id": 36,
+      "slug": "shopify-vs-woocommerce-vs-desarrollo-a-medida",
+      "title": "Shopify vs WooCommerce vs desarrollo a medida: cuál elegir para tu tienda online",
+      "excerpt": "Tres opciones muy diferentes en costo, flexibilidad y tiempo de implementación. Esta guía compara Shopify, WooCommerce y desarrollo a medida con costos reales en Argentina para que puedas elegir con información concreta.",
+      "category": "ecommerce",
+      "tags": ["Shopify", "WooCommerce", "E-commerce", "Tienda Online", "Desarrollo a Medida"],
+      "date": "2026-06-05",
+      "dateFormatted": "5 de junio, 2026",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>La decisión que impacta durante años</h2><p>Shopify, WooCommerce o desarrollo a medida: elegir la plataforma para una tienda online tiene consecuencias técnicas, comerciales y económicas de largo plazo. No hay una respuesta universal — la mejor opción depende del volumen de ventas proyectado, el presupuesto, el equipo técnico disponible y las necesidades específicas del negocio.</p><h2>Shopify: todo-en-uno para arrancar rápido</h2><p>Shopify es una plataforma SaaS de e-commerce. Pagás una suscripción mensual y obtenés hosting, seguridad, actualizaciones automáticas y un ecosistema amplio de apps. No necesitás preocuparte por la infraestructura técnica.</p><p><strong>Ventajas:</strong> lanzamiento rápido (días, no meses), alta confiabilidad técnica, excelente para escalar en volumen, amplio ecosistema de apps, sin mantenimiento técnico propio. <strong>Desventajas:</strong> costo recurrente en dólares (Basic USD 39/mes hasta Advanced USD 399/mes más apps), comisiones por transacción si no usás Shopify Payments (no disponible en Argentina), personalización limitada sin código. <strong>En Argentina:</strong> Mercado Pago requiere integración por app de terceros, la facturación AFIP necesita configuración adicional, y el costo dolarizado puede ser un factor relevante según el tipo de cambio.</p><p><strong>Mejor para:</strong> marcas con producto único y potencial de escala, negocios con proyección internacional, equipos sin desarrolladores que necesitan autonomía operativa inmediata.</p><h2>WooCommerce: flexibilidad total sobre WordPress</h2><p>WooCommerce es un plugin gratuito de e-commerce para WordPress. No tiene costo de plataforma, pero necesitás hosting, dominio, SSL y eventualmente plugins premium para funcionalidades avanzadas.</p><p><strong>Ventajas:</strong> costo inicial bajo, flexibilidad total con miles de plugins y temas, propiedad completa del código y los datos, excelente para SEO, amplia comunidad de desarrolladores en Argentina. <strong>Desventajas:</strong> requiere mantenimiento técnico continuo (actualizaciones, seguridad), la performance depende de la configuración del hosting, puede volverse lento y complejo con muchos plugins. <strong>En Argentina:</strong> la opción más popular localmente, con integraciones nativas para Mercado Pago, facturación AFIP y correo argentino.</p><p><strong>Mejor para:</strong> pymes que tienen o pueden contratar un desarrollador, negocios con catálogos complejos o muchas categorías, quienes priorizan el SEO y el contenido además de vender.</p><h2>Desarrollo a medida: control total con mayor inversión</h2><p>Un e-commerce a medida es una tienda construida desde cero específicamente para el negocio. Sin limitaciones de plataforma, sin plugins, sin compromisos de terceros.</p><p><strong>Ventajas:</strong> performance superior sin el overhead de una plataforma genérica, integración perfecta con sistemas existentes (ERP, CRM, logística propia), UX completamente customizada, sin costos de suscripción recurrentes de plataforma, propiedad total del código. <strong>Desventajas:</strong> inversión inicial significativamente mayor, tiempo de desarrollo más largo (meses), requiere equipo técnico para mantenimiento continuo.</p><p><strong>Mejor para:</strong> empresas con procesos logísticos o comerciales que las plataformas estándar no resuelven bien, negocios con alto volumen donde la performance impacta directamente en la conversión.</p><h2>Comparativa de costos (Argentina, 2026)</h2><p><strong>Shopify:</strong> USD 39-399/mes de plataforma + USD 50-150/mes en apps necesarias + tema USD 200-400 (único). Costo anual recurrente en dólares de USD 1.000 a 7.000+. <strong>WooCommerce:</strong> hosting USD 15-40/mes + plugins premium USD 300-600/año + desarrollo inicial USD 2.000-8.000. Bajo costo recurrente una vez lanzado. <strong>Desarrollo a medida:</strong> inversión inicial USD 8.000-30.000+ según alcance + servidor USD 30-200/mes. Sin costos de plataforma, pero con mantenimiento técnico necesario.</p><h2>Cómo decidir: tres preguntas clave</h2><p>¿Necesitás vender en menos de 4 semanas sin un desarrollador propio? → Shopify. ¿Querés flexibilidad total sin costos dolarizados recurrentes altos y podés contratar desarrollo? → WooCommerce. ¿Tu negocio tiene procesos específicos que las plataformas no resuelven, o buscás performance y UX como ventaja competitiva real? → Desarrollo a medida. No existe la plataforma perfecta: existe la que mejor se adapta a tu negocio hoy y tiene margen para escalar mañana.</p>"
     }
   ],
   "categories": [
     {
       "id": "all",
       "label": "Todos",
-      "count": 18
+      "count": 36
     },
     {
       "id": "performance",
       "label": "Performance",
-      "count": 3
+      "count": 5
     },
     {
       "id": "seo",
       "label": "SEO Técnico",
-      "count": 5
+      "count": 9
     },
     {
       "id": "ecommerce",
       "label": "E-Commerce",
-      "count": 4
+      "count": 8
     },
     {
       "id": "desarrollo",
       "label": "Desarrollo Web",
-      "count": 4
+      "count": 8
     },
     {
       "id": "ux",
       "label": "UX / CRO",
-      "count": 2
+      "count": 6
     }
   ]
 }
