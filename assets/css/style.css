@@ -681,7 +681,7 @@ section {
     rgba(55, 226, 213, 0.12),
     transparent 55%
   );
-  mask: linear-gradient(#000, transparent 72%);
+  mask-image: linear-gradient(#000, transparent 72%);
 }
 
 .reviews-top {
@@ -796,13 +796,11 @@ section {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
-  line-clamp: 4;
   overflow: hidden;
 }
 
 .quote.expanded .review-quote {
   -webkit-line-clamp: unset;
-  line-clamp: unset;
 }
 
 .quote .who {
