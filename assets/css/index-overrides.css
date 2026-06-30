@@ -394,7 +394,7 @@
         user-select: none;
       }
 
-      .svc-panel:focus-visible {
+      .svc-panel:has(.svc-aside:focus-visible) {
         border-color: rgba(0, 229, 200, 0.38);
         box-shadow: 0 0 0 2px rgba(0, 229, 200, 0.15);
       }
@@ -512,7 +512,7 @@
           #0e0808;
       }
 
-      /* ── Collapsed aside ── */
+      /* ── Collapsed aside (also the panel's clickable trigger button) ── */
       .svc-aside {
         position: absolute;
         inset: 0;
@@ -524,6 +524,14 @@
         padding: 0 0 22px;
         gap: 14px;
         transition: opacity 0.28s ease;
+        border: none;
+        background: transparent;
+        width: 100%;
+        cursor: pointer;
+        font: inherit;
+        color: inherit;
+        outline: none;
+        -webkit-tap-highlight-color: transparent;
       }
 
       .svc-panel.is-active .svc-aside {
@@ -1051,6 +1059,7 @@
       /* ────────────────────────────────────────────
          15. FOOTER
       ──────────────────────────────────────────── */
+      .footer-col h3,
       .footer-col h4 {
         font-family: var(--font-heading) !important;
         letter-spacing: 0.08em !important;

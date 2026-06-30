@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <title>
       Raven3 | Agencia de Desarrollo Web en Argentina
@@ -250,7 +250,7 @@
     <div id="scanner-line" aria-hidden="true"></div>
 
     <!-- WhatsApp CTA -->
-    <div class="wasap" aria-label="Contacto por WhatsApp">
+    <div class="wasap">
       <a
         href="https://api.whatsapp.com/send?l=es&text=Hola%20Raven3!%20Quiero%20consultarles%20por%20un%20presupuesto%20%5BPagina%20Principal%5D&phone=5491134568899"
         target="_blank"
@@ -360,7 +360,7 @@
             <a class="btn" href="#servicios">Ver qué hacemos</a>
           </div>
 
-          <div class="hero-trust" aria-label="Indicadores de confianza">
+          <div class="hero-trust" role="group" aria-label="Indicadores de confianza">
             <span class="trust-item">
               <span class="trust-dot" aria-hidden="true"></span>
               +60 proyectos entregados
@@ -831,15 +831,14 @@
           <div class="svc-flex" id="svc-accordion">
 
             <!-- S·01 Web a medida -->
-            <article class="svc-panel is-active" data-svc="01"
-                     tabindex="0" role="button" aria-expanded="true" aria-label="Web a medida">
+            <article class="svc-panel is-active" data-svc="01">
               <div class="svc-bg"></div>
-              <div class="svc-aside">
+              <button type="button" class="svc-aside" aria-expanded="true" aria-label="Web a medida">
                 <span class="svc-aside__num">S·01</span>
                 <div class="svc-aside__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                 </div>
-              </div>
+              </button>
               <div class="svc-body">
                 <div class="svc-body__inner">
                   <span class="svc-body__num">S·01</span>
@@ -854,15 +853,14 @@
             </article>
 
             <!-- S·02 Tiendas Online -->
-            <article class="svc-panel" data-svc="02"
-                     tabindex="0" role="button" aria-expanded="false" aria-label="Tiendas Online">
+            <article class="svc-panel" data-svc="02">
               <div class="svc-bg"></div>
-              <div class="svc-aside">
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Tiendas Online">
                 <span class="svc-aside__num">S·02</span>
                 <div class="svc-aside__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                 </div>
-              </div>
+              </button>
               <div class="svc-body">
                 <div class="svc-body__inner">
                   <span class="svc-body__num">S·02</span>
@@ -877,15 +875,14 @@
             </article>
 
             <!-- S·03 SEO Técnico -->
-            <article class="svc-panel" data-svc="03"
-                     tabindex="0" role="button" aria-expanded="false" aria-label="SEO Técnico">
+            <article class="svc-panel" data-svc="03">
               <div class="svc-bg"></div>
-              <div class="svc-aside">
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="SEO Técnico">
                 <span class="svc-aside__num">S·03</span>
                 <div class="svc-aside__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
                 </div>
-              </div>
+              </button>
               <div class="svc-body">
                 <div class="svc-body__inner">
                   <span class="svc-body__num">S·03</span>
@@ -900,15 +897,14 @@
             </article>
 
             <!-- S·04 Core Web Vitals -->
-            <article class="svc-panel" data-svc="04"
-                     tabindex="0" role="button" aria-expanded="false" aria-label="Core Web Vitals">
+            <article class="svc-panel" data-svc="04">
               <div class="svc-bg"></div>
-              <div class="svc-aside">
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Core Web Vitals">
                 <span class="svc-aside__num">S·04</span>
                 <div class="svc-aside__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                 </div>
-              </div>
+              </button>
               <div class="svc-body">
                 <div class="svc-body__inner">
                   <span class="svc-body__num">S·04</span>
@@ -923,15 +919,14 @@
             </article>
 
             <!-- S·05 UX/UI -->
-            <article class="svc-panel" data-svc="05"
-                     tabindex="0" role="button" aria-expanded="false" aria-label="UX/UI Orientado a Conversión">
+            <article class="svc-panel" data-svc="05">
               <div class="svc-bg"></div>
-              <div class="svc-aside">
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="UX/UI Orientado a Conversión">
                 <span class="svc-aside__num">S·05</span>
                 <div class="svc-aside__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                 </div>
-              </div>
+              </button>
               <div class="svc-body">
                 <div class="svc-body__inner">
                   <span class="svc-body__num">S·05</span>
@@ -946,15 +941,14 @@
             </article>
 
             <!-- S·06 Conexiones a medida -->
-            <article class="svc-panel" data-svc="06"
-                     tabindex="0" role="button" aria-expanded="false" aria-label="Conexiones a medida">
+            <article class="svc-panel" data-svc="06">
               <div class="svc-bg"></div>
-              <div class="svc-aside">
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Conexiones a medida">
                 <span class="svc-aside__num">S·06</span>
                 <div class="svc-aside__icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"></circle><circle cx="5" cy="19" r="3"></circle><circle cx="19" cy="19" r="3"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="12" x2="5" y2="16"></line><line x1="12" y1="12" x2="19" y2="16"></line></svg>
                 </div>
-              </div>
+              </button>
               <div class="svc-body">
                 <div class="svc-body__inner">
                   <span class="svc-body__num">S·06</span>
@@ -981,7 +975,7 @@
           </div>
           <div class="reviews-card">
             <div class="reviews-top">
-              <div class="reviews-score" aria-label="Calificación 5 de 5">
+              <div class="reviews-score" role="group" aria-label="Calificación 5 de 5">
                 <div class="stars" aria-hidden="true">★★★★★</div>
                 <div class="score-line">
                   <strong>5.0</strong>
@@ -1002,47 +996,47 @@
             </div>
 
             <div class="reviews-quotes reviews-quotes--swiper">
-              <div class="swiper reviews-swiper" aria-label="Reseñas destacadas">
+              <div class="swiper reviews-swiper" role="region" aria-label="Reseñas destacadas">
                 <div class="swiper-wrapper" role="list">
-                  <article class="quote swiper-slide" role="listitem">
+                  <div class="quote swiper-slide" role="listitem">
                     <p class="review-quote">
                       "Patricio @ Raven 3 is so smart you're guaranteed to get first a rate website. He is particularly good at helping you identify exactly what you need and then proceeds to provide it. You can "rest assured" he and Raven 3 will provide exceptional service."
                     </p>
                     <button class="review-toggle" type="button" aria-expanded="false">Leer más</button>
                     <span class="who muted">— Barry Dallas, Etiennedemontebello</span>
-                  </article>
+                  </div>
 
-                  <article class="quote swiper-slide" role="listitem">
+                  <div class="quote swiper-slide" role="listitem">
                     <p class="review-quote">
                       "Excelente trabajo. Desde el primer momento entendió lo que necesitábamos para la página de nuestra empresa. Fue muy profesional, cumplió con los tiempos y el resultado superó nuestras expectativas. Totalmente recomendable."
                     </p>
                     <button class="review-toggle" type="button" aria-expanded="false">Leer más</button>
                     <span class="who muted">— Noelia, CEA American</span>
-                  </article>
+                  </div>
 
-                  <article class="quote swiper-slide" role="listitem">
+                  <div class="quote swiper-slide" role="listitem">
                     <p class="review-quote">
                       "Excelente servicio!!! Me crearon una página web de primera línea!!! Muy atentos y a disposición siempre, mejorando y proponiendo mejoras continuamente. Altamente recomendables!"
                     </p>
                     <button class="review-toggle" type="button" aria-expanded="false">Leer más</button>
                     <span class="who muted">— Nicolas De Brasi, NDB Propiedades</span>
-                  </article>
+                  </div>
 
-                  <article class="quote swiper-slide" role="listitem">
+                  <div class="quote swiper-slide" role="listitem">
                     <p class="review-quote">
                       "Recomiendo a Raven3 por el excelente trabajo que hicieron en el diseño de nuestra página web. La página es moderna, atractiva y fácil de navegar. Su equipo es profesional, creativo y atento a los detalles. Estamos muy satisfechos con el resultado."
                     </p>
                     <button class="review-toggle" type="button" aria-expanded="false">Leer más</button>
                     <span class="who muted">— Julián Fernandez, Okos</span>
-                  </article>
+                  </div>
 
-                  <article class="quote swiper-slide" role="listitem">
+                  <div class="quote swiper-slide" role="listitem">
                     <p class="review-quote">
                       "Mi experiencia con Raven3 ha sido un éxito. Me desarrollaron un sitio web que superó ampliamente mis expectativas. Fui con una idea y me ofrecieron una solución mucho mejor. Recomiendo al 100%."
                     </p>
                     <button class="review-toggle" type="button" aria-expanded="false">Leer más</button>
                     <span class="who muted">— Agustina Menichelli, Didot</span>
-                  </article>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1390,7 +1384,7 @@
             </div>
 
             <div class="footer-col">
-              <h4>Servicios</h4>
+              <h3>Servicios</h3>
               <ul class="footer-links">
                 <li><a href="/servicios/desarrollo-web-a-medida.html">Desarrollo web</a></li>
                 <li><a href="/servicios/tiendas-online.html">Tiendas online</a></li>
@@ -1403,13 +1397,13 @@
             </div>
 
             <div class="footer-col">
-              <h4>Contacto</h4>
+              <h3>Contacto</h3>
               <ul class="footer-contact-list">
                 <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
                 <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">+54 9 11 3456-8899</a></li>
                 <li>Buenos Aires, Argentina</li>
               </ul>
-              <h4 style="margin-top: 24px">Empresa</h4>
+              <h3 style="margin-top: 24px">Empresa</h3>
               <ul class="footer-links">
                 <li><a href="/sobre-raven3.html">Sobre Raven3</a></li>
                 <li><a href="/clientes.html">Clientes</a></li>
@@ -1747,33 +1741,30 @@
             if (target.classList.contains('is-active')) return;
             panels.forEach(function (p) {
               p.classList.remove('is-active');
-              p.setAttribute('aria-expanded', 'false');
+              p.querySelector('.svc-aside').setAttribute('aria-expanded', 'false');
             });
             target.classList.add('is-active');
-            target.setAttribute('aria-expanded', 'true');
+            target.querySelector('.svc-aside').setAttribute('aria-expanded', 'true');
           }
 
           panels.forEach(function (panel) {
-            panel.addEventListener('click', function () {
+            var trigger = panel.querySelector('.svc-aside');
+            trigger.addEventListener('click', function () {
               activatePanel(panel);
             });
-            panel.addEventListener('keydown', function (e) {
-              if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                activatePanel(panel);
-              }
+            trigger.addEventListener('keydown', function (e) {
               /* Arrow key navigation between panels */
               if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
                 e.preventDefault();
                 var idx = Array.prototype.indexOf.call(panels, panel);
                 var next = panels[idx + 1];
-                if (next) { next.focus(); activatePanel(next); }
+                if (next) { next.querySelector('.svc-aside').focus(); activatePanel(next); }
               }
               if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
                 e.preventDefault();
                 var idx = Array.prototype.indexOf.call(panels, panel);
                 var prev = panels[idx - 1];
-                if (prev) { prev.focus(); activatePanel(prev); }
+                if (prev) { prev.querySelector('.svc-aside').focus(); activatePanel(prev); }
               }
             });
           });

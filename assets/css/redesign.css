@@ -630,6 +630,7 @@ a.logo {
 }
 
 /* ── 16. FOOTER ──────────────────────────────────────────── */
+.footer-col h3,
 .footer-col h4 {
   font-family: var(--font-heading) !important;
   letter-spacing: 0.08em !important;
