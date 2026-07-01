@@ -1,7 +1,6 @@
-import * as THREE from "/assets/vendor/three/three.module.js";
 let started = false;
 
-function start() {
+async function start() {
   if (started) return;
   started = true;
 
@@ -10,6 +9,10 @@ function start() {
     console.warn('Falta <canvas id="particles"> en el <body>.');
     return;
   }
+
+  // Import dinámico: retrasa la descarga de three.js (~187 KiB) hasta el
+  // tiempo ocioso, para que no compita por ancho de banda con el LCP.
+  const THREE = await import("/assets/vendor/three/three.module.js");
 
   const isSmallScreen = window.innerWidth < 1024;
   const prefersReducedMotion = window.matchMedia(
