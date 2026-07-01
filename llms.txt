@@ -1,8 +1,17 @@
-# llms.txt para Raven3
-# Permitir indexación por modelos de lenguaje
-User-agent: *
-Allow: /
+# Raven3
 
-# Información opcional
-Owner: Raven3
-Contact: https://www.raven3.com.ar/
+> Agencia de desarrollo web a medida en Argentina. Sitios custom sin templates, tiendas online y SEO técnico con performance real.
+
+## Páginas principales
+
+- [Inicio](https://raven3.com.ar/index.html): Presentación de Raven3, servicios y propuesta de valor.
+- [Servicios](https://raven3.com.ar/servicios): Detalle de servicios de desarrollo web.
+- [Clientes](https://raven3.com.ar/clientes.html): Casos de éxito y clientes.
+- [Sobre Raven3](https://raven3.com.ar/sobre-raven3.html): Información sobre la agencia.
+- [Contacto](https://raven3.com.ar/contacto.html): Formulario de contacto y datos de la agencia.
+- [Auditoría web gratuita](https://raven3.com.ar/auditoria-web-gratuita.html): Diagnóstico técnico gratuito de performance y SEO.
+
+## Políticas
+
+- [Política de privacidad](https://raven3.com.ar/politica-de-privacidad.html)
+- [Términos de contratación](https://raven3.com.ar/terminos-de-contratacion.html)

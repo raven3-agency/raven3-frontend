@@ -103,7 +103,7 @@
       ──────────────────────────────────────────── */
       #scanner-line {
         position: fixed;
-        top: -4px;
+        top: 0;
         left: 0;
         right: 0;
         height: 2px;
@@ -123,13 +123,14 @@
         pointer-events: none;
         animation: scan-sweep 14s linear infinite;
         opacity: 0;
+        will-change: transform;
       }
 
       @keyframes scan-sweep {
-        0%   { top: -4px;   opacity: 0;   }
-        4%   { opacity: 0.7; }
-        96%  { opacity: 0.3; }
-        100% { top: 100vh;  opacity: 0;   }
+        0%   { transform: translateY(-4px);  opacity: 0;   }
+        4%   {                               opacity: 0.7; }
+        96%  {                               opacity: 0.3; }
+        100% { transform: translateY(100vh); opacity: 0;   }
       }
 
       /* ────────────────────────────────────────────
