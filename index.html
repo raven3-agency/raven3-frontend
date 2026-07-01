@@ -50,17 +50,32 @@
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 
-    <!-- Fonts: Orbitron (display) + Rajdhani (headings) + Outfit (body) + Share Tech Mono (labels) -->
+    <!-- Fonts: Rajdhani (headings) + Outfit (body) + Share Tech Mono (labels) — swap is fine, small text -->
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      />
+    </noscript>
+
+    <!-- Orbitron (h1/display): display=optional — evita el salto de layout del LCP;
+         si no llega casi al instante, se queda con el fallback y no reflowea después. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=optional"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=optional"
       />
     </noscript>
 

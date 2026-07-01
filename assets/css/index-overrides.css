@@ -3,7 +3,7 @@
          0. CSS VARIABLES & DESIGN TOKENS
       ──────────────────────────────────────────── */
       :root {
-        --font-display: 'Orbitron', monospace;
+        --font-display: 'Orbitron', sans-serif;
         --font-heading: 'Rajdhani', sans-serif;
         --font-body: 'Outfit', sans-serif;
         --font-mono: 'Share Tech Mono', monospace;

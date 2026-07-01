@@ -150,8 +150,18 @@ function start() {
   render();
 }
 
+// Arranca en tiempo ocioso: es decorativo, no debe competir por el hilo
+// principal con el pintado del LCP (setup de WebGL + 3-9k vértices es pesado).
+function scheduleStart() {
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(start, { timeout: 2000 });
+  } else {
+    setTimeout(start, 200);
+  }
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", start);
+  document.addEventListener("DOMContentLoaded", scheduleStart);
 } else {
-  start();
+  scheduleStart();
 }
