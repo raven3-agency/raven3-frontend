@@ -52,9 +52,17 @@
 
     <!-- Fonts: Orbitron (display) + Rajdhani (headings) + Outfit (body) + Share Tech Mono (labels) -->
     <link
+      rel="preload"
+      as="style"
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
-      rel="stylesheet"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      />
+    </noscript>
 
     <!-- Signal Intelligence Redesign -->
     <link rel="stylesheet" href="assets/css/redesign.css" />
@@ -62,8 +70,13 @@
     <!-- Base CSS -->
     <link rel="preload" href="assets/css/style.css" as="style" />
     <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/swiper.css" />
-    <link rel="stylesheet" href="assets/css/animations.css" />
+
+    <!-- Non-critical CSS: swiper (below-the-fold carousel) + animations (cursor/keyframes) -->
+    <link rel="stylesheet" href="assets/css/swiper.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="assets/css/swiper.css" /></noscript>
+
+    <link rel="stylesheet" href="assets/css/animations.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="assets/css/animations.css" /></noscript>
 
     <!-- Three.js import map -->
     <script type="importmap">
