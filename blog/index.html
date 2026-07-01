@@ -381,6 +381,7 @@
     let filtered = [];
     let visibleCount = POSTS_PER_PAGE;
     let activeFilter = 'all';
+    let randomFeaturedPost = null;
 
     // ── FETCH ────────────────────────────────────────
     async function loadPosts() {
@@ -388,6 +389,7 @@
         const res = await fetch('./data/posts.json');
         const data = await res.json();
         allPosts = Array.isArray(data) ? data : data.posts;
+        randomFeaturedPost = allPosts[Math.floor(Math.random() * allPosts.length)] || null;
         buildFilters();
         renderAll();
       } catch(e) {
@@ -450,15 +452,18 @@
     }
 
     // Helper: returns the post being shown in the featured slot
+    // (a random post chosen once per page load, kept stable across filter changes)
     function getFeaturedPost() {
-      return filtered.find(p => p.featured) || filtered[0] || null;
+      return randomFeaturedPost && filtered.includes(randomFeaturedPost)
+        ? randomFeaturedPost
+        : filtered[0] || null;
     }
 
     // ── FEATURED ─────────────────────────────────────
     function renderFeatured() {
       const container = document.getElementById('featured-card-container');
       const section = document.getElementById('featured-section');
-      const post = filtered.find(p => p.featured) || filtered[0];
+      const post = getFeaturedPost();
 
       if (!post) { container.innerHTML = ''; section.style.display = 'none'; return; }
       section.style.display = '';
