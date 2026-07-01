@@ -1,4 +1,6 @@
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper.mjs";
+import Autoplay from "https://cdn.jsdelivr.net/npm/swiper@11/modules/autoplay.mjs";
+import A11y from "https://cdn.jsdelivr.net/npm/swiper@11/modules/a11y.mjs";
 
 function initReviewsSwiper() {
   const swiperEl = document.querySelector(".reviews-swiper");
@@ -6,6 +8,7 @@ function initReviewsSwiper() {
   if (!swiperEl || !scope) return;
 
   const swiper = new Swiper(swiperEl, {
+    modules: [Autoplay, A11y],
     loop: true,
     speed: 650,
     spaceBetween: 14,
