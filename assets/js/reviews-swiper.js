@@ -31,6 +31,10 @@ function initReviewsSwiper() {
     pagination: false,
     grabCursor: true,
     autoHeight: false,
+
+    // El wrapper usa role="list" en el HTML; Swiper por defecto pone
+    // role="group" en cada slide, lo que rompe la relación list/listitem.
+    a11y: { slideRole: "listitem" },
   });
 
   // ✅ Toggle Leer más / Leer menos

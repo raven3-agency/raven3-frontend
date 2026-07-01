@@ -386,7 +386,7 @@ a.logo {
   font-family: var(--font-mono);
   font-size: 9px;
   letter-spacing: 0.35em;
-  color: rgba(0, 229, 200, 0.4);
+  color: rgba(0, 229, 200, 0.6);
   white-space: nowrap;
 }
 
