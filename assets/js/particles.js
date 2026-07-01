@@ -11,6 +11,14 @@ function start() {
     return;
   }
 
+  const isSmallScreen = window.innerWidth < 1024;
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+
+  const count = isSmallScreen ? 3000 : 9000;
+  const maxPixelRatio = isSmallScreen ? 1 : 2;
+
   function makeCircleTexture(size = 64) {
     const c = document.createElement("canvas");
     c.width = c.height = size;
@@ -51,7 +59,6 @@ function start() {
   scene.fog = new THREE.FogExp2(0x37e2d5, 0.0008);
 
   const size = 2000;
-  const count = 20000;
   const vertices = new Float32Array(count * 3);
 
   for (let i = 0; i < count; i++) {
@@ -89,9 +96,9 @@ function start() {
   const renderer = new THREE.WebGLRenderer({
     canvas,
     alpha: true,
-    antialias: true,
+    antialias: !isSmallScreen,
   });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, maxPixelRatio));
   renderer.setSize(window.innerWidth, window.innerHeight);
 
   function onResize() {
@@ -108,7 +115,16 @@ function start() {
   }
 
   window.addEventListener("resize", onResize);
+
+  if (prefersReducedMotion) {
+    // Sin movimiento: un solo frame estático, sin loop de render ni listeners de mouse.
+    renderer.render(scene, camera);
+    return;
+  }
+
   document.addEventListener("pointermove", onPointerMove, { passive: true });
+
+  let rafId = null;
 
   function render() {
     camera.position.x += (mouseX * 2 - camera.position.x) * 0.02;
@@ -119,8 +135,17 @@ function start() {
     scene.rotation.y += 0.002;
 
     renderer.render(scene, camera);
-    requestAnimationFrame(render);
+    rafId = requestAnimationFrame(render);
   }
+
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      if (rafId !== null) cancelAnimationFrame(rafId);
+      rafId = null;
+    } else if (rafId === null) {
+      render();
+    }
+  });
 
   render();
 }
