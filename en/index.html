@@ -1,0 +1,1877 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>
+      Raven3 | Custom Web Development Agency
+    </title>
+
+    <meta
+      name="description"
+      content="Custom web development agency serving clients worldwide. No templates, real performance, technical SEO that works. 60+ projects delivered."
+    />
+
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="google-site-verification" content="21b8bd63e9ea78c5" />
+
+    <link rel="canonical" href="https://raven3.com.ar/en/" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/en/" />
+    <meta property="og:title" content="Raven3 | Custom Web Development Agency" />
+    <meta property="og:description" content="Digital agency specializing in custom web development, online stores and technical SEO built for real performance. 60+ projects delivered." />
+    <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Raven3" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://raven3.com.ar/en/" />
+    <meta name="twitter:title" content="Raven3 | Custom Web Development Agency" />
+    <meta name="twitter:description" content="Digital agency specializing in custom web development, online stores and technical SEO. No templates, ever." />
+    <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+
+    <!-- Fonts: Rajdhani (headings) + Outfit (body) + Share Tech Mono (labels) — swap is fine, small text -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      />
+    </noscript>
+
+    <!-- Orbitron (h1/display): display=optional — avoids LCP layout shift;
+         if it doesn't arrive almost instantly, it sticks with the fallback and never reflows. -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=optional"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=optional"
+      />
+    </noscript>
+
+    <!-- Signal Intelligence Redesign -->
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+
+    <!-- Base CSS -->
+    <link rel="preload" href="/assets/css/style.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+
+    <!-- Non-critical CSS: swiper (below-the-fold carousel) + animations (cursor/keyframes) -->
+    <link rel="stylesheet" href="/assets/css/swiper.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="/assets/css/swiper.css" /></noscript>
+
+    <link rel="stylesheet" href="/assets/css/animations.css" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="/assets/css/animations.css" /></noscript>
+
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-MF63Q3JMSL");
+    </script>
+
+    <script>
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href*="#formulario"]');
+        if (link) {
+          gtag('event', 'contact_request', {
+            'method': 'presupuesto_click',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href^="mailto"]');
+        if (link) {
+          gtag('event', 'email_click', {
+            'method': 'email_directo',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      const whatsappBtn = document.getElementById('waTrigger');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            'method': 'whatsapp',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+          gtag('event', 'form_submission', {
+            'method': 'formulario_contacto',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+    </script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+            "@id": "https://raven3.com.ar/#organization",
+            "name": "Raven3",
+            "url": "https://raven3.com.ar/en/",
+            "logo": "https://raven3.com.ar/assets/img/logo2.png",
+            "image": "https://raven3.com.ar/assets/img/og/raven3.png",
+            "description": "Digital agency specializing in custom web development, e-commerce, technical SEO and performance. No generic templates.",
+            "email": "hola@raven3.com.ar",
+            "telephone": "+54 9 11 3456-8899",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Buenos Aires",
+              "addressRegion": "CABA",
+              "addressCountry": "AR"
+            },
+            "areaServed": "Worldwide",
+            "sameAs": [
+              "https://www.instagram.com/agencia.raven3/",
+              "https://github.com/raven3-agency/"
+            ],
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5.0",
+              "reviewCount": "6",
+              "bestRating": "5"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Raven3 Digital Services",
+              "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Web Design" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "E-commerce Development" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical SEO" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Performance & Core Web Vitals" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conversion-Focused UX/UI" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "API Integrations" } }
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://raven3.com.ar/en/#website",
+            "url": "https://raven3.com.ar/en/",
+            "name": "Raven3",
+            "inLanguage": "en",
+            "publisher": { "@id": "https://raven3.com.ar/#organization" }
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does a custom website cost?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A professional custom website starts at USD 800–1,500 for institutional projects and scales based on features, integrations and complexity. At Raven3 we put together clear proposals with defined scope before any work begins."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does it take to build a website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A custom institutional site can be ready in 3 to 5 weeks. More complex projects like e-commerce or platforms with integrations take between 6 and 10 weeks, with a timeline defined from day one."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why choose custom development over WordPress or templates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A custom-built site loads faster, ranks better on Google, is more secure, and doesn't depend on plugins that break with every update. If you need real performance and solid technical SEO, custom development is the better investment."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What markets does Raven3 work with?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raven3 works with clients worldwide. Communication is 100% remote and seamless, regardless of time zone."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What's included in the free audit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A technical diagnostic of your current site: performance, Core Web Vitals, technical SEO, HTML structure and improvement opportunities. You get a report with real findings and concrete recommendations, no strings attached."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What happens after the site is finished?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Raven3 handles deployment, sets up analytics, monitors post-launch performance and offers ongoing technical support. Your site isn't abandoned once it ships."
+            }
+          }
+        ]
+      }
+    </script>
+    <link rel="stylesheet" href="/assets/css/index-overrides.css" />
+  </head>
+
+  <body>
+    <!-- Global Blueprint Grid Overlay -->
+    <div id="blueprint-grid" aria-hidden="true"></div>
+
+    <!-- Scanner Line -->
+    <div id="scanner-line" aria-hidden="true"></div>
+
+    <!-- WhatsApp CTA -->
+    <div class="wasap">
+      <a
+        href="https://api.whatsapp.com/send?l=en&text=Hi%20Raven3!%20I%27d%20like%20to%20ask%20about%20a%20quote%20%5BHome%20Page%5D&phone=5491134568899"
+        target="_blank"
+        rel="noopener"
+        aria-label="Send a WhatsApp message"
+      >
+      </a>
+    </div>
+
+    <!-- Custom cursor -->
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+
+    <!-- Scroll progress bar -->
+    <div class="progress" id="progress" aria-hidden="true"></div>
+
+    <!-- Three.js background canvas -->
+    <div id="background" aria-hidden="true">
+      <canvas id="particles"></canvas>
+    </div>
+
+    <main>
+      <!-- ── HEADER ─────────────────────────────────── -->
+      <header class="topbar">
+        <div class="container topbar__inner">
+          <a href="https://raven3.com.ar/en/" class="logo" aria-label="Raven3 — Home">
+            <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+          </a>
+
+          <nav class="topbar__nav" id="main-nav" aria-label="Main navigation">
+            <div class="topbar__dropdown">
+              <a class="topbar__link topbar__link--parent" href="#servicios">Services</a>
+              <div class="topbar__sub">
+                <a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Custom web development</a>
+                <a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online stores</a>
+                <a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a>
+              </div>
+            </div>
+            <a class="topbar__link" href="#proceso">Process</a>
+            <a class="topbar__link" href="/en/clients.html">Clients</a>
+            <a class="topbar__link" href="/en/about.html">About</a>
+            <a class="topbar__link" href="/blog/">Blog</a>
+            <a class="topbar__link" href="/en/contact.html">Contact</a>
+            <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+              <span class="r3-lang-indicator" aria-hidden="true"></span>
+              <a class="r3-lang-option" href="/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+              <a class="r3-lang-option" href="/en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+            </nav>
+          </nav>
+
+          <!-- System status indicator -->
+          <div class="topbar-sys" aria-hidden="true">
+            <span class="topbar-sys-dot"></span>
+            SYS NOMINAL
+          </div>
+
+          <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+
+          <a class="btn primary cta-desktop" href="/en/contact.html">Free web audit</a>
+
+          <button
+            class="nav-toggle"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </header>
+
+      <!-- ── HERO ───────────────────────────────────── -->
+      <header class="hero" aria-label="Home">
+        <div class="hero-grid" aria-hidden="true"></div>
+
+        <!-- Corner bracket markers -->
+        <div class="hero-bracket hero-bracket--tl" aria-hidden="true"></div>
+        <div class="hero-bracket hero-bracket--tr" aria-hidden="true"></div>
+        <div class="hero-bracket hero-bracket--bl" aria-hidden="true"></div>
+        <div class="hero-bracket hero-bracket--br" aria-hidden="true"></div>
+
+        <!-- Coordinate display -->
+        <div class="hero-coords" aria-hidden="true">
+          <span class="coord-row">LAT -34.6037°</span>
+          <span class="coord-row">LONG -58.3816°</span>
+          <span class="coord-status">
+            <span class="coord-dot"></span>
+            SIGNAL NOMINAL
+          </span>
+        </div>
+
+        <!-- Vertical section label -->
+        <span class="hero-section-label" aria-hidden="true">RAVEN3 // SYS.00 // HOME</span>
+
+        <div class="hero__inner container">
+          <p class="eyebrow">Digital Agency · Custom code, zero templates</p>
+
+          <h1>
+            Custom <span class="accent">web development</span><br />
+            for businesses that mean it
+          </h1>
+
+          <p class="kicker">
+            At <strong>Raven3</strong> we design and build
+            <strong>custom websites</strong>,
+            <strong>online stores</strong> and
+            <strong>technical SEO</strong> strategies
+            for companies that need results, not just a web presence.
+            No templates. No bloated WordPress. Real performance from day one.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="/en/contact.html">Get your free audit →</a>
+            <a class="btn" href="#servicios">See what we do</a>
+          </div>
+
+          <div class="hero-trust" role="group" aria-label="Trust indicators">
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              60+ projects delivered
+            </span>
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              5.0 ★ on Google
+            </span>
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              95+ Lighthouse score
+            </span>
+            <span class="trust-item">
+              <span class="trust-dot" aria-hidden="true"></span>
+              Clients worldwide
+            </span>
+          </div>
+
+          <!-- Performance stat bar -->
+          <div class="hero-stat-bar" aria-hidden="true">
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">PERF</span>
+              <span class="stat-bar-value">95+</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">SEO</span>
+              <span class="stat-bar-value">92+</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">LCP</span>
+              <span class="stat-bar-value">&lt;1.2s</span>
+            </div>
+            <div class="stat-bar-item">
+              <span class="stat-bar-label">CLS</span>
+              <span class="stat-bar-value">0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-scroll-hint" aria-hidden="true">
+          <span>scroll</span>
+          <div class="scroll-line"></div>
+        </div>
+      </header>
+
+
+      <!-- ── STATEMENT ──────────────────────────────── -->
+      <section class="statement" id="declaracion" aria-label="Value proposition">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.01 // STATEMENT</span>
+          </div>
+          <div class="statement__inner">
+            <p class="statement__text">
+              Your website isn't a storefront.<br />
+              It's your best <em class="glitch" data-text="digital salesperson">digital salesperson</em>,<br />
+              24 hours a day, 7 days a week.
+            </p>
+            <div class="statement__line" aria-hidden="true"></div>
+            <p class="statement__sub">
+              Every project we take on starts from business strategy,
+              is designed to guide the user, and is built with real engineering.
+              The result: digital platforms that generate leads and sales,
+              not just traffic that bounces.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MÉTRICAS ────────────────────────────────── -->
+      <section class="metricas" id="metricas" aria-label="Metrics and results">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.02 // METRICS</span>
+          </div>
+          <div class="section-header" style="text-align: center; max-width: 640px; margin-inline: auto">
+            <p class="eyebrow">Results</p>
+            <h2 class="section-title">Numbers that back up<br />our work</h2>
+          </div>
+
+          <div class="metricas-grid">
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="95" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">Performance Score</div>
+              <div class="metrica-desc">Lighthouse, in production</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="92" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">SEO Score</div>
+              <div class="metrica-desc">Average technical audit</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="40" data-suffix="%">0%</span>
+              </div>
+              <div class="metrica-label">More conversions</div>
+              <div class="metrica-desc">Average post-optimization</div>
+            </div>
+            <div class="metrica-card">
+              <div class="metrica-value">
+                <span class="counter" data-count="60" data-suffix="+">0+</span>
+              </div>
+              <div class="metrica-label">Projects delivered</div>
+              <div class="metrica-desc">Sites, stores and strategies</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROYECTOS / SHOWCASE ────────────────────── -->
+      <section class="hscroll-section" id="proyectos" aria-label="Featured projects">
+
+        <div class="section-divider riv">
+          <div class="section-divider__line"></div>
+          <span class="section-divider__label">SYS.03 // PROJECTS</span>
+        </div>
+
+        <div class="hscroll-inner">
+
+          <!-- Meta bar -->
+          <div class="hscroll-meta">
+            <h2 class="hscroll-heading">Real work.<br><em>Real results.</em></h2>
+            <div class="hscroll-progress-block">
+              <div class="hscroll-fraction">
+                <span class="hscroll-cur">01</span>
+                <span> / </span>
+                <span class="hscroll-tot">07</span>
+              </div>
+              <div class="hscroll-bar">
+                <div class="hscroll-bar__fill"></div>
+              </div>
+              <span class="hscroll-hint">scroll →</span>
+            </div>
+          </div>
+
+          <!-- Scrolling viewport -->
+          <div class="hscroll-viewport">
+            <div class="hscroll-track" id="hscrollTrack">
+
+              <!-- 01 · NDB Propiedades -->
+              <article class="hscroll-card" aria-label="Project: NDB Propiedades">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">01</div>
+                  <span class="hscroll-card__badge">Real estate platform</span>
+                  <h3 class="hscroll-card__title">NDB Propiedades</h3>
+                  <p class="hscroll-card__desc">A custom real estate platform with advanced filters, Tokko Broker integration, and an architecture built to scale commercially.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Custom web</span>
+                    <span>API integration</span>
+                    <span>Technical SEO</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://www.ndbpropiedades.com.ar/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">ndbpropiedades.com.ar</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/ndbpropiedades/web.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/ndbpropiedades/web.png" alt="NDB Propiedades — website" loading="lazy" decoding="async" width="1200" height="674" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 02 · art1 -->
+              <article class="hscroll-card" aria-label="Project: art1">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">02</div>
+                  <span class="hscroll-card__badge">Creative website</span>
+                  <h3 class="hscroll-card__title">art1</h3>
+                  <p class="hscroll-card__desc">A site with a visual identity of its own, built to stand out in a competitive space. A distinctive aesthetic paired with strong technical performance on every load.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Custom web</span>
+                    <span>UI / Branding</span>
+                    <span>Core Web Vitals</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://www.art1.com.ar/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">art1.com.ar</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/art1/web_art1.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/art1/web_art1.png" alt="art1 — website" loading="lazy" decoding="async" width="1200" height="578" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 03 · Ibarra Propiedades -->
+              <article class="hscroll-card" aria-label="Project: Ibarra Propiedades">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">03</div>
+                  <span class="hscroll-card__badge">North Zone real estate</span>
+                  <h3 class="hscroll-card__title">Ibarra Propiedades</h3>
+                  <p class="hscroll-card__desc">A custom website for a local real estate firm with an integrated property search, corporate design, and optimized presence across San Isidro, Vicente López and Tigre.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Custom web</span>
+                    <span>Real estate</span>
+                    <span>Corporate UI</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://ibarraprop.com.ar/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">ibarraprop.com.ar</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/ibarra/web.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/ibarra/web.png" alt="Ibarra Propiedades — website" loading="lazy" decoding="async" width="1200" height="600" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 04 · CEA American -->
+              <article class="hscroll-card" aria-label="Project: CEA American">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">04</div>
+                  <span class="hscroll-card__badge">Institutional site</span>
+                  <h3 class="hscroll-card__title">CEA American</h3>
+                  <p class="hscroll-card__desc">An institutional site focused on professionalism, clarity of information and performance. A result that exceeded the client's expectations in record time.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Institutional site</span>
+                    <span>Custom UI</span>
+                    <span>Performance</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://cea-american.com.ar/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">cea-american.com.ar</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/cea-american/cea-american.web.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/cea-american/cea-american.web.png" alt="CEA American — website" loading="lazy" decoding="async" width="1200" height="671" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 05 · Lassen Pharma -->
+              <article class="hscroll-card" aria-label="Project: Lassen Pharma">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">05</div>
+                  <span class="hscroll-card__badge">Corporate site</span>
+                  <h3 class="hscroll-card__title">Lassen Pharma</h3>
+                  <p class="hscroll-card__desc">A corporate site with technical SEO and an optimized architecture built to improve organic visibility, institutional clarity, and performance in the healthcare sector.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Technical SEO</span>
+                    <span>Performance</span>
+                    <span>Custom UI</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://www.lassen.ar/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">lassen.ar</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/lassen/lassen.web.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/lassen/lassen.web.png" alt="Lassen Pharma — website" loading="lazy" decoding="async" width="1200" height="675" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 06 · Etienne de Montebello -->
+              <article class="hscroll-card" aria-label="Project: Etienne de Montebello">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">06</div>
+                  <span class="hscroll-card__badge">Luxury website</span>
+                  <h3 class="hscroll-card__title">Etienne de Montebello</h3>
+                  <p class="hscroll-card__desc">A custom site built with exceptional technical quality. An architecture designed to translate business needs into a precise digital experience, with zero template shortcuts.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Custom site</span>
+                    <span>UI / Branding</span>
+                    <span>Performance</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://etiennedemontebello.com/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">etiennedemontebello.com</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/etienne/etienne.web.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/etienne/etienne.web.png" alt="Etienne de Montebello — website" loading="lazy" decoding="async" width="1200" height="679" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 07 · OKOS -->
+              <article class="hscroll-card" aria-label="Project: OKOS">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-card__info">
+                  <div class="hscroll-card__num" aria-hidden="true">07</div>
+                  <span class="hscroll-card__badge">Institutional site</span>
+                  <h3 class="hscroll-card__title">OKOS</h3>
+                  <p class="hscroll-card__desc">A minimalist institutional site focused on clarity, speed and identity. A clean design that communicates the value proposition with zero distractions.</p>
+                  <div class="hscroll-card__tags">
+                    <span>Minimalist design</span>
+                    <span>Performance</span>
+                    <span>Visual identity</span>
+                  </div>
+                  <a class="hscroll-card__cta" href="https://www.okos.com.ar/" target="_blank" rel="noopener">View project ↗</a>
+                </div>
+                <div class="hscroll-card__visual">
+                  <div class="hscroll-card__frame-wrap">
+                    <div class="case-frame">
+                      <div class="case-frame__bar" aria-hidden="true">
+                        <span class="bbar-dot bbar-dot--r"></span>
+                        <span class="bbar-dot bbar-dot--y"></span>
+                        <span class="bbar-dot bbar-dot--g"></span>
+                        <span class="bbar-url">okos.com.ar</span>
+                      </div>
+                      <div class="case-frame__screen">
+                        <picture>
+                          <source srcset="/assets/img/portfolio/WEB/okos/okos.web.webp" type="image/webp" />
+                          <img src="/assets/img/portfolio/WEB/okos/okos.web.png" alt="OKOS — website" loading="lazy" decoding="async" width="1200" height="675" />
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- CTA card -->
+              <article class="hscroll-card hscroll-card--cta" aria-label="See all projects">
+                <span class="hscroll-card__corner hscroll-card__corner--tl" aria-hidden="true"></span>
+                <span class="hscroll-card__corner hscroll-card__corner--br" aria-hidden="true"></span>
+                <div class="hscroll-cta-icon" aria-hidden="true">+60</div>
+                <p class="hscroll-cta-label">Projects<br>delivered</p>
+                <a class="hscroll-cta-link" href="/en/clients.html">
+                  See all clients ↗
+                </a>
+              </article>
+
+            </div><!-- /hscroll-track -->
+          </div><!-- /hscroll-viewport -->
+
+          <!-- Mobile list (replaces horizontal scroll on small screens) -->
+          <ul class="hscroll-list" aria-label="Project list">
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://www.ndbpropiedades.com.ar/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">Real estate platform</span>
+                <span class="hscroll-list__name">NDB Propiedades</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://www.art1.com.ar/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">Creative website</span>
+                <span class="hscroll-list__name">art1</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://ibarraprop.com.ar/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">North Zone real estate</span>
+                <span class="hscroll-list__name">Ibarra Propiedades</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://cea-american.com.ar/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">Institutional site</span>
+                <span class="hscroll-list__name">CEA American</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://www.lassen.ar/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">Corporate site</span>
+                <span class="hscroll-list__name">Lassen Pharma</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://etiennedemontebello.com/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">Luxury website</span>
+                <span class="hscroll-list__name">Etienne de Montebello</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item">
+              <a class="hscroll-list__link" href="https://www.okos.com.ar/" target="_blank" rel="noopener">
+                <span class="hscroll-list__meta">Institutional site</span>
+                <span class="hscroll-list__name">OKOS</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">↗</span>
+              </a>
+            </li>
+            <li class="hscroll-list__item hscroll-list__item--cta">
+              <a class="hscroll-list__link" href="/en/clients.html">
+                <span class="hscroll-list__meta">60+ projects delivered</span>
+                <span class="hscroll-list__name">See all clients</span>
+                <span class="hscroll-list__arrow" aria-hidden="true">→</span>
+              </a>
+            </li>
+          </ul>
+
+        </div><!-- /hscroll-inner -->
+      </section>
+
+      <!-- ── SERVICIOS ──────────────────────────────── -->
+      <section id="servicios" aria-label="Raven3 services">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.04 // SERVICES</span>
+          </div>
+          <div class="section-header">
+            <p class="eyebrow">What we do</p>
+            <h2 class="section-title">
+              Services built<br />for real results
+            </h2>
+          </div>
+
+          <div class="svc-flex" id="svc-accordion">
+
+            <!-- S·01 Web a medida -->
+            <article class="svc-panel is-active" data-svc="01">
+              <div class="svc-bg"></div>
+              <button type="button" class="svc-aside" aria-expanded="true" aria-label="Custom web development">
+                <span class="svc-aside__num">S·01</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+              </button>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·01</span>
+                  <h3 class="svc-body__title">Custom web development</h3>
+                  <p class="svc-body__desc">Websites built from scratch for your business. Fast, indexable, and engineered to perform.</p>
+                  <a class="svc-body__cta" href="/en/services/custom-web-development.html">
+                    View service
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- S·02 Tiendas Online -->
+            <article class="svc-panel" data-svc="02">
+              <div class="svc-bg"></div>
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Online stores">
+                <span class="svc-aside__num">S·02</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+              </button>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·02</span>
+                  <h3 class="svc-body__title">Online Stores</h3>
+                  <p class="svc-body__desc">Online stores that sell from day one. Optimized checkout, real performance, and payment integrations that work.</p>
+                  <a class="svc-body__cta" href="/en/services/online-stores.html">
+                    View service
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- S·03 SEO Técnico -->
+            <article class="svc-panel" data-svc="03">
+              <div class="svc-bg"></div>
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Technical SEO">
+                <span class="svc-aside__num">S·03</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                </div>
+              </button>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·03</span>
+                  <h3 class="svc-body__title">Technical SEO</h3>
+                  <p class="svc-body__desc">Technical audit and optimization so Google can find you, understand you, and rank you.</p>
+                  <a class="svc-body__cta" href="/en/services/technical-seo.html">
+                    View service
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- S·04 Core Web Vitals -->
+            <article class="svc-panel" data-svc="04">
+              <div class="svc-bg"></div>
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Core Web Vitals">
+                <span class="svc-aside__num">S·04</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                </div>
+              </button>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·04</span>
+                  <h3 class="svc-body__title">Core Web Vitals</h3>
+                  <p class="svc-body__desc">LCP, CLS, INP: the metrics Google measures, and the ones that directly impact your rankings and your sales.</p>
+                  <a class="svc-body__cta" href="/en/services/custom-web-development.html">
+                    View service
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- S·05 UX/UI -->
+            <article class="svc-panel" data-svc="05">
+              <div class="svc-bg"></div>
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Conversion-Focused UX/UI">
+                <span class="svc-aside__num">S·05</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                </div>
+              </button>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·05</span>
+                  <h3 class="svc-body__title">Conversion UX/UI</h3>
+                  <p class="svc-body__desc">Interfaces designed so every visitor understands your value proposition in seconds, and acts on it.</p>
+                  <a class="svc-body__cta" href="/en/services/custom-web-development.html">
+                    View service
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- S·06 Conexiones a medida -->
+            <article class="svc-panel" data-svc="06">
+              <div class="svc-bg"></div>
+              <button type="button" class="svc-aside" aria-expanded="false" aria-label="Custom integrations">
+                <span class="svc-aside__num">S·06</span>
+                <div class="svc-aside__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="5" r="3"></circle><circle cx="5" cy="19" r="3"></circle><circle cx="19" cy="19" r="3"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="12" x2="5" y2="16"></line><line x1="12" y1="12" x2="19" y2="16"></line></svg>
+                </div>
+              </button>
+              <div class="svc-body">
+                <div class="svc-body__inner">
+                  <span class="svc-body__num">S·06</span>
+                  <h3 class="svc-body__title">Custom Integrations</h3>
+                  <p class="svc-body__desc">APIs, CRMs, payment gateways and business tools connected to your site, with zero friction.</p>
+                  <a class="svc-body__cta" href="/en/services/custom-web-development.html">
+                    View service
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── RESEÑAS ────────────────────────────────── -->
+      <section class="reviews-home" aria-label="Google reviews">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.05 // REVIEWS</span>
+          </div>
+          <div class="reviews-card">
+            <div class="reviews-top">
+              <div class="reviews-score" role="group" aria-label="Rating 5 out of 5">
+                <div class="stars" aria-hidden="true">★★★★★</div>
+                <div class="score-line">
+                  <strong>5.0</strong>
+                  <span class="muted">· 6 reviews on Google</span>
+                </div>
+              </div>
+              <div class="reviews-actions">
+                <a class="btn" href="https://share.google/tJRfccRDlb4DnvjXV" target="_blank" rel="noopener">Read reviews</a>
+                <a class="btn primary" href="https://g.page/r/CU6KpNVr5mDuEBI/review" target="_blank" rel="noopener">Leave a review</a>
+              </div>
+            </div>
+
+            <div class="reviews-copy">
+              <h2>Worked with Raven3?</h2>
+              <p class="section-subtitle">
+                If your project improved in performance, rankings or conversion, your review helps more brands invest in custom development and real technical quality.
+              </p>
+            </div>
+
+            <div class="reviews-quotes reviews-quotes--swiper">
+              <div class="swiper reviews-swiper" role="region" aria-label="Featured reviews">
+                <div class="swiper-wrapper" role="list">
+                  <div class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Patricio @ Raven 3 is so smart you're guaranteed to get first a rate website. He is particularly good at helping you identify exactly what you need and then proceeds to provide it. You can "rest assured" he and Raven 3 will provide exceptional service."
+                    </p>
+                    <button class="review-toggle" type="button" aria-expanded="false">Read more</button>
+                    <span class="who muted">— Barry Dallas, Etiennedemontebello</span>
+                  </div>
+
+                  <div class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Excellent work. From the very first moment he understood exactly what we needed for our company's page. Very professional, delivered on time, and the result exceeded our expectations. Highly recommended."
+                    </p>
+                    <button class="review-toggle" type="button" aria-expanded="false">Read more</button>
+                    <span class="who muted">— Noelia, CEA American</span>
+                  </div>
+
+                  <div class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "Excellent service! They built us a top-tier website! Always attentive and available, continuously improving and suggesting enhancements. Highly recommended!"
+                    </p>
+                    <button class="review-toggle" type="button" aria-expanded="false">Read more</button>
+                    <span class="who muted">— Nicolas De Brasi, NDB Propiedades</span>
+                  </div>
+
+                  <div class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "I recommend Raven3 for the excellent work they did designing our website. The site is modern, appealing and easy to navigate. Their team is professional, creative and detail-oriented. We're very happy with the result."
+                    </p>
+                    <button class="review-toggle" type="button" aria-expanded="false">Read more</button>
+                    <span class="who muted">— Julián Fernandez, Okos</span>
+                  </div>
+
+                  <div class="quote swiper-slide" role="listitem">
+                    <p class="review-quote">
+                      "My experience with Raven3 has been a success. They built me a website that far exceeded my expectations. I came in with an idea, and they offered a much better solution. 100% recommended."
+                    </p>
+                    <button class="review-toggle" type="button" aria-expanded="false">Read more</button>
+                    <span class="who muted">— Agustina Menichelli, Didot</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── DIFERENCIALES ──────────────────────────── -->
+      <section class="diferenciales" id="diferenciales" aria-label="Why choose Raven3">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.06 // WHY RAVEN3</span>
+          </div>
+          <div class="section-header">
+            <p class="eyebrow">Why Raven3</p>
+            <h2 class="section-title">What sets us<br />apart</h2>
+          </div>
+
+          <div class="dif-grid">
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">01</span>
+              <h3>100% custom code, zero unnecessary dependencies</h3>
+              <p>No generic templates. No plugins that break every three months. Every line of code exists for a reason: to make your business perform better online.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">02</span>
+              <h3>Performance Google measures and your customers feel</h3>
+              <p>Core Web Vitals optimized from the architecture up, not patched on at the end. A fast site ranks better, converts more, and costs less to advertise.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">03</span>
+              <h3>Technical SEO from the very first line of code</h3>
+              <p>Semantic HTML, structured data, URL architecture and content planned before a single line of CSS is written. SEO isn't bolted on afterward, it's built in from the start.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">04</span>
+              <h3>Design that conveys value and builds trust</h3>
+              <p>Modern interfaces that communicate professionalism in every detail. No empty decoration. Every design decision serves a business purpose.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">05</span>
+              <h3>Projects that grow with your business</h3>
+              <p>Modular, documented code built to scale. As your business grows, your site grows with it, without rewriting everything from scratch.</p>
+            </div>
+
+            <div class="dif-item">
+              <span class="dif-num" aria-hidden="true">06</span>
+              <h3>No WordPress when it doesn't make sense</h3>
+              <p>When a project needs speed, control and real performance, we use modern technologies that don't depend on 40 plugins just to function.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── PROCESO ────────────────────────────────── -->
+      <section class="proceso" id="proceso" aria-label="Our methodology">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.07 // METHODOLOGY</span>
+          </div>
+          <div class="section-header">
+            <p class="eyebrow">Methodology</p>
+            <h2 class="section-title">How we work</h2>
+          </div>
+
+          <div class="proceso-track">
+            <div class="proceso-line" aria-hidden="true">
+              <div class="proceso-line__fill"></div>
+            </div>
+
+            <ol class="proceso-steps">
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">01</span></div>
+                <div class="paso-content">
+                  <h3>Diagnosis</h3>
+                  <p>Technical audit, benchmarking and analysis of improvement opportunities.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">02</span></div>
+                <div class="paso-content">
+                  <h3>Strategy</h3>
+                  <p>Roadmap, information architecture and clearly defined KPIs.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">03</span></div>
+                <div class="paso-content">
+                  <h3>Design</h3>
+                  <p>Wireframes, interactive prototype and a cohesive design system.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">04</span></div>
+                <div class="paso-content">
+                  <h3>Development</h3>
+                  <p>Clean, semantic, high-performance, well-documented code.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">05</span></div>
+                <div class="paso-content">
+                  <h3>Optimization</h3>
+                  <p>CWV, technical SEO, speed and conversion A/B testing.</p>
+                </div>
+              </li>
+              <li class="proceso-step">
+                <div class="paso-dot" aria-hidden="true"><span class="paso-num">06</span></div>
+                <div class="paso-content">
+                  <h3>Launch</h3>
+                  <p>Deployment, real-time monitoring, analytics and post-launch support.</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ── STRIPS (CSS Marquee) ────────────────────── -->
+      <section class="strips" aria-hidden="true">
+        <div class="strip" style="--rot: -5deg; --marquee-speed: 36s; --marquee-dir: marquee-left;">
+          <div class="strip-track">
+            <span class="strip-item">RAVEN3.COM.AR</span>
+            <span class="strip-item">Custom web design</span>
+            <span class="strip-item">Real performance</span>
+            <span class="strip-item">Digital experiences</span>
+            <span class="strip-item" aria-hidden="true">RAVEN3.COM.AR</span>
+            <span class="strip-item" aria-hidden="true">Custom web design</span>
+            <span class="strip-item" aria-hidden="true">Real performance</span>
+            <span class="strip-item" aria-hidden="true">Digital experiences</span>
+          </div>
+        </div>
+
+        <div class="strip" style="--rot: 4deg; --marquee-speed: 28s; --marquee-dir: marquee-right;">
+          <div class="strip-track">
+            <span class="strip-item">Fast websites</span>
+            <span class="strip-item">Online stores</span>
+            <span class="strip-item">Advanced technical SEO</span>
+            <span class="strip-item">Custom code · Global</span>
+            <span class="strip-item" aria-hidden="true">Fast websites</span>
+            <span class="strip-item" aria-hidden="true">Online stores</span>
+            <span class="strip-item" aria-hidden="true">Advanced technical SEO</span>
+            <span class="strip-item" aria-hidden="true">Custom code · Global</span>
+          </div>
+        </div>
+
+        <div class="strip" style="--rot: -3deg; --marquee-speed: 44s; --marquee-dir: marquee-left;">
+          <div class="strip-track">
+            <span class="strip-item">RAVEN3.COM.AR</span>
+            <span class="strip-item">Real results</span>
+            <span class="strip-item">Design with purpose</span>
+            <span class="strip-item">Speed that pays off</span>
+            <span class="strip-item" aria-hidden="true">RAVEN3.COM.AR</span>
+            <span class="strip-item" aria-hidden="true">Real results</span>
+            <span class="strip-item" aria-hidden="true">Design with purpose</span>
+            <span class="strip-item" aria-hidden="true">Speed that pays off</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── FAQ ────────────────────────────────────── -->
+      <section id="faq" aria-label="Frequently asked questions">
+        <div class="container">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.09 // FAQ</span>
+          </div>
+          <div class="section-header">
+            <p class="eyebrow">Frequently asked questions</p>
+            <h2 class="section-title">What our clients<br />ask before getting started</h2>
+          </div>
+
+          <div class="dif-grid">
+            <div class="dif-item">
+              <h3>How much does a custom website cost?</h3>
+              <p>A professional custom website starts at USD 800–1,500 for institutional projects and scales based on features, integrations and complexity. We put together clear proposals with defined scope before any work begins.</p>
+            </div>
+
+            <div class="dif-item">
+              <h3>How long does it take to build a website?</h3>
+              <p>A custom institutional site can be ready in 3 to 5 weeks. More complex projects like e-commerce or platforms with integrations take between 6 and 10 weeks, with a timeline defined from day one.</p>
+            </div>
+
+            <div class="dif-item">
+              <h3>Why choose custom development over WordPress or templates?</h3>
+              <p>A custom-built site loads faster, ranks better on Google, is more secure, and doesn't depend on plugins that break with every update. If you need real performance and solid technical SEO, custom development is the better investment.</p>
+            </div>
+
+            <div class="dif-item">
+              <h3>What markets does Raven3 work with?</h3>
+              <p>We work with clients worldwide. Communication is 100% remote and seamless, regardless of time zone.</p>
+            </div>
+
+            <div class="dif-item">
+              <h3>What's included in the free audit?</h3>
+              <p>A technical diagnostic of your current site: performance, Core Web Vitals, technical SEO, HTML structure and improvement opportunities. We send you a report with real findings and concrete recommendations, no strings attached.</p>
+            </div>
+
+            <div class="dif-item">
+              <h3>What happens after the site is finished?</h3>
+              <p>We handle deployment, set up analytics, monitor post-launch performance and offer ongoing technical support. Your site isn't abandoned once it ships.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── CONTACTO ───────────────────────────────── -->
+      <section id="contacto" aria-label="Contact form">
+        <div class="container contact-section">
+          <div class="section-divider riv">
+            <div class="section-divider__line"></div>
+            <span class="section-divider__label">SYS.08 // CONTACT</span>
+          </div>
+          <div class="contact-intro">
+            <p class="eyebrow">Let's work together</p>
+            <h2 class="section-title">
+              Is your website leaving<br />money on the table?
+            </h2>
+            <p class="section-subtitle">
+              Request a free technical and conversion audit.
+              We'll show you exactly what's holding your site back
+              and how to fix it. Response in under 24 hours.
+            </p>
+          </div>
+
+          <form
+            class="r3-form"
+            action="https://formspree.io/f/mvoykeyq"
+            method="POST"
+            id="contactForm"
+          >
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="auditoria">Free audit</option>
+                <option value="web">Custom website</option>
+                <option value="ecommerce">Online store</option>
+                <option value="seo">Technical SEO</option>
+                <option value="performance">Performance / CWV</option>
+                <option value="otro">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell us about your project or request the free audit..." required></textarea>
+            </div>
+
+            <div class="form-footer">
+              <button type="submit" class="btn primary">Send inquiry →</button>
+              <span class="form-status" id="formStatus" aria-live="polite"></span>
+              <div class="recaptcha-wrapper">
+                <div class="g-recaptcha" data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq" data-theme="dark"></div>
+              </div>
+            </div>
+
+            <input type="hidden" name="form_source" value="index-en" />
+            <input type="hidden" name="_subject" value="New inquiry from Raven3 EN homepage" />
+          </form>
+        </div>
+      </section>
+
+      <!-- ── FOOTER ─────────────────────────────────── -->
+      <footer id="footer" aria-label="Footer">
+        <div class="container">
+
+          <!-- ── Newsletter strip ── -->
+          <div class="footer-newsletter">
+            <div class="footer-newsletter__copy">
+              <span class="footer-newsletter__label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                NEWSLETTER
+              </span>
+              <p class="footer-newsletter__tagline">Web performance insights — technical content only, no fluff.</p>
+            </div>
+            <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+              <div class="footer-newsletter__field">
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  name="email"
+                  placeholder="you@email.com"
+                  autocomplete="email"
+                  aria-label="Your email for the newsletter"
+                  required
+                />
+                <input type="hidden" name="_subject" value="New Raven3 subscriber" />
+                <button
+                  type="submit"
+                  id="newsletter-btn"
+                  data-idle-text="Subscribe"
+                  data-sending-text="…"
+                  data-success-text="Subscribed ✓"
+                  data-already-text="Already subscribed ✓"
+                  data-retry-text="Retry"
+                >
+                  Subscribe
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+              <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite"
+                 data-sending-text="Processing…"
+                 data-success-msg="Done: <strong>{email}</strong> subscribed."
+                 data-already-msg="<strong>{email}</strong> was already subscribed."
+                 data-error-text="Something went wrong. Please try again."></p>
+            </form>
+          </div>
+
+          <div class="footer-grid">
+            <div class="footer-col">
+              <a href="https://raven3.com.ar/en/" aria-label="Raven3 — Home" style="display: inline-block; margin-bottom: 16px">
+                <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+              </a>
+              <p>
+                Digital agency specializing in custom web development, e-commerce, technical SEO and Core Web Vitals. No templates. Real results.
+              </p>
+              <div class="cta-row">
+                <a class="btn primary" href="mailto:hola@raven3.com.ar">Email us</a>
+                <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="footer-col">
+              <h3>Services</h3>
+              <ul class="footer-links">
+                <li><a href="/en/services/custom-web-development.html">Custom web development</a></li>
+                <li><a href="/en/services/online-stores.html">Online stores</a></li>
+                <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+                <li><a href="/en/websites-by-industry.html">Websites by industry</a></li>
+                <li><a href="#servicios">Performance &amp; CWV</a></li>
+                <li><a href="#servicios">Conversion UX/UI</a></li>
+                <li><a href="#servicios">API Integrations</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-col">
+              <h3>Contact</h3>
+              <ul class="footer-contact-list">
+                <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+                <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">+54 9 11 3456-8899</a></li>
+                <li>Buenos Aires, Argentina</li>
+              </ul>
+              <h3 style="margin-top: 24px">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/en/about.html">About Raven3</a></li>
+                <li><a href="/en/clients.html">Clients</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-bottom small">
+            <span>
+              <span id="year"></span> © Raven3. All rights reserved.
+              <span class="footer-legal">
+                · <a href="/en/privacy-policy.html">Privacy Policy</a>
+                · <a href="/en/terms.html">Terms</a>
+                · <a href="/raven3-brand-guidelines.html">Brand Guidelines</a>
+              </span>
+            </span>
+
+            <div class="footer-socials">
+              <a href="https://www.instagram.com/agencia.raven3/" target="_blank" rel="noopener" aria-label="Raven3 on Instagram">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z" />
+                </svg>
+              </a>
+              <a href="https://github.com/raven3-agency/" target="_blank" rel="noopener" aria-label="Raven3 on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.48.12-3.08 0 0 .98-.31 3.18 1.2A11.08 11.08 0 0 1 12 6.03c.98 0 1.96.13 2.88.39 2.2-1.51 3.18-1.2 3.18-1.2.64 1.6.24 2.78.12 3.08.75.82 1.2 1.85 1.2 3.12 0 4.45-2.7 5.43-5.28 5.72.42.36.79 1.07.79 2.16v3.04c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- ═══════════════════════════════════════════════
+         SCRIPTS — original functional scripts preserved
+    ═══════════════════════════════════════════════ -->
+
+    <!-- Contact form handler -->
+    <script>
+      (function () {
+        const form = document.getElementById("contactForm");
+        const status = document.getElementById("formStatus");
+        if (!form) return;
+
+        form.addEventListener("submit", async function (e) {
+          e.preventDefault();
+          status.textContent = "Sending…";
+          try {
+            const res = await fetch(form.action, {
+              method: "POST",
+              body: new FormData(form),
+              headers: { Accept: "application/json" },
+            });
+            if (res.ok) {
+              status.textContent = "Message sent ✓";
+              form.reset();
+              if (typeof grecaptcha !== "undefined") grecaptcha.reset();
+            } else {
+              status.textContent = "Something went wrong. Please try again.";
+            }
+          } catch {
+            status.textContent = "Connection error.";
+          }
+        });
+      })();
+    </script>
+
+    <!-- Lazy reCAPTCHA -->
+    <script>
+      (function () {
+        let loaded = false;
+        function load() {
+          if (loaded) return;
+          loaded = true;
+          const s = document.createElement("script");
+          s.src = "https://www.google.com/recaptcha/api.js";
+          s.async = true;
+          s.defer = true;
+          document.head.appendChild(s);
+        }
+        const form = document.getElementById("contactForm");
+        if (form) {
+          form.addEventListener("focusin", load, { once: true });
+          new IntersectionObserver(
+            (entries) => { if (entries.some((e) => e.isIntersecting)) load(); },
+            { rootMargin: "200px" }
+          ).observe(form);
+        }
+      })();
+    </script>
+
+    <!-- Flip cards touch support -->
+    <script>
+      (function () {
+        const cards = document.querySelectorAll(".client-flip-card");
+        const isTouch = () => window.matchMedia("(hover: none)").matches;
+        cards.forEach((card) => {
+          card.addEventListener("click", function (e) {
+            if (!isTouch()) return;
+            if (!card.classList.contains("is-flipped")) {
+              e.preventDefault();
+              document.querySelectorAll(".client-flip-card.is-flipped").forEach((c) => {
+                if (c !== card) c.classList.remove("is-flipped");
+              });
+              card.classList.add("is-flipped");
+            }
+          });
+          const link = card.querySelector(".client-flip-card__inner");
+          if (link) {
+            link.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" || e.key === " ") card.classList.add("is-flipped");
+            });
+          }
+        });
+        document.addEventListener("click", (e) => {
+          cards.forEach((card) => { if (!card.contains(e.target)) card.classList.remove("is-flipped"); });
+        });
+      })();
+    </script>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script>
+      /* ── SYS.08 // PROYECTOS — Horizontal Scroll ── */
+      (function () {
+        if (!window.gsap || !window.ScrollTrigger) return;
+        gsap.registerPlugin(ScrollTrigger);
+
+        var mm = gsap.matchMedia();
+
+        /* Desktop only: pin + horizontal scrub */
+        mm.add('(min-width: 901px)', function () {
+          var track = document.getElementById('hscrollTrack');
+          if (!track) return;
+
+          /* Only count real project cards, not the CTA card */
+          var projectCards = track.querySelectorAll('.hscroll-card:not(.hscroll-card--cta)');
+          var total        = projectCards.length; /* 6 */
+          var fill         = document.querySelector('.hscroll-bar__fill');
+          var curEl        = document.querySelector('.hscroll-cur');
+          var section      = document.querySelector('.hscroll-section');
+
+          function scrollDist() {
+            return Math.max(track.scrollWidth - window.innerWidth, 0);
+          }
+
+          /* Bail if there's nothing to scroll (safety for edge cases) */
+          if (scrollDist() <= 0) return;
+
+          gsap.to(track, {
+            x: function () { return -scrollDist(); },
+            ease: 'none',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top top',
+              end: function () { return '+=' + scrollDist(); },
+              pin: true,
+              scrub: 1,
+              anticipatePin: 1,
+              invalidateOnRefresh: true,
+              onUpdate: function (self) {
+                var p = self.progress;
+
+                /* Progress bar */
+                if (fill) {
+                  fill.style.transform = 'scaleX(' + p + ')';
+                }
+
+                /* Current card counter (1-indexed, capped at total) */
+                if (curEl) {
+                  var idx = Math.min(Math.floor(p * total) + 1, total);
+                  curEl.textContent = idx < 10 ? '0' + idx : String(idx);
+                }
+              }
+            }
+          });
+        });
+
+        /* Mobile: progress bar fills as user scrolls the page past the list */
+        mm.add('(max-width: 900px)', function () {
+          var list  = document.querySelector('.hscroll-list');
+          var fill  = document.querySelector('.hscroll-bar__fill');
+          var curEl = document.querySelector('.hscroll-cur');
+          if (!list || !fill) return;
+
+          var items = list.querySelectorAll('.hscroll-list__item:not(.hscroll-list__item--cta)');
+          var total = items.length;
+
+          /* Highlight active item as user scrolls */
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var idx = Array.prototype.indexOf.call(items, entry.target) + 1;
+              if (idx < 1) return;
+              if (fill) fill.style.transform = 'scaleX(' + (idx / total) + ')';
+              if (curEl) curEl.textContent = idx < 10 ? '0' + idx : String(idx);
+            });
+          }, { threshold: 0.6 });
+
+          Array.prototype.forEach.call(items, function (item) {
+            observer.observe(item);
+          });
+        });
+      })();
+    </script>
+
+    <!-- App modules -->
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/particles.js"></script>
+    <script type="module" src="/assets/js/reviews-swiper.js"></script>
+    <script type="module" src="/assets/js/newsletter.js"></script>
+
+    <!-- ═══════════════════════════════════════════════
+         REDESIGN — Scroll Reveal + Blueprint Enhancements
+    ═══════════════════════════════════════════════ -->
+    <script>
+      (function () {
+        'use strict';
+
+        /* Skip animations if user prefers reduced motion */
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+          document.querySelectorAll('.riv, .riv-left, .riv-scale').forEach(function (el) {
+            el.classList.add('riv--visible');
+          });
+          return;
+        }
+
+        /* ── Scroll Reveal via IntersectionObserver ── */
+        var revealObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('riv--visible');
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1,
+          rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.riv, .riv-left, .riv-scale').forEach(function (el) {
+          revealObserver.observe(el);
+        });
+
+        /* ── Section divider line draw animation ── */
+        var lineObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var line = entry.target.querySelector('.section-divider__line');
+              if (line) {
+                line.style.transition = 'transform 0.9s cubic-bezier(0.16, 1, 0.3, 1)';
+                line.style.transform = 'scaleX(1)';
+                line.style.transformOrigin = 'left';
+              }
+              lineObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.2 });
+
+        /* Init lines as collapsed */
+        document.querySelectorAll('.section-divider__line').forEach(function (line) {
+          line.style.transform = 'scaleX(0)';
+          line.style.transformOrigin = 'left';
+        });
+
+        document.querySelectorAll('.section-divider').forEach(function (div) {
+          lineObserver.observe(div);
+        });
+
+        /* ── Blueprint grid subtle pulse on scroll ── */
+        var ticking = false;
+        window.addEventListener('scroll', function () {
+          if (!ticking) {
+            requestAnimationFrame(function () {
+              var scrollY = window.scrollY;
+              var grid = document.getElementById('blueprint-grid');
+              if (grid) {
+                var offset = (scrollY * 0.15).toFixed(1);
+                grid.style.backgroundPosition = '0 ' + offset + 'px, 0 ' + offset + 'px';
+              }
+              ticking = false;
+            });
+            ticking = true;
+          }
+        }, { passive: true });
+
+        /* ── Hero bracket entrance animation ── */
+        setTimeout(function () {
+          var brackets = document.querySelectorAll('.hero-bracket');
+          brackets.forEach(function (b, i) {
+            setTimeout(function () {
+              b.style.transition = 'opacity 0.6s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+              b.style.opacity = '1';
+            }, 400 + i * 80);
+          });
+        }, 200);
+
+        /* Init brackets as invisible */
+        document.querySelectorAll('.hero-bracket').forEach(function (b) {
+          b.style.opacity = '0';
+        });
+
+        /* ── Hero coord entrance ── */
+        var heroCoords = document.querySelector('.hero-coords');
+        if (heroCoords) {
+          heroCoords.style.opacity = '0';
+          heroCoords.style.transform = 'translateX(12px)';
+          setTimeout(function () {
+            heroCoords.style.transition = 'opacity 0.8s ease 0.6s, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.6s';
+            heroCoords.style.opacity = '1';
+            heroCoords.style.transform = 'translateX(0)';
+          }, 100);
+        }
+
+        /* ── Hero stat bar entrance ── */
+        var statBar = document.querySelector('.hero-stat-bar');
+        if (statBar) {
+          statBar.style.opacity = '0';
+          statBar.style.transform = 'translateY(10px)';
+          setTimeout(function () {
+            statBar.style.transition = 'opacity 0.7s ease 1.0s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.0s';
+            statBar.style.opacity = '1';
+            statBar.style.transform = 'translateY(0)';
+          }, 100);
+        }
+
+        /* ── Expanding Service Panels ── */
+        (function () {
+          var panels = document.querySelectorAll('#svc-accordion .svc-panel');
+          if (!panels.length) return;
+
+          function activatePanel(target) {
+            if (target.classList.contains('is-active')) return;
+            panels.forEach(function (p) {
+              p.classList.remove('is-active');
+              p.querySelector('.svc-aside').setAttribute('aria-expanded', 'false');
+            });
+            target.classList.add('is-active');
+            target.querySelector('.svc-aside').setAttribute('aria-expanded', 'true');
+          }
+
+          panels.forEach(function (panel) {
+            var trigger = panel.querySelector('.svc-aside');
+            trigger.addEventListener('click', function () {
+              activatePanel(panel);
+            });
+            trigger.addEventListener('keydown', function (e) {
+              /* Arrow key navigation between panels */
+              if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+                e.preventDefault();
+                var idx = Array.prototype.indexOf.call(panels, panel);
+                var next = panels[idx + 1];
+                if (next) { next.querySelector('.svc-aside').focus(); activatePanel(next); }
+              }
+              if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+                e.preventDefault();
+                var idx = Array.prototype.indexOf.call(panels, panel);
+                var prev = panels[idx - 1];
+                if (prev) { prev.querySelector('.svc-aside').focus(); activatePanel(prev); }
+              }
+            });
+          });
+        })();
+
+      })();
+    </script>
+
+    <script src="/assets/js/redesign.js" defer></script>
+    <script src="/assets/js/lang-switcher.js" defer></script>
+    <script>
+      (function () {
+        var showcase = document.getElementById('caseShowcase');
+        if (!showcase) return;
+
+        var slides   = showcase.querySelectorAll('.case-slide');
+        var dots     = showcase.querySelectorAll('.case-dot');
+        var progress = showcase.querySelector('.case-progress');
+        var prevBtn  = showcase.querySelector('.case-arrow--prev');
+        var nextBtn  = showcase.querySelector('.case-arrow--next');
+        var current  = 0;
+        var total    = slides.length;
+        var timer;
+
+        function pad(n) { return n < 10 ? '0' + n : '' + n; }
+
+        function goTo(n) {
+          slides[current].classList.remove('is-active');
+          dots[current].classList.remove('is-active');
+          dots[current].setAttribute('aria-selected', 'false');
+          current = (n + total) % total;
+          slides[current].classList.add('is-active');
+          dots[current].classList.add('is-active');
+          dots[current].setAttribute('aria-selected', 'true');
+          if (progress) progress.textContent = pad(current + 1) + ' / ' + pad(total);
+        }
+
+        function startAuto() {
+          clearInterval(timer);
+          timer = setInterval(function () { goTo(current + 1); }, 5500);
+        }
+
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            goTo(parseInt(this.getAttribute('data-goto'), 10));
+            startAuto();
+          });
+        });
+
+        if (prevBtn) prevBtn.addEventListener('click', function () { goTo(current - 1); startAuto(); });
+        if (nextBtn) nextBtn.addEventListener('click', function () { goTo(current + 1); startAuto(); });
+
+        showcase.addEventListener('mouseenter', function () { clearInterval(timer); });
+        showcase.addEventListener('mouseleave', startAuto);
+
+        startAuto();
+      })();
+    </script>
+  </body>
+</html>

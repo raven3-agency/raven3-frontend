@@ -19,6 +19,9 @@
     <meta name="google-site-verification" content="21b8bd63e9ea78c5" />
 
     <link rel="canonical" href="https://raven3.com.ar/" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -92,6 +95,8 @@
 
     <link rel="stylesheet" href="assets/css/animations.css" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="assets/css/animations.css" /></noscript>
+
+    <link rel="stylesheet" href="assets/css/lang-switcher.css" />
 
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
@@ -312,6 +317,11 @@
             <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
             <a class="topbar__link" href="/blog/">Blog</a>
             <a class="topbar__link" href="contacto.html">Contacto</a>
+            <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--es" aria-label="Cambiar idioma / Language selector">
+              <span class="r3-lang-indicator" aria-hidden="true"></span>
+              <a class="r3-lang-option" href="/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+              <a class="r3-lang-option" href="/en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+            </nav>
           </nav>
 
           <!-- System status indicator -->
@@ -319,6 +329,12 @@
             <span class="topbar-sys-dot"></span>
             SYS NOMINAL
           </div>
+
+          <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--es" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
 
           <a class="btn primary cta-desktop" href="/auditoria-web-gratuita.html">Auditoría gratuita</a>
 
@@ -1808,6 +1824,7 @@
     </script>
 
     <script src="assets/js/redesign.js" defer></script>
+    <script src="assets/js/lang-switcher.js" defer></script>
     <script>
       (function () {
         var showcase = document.getElementById('caseShowcase');

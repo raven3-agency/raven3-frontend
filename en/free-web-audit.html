@@ -1,0 +1,1214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Free Web Audit | Analyze Your Site in Minutes | Raven3</title>
+    <meta name="description" content="Free web audit: we analyze your site's speed, SEO, mobile experience and conversion in minutes. Get a personalized report built on real data." />
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#02050a" />
+
+    <link rel="canonical" href="https://raven3.com.ar/en/free-web-audit.html" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/auditoria-web-gratuita.html" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/free-web-audit.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/auditoria-web-gratuita.html" />
+
+    <meta property="og:title" content="Free Web Audit | Raven3" />
+    <meta property="og:description" content="Analyze your site's speed, SEO, mobile experience and conversion. Free, in minutes, with a personalized report." />
+    <meta property="og:url" content="https://raven3.com.ar/en/free-web-audit.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Raven3" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Free Web Audit | Raven3" />
+    <meta name="twitter:description" content="Analyze your site in minutes: speed, SEO, mobile and conversion. Free, with Raven3." />
+    <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+
+    <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
+    <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Free Web Audit — Raven3",
+      "url": "https://raven3.com.ar/en/free-web-audit.html",
+      "description": "Free web audit tool to analyze speed, SEO, mobile experience and conversion.",
+      "applicationCategory": "BusinessApplication",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "provider": { "@type": "Organization", "name": "Raven3", "url": "https://raven3.com.ar" }
+    }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-MF63Q3JMSL');
+    </script>
+
+    <style>
+      /* ── Hero audit ── */
+      .hero-audit { padding: 80px 0 56px; text-align: center; }
+      .hero-audit .eyebrow {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: 'Share Tech Mono', monospace; font-size: 11px;
+        letter-spacing: .12em; text-transform: uppercase;
+        color: #00e5c8; margin-bottom: 20px; opacity: .8;
+      }
+      .hero-audit h1 {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.1rem); font-weight: 700;
+        line-height: 1.15; letter-spacing: -.02em; color: #f5fbff;
+        margin: 0 auto 18px; max-width: 740px;
+      }
+      .hero-audit h1 em { font-style: normal; color: #00e5c8; }
+      .hero-sub {
+        font-size: 1rem; color: rgba(230,240,250,.6);
+        max-width: 520px; margin: 0 auto 32px; line-height: 1.65;
+        font-family: 'Outfit', sans-serif;
+      }
+      .hero-pills { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+      .hero-pill {
+        display: inline-flex; align-items: center; gap: 7px;
+        background: rgba(0,229,200,.07); border: 1px solid rgba(0,229,200,.18);
+        border-radius: 100px; padding: 6px 14px; font-size: 12.5px;
+        color: rgba(220,240,255,.75); font-family: 'Outfit', sans-serif;
+      }
+      .hero-pill svg { width: 13px; height: 13px; stroke: #00e5c8; flex-shrink: 0; }
+
+      /* ── Wizard wrapper ── */
+      .audit-wrap { padding: 0 0 100px; }
+      .audit-wizard {
+        background: rgba(5,10,18,.72); border: 1px solid rgba(0,229,200,.13);
+        border-radius: 24px; overflow: hidden; backdrop-filter: blur(14px);
+        box-shadow: 0 32px 80px rgba(0,0,0,.42); max-width: 800px; margin: 0 auto;
+      }
+
+      /* ── Step header ── */
+      .aw-header {
+        border-bottom: 1px solid rgba(0,229,200,.1);
+        padding: 24px 36px; display: flex; align-items: center;
+        justify-content: space-between; gap: 20px; flex-wrap: wrap;
+      }
+      .aw-title {
+        font-family: 'Share Tech Mono', monospace; font-size: 10px;
+        text-transform: uppercase; letter-spacing: .12em;
+        color: rgba(0,229,200,.5); flex-shrink: 0;
+      }
+      .aw-steps { display: flex; align-items: center; gap: 0; }
+      .aw-step-node { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+      .aw-step-circle {
+        width: 30px; height: 30px; border-radius: 50%;
+        display: flex; align-items: center; justify-content: center;
+        font-family: 'Share Tech Mono', monospace; font-size: 11px; font-weight: 700;
+        border: 1.5px solid rgba(255,255,255,.1); background: rgba(8,16,26,.85);
+        color: rgba(255,255,255,.3); transition: all .3s ease; flex-shrink: 0;
+      }
+      .aw-step-node.active .aw-step-circle {
+        border-color: #00e5c8; background: rgba(0,229,200,.12);
+        color: #00e5c8; box-shadow: 0 0 14px rgba(0,229,200,.22);
+      }
+      .aw-step-node.done .aw-step-circle {
+        border-color: #00e5c8; background: #00e5c8; color: #030a0e;
+      }
+      .aw-step-label {
+        font-size: 9.5px; font-family: 'Outfit', sans-serif;
+        color: rgba(255,255,255,.28); white-space: nowrap; transition: color .3s;
+      }
+      .aw-step-node.active .aw-step-label,
+      .aw-step-node.done .aw-step-label { color: rgba(0,229,200,.65); }
+      .aw-step-line {
+        width: 44px; height: 1px; background: rgba(255,255,255,.09);
+        margin-bottom: 13px; flex-shrink: 0; transition: background .3s;
+      }
+      .aw-step-line.done { background: rgba(0,229,200,.3); }
+
+      /* ── Panels ── */
+      .aw-body { padding: 40px 36px; }
+      .aw-panel { display: none; animation: awFade .35s ease forwards; }
+      .aw-panel.active { display: block; }
+      @keyframes awFade {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      /* ── Panel headings ── */
+      .aw-eyebrow {
+        font-family: 'Share Tech Mono', monospace; font-size: 10px;
+        letter-spacing: .12em; text-transform: uppercase;
+        color: rgba(0,229,200,.5); margin-bottom: 10px;
+      }
+      .aw-ptitle {
+        font-family: 'Rajdhani', sans-serif;
+        font-size: clamp(1.25rem, 3vw, 1.7rem); font-weight: 700;
+        color: #f0f8ff; margin: 0 0 7px; line-height: 1.2;
+      }
+      .aw-psub {
+        font-size: 13.5px; color: rgba(220,235,255,.48);
+        line-height: 1.6; margin: 0 0 28px; font-family: 'Outfit', sans-serif;
+      }
+
+      /* ── Fields ── */
+      .aw-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 30px; }
+      .aw-field { display: flex; flex-direction: column; gap: 6px; }
+      .aw-field.full { grid-column: 1 / -1; }
+      .aw-field label {
+        font-size: 11px; font-family: 'Share Tech Mono', monospace;
+        text-transform: uppercase; letter-spacing: .08em; color: rgba(200,220,240,.48);
+      }
+      .aw-field input, .aw-field select {
+        background: rgba(6,14,24,.9); border: 1px solid rgba(255,255,255,.09);
+        border-radius: 11px; padding: 12px 15px; color: #e5f0fa; font-size: 14px;
+        font-family: 'Outfit', sans-serif; outline: none; appearance: none;
+        -webkit-appearance: none; transition: border-color .2s, box-shadow .2s;
+      }
+      .aw-field input::placeholder { color: rgba(200,220,240,.22); }
+      .aw-field input:focus, .aw-field select:focus {
+        border-color: rgba(0,229,200,.38); box-shadow: 0 0 0 3px rgba(0,229,200,.07);
+      }
+      .aw-field select {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300e5c8' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat; background-position: right 13px center;
+        padding-right: 36px; cursor: pointer;
+      }
+      .aw-field select option { background: #060e18; color: #e5f0fa; }
+
+      /* ── Checklist ── */
+      .aw-questions { display: flex; flex-direction: column; gap: 14px; margin-bottom: 28px; }
+      .aw-question {
+        background: rgba(6,13,22,.65); border: 1px solid rgba(255,255,255,.06);
+        border-radius: 13px; padding: 17px 18px; transition: border-color .2s;
+      }
+      .aw-question.answered { border-color: rgba(0,229,200,.18); }
+      .aw-q-num {
+        font-family: 'Share Tech Mono', monospace; font-size: 9.5px;
+        color: rgba(0,229,200,.38); margin-bottom: 5px; letter-spacing: .08em;
+      }
+      .aw-q-text {
+        font-size: 13.5px; color: rgba(225,238,255,.82);
+        font-family: 'Outfit', sans-serif; margin-bottom: 13px; line-height: 1.5;
+      }
+      .aw-q-opts { display: flex; gap: 7px; flex-wrap: wrap; }
+      .aw-opt {
+        flex: 1; min-width: 85px; padding: 9px 11px; border-radius: 9px;
+        border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.03);
+        color: rgba(200,220,240,.65); font-size: 12px; font-family: 'Outfit', sans-serif;
+        cursor: pointer; text-align: center; transition: all .18s; user-select: none;
+      }
+      .aw-opt:hover { border-color: rgba(0,229,200,.22); background: rgba(0,229,200,.05); color: rgba(0,229,200,.85); }
+      .aw-opt.sel { border-color: #00e5c8; background: rgba(0,229,200,.11); color: #00e5c8; box-shadow: 0 0 10px rgba(0,229,200,.1); }
+      .aw-opt.sel-mid { border-color: rgba(230,160,30,.45); background: rgba(230,160,30,.07); color: rgba(230,170,50,.9); }
+      .aw-opt.sel-bad { border-color: rgba(215,65,65,.45); background: rgba(215,65,65,.07); color: rgba(220,100,100,.9); }
+
+      /* ── Contact note ── */
+      .aw-note {
+        display: flex; align-items: flex-start; gap: 11px;
+        background: rgba(0,229,200,.05); border: 1px solid rgba(0,229,200,.13);
+        border-radius: 11px; padding: 13px 15px; margin-bottom: 22px;
+        font-size: 13px; color: rgba(200,230,250,.7); line-height: 1.55;
+        font-family: 'Outfit', sans-serif;
+      }
+      .aw-note svg { width: 17px; height: 17px; flex-shrink: 0; stroke: #00e5c8; margin-top: 1px; }
+
+      /* ── Nav buttons ── */
+      .aw-nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+      .aw-btn {
+        display: inline-flex; align-items: center; gap: 7px; padding: 12px 26px;
+        border-radius: 100px; font-size: 13.5px; font-family: 'Outfit', sans-serif;
+        font-weight: 600; cursor: pointer; transition: all .2s; border: none; outline: none;
+        text-decoration: none; line-height: 1;
+      }
+      .aw-btn-primary { background: #00e5c8; color: #030a0e; }
+      .aw-btn-primary:hover { background: #4dfce8; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(0,229,200,.22); }
+      .aw-btn-ghost { background: transparent; border: 1px solid rgba(255,255,255,.11); color: rgba(200,220,240,.55); }
+      .aw-btn-ghost:hover { border-color: rgba(255,255,255,.22); color: rgba(200,220,240,.85); }
+      .aw-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+      .aw-btn-primary svg { stroke: #030a0e; }
+      .aw-btn-ghost svg { stroke: currentColor; }
+
+      /* ── Errors ── */
+      .aw-err { font-size: 11.5px; color: rgba(215,90,90,.85); margin-top: 3px; display: none; }
+      .aw-err.on { display: block; }
+
+      /* ── Loading ── */
+      .aw-loading { text-align: center; padding: 16px 0 8px; }
+      .aw-spinner { width: 68px; height: 68px; margin: 0 auto 26px; position: relative; }
+      .aw-ring {
+        position: absolute; inset: 0; border-radius: 50%;
+        border: 2px solid rgba(0,229,200,.1);
+        border-top-color: #00e5c8; animation: awSpin 1s linear infinite;
+      }
+      .aw-ring2 {
+        position: absolute; top: 9px; left: 9px; right: 9px; bottom: 9px;
+        border-radius: 50%; border: 1.5px solid rgba(0,229,200,.06);
+        border-bottom-color: rgba(0,229,200,.38); animation: awSpin 1.6s linear infinite reverse;
+      }
+      @keyframes awSpin { to { transform: rotate(360deg); } }
+      .aw-loading-title {
+        font-family: 'Rajdhani', sans-serif; font-size: 1.45rem;
+        font-weight: 700; color: #f0f8ff; margin-bottom: 6px;
+      }
+      .aw-loading-url { font-size: 12px; color: rgba(200,220,240,.42); margin-bottom: 28px; font-family: 'Share Tech Mono', monospace; word-break: break-all; }
+      .aw-prog-track { height: 3px; background: rgba(255,255,255,.06); border-radius: 10px; overflow: hidden; max-width: 340px; margin: 0 auto 14px; }
+      .aw-prog-fill { height: 100%; background: linear-gradient(90deg,#00e5c8,#4dfce8); border-radius: 10px; width: 0%; transition: width .45s ease; }
+      .aw-load-status { font-family: 'Share Tech Mono', monospace; font-size: 10.5px; letter-spacing: .08em; color: rgba(0,229,200,.5); min-height: 16px; }
+
+      /* ── Report ── */
+      .aw-rpt-head {
+        display: flex; align-items: flex-start; justify-content: space-between;
+        gap: 16px; flex-wrap: wrap; margin-bottom: 32px;
+        padding-bottom: 26px; border-bottom: 1px solid rgba(255,255,255,.06);
+      }
+      .aw-rpt-meta { flex: 1; min-width: 170px; }
+      .aw-rpt-badge {
+        display: inline-flex; align-items: center; gap: 7px;
+        background: rgba(0,229,200,.07); border: 1px solid rgba(0,229,200,.18);
+        border-radius: 100px; padding: 4px 12px; font-family: 'Share Tech Mono', monospace;
+        font-size: 9.5px; letter-spacing: .1em; color: rgba(0,229,200,.65); margin-bottom: 10px;
+      }
+      .aw-rpt-badge::before {
+        content: ''; width: 5px; height: 5px; border-radius: 50%;
+        background: #00e5c8; animation: awPulse 1.5s ease-in-out infinite;
+      }
+      @keyframes awPulse { 0%,100%{opacity:1}50%{opacity:.3} }
+      .aw-rpt-url { font-family: 'Share Tech Mono', monospace; font-size: 13px; color: rgba(200,220,240,.68); word-break: break-all; margin-bottom: 3px; }
+      .aw-rpt-date { font-size: 11px; color: rgba(200,220,240,.3); font-family: 'Outfit', sans-serif; }
+
+      /* Gauge */
+      .aw-overall { display: flex; align-items: center; gap: 18px; flex-shrink: 0; }
+      .aw-gauge-wrap { position: relative; width: 88px; height: 88px; flex-shrink: 0; }
+      .aw-gauge-svg { width: 88px; height: 88px; transform: rotate(-90deg); }
+      .aw-gauge-bg { fill: none; stroke: rgba(255,255,255,.06); stroke-width: 7; }
+      .aw-gauge-fill { fill: none; stroke-width: 7; stroke-linecap: round; stroke-dasharray: 226; stroke-dashoffset: 226; transition: stroke-dashoffset 1.2s cubic-bezier(.4,0,.2,1), stroke .4s; }
+      .aw-gauge-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+      .aw-gauge-num { font-family: 'Orbitron', monospace; font-size: 21px; font-weight: 700; line-height: 1; color: #f0f8ff; }
+      .aw-gauge-sub { font-size: 8px; color: rgba(200,220,240,.36); font-family: 'Outfit', sans-serif; margin-top: 2px; }
+      .aw-verdict-label { font-size: 10.5px; color: rgba(200,220,240,.4); font-family: 'Outfit', sans-serif; margin-bottom: 3px; }
+      .aw-verdict-text { font-family: 'Rajdhani', sans-serif; font-size: .95rem; font-weight: 600; color: #f0f8ff; line-height: 1.25; max-width: 148px; }
+
+      /* Category bars */
+      .aw-cats { margin-bottom: 28px; }
+      .aw-cats-label { font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(200,220,240,.3); margin-bottom: 14px; }
+      .aw-cat { display: grid; grid-template-columns: 110px 1fr 44px; align-items: center; gap: 11px; margin-bottom: 10px; }
+      .aw-cat-name { font-size: 12.5px; color: rgba(215,230,250,.72); font-family: 'Outfit', sans-serif; white-space: nowrap; }
+      .aw-cat-track { height: 5px; background: rgba(255,255,255,.06); border-radius: 10px; overflow: hidden; }
+      .aw-cat-fill { height: 100%; border-radius: 10px; width: 0%; transition: width 1s cubic-bezier(.4,0,.2,1); }
+      .aw-cat-score { font-family: 'Share Tech Mono', monospace; font-size: 11.5px; text-align: right; }
+
+      .s-good { color: #00e5c8; } .s-ok { color: #e9a022; } .s-bad { color: #e05555; }
+      .f-good { background: linear-gradient(90deg,#00e5c8,#4dfce8); }
+      .f-ok   { background: linear-gradient(90deg,#c07810,#e9a022); }
+      .f-bad  { background: linear-gradient(90deg,#a02828,#e05555); }
+
+      /* CWV */
+      .aw-cwv { background: rgba(5,11,20,.65); border: 1px solid rgba(255,255,255,.06); border-radius: 13px; padding: 18px; margin-bottom: 26px; }
+      .aw-cwv-label { font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(200,220,240,.3); margin-bottom: 14px; }
+      .aw-cwv-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(110px,1fr)); gap: 10px; }
+      .aw-cwv-item { text-align: center; padding: 11px 8px; background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.055); border-radius: 9px; }
+      .aw-cwv-metric { font-family: 'Orbitron', monospace; font-size: 15px; font-weight: 700; margin-bottom: 3px; }
+      .aw-cwv-name { font-size: 9.5px; color: rgba(200,220,240,.36); font-family: 'Share Tech Mono', monospace; letter-spacing: .06em; margin-bottom: 1px; }
+      .aw-cwv-desc { font-size: 9.5px; font-family: 'Outfit', sans-serif; color: rgba(200,220,240,.28); }
+
+      /* Findings */
+      .aw-findings { margin-bottom: 28px; }
+      .aw-findings-label { font-family: 'Share Tech Mono', monospace; font-size: 9.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(200,220,240,.3); margin-bottom: 14px; }
+      .aw-finding { display: flex; gap: 13px; align-items: flex-start; padding: 15px; border-radius: 11px; border: 1px solid; margin-bottom: 9px; line-height: 1.5; }
+      .aw-finding.critical { background: rgba(190,45,45,.055); border-color: rgba(195,50,50,.2); }
+      .aw-finding.warning  { background: rgba(210,150,25,.055); border-color: rgba(210,155,30,.2); }
+      .aw-finding.good     { background: rgba(0,229,200,.045); border-color: rgba(0,229,200,.14); }
+      .aw-finding-icon { font-size: 14px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+      .aw-finding-body { font-size: 13px; font-family: 'Outfit', sans-serif; color: rgba(215,232,250,.75); }
+      .aw-finding-body strong { display: block; font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+      .aw-finding.critical .aw-finding-body strong { color: rgba(235,120,120,.95); }
+      .aw-finding.warning  .aw-finding-body strong { color: rgba(235,185,70,.95); }
+      .aw-finding.good     .aw-finding-body strong { color: #00e5c8; }
+
+      /* Report CTA */
+      .aw-rpt-cta { background: rgba(0,229,200,.04); border: 1px solid rgba(0,229,200,.13); border-radius: 15px; padding: 26px; text-align: center; }
+      .aw-rpt-cta h3 { font-family: 'Rajdhani', sans-serif; font-size: 1.3rem; font-weight: 700; color: #f0f8ff; margin: 0 0 8px; }
+      .aw-rpt-cta p { font-size: 13px; color: rgba(200,220,240,.55); margin: 0 0 20px; line-height: 1.6; font-family: 'Outfit', sans-serif; }
+      .aw-cta-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+      /* API note */
+      .aw-api-note { display: none; font-size: 11px; color: rgba(200,200,200,.38); font-style: italic; text-align: center; margin-bottom: 18px; font-family: 'Outfit', sans-serif; }
+      .aw-api-note.on { display: block; }
+
+      /* ── Responsive ── */
+      @media (max-width: 600px) {
+        .aw-header { padding: 18px 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
+        .aw-body { padding: 28px 18px; }
+        .aw-fields { grid-template-columns: 1fr; }
+        .aw-field.full { grid-column: 1; }
+        .aw-step-line { width: 26px; }
+        .aw-cat { grid-template-columns: 82px 1fr 38px; }
+        .aw-rpt-head { flex-direction: column; }
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Free Web Audit",
+      "description": "Free web audit: we analyze your site's speed, SEO, mobile experience and conversion in minutes. Get a personalized report built on real data.",
+      "url": "https://raven3.com.ar/en/free-web-audit.html",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS"
+      },
+      "provider": {
+        "@type": "Organization",
+        "name": "Raven3",
+        "url": "https://raven3.com.ar/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Buenos Aires",
+          "addressCountry": "AR"
+        }
+      },
+      "areaServed": "Argentina"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raven3.com.ar/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Free web audit", "item": "https://raven3.com.ar/en/free-web-audit.html"}
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="progress" aria-hidden="true"></div>
+
+    <div id="background" aria-hidden="true">
+      <canvas id="particles"></canvas>
+    </div>
+
+    <div class="wasap">
+      <a href="https://api.whatsapp.com/send?l=en&amp;text=Hi%20Raven3!%20I%27d%20like%20to%20know%20more%20about%20Raven3&amp;phone=5491134568899" target="_blank" rel="noopener" aria-label="Send a WhatsApp message"></a>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="https://raven3.com.ar/en/" class="logo" aria-label="Raven3 — Home">
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Main navigation">
+          <div class="topbar__dropdown">
+            <a class="topbar__link topbar__link--parent" href="/en/#servicios">Services</a>
+            <div class="topbar__sub">
+              <a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Custom web development</a>
+              <a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online stores</a>
+              <a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a>
+            </div>
+          </div>
+          <a class="topbar__link" href="/en/#proceso">Process</a>
+          <a class="topbar__link" href="/en/clients.html">Clients</a>
+          <a class="topbar__link" href="/en/about.html">About</a>
+          <a class="topbar__link" href="/blog/">Blog</a>
+          <a class="topbar__link is-active" href="/en/free-web-audit.html">Audit</a>
+          <a class="topbar__link" href="/en/contact.html">Contact</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/auditoria-web-gratuita.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/free-web-audit.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+        </nav>
+        <div class="topbar-sys" aria-hidden="true">
+          <span class="topbar-sys-dot"></span>
+          SYS NOMINAL
+        </div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/auditoria-web-gratuita.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/free-web-audit.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="/en/contact.html">Free audit</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-audit">
+        <div class="container">
+          <div class="eyebrow">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            Free tool · Raven3
+          </div>
+          <h1>Find out the real state of<br /><em>your website in 3 minutes</em></h1>
+          <p class="hero-sub">Speed, SEO, mobile experience and conversion. No installs, no signups, real data.</p>
+          <div class="hero-pills">
+            <span class="hero-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Speed &amp; Performance
+            </span>
+            <span class="hero-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+              SEO &amp; visibility
+            </span>
+            <span class="hero-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              Mobile experience
+            </span>
+            <span class="hero-pill">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+              Conversion
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="audit-wrap" id="auditoria">
+        <div class="container">
+          <div class="audit-wizard">
+
+            <!-- Step progress header -->
+            <div class="aw-header">
+              <div class="aw-title">AUDIT / RAVEN3</div>
+              <div class="aw-steps">
+                <div class="aw-step-node active" data-node="1">
+                  <div class="aw-step-circle">1</div>
+                  <span class="aw-step-label">Your site</span>
+                </div>
+                <div class="aw-step-line" id="awLine1"></div>
+                <div class="aw-step-node" data-node="2">
+                  <div class="aw-step-circle">2</div>
+                  <span class="aw-step-label">Status</span>
+                </div>
+                <div class="aw-step-line" id="awLine2"></div>
+                <div class="aw-step-node" data-node="3">
+                  <div class="aw-step-circle">3</div>
+                  <span class="aw-step-label">Your info</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="aw-body">
+
+              <!-- ── STEP 1 ── -->
+              <div class="aw-panel active" id="awStep1">
+                <div class="aw-eyebrow">Step 01 — Site details</div>
+                <h2 class="aw-ptitle">What's your website?</h2>
+                <p class="aw-psub">Enter the URL and tell us a bit about your business so we can tailor the report.</p>
+                <div class="aw-fields">
+                  <div class="aw-field full">
+                    <label for="awUrl">Your website URL</label>
+                    <input id="awUrl" type="url" placeholder="https://yourbusiness.com" autocomplete="url" />
+                    <span class="aw-err" id="awUrlErr">Enter a valid URL (e.g. https://yourbusiness.com)</span>
+                  </div>
+                  <div class="aw-field full">
+                    <label for="awBusiness">Business or project name</label>
+                    <input id="awBusiness" type="text" placeholder="E.g. Fernández &amp; Associates" />
+                    <span class="aw-err" id="awBizErr">Enter your business name</span>
+                  </div>
+                  <div class="aw-field">
+                    <label for="awType">Business type</label>
+                    <select id="awType">
+                      <option value="">Select</option>
+                      <option value="servicios">Professional services</option>
+                      <option value="comercio">Retail / Commerce</option>
+                      <option value="gastro">Restaurant / Food service</option>
+                      <option value="salud">Health / Wellness</option>
+                      <option value="inmobiliaria">Real estate</option>
+                      <option value="educacion">Education</option>
+                      <option value="ecommerce">Online store</option>
+                      <option value="portfolio">Personal portfolio</option>
+                      <option value="otro">Other</option>
+                    </select>
+                  </div>
+                  <div class="aw-field">
+                    <label for="awGoal">Main goal</label>
+                    <select id="awGoal">
+                      <option value="">Select</option>
+                      <option value="clientes">Get more clients</option>
+                      <option value="google">Improve Google ranking</option>
+                      <option value="ventas">Sell online</option>
+                      <option value="imagen">Modernize my brand image</option>
+                      <option value="velocidad">Improve site speed</option>
+                      <option value="otro">Other</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="aw-nav">
+                  <span></span>
+                  <button class="aw-btn aw-btn-primary" id="awNext1" type="button">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ── STEP 2 ── -->
+              <div class="aw-panel" id="awStep2">
+                <div class="aw-eyebrow">Step 02 — Initial diagnosis</div>
+                <h2 class="aw-ptitle">Your website's current state</h2>
+                <p class="aw-psub">Answer based on what you know. "Not sure" is a valid answer.</p>
+                <div class="aw-questions">
+
+                  <div class="aw-question" data-q="q1">
+                    <div class="aw-q-num">01 / SPEED</div>
+                    <div class="aw-q-text">Does your site load in under 3 seconds on mobile?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, it's fast</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Not sure / Sometimes</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">No, it's slow</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q2">
+                    <div class="aw-q-num">02 / MOBILE</div>
+                    <div class="aw-q-text">Does it look good on phones and tablets?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, completely</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Somewhat</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">Not responsive</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q3">
+                    <div class="aw-q-num">03 / SECURITY</div>
+                    <div class="aw-q-text">Does your site have HTTPS? (the lock icon in the browser bar)</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, has HTTPS</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Not sure</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">No, shows HTTP</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q4">
+                    <div class="aw-q-num">04 / SEO</div>
+                    <div class="aw-q-text">Do you show up on Google when someone searches for your service or business?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, 1st page</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Later pages</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">I don't show up</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q5">
+                    <div class="aw-q-num">05 / CONTENT</div>
+                    <div class="aw-q-text">Does your site's copy mention your services and location?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, well written</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Somewhat</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">It's generic</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q6">
+                    <div class="aw-q-num">06 / ANALYTICS</div>
+                    <div class="aw-q-text">Do you have Google Analytics or another tracking tool set up?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, set up</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Not sure</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">No, I don't</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q7">
+                    <div class="aw-q-num">07 / IMAGES</div>
+                    <div class="aw-q-text">Do your site's images load quickly?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, load fine</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Not sure</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">Slow / heavy</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q8">
+                    <div class="aw-q-num">08 / DESIGN</div>
+                    <div class="aw-q-text">Does the design feel professional and build trust?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, looks modern</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">It's outdated</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">Basic / templated</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q9">
+                    <div class="aw-q-num">09 / CONVERSION</div>
+                    <div class="aw-q-text">Does it have clear ways to contact you? (WhatsApp, form, call button)</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, clearly visible</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">A few</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">None / hard to find</div>
+                    </div>
+                  </div>
+
+                  <div class="aw-question" data-q="q10">
+                    <div class="aw-q-num">10 / AGE</div>
+                    <div class="aw-q-text">Has your domain been online for more than a year?</div>
+                    <div class="aw-q-opts">
+                      <div class="aw-opt" data-val="1" data-cls="sel">Yes, over a year</div>
+                      <div class="aw-opt" data-val="0.5" data-cls="sel-mid">Less than a year</div>
+                      <div class="aw-opt" data-val="0" data-cls="sel-bad">New / don't have one</div>
+                    </div>
+                  </div>
+
+                </div>
+                <span class="aw-err" id="awQErr" style="margin-bottom:12px;display:none">Answer all the questions to continue.</span>
+                <div class="aw-nav" style="margin-top:8px">
+                  <button class="aw-btn aw-btn-ghost" id="awBack1" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Back
+                  </button>
+                  <button class="aw-btn aw-btn-primary" id="awNext2" type="button">
+                    Continue
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ── STEP 3 ── -->
+              <div class="aw-panel" id="awStep3">
+                <div class="aw-eyebrow">Step 03 — Your info</div>
+                <h2 class="aw-ptitle">Who should we send the report to?</h2>
+                <p class="aw-psub">We'll send you the full analysis and a Raven3 specialist will reach out within 24 hours.</p>
+                <div class="aw-note">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  A Raven3 specialist will review your case and reach out with concrete recommendations for your site.
+                </div>
+                <div class="aw-fields">
+                  <div class="aw-field full">
+                    <label for="awName">Full name</label>
+                    <input id="awName" type="text" placeholder="Your name" autocomplete="name" />
+                    <span class="aw-err" id="awNameErr">Enter your name</span>
+                  </div>
+                  <div class="aw-field">
+                    <label for="awEmail">Email</label>
+                    <input id="awEmail" type="email" placeholder="you@email.com" autocomplete="email" />
+                    <span class="aw-err" id="awEmailErr">Enter a valid email</span>
+                  </div>
+                  <div class="aw-field">
+                    <label for="awPhone">Phone <span style="opacity:.38">(optional)</span></label>
+                    <input id="awPhone" type="tel" placeholder="+1 555 ..." autocomplete="tel" />
+                  </div>
+                </div>
+                <div class="aw-nav">
+                  <button class="aw-btn aw-btn-ghost" id="awBack2" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+                    Back
+                  </button>
+                  <button class="aw-btn aw-btn-primary" id="awRunAudit" type="button">
+                    Analyze my site
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- ── LOADING ── -->
+              <div class="aw-panel" id="awLoading">
+                <div class="aw-loading">
+                  <div class="aw-spinner">
+                    <div class="aw-ring"></div>
+                    <div class="aw-ring2"></div>
+                  </div>
+                  <div class="aw-loading-title">Analyzing your website</div>
+                  <div class="aw-loading-url" id="awLoadUrl"></div>
+                  <div class="aw-prog-track">
+                    <div class="aw-prog-fill" id="awProgFill"></div>
+                  </div>
+                  <div class="aw-load-status" id="awLoadStatus">Starting analysis...</div>
+                </div>
+              </div>
+
+              <!-- ── RESULTS ── -->
+              <div class="aw-panel" id="awResults">
+                <div>
+                  <!-- Report header -->
+                  <div class="aw-rpt-head">
+                    <div class="aw-rpt-meta">
+                      <div class="aw-rpt-badge">REPORT GENERATED</div>
+                      <div class="aw-rpt-url" id="rptUrl"></div>
+                      <div class="aw-rpt-date" id="rptDate"></div>
+                    </div>
+                    <div class="aw-overall">
+                      <div class="aw-gauge-wrap">
+                        <svg class="aw-gauge-svg" viewBox="0 0 88 88" aria-hidden="true">
+                          <circle class="aw-gauge-bg" cx="44" cy="44" r="36"/>
+                          <circle class="aw-gauge-fill" id="rptGaugeFill" cx="44" cy="44" r="36"/>
+                        </svg>
+                        <div class="aw-gauge-text">
+                          <span class="aw-gauge-num" id="rptScore">0</span>
+                          <span class="aw-gauge-sub">/ 100</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div class="aw-verdict-label">Overall score</div>
+                        <div class="aw-verdict-text" id="rptVerdict"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Category bars -->
+                  <div class="aw-cats">
+                    <div class="aw-cats-label">Analysis by category</div>
+                    <div class="aw-cat"><span class="aw-cat-name">Speed</span><div class="aw-cat-track"><div class="aw-cat-fill" id="barVel"></div></div><span class="aw-cat-score" id="sVel">—</span></div>
+                    <div class="aw-cat"><span class="aw-cat-name">SEO</span><div class="aw-cat-track"><div class="aw-cat-fill" id="barSeo"></div></div><span class="aw-cat-score" id="sSeo">—</span></div>
+                    <div class="aw-cat"><span class="aw-cat-name">Mobile</span><div class="aw-cat-track"><div class="aw-cat-fill" id="barMob"></div></div><span class="aw-cat-score" id="sMob">—</span></div>
+                    <div class="aw-cat"><span class="aw-cat-name">Conversion</span><div class="aw-cat-track"><div class="aw-cat-fill" id="barConv"></div></div><span class="aw-cat-score" id="sConv">—</span></div>
+                    <div class="aw-cat"><span class="aw-cat-name">Technical</span><div class="aw-cat-track"><div class="aw-cat-fill" id="barTec"></div></div><span class="aw-cat-score" id="sTec">—</span></div>
+                  </div>
+
+                  <!-- Core Web Vitals -->
+                  <div class="aw-cwv" id="cwvBlock">
+                    <div class="aw-cwv-label">Core Web Vitals · Mobile</div>
+                    <div class="aw-cwv-grid">
+                      <div class="aw-cwv-item"><div class="aw-cwv-name">FCP</div><div class="aw-cwv-metric" id="cwvFcp">—</div><div class="aw-cwv-desc">First Contentful Paint</div></div>
+                      <div class="aw-cwv-item"><div class="aw-cwv-name">LCP</div><div class="aw-cwv-metric" id="cwvLcp">—</div><div class="aw-cwv-desc">Largest Contentful Paint</div></div>
+                      <div class="aw-cwv-item"><div class="aw-cwv-name">TBT</div><div class="aw-cwv-metric" id="cwvTbt">—</div><div class="aw-cwv-desc">Total Blocking Time</div></div>
+                      <div class="aw-cwv-item"><div class="aw-cwv-name">CLS</div><div class="aw-cwv-metric" id="cwvCls">—</div><div class="aw-cwv-desc">Cumulative Layout Shift</div></div>
+                    </div>
+                  </div>
+
+                  <!-- API fallback note -->
+                  <div class="aw-api-note" id="awApiNote">* Metrics based on questionnaire. We couldn't reach the site's automated analysis.</div>
+
+                  <!-- Findings -->
+                  <div class="aw-findings">
+                    <div class="aw-findings-label">Key findings</div>
+                    <div id="rptFindings"></div>
+                  </div>
+
+                  <!-- CTA -->
+                  <div class="aw-rpt-cta">
+                    <h3>Want Raven3 to fix these issues?</h3>
+                    <p>We'll take a deeper look at your case and put together a concrete plan to improve your site, SEO and conversion.</p>
+                    <div class="aw-cta-row">
+                      <a class="aw-btn aw-btn-primary" href="/en/contact.html">
+                        I want to improve my site
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                      </a>
+                      <a class="aw-btn aw-btn-ghost" href="https://api.whatsapp.com/send?l=en&amp;text=Hi%20Raven3!%20I%20just%20ran%20the%20free%20audit%20and%20I%27d%20like%20to%20know%20how%20to%20improve%20my%20site&amp;phone=5491134568899" target="_blank" rel="noopener">
+                        Chat on WhatsApp
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div><!-- /aw-body -->
+          </div><!-- /audit-wizard -->
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" aria-label="Footer">
+      <div class="container">
+        <div class="footer-newsletter">
+          <div class="footer-newsletter__copy">
+            <span class="footer-newsletter__label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              NEWSLETTER
+            </span>
+            <p class="footer-newsletter__tagline">Web Performance Insights — technical content only, no fluff.</p>
+          </div>
+          <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+            <div class="footer-newsletter__field">
+              <input id="newsletter-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" aria-label="Your email for the newsletter" required />
+              <input type="hidden" name="_subject" value="New Raven3 subscriber" />
+              <button type="submit" id="newsletter-btn" data-idle-text="Subscribe" data-sending-text="…" data-success-text="Subscribed ✓" data-already-text="Already subscribed ✓" data-retry-text="Retry">
+                Subscribe
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+            <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite" data-sending-text="Processing…" data-success-msg="Done: <strong>{email}</strong> subscribed." data-already-msg="<strong>{email}</strong> was already subscribed." data-error-text="Something went wrong. Please try again."></p>
+          </form>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="https://raven3.com.ar/en/" aria-label="Raven3 — Home" style="display:inline-block;margin-bottom:16px">
+              <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+            </a>
+            <p>Digital agency specializing in custom web development, e-commerce, technical SEO and premium digital architecture. No templates. Real results.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar">Email us</a>
+              <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener">WhatsApp</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="/en/services/custom-web-development.html">Web development</a></li>
+              <li><a href="/en/services/online-stores.html">Online stores</a></li>
+              <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+              <li><a href="/en/websites-by-industry.html">Websites by industry</a></li>
+              <li><a href="/en/free-web-audit.html">Free audit</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-contact-list">
+              <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+              <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener">+54 9 11 3456-8899</a></li>
+              <li>Buenos Aires, Argentina</li>
+            </ul>
+            <h3 style="margin-top:24px">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/en/about.html">About Raven3</a></li>
+              <li><a href="/en/clients.html">Clients</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom small">
+          <span>
+            <span id="year"></span> © Raven3. All rights reserved.
+            <span class="footer-legal">
+              · <a href="/en/privacy-policy.html">Privacy Policy</a>
+              · <a href="/en/terms.html">Terms</a>
+              · <a href="/raven3-brand-guidelines.html">Brand Guidelines</a>
+            </span>
+          </span>
+          <div class="footer-socials">
+            <a href="https://www.instagram.com/agencia.raven3/" target="_blank" rel="noopener" aria-label="Raven3 on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg>
+            </a>
+            <a href="https://github.com/raven3-agency/" target="_blank" rel="noopener" aria-label="Raven3 on GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.48.12-3.08 0 0 .98-.31 3.18 1.2A11.08 11.08 0 0 1 12 6.03c.98 0 1.96.13 2.88.39 2.2-1.51 3.18-1.2 3.18-1.2.64 1.6.24 2.78.12 3.08.75.82 1.2 1.85 1.2 3.12 0 4.45-2.7 5.43-5.28 5.72.42.36.79 1.07.79 2.16v3.04c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/particles.js"></script>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      (() => {
+        document.querySelectorAll('.flow-card').forEach(card => {
+          if (!card.querySelector('.flow-spot')) {
+            const g = document.createElement('span');
+            g.className = 'flow-spot';
+            card.appendChild(g);
+          }
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--mx', `${e.clientX - r.left}px`);
+            card.style.setProperty('--my', `${e.clientY - r.top}px`);
+          });
+        });
+      })();
+    </script>
+
+    <!-- ── AUDIT WIZARD ENGINE ── -->
+    <script>
+    (() => {
+      'use strict';
+
+      const state = {
+        url: '', business: '', type: '', goal: '',
+        answers: {}, name: '', email: '', phone: '',
+        scores: null, cwv: null, apiUsed: false,
+      };
+
+      /* ── Utilities ── */
+      function norm(raw) {
+        let u = raw.trim();
+        if (!u) return null;
+        if (!/^https?:\/\//i.test(u)) u = 'https://' + u;
+        try { new URL(u); return u; } catch { return null; }
+      }
+      function show(id) {
+        document.querySelectorAll('.aw-panel').forEach(p => p.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+      }
+      function setStep(n) {
+        document.querySelectorAll('.aw-step-node').forEach(nd => {
+          const i = +nd.dataset.node;
+          nd.classList.toggle('active', i === n);
+          nd.classList.toggle('done', i < n);
+        });
+        document.getElementById('awLine1').classList.toggle('done', n > 1);
+        document.getElementById('awLine2').classList.toggle('done', n > 2);
+      }
+      function sc(s) { return s >= 75 ? 's-good' : s >= 50 ? 's-ok' : 's-bad'; }
+      function fc(s) { return s >= 75 ? 'f-good' : s >= 50 ? 'f-ok' : 'f-bad'; }
+      function gc(s) { return s >= 75 ? '#00e5c8' : s >= 50 ? '#e9a022' : '#e05555'; }
+
+      /* ── Step 1 ── */
+      document.getElementById('awNext1').addEventListener('click', () => {
+        let ok = true;
+        const u = norm(document.getElementById('awUrl').value);
+        if (!u) { document.getElementById('awUrlErr').classList.add('on'); ok = false; }
+        else { document.getElementById('awUrlErr').classList.remove('on'); state.url = u; }
+        const b = document.getElementById('awBusiness').value.trim();
+        if (!b) { document.getElementById('awBizErr').classList.add('on'); ok = false; }
+        else { document.getElementById('awBizErr').classList.remove('on'); state.business = b; }
+        state.type = document.getElementById('awType').value;
+        state.goal = document.getElementById('awGoal').value;
+        if (!ok) return;
+        setStep(2); show('awStep2');
+      });
+
+      /* ── Checklist ── */
+      document.querySelectorAll('.aw-question').forEach(q => {
+        const key = q.dataset.q;
+        q.querySelectorAll('.aw-opt').forEach(opt => {
+          opt.addEventListener('click', () => {
+            q.querySelectorAll('.aw-opt').forEach(o => o.classList.remove('sel','sel-mid','sel-bad'));
+            opt.classList.add(opt.dataset.cls);
+            state.answers[key] = parseFloat(opt.dataset.val);
+            q.classList.add('answered');
+          });
+        });
+      });
+
+      document.getElementById('awBack1').addEventListener('click', () => { setStep(1); show('awStep1'); });
+
+      document.getElementById('awNext2').addEventListener('click', () => {
+        if (Object.keys(state.answers).length < 10) {
+          const errEl = document.getElementById('awQErr');
+          errEl.classList.add('on');
+          const first = document.querySelector('.aw-question:not(.answered)');
+          if (first) first.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+        document.getElementById('awQErr').classList.remove('on');
+        setStep(3); show('awStep3');
+      });
+
+      /* ── Step 3 ── */
+      document.getElementById('awBack2').addEventListener('click', () => { setStep(2); show('awStep2'); });
+
+      document.getElementById('awRunAudit').addEventListener('click', async () => {
+        let ok = true;
+        const nm = document.getElementById('awName').value.trim();
+        if (!nm) { document.getElementById('awNameErr').classList.add('on'); ok = false; }
+        else { document.getElementById('awNameErr').classList.remove('on'); state.name = nm; }
+        const em = document.getElementById('awEmail').value.trim();
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em)) { document.getElementById('awEmailErr').classList.add('on'); ok = false; }
+        else { document.getElementById('awEmailErr').classList.remove('on'); state.email = em; }
+        state.phone = document.getElementById('awPhone').value.trim();
+        if (!ok) return;
+        show('awLoading');
+        document.getElementById('awLoadUrl').textContent = state.url;
+        await runAudit();
+      });
+
+      /* ── Audit engine ── */
+      async function runAudit() {
+        const fill = document.getElementById('awProgFill');
+        const status = document.getElementById('awLoadStatus');
+        const msgs = [
+          'Checking connectivity...',
+          'Analyzing load speed...',
+          'Evaluating SEO optimization...',
+          'Reviewing mobile experience...',
+          'Calculating Core Web Vitals...',
+          'Processing results...',
+        ];
+        let prog = 0, mi = 0;
+        function adv(to, ms) {
+          return new Promise(res => {
+            const t = setInterval(() => {
+              prog = Math.min(prog + 1, to);
+              fill.style.width = prog + '%';
+              if (prog >= to) { clearInterval(t); res(); }
+            }, ms);
+          });
+        }
+        status.textContent = msgs[mi++];
+        await adv(12, 40);
+        status.textContent = msgs[mi++];
+
+        let ps = null;
+        try {
+          const r = await Promise.race([
+            fetch(`https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(state.url)}&strategy=mobile&category=performance&category=seo&category=best-practices`),
+            new Promise((_, rj) => setTimeout(() => rj(new Error('timeout')), 13000))
+          ]);
+          if (r.ok) {
+            const d = await r.json();
+            const lhr = d.lighthouseResult;
+            if (lhr) {
+              const a = lhr.audits || {};
+              ps = {
+                perf: lhr.categories?.performance?.score ?? null,
+                seo:  lhr.categories?.seo?.score ?? null,
+                bp:   lhr.categories?.['best-practices']?.score ?? null,
+                fcp:  a['first-contentful-paint']?.displayValue ?? null, fcpS: a['first-contentful-paint']?.score ?? null,
+                lcp:  a['largest-contentful-paint']?.displayValue ?? null, lcpS: a['largest-contentful-paint']?.score ?? null,
+                tbt:  a['total-blocking-time']?.displayValue ?? null, tbtS: a['total-blocking-time']?.score ?? null,
+                cls:  a['cumulative-layout-shift']?.displayValue ?? null, clsS: a['cumulative-layout-shift']?.score ?? null,
+              };
+              state.apiUsed = true;
+            }
+          }
+        } catch (_) { state.apiUsed = false; }
+
+        await adv(50, 22);
+        status.textContent = msgs[mi++];
+        await adv(72, 28);
+        status.textContent = msgs[mi++];
+        await adv(88, 32);
+        status.textContent = msgs[mi++];
+        await adv(100, 18);
+
+        state.scores = calc(state.answers, ps);
+        state.cwv = ps;
+        await new Promise(r => setTimeout(r, 350));
+
+        render();
+        show('awResults');
+        sendLead(state.scores).catch(() => {});
+
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'audit_completed', { audit_url: state.url, overall_score: state.scores.overall, api_used: state.apiUsed });
+        }
+      }
+
+      function calc(a, ps) {
+        const g = k => a[k] ?? 0.5;
+        const vel  = (g('q1') + g('q7')) / 2 * 100;
+        const mob  = g('q2') * 100;
+        const seo  = (g('q4') + g('q5')) / 2 * 100;
+        const conv = (g('q8') + g('q9')) / 2 * 100;
+        const tec  = (g('q3') + g('q6') + g('q10')) / 3 * 100;
+        let velocidad, seoScore, mobile, conversion, tecnico;
+        if (ps && ps.perf !== null) {
+          velocidad  = Math.round(ps.perf * 100 * .65 + vel * .35);
+          seoScore   = Math.round(ps.seo  * 100 * .60 + seo * .40);
+          mobile     = Math.round(ps.perf * 100 * .70 + mob * .30);
+          conversion = Math.round(conv);
+          tecnico    = Math.round((ps.bp ?? .7) * 100 * .50 + tec * .50);
+        } else {
+          velocidad = Math.round(vel); seoScore = Math.round(seo);
+          mobile = Math.round(mob); conversion = Math.round(conv); tecnico = Math.round(tec);
+        }
+        const overall = Math.round(velocidad*.25 + seoScore*.25 + mobile*.20 + conversion*.15 + tecnico*.15);
+        return { velocidad, seo: seoScore, mobile, conversion, tecnico, overall };
+      }
+
+      function render() {
+        const s = state.scores, cwv = state.cwv;
+
+        try { document.getElementById('rptUrl').textContent = new URL(state.url).hostname; }
+        catch { document.getElementById('rptUrl').textContent = state.url; }
+        document.getElementById('rptDate').textContent = new Date().toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric' });
+
+        requestAnimationFrame(() => setTimeout(() => {
+          const circ = 226;
+          const gf = document.getElementById('rptGaugeFill');
+          gf.style.strokeDashoffset = circ - (s.overall / 100) * circ;
+          gf.style.stroke = gc(s.overall);
+          let c = 0;
+          const el = document.getElementById('rptScore');
+          const t = setInterval(() => { c = Math.min(c + 2, s.overall); el.textContent = c; if (c >= s.overall) clearInterval(t); }, 18);
+        }, 180));
+
+        const labels = { 85: 'Your site has a solid foundation', 70: 'Your site is on the right track', 50: 'Improvement opportunities detected', 0: 'Critical issues detected' };
+        document.getElementById('rptVerdict').textContent = Object.entries(labels).reverse().find(([k]) => s.overall >= +k)?.[1] ?? '';
+
+        setTimeout(() => {
+          [['barVel','sVel',s.velocidad],['barSeo','sSeo',s.seo],['barMob','sMob',s.mobile],['barConv','sConv',s.conversion],['barTec','sTec',s.tecnico]].forEach(([bid, sid, score]) => {
+            const bar = document.getElementById(bid), sel = document.getElementById(sid);
+            bar.style.width = score + '%'; bar.className = 'aw-cat-fill ' + fc(score);
+            sel.textContent = score; sel.className = 'aw-cat-score ' + sc(score);
+          });
+        }, 280);
+
+        if (cwv && cwv.fcp) {
+          [['cwvFcp',cwv.fcp,cwv.fcpS],['cwvLcp',cwv.lcp,cwv.lcpS],['cwvTbt',cwv.tbt,cwv.tbtS],['cwvCls',cwv.cls,cwv.clsS]].forEach(([id,val,score]) => {
+            const el = document.getElementById(id);
+            el.textContent = val ?? '—';
+            el.className = 'aw-cwv-metric ' + sc(score !== null ? Math.round(score * 100) : 50);
+          });
+        } else {
+          document.getElementById('cwvBlock').style.display = 'none';
+          document.getElementById('awApiNote').classList.add('on');
+        }
+
+        document.getElementById('rptFindings').innerHTML = findings(s, cwv, state.answers).slice(0,5).map(f =>
+          `<div class="aw-finding ${f.t}"><div class="aw-finding-icon">${f.i}</div><div class="aw-finding-body"><strong>${f.title}</strong>${f.text}</div></div>`
+        ).join('');
+      }
+
+      function findings(s, cwv, a) {
+        const r = [];
+        if (s.velocidad < 50) r.push({ t:'critical', i:'🔴', title:'Critical speed issue', text:'Your site loads slowly. You could be losing up to 40% of visitors before they even see your content, and Google penalizes your ranking for it.' });
+        if (s.seo < 50)       r.push({ t:'critical', i:'🔴', title:'Insufficient SEO', text:"Your site isn't optimized for search engines. You're losing organic traffic every day to better-positioned competitors." });
+        if (s.mobile < 50)    r.push({ t:'critical', i:'🔴', title:'Poor mobile experience', text:'Over 70% of web traffic comes from phones. A poor mobile experience hurts both ranking and conversion.' });
+        if (s.conversion < 50) r.push({ t:'critical', i:'🔴', title:'Low conversion', text:"Your site isn't set up to turn visitors into customers. It's missing clear calls to action and visible contact options." });
+        if (s.tecnico < 50)   r.push({ t:'critical', i:'🔴', title:'Technical issues', text:'There are underlying technical problems (security, analytics, domain age) affecting trust and the site\'s ability to be indexed.' });
+        if (s.velocidad >= 50 && s.velocidad < 75) r.push({ t:'warning', i:'🟡', title:'Speed could improve', text:'There\'s room to optimize load times. Uncompressed images, blocking scripts or slow hosting are common causes with a straightforward fix.' });
+        if (s.seo >= 50 && s.seo < 75)             r.push({ t:'warning', i:'🟡', title:'SEO has room to grow', text:'SEO is partially implemented. You can scale it up by targeting specific keywords and improving content and metadata.' });
+        if (s.mobile >= 50 && s.mobile < 75)        r.push({ t:'warning', i:'🟡', title:'Mobile has room to improve', text:'The mobile version works but has room to improve. Simple adjustments can boost the experience and ranking.' });
+        if (s.conversion >= 50 && s.conversion < 75) r.push({ t:'warning', i:'🟡', title:'Conversion can be optimized', text:'Conversion elements exist but could be clearer, more visible, and create more urgency to guide users to contact you.' });
+        if (cwv && cwv.lcpS !== null && cwv.lcpS < 0.5) r.push({ t:'warning', i:'🟡', title:`High LCP: ${cwv.lcp}`, text:'Largest Contentful Paint exceeds the recommended threshold. Users wait too long to see the main content, which affects ranking.' });
+        if (s.velocidad >= 80) r.push({ t:'good', i:'✅', title:'Good load speed', text:'Your site loads fast, which improves the experience and is a positive factor for organic ranking.' });
+        if (s.mobile >= 80)    r.push({ t:'good', i:'✅', title:'Good mobile experience', text:"Your site is well adapted to mobile devices. A plus for Google's ranking (mobile-first indexing)." });
+        if (a.q3 === 1)        r.push({ t:'good', i:'✅', title:'HTTPS active', text:'Your site has an SSL certificate. It builds trust with users and is a baseline requirement for Google.' });
+        return r;
+      }
+
+      async function sendLead(scores) {
+        const body = {
+          name: state.name, email: state.email,
+          telefono: state.phone || 'Not provided',
+          url_auditada: state.url, negocio: state.business,
+          tipo: state.type, objetivo: state.goal,
+          puntaje_global: scores.overall,
+          velocidad: scores.velocidad, seo: scores.seo,
+          mobile: scores.mobile, conversion: scores.conversion,
+          tecnico: scores.tecnico,
+          analisis_automatico: state.apiUsed ? 'Yes (PageSpeed API)' : 'No (questionnaire only)',
+          _subject: `Free web audit — ${state.business} · ${scores.overall}/100`,
+          form_source: 'free-web-audit',
+        };
+        await fetch('https://formspree.io/f/mvoykeyq', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(body),
+        });
+      }
+
+    })();
+    </script>
+
+    <script>
+      document.addEventListener('click', e => {
+        const wa = e.target.closest('a[href*="whatsapp"]');
+        if (wa && typeof gtag !== 'undefined') {
+          gtag('event', 'whatsapp_click', { method: 'auditoria_resultado', page_path: window.location.pathname });
+        }
+      });
+    </script>
+
+    <script src="/assets/js/lang-switcher.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Page Not Found | Raven3</title>
+    <meta
+      name="description"
+      content="Page not found - Raven3. The page you're looking for doesn't exist or was moved. Head back home."
+    />
+    <meta name="robots" content="noindex,follow" />
+
+    <link rel="canonical" href="https://raven3.com.ar/en/404.html" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/404.html" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/404.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/404.html" />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://raven3.com.ar/assets/img/favicon_io/favicon.ico"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="https://raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      sizes="16x16"
+      href="https://raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      sizes="32x32"
+      href="https://raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
+    />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts: Orbitron (display) + Rajdhani (headings) + Outfit (body) + Share Tech Mono (labels) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Signal Intelligence Redesign -->
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-MF63Q3JMSL');
+  </script>
+  <script>
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href*="#formulario"]');
+      if (link) {
+        gtag('event', 'contact_request', {
+          'method': 'quote_click',
+          'page_path': window.location.pathname
+        });
+      }
+    });
+
+    document.addEventListener('click', function(event) {
+      const link = event.target.closest('a[href^="mailto"]');
+      if (link) {
+        gtag('event', 'email_click', {
+          'method': 'direct_email',
+          'page_path': window.location.pathname
+        });
+      }
+    });
+
+    const whatsappBtn = document.getElementById('waTrigger');
+    if (whatsappBtn) {
+      whatsappBtn.addEventListener('click', function() {
+        gtag('event', 'whatsapp_click', {
+          'method': 'whatsapp',
+          'page_path': window.location.pathname
+        });
+      });
+    }
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function() {
+        gtag('event', 'form_submission', {
+          'method': 'contact_form',
+          'page_path': window.location.pathname
+        });
+      });
+    }
+  </script>
+  </head>
+
+  <body>
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="progress" aria-hidden="true"></div>
+
+    <div id="background" aria-hidden="true">
+      <canvas id="particles"></canvas>
+    </div>
+
+    <div class="wasap">
+      <a
+        href="https://api.whatsapp.com/send?l=en&amp;text=Hi%20Raven3!%20I%27d%20like%20to%20know%20more&amp;phone=5491134568899"
+        target="_blank"
+        rel="noopener"
+        aria-label="Send a WhatsApp message"
+      >
+
+      </a>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a
+          href="https://raven3.com.ar/en/"
+          class="logo"
+          aria-label="Raven3 — Home"
+        >
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav
+          class="topbar__nav"
+          id="main-nav"
+          aria-label="Main navigation"
+        >
+          <div class="topbar__dropdown"><a class="topbar__link topbar__link--parent" href="/en/#servicios">Services</a><div class="topbar__sub"><a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Custom web development</a><a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online stores</a><a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a></div></div>
+          <a class="topbar__link" href="/en/#proceso">Process</a>
+          <a class="topbar__link" href="/en/clients.html">Clients</a>
+          <a class="topbar__link" href="/en/about.html">About</a>
+          <a class="topbar__link" href="/en/contact.html">Contact</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/404.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/404.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+        </nav>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/404.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/404.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="/en/contact.html">Free web audit</a>
+        <button
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section style="padding: 140px 0 80px; text-align: center">
+        <div class="container">
+          <p class="eyebrow" style="display: inline-flex; margin-bottom: 24px">
+            Error 404
+          </p>
+          <h1
+            style="
+              font-size: clamp(3rem, 8vw, 6rem);
+              line-height: 0.95;
+              letter-spacing: -0.05em;
+              margin-bottom: 24px;
+            "
+          >
+            Page not found
+          </h1>
+          <p
+            style="
+              max-width: 560px;
+              margin: 0 auto 36px;
+              color: var(--muted);
+              font-size: clamp(1rem, 1.4vw, 1.15rem);
+              line-height: 1.72;
+            "
+          >
+            The page you're looking for doesn't exist or has moved. Head back
+            home and we'll get you where you need to go.
+          </p>
+          <div
+            style="
+              display: flex;
+              flex-wrap: wrap;
+              gap: 14px;
+              justify-content: center;
+            "
+          >
+            <a class="btn primary" href="/en/">Back to home</a>
+            <a class="btn" href="/en/#servicios">See our services</a>
+          </div>
+          <p style="margin-top: 48px; color: var(--muted-2); font-size: 0.9rem">
+            You'll be redirected home in
+            <span id="countdown">10</span> seconds…
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" aria-label="Footer">
+      <div class="container">
+        <!-- ── Newsletter strip ── -->
+        <div class="footer-newsletter">
+          <div class="footer-newsletter__copy">
+            <span class="footer-newsletter__label">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              NEWSLETTER
+            </span>
+            <p class="footer-newsletter__tagline">Web performance insights — technical content only, no fluff.</p>
+          </div>
+          <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+            <div class="footer-newsletter__field">
+              <input id="newsletter-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" aria-label="Your email for the newsletter" required />
+              <input type="hidden" name="_subject" value="New Raven3 subscriber" />
+              <button type="submit" id="newsletter-btn" data-idle-text="Subscribe" data-sending-text="…" data-success-text="Subscribed ✓" data-already-text="Already subscribed ✓" data-retry-text="Retry">
+                Subscribe
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+            <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite" data-sending-text="Processing…" data-success-msg="Done: <strong>{email}</strong> subscribed." data-already-msg="<strong>{email}</strong> was already subscribed." data-error-text="Something went wrong. Please try again."></p>
+          </form>
+        </div>
+
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a
+              href="https://raven3.com.ar/en/"
+              aria-label="Raven3 — Home"
+              style="display: inline-block; margin-bottom: 16px"
+            >
+              <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+            </a>
+            <p>
+              Digital agency specializing in custom web development,
+              e-commerce, technical SEO and premium digital architecture.
+              No templates. Real results.
+            </p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar"
+                >Email us</a
+              >
+              <a
+                class="btn"
+                href="https://wa.me/5491134568899"
+                target="_blank"
+                rel="noopener"
+                >WhatsApp</a
+              >
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li>
+                <a href="/en/services/custom-web-development.html"
+                  >Custom web development</a
+                >
+              </li>
+              <li>
+                <a href="/en/services/online-stores.html">Online stores</a>
+              </li>
+              <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+              <li><a href="/en/#servicios">Performance &amp; CWV</a></li>
+              <li><a href="/en/#servicios">Conversion UX/UI</a></li>
+              <li><a href="/en/#servicios">API integrations</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-contact-list">
+              <li>
+                <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5491134568899"
+                  target="_blank"
+                  rel="noopener"
+                  >+54 9 11 3456-8899</a
+                >
+              </li>
+              <li>Buenos Aires, Argentina</li>
+            </ul>
+            <h3 style="margin-top: 24px">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/en/about.html">About Raven3</a></li>
+              <li><a href="/en/clients.html">Clients</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom small">
+          <span>
+            <span id="year"></span> © Raven3. All rights reserved.
+            <span class="footer-legal">
+              ·
+              <a href="/en/privacy-policy.html">Privacy Policy</a>
+              ·
+              <a href="/en/terms.html">Terms</a>
+              ·
+              <a href="/raven3-brand-guidelines.html">Brand Guidelines</a>
+            </span>
+          </span>
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/agencia.raven3/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Raven3 on Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/raven3-agency/"
+              target="_blank"
+              rel="noopener"
+              aria-label="Raven3 on GitHub"
+              ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path
+                  d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.48.12-3.08 0 0 .98-.31 3.18 1.2A11.08 11.08 0 0 1 12 6.03c.98 0 1.96.13 2.88.39 2.2-1.51 3.18-1.2 3.18-1.2.64 1.6.24 2.78.12 3.08.75.82 1.2 1.85 1.2 3.12 0 4.45-2.7 5.43-5.28 5.72.42.36.79 1.07.79 2.16v3.04c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- App modules -->
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/particles.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      let seconds = 10;
+      const countdownEl = document.getElementById("countdown");
+      const interval = setInterval(() => {
+        seconds--;
+        if (countdownEl) countdownEl.textContent = seconds;
+        if (seconds <= 0) {
+          clearInterval(interval);
+          window.location.href = "https://www.raven3.com.ar/en/";
+        }
+      }, 1000);
+    </script>
+
+    <script src="/assets/js/redesign.js" defer></script>
+    <script src="/assets/js/lang-switcher.js" defer></script>
+  </body>
+</html>

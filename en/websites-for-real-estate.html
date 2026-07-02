@@ -1,0 +1,878 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Real Estate Website Design | Raven3</title>
+
+    <meta
+      name="description"
+      content="Premium websites for real estate agencies with featured listings, Tokko integration, valuation forms, WhatsApp and professional design."
+    />
+
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <link rel="canonical" href="https://raven3.com.ar/en/websites-for-real-estate.html" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/webs-para-inmobiliarias.html" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/websites-for-real-estate.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/webs-para-inmobiliarias.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/en/websites-for-real-estate.html" />
+    <meta property="og:title" content="Real Estate Website Design | Raven3" />
+    <meta property="og:description" content="Premium websites for real estate agencies with featured listings, Tokko integration, valuation forms, WhatsApp and professional design." />
+    <meta property="og:image" content="https://raven3.com.ar/assets/img/og/webs-para-inmobiliarias.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Raven3" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://raven3.com.ar/en/websites-for-real-estate.html" />
+    <meta name="twitter:title" content="Real Estate Website Design | Raven3" />
+    <meta name="twitter:description" content="Premium websites for real estate agencies with featured listings, Tokko integration, valuation forms, WhatsApp and professional design." />
+    <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/webs-para-inmobiliarias.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+    <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-MF63Q3JMSL');
+    </script>
+
+    <script>
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href*="#formulario"]');
+        if (link) {
+          gtag('event', 'contact_request', {
+            'method': 'presupuesto_click',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href^="mailto"]');
+        if (link) {
+          gtag('event', 'email_click', {
+            'method': 'email_directo',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      const whatsappBtn = document.getElementById('waTrigger');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            'method': 'whatsapp',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+          gtag('event', 'form_submission', {
+            'method': 'formulario_contacto',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+    </script>
+
+    <style>
+      body { background: #050A0E; }
+    </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "name": "Raven3",
+          "url": "https://raven3.com.ar",
+          "logo": "https://raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png",
+          "description": "Digital agency specialized in custom web development, e-commerce, technical SEO and premium digital architecture.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Buenos Aires",
+            "addressCountry": "AR"
+          },
+          "telephone": "+5491134568899",
+          "email": "hola@raven3.com.ar",
+          "sameAs": [
+            "https://www.instagram.com/raven3.dev",
+            "https://www.linkedin.com/company/raven3"
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Websites for real estate agencies",
+          "description": "Development of premium websites for real estate agencies with featured listings, Tokko integration, property valuation forms, direct WhatsApp and professional design.",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Raven3",
+            "url": "https://raven3.com.ar"
+          },
+          "url": "https://raven3.com.ar/en/websites-for-real-estate.html",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Argentina"
+          },
+          "serviceType": "Web development for real estate agencies"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does a website for a real estate agency cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A professional website for a real estate agency starts at USD 1,000, depending on the number of listings, integrations (Tokko, MercadoLibre), valuation forms and required functionality. At Raven3 we put together proposals with a clear scope and price."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the site be integrated with Tokko Broker?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We build integrations with Tokko Broker to automatically sync your property listings with your website, no manual updates required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a real estate website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A standard real estate project takes between 3 and 5 weeks. With advanced integrations or large listing volumes it can extend up to 8 weeks."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the design custom or do you use templates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "All design is fully custom. We don't use templates or WordPress. Every real estate website we build is unique, optimized for performance, SEO and lead conversion."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raven3.com.ar/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Websites by industry", "item": "https://raven3.com.ar/en/websites-by-industry.html"},
+        {"@type": "ListItem", "position": 3, "name": "Websites for real estate", "item": "https://raven3.com.ar/en/websites-for-real-estate.html"}
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- ══ TOPBAR ═══════════════════════════════════════════ -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="/en/" class="logo" aria-label="Raven3 — Home">
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Main navigation">
+          <div class="topbar__dropdown">
+            <a class="topbar__link topbar__link--parent" href="/en/services/custom-web-development.html">Services</a>
+            <div class="topbar__sub">
+              <a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Web Development</a>
+              <a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online Stores</a>
+              <a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a>
+            </div>
+          </div>
+          <a class="topbar__link" href="/en/clients.html">Clients</a>
+          <a class="topbar__link" href="/en/about.html">About</a>
+          <a class="topbar__link" href="/blog/">Blog</a>
+          <a class="topbar__link" href="/en/contact.html">Contact</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/webs-para-inmobiliarias.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/websites-for-real-estate.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+        </nav>
+        <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/webs-para-inmobiliarias.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/websites-for-real-estate.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="#contacto">Get a quote</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ══ HERO ══════════════════════════════════════════ -->
+      <section class="ln-hero">
+        <div class="container">
+          <div class="ln-hero__content">
+            <span class="ln-hero__eyebrow">WEBSITES FOR REAL ESTATE</span>
+            <h1>Your agency deserves more than a <span class="accent">listing on a portal</span></h1>
+            <p class="ln-hero__sub">A premium website with real brand identity, featured listings, Tokko integration and a focus on real inquiries. Your institutional and commercial storefront, open 24/7.</p>
+            <div class="ln-hero__ctas">
+              <a class="btn primary" href="#contacto">I want a website for my agency</a>
+              <a class="btn" href="/en/clients.html">See our projects</a>
+            </div>
+          </div>
+          <div class="ln-hero__mockup">
+            <div class="ln-hero__mockup-glow"></div>
+            <div class="ln-hero__mockup-img" role="img" aria-label="Real estate website mockup" style="width:100%;max-width:520px;aspect-ratio:16/10;background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.25)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ PROBLEM ═══════════════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">THE PROBLEM</span>
+          <h2>Your agency has a <span class="accent">digital presence</span> problem</h2>
+          <p class="ln-section__lead">You sell quality properties, but your online image doesn't reflect it. And that costs you inquiries.</p>
+          <div class="ln-problem">
+            <ul class="ln-problem__list">
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>You depend on portals where every agency looks the same.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>Instagram shows activity, but it doesn't build a brand.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>Clients can't find complete information before they contact you.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>Your current site doesn't reflect the quality of your service — or you don't have one at all.</p>
+              </li>
+            </ul>
+            <div class="ln-problem__visual">
+              <div class="ln-problem__visual-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ SOLUTION ══════════════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">THE SOLUTION</span>
+          <h2>A website that <span class="accent">works for your agency</span></h2>
+          <p class="ln-section__lead">Not a generic site. A platform designed to showcase listings, generate inquiries and position your brand.</p>
+          <div class="ln-solution-grid">
+            <ul class="ln-solution-points">
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Your brand with real identity,</strong> not just another entry on a portal.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Listings organized</strong> with clear property sheets and filters.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>A valuation form</strong> that generates qualified inquiries.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Tokko integration</strong> and real estate CRM sync.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Direct WhatsApp</strong> on every listing.</p>
+              </li>
+            </ul>
+            <div class="ln-problem__visual">
+              <div class="ln-problem__visual-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ FEATURES ══════════════════════════════════════ -->
+      <section class="ln-section ln-section--alt ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">FEATURES</span>
+          <h2>Everything your real estate website <span class="accent">needs</span></h2>
+          <p class="ln-section__lead">Every feature designed to turn visits into real inquiries for your agency.</p>
+          <div class="ln-features">
+
+            <!-- 1 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3>Featured listings</h3>
+              <p>Showcase your best properties on the homepage with photo galleries, pricing and key details.</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+              </div>
+              <h3>Tokko / CRM integration</h3>
+              <p>Automatically sync listings from Tokko or any other real estate CRM.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3>Property pages</h3>
+              <p>Each listing gets its own page: photos, floor plan, amenities, location and an inquiry button.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3>Valuation form</h3>
+              <p>Capture qualified leads with a dedicated form for property valuation requests.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <h3>Direct WhatsApp</h3>
+              <p>A WhatsApp button on every listing with a pre-written message for interested buyers.</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <h3>Google Maps</h3>
+              <p>An interactive map on every listing so clients can see the exact location of the property.</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3>Team / Track record</h3>
+              <p>A section to introduce your team, years of experience and the values behind your agency.</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+              <h3>Neighborhoods and zones</h3>
+              <p>Zone or neighborhood pages to rank for local searches and group listings by area.</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3>Baseline technical SEO</h3>
+              <p>An optimized structure so Google indexes your agency and every one of your listings.</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h3>Mobile responsive</h3>
+              <p>Your website looks flawless on phone, tablet and desktop, without losing any functionality.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ BENEFITS ══════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">BENEFITS</span>
+          <h2>What changes when you have a <span class="accent">professional website</span></h2>
+          <p class="ln-section__lead">It's not just aesthetics. It's how you're perceived, how you're found, and what kind of inquiries you receive.</p>
+          <div class="ln-benefits">
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>More trust</h3>
+              <p>Your agency looks as professional as it really is.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3>Better perception</h3>
+              <p>Stand out from the competition on generic portals.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <h3>Qualified inquiries</h3>
+              <p>You receive inquiries from people who already saw what you offer.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              </div>
+              <h3>Brand authority</h3>
+              <p>Position yourself as the reference agency in your area.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ COMPARISON TABLE ══════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">COMPARISON</span>
+          <h2>Why does <span class="accent">your own website</span> beat everything else?</h2>
+          <p class="ln-section__lead">We compared the channels most real estate agencies rely on.</p>
+          <div class="ln-compare">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Instagram</th>
+                  <th>Portals</th>
+                  <th>Google Business</th>
+                  <th>Own Website</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Brand identity</td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Full property sheets</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Valuation form</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>SEO ranking</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Shared</span></td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Direct WhatsApp</td>
+                  <td><span class="partial">Bio</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>CRM integration</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Partial</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Perceived professionalism</td>
+                  <td><span class="partial">Medium</span></td>
+                  <td><span class="partial">Medium</span></td>
+                  <td><span class="partial">Medium</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CASES ═════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">CASE STUDIES</span>
+          <h2>Real estate agencies that already <span class="accent">trust Raven3</span></h2>
+          <p class="ln-section__lead">Real projects built for agencies that wanted to stand out.</p>
+          <div class="ln-cases">
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="NDB Propiedades project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>NDB Propiedades</h3>
+                <p>An institutional website with listing catalog, CRM integration and a valuation form.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Ibarra Propiedades project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Ibarra Propiedades</h3>
+                <p>A premium design with a property catalog, direct WhatsApp and optimized local SEO.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ PROCESS ═══════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">PROCESS</span>
+          <h2>How we build your <span class="accent">real estate website</span></h2>
+          <p class="ln-section__lead">A clear process, no surprises, focused on results.</p>
+          <div class="ln-process">
+            <div class="ln-step">
+              <div class="ln-step__num">01</div>
+              <div class="ln-step__text">
+                <h3>Assessment</h3>
+                <p>We analyze your agency, your market and your competitors.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">02</div>
+              <div class="ln-step__text">
+                <h3>Design</h3>
+                <p>We build the visual experience for your brand.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">03</div>
+              <div class="ln-step__text">
+                <h3>Development</h3>
+                <p>We build your website with every feature you need.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">04</div>
+              <div class="ln-step__text">
+                <h3>Launch</h3>
+                <p>We deploy, configure and optimize.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">05</div>
+              <div class="ln-step__text">
+                <h3>Optimization</h3>
+                <p>Continuous improvement based on real data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ FAQ ════════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+          <h2>Questions about websites for <span class="accent">real estate agencies</span></h2>
+          <div class="ln-faq-list">
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Can I integrate Tokko with my website?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Yes, we connect Tokko to sync your listings automatically. Your website updates every time you add or edit a property in the CRM.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                How long does development take?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Between 3 and 6 weeks depending on scope and features. We give you a clear timeline from day one.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Does it include hosting and domain?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">We advise you on hosting and domain. Hosting cost is separate, but we'll recommend the best options for your case.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Can I update listings myself?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Yes, we integrate a panel or CRM so you can manage listings without depending on us. You control what gets published.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Does it help with local SEO?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Yes, every website includes baseline technical SEO optimized to rank in your area: semantic structure, meta tags, schema markup and fast load times.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CTA SECTION ═══════════════════════════════════ -->
+
+      <!-- ══ RELATED SERVICES ════════════════════════════ -->
+      <section class="ln-section ln-cross-svc-section">
+        <div class="container">
+          <div class="ln-section__eyebrow">WE ALSO DO</div>
+          <h2>More services from <span class="accent">Raven3</span></h2>
+          <div class="ln-cross-svc-grid">
+            <a class="ln-cross-svc-card" href="/en/services/custom-web-development.html">
+              <strong>Custom Web Development</strong>
+              <span>Premium websites with no templates, optimized for performance, SEO and conversion.</span>
+            </a>
+            <a class="ln-cross-svc-card" href="/en/services/online-stores.html">
+              <strong>Online Stores</strong>
+              <span>Custom e-commerce focused on conversion, speed and shopping experience.</span>
+            </a>
+            <a class="ln-cross-svc-card" href="/en/services/technical-seo.html">
+              <strong>Technical SEO in Argentina</strong>
+              <span>We improve the technical foundation of your site: Core Web Vitals, indexing and structure.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <section class="ln-cta-section ln-riv">
+        <div class="container">
+          <h2>Your agency needs a website that <span class="accent">works for you</span></h2>
+          <p>It's not an expense. It's the investment that separates agencies that grow from those that depend on portals.</p>
+          <div class="ln-hero__ctas">
+            <a class="btn primary" href="#contacto">I want a website for my agency</a>
+            <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20to%20see%20a%20proposal%20for%20a%20real%20estate%20website." target="_blank" rel="noopener nofollow">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CONTACT FORM ══════════════════════════════════ -->
+      <section class="ln-form-section ln-riv" id="contacto">
+        <div class="container">
+          <div class="ln-form-wrap">
+            <div class="ln-form-info">
+              <h2>Let's talk about your <span class="accent">real estate website</span></h2>
+              <p>Tell us about your agency and we'll put together a custom proposal. No commitment, no fine print.</p>
+              <div class="ln-form-contact-links">
+                <a class="ln-form-contact-link" href="mailto:hola@raven3.com.ar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  hola@raven3.com.ar
+                </a>
+                <a class="ln-form-contact-link" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  +54 9 11 3456-8899
+                </a>
+              </div>
+            </div>
+            <form class="ln-form" id="ln-contactForm" action="https://formspree.io/f/mvoykeyq" method="POST">
+              <input type="hidden" name="landing" value="websites-for-real-estate" />
+              <div class="ln-form__grid">
+                <div class="ln-form__field">
+                  <label for="f-nombre">Name</label>
+                  <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="Your name" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-marca">Agency / brand</label>
+                  <input type="text" id="f-marca" name="marca" placeholder="Your agency's name" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-rubro">Industry</label>
+                  <input type="text" id="f-rubro" name="rubro" value="Real Estate" readonly />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-web">Current website (if any)</label>
+                  <input type="url" id="f-web" name="web_actual" placeholder="https://..." autocomplete="url" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-contacto">WhatsApp or email</label>
+                  <input type="text" id="f-contacto" name="contacto" required placeholder="So we can reply" />
+                </div>
+                <div class="ln-form__field ln-form__field--full">
+                  <label for="f-mensaje">Message</label>
+                  <textarea id="f-mensaje" name="mensaje" placeholder="Tell us what your agency needs..."></textarea>
+                </div>
+              </div>
+              <div class="ln-form__submit">
+                <button class="btn primary" type="submit">Send inquiry</button>
+                <span class="ln-form__status" id="ln-formStatus" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ STICKY MOBILE CTA ═══════════════════════════════ -->
+    <div class="ln-sticky-cta" role="group" aria-label="Quick actions">
+      <a class="btn primary" href="#contacto">Get in touch</a>
+      <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20to%20see%20a%20proposal%20for%20a%20real%20estate%20website." target="_blank" rel="noopener nofollow">WhatsApp</a>
+    </div>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════ -->
+    <footer id="footer" aria-label="Footer">
+      <div class="container">
+        <div class="footer-newsletter">
+          <div class="footer-newsletter__copy">
+            <span class="footer-newsletter__label">NEWSLETTER</span>
+            <p class="footer-newsletter__tagline">Web Performance Insights — technical content only, no fluff.</p>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="/en/" aria-label="Raven3 — Home" style="display:inline-block;margin-bottom:16px">
+              <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+            </a>
+            <p>Digital agency specialized in custom web development, e-commerce, technical SEO and premium digital architecture. No templates. Real results.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar">Email us</a>
+              <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">WhatsApp</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="/en/services/custom-web-development.html">Web Development</a></li>
+              <li><a href="/en/services/online-stores.html">Online Stores</a></li>
+              <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+                <li><a href="/en/websites-by-industry.html">Websites by industry</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-contact-list">
+              <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+              <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">+54 9 11 3456-8899</a></li>
+              <li>Buenos Aires, Argentina</li>
+            </ul>
+            <h3 style="margin-top:24px">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/en/about.html">About Raven3</a></li>
+              <li><a href="/en/clients.html">Clients</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom small">
+          <span><span id="year"></span> &copy; Raven3. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+  <script src="/assets/js/lang-switcher.js" defer></script>
+  <script src="/assets/js/landing-nichos.js"></script>
+</body>
+</html>

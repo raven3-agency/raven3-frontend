@@ -7,6 +7,9 @@
   <title>Blog — Raven3 | Desarrollo Web, SEO y Performance</title>
   <meta name="description" content="Artículos técnicos sobre desarrollo web, SEO técnico, performance y e-commerce. Raven3 — agencia digital." />
   <link rel="canonical" href="https://raven3.com.ar/blog/" />
+  <link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/" />
+  <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#04080E" />
 
@@ -29,6 +32,7 @@
   <link rel="stylesheet" href="../assets/css/redesign.css" />
   <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/animations.css" />
+  <link rel="stylesheet" href="../assets/css/lang-switcher.css" />
   <script src="../assets/js/cursor.js" defer></script>
 
   <style>
@@ -299,8 +303,18 @@
         <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
         <a class="topbar__link active-page" href="/blog/">Blog</a>
         <a class="topbar__link" href="/contacto.html">Contacto</a>
+        <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--es" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/blog/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/blog/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
       </nav>
       <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+      <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--es" aria-label="Cambiar idioma / Language selector">
+        <span class="r3-lang-indicator" aria-hidden="true"></span>
+        <a class="r3-lang-option" href="/blog/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="r3-lang-option" href="/en/blog/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+      </nav>
       <a class="btn primary cta-desktop" href="/auditoria-web-gratuita.html">Auditoría gratuita</a>
       <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
     </div>
@@ -362,6 +376,7 @@
 
   <script src="../assets/js/newsletter.js" defer></script>
   <script src="../assets/js/redesign.js" defer></script>
+  <script src="../assets/js/lang-switcher.js" defer></script>
   <script>
     const topbar = document.querySelector('.topbar');
     if (topbar) window.addEventListener('scroll', () => topbar.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
@@ -375,6 +390,34 @@
     function tc(cat){ return TAG_CLASSES[cat]||'tag'; }
     function tl(cat){ return TAG_LABELS[cat]||cat; }
     function e(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+    // Posts with an English translation available — maps ES slug -> EN slug
+    const EN_TRANSLATION = {
+      'cea-american-cadena-frio-web-corporativa': 'cea-american-cold-chain-corporate-website',
+      'etienne-de-montebello-experiencia-editorial-interactiva': 'etienne-de-montebello-interactive-editorial-experience',
+      'ndb-propiedades-integracion-tokko-broker': 'ndb-propiedades-tokko-broker-integration',
+      'sgm-sitio-institucional-ecommerce-comunidad': 'sgm-institutional-site-ecommerce-community',
+      'lassen-pharma-web-corporativa-seo-tecnico': 'lassen-pharma-corporate-website-technical-seo',
+      'beforce-catalogo-digital-identidad-visual': 'beforce-digital-catalog-visual-identity',
+      'okos-sitio-institucional-minimalista': 'okos-minimalist-institutional-website',
+      'art1-web-corporativa-seo-accesibilidad': 'art1-corporate-website-seo-accessibility',
+      'knots-ecommerce-tienda-nube-ux-producto': 'knots-ecommerce-product-ux',
+      'core-web-vitals-2024-guia-practica': 'core-web-vitals-practical-guide',
+      'tendencias-desarrollo-web-2026': 'web-development-trends-2026',
+      'geo-generative-engine-optimization-argentina': 'geo-generative-engine-optimization-guide',
+      'llms-txt-que-es-como-implementarlo': 'llms-txt-what-it-is-how-to-implement',
+      'shopify-vs-woocommerce-vs-desarrollo-a-medida': 'shopify-vs-woocommerce-vs-custom-development',
+      'design-systems-proyectos-web': 'design-systems-for-web-projects'
+    };
+    function setHreflangTag(lang, href) {
+      let el = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+      if (!el) { el = document.createElement('link'); el.rel = 'alternate'; el.hreflang = lang; document.head.appendChild(el); }
+      el.href = href;
+    }
+    function removeHreflangTag(lang) {
+      const el = document.querySelector(`link[rel="alternate"][hreflang="${lang}"]`);
+      if (el) el.remove();
+    }
 
     // Reading progress bar
     window.addEventListener('scroll', () => {
@@ -421,6 +464,15 @@
       }
 
       setLinkTag('canonical', postUrl);
+      setHreflangTag('es', postUrl);
+      const enSlug = EN_TRANSLATION[post.slug];
+      if (enSlug) {
+        setHreflangTag('en', `https://raven3.com.ar/en/blog/post.html?slug=${enSlug}`);
+        setHreflangTag('x-default', postUrl);
+      } else {
+        removeHreflangTag('en');
+        setHreflangTag('x-default', postUrl);
+      }
       setMetaTag('name', 'description', post.excerpt);
       setMetaTag('property', 'og:title', postTitle);
       setMetaTag('property', 'og:description', post.excerpt);

@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Websites for Lawyers | Raven3</title>
+  <meta name="description" content="Professional websites for lawyers and law firms with practice areas, attorney profiles, contact forms, WhatsApp integration, and premium institutional design." />
+  <link rel="canonical" href="https://raven3.com.ar/en/websites-for-lawyers.html" />
+  <link rel="alternate" hreflang="es" href="https://raven3.com.ar/webs-para-abogados.html" />
+  <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/websites-for-lawyers.html" />
+  <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/webs-para-abogados.html" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/redesign.css" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/animations.css" />
+  <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+  <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Web design for lawyers and law firms",
+    "description": "Professional websites for lawyers and law firms with practice areas, attorney profiles, contact forms, WhatsApp integration, and premium institutional design.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Raven3",
+      "url": "https://raven3.com.ar",
+      "logo": "https://raven3.com.ar/assets/img/raven3-logo.svg",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+54-9-11-3456-8899",
+        "contactType": "sales",
+        "availableLanguage": ["Spanish", "English"]
+      }
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Argentina"
+    },
+    "serviceType": "Web design and development for lawyers"
+  }
+  </script>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-MF63Q3JMSL');
+</script>
+<script>
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('a[href*="#formulario"]');
+    if (link) {
+      gtag('event', 'contact_request', {
+        'method': 'presupuesto_click',
+        'page_path': window.location.pathname
+      });
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('a[href^="mailto"]');
+    if (link) {
+      gtag('event', 'email_click', {
+        'method': 'email_directo',
+        'page_path': window.location.pathname
+      });
+    }
+  });
+
+  const whatsappBtn = document.getElementById('waTrigger');
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', {
+        'method': 'whatsapp',
+        'page_path': window.location.pathname
+      });
+    });
+  }
+
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+      gtag('event', 'form_submission', {
+        'method': 'formulario_contacto',
+        'page_path': window.location.pathname
+      });
+    });
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raven3.com.ar/en/"},
+    {"@type": "ListItem", "position": 2, "name": "Websites by Industry", "item": "https://raven3.com.ar/en/websites-by-industry.html"},
+    {"@type": "ListItem", "position": 3, "name": "Websites for Lawyers", "item": "https://raven3.com.ar/en/websites-for-lawyers.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I showcase my practice areas without revealing client information?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. We describe your specialties in general terms, without mentioning specific cases or client details. You control everything that gets published, and we respect professional confidentiality in every piece of copy."}
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to build a website for lawyers?",
+      "acceptedAnswer": {"@type": "Answer", "text": "The full process takes 2 to 4 weeks, depending on how much content and how many sections you need. We work off a defined timeline so you know exactly when your site will go live."}
+    },
+    {
+      "@type": "Question",
+      "name": "Can I update the content myself afterward?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It depends on the format you choose. We can build an optimized static site or integrate a simple CMS so you can update text and news yourself. Either way, we provide support for any changes you need."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work for a solo attorney, or only for large firms?",
+      "acceptedAnswer": {"@type": "Answer", "text": "It works for both. If you're a solo practitioner, your website strengthens your personal brand. If you run a firm with several attorneys, we design individual profiles and dedicated sections for each team member."}
+    },
+    {
+      "@type": "Question",
+      "name": "Does it include Google ranking for my specialty?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every site we build includes on-page technical SEO and local optimization. That means your site will be ready to rank for searches like 'criminal defense attorney in [your city]' or 'labor law firm'."}
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       TOPBAR
+  ══════════════════════════════════════════════════════════ -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="https://raven3.com.ar/en/" class="logo" aria-label="Raven3 — Home">
+        <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+      </a>
+      <nav class="topbar__nav" id="main-nav" aria-label="Main navigation">
+        <div class="topbar__dropdown">
+          <a class="topbar__link topbar__link--parent" href="/en/services/custom-web-development.html">Services</a>
+          <div class="topbar__sub">
+            <a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Web Development</a>
+            <a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online Stores</a>
+            <a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a>
+          </div>
+        </div>
+        <a class="topbar__link" href="/en/clients.html">Clients</a>
+        <a class="topbar__link" href="/en/about.html">About</a>
+        <a class="topbar__link" href="/blog/">Blog</a>
+        <a class="topbar__link" href="/en/contact.html">Contact</a>
+        <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/webs-para-abogados.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/websites-for-lawyers.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+      </nav>
+      <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+      <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+        <span class="r3-lang-indicator" aria-hidden="true"></span>
+        <a class="r3-lang-option" href="/webs-para-abogados.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="r3-lang-option" href="/en/websites-for-lawyers.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+      </nav>
+      <a class="btn primary cta-desktop" href="#contacto">Get a quote</a>
+      <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ══════════════════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-hero">
+      <div class="container">
+        <div class="ln-hero__content">
+          <span class="ln-hero__eyebrow">WEBSITES FOR LAWYERS</span>
+          <h1>Credibility, trust, and expertise.<br>Starting from the first digital impression.</h1>
+          <p class="ln-hero__sub">A professional website for lawyers and law firms that need to convey experience and generate qualified consultations.</p>
+          <div class="ln-hero__ctas">
+            <a class="btn primary" href="#contacto">I want a website for my law firm</a>
+          </div>
+        </div>
+        <div class="ln-hero__mockup">
+          <div class="ln-hero__mockup-glow"></div>
+          <svg class="ln-hero__mockup-img" viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="520" height="380" rx="16" fill="#080C13"/>
+            <rect x="20" y="20" width="480" height="32" rx="6" fill="rgba(0,229,200,0.04)" stroke="rgba(0,229,200,0.08)" stroke-width="1"/>
+            <circle cx="38" cy="36" r="5" fill="#ff6b6b"/>
+            <circle cx="54" cy="36" r="5" fill="#ffa94d"/>
+            <circle cx="70" cy="36" r="5" fill="#00e5c8"/>
+            <rect x="20" y="72" width="200" height="14" rx="3" fill="rgba(0,229,200,0.12)"/>
+            <rect x="20" y="96" width="320" height="8" rx="2" fill="rgba(255,255,255,0.06)"/>
+            <rect x="20" y="112" width="280" height="8" rx="2" fill="rgba(255,255,255,0.04)"/>
+            <rect x="20" y="128" width="300" height="8" rx="2" fill="rgba(255,255,255,0.04)"/>
+            <rect x="20" y="160" width="140" height="36" rx="8" fill="rgba(0,229,200,0.15)" stroke="rgba(0,229,200,0.3)" stroke-width="1"/>
+            <rect x="20" y="220" width="148" height="120" rx="8" fill="rgba(0,229,200,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="180" y="220" width="148" height="120" rx="8" fill="rgba(0,229,200,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <rect x="340" y="220" width="148" height="120" rx="8" fill="rgba(0,229,200,0.03)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+            <text x="60" y="288" font-family="monospace" font-size="9" fill="rgba(0,229,200,0.4)">Criminal</text>
+            <text x="215" y="288" font-family="monospace" font-size="9" fill="rgba(0,229,200,0.4)">Civil</text>
+            <text x="370" y="288" font-family="monospace" font-size="9" fill="rgba(0,229,200,0.4)">Labor</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         PROBLEM
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">THE PROBLEM</span>
+        <h2>A law firm needs institutional presence</h2>
+        <p class="ln-section__lead">Clients look for clarity, experience, and trust before they reach out. A social media profile or a Google listing doesn't convey the seriousness of your practice.</p>
+        <div class="ln-problem">
+          <ul class="ln-problem__list">
+            <li class="ln-problem__item">
+              <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p>There's no clear place for clients to see your practice areas, your experience, or your professional track record.</p>
+            </li>
+            <li class="ln-problem__item">
+              <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p>Instagram and Google Business don't convey the seriousness or the institutional level your profession requires.</p>
+            </li>
+            <li class="ln-problem__item">
+              <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p>Without a professional website, you lose qualified consultations to competitors who already have a serious digital presence.</p>
+            </li>
+          </ul>
+          <div class="ln-problem__visual">
+            <div class="ln-problem__visual-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         SOLUTION
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-section--alt ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">THE SOLUTION</span>
+        <h2>Your professional website, built to earn trust</h2>
+        <p class="ln-section__lead">We design a website that communicates your expertise clearly and makes it easy for clients to request an initial consultation.</p>
+        <div class="ln-solution-grid">
+          <ul class="ln-solution-points">
+            <li class="ln-solution-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <p><strong>Organized practice areas</strong> so visitors quickly understand how you can help them.</p>
+            </li>
+            <li class="ln-solution-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <p><strong>Attorney or firm profile</strong> that conveys experience and builds professional trust.</p>
+            </li>
+            <li class="ln-solution-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <p><strong>Visible track record and experience</strong> with years of practice, case history, and specializations.</p>
+            </li>
+            <li class="ln-solution-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <p><strong>Initial consultation via form or WhatsApp</strong> so clients can reach out directly and privately.</p>
+            </li>
+            <li class="ln-solution-point">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <p><strong>Sober, institutional, premium design</strong> that reflects the seriousness of your practice.</p>
+            </li>
+          </ul>
+          <div class="ln-problem__visual">
+            <div class="ln-problem__visual-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FEATURES
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">WHAT YOUR WEBSITE INCLUDES</span>
+        <h2>Everything a law firm needs online</h2>
+        <p class="ln-section__lead">10 features built for lawyers who want a serious, effective digital presence.</p>
+        <div class="ln-features">
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Practice areas</h3>
+            <p>Clear sections for each specialty: criminal, civil, labor, family, corporate law, and more.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            </div>
+            <h3>Professional profile</h3>
+            <p>Photo, bio, academic background, and memberships for the attorney or firm members.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>Track record</h3>
+            <p>Years of practice, professional achievements, and recognitions that validate your experience.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            </div>
+            <h3>Cases and experience</h3>
+            <p>A summary of areas handled and case types, without compromising confidentiality.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <h3>Initial consultation</h3>
+            <p>A contact form designed for clients to explain their case privately.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <h3>Direct WhatsApp</h3>
+            <p>A direct WhatsApp button with a pre-filled message to speed up inquiries.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3>Private form submissions</h3>
+            <p>Client data is submitted securely, respecting professional confidentiality.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <h3>Location</h3>
+            <p>An embedded map with your firm's address so clients can find you easily.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </div>
+            <h3>Local and specialty SEO</h3>
+            <p>Optimized so you show up when clients search "criminal defense attorney in [your city]" on Google.</p>
+          </div>
+
+          <div class="ln-feature-card">
+            <div class="ln-feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Institutional design</h3>
+            <p>A sober, premium aesthetic that conveys the seriousness and professionalism of your firm.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         BENEFITS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-section--alt ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">BENEFITS</span>
+        <h2>What you gain with a professional website</h2>
+        <div class="ln-benefits">
+
+          <div class="ln-benefit">
+            <div class="ln-benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Professional authority</h3>
+            <p>A serious website positions your firm as a reference in your specialty and region.</p>
+          </div>
+
+          <div class="ln-benefit">
+            <div class="ln-benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3>Qualified consultations</h3>
+            <p>Clients arrive with a clear understanding of your practice areas and are ready to reach out.</p>
+          </div>
+
+          <div class="ln-benefit">
+            <div class="ln-benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Differentiation</h3>
+            <p>You stand out from other lawyers who only have a social media profile or a directory listing.</p>
+          </div>
+
+          <div class="ln-benefit">
+            <div class="ln-benefit__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Institutional presence</h3>
+            <p>Your firm gets its own digital space, fully controlled and aligned with your professional image.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         COMPARISON
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">COMPARISON</span>
+        <h2>Why a website of your own beats the alternatives</h2>
+        <div class="ln-compare">
+          <table>
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Instagram</th>
+                <th>Google Business</th>
+                <th>Directories</th>
+                <th>Your Own Website</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Detailed practice areas</td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="partial">Limited</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Complete professional profile</td>
+                <td><span class="partial">Limited</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="partial">Limited</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Premium institutional design</td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Local SEO by specialty</td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="partial">Basic</span></td>
+                <td><span class="partial">Generic</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Private consultation form</td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Full content control</td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="partial">Limited</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+              <tr>
+                <td>Your own domain</td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="cross">&#10005;</span></td>
+                <td><span class="check">&#10003;</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         PROCESS
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-section--alt ln-section--centered ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">PROCESS</span>
+        <h2>How we build your website</h2>
+        <p class="ln-section__lead">5 steps to get your professional site online, without complications.</p>
+        <div class="ln-process">
+
+          <div class="ln-step">
+            <div class="ln-step__num">01</div>
+            <div class="ln-step__text">
+              <h3>Initial meeting</h3>
+              <p>We learn about your practice, specialties, target clients, and what sets you apart.</p>
+            </div>
+          </div>
+
+          <div class="ln-step">
+            <div class="ln-step__num">02</div>
+            <div class="ln-step__text">
+              <h3>Architecture and content</h3>
+              <p>We define the sections, copy, and structure of the site based on your practice areas.</p>
+            </div>
+          </div>
+
+          <div class="ln-step">
+            <div class="ln-step__num">03</div>
+            <div class="ln-step__text">
+              <h3>Institutional design</h3>
+              <p>We create a sober, premium design aligned with your firm's image.</p>
+            </div>
+          </div>
+
+          <div class="ln-step">
+            <div class="ln-step__num">04</div>
+            <div class="ln-step__text">
+              <h3>Development and optimization</h3>
+              <p>We build the site with clean code, responsive, fast, and optimized for SEO.</p>
+            </div>
+          </div>
+
+          <div class="ln-step">
+            <div class="ln-step__num">05</div>
+            <div class="ln-step__text">
+              <h3>Launch and support</h3>
+              <p>We publish the site, set up analytics, and provide post-launch support.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-section ln-section--centered ln-riv">
+      <div class="container">
+        <span class="ln-section__eyebrow">FAQ</span>
+        <h2>Common questions about websites for lawyers</h2>
+        <div class="ln-faq-list">
+
+          <div class="ln-faq-item">
+            <button class="ln-faq-q" aria-expanded="false">
+              Can I showcase my practice areas without revealing client information?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="ln-faq-a" aria-hidden="true">
+              <div class="ln-faq-a__inner">Yes. We describe your specialties in general terms, without mentioning specific cases or client details. You control everything that gets published, and we respect professional confidentiality in every piece of copy.</div>
+            </div>
+          </div>
+
+          <div class="ln-faq-item">
+            <button class="ln-faq-q" aria-expanded="false">
+              How long does the website take to build?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="ln-faq-a" aria-hidden="true">
+              <div class="ln-faq-a__inner">The full process takes 2 to 4 weeks, depending on how much content and how many sections you need. We work off a defined timeline so you know exactly when your site will go live.</div>
+            </div>
+          </div>
+
+          <div class="ln-faq-item">
+            <button class="ln-faq-q" aria-expanded="false">
+              Can I update the content myself afterward?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="ln-faq-a" aria-hidden="true">
+              <div class="ln-faq-a__inner">It depends on the format you choose. We can build an optimized static site or integrate a simple CMS so you can update text and news yourself. Either way, we provide support for any changes you need.</div>
+            </div>
+          </div>
+
+          <div class="ln-faq-item">
+            <button class="ln-faq-q" aria-expanded="false">
+              Does this work for a solo attorney, or only for large firms?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="ln-faq-a" aria-hidden="true">
+              <div class="ln-faq-a__inner">It works for both. If you're a solo practitioner, your website strengthens your personal brand. If you run a firm with several attorneys, we design individual profiles and dedicated sections for each team member.</div>
+            </div>
+          </div>
+
+          <div class="ln-faq-item">
+            <button class="ln-faq-q" aria-expanded="false">
+              Does it include Google ranking for my specialty?
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="ln-faq-a" aria-hidden="true">
+              <div class="ln-faq-a__inner">Yes. Every site we build includes on-page technical SEO and local optimization. That means your site will be ready to rank for searches like "criminal defense attorney in [your city]" or "labor law firm".</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         CTA
+    ══════════════════════════════════════════════════════════ -->
+
+      <!-- ══ RELATED SERVICES ════════════════════════════ -->
+      <section class="ln-section ln-cross-svc-section">
+        <div class="container">
+          <div class="ln-section__eyebrow">WE ALSO OFFER</div>
+          <h2>More <span class="accent">Raven3</span> services</h2>
+          <div class="ln-cross-svc-grid">
+            <a class="ln-cross-svc-card" href="/en/services/custom-web-development.html">
+              <strong>Custom Web Development</strong>
+              <span>Premium websites with no templates, optimized for performance, SEO, and conversion.</span>
+            </a>
+            <a class="ln-cross-svc-card" href="/en/services/online-stores.html">
+              <strong>Online Stores</strong>
+              <span>Custom e-commerce focused on conversion, speed, and the shopping experience.</span>
+            </a>
+            <a class="ln-cross-svc-card" href="/en/services/technical-seo.html">
+              <strong>Technical SEO in Argentina</strong>
+              <span>We improve your site's technical foundation: Core Web Vitals, indexing, and structure.</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+    <section class="ln-cta-section ln-riv">
+      <div class="container">
+        <h2>Your law firm needs a digital presence that inspires trust</h2>
+        <p>Let's talk about what your practice needs. No commitment, no runaround.</p>
+        <div class="ln-hero__ctas">
+          <a class="btn primary" href="#contacto">I want my professional website</a>
+          <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20a%20professional%20website%20for%20my%20law%20firm." target="_blank" rel="noopener nofollow">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════════
+         FORM
+    ══════════════════════════════════════════════════════════ -->
+    <section class="ln-form-section ln-riv" id="contacto">
+      <div class="container">
+        <div class="ln-form-wrap">
+          <div class="ln-form-info">
+            <h2>Tell us about your firm</h2>
+            <p>Fill out the form and we'll get back to you within 24 hours with a tailored proposal for your professional website.</p>
+            <div class="ln-form-contact-links">
+              <a class="ln-form-contact-link" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20a%20professional%20website%20for%20my%20law%20firm." target="_blank" rel="noopener nofollow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                +54 9 11 3456-8899
+              </a>
+              <a class="ln-form-contact-link" href="mailto:hola@raven3.com.ar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                hola@raven3.com.ar
+              </a>
+            </div>
+          </div>
+          <form id="ln-contactForm" class="ln-form" action="https://formspree.io/f/mvoykeyq" method="POST">
+            <input type="hidden" name="landing" value="webs-para-abogados" />
+            <div class="ln-form__grid">
+              <div class="ln-form__field">
+                <label for="nombre">Name</label>
+                <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+              </div>
+              <div class="ln-form__field">
+                <label for="estudio">Firm / professional name</label>
+                <input type="text" id="estudio" name="estudio" autocomplete="organization" />
+              </div>
+              <div class="ln-form__field">
+                <label for="rubro">Industry</label>
+                <input type="text" id="rubro" name="rubro" value="Law firm" />
+              </div>
+              <div class="ln-form__field">
+                <label for="web">Current website</label>
+                <input type="url" id="web" name="web" placeholder="https://" autocomplete="url" />
+              </div>
+              <div class="ln-form__field">
+                <label for="contacto-dato">WhatsApp or email</label>
+                <input type="text" id="contacto-dato" name="contacto" required />
+              </div>
+              <div class="ln-form__field ln-form__field--full">
+                <label for="mensaje">Message</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Tell us about your firm and what you need..."></textarea>
+              </div>
+            </div>
+            <div class="ln-form__submit">
+              <button type="submit" class="btn primary">Send inquiry</button>
+              <span class="ln-form__status" id="ln-formStatus"></span>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer id="footer" aria-label="Footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="https://raven3.com.ar/en/" aria-label="Raven3 — Home" style="display:inline-block;margin-bottom:16px">
+            <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+          </a>
+          <p>Digital agency specializing in custom web development, e-commerce, technical SEO, and premium digital architecture. No templates. Real results.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="mailto:hola@raven3.com.ar">Email us</a>
+            <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">WhatsApp</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="/en/services/custom-web-development.html">Web development</a></li>
+            <li><a href="/en/services/online-stores.html">Online stores</a></li>
+            <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+                <li><a href="/en/websites-by-industry.html">Websites by industry</a></li>
+            <li><a href="/en/#servicios">Performance &amp; CWV</a></li>
+            <li><a href="/en/#servicios">UX/UI Conversion</a></li>
+            <li><a href="/en/#servicios">API Integrations</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="footer-contact-list">
+            <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+            <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">+54 9 11 3456-8899</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-inner">
+        <p>&copy; <span id="year"></span> RAVEN3<span style="color:#00e5c8">.</span> All rights reserved.</p>
+        <div class="footer-links">
+          <a href="/en/privacy-policy.html">Privacy</a>
+          <a href="/en/terms.html">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Sticky mobile CTA ── -->
+  <div class="ln-sticky-cta">
+    <a class="btn primary" href="#contacto">Contact</a>
+    <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20a%20professional%20website%20for%20my%20law%20firm." target="_blank" rel="noopener nofollow">WhatsApp</a>
+  </div>
+
+  <!-- JS -->
+
+
+  <script src="/assets/js/lang-switcher.js" defer></script>
+  <script src="/assets/js/landing-nichos.js"></script>
+</body>
+</html>

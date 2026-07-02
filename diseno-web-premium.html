@@ -16,6 +16,9 @@
     <meta name="robots" content="index,follow,max-image-preview:large" />
 
     <link rel="canonical" href="https://raven3.com.ar/diseno-web-premium" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/diseno-web-premium" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/premium-web-design.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/diseno-web-premium" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
@@ -55,6 +58,7 @@
     <link rel="stylesheet" href="assets/css/redesign.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="assets/css/landing-nichos.css" />
 
     <!-- GA4 -->
@@ -220,8 +224,18 @@
           <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
           <a class="topbar__link" href="/blog/">Blog</a>
           <a class="topbar__link" href="/contacto.html">Contacto</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--es" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/diseno-web-premium.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/premium-web-design.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
         </nav>
         <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--es" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/diseno-web-premium.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/premium-web-design.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
         <a class="btn primary cta-desktop" href="#contacto">Consultar ahora</a>
         <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
       </div>
@@ -809,6 +823,7 @@
 
     <!-- JS -->
     <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="assets/js/lang-switcher.js" defer></script>
     <script src="assets/js/landing-nichos.js"></script>
   </body>
 </html>

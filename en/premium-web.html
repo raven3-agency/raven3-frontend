@@ -1,0 +1,972 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Premium Web Design for Businesses | Raven3</title>
+
+    <meta
+      name="description"
+      content="We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries."
+    />
+
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <link rel="canonical" href="https://raven3.com.ar/en/premium-web.html" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/web-premium.html" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/premium-web.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/web-premium.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/en/premium-web.html" />
+    <meta property="og:title" content="Premium Web Design for Businesses | Raven3" />
+    <meta property="og:description" content="We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries." />
+    <meta property="og:image" content="https://raven3.com.ar/assets/img/og/web-premium.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Raven3" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://raven3.com.ar/en/premium-web.html" />
+    <meta name="twitter:title" content="Premium Web Design for Businesses | Raven3" />
+    <meta name="twitter:description" content="We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries." />
+    <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/web-premium.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+    <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-MF63Q3JMSL');
+    </script>
+
+    <script>
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href*="#formulario"]');
+        if (link) {
+          gtag('event', 'contact_request', {
+            'method': 'presupuesto_click',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href^="mailto"]');
+        if (link) {
+          gtag('event', 'email_click', {
+            'method': 'email_directo',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      const whatsappBtn = document.getElementById('waTrigger');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            'method': 'whatsapp',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+          gtag('event', 'form_submission', {
+            'method': 'formulario_contacto',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+    </script>
+
+    <style>
+      body { background: #050A0E; }
+    </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ProfessionalService",
+          "name": "Raven3",
+          "url": "https://raven3.com.ar",
+          "logo": "https://raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png",
+          "description": "Digital agency specializing in custom web development, e-commerce, technical SEO, and premium digital architecture.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Buenos Aires",
+            "addressCountry": "AR"
+          },
+          "telephone": "+5491134568899",
+          "email": "hola@raven3.com.ar",
+          "sameAs": [
+            "https://www.instagram.com/raven3.dev",
+            "https://www.linkedin.com/company/raven3"
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Premium web design for businesses",
+          "description": "We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries.",
+          "provider": {
+            "@type": "ProfessionalService",
+            "name": "Raven3",
+            "url": "https://raven3.com.ar"
+          },
+          "url": "https://raven3.com.ar/en/premium-web.html",
+          "areaServed": {
+            "@type": "Country",
+            "name": "Argentina"
+          },
+          "serviceType": "Premium web development"
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raven3.com.ar/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Premium Web", "item": "https://raven3.com.ar/en/premium-web.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What sets a premium website apart from a regular one?",
+          "acceptedAnswer": {"@type": "Answer", "text": "A premium website is custom-built with a focus on UX/UI, strategic copy, technical SEO, and performance. We don't use templates or website builders. Every element is designed to build trust and turn visits into inquiries."}
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take to build a premium website?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Between 3 and 6 weeks depending on scope and functionality. We give you a clear timeline from day one with defined milestones."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can I update the premium website content myself?",
+          "acceptedAnswer": {"@type": "Answer", "text": "It depends on the project. If you need autonomy, we build in an admin panel or a headless CMS. If you'd rather we handle it, we offer maintenance plans."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does the premium website include hosting and a domain?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We advise on hosting and domain setup. The cost is separate, but we recommend the best options for your case and handle the technical configuration."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does a premium website work for any industry?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. We work with companies, professional practices, personal brands, health, education, real estate, consulting firms, industrial businesses, and more. Every project is adapted to the client's industry and target audience."}
+        }
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- ══ TOPBAR ═══════════════════════════════════════════ -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="https://raven3.com.ar/en/" class="logo" aria-label="Raven3 — Home">
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Main navigation">
+          <div class="topbar__dropdown">
+            <a class="topbar__link topbar__link--parent" href="/en/services/custom-web-development.html">Services</a>
+            <div class="topbar__sub">
+              <a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Web Development</a>
+              <a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online Stores</a>
+              <a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a>
+            </div>
+          </div>
+          <a class="topbar__link" href="/en/clients.html">Clients</a>
+          <a class="topbar__link" href="/en/about.html">About</a>
+          <a class="topbar__link" href="/blog/">Blog</a>
+          <a class="topbar__link" href="/en/contact.html">Contact</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/web-premium.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/premium-web.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+        </nav>
+        <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/web-premium.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/premium-web.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="#contacto">Get a quote</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ══ HERO ══════════════════════════════════════════ -->
+      <section class="ln-hero">
+        <div class="container">
+          <div class="ln-hero__content">
+            <span class="ln-hero__eyebrow">PREMIUM WEB</span>
+            <h1>Your business is excellent. Your website should <span class="accent">prove it</span></h1>
+            <p class="ln-hero__sub">Premium websites for brands that want to look as professional as they really are. UX/UI design, custom development, strategic copy, and technical SEO.</p>
+            <div class="ln-hero__ctas">
+              <a class="btn primary" href="#contacto">I want a premium website</a>
+              <a class="btn" href="/en/clients.html">See our work</a>
+            </div>
+          </div>
+          <div class="ln-hero__mockup">
+            <div class="ln-hero__mockup-glow"></div>
+            <div class="ln-hero__mockup-img" role="img" aria-label="Premium website mockup" style="width:100%;max-width:520px;aspect-ratio:16/10;background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.25)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ WHO IT'S FOR ═════════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">WHO IT'S FOR</span>
+          <h2>We work with brands that <span class="accent">take their digital presence seriously</span></h2>
+          <p class="ln-section__lead">If your business needs to project trust, professionalism, and authority, this website is for you.</p>
+          <div class="ln-features" style="gap:12px;">
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Companies</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Professional practices</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Personal brands</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Premium businesses</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">B2B services</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Health and beauty</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Education</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Architecture</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Premium real estate</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Consulting firms</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Industrial businesses</h3>
+            </div>
+            <div class="ln-feature-card" style="padding:20px 24px;min-height:auto;">
+              <h3 style="margin:0;font-size:1rem;">Growing brands</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ PROBLEM ═══════════════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">THE PROBLEM</span>
+          <h2>Your business might be excellent, but your website <span class="accent">doesn't show it</span></h2>
+          <p class="ln-section__lead">If your digital presence doesn't communicate who you really are, you're losing trust before you even talk to the client.</p>
+          <div class="ln-problem">
+            <ul class="ln-problem__list">
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>A generic website doesn't communicate the level of your service.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>A slow website scares off potential clients before they even see your offer.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>An outdated website communicates the opposite of who you really are.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <p>Without strategic copy, your website talks about you but convinces no one.</p>
+              </li>
+            </ul>
+            <div class="ln-problem__visual">
+              <div class="ln-problem__visual-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ SOLUTION ══════════════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">THE SOLUTION</span>
+          <h2>A premium website that <span class="accent">works for your brand</span></h2>
+          <p class="ln-section__lead">Not a generic site. A platform built to project trust, communicate value, and generate qualified inquiries.</p>
+          <div class="ln-solution-grid">
+            <ul class="ln-solution-points">
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Premium UX/UI design</strong> built for conversion.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Responsive development</strong> that's fast.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Strategic copy</strong> that communicates value.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Baseline technical SEO</strong> for organic ranking.</p>
+              </li>
+              <li class="ln-solution-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>WhatsApp and form integration</strong> to capture inquiries.</p>
+              </li>
+            </ul>
+            <div class="ln-problem__visual">
+              <div class="ln-problem__visual-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ FEATURES ══════════════════════════════════════ -->
+      <section class="ln-section ln-section--alt ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">FEATURES</span>
+          <h2>Everything included in your <span class="accent">premium website</span></h2>
+          <p class="ln-section__lead">Every feature built so your brand turns visits into real inquiries.</p>
+          <div class="ln-features">
+
+            <!-- 1 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3>Premium UX/UI design</h3>
+              <p>Custom interfaces that project professionalism and guide the user toward taking action.</p>
+            </div>
+
+            <!-- 2 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+              </div>
+              <h3>Responsive development</h3>
+              <p>Your website looks flawless on mobile, tablet, and desktop. Fast, with no lost functionality.</p>
+            </div>
+
+            <!-- 3 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+              </div>
+              <h3>Strategic copywriting</h3>
+              <p>Copy that communicates value, differentiates your brand, and turns visitors into inquiries.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3>Baseline technical SEO</h3>
+              <p>Optimized structure so Google indexes your brand and ranks it for relevant searches.</p>
+            </div>
+
+            <!-- 5 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </div>
+              <h3>WhatsApp integration</h3>
+              <p>A WhatsApp button with a pre-written message so clients can reach you instantly.</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <h3>Forms</h3>
+              <p>Contact and inquiry forms that capture qualified leads and land straight in your inbox.</p>
+            </div>
+
+            <!-- 7 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+              </div>
+              <h3>Analytics / measurement</h3>
+              <p>Google Analytics configured to measure visits, conversions, and user behavior.</p>
+            </div>
+
+            <!-- 8 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <h3>Performance</h3>
+              <p>Fast, lightweight, optimized to load in under 3 seconds on any device.</p>
+            </div>
+
+            <!-- 9 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+              </div>
+              <h3>Optimized images</h3>
+              <p>Photos compressed into modern formats that load fast without losing visual quality.</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Trust and conversion architecture</h3>
+              <p>Content structure that builds credibility and guides visitors toward reaching out.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ BENEFITS ══════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">BENEFITS</span>
+          <h2>What changes when you have a <span class="accent">premium website</span></h2>
+          <p class="ln-section__lead">It's not just aesthetics. It's how people perceive you, how they find you, and the kind of inquiries you receive.</p>
+          <div class="ln-benefits">
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>More trust</h3>
+              <p>Your brand looks as professional as it really is. A flawless first impression.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <h3>Better inquiries</h3>
+              <p>You get inquiries from people who already understood your value proposition before writing to you.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+              </div>
+              <h3>Brand authority</h3>
+              <p>Position yourself as a go-to name in your field with a digital presence that sets you apart.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              </div>
+              <h3>Professional presence</h3>
+              <p>Your website works for you 24/7, communicating quality even when you're not around.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CASES ═════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">CASE STUDIES</span>
+          <h2>Brands that already <span class="accent">trust Raven3</span></h2>
+          <p class="ln-section__lead">Real projects for companies and professionals who chose a premium website.</p>
+          <div class="ln-cases">
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="SGM project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>SGM</h3>
+                <p>Premium institutional website focused on trust and inquiry conversion.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="ART1 project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>ART1</h3>
+                <p>Premium design for an art brand with a strong visual identity and project gallery.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Okos project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Okos</h3>
+                <p>Custom-built web platform with optimized UX and a strategic content architecture.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Lassen Pharma project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Lassen Pharma</h3>
+                <p>Institutional website for a pharmaceutical lab with professional design and a trust-building structure.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Etienne de Montebello project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Etienne de Montebello</h3>
+                <p>Premium brand with a high-impact website, strategic copy, and technical SEO.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="CEA American project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>CEA American</h3>
+                <p>Corporate website with a professional presence, service integration, and forms.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Ibarra Propiedades project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Ibarra Propiedades</h3>
+                <p>Premium real estate website with a property catalog and direct WhatsApp contact.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Perniles Cochon project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Perniles Cochon</h3>
+                <p>Food and hospitality website with brand design, product catalog, and WhatsApp ordering.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Beforce project" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>Beforce</h3>
+                <p>B2B services website with a trust-driven architecture, strategic copy, and conversion focus.</p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ COMPARISON TABLE ══════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">COMPARISON</span>
+          <h2>Why a <span class="accent">premium website</span> beats everything else</h2>
+          <p class="ln-section__lead">We compared the options most businesses consider.</p>
+          <div class="ln-compare">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Generic template</th>
+                  <th>Wix / WordPress DIY</th>
+                  <th>Freelancer</th>
+                  <th>Raven3 Premium</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Custom design</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Conversion-focused UX/UI</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Strategic copy</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Technical SEO</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Basic</span></td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Performance</td>
+                  <td><span class="partial">Average</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Support</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Forum</span></td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Professional result</td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ PROCESS ═══════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">PROCESS</span>
+          <h2>How we build <span class="accent">your premium website</span></h2>
+          <p class="ln-section__lead">A clear process, no surprises, focused on results.</p>
+          <div class="ln-process">
+            <div class="ln-step">
+              <div class="ln-step__num">01</div>
+              <div class="ln-step__text">
+                <h3>Diagnosis</h3>
+                <p>We analyze your business, your competitors, and your target audience.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">02</div>
+              <div class="ln-step__text">
+                <h3>Strategy and content</h3>
+                <p>We define the architecture, the copy, and the conversion structure.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">03</div>
+              <div class="ln-step__text">
+                <h3>UX/UI design</h3>
+                <p>We craft your brand's visual experience with a focus on professionalism.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">04</div>
+              <div class="ln-step__text">
+                <h3>Development</h3>
+                <p>We build your site with clean code, performance, and technical SEO.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">05</div>
+              <div class="ln-step__text">
+                <h3>Launch and optimization</h3>
+                <p>We publish, set up analytics, and optimize based on real data.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ FAQ ════════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+          <h2>Questions about <span class="accent">premium websites</span></h2>
+          <div class="ln-faq-list">
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                What sets a premium website apart from a regular one?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">A premium website is custom-built with a focus on UX/UI, strategic copy, technical SEO, and performance. We don't use templates or website builders. Every element is designed to build trust and turn visits into inquiries.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                How long does development take?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Between 3 and 6 weeks depending on scope and functionality. We give you a clear timeline from day one with defined milestones.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Can I update the content myself?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">It depends on the project. If you need autonomy, we build in an admin panel or a headless CMS. If you'd rather we handle it, we offer maintenance plans.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Does it include hosting and a domain?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">We advise on hosting and domain setup. The cost is separate, but we recommend the best options for your case and handle the technical configuration.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Does it work for any industry?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Yes. We work with companies, professional practices, personal brands, health, education, real estate, consulting firms, industrial businesses, and more. Every project is adapted to the client's industry and target audience.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CTA SECTION ═══════════════════════════════════ -->
+      <section class="ln-cta-section ln-riv">
+        <div class="container">
+          <h2>Your brand deserves a website that <span class="accent">works for you</span></h2>
+          <p>It's not an expense. It's the investment that separates the brands that grow from the ones that stall.</p>
+          <div class="ln-hero__ctas">
+            <a class="btn primary" href="#contacto">I want a premium website</a>
+            <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20to%20build%20a%20premium%20website%20for%20my%20business." target="_blank" rel="noopener nofollow">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CONTACT FORM ══════════════════════════════════ -->
+      <section class="ln-form-section ln-riv" id="contacto">
+        <div class="container">
+          <div class="ln-form-wrap">
+            <div class="ln-form-info">
+              <h2>Let's talk about <span class="accent">your premium website</span></h2>
+              <p>Tell us about your business and we'll put together a custom proposal. No obligation, no fine print.</p>
+              <div class="ln-form-contact-links">
+                <a class="ln-form-contact-link" href="mailto:hola@raven3.com.ar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  hola@raven3.com.ar
+                </a>
+                <a class="ln-form-contact-link" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  +54 9 11 3456-8899
+                </a>
+              </div>
+            </div>
+            <form class="ln-form" id="ln-contactForm" action="https://formspree.io/f/mvoykeyq" method="POST">
+              <input type="hidden" name="landing" value="web-premium-en" />
+              <div class="ln-form__grid">
+                <div class="ln-form__field">
+                  <label for="f-nombre">Name</label>
+                  <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="Your name" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-marca">Business / brand</label>
+                  <input type="text" id="f-marca" name="marca" placeholder="Name of your business or brand" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-rubro">Industry</label>
+                  <select id="f-rubro" name="rubro">
+                    <option value="" disabled selected>Select your industry</option>
+                    <option value="Empresa">Company</option>
+                    <option value="Estudio profesional">Professional practice</option>
+                    <option value="Marca personal">Personal brand</option>
+                    <option value="Salud">Health</option>
+                    <option value="Educación">Education</option>
+                    <option value="Inmobiliaria">Real estate</option>
+                    <option value="Otro">Other</option>
+                  </select>
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-web">Current website (if any)</label>
+                  <input type="url" id="f-web" name="web_actual" placeholder="https://..." autocomplete="url" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-contacto">WhatsApp or email</label>
+                  <input type="text" id="f-contacto" name="contacto" required placeholder="So we can get back to you" />
+                </div>
+                <div class="ln-form__field ln-form__field--full">
+                  <label for="f-mensaje">Message</label>
+                  <textarea id="f-mensaje" name="mensaje" placeholder="Tell us what your business needs..."></textarea>
+                </div>
+              </div>
+              <div class="ln-form__submit">
+                <button class="btn primary" type="submit">Send inquiry</button>
+                <span class="ln-form__status" id="ln-formStatus" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ STICKY MOBILE CTA ═══════════════════════════════ -->
+    <div class="ln-sticky-cta" role="group" aria-label="Quick actions">
+      <a class="btn primary" href="#contacto">Get a quote</a>
+      <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20to%20build%20a%20premium%20website%20for%20my%20business." target="_blank" rel="noopener nofollow">WhatsApp</a>
+    </div>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════ -->
+    <footer id="footer" aria-label="Footer">
+      <div class="container">
+        <div class="footer-newsletter">
+          <div class="footer-newsletter__copy">
+            <span class="footer-newsletter__label">NEWSLETTER</span>
+            <p class="footer-newsletter__tagline">Web Performance Insights — high-value technical content only.</p>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="https://raven3.com.ar/en/" aria-label="Raven3 — Home" style="display:inline-block;margin-bottom:16px">
+              <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+            </a>
+            <p>Digital agency specializing in custom web development, e-commerce, technical SEO, and premium digital architecture. No templates. Real results.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar">Email us</a>
+              <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">WhatsApp</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="/en/services/custom-web-development.html">Web development</a></li>
+              <li><a href="/en/services/online-stores.html">Online stores</a></li>
+              <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+                <li><a href="/en/websites-by-industry.html">Websites by industry</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-contact-list">
+              <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+              <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">+54 9 11 3456-8899</a></li>
+              <li>Buenos Aires, Argentina</li>
+            </ul>
+            <h3 style="margin-top:24px">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/en/about.html">About Raven3</a></li>
+              <li><a href="/en/clients.html">Clients</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom small">
+          <span><span id="year"></span> &copy; Raven3. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+
+  <script src="/assets/js/lang-switcher.js" defer></script>
+  <script src="/assets/js/landing-nichos.js"></script>
+</body>
+</html>

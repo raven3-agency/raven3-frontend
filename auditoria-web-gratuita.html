@@ -12,6 +12,9 @@
     <meta name="theme-color" content="#02050a" />
 
     <link rel="canonical" href="https://raven3.com.ar/auditoria-web-gratuita" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/auditoria-web-gratuita" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/free-web-audit.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/auditoria-web-gratuita" />
 
     <meta property="og:title" content="Auditoría Web Gratuita | Raven3" />
     <meta property="og:description" content="Analizá velocidad, SEO, mobile y conversión de tu sitio web. Gratis, en minutos, con informe personalizado." />
@@ -37,6 +40,7 @@
     <link rel="stylesheet" href="assets/css/redesign.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/lang-switcher.css" />
 
     <script type="application/ld+json">
     {
@@ -429,11 +433,21 @@
           <a class="topbar__link" href="/blog/">Blog</a>
           <a class="topbar__link is-active" href="/auditoria-web-gratuita.html">Auditoría</a>
           <a class="topbar__link" href="/contacto.html">Contacto</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--es" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/auditoria-web-gratuita.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/free-web-audit.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
         </nav>
         <div class="topbar-sys" aria-hidden="true">
           <span class="topbar-sys-dot"></span>
           SYS NOMINAL
         </div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--es" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/auditoria-web-gratuita.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/free-web-audit.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
         <a class="btn primary cta-desktop" href="/contacto.html">Auditoría gratuita</a>
         <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
           <span></span><span></span><span></span>
@@ -1194,5 +1208,6 @@
       });
     </script>
 
+    <script src="assets/js/lang-switcher.js" defer></script>
   </body>
 </html>

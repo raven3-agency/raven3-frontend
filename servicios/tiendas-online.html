@@ -19,6 +19,9 @@
       rel="canonical"
       href="https://raven3.com.ar/servicios/tiendas-online"
     />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/servicios/tiendas-online" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/services/online-stores.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/servicios/tiendas-online" />
 
     <meta
       property="og:title"
@@ -63,6 +66,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/animations.css" />
+    <link rel="stylesheet" href="../assets/css/lang-switcher.css" />
     <!-- Signal Intelligence Redesign -->
     <link rel="stylesheet" href="../assets/css/redesign.css" />
     <script src="../assets/js/cursor.js" defer></script>
@@ -1161,11 +1165,21 @@
           <a class="topbar__link" href="/sobre-raven3.html">Nosotros</a>
           <a class="topbar__link" href="/blog/">Blog</a>
           <a class="topbar__link" href="/contacto.html">Contacto</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--es" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/servicios/tiendas-online.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/services/online-stores.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
         </nav>
         <div class="topbar-sys" aria-hidden="true">
           <span class="topbar-sys-dot"></span>
           SYS NOMINAL
         </div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--es" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/servicios/tiendas-online.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/services/online-stores.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
         <a class="btn primary cta-desktop" href="/auditoria-web-gratuita.html">Auditoría gratuita</a>
         <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
           <span></span>
@@ -1931,5 +1945,6 @@
     </script>
 
     <script src="../assets/js/redesign.js" defer></script>
+    <script src="../assets/js/lang-switcher.js" defer></script>
   </body>
 </html>

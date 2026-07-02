@@ -1,0 +1,1002 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Privacy Policy | Raven3</title>
+
+    <meta
+      name="description"
+      content="Read Raven3's privacy policy. We explain what data we collect, how we use it, which tools we work with, and what rights you have over your information."
+    />
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="noindex,follow" />
+
+    <link
+      rel="canonical"
+      href="https://raven3.com.ar/en/privacy-policy.html"
+    />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/politica-de-privacidad.html" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/privacy-policy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/politica-de-privacidad.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://raven3.com.ar/en/privacy-policy.html"
+    />
+    <meta property="og:title" content="Privacy Policy | Raven3" />
+    <meta
+      property="og:description"
+      content="How Raven3 collects, uses, and protects the personal and technical information of visitors to its website."
+    />
+    <meta
+      property="og:image"
+      content="https://raven3.com.ar/assets/img/og/raven3.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://raven3.com.ar/en/privacy-policy.html"
+    />
+    <meta property="twitter:title" content="Privacy Policy | Raven3" />
+    <meta
+      property="twitter:description"
+      content="What data Raven3 collects, what we use it for, and how we protect the information of our users and clients."
+    />
+    <meta
+      property="twitter:image"
+      content="https://raven3.com.ar/assets/img/og/raven3.png"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="192x192"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="512x512"
+      href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png"
+    />
+
+    <!-- Preconnect -->
+    <link
+      rel="preconnect"
+      href="https://www.googletagmanager.com"
+      crossorigin
+    />
+    <link
+      rel="preconnect"
+      href="https://www.google-analytics.com"
+      crossorigin
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts: Orbitron (display) + Rajdhani (headings) + Outfit (body) + Share Tech Mono (labels) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Signal Intelligence Redesign -->
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+
+    <!-- CSS -->
+    <link rel="preload" href="/assets/css/style.css" as="style" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+
+    <!-- GA4 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-MF63Q3JMSL");
+    </script>
+
+    <script>
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href*="#formulario"]');
+        if (link) {
+          gtag('event', 'contact_request', {
+            'method': 'presupuesto_click',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href^="mailto"]');
+        if (link) {
+          gtag('event', 'email_click', {
+            'method': 'email_directo',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      const whatsappBtn = document.getElementById('waTrigger');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            'method': 'whatsapp',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+          gtag('event', 'form_submission', {
+            'method': 'formulario_contacto',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+    </script>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PrivacyPolicy",
+        "name": "Raven3 Privacy Policy",
+        "url": "https://raven3.com.ar/en/privacy-policy.html",
+        "inLanguage": "en",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Raven3",
+          "url": "https://raven3.com.ar/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.raven3.com.ar/assets/img/logo.png"
+          }
+        },
+        "dateModified": "2026-03-10"
+      }
+    </script>
+    <style>
+      :root {
+        --legal-max: 1180px;
+        --legal-reading: 760px;
+      }
+
+      .legal-hero {
+        padding: 138px 0 42px;
+        position: relative;
+      }
+
+      .legal-hero__inner {
+        position: relative;
+        z-index: 2;
+      }
+
+      .legal-hero h1 {
+        margin: 0 0 18px;
+        font-size: clamp(2.2rem, 5vw, 4.2rem);
+        line-height: 0.98;
+        letter-spacing: -0.03em;
+      }
+
+      .legal-lead {
+        max-width: 860px;
+        color: var(--muted);
+        font-size: clamp(1.02rem, 1.8vw, 1.14rem);
+        line-height: 1.75;
+        margin: 0;
+      }
+
+      .legal-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px 20px;
+        margin-top: 20px;
+        color: var(--muted-2);
+        font-size: 0.94rem;
+      }
+
+      .legal-breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+        color: var(--muted-2);
+        font-size: 0.94rem;
+      }
+
+      .legal-breadcrumb a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .legal-page {
+        padding: 12px 0 100px;
+      }
+
+      .legal-layout {
+        max-width: var(--legal-max);
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+      }
+
+      .legal-panel {
+        background: linear-gradient(
+          180deg,
+          rgba(7, 15, 24, 0.88) 0%,
+          rgba(10, 18, 28, 0.96) 100%
+        );
+        border: 1px solid rgba(55, 226, 213, 0.14);
+        border-radius: 24px;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.24);
+        backdrop-filter: blur(10px);
+      }
+
+      .legal-toc {
+        position: sticky;
+        top: 110px;
+      }
+
+      .legal-toc .legal-panel {
+        padding: 22px 20px;
+      }
+
+      .legal-toc__title {
+        margin: 0 0 14px;
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--text-strong);
+      }
+
+      .legal-toc a {
+        display: block;
+        color: var(--muted);
+        text-decoration: none;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        transition:
+          color 0.25s ease,
+          transform 0.25s ease;
+      }
+
+      .legal-toc a:last-child {
+        border-bottom: 0;
+      }
+
+      .legal-toc a:hover {
+        color: var(--accent);
+        transform: translateX(3px);
+      }
+
+      .legal-content {
+        display: grid;
+        gap: 22px;
+      }
+
+      .legal-section {
+        padding: 30px 30px 28px;
+      }
+
+      .legal-section h2 {
+        margin: 0 0 14px;
+        font-size: clamp(1.35rem, 2vw, 1.9rem);
+        line-height: 1.15;
+        color: var(--text-strong);
+      }
+
+      .legal-section h3 {
+        margin: 22px 0 10px;
+        font-size: 1rem;
+        line-height: 1.35;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+      }
+
+      .legal-link {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(55, 226, 213, 0.32);
+        transition:
+          color 0.25s ease,
+          border-color 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      .legal-link:hover {
+        color: var(--accent-2);
+        border-bottom-color: rgba(127, 250, 240, 0.72);
+      }
+
+      .legal-link:focus-visible {
+        outline: 2px solid rgba(55, 226, 213, 0.5);
+        outline-offset: 3px;
+        border-bottom-color: transparent;
+        border-radius: 4px;
+      }
+
+      .legal-section p,
+      .legal-section li {
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.8;
+      }
+
+      .legal-section p {
+        margin: 0 0 14px;
+      }
+
+      .legal-section ul {
+        margin: 0;
+        padding-left: 20px;
+      }
+
+      .legal-section li + li {
+        margin-top: 10px;
+      }
+
+      .legal-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .footer-legal {
+        margin-left: 8px;
+        opacity: 0.85;
+      }
+
+      .footer-legal a {
+        color: inherit;
+        text-decoration: none;
+        opacity: 0.75;
+        transition: opacity 0.25s ease;
+      }
+
+      .footer-legal a:hover {
+        opacity: 1;
+      }
+
+      @media (max-width: 1024px) {
+        .legal-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .legal-toc {
+          position: relative;
+          top: 0;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .legal-hero {
+          padding: 116px 0 28px;
+        }
+
+        .legal-section {
+          padding: 24px 20px 22px;
+          border-radius: 20px;
+        }
+
+        .legal-lead {
+          line-height: 1.7;
+        }
+
+        .legal-actions {
+          flex-direction: column;
+        }
+
+        .legal-actions .btn {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+      .legal-section a {
+        color: var(--accent);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(55, 226, 213, 0.32);
+        transition:
+          color 0.25s ease,
+          border-color 0.25s ease,
+          opacity 0.25s ease;
+      }
+
+      .legal-section a:hover {
+        color: var(--accent-2);
+        border-bottom-color: rgba(127, 250, 240, 0.72);
+      }
+
+      .legal-section a:focus-visible {
+        outline: 2px solid rgba(55, 226, 213, 0.5);
+        outline-offset: 3px;
+        border-bottom-color: transparent;
+        border-radius: 4px;
+      }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Privacy Policy | Raven3",
+      "description": "Read Raven3's privacy policy. We explain what data we collect, how we use it, which tools we work with, and what rights you have over your information.",
+      "url": "https://raven3.com.ar/en/privacy-policy.html",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Raven3",
+        "url": "https://raven3.com.ar/"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+    <div class="wasap">
+      <a
+        href="https://api.whatsapp.com/send?l=en&amp;text=Hi%20Raven3!%20I%27d%20like%20to%20ask%20about%20the%20privacy%20policy&amp;phone=5491134568899"
+        target="_blank"
+        rel="noopener"
+        aria-label="Send a WhatsApp message"
+      >
+
+      </a>
+    </div>
+
+    <div id="cursor" aria-hidden="true"></div>
+    <div id="cursor-dot" aria-hidden="true"></div>
+    <div id="progress" aria-hidden="true"></div>
+
+    <div id="background" aria-hidden="true">
+      <canvas id="particles"></canvas>
+    </div>
+
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a
+          href="/en/"
+          class="logo"
+          aria-label="Raven3 — Home"
+        >
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav
+          class="topbar__nav"
+          id="main-nav"
+          aria-label="Main navigation"
+        >
+          <div class="topbar__dropdown"><a class="topbar__link topbar__link--parent" href="/en/#servicios">Services</a><div class="topbar__sub"><a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Web development</a><a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online stores</a><a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a></div></div>
+          <a class="topbar__link" href="/en/#proceso">Process</a>
+          <a class="topbar__link" href="/en/clients.html">Clients</a>
+          <a class="topbar__link" href="/en/about.html">About</a>
+          <a class="topbar__link" href="/en/contact.html">Contact</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/politica-de-privacidad.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/privacy-policy.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+        </nav>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/politica-de-privacidad.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/privacy-policy.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="/en/contact.html">Free web audit</a>
+        <button
+          class="nav-toggle"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="main-nav"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="legal-hero">
+        <div class="container legal-hero__inner">
+          <p class="eyebrow">Legal</p>
+          <h1>Privacy Policy</h1>
+          <p class="legal-lead">
+            At <strong>Raven3</strong>, we value the privacy of everyone who
+            visits our site, contacts us, or hires our services. This policy
+            explains what information we may collect, how we use it, which
+            tools we work with, and what rights you have over your data.
+          </p>
+
+          <div class="legal-meta">
+            <span>Last updated: March 10, 2026</span>
+            <span>Applies to: raven3.com.ar</span>
+          </div>
+
+          <nav class="legal-breadcrumb" aria-label="Breadcrumb">
+            <a href="/en/">Home</a>
+            <span>/</span>
+            <span aria-current="page">Privacy Policy</span>
+          </nav>
+        </div>
+      </section>
+
+      <section class="legal-page">
+        <div class="container legal-layout">
+          <aside class="legal-toc">
+            <div class="legal-panel">
+              <p class="legal-toc__title">Contents</p>
+              <a href="#aceptacion">Acceptance</a>
+              <a href="#datos-recopilados">What data we collect</a>
+              <a href="#finalidades">How we use your data</a>
+              <a href="#cookies">Cookies &amp; analytics</a>
+              <a href="#formularios">Forms &amp; contact</a>
+              <a href="#newsletter">Newsletter</a>
+              <a href="#terceros">Third-party services</a>
+              <a href="#conservacion">Data retention</a>
+              <a href="#seguridad">Security</a>
+              <a href="#derechos">Your rights</a>
+              <a href="#menores">Minors</a>
+              <a href="#cambios">Changes to this policy</a>
+              <a href="#contacto-legal">Contact</a>
+            </div>
+          </aside>
+
+          <article class="legal-content">
+            <section id="aceptacion" class="legal-section legal-panel">
+              <h2>Acceptance of this policy</h2>
+              <p>
+                Accessing and using the <strong>raven3.com.ar</strong> website
+                implies acknowledgment of this Privacy Policy.
+              </p>
+              <p>
+                By browsing the site, completing forms, subscribing to the
+                newsletter, or contacting Raven3 through any of its channels,
+                you agree that we may process your information in accordance
+                with this policy and applicable law.
+              </p>
+            </section>
+
+            <section id="datos-recopilados" class="legal-section legal-panel">
+              <h2>What data we may collect</h2>
+
+              <h3>1. Data you provide directly</h3>
+              <ul>
+                <li>Name.</li>
+                <li>Email address.</li>
+                <li>Phone number, if you choose to share it.</li>
+                <li>Company, brand, or project name.</li>
+                <li>Messages or inquiries submitted through forms.</li>
+                <li>
+                  Any other information you voluntarily share with us by
+                  email, forms, or WhatsApp.
+                </li>
+              </ul>
+
+              <h3>2. Technical and browsing data</h3>
+              <ul>
+                <li>IP address.</li>
+                <li>Browser and device type.</li>
+                <li>Operating system.</li>
+                <li>Pages visited and time spent browsing.</li>
+                <li>Interaction events within the site.</li>
+                <li>
+                  Technical data derived from cookies, tags, logs, or
+                  measurement tools.
+                </li>
+              </ul>
+            </section>
+
+            <section id="finalidades" class="legal-section legal-panel">
+              <h2>How we use your information</h2>
+              <p>We may use the information we collect to:</p>
+              <ul>
+                <li>Respond to commercial or technical inquiries.</li>
+                <li>Prepare proposals, quotes, or diagnostics.</li>
+                <li>
+                  Manage our relationship with clients and prospective
+                  clients.
+                </li>
+                <li>
+                  Send updates, content, or communications you requested.
+                </li>
+                <li>Measure traffic, behavior, and site performance.</li>
+                <li>
+                  Improve user experience, security, and performance.
+                </li>
+                <li>Prevent abuse, spam, fraud, or unauthorized use.</li>
+                <li>
+                  Comply with legal or tax obligations where applicable.
+                </li>
+              </ul>
+            </section>
+
+            <section id="cookies" class="legal-section legal-panel">
+              <h2>Cookies, tags, and analytics</h2>
+              <p>
+                This site may use first-party and third-party cookies, as
+                well as similar technologies, to understand how the site is
+                used, improve navigation, and measure results.
+              </p>
+
+              <h3>1. What they may record</h3>
+              <ul>
+                <li>Sessions and browsing preferences.</li>
+                <li>Page visits and on-site events.</li>
+                <li>
+                  Aggregated information about devices and behavior.
+                </li>
+              </ul>
+
+              <h3>2. Analytics tools</h3>
+              <p>
+                Raven3 may use analytics and measurement tools such as
+                <strong>Google Analytics</strong> to obtain usage,
+                performance, and aggregated behavioral statistics for the
+                site.
+              </p>
+
+              <h3>3. Managing cookies</h3>
+              <p>
+                You can configure your browser to reject, limit, or delete
+                cookies. Keep in mind that some site features may be
+                affected if you disable certain cookies or scripts.
+              </p>
+            </section>
+
+            <section id="formularios" class="legal-section legal-panel">
+              <h2>Forms, inquiries, and contact channels</h2>
+              <p>
+                When you complete a form on the site or contact Raven3, the
+                information submitted may be processed through third-party
+                tools specifically designed to receive and manage messages.
+              </p>
+              <ul>
+                <li>
+                  We use the data exclusively to respond to inquiries,
+                  evaluate projects, follow up commercially, or maintain the
+                  communication you requested.
+                </li>
+                <li>
+                  The site may include anti-spam or verification mechanisms,
+                  such as <strong>reCAPTCHA</strong> or other protection
+                  solutions.
+                </li>
+                <li>
+                  If you initiate contact via WhatsApp, that interaction is
+                  also subject to that platform's own policies and terms.
+                </li>
+              </ul>
+            </section>
+
+            <section id="newsletter" class="legal-section legal-panel">
+              <h2>Newsletter and subscriptions</h2>
+              <p>
+                If you subscribe to Raven3's newsletter, we may store your
+                email address and the minimum technical information
+                necessary to manage the subscription, avoid duplicates,
+                validate delivery, and maintain the subscriber list.
+              </p>
+              <ul>
+                <li>
+                  The content we send may include updates, technical
+                  insights, articles, launch announcements, or
+                  communications related to web development, performance,
+                  and technical SEO.
+                </li>
+                <li>
+                  You may request to unsubscribe or delete your email by
+                  writing to
+                  <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>.
+                </li>
+              </ul>
+            </section>
+
+            <section id="terceros" class="legal-section legal-panel">
+              <h2>Third-party services and external processing</h2>
+              <p>
+                To operate properly, the Raven3 website or its services may
+                rely on external providers for infrastructure, forms,
+                analytics, security, automation, email, or communication.
+              </p>
+              <p>These may include services such as:</p>
+              <ul>
+                <li>Google Analytics or equivalent measurement services.</li>
+                <li>Formspree or similar form-handling tools.</li>
+                <li>Google reCAPTCHA or other anti-spam systems.</li>
+                <li>
+                  Hosting, CDN, DNS, cloud, or edge function providers.
+                </li>
+                <li>WhatsApp for user-initiated contact.</li>
+              </ul>
+              <p>
+                These third parties may process certain information in
+                accordance with their own privacy policies and terms of
+                service.
+              </p>
+            </section>
+
+            <section id="conservacion" class="legal-section legal-panel">
+              <h2>Data retention period</h2>
+              <p>
+                We will retain personal information for as long as
+                reasonably necessary to fulfill the purposes described in
+                this policy, maintain the business relationship, respond to
+                requests, resolve issues, or comply with legal, contractual,
+                or tax obligations.
+              </p>
+              <p>
+                Once the data is no longer needed, it may be deleted,
+                anonymized, or blocked, as appropriate.
+              </p>
+            </section>
+
+            <section id="seguridad" class="legal-section legal-panel">
+              <h2>Security and confidentiality</h2>
+              <p>
+                Raven3 adopts reasonable technical and organizational
+                measures to protect information against unauthorized
+                access, loss, alteration, or improper disclosure.
+              </p>
+              <ul>
+                <li>Use of secure connections where applicable.</li>
+                <li>Restricted access to sensitive information.</li>
+                <li>Sound technical and operational safeguarding practices.</li>
+              </ul>
+              <p>
+                Even so, no system that operates over the Internet can
+                guarantee absolute security. While we work to reduce risk,
+                we cannot ensure total invulnerability against external
+                incidents, attacks, or third-party failures.
+              </p>
+            </section>
+
+            <section id="derechos" class="legal-section legal-panel">
+              <h2>Your rights over your data</h2>
+              <p>
+                Regarding your personal data, and to the extent applicable,
+                you may request:
+              </p>
+              <ul>
+                <li>Access to the information we hold about you.</li>
+                <li>Updates or corrections.</li>
+                <li>Deletion or erasure.</li>
+                <li>Withdrawal of consent for certain uses.</li>
+              </ul>
+              <p>
+                To exercise any of these rights, write to us at
+                <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>.
+              </p>
+            </section>
+
+            <section id="menores" class="legal-section legal-panel">
+              <h2>Minors</h2>
+              <p>
+                Raven3's services and the site's commercial inquiries are
+                intended for individuals with sufficient legal capacity to
+                enter into contracts under applicable law.
+              </p>
+              <p>
+                If we become aware that personal data has been submitted by
+                a minor without appropriate involvement from their legal
+                guardians, we may delete that information when appropriate.
+              </p>
+            </section>
+
+            <section id="cambios" class="legal-section legal-panel">
+              <h2>Changes to this policy</h2>
+              <p>
+                Raven3 may update this Privacy Policy to reflect legal,
+                technical, operational, or service-related changes.
+              </p>
+              <p>
+                The version currently in effect will always be the one
+                published on this page. We recommend reviewing it
+                periodically.
+              </p>
+            </section>
+
+            <section id="contacto-legal" class="legal-section legal-panel">
+              <h2>Contact</h2>
+              <p>
+                If you have questions about this Privacy Policy or about how
+                we handle your information, you can write to
+                <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>.
+              </p>
+
+              <div class="legal-actions">
+                <a class="btn primary" href="/en/contact.html">Get in touch</a>
+                <a class="btn" href="/en/">Back to home</a>
+              </div>
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <footer id="footer" aria-label="Footer">
+        <div class="container">
+          <!-- ── Newsletter strip ── -->
+          <div class="footer-newsletter">
+            <div class="footer-newsletter__copy">
+              <span class="footer-newsletter__label">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                NEWSLETTER
+              </span>
+              <p class="footer-newsletter__tagline">Web Performance Insights — technical content only, no fluff.</p>
+            </div>
+            <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+              <div class="footer-newsletter__field">
+                <input id="newsletter-email" type="email" name="email" placeholder="you@email.com" autocomplete="email" aria-label="Your email for the newsletter" required />
+                <input type="hidden" name="_subject" value="New Raven3 subscriber" />
+                <button type="submit" id="newsletter-btn" data-idle-text="Subscribe" data-sending-text="…" data-success-text="Subscribed ✓" data-already-text="Already subscribed ✓" data-retry-text="Retry">
+                  Subscribe
+                  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+              </div>
+              <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite" data-sending-text="Processing…" data-success-msg="Done: <strong>{email}</strong> subscribed." data-already-msg="<strong>{email}</strong> was already subscribed." data-error-text="Something went wrong. Please try again."></p>
+            </form>
+          </div>
+
+          <div class="footer-grid">
+            <div class="footer-col">
+              <a
+                href="/en/"
+                aria-label="Raven3 — Home"
+                style="display: inline-block; margin-bottom: 16px"
+              >
+                <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+              </a>
+              <p>
+                Digital agency specializing in custom web
+                development, e-commerce, technical SEO, and premium digital
+                architecture. No templates. Real results.
+              </p>
+              <div class="cta-row">
+                <a class="btn primary" href="mailto:hola@raven3.com.ar"
+                  >Email us</a
+                >
+                <a
+                  class="btn"
+                  href="https://wa.me/5491134568899"
+                  target="_blank"
+                  rel="noopener"
+                  >WhatsApp</a
+                >
+              </div>
+            </div>
+            <div class="footer-col">
+              <h3>Services</h3>
+              <ul class="footer-links">
+                <li>
+                  <a href="/en/services/custom-web-development.html"
+                    >Web development</a
+                  >
+                </li>
+                <li>
+                  <a href="/en/services/online-stores.html">Online stores</a>
+                </li>
+                <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+                <li><a href="/en/#servicios">Performance &amp; CWV</a></li>
+                <li><a href="/en/#servicios">UX/UI Conversion</a></li>
+                <li><a href="/en/#servicios">API Integrations</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h3>Contact</h3>
+              <ul class="footer-contact-list">
+                <li>
+                  <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>
+                </li>
+                <li>
+                  <a
+                    href="https://wa.me/5491134568899"
+                    target="_blank"
+                    rel="noopener"
+                    >+54 9 11 3456-8899</a
+                  >
+                </li>
+                <li>Buenos Aires, Argentina</li>
+              </ul>
+              <h3 style="margin-top: 24px">Company</h3>
+              <ul class="footer-links">
+                <li><a href="/en/about.html">About Raven3</a></li>
+                <li><a href="/en/clients.html">Clients</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom small">
+            <span>
+              <span id="year"></span> © Raven3. All rights reserved.
+              <span class="footer-legal">
+                ·
+                <a href="/en/privacy-policy.html"
+                  >Privacy Policy</a
+                >
+                ·
+                <a href="/en/terms.html">Terms</a>
+                ·
+                <a href="/raven3-brand-guidelines.html">Brand Guidelines</a>
+              </span>
+            </span>
+            <div class="footer-socials">
+              <a
+                href="https://www.instagram.com/agencia.raven3/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Raven3 on Instagram"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://github.com/raven3-agency/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Raven3 on GitHub"
+                ><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path
+                    d="M12 .5A11.5 11.5 0 0 0 8.36 22.9c.58.1.79-.25.79-.56v-2.02c-3.22.7-3.9-1.38-3.9-1.38-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.57-.29-5.27-1.29-5.27-5.73 0-1.27.45-2.3 1.2-3.12-.12-.3-.52-1.48.12-3.08 0 0 .98-.31 3.18 1.2A11.08 11.08 0 0 1 12 6.03c.98 0 1.96.13 2.88.39 2.2-1.51 3.18-1.2 3.18-1.2.64 1.6.24 2.78.12 3.08.75.82 1.2 1.85 1.2 3.12 0 4.45-2.7 5.43-5.28 5.72.42.36.79 1.07.79 2.16v3.04c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- App modules -->
+    <script type="module" src="/assets/js/main.js"></script>
+    <script type="module" src="/assets/js/particles.js"></script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="/assets/js/redesign.js" defer></script>
+    <script src="/assets/js/lang-switcher.js" defer></script>
+  </body>
+</html>

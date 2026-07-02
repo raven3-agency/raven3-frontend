@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Web Agency in Buenos Aires, Argentina | Raven3</title>
+
+    <meta
+      name="description"
+      content="Raven3 is a Buenos Aires-based web agency building custom websites, online stores and technical SEO for businesses that want real growth on Google."
+    />
+
+    <meta name="author" content="Raven3" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+
+    <link rel="canonical" href="https://raven3.com.ar/en/web-agency-buenos-aires.html" />
+    <link rel="alternate" hreflang="es" href="https://raven3.com.ar/agencia-web-buenos-aires.html" />
+    <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/web-agency-buenos-aires.html" />
+    <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/agencia-web-buenos-aires.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raven3.com.ar/en/web-agency-buenos-aires.html" />
+    <meta property="og:title" content="Web Agency in Buenos Aires, Argentina | Raven3" />
+    <meta property="og:description" content="Raven3 is a Buenos Aires-based web agency building custom websites, online stores and technical SEO for businesses that want real growth on Google." />
+    <meta property="og:image" content="https://raven3.com.ar/assets/img/og/agencia-web-buenos-aires.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Raven3" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://raven3.com.ar/en/web-agency-buenos-aires.html" />
+    <meta name="twitter:title" content="Web Agency in Buenos Aires, Argentina | Raven3" />
+    <meta name="twitter:description" content="Raven3 is a Buenos Aires-based web agency building custom websites, online stores and technical SEO for businesses that want real growth on Google." />
+    <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/agencia-web-buenos-aires.png" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon-16x16.png" />
+    <link rel="apple-touch-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png" />
+
+    <!-- Preconnects -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/redesign.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/animations.css" />
+    <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
+    <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
+
+    <!-- GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-MF63Q3JMSL');
+    </script>
+
+    <script>
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href*="#formulario"]');
+        if (link) {
+          gtag('event', 'contact_request', {
+            'method': 'presupuesto_click',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      document.addEventListener('click', function(event) {
+        const link = event.target.closest('a[href^="mailto"]');
+        if (link) {
+          gtag('event', 'email_click', {
+            'method': 'email_directo',
+            'page_path': window.location.pathname
+          });
+        }
+      });
+
+      const whatsappBtn = document.getElementById('waTrigger');
+      if (whatsappBtn) {
+        whatsappBtn.addEventListener('click', function() {
+          gtag('event', 'whatsapp_click', {
+            'method': 'whatsapp',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function() {
+          gtag('event', 'form_submission', {
+            'method': 'formulario_contacto',
+            'page_path': window.location.pathname
+          });
+        });
+      }
+    </script>
+
+    <style>
+      body { background: #050A0E; }
+    </style>
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "name": "Raven3",
+          "url": "https://raven3.com.ar/en/",
+          "logo": "https://raven3.com.ar/assets/img/favicon_io/apple-touch-icon.png",
+          "description": "Web agency based in Buenos Aires, specializing in custom web development, online stores, technical SEO and premium digital architecture.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Buenos Aires",
+            "addressRegion": "Buenos Aires",
+            "addressCountry": "AR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -34.6037,
+            "longitude": -58.3816
+          },
+          "telephone": "+5491134568899",
+          "email": "hola@raven3.com.ar",
+          "openingHours": "Mo-Fr 09:00-18:00",
+          "sameAs": [
+            "https://www.instagram.com/raven3.dev",
+            "https://www.linkedin.com/company/raven3"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Web design and development services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Custom web development",
+                  "url": "https://raven3.com.ar/en/services/custom-web-development.html"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Online stores",
+                  "url": "https://raven3.com.ar/en/services/online-stores.html"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Technical SEO",
+                  "url": "https://raven3.com.ar/en/services/technical-seo.html"
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://raven3.com.ar/en/"},
+        {"@type": "ListItem", "position": 2, "name": "Web Agency Buenos Aires", "item": "https://raven3.com.ar/en/web-agency-buenos-aires.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Are you a Buenos Aires web agency, or do you work with clients elsewhere too?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We're based in Buenos Aires, Argentina, but we work with clients across the country and internationally. The entire process is 100% remote, with video calls and online delivery — timezone and location are never a blocker."}
+        },
+        {
+          "@type": "Question",
+          "name": "How much does it cost to hire Raven3?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We don't publish fixed pricing because every project is different. We put together a custom proposal based on scope, features and goals. Get in touch — there's no obligation."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer maintenance and support after launch?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. We offer monthly maintenance plans that include updates, technical support, performance monitoring and ongoing SEO tracking."}
+        },
+        {
+          "@type": "Question",
+          "name": "Do you work with WordPress, or build from scratch?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Depending on the project, we use custom HTML/CSS/JS, tailored WordPress builds, or modern frameworks like Next.js. The technology is chosen to fit the requirements, not the other way around."}
+        },
+        {
+          "@type": "Question",
+          "name": "Can you redesign our existing website?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes. We audit existing sites and identify what's working and what isn't. The redesign can be a full rebuild or a partial overhaul, depending on the diagnosis."}
+        }
+      ]
+    }
+    </script>
+  </head>
+
+  <body>
+    <!-- ══ TOPBAR ═══════════════════════════════════════════ -->
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a href="https://raven3.com.ar/en/" class="logo" aria-label="Raven3 — Home">
+          <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+        </a>
+        <nav class="topbar__nav" id="main-nav" aria-label="Main navigation">
+          <div class="topbar__dropdown">
+            <a class="topbar__link topbar__link--parent" href="/en/services/custom-web-development.html">Services</a>
+            <div class="topbar__sub">
+              <a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Web development</a>
+              <a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online stores</a>
+              <a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a>
+            </div>
+          </div>
+          <a class="topbar__link" href="/en/clients.html">Clients</a>
+          <a class="topbar__link" href="/en/about.html">About</a>
+          <a class="topbar__link" href="/blog/">Blog</a>
+          <a class="topbar__link" href="/en/contact.html">Contact</a>
+          <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--en" aria-label="Cambiar idioma / Language selector">
+            <span class="r3-lang-indicator" aria-hidden="true"></span>
+            <a class="r3-lang-option" href="/agencia-web-buenos-aires.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+            <a class="r3-lang-option" href="/en/web-agency-buenos-aires.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+          </nav>
+        </nav>
+        <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+        <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--en" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/agencia-web-buenos-aires.html" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/web-agency-buenos-aires.html" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+        <a class="btn primary cta-desktop" href="#contacto">Get in touch</a>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+      </div>
+    </header>
+
+    <main>
+      <!-- ══ HERO ══════════════════════════════════════════ -->
+      <section class="ln-hero">
+        <div class="container">
+          <div class="ln-hero__content">
+            <span class="ln-hero__eyebrow">WEB AGENCY — BUENOS AIRES, ARGENTINA</span>
+            <h1>The Buenos Aires web agency that takes your project <span class="accent">seriously</span></h1>
+            <p class="ln-hero__sub">We're Raven3. We build custom websites, online stores and technical SEO for companies, brands and professionals who want real results on Google — wherever they're based. No templates. No shortcuts.</p>
+            <div class="ln-hero__ctas">
+              <a class="btn primary" href="#contacto">Talk to the agency</a>
+              <a class="btn" href="/en/clients.html">See our work</a>
+            </div>
+          </div>
+          <div class="ln-hero__mockup">
+            <div class="ln-hero__mockup-glow"></div>
+            <div class="ln-hero__mockup-img" role="img" aria-label="Raven3 web agency Buenos Aires" style="width:100%;max-width:520px;aspect-ratio:16/10;background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.25)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ WHO WE ARE ════════════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">WHO WE ARE</span>
+          <h2>A Buenos Aires web agency that <span class="accent">doesn't look like the rest</span></h2>
+          <p class="ln-section__lead">At Raven3, we don't build generic websites. We build digital architecture designed to rank, convert and scale.</p>
+          <div class="ln-problem">
+            <ul class="ln-problem__list">
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Custom development:</strong> every site is unique, built from scratch for your business.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Real technical SEO:</strong> we don't just sprinkle in keywords — we optimize the entire architecture for Google.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Results-focused:</strong> we measure success in inquiries generated, not pixels polished.</p>
+              </li>
+              <li class="ln-problem__item">
+                <svg class="ln-problem__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <p><strong>Direct communication:</strong> you talk to the people building your site, not a sales middleman.</p>
+              </li>
+            </ul>
+            <div class="ln-problem__visual">
+              <div class="ln-problem__visual-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ SERVICES ══════════════════════════════════════ -->
+      <section class="ln-section ln-section--alt ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">SERVICES</span>
+          <h2>What we do as a <span class="accent">Buenos Aires web agency</span></h2>
+          <p class="ln-section__lead">We cover the full digital stack: from design to ranking on Google.</p>
+          <div class="ln-features">
+
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>Custom web development</h3>
+              <p>Corporate sites, landing pages, portals and platforms built from scratch, no templates. Clean, fast, scalable code.</p>
+            </div>
+
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <h3>Online stores (e-commerce)</h3>
+              <p>Professional e-commerce integrated with local and international payment methods, inventory management and an optimized buying experience.</p>
+            </div>
+
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <h3>Technical SEO</h3>
+              <p>Audits, Core Web Vitals optimization, content architecture, schema markup and strategy to rank on Google — locally or internationally.</p>
+            </div>
+
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h3>Industry-specific websites</h3>
+              <p>Specialized sites for real estate agencies, restaurants, doctors, lawyers, gyms and more. Every industry has its own requirements.</p>
+            </div>
+
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3>Premium web design</h3>
+              <p>High-end design for brands that won't settle for generic templates. UX, visual identity and performance, all built in together.</p>
+            </div>
+
+            <div class="ln-feature-card">
+              <div class="ln-feature-card__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              </div>
+              <h3>Digital consulting</h3>
+              <p>Digital presence diagnostics, content strategy and a roadmap for companies that want to know where to start.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ WHY US ═════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">WHY RAVEN3</span>
+          <h2>Why choose Raven3 as your <span class="accent">Buenos Aires web agency</span></h2>
+          <p class="ln-section__lead">There are plenty of options out there. Here's why our clients choose us — and keep coming back.</p>
+          <div class="ln-benefits">
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              </div>
+              <h3>No templates</h3>
+              <p>Every project is unique. We never adapt a pre-built template to your business.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>SEO from day one</h3>
+              <p>We don't bolt it on at the end. Technical SEO is built into the architecture from the start.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              </div>
+              <h3>In-house technical team</h3>
+              <p>We don't outsource. The team that designs is the same team that builds and optimizes.</p>
+            </div>
+
+            <div class="ln-benefit">
+              <div class="ln-benefit__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <h3>Focused on results</h3>
+              <p>Success is measured in inquiries generated, organic traffic and real Google rankings.</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ COMPARISON TABLE ══════════════════════════════ -->
+      <section class="ln-section ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">COMPARISON</span>
+          <h2>Raven3 vs. other <span class="accent">Buenos Aires web agency</span> options</h2>
+          <p class="ln-section__lead">Not all web agencies work the same way. Here's what sets us apart.</p>
+          <div class="ln-compare">
+            <table>
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Freelancer</th>
+                  <th>Large agency</th>
+                  <th>Builder (Wix)</th>
+                  <th>Raven3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Custom development</td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Real technical SEO</td>
+                  <td><span class="partial">Rare</span></td>
+                  <td><span class="partial">Depends</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Direct communication</td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Performance and speed</td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="partial">Varies</span></td>
+                  <td><span class="partial">Average</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Competitive pricing</td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="cross" role="img" aria-label="No">&#10005;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+                <tr>
+                  <td>Scales with your business</td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                  <td><span class="partial">Limited</span></td>
+                  <td><span class="check" role="img" aria-label="Yes">&#10003;</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CASES ═════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">PROJECTS</span>
+          <h2>Some work from <span class="accent">Raven3</span></h2>
+          <p class="ln-section__lead">Real projects for companies and professionals who chose a Buenos Aires web agency committed to results.</p>
+          <div class="ln-cases">
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="NDB Propiedades — Raven3" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>NDB Propiedades</h3>
+                <p>Corporate site for a real estate agency with CRM integration, property listings and an appraisal request form. Premium design with technical SEO.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="E-commerce project — Raven3" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>E-commerce with Mercado Pago</h3>
+                <p>Online store integrated with Mercado Pago, inventory management, dynamic catalog and a mobile-optimized buying experience.</p>
+              </div>
+            </article>
+
+            <article class="ln-case-card">
+              <div class="ln-case-card__img" role="img" aria-label="Landing pages project — Raven3" style="background:linear-gradient(145deg,rgba(0,229,200,0.06),rgba(0,229,200,0.01));display:flex;align-items:center;justify-content:center;">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.2)" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </div>
+              <div class="ln-case-card__body">
+                <h3>SEO landing page system</h3>
+                <p>Architecture of pages by industry niche and geographic zone. Content strategy built to rank for high-intent searches.</p>
+              </div>
+            </article>
+
+          </div>
+          <div style="text-align:center;margin-top:32px">
+            <a class="btn" href="/en/clients.html">See all projects</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ PROCESS ═══════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">PROCESS</span>
+          <h2>How we work at <span class="accent">Raven3</span></h2>
+          <p class="ln-section__lead">A clear process, no surprises, with defined deliverables at every stage.</p>
+          <div class="ln-process">
+            <div class="ln-step">
+              <div class="ln-step__num">01</div>
+              <div class="ln-step__text">
+                <h3>Initial diagnosis</h3>
+                <p>We analyze your current situation, goals, competitors and ranking opportunities.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">02</div>
+              <div class="ln-step__text">
+                <h3>Proposal and plan</h3>
+                <p>We present a detailed proposal with scope, timeline and cost. No fine print.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">03</div>
+              <div class="ln-step__text">
+                <h3>Design and development</h3>
+                <p>We build your site with performance, UX and technical SEO baked into the code.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">04</div>
+              <div class="ln-step__text">
+                <h3>Review and revisions</h3>
+                <p>We iterate based on your feedback before launch. Nothing goes live without your sign-off.</p>
+              </div>
+            </div>
+            <div class="ln-step">
+              <div class="ln-step__num">05</div>
+              <div class="ln-step__text">
+                <h3>Launch and support</h3>
+                <p>We publish, configure Analytics and Search Console, and stay with you after launch.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ FAQ ════════════════════════════════════════════ -->
+      <section class="ln-section ln-section--centered ln-riv">
+        <div class="container">
+          <span class="ln-section__eyebrow">FREQUENTLY ASKED QUESTIONS</span>
+          <h2>Questions about working with <span class="accent">our web agency</span></h2>
+          <div class="ln-faq-list">
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Are you a Buenos Aires web agency, or do you work with clients elsewhere too?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">We're based in Buenos Aires, Argentina, but we work with clients across the country and internationally. The entire process is 100% remote, with video calls and online delivery — timezone and location are never a blocker.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                How much does it cost to hire Raven3?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">We don't publish fixed pricing because every project is different. We put together a custom proposal based on scope, features and goals. Get in touch — there's no obligation.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Do you offer maintenance and support after launch?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Yes. We offer monthly maintenance plans that include updates, technical support, performance monitoring and ongoing SEO tracking.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Do you work with WordPress, or build from scratch?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Depending on the project, we use custom HTML/CSS/JS, tailored WordPress builds, or modern frameworks like Next.js. The technology is chosen to fit the requirements, not the other way around.</div>
+              </div>
+            </div>
+
+            <div class="ln-faq-item">
+              <button class="ln-faq-q" aria-expanded="false">
+                Can you redesign our existing website?
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="ln-faq-a" role="region">
+                <div class="ln-faq-a__inner">Yes. We audit existing sites and identify what's working and what isn't. The redesign can be a full rebuild or a partial overhaul, depending on the diagnosis.</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CTA SECTION ═══════════════════════════════════ -->
+      <section class="ln-cta-section ln-riv">
+        <div class="container">
+          <h2>Looking for a Buenos Aires web agency that <span class="accent">delivers real results</span>?</h2>
+          <p>We work with companies that want to grow online for real. Tell us about your project and we'll put together a proposal — no obligation.</p>
+          <div class="ln-hero__ctas">
+            <a class="btn primary" href="#contacto">Talk to the agency</a>
+            <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20to%20ask%20about%20web%20design%20in%20Buenos%20Aires." target="_blank" rel="noopener nofollow">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="ln-divider" />
+
+      <!-- ══ CONTACT FORM ══════════════════════════════════ -->
+      <section class="ln-form-section ln-riv" id="contacto">
+        <div class="container">
+          <div class="ln-form-wrap">
+            <div class="ln-form-info">
+              <h2>Let's talk about your <span class="accent">web project</span></h2>
+              <p>Tell us what you need. We'll get back to you quickly with a real proposal — no cost, no obligation.</p>
+              <div class="ln-form-contact-links">
+                <a class="ln-form-contact-link" href="mailto:hola@raven3.com.ar">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                  hola@raven3.com.ar
+                </a>
+                <a class="ln-form-contact-link" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                  +54 9 11 3456-8899
+                </a>
+              </div>
+            </div>
+            <form class="ln-form" id="ln-contactForm" action="https://formspree.io/f/mvoykeyq" method="POST">
+              <input type="hidden" name="landing" value="web-agency-buenos-aires" />
+              <div class="ln-form__grid">
+                <div class="ln-form__field">
+                  <label for="f-nombre">Name</label>
+                  <input type="text" id="f-nombre" name="nombre" required autocomplete="name" placeholder="Your name" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-empresa">Company or project</label>
+                  <input type="text" id="f-empresa" name="empresa" placeholder="Name of your company or project" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-servicio">What service are you looking for?</label>
+                  <select id="f-servicio" name="servicio">
+                    <option value="">Select...</option>
+                    <option value="web-a-medida">Custom website</option>
+                    <option value="ecommerce">Online store</option>
+                    <option value="seo">Technical SEO</option>
+                    <option value="rediseno">Website redesign</option>
+                    <option value="consultoria">Consulting</option>
+                    <option value="otro">Other</option>
+                  </select>
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-web">Current website (if any)</label>
+                  <input type="url" id="f-web" name="web_actual" placeholder="https://..." autocomplete="url" />
+                </div>
+                <div class="ln-form__field">
+                  <label for="f-contacto">WhatsApp or email</label>
+                  <input type="text" id="f-contacto" name="contacto" required placeholder="So we can reach you" />
+                </div>
+                <div class="ln-form__field ln-form__field--full">
+                  <label for="f-mensaje">Tell us about your project</label>
+                  <textarea id="f-mensaje" name="mensaje" placeholder="What do you have, what do you need, what are your goals?"></textarea>
+                </div>
+              </div>
+              <div class="ln-form__submit">
+                <button class="btn primary" type="submit">Send inquiry</button>
+                <span class="ln-form__status" id="ln-formStatus" aria-live="polite"></span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ══ STICKY MOBILE CTA ═══════════════════════════════ -->
+    <div class="ln-sticky-cta" role="group" aria-label="Quick actions">
+      <a class="btn primary" href="#contacto">Get in touch</a>
+      <a class="btn" href="https://wa.me/5491134568899?text=Hi%20Raven3%2C%20I%27d%20like%20to%20ask%20about%20web%20design%20in%20Buenos%20Aires." target="_blank" rel="noopener nofollow">WhatsApp</a>
+    </div>
+
+    <!-- ══ FOOTER ══════════════════════════════════════════ -->
+    <footer id="footer" aria-label="Footer">
+      <div class="container">
+        <div class="footer-newsletter">
+          <div class="footer-newsletter__copy">
+            <span class="footer-newsletter__label">NEWSLETTER</span>
+            <p class="footer-newsletter__tagline">Web Performance Insights — technical content only, no fluff.</p>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="https://raven3.com.ar/en/" aria-label="Raven3 — Home" style="display:inline-block;margin-bottom:16px">
+              <span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span>
+            </a>
+            <p>Digital agency specializing in custom web development, e-commerce, technical SEO and premium digital architecture. No templates. Real results.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="mailto:hola@raven3.com.ar">Email us</a>
+              <a class="btn" href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">WhatsApp</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="/en/services/custom-web-development.html">Web development</a></li>
+              <li><a href="/en/services/online-stores.html">Online stores</a></li>
+              <li><a href="/en/services/technical-seo.html">Technical SEO</a></li>
+              <li><a href="/en/websites-by-industry.html">Websites by industry</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-contact-list">
+              <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+              <li><a href="https://wa.me/5491134568899" target="_blank" rel="noopener nofollow">+54 9 11 3456-8899</a></li>
+              <li>Buenos Aires, Argentina</li>
+            </ul>
+            <h3 style="margin-top:24px">Company</h3>
+            <ul class="footer-links">
+              <li><a href="/en/about.html">About Raven3</a></li>
+              <li><a href="/en/clients.html">Clients</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom small">
+          <span><span id="year"></span> &copy; Raven3. All rights reserved.</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS -->
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+    <script src="/assets/js/lang-switcher.js" defer></script>
+    <script src="/assets/js/landing-nichos.js"></script>
+  </body>
+</html>
