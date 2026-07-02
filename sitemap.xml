@@ -71,12 +71,54 @@
 
   <url>
     <loc>https://raven3.com.ar/blog/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <lastmod>2026-06-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
 
   <!-- Blog posts — newest first -->
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?slug=senales-web-perdiendo-clientes-frente-a-ia</loc>
+    <lastmod>2026-06-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?slug=mi-web-no-aparece-en-chatgpt-checklist</loc>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?slug=llms-txt-que-es-como-implementarlo</loc>
+    <lastmod>2026-06-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/blog/post.html?slug=como-mejorar-seo-pagina-web</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
 
   <url>
     <loc>https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026</loc>
