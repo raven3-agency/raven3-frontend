@@ -391,6 +391,15 @@
     function tl(cat){ return TAG_LABELS[cat]||cat; }
     function e(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
+    // Category -> related service page (bidirectional internal linking blog <-> services)
+    const SERVICE_MAP = {
+      seo:         { label: 'Technical SEO',            url: '/en/services/technical-seo.html' },
+      performance: { label: 'Technical SEO',            url: '/en/services/technical-seo.html' },
+      ecommerce:   { label: 'Online Stores',             url: '/en/services/online-stores.html' },
+      desarrollo:  { label: 'Custom Web Development',    url: '/en/services/custom-web-development.html' },
+      ux:          { label: 'Custom Web Development',    url: '/en/services/custom-web-development.html' }
+    };
+
     // Maps EN slug -> ES slug (all posts in posts-en.json have a Spanish original)
     const ES_ORIGINAL = {
       'cea-american-cold-chain-corporate-website': 'cea-american-cadena-frio-web-corporativa',
@@ -644,6 +653,7 @@
               <p class="cta-banner__eyebrow">Want to implement this?</p>
               <h3 class="cta-banner__title">Let's work together on your project.</h3>
               <p class="cta-banner__sub">We'll audit your site and show you where the real opportunity is.</p>
+              ${SERVICE_MAP[post.category] ? `<p class="cta-banner__sub" style="margin-top:10px"><a href="${e(SERVICE_MAP[post.category].url)}" style="color:var(--ba);border-bottom:1px solid rgba(0,229,200,0.3)">See related service: ${e(SERVICE_MAP[post.category].label)} →</a></p>` : ''}
             </div>
             <div class="cta-banner__btns">
               <a class="btn primary" href="/en/free-web-audit.html">Free web audit</a>

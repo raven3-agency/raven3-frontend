@@ -391,6 +391,15 @@
     function tl(cat){ return TAG_LABELS[cat]||cat; }
     function e(str){ return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
 
+    // Category -> related service page (bidirectional internal linking blog <-> servicios)
+    const SERVICE_MAP = {
+      seo:         { label: 'SEO técnico',              url: '/servicios/seo-tecnico.html' },
+      performance: { label: 'SEO técnico',              url: '/servicios/seo-tecnico.html' },
+      ecommerce:   { label: 'Tiendas online',            url: '/servicios/tiendas-online.html' },
+      desarrollo:  { label: 'Desarrollo web a medida',   url: '/servicios/desarrollo-web-a-medida.html' },
+      ux:          { label: 'Desarrollo web a medida',   url: '/servicios/desarrollo-web-a-medida.html' }
+    };
+
     // Posts with an English translation available — maps ES slug -> EN slug
     const EN_TRANSLATION = {
       'cea-american-cadena-frio-web-corporativa': 'cea-american-cold-chain-corporate-website',
@@ -653,6 +662,7 @@
               <p class="cta-banner__eyebrow">¿Querés implementar esto?</p>
               <h3 class="cta-banner__title">Trabajemos juntos en tu proyecto.</h3>
               <p class="cta-banner__sub">Auditamos tu sitio y te mostramos dónde está la oportunidad real.</p>
+              ${SERVICE_MAP[post.category] ? `<p class="cta-banner__sub" style="margin-top:10px"><a href="${e(SERVICE_MAP[post.category].url)}" style="color:var(--ba);border-bottom:1px solid rgba(0,229,200,0.3)">Ver servicio relacionado: ${e(SERVICE_MAP[post.category].label)} →</a></p>` : ''}
             </div>
             <div class="cta-banner__btns">
               <a class="btn primary" href="/auditoria-web-gratuita.html">Auditoría gratuita</a>

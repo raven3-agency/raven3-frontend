@@ -608,6 +608,53 @@
         grid-template-columns: 1fr;
       }
 
+      .related-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        position: relative;
+        z-index: 1;
+      }
+
+      .related-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(180deg, rgba(18, 28, 40, 0.92), rgba(10, 16, 25, 0.98));
+        padding: 22px;
+        transition: transform 0.32s ease, border-color 0.32s ease;
+      }
+
+      .related-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(55, 226, 213, 0.34);
+      }
+
+      .related-card h3 {
+        font-size: 1.14rem;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      .related-card p {
+        margin: 0;
+        color: rgba(245, 251, 255, 0.78);
+      }
+
+      .related-card a {
+        color: var(--text);
+        text-decoration: underline;
+        text-decoration-color: rgba(55, 226, 213, 0.24);
+        text-underline-offset: 4px;
+      }
+
+      .related-card:hover a {
+        color: #ffffff;
+        text-decoration-color: var(--accent);
+      }
+
       .benefit,
       .process-step,
       .faq-item,
@@ -956,7 +1003,8 @@
         .grid-2,
         .hero-stats,
         .benefits-grid,
-        .process-grid {
+        .process-grid,
+        .related-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1433,6 +1481,104 @@
                   They tend to add unnecessary weight, limit
                   customization, and hurt speed, scalability, and
                   technical SEO.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="relacionados">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Related services</h2>
+              <p>
+                Depending on the project, custom development can be paired
+                with a stronger SEO foundation or an integrated online store.
+              </p>
+            </div>
+
+            <div class="related-grid">
+              <article class="related-card">
+                <h3>
+                  <a href="/en/services/technical-seo.html">Technical SEO</a>
+                </h3>
+                <p>
+                  Structural optimization to improve indexing, performance,
+                  and Core Web Vitals from the ground up.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/en/services/online-stores.html">Online Stores</a>
+                </h3>
+                <p>
+                  E-commerce focused on experience, structure, and a
+                  technical foundation built to grow.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/en/clients.html">See our work</a>
+                </h3>
+                <p>
+                  Case studies where architecture and technical rigor made
+                  a concrete difference.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="articulos">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Related articles</h2>
+              <p>
+                Blog guides on web development: trends, architecture, and
+                design systems for custom-built projects.
+              </p>
+            </div>
+
+            <div class="related-grid">
+              <article class="related-card">
+                <h3>
+                  <a href="/en/blog/post.html?slug=web-development-trends-2026">
+                    Web development trends in 2026
+                  </a>
+                </h3>
+                <p>
+                  The technical trends shaping how websites and web
+                  applications are being built this year.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/en/blog/post.html?slug=design-systems-for-web-projects">
+                    Design systems for web projects
+                  </a>
+                </h3>
+                <p>
+                  When it's worth building a design system and where to
+                  start building your own.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/en/blog/post.html?slug=ndb-propiedades-tokko-broker-integration">
+                    A real estate platform integrated with an API
+                  </a>
+                </h3>
+                <p>
+                  How NDB Propiedades connects a custom front-end experience
+                  to real data through the Tokko Broker API.
                 </p>
               </article>
             </div>

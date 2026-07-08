@@ -607,6 +607,53 @@
         grid-template-columns: 1fr;
       }
 
+      .related-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        position: relative;
+        z-index: 1;
+      }
+
+      .related-card {
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: var(--radius-lg);
+        background: linear-gradient(180deg, rgba(18, 28, 40, 0.92), rgba(10, 16, 25, 0.98));
+        padding: 22px;
+        transition: transform 0.32s ease, border-color 0.32s ease;
+      }
+
+      .related-card:hover {
+        transform: translateY(-6px);
+        border-color: rgba(55, 226, 213, 0.34);
+      }
+
+      .related-card h3 {
+        font-size: 1.14rem;
+        margin-bottom: 10px;
+        color: #ffffff;
+      }
+
+      .related-card p {
+        margin: 0;
+        color: rgba(245, 251, 255, 0.78);
+      }
+
+      .related-card a {
+        color: var(--text);
+        text-decoration: underline;
+        text-decoration-color: rgba(55, 226, 213, 0.24);
+        text-underline-offset: 4px;
+      }
+
+      .related-card:hover a {
+        color: #ffffff;
+        text-decoration-color: var(--accent);
+      }
+
       .benefit,
       .process-step,
       .faq-item,
@@ -955,7 +1002,8 @@
         .grid-2,
         .hero-stats,
         .benefits-grid,
-        .process-grid {
+        .process-grid,
+        .related-grid {
           grid-template-columns: 1fr;
         }
 
@@ -1430,6 +1478,104 @@
                   Porque suelen agregar peso innecesario, limitar la
                   personalización y afectar la velocidad, la escalabilidad y el
                   SEO técnico.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="relacionados">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Servicios relacionados</h2>
+              <p>
+                Según el proyecto, el desarrollo a medida puede complementarse
+                con una base SEO más sólida o con una tienda online integrada.
+              </p>
+            </div>
+
+            <div class="related-grid">
+              <article class="related-card">
+                <h3>
+                  <a href="/servicios/seo-tecnico.html">SEO Técnico</a>
+                </h3>
+                <p>
+                  Optimización estructural para mejorar indexación,
+                  performance y Core Web Vitals desde la base.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/servicios/tiendas-online.html">Tiendas Online</a>
+                </h3>
+                <p>
+                  E-commerce con foco en experiencia, estructura y una base
+                  técnica pensada para crecer.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/clientes.html">Ver proyectos</a>
+                </h3>
+                <p>
+                  Casos y trabajos donde la arquitectura y el enfoque técnico
+                  hacen una diferencia concreta.
+                </p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="articulos">
+        <div class="container">
+          <div class="section-card">
+            <div class="section-head">
+              <h2>Artículos relacionados</h2>
+              <p>
+                Guías del blog sobre desarrollo web: tendencias, arquitectura
+                y sistemas de diseño para proyectos a medida.
+              </p>
+            </div>
+
+            <div class="related-grid">
+              <article class="related-card">
+                <h3>
+                  <a href="/blog/post.html?slug=tendencias-desarrollo-web-2026">
+                    Tendencias de desarrollo web en 2026
+                  </a>
+                </h3>
+                <p>
+                  Las tendencias técnicas que están definiendo cómo se
+                  construyen sitios y aplicaciones web este año.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/blog/post.html?slug=design-systems-proyectos-web">
+                    Design systems para proyectos web
+                  </a>
+                </h3>
+                <p>
+                  Cuándo vale la pena implementar un design system y cómo
+                  empezar a construir el tuyo.
+                </p>
+              </article>
+
+              <article class="related-card">
+                <h3>
+                  <a href="/blog/post.html?slug=html-semantico-accesibilidad-web">
+                    HTML semántico y accesibilidad
+                  </a>
+                </h3>
+                <p>
+                  El código que mejora el SEO, facilita el mantenimiento y
+                  hace tu sitio accesible para todos.
                 </p>
               </article>
             </div>
