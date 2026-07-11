@@ -14,6 +14,8 @@
   const lbImg = lb?.querySelector(".lightbox__img");
   const lbClose = lb?.querySelector(".lightbox__close");
 
+  const isEN = document.documentElement.lang?.toLowerCase().startsWith("en");
+
   const pluralize = (n, singular, plural) => (n === 1 ? singular : plural);
 
   function sanitizeLightboxSrc(raw) {
@@ -84,8 +86,13 @@
 
     // Counter
     if (resultsCount) {
-      const label = pluralize(visible, "proyecto", "proyectos");
-      resultsCount.textContent = `Mostrando ${visible} ${label}`;
+      if (isEN) {
+        const label = pluralize(visible, "project", "projects");
+        resultsCount.textContent = `Showing ${visible} ${label}`;
+      } else {
+        const label = pluralize(visible, "proyecto", "proyectos");
+        resultsCount.textContent = `Mostrando ${visible} ${label}`;
+      }
     }
 
     // Empty state
@@ -102,7 +109,11 @@
 
     // CTA dinámico
     if (ctaPrimary) {
-      ctaPrimary.textContent = filter === "tienda" ? "Quiero mi tienda" : "Quiero mi web";
+      if (isEN) {
+        ctaPrimary.textContent = filter === "tienda" ? "I want my store" : "I want my website";
+      } else {
+        ctaPrimary.textContent = filter === "tienda" ? "Quiero mi tienda" : "Quiero mi web";
+      }
     }
 
     // Refresh locomotive
