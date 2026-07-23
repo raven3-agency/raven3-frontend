@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body{margin:0;background:#f6f1e7;}
+    ::selection{background:#c9a24d;color:#0d0d0c;}
+    .navlink{transition:color .15s ease;}
+    .navlink:hover{color:#e6c579 !important;}
+  </style>
+</helmet>
+<script src="./image-slot.js"></script>
+
+<div style="font-family:'Inter',sans-serif;background:#f6f1e7;color:#0d0d0c;width:100%;">
+
+  <!-- NAV -->
+  <div style="position:sticky;top:0;z-index:50;background:rgba(13,13,12,0.96);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:space-between;padding:16px 48px;border-bottom:1px solid #2a2418;">
+    <div style="font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:0.08em;font-size:14px;color:#e6c579;">CLUB H2H PROPS</div>
+    <div style="display:flex;gap:28px;flex-wrap:wrap;">
+      <a href="#story" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Historia</a>
+      <a href="#logo" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Logo</a>
+      <a href="#color" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Color</a>
+      <a href="#type" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Tipografía</a>
+      <a href="#voice" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Voz</a>
+      <a href="#imagery" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Imágenes</a>
+      <a href="#apps" class="navlink" style="color:#cfc6b3;text-decoration:none;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;">Aplicaciones</a>
+    </div>
+  </div>
+
+  <!-- COVER -->
+  <div style="min-height:92vh;background:#0d0d0c;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px;gap:28px;">
+    <img src="./assets/logo.jpeg" alt="Club H2H Props logo" style="width:220px;height:220px;object-fit:contain;border-radius:16px;"/>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:400;font-size:13px;letter-spacing:0.4em;text-transform:uppercase;color:#8a6a2f;">Manual de Marca &middot; Versión 1.0</div>
+    <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:56px;letter-spacing:0.02em;color:#f6f1e7;max-width:900px;line-height:1.15;">Bienes raíces, con rostro humano.</div>
+    <div style="font-family:'Inter',sans-serif;font-size:17px;color:#cfc6b3;max-width:560px;line-height:1.6;">Un sistema visual y verbal para un club de inversión inmobiliaria construido sobre confianza, comunidad y trato humano.</div>
+  </div>
+
+  <!-- STORY -->
+  <div id="story" style="padding:120px 48px;max-width:1040px;margin:0 auto;">
+    <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">01 &middot; Historia de Marca</div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:32px;max-width:760px;line-height:1.3;">Human to Human no es un eslogan &mdash; es cómo opera el club.</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:48px;">
+      <sc-for list="{{ pillars }}" as="p" hint-placeholder-count="3">
+        <div style="background:#fff;border:1px solid #e3d9c2;border-radius:4px;padding:32px 28px;">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:12px;letter-spacing:0.15em;color:#8a6a2f;text-transform:uppercase;margin-bottom:14px;">{{ p.tag }}</div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:20px;margin-bottom:10px;">{{ p.title }}</div>
+          <div style="font-size:14px;line-height:1.6;color:#4a4436;">{{ p.body }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- LOGO -->
+  <div id="logo" style="padding:120px 48px;background:#0d0d0c;color:#f6f1e7;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">02 &middot; Logo</div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:48px;">Versión principal y uso</div>
+
+      <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;">
+        <div>
+          <div style="background:#000;border:1px solid #2a2418;border-radius:6px;padding:48px;display:flex;align-items:center;justify-content:center;position:relative;">
+            <div style="position:absolute;inset:24px;border:1px dashed #4a3f27;border-radius:4px;"></div>
+            <img src="./assets/logo.jpeg" alt="Logo with clear space" style="width:260px;height:260px;object-fit:contain;position:relative;"/>
+          </div>
+          <div style="font-size:13px;color:#9c917a;margin-top:14px;line-height:1.6;">Área de seguridad: deja un margen igual a la altura de la "H" del logotipo libre de texto, imágenes o bordes en todos los lados (guía punteada arriba).</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:28px;">
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#e6c579;margin-bottom:10px;">Tamaño mínimo</div>
+            <div style="font-size:14px;color:#cfc6b3;line-height:1.6;">Nunca uses la versión completa (símbolo + logotipo + lema) por debajo de 120px de ancho en digital, o 1.2in en impresión. El símbolo solo puede reducirse hasta 32px para favicons e íconos de app.</div>
+          </div>
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#e6c579;margin-bottom:10px;">Fondos</div>
+            <div style="font-size:14px;color:#cfc6b3;line-height:1.6;">La versión dorada sobre negro es la principal y debe usarse siempre que sea posible. Se recomienda encargar una versión invertida (negro sobre crema) y una versión de un solo color dorado para fondos claros e impresión monocromática.</div>
+          </div>
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#e6c579;margin-bottom:10px;">No hacer</div>
+            <div style="display:flex;flex-direction:column;gap:8px;font-size:14px;color:#cfc6b3;">
+              <div>&mdash; No recolorear el símbolo fuera del sistema dorado/blanco/negro</div>
+              <div>&mdash; No estirar, inclinar ni rotar la versión</div>
+              <div>&mdash; No colocar sobre fotografías cargadas sin una capa oscura</div>
+              <div>&mdash; No separar el símbolo del skyline del logotipo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COLOR -->
+  <div id="color" style="padding:120px 48px;max-width:1040px;margin:0 auto;">
+    <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">03 &middot; Color</div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:16px;">Tinta, oro y crema</div>
+    <div style="font-size:15px;color:#4a4436;max-width:640px;line-height:1.6;margin-bottom:48px;">Una paleta contenida tomada directamente del logo: fondos casi negros, superficies crema cálidas, y un dorado protagonista usado en acentos, nunca en grandes áreas.</div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:20px;">
+      <sc-for list="{{ colors }}" as="c" hint-placeholder-count="5">
+        <div>
+          <div style="height:120px;border-radius:6px;background:{{ c.hex }};border:1px solid rgba(0,0,0,0.08);"></div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;margin-top:12px;">{{ c.name }}</div>
+          <div style="font-size:12px;color:#8a8168;font-family:monospace;margin-top:2px;">{{ c.hex }}</div>
+          <div style="font-size:11px;color:#8a8168;margin-top:2px;">{{ c.use }}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- TYPE -->
+  <div id="type" style="padding:120px 48px;background:#fff;border-top:1px solid #e3d9c2;border-bottom:1px solid #e3d9c2;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">04 &middot; Tipografía</div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:48px;">Dos tipografías, jerarquía clara</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;">
+        <div>
+          <div style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#8a6a2f;margin-bottom:8px;">Titulares y UI &mdash; Montserrat</div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:64px;line-height:1;margin-bottom:12px;">Aa</div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:14px;letter-spacing:0.05em;color:#4a4436;">Titulares, navegación, botones, eyebrows &mdash; pesos 600&ndash;800, con espaciado generoso en mayúsculas para reflejar el logotipo.</div>
+        </div>
+        <div>
+          <div style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#8a6a2f;margin-bottom:8px;">Cuerpo de texto &mdash; Inter</div>
+          <div style="font-family:'Inter',sans-serif;font-weight:400;font-size:64px;line-height:1;margin-bottom:12px;">Aa</div>
+          <div style="font-family:'Inter',sans-serif;font-size:14px;color:#4a4436;line-height:1.6;">Párrafos, textos secundarios, formularios &mdash; solo pesos 400&ndash;500. Nunca para titulares.</div>
+        </div>
+      </div>
+      <div style="margin-top:56px;display:flex;flex-direction:column;gap:18px;border-top:1px solid #e3d9c2;padding-top:40px;">
+        <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:40px;">Invierte con personas, no con plataformas.</div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:22px;color:#4a4436;">Real Estate &middot; Inversiones &middot; Comunidad</div>
+        <div style="font-family:'Inter',sans-serif;font-size:16px;color:#4a4436;max-width:620px;line-height:1.7;">Club H2H Props conecta a los inversionistas directamente con oportunidades verificadas y las personas detrás de ellas &mdash; sin fondos sin rostro, sin sorpresas en la letra chica.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VOICE -->
+  <div id="voice" style="padding:120px 48px;background:#0d0d0c;color:#f6f1e7;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">05 &middot; Voz y Tono</div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:48px;">Cálida, directa, experta &mdash; nunca vendedora</div>
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:20px;">
+        <sc-for list="{{ voiceTraits }}" as="v" hint-placeholder-count="4">
+          <div style="background:#17140f;border:1px solid #2a2418;border-radius:6px;padding:26px 28px;">
+            <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:#e6c579;margin-bottom:8px;">{{ v.trait }}</div>
+            <div style="font-size:14px;color:#cfc6b3;line-height:1.6;">{{ v.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <!-- IMAGERY -->
+  <div id="imagery" style="padding:120px 48px;max-width:1040px;margin:0 auto;">
+    <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">06 &middot; Imágenes</div>
+    <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:16px;">Personas reales, skylines reales</div>
+    <div style="font-size:15px;color:#4a4436;max-width:640px;line-height:1.6;margin-bottom:48px;">La fotografía privilegia la luz natural, interacciones genuinas y arquitectura con calidez &mdash; nunca la rigidez de un banco de imágenes ni un lujo sobreactuado.</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <image-slot id="img-arch" style="width:100%;height:220px;" shape="rounded" radius="6" placeholder="Arquitectura / skyline" src="https://images.pexels.com/photos/11829981/pexels-photo-11829981.jpeg?auto=compress&cs=tinysrgb&w=800"></image-slot>
+      <image-slot id="img-people" style="width:100%;height:220px;" shape="rounded" radius="6" placeholder="Saludo / comunidad" src="https://images.pexels.com/photos/33175650/pexels-photo-33175650.jpeg?auto=compress&cs=tinysrgb&w=800"></image-slot>
+      <image-slot id="img-lifestyle" style="width:100%;height:220px;" shape="rounded" radius="6" placeholder="Estilo de vida / interiores" src="https://images.pexels.com/photos/19689230/pexels-photo-19689230.jpeg?auto=compress&cs=tinysrgb&w=800"></image-slot>
+    </div>
+  </div>
+
+  <!-- APPLICATIONS -->
+  <div id="apps" style="padding:120px 48px;background:#fff;border-top:1px solid #e3d9c2;">
+    <div style="max-width:1040px;margin:0 auto;">
+      <div style="font-family:'Montserrat',sans-serif;font-size:12px;letter-spacing:0.3em;color:#8a6a2f;text-transform:uppercase;margin-bottom:16px;">07 &middot; Aplicaciones</div>
+      <div style="font-family:'Montserrat',sans-serif;font-size:36px;font-weight:700;margin-bottom:48px;">Redes sociales y papelería</div>
+
+      <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start;">
+        <!-- business card -->
+        <div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a2f;margin-bottom:16px;">Tarjeta de presentación</div>
+          <div style="width:100%;aspect-ratio:1.75/1;background:#0d0d0c;border-radius:8px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 12px 30px rgba(0,0,0,0.18);">
+            <img src="./assets/logo.jpeg" style="width:44px;height:44px;object-fit:contain;"/>
+            <div>
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:16px;color:#f6f1e7;">Ana Torres</div>
+              <div style="font-family:'Inter',sans-serif;font-size:11px;color:#e6c579;letter-spacing:0.05em;margin-top:2px;">Asesora de Inversiones</div>
+              <div style="font-family:'Inter',sans-serif;font-size:10px;color:#9c917a;margin-top:10px;">ana@clubh2hprops.com &middot; +1 (555) 010-2093</div>
+            </div>
+          </div>
+        </div>
+        <!-- social post -->
+        <div>
+          <div style="font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;color:#8a6a2f;margin-bottom:16px;">Publicación de Instagram</div>
+          <div style="width:100%;max-width:420px;aspect-ratio:1/1;background:#0d0d0c;border-radius:8px;position:relative;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,0.18);">
+            <image-slot id="img-social" style="width:100%;height:100%;" shape="rect" placeholder="Foto de la propiedad" src="https://images.pexels.com/photos/21284473/pexels-photo-21284473.jpeg?auto=compress&cs=tinysrgb&w=800"></image-slot>
+            <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.82),rgba(0,0,0,0) 55%);pointer-events:none;"></div>
+            <div style="position:absolute;left:24px;right:24px;bottom:22px;pointer-events:none;">
+              <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:22px;color:#f6f1e7;line-height:1.2;">Nueva propiedad en Miami Design District</div>
+              <div style="font-family:'Inter',sans-serif;font-size:12px;color:#e6c579;margin-top:8px;letter-spacing:0.05em;">CLUB H2H PROPS &middot; HUMAN TO HUMAN</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding:48px;background:#0d0d0c;text-align:center;">
+    <div style="font-family:'Montserrat',sans-serif;font-size:11px;letter-spacing:0.2em;color:#6b6350;text-transform:uppercase;">Club H2H Props &middot; Manual de Marca v1.0</div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      pillars: [
+        {tag:'Real Estate', title:'Inventario curado', body:'Cada propiedad se evalúa primero por sus fundamentos — ubicación, flujo de caja y potencial de salida — antes de llegar a un miembro.'},
+        {tag:'Inversiones', title:'Incentivos alineados', body:'El club invierte junto a sus miembros, no solo para ellos. Compromiso real en cada operación.'},
+        {tag:'Comunidad', title:'Una red, no un boletín', body:'Los miembros tienen acceso directo a asesores, operadores y entre sí — relaciones que trascienden cualquier transacción.'}
+      ],
+      colors: [
+        {name:'Negro Tinta', hex:'#0d0d0c', use:'Fondo principal'},
+        {name:'Carbón Profundo', hex:'#17140f', use:'Tarjetas sobre negro'},
+        {name:'Dorado Distintivo', hex:'#c9a24d', use:'Acentos, CTAs'},
+        {name:'Dorado Claro', hex:'#e6c579', use:'Resaltes, hover'},
+        {name:'Crema Cálido', hex:'#f6f1e7', use:'Superficies claras'}
+      ],
+      voiceTraits: [
+        {trait:'Cálida', desc:'Hablamos como un asesor de confianza en la mesa, no como un folleto. Segunda persona, lenguaje claro, sin jerga.'},
+        {trait:'Directa', desc:'Vamos al número, al plazo, al trato. Confianza antes que exageración — sin signos de exclamación, sin "oportunidad increíble."'},
+        {trait:'Experta', desc:'Mostramos el trabajo: datos de mercado, comparables y razonamiento claro detrás de cada afirmación.'},
+        {trait:'Inclusiva', desc:'"Human to human" significa que cada miembro, sin importar el monto invertido, recibe el mismo acceso y respeto.'}
+      ]
+    };
+  }
+}
+
+</script>
+</body>
+</html>
