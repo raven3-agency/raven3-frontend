@@ -239,7 +239,7 @@
 
     /* Capture phase runs before ui.js bubble listener — prevents double-toggle */
     toggle.addEventListener('click', function (e) {
-      if (window.innerWidth > 820) return;
+      if (window.innerWidth > 1100) return;
       e.stopImmediatePropagation();
       drawer.classList.contains('open') ? closeDrawer() : openDrawer();
     }, true);

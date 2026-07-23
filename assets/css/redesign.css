@@ -754,7 +754,7 @@ section.strips {
 }
 
 /* Hide legacy nav on mobile — new drawer takes over */
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
   .topbar__nav { display: none !important; }
 }
 
@@ -772,7 +772,7 @@ section.strips {
 /* Prevent horizontal scrollbar — clip doesn't break position:sticky */
 html { overflow-x: clip; }
 
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
 
   #r3-drawer { display: block; }
 
@@ -1217,7 +1217,7 @@ html { overflow-x: clip; }
 .topbar__sub-link:hover .topbar__sub-num { color: rgba(0,229,200,0.85); }
 
 /* Hide sub-panel on mobile — drawer handles it */
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
   .topbar__dropdown { height: auto; }
   .topbar__sub { display: none; }
 }
@@ -1230,7 +1230,7 @@ html { overflow-x: clip; }
   100% { background-position: 60px 0; }
 }
 
-@media (max-width: 820px) {
+@media (max-width: 1100px) {
 
   /* ── Container ── */
   .nav-toggle {
