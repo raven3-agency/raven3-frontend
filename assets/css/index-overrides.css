@@ -1849,8 +1849,9 @@
           display: none;
         }
 
-        /* Mobile: replace horizontal scroll with vertical list */
-        @media (max-width: 900px) {
+        /* Mobile, or any short viewport: replace horizontal scroll with vertical list
+           (the pinned 100vh track clips the cards when the window is short) */
+        @media (max-width: 900px), (max-height: 700px) {
           .hscroll-section {
             height: auto;
             overflow: visible;

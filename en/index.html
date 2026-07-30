@@ -1589,8 +1589,8 @@
 
         var mm = gsap.matchMedia();
 
-        /* Desktop only: pin + horizontal scrub */
-        mm.add('(min-width: 901px)', function () {
+        /* Desktop only, and tall enough for the pinned track to fit: pin + horizontal scrub */
+        mm.add('(min-width: 901px) and (min-height: 701px)', function () {
           var track = document.getElementById('hscrollTrack');
           if (!track) return;
 
@@ -1637,8 +1637,8 @@
           });
         });
 
-        /* Mobile: progress bar fills as user scrolls the page past the list */
-        mm.add('(max-width: 900px)', function () {
+        /* Mobile, or short viewport: progress bar fills as user scrolls the page past the list */
+        mm.add('(max-width: 900px), (max-height: 700px)', function () {
           var list  = document.querySelector('.hscroll-list');
           var fill  = document.querySelector('.hscroll-bar__fill');
           var curEl = document.querySelector('.hscroll-cur');
