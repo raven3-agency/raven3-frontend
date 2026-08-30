@@ -35,7 +35,6 @@
     <!-- Perf -->
     <link rel="preconnect" href="https://unpkg.com" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
-    <link rel="preload" as="image" href="/assets/img/logo.png" />
 
     <!-- Icons -->
     <link
@@ -66,6 +65,7 @@
     <link rel="stylesheet" href="/assets/css/animations.css" />
     <link rel="stylesheet" href="/assets/css/lang-switcher.css" />
     <link rel="stylesheet" href="/assets/css/clientes.css" />
+    <link rel="stylesheet" href="/assets/css/pf-carousel.css" />
     <link rel="stylesheet" href="/assets/css/photoswipe.css" />
 
     <!-- JSON-LD: Organization + WebPage -->
@@ -285,6 +285,234 @@
             </div>
           </div>
         </div>
+      </section>
+
+      <!-- ── PORTFOLIO CAROUSEL (full screen) ────────────────── -->
+      <section class="pf-hero" id="pfHero" aria-label="Raven3 featured projects">
+        <ul class="pf-track" id="pfTrack">
+          <li class="pf-slide" data-index="01" style="--pf-bg:url('/assets/img/portfolio/WEB/ndbpropiedades/web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/ndbpropiedades/web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·01</span>
+                <h2 class="pf-slide__title">NDB Propiedades</h2>
+                <p class="pf-slide__desc">Custom real estate platform with advanced filters and Tokko Broker integration, built to improve search, performance and commercial scalability.</p>
+                <a class="pf-slide__cta" href="https://www.ndbpropiedades.com.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View NDB Propiedades" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/ndbpropiedades/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·01</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="02" style="--pf-bg:url('/assets/img/portfolio/WEB/cochon/cochon.web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/cochon/cochon.web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·02</span>
+                <h2 class="pf-slide__title">Cochon &amp; Co.</h2>
+                <p class="pf-slide__desc">Custom landing page for a roasted-pork catering business serving Zona Norte and CABA, built to turn event inquiries into orders with a premium product presentation.</p>
+                <a class="pf-slide__cta" href="https://pernilescochon.com.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View Cochon &amp; Co." aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/cochon/cochon-logo.webp" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·02</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="03" style="--pf-bg:url('/assets/img/portfolio/WEB/cea-american/cea-american.web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/cea-american/cea-american.web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·03</span>
+                <h2 class="pf-slide__title">CEA American</h2>
+                <p class="pf-slide__desc">Custom corporate site for a warehousing, logistics and distribution company focused on refrigerated, frozen and dry goods — built to convey operational strength, traceability and full cold-chain control.</p>
+                <a class="pf-slide__cta" href="https://cea-american.com.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View CEA American" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/cea-american/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·03</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="04" style="--pf-bg:url('/assets/img/portfolio/WEB/etienne/etienne.web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/etienne/etienne.web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·04</span>
+                <h2 class="pf-slide__title">Etienne de Montebello</h2>
+                <p class="pf-slide__desc">Custom, immersive editorial site built to position a premium literary work through visual storytelling, interactive experience and a conversion-focused approach.</p>
+                <a class="pf-slide__cta" href="http://etiennedemontebello.com/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View Etienne de Montebello" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/etienne/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·04</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="05" style="--pf-bg:url('/assets/img/portfolio/WEB/lassen/lassen.web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/lassen/lassen.web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·05</span>
+                <h2 class="pf-slide__title">Lassen Pharma</h2>
+                <p class="pf-slide__desc">Custom corporate site with technical SEO and optimized architecture built to improve organic visibility, institutional clarity and performance.</p>
+                <a class="pf-slide__cta" href="https://www.lassen.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View Lassen Pharma" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/lassen/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·05</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="06" style="--pf-bg:url('/assets/img/portfolio/WEB/beforce/web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/beforce/web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·06</span>
+                <h2 class="pf-slide__title">BEFORCE</h2>
+                <p class="pf-slide__desc">Custom digital catalog with a strong visual identity, built to showcase products with clarity, speed and a better commercial experience.</p>
+                <a class="pf-slide__cta" href="https://www.beforce.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View BEFORCE" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/beforce/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·06</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="07" style="--pf-bg:url('/assets/img/portfolio/WEB/sgm/web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/sgm/web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·07</span>
+                <h2 class="pf-slide__title">SGM+</h2>
+                <p class="pf-slide__desc">Institutional site with integrated e-commerce, designed to strengthen community, streamline registrations and improve conversion.</p>
+                <a class="pf-slide__cta" href="https://www.somosgrupodemujeresmas.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View SGM+" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/sgm/logo-removebg-preview.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·07</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="08" style="--pf-bg:url('/assets/img/portfolio/WEB/okos/okos.web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/okos/okos.web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·08</span>
+                <h2 class="pf-slide__title">OKOS</h2>
+                <p class="pf-slide__desc">Minimalist institutional site focused on brand clarity, fast load times and an optimized technical structure.</p>
+                <a class="pf-slide__cta" href="https://www.okos.com.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View OKOS" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/okos/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·08</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="09" style="--pf-bg:url('/assets/img/portfolio/WEB/art1/web_art1.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/art1/web_art1.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·09</span>
+                <h2 class="pf-slide__title">ART1</h2>
+                <p class="pf-slide__desc">Corporate site with an SEO-ready structure, accessibility and optimized performance to improve visibility and browsing experience.</p>
+                <a class="pf-slide__cta" href="https://www.art1.com.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View ART1" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/art1/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·09</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="10" style="--pf-bg:url('/assets/img/portfolio/WEB/ibarra/web.webp');--pf-bg-m:url('/assets/img/portfolio/WEB/ibarra/web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·10</span>
+                <h2 class="pf-slide__title">Ibarra Propiedades</h2>
+                <p class="pf-slide__desc">Custom site for a real estate agency specializing in Buenos Aires' Zona Norte, with an integrated property search, corporate design and optimized presence across San Isidro, Vicente López and Tigre.</p>
+                <a class="pf-slide__cta" href="https://ibarraprop.com.ar/" target="_blank" rel="noopener">
+                  View project
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View Ibarra Propiedades" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/WEB/ibarra/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·10</span>
+            </button>
+          </li>
+
+          <li class="pf-slide" data-index="11" style="--pf-bg:url('/assets/img/portfolio/TIENDA/knots/web.webp');--pf-bg-m:url('/assets/img/portfolio/TIENDA/knots/web.webp')">
+            <div class="pf-slide__bg"></div>
+            <div class="pf-slide__body">
+              <div class="pf-slide__inner">
+                <span class="pf-slide__num">S·11</span>
+                <h2 class="pf-slide__title">Knots</h2>
+                <p class="pf-slide__desc">Online store optimized on Tienda Nube, with improvements to UX, product presentation and commercial structure.</p>
+                <a class="pf-slide__cta" href="https://knots4.mitiendanube.com/" target="_blank" rel="noopener">
+                  View store
+                  <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M9 7H17V15"/></svg>
+                </a>
+              </div>
+            </div>
+            <button type="button" class="pf-slide__peek" aria-label="View Knots" aria-expanded="false">
+              <span class="pf-slide__logo"><img src="/assets/img/portfolio/TIENDA/knots/logo.png" alt="" loading="lazy" /></span>
+              <span class="pf-slide__peeknum">S·11</span>
+            </button>
+          </li>
+        </ul>
+
+        <div class="pf-scroll-hint" aria-hidden="true">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+        </div>
+        <div class="pf-nav">
+          <button type="button" class="pf-nav__btn pf-nav__btn--prev" aria-label="Previous project">
+            <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button type="button" class="pf-nav__btn pf-nav__btn--next" aria-label="Next project">
+            <svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
+        </div>
+        <div class="pf-counter" aria-hidden="true">01 / 11</div>
       </section>
 
       <!-- SHOWREEL -->
@@ -1308,6 +1536,7 @@
       })();
     </script>
     <script defer src="/assets/js/clientes.js"></script>
+    <script defer src="/assets/js/pf-carousel.js"></script>
     <script type="module" src="/assets/js/lightbox.js" defer></script>
 
     <script src="/assets/js/redesign.js" defer></script>

@@ -1,0 +1,291 @@
+/* ── Portfolio Carousel (clientes.html) ──────────────────────────
+   Full-screen cascading project carousel. Desktop only (>720px) —
+   below that, the classic client-card grid takes over instead
+   (see clientes.css: .clients-grid is hidden at min-width:721px,
+   this section is hidden below it). Infinite loop via DOM reordering. */
+
+.pf-hero {
+  display: none;
+}
+
+@media (min-width: 721px) {
+  .pf-hero {
+    display: block;
+    position: relative;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    height: calc(100vh - var(--topbar-h, 72px) + 120px);
+    overflow: hidden;
+    background: #050a0e;
+  }
+  @supports (height: 100dvh) {
+    .pf-hero { height: calc(100dvh - var(--topbar-h, 72px) + 120px); }
+  }
+}
+
+.pf-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.pf-slide {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  z-index: 0;
+  width: 240px;
+  height: 360px;
+  transform: translateY(-50%);
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  outline: 0;
+  user-select: none;
+  visibility: visible;
+  background: #07101a;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, .45);
+  transition:
+    left .75s cubic-bezier(.4, 0, .2, 1),
+    top .75s cubic-bezier(.4, 0, .2, 1),
+    width .75s cubic-bezier(.4, 0, .2, 1),
+    height .75s cubic-bezier(.4, 0, .2, 1),
+    border-radius .75s ease,
+    opacity .5s ease,
+    transform .75s cubic-bezier(.4, 0, .2, 1),
+    box-shadow .3s ease;
+}
+.pf-slide:has(.pf-slide__peek:focus-visible),
+.pf-slide:has(.pf-slide__cta:focus-visible) {
+  box-shadow: 0 0 0 2px rgba(0, 229, 200, .45), 0 24px 60px rgba(0, 0, 0, .45);
+}
+
+.pf-slide:nth-of-type(1) { left: 0; top: 0; width: 100%; height: 100%; transform: none; border-radius: 0; box-shadow: none; }
+.pf-slide:nth-of-type(2) { left: calc(50% + 150px); }
+.pf-slide:nth-of-type(3) { left: calc(50% + 400px); }
+.pf-slide:nth-of-type(4) { left: calc(50% + 650px); }
+.pf-slide:nth-of-type(n+5) { left: calc(50% + 900px); opacity: 0; visibility: hidden; pointer-events: none; }
+
+.pf-slide:hover:not(:nth-of-type(1)) {
+  transform: translateY(calc(-50% - 10px));
+  box-shadow: 0 34px 70px rgba(0, 0, 0, .55);
+}
+
+/* Background image */
+.pf-slide__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: var(--pf-bg);
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(.35) brightness(.62) saturate(1.05);
+  transform: scale(1.08);
+  transition: transform 1.3s cubic-bezier(.16, 1, .3, 1), filter .6s ease;
+}
+.pf-slide:nth-of-type(1) .pf-slide__bg { filter: none; transform: scale(1); }
+.pf-slide:hover:not(:nth-of-type(1)) .pf-slide__bg { filter: grayscale(.15) brightness(.78) saturate(1.05); }
+
+/* Scrim for legibility — bare minimum, vertical only */
+.pf-slide::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(3, 6, 10, .55) 0, rgba(3, 6, 10, .18) 28%, transparent 55%);
+}
+
+/* Top accent line */
+.pf-slide::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  z-index: 4;
+  background: linear-gradient(90deg, transparent, var(--r3, #00e5c8), transparent);
+  opacity: 0;
+  transition: opacity .32s ease;
+}
+.pf-slide:nth-of-type(1)::before,
+.pf-slide:hover::before { opacity: 1; }
+
+/* Active slide content */
+.pf-slide__body {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  align-items: flex-end;
+  padding: 64px clamp(24px, 6vw, 90px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .32s ease .15s;
+}
+.pf-slide:nth-of-type(1) .pf-slide__body { opacity: 1; visibility: visible; pointer-events: auto; }
+
+.pf-slide__inner {
+  transform: translateY(16px);
+  transition: transform .55s cubic-bezier(.16, 1, .3, 1) .2s;
+  max-width: 560px;
+}
+.pf-slide:nth-of-type(1) .pf-slide__inner { transform: translateY(0); }
+
+.pf-slide__num {
+  display: block;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: var(--r3, #00e5c8);
+  margin-bottom: 12px;
+}
+.pf-slide__title {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: clamp(28px, 4vw, 52px);
+  letter-spacing: .02em;
+  color: #eef4f8;
+  margin: 0 0 14px;
+  line-height: 1.08;
+}
+.pf-slide__desc {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: rgba(200, 215, 225, .8);
+  margin: 0 0 26px;
+}
+.pf-slide__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 229, 200, .28);
+  background: rgba(0, 229, 200, .06);
+  color: rgba(0, 229, 200, .92);
+  transition: background .22s, border-color .22s, box-shadow .22s, transform .18s;
+}
+.pf-slide__cta:hover {
+  background: rgba(0, 229, 200, .13);
+  border-color: rgba(0, 229, 200, .5);
+  box-shadow: 0 0 26px rgba(0, 229, 200, .14);
+  transform: translateX(3px);
+}
+.pf-slide__cta svg {
+  width: 14px; height: 14px;
+  stroke: currentColor; fill: none;
+  stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  transition: transform .18s ease;
+}
+.pf-slide__cta:hover svg { transform: translate(2px, -2px); }
+
+/* Peeking-card trigger (non-active slides) */
+.pf-slide__peek {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 0 26px;
+  gap: 12px;
+  border: none;
+  background: 0 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity .28s ease;
+}
+.pf-slide:nth-of-type(1) .pf-slide__peek { opacity: 0; visibility: hidden; pointer-events: none; }
+
+.pf-slide__logo { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; }
+.pf-slide__logo img { max-width: 100%; max-height: 100%; object-fit: contain; mix-blend-mode: screen; opacity: .92; }
+
+.pf-slide__peeknum {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: .3em;
+  color: rgba(0, 229, 200, .55);
+  transition: color .25s ease;
+}
+.pf-slide:hover:not(:nth-of-type(1)) .pf-slide__peeknum { color: rgba(0, 229, 200, .85); }
+
+/* Nav arrows */
+.pf-nav {
+  position: absolute;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%);
+  z-index: 6;
+  display: flex;
+  gap: 12px;
+}
+.pf-nav__btn {
+  width: 50px; height: 50px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 229, 200, .28);
+  background: rgba(3, 6, 10, .55);
+  backdrop-filter: blur(8px);
+  color: rgba(0, 229, 200, .9);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: border-color .22s, background .22s, transform .18s;
+}
+.pf-nav__btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.pf-nav__btn:hover { border-color: rgba(0, 229, 200, .6); background: rgba(0, 229, 200, .14); transform: translateY(-2px); }
+.pf-nav__btn:focus-visible { outline: 2px solid rgba(0, 229, 200, .65); outline-offset: 2px; }
+
+/* Scroll hint + counter */
+.pf-scroll-hint {
+  position: absolute;
+  left: clamp(20px, 4vw, 56px);
+  bottom: 36px;
+  z-index: 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 9px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(0, 229, 200, .55);
+  pointer-events: none;
+}
+@keyframes pf-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+.pf-scroll-hint svg {
+  width: 14px; height: 14px;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+  animation: pf-bounce 1.8s ease-in-out infinite;
+}
+
+.pf-counter {
+  position: absolute;
+  right: clamp(20px, 4vw, 56px);
+  bottom: 36px;
+  z-index: 6;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 11px;
+  letter-spacing: .15em;
+  color: rgba(0, 229, 200, .6);
+  pointer-events: none;
+}
