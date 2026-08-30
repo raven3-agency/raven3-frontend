@@ -49,18 +49,42 @@
     slides().forEach(function (slide) {
       var trigger = slide.querySelector('.pf-slide__peek');
       if (!trigger) return;
-      trigger.addEventListener('click', function () { goTo(slide); });
+      trigger.addEventListener('click', function () { goTo(slide); restartAutoplay(); });
       trigger.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); next(); }
-        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prev(); }
+        if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); next(); restartAutoplay(); }
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); prev(); restartAutoplay(); }
       });
     });
 
     var nextBtn = document.querySelector('.pf-nav__btn--next');
     var prevBtn = document.querySelector('.pf-nav__btn--prev');
-    if (nextBtn) nextBtn.addEventListener('click', next);
-    if (prevBtn) prevBtn.addEventListener('click', prev);
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); restartAutoplay(); });
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restartAutoplay(); });
+
+    /* ── Autoplay ── */
+    var AUTOPLAY_MS = 4000;
+    var autoplayTimer = null;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function stopAutoplay() {
+      if (autoplayTimer) { clearInterval(autoplayTimer); autoplayTimer = null; }
+    }
+    function startAutoplay() {
+      if (reduceMotion) return;
+      stopAutoplay();
+      autoplayTimer = setInterval(next, AUTOPLAY_MS);
+    }
+    function restartAutoplay() { startAutoplay(); }
+
+    var hero = document.getElementById('pfHero');
+    if (hero) {
+      hero.addEventListener('mouseenter', stopAutoplay);
+      hero.addEventListener('mouseleave', startAutoplay);
+      hero.addEventListener('focusin', stopAutoplay);
+      hero.addEventListener('focusout', startAutoplay);
+    }
 
     syncState();
+    startAutoplay();
   });
 })();
