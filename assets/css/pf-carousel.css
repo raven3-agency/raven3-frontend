@@ -79,14 +79,23 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: var(--pf-bg);
+  /* Peek (non-active) cards get the dedicated peek image if the slide
+     sets one, falling back to the main image for slides that don't. */
+  background-image: var(--pf-bg-m, var(--pf-bg));
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   filter: grayscale(.35) brightness(.62) saturate(1.05);
   transform: scale(1.08);
   transition: transform 1.3s cubic-bezier(.16, 1, .3, 1), filter .6s ease;
 }
-.pf-slide:nth-of-type(1) .pf-slide__bg { filter: none; transform: scale(1); }
+.pf-slide:nth-of-type(1) .pf-slide__bg {
+  background-image: var(--pf-bg);
+  filter: none;
+  transform: scale(1);
+  /* Anchor to the top so the site's nav bar is never the part that gets
+     cropped by "cover" on the full-bleed hero — only the bottom gets cut. */
+  background-position: center top;
+}
 .pf-slide:hover:not(:nth-of-type(1)) .pf-slide__bg { filter: grayscale(.15) brightness(.78) saturate(1.05); }
 
 /* Scrim for legibility — bare minimum, vertical only */
