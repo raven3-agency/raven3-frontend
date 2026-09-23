@@ -1,0 +1,380 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "slug": "cea-american-cold-chain-corporate-website",
+      "title": "CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company",
+      "excerpt": "A project built to convey operational strength, traceability, and end-to-end control across the logistics, storage, and distribution of refrigerated, frozen, and dry goods.",
+      "category": "desarrollo",
+      "tags": [
+        "CEA American",
+        "Cold Chain",
+        "Web Development",
+        "Corporate UI",
+        "Logistics"
+      ],
+      "date": "2023-06-22",
+      "dateFormatted": "June 22, 2023",
+      "readTime": 7,
+      "featured": true,
+      "thumbClass": "thumb-art--web",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · UI",
+        "initials": "R3"
+      },
+      "content": "<h2>The Challenge</h2><p>CEA American needed a digital presence that matched the seriousness of its logistics operation: refrigerated and frozen storage, dry goods, distribution, and cold chain control.</p><p>The goal wasn't just to build an institutional website, but to create a clear, trustworthy, and commercially effective platform.</p><h2>Raven3's Approach</h2><p>We built a solid corporate aesthetic, with messaging focused on operations, safety, traceability, and compliance. The structure was designed so a prospective client could quickly understand what the company does, what services it offers, and why they can trust it.</p><h2>What We Prioritized</h2><ul><li>Clarity around core services</li><li>Professional visual hierarchy</li><li>Direct commercial messaging</li><li>Integrated contact form</li><li>Fast, responsive design</li></ul><h2>Result</h2><p>The site positions CEA American as a company ready for demanding operations, with a focus on control, infrastructure, and commercial trust.</p>"
+    },
+    {
+      "id": 3,
+      "slug": "etienne-de-montebello-interactive-editorial-experience",
+      "title": "Etienne de Montebello: An Interactive Editorial Experience for a Premium Literary Work",
+      "excerpt": "How we built an immersive site with visual storytelling and an editorial focus, designed to showcase and sell an eBook.",
+      "category": "desarrollo",
+      "tags": [
+        "Etienne de Montebello",
+        "Storytelling",
+        "Three.js",
+        "Editorial",
+        "eBook"
+      ],
+      "date": "2021-04-15",
+      "dateFormatted": "April 15, 2021",
+      "readTime": 8,
+      "featured": true,
+      "thumbClass": "thumb-art--web",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · Storytelling",
+        "initials": "R3"
+      },
+      "content": "<h2>A Site Built to Sell a Story, Not Just Show It</h2><p>The Etienne de Montebello project called for a different kind of digital presence: editorial, elegant, immersive, and built for conversion.</p><p>The website needed to match the world of the book and create a memorable experience for potential readers.</p><h2>The Solution</h2><p>We designed a custom visual experience centered on storytelling, book presentation, author background, and a clear path to purchasing the eBook.</p><h2>What We Built</h2><ul><li>Premium editorial experience</li><li>Immersive visual design</li><li>Sections built around reading and conversion</li><li>Mobile optimization</li><li>Commercial integration for the eBook</li></ul><h2>Result</h2><p>The site works as a digital editorial piece: it presents the book, builds atmosphere, and guides users toward the purchase.</p>"
+    },
+    {
+      "id": 7,
+      "slug": "ndb-propiedades-tokko-broker-integration",
+      "title": "NDB Propiedades: A Real Estate Platform Integrated with Tokko Broker",
+      "excerpt": "How we built a custom real estate experience with advanced filters, API integration, and an architecture built to scale property listings.",
+      "category": "desarrollo",
+      "tags": [
+        "NDB Propiedades",
+        "Tokko Broker",
+        "API",
+        "Real Estate",
+        "Advanced Filters"
+      ],
+      "date": "2018-11-22",
+      "dateFormatted": "November 22, 2018",
+      "readTime": 8,
+      "featured": true,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "API · Web Development",
+        "initials": "R3"
+      },
+      "content": "<h2>The Real Estate Challenge</h2><p>A real estate website can't rely on manually uploading listings if the business needs to scale. For NDB Propiedades, the goal was to connect the site's visual experience with real data pulled directly from Tokko Broker.</p><h2>What We Built</h2><ul><li>Dynamic property listings</li><li>Filters by transaction type, area, and property type</li><li>Optimized property cards</li><li>Structure ready for detailed property pages</li><li>Tokko Broker API integration</li></ul><h2>UX Built for Search</h2><p>Real estate users want to find what they're looking for fast. That's why the experience had to prioritize clear filters, visible information, and smooth navigation.</p><h2>Result</h2><p>The platform presents properties in an organized, professional, and scalable way, eliminating the need for heavy manual administration.</p>"
+    },
+    {
+      "id": 11,
+      "slug": "sgm-institutional-site-ecommerce-community",
+      "title": "SGM+: An Institutional Site with E-Commerce to Power Community and Sign-Ups",
+      "excerpt": "A project that combines institutional presence, online sales, community, and a conversion-focused experience.",
+      "category": "ecommerce",
+      "tags": [
+        "SGM+",
+        "E-commerce",
+        "Community",
+        "Sign-Ups",
+        "UX"
+      ],
+      "date": "2015-10-08",
+      "dateFormatted": "October 8, 2015",
+      "readTime": 7,
+      "featured": true,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-commerce · UX",
+        "initials": "R3"
+      },
+      "content": "<h2>More Than an Institutional Website</h2><p>SGM+ needed a platform capable of communicating its offering, sustaining a community, and enabling concrete actions like sign-ups or purchases.</p><h2>What We Delivered</h2><ul><li>Clear institutional design</li><li>Integrated e-commerce</li><li>Conversion-focused structure</li><li>Community-driven communication</li><li>Digital scalability</li></ul><h2>UX for Community</h2><p>When a website combines institutional content with sales, the key is not to artificially separate the two. The experience needs to guide users from interest to action.</p>"
+    },
+    {
+      "id": 5,
+      "slug": "lassen-pharma-corporate-website-technical-seo",
+      "title": "Lassen Pharma: Corporate Web Architecture with Technical SEO Built In From the Start",
+      "excerpt": "An institutional site built to improve clarity, performance, organic visibility, and technical structure for a pharmaceutical brand.",
+      "category": "seo",
+      "tags": [
+        "Lassen Pharma",
+        "Technical SEO",
+        "Corporate Website",
+        "Performance",
+        "Web Architecture"
+      ],
+      "date": "2019-09-05",
+      "dateFormatted": "September 5, 2019",
+      "readTime": 7,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Technical SEO · Development",
+        "initials": "R3"
+      },
+      "content": "<h2>An Institutional Site Built to a Technical Standard</h2><p>Lassen Pharma needed a clear, professional corporate website, technically optimized to strengthen its digital presence.</p><p>The work combined content architecture, semantic structure, performance, and a sober institutional interface.</p><h2>Project Priorities</h2><ul><li>Institutional clarity</li><li>Technical SEO built into the structure</li><li>Web performance</li><li>Responsive design</li><li>Content hierarchy</li></ul><h2>Why Architecture Matters</h2><p>On a corporate website, SEO doesn't start when you publish a blog post. It starts with the HTML structure, the headings, how sections are organized, page speed, and how easily Google can interpret the site.</p>"
+    },
+    {
+      "id": 9,
+      "slug": "beforce-digital-catalog-visual-identity",
+      "title": "BEFORCE: A Digital Catalog with Strong Visual Identity and a Clear Shopping Experience",
+      "excerpt": "A project focused on presenting products quickly, clearly, and professionally, built around a strong visual identity and solid catalog structure.",
+      "category": "desarrollo",
+      "tags": [
+        "BEFORCE",
+        "Digital Catalog",
+        "Branding",
+        "Performance",
+        "Product"
+      ],
+      "date": "2017-02-16",
+      "dateFormatted": "February 16, 2017",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--web",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UI · Digital Catalog",
+        "initials": "R3"
+      },
+      "content": "<h2>A catalog is more than a gallery</h2><p>BEFORCE needed a digital presence that could showcase products with clarity, speed, and a recognizable visual identity.</p><h2>What we worked on</h2><ul><li>Brand-aligned visual design</li><li>Clean, organized product presentation</li><li>Fast, responsive experience</li><li>Simple commercial structure</li><li>Focus on clarity and inquiry generation</li></ul><h2>The goal</h2><p>When a visitor lands on a catalog, they need to understand what's on offer, how the product line is organized, and how to move toward an inquiry. The design has to support the product, not compete with it.</p>"
+    },
+    {
+      "id": 13,
+      "slug": "okos-minimalist-institutional-website",
+      "title": "OKOS: A Minimalist Institutional Website Built for Clarity, Speed, and Identity",
+      "excerpt": "A project where visual simplicity was a strategic choice — to communicate better, load faster, and sustain a clear brand identity.",
+      "category": "desarrollo",
+      "tags": [
+        "OKOS",
+        "Minimalism",
+        "Performance",
+        "Brand Identity",
+        "Institutional Website"
+      ],
+      "date": "2014-03-20",
+      "dateFormatted": "March 20, 2014",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--web",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UI · Performance",
+        "initials": "R3"
+      },
+      "content": "<h2>Minimalism with intent</h2><p>OKOS needed a clean, direct, and fast institutional website. The goal wasn't to do less for the sake of simplicity, but to cut the noise so the brand would come through more clearly.</p><h2>What we prioritized</h2><ul><li>Brand clarity</li><li>Load speed</li><li>Clean UI</li><li>Optimized technical structure</li><li>Responsive experience</li></ul><h2>Result</h2><p>The site conveys professionalism without overwhelming the user, keeping the experience fast and focused.</p>"
+    },
+    {
+      "id": 15,
+      "slug": "art1-corporate-website-seo-accessibility",
+      "title": "ART1: A Corporate Website Built for SEO, Accessibility, and Performance",
+      "excerpt": "A project to bring order to the digital presence of a visual communications company spanning graphics, environmental branding, and corporate solutions.",
+      "category": "seo",
+      "tags": [
+        "ART1",
+        "Technical SEO",
+        "Accessibility",
+        "Corporate Website",
+        "Performance"
+      ],
+      "date": "2012-08-14",
+      "dateFormatted": "August 14, 2012",
+      "readTime": 7,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Technical SEO · Accessibility",
+        "initials": "R3"
+      },
+      "content": "<h2>Bringing order to a broad service offering</h2><p>ART1 runs multiple service lines: graphics, printing, environmental branding, dimensional lettering, design, branding, cutting, and engraving. The website needed to organize that offering in a way that was clear and scalable.</p><h2>What we worked on</h2><ul><li>SEO structure by service</li><li>Clear sections for each business line</li><li>Web accessibility</li><li>Optimized performance</li><li>Visual stability</li></ul><h2>Why structure matters</h2><p>When a company offers many services, a generic landing page isn't enough. Each service needs its own page or section capable of ranking, explaining, and converting.</p>"
+    },
+    {
+      "id": 17,
+      "slug": "knots-ecommerce-product-ux",
+      "title": "Knots: Optimizing a Tienda Nube Store Around the Shopping Experience",
+      "excerpt": "An online store built on Tienda Nube, optimized with better product presentation, commercial structure, and a smoother purchase journey.",
+      "category": "ecommerce",
+      "tags": [
+        "Knots",
+        "Tienda Nube",
+        "E-commerce",
+        "Shopping UX",
+        "Catalog"
+      ],
+      "date": "2013-05-14",
+      "dateFormatted": "May 14, 2013",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-commerce · UX",
+        "initials": "R3"
+      },
+      "content": "<h2>Optimizing on top of an existing platform</h2><p>Knots runs on Tienda Nube, a platform that already handles most of the e-commerce infrastructure. The challenge was improving the experience, product presentation, and commercial structure within that framework.</p><h2>What we prioritized</h2><ul><li>Clear catalog presentation</li><li>Purchase UX</li><li>Visual product hierarchy</li><li>Commercial clarity</li><li>Navigation optimization</li></ul><h2>Takeaway</h2><p>An online store doesn't improve just by having products listed. It improves when each product is easy to understand, easy to compare, and the path to purchase is simple.</p>"
+    },
+    {
+      "id": 19,
+      "slug": "core-web-vitals-practical-guide",
+      "title": "Core Web Vitals in 2024: What Google Measures and How to Improve Your Score",
+      "excerpt": "LCP, CLS, and INP are the three metrics Google uses to measure real user experience. This guide explains what each one means and how to improve it with concrete changes.",
+      "category": "performance",
+      "tags": [
+        "Core Web Vitals",
+        "LCP",
+        "CLS",
+        "INP",
+        "Google",
+        "Web Performance"
+      ],
+      "date": "2023-10-05",
+      "dateFormatted": "October 5, 2023",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Performance · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Why Core Web Vitals matter for your business</h2><p>Since 2021, Google has used Core Web Vitals as a ranking signal. But beyond SEO, these metrics measure something real: how fast and stable your site feels to someone browsing on a phone over a 4G connection.</p><p>A site that passes the Core Web Vitals thresholds converts better, bounces less, and ranks higher. The three current metrics are LCP, CLS, and INP.</p><h2>LCP: Largest Contentful Paint</h2><p>LCP measures how long it takes for the largest visible element on the screen to render (usually the hero image or main headline). Google's threshold is <strong>2.5 seconds or less</strong>.</p><p>The most common causes of slow LCP: unoptimized images, a slow server (high TTFB), render-blocking CSS or JS, and web fonts that delay visible text.</p><p>Practical fixes: preload the hero image with <code>link rel='preload'</code>, convert images to WebP or AVIF, use a CDN for static assets, and enable Brotli compression on the server.</p><h2>CLS: Cumulative Layout Shift</h2><p>CLS measures unexpected visual shifts during load: that moment when text jumps because an image loaded without defined dimensions. The threshold is <strong>0.1 or less</strong>.</p><p>Common causes: images and videos without defined width and height attributes, dynamically injected content (banners, pop-ups), and web fonts that change the layout when they load.</p><p>Direct fix: always include width and height on img tags. For fonts, use font-display: swap. For dynamic content, reserve the space before it loads.</p><h2>INP: Interaction to Next Paint</h2><p>INP replaced FID in 2024. It measures how long the page takes to respond to any user interaction (click, tap, keystroke). The threshold is <strong>200ms or less</strong>.</p><p>A high INP is usually caused by heavy JavaScript blocking the main thread. Solutions: break long tasks into smaller chunks, defer non-critical JS, and avoid heavy libraries when lighter native alternatives exist.</p><h2>How to measure your Core Web Vitals right now</h2><p>Three free tools: <strong>PageSpeed Insights</strong> (pagespeed.web.dev) shows real field data from actual users. <strong>Search Console</strong>, under \"Page Experience,\" shows which URLs have issues. <strong>Chrome DevTools</strong> with Lighthouse lets you analyze in real time during development.</p><p>Important: field data (CrUX) is what Google actually uses for ranking. Lab data (Lighthouse) is useful for diagnosis, but it isn't the same data the algorithm uses.</p><h2>A priority action plan</h2><p>If your Core Web Vitals are in the red, here's the order of impact: start by optimizing images (the biggest win for the least effort), then fix CLS by defining dimensions, next tackle TTFB with better hosting or a CDN, and finally audit your JavaScript if INP is still high.</p>"
+    },
+    {
+      "id": 33,
+      "slug": "web-development-trends-2026",
+      "title": "Web Development Trends in 2026: What's Changing and How to Prepare",
+      "excerpt": "The web ecosystem is evolving fast. Here are the technical trends shaping how sites and web applications are being built in 2026.",
+      "category": "desarrollo",
+      "tags": [
+        "Web Trends 2026",
+        "Web Development",
+        "JavaScript",
+        "AI in Development",
+        "Web Components"
+      ],
+      "date": "2026-03-12",
+      "dateFormatted": "March 12, 2026",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The context: an ecosystem reaching maturity</h2><p>2026 finds the web development ecosystem in a moment of maturation. After years of framework and tooling explosion, there's a visible shift toward simplification: less unnecessary JavaScript, more reliance on native platform features, and a sharper focus on performance and accessibility as requirements, not extras.</p><h2>AI as a development copilot</h2><p>AI-assisted tools (GitHub Copilot, Cursor, and their competitors) have moved from novelty to a standard part of most professional developers' workflow. The real shift isn't that AI writes the code — it's that it frees up time from repetitive boilerplate so developers can focus on architecture decisions and solving genuinely complex problems.</p><h2>Web Components and the native platform revival</h2><p>Native browser Web Components are gaining real traction. They work across every modern browser, require no framework, perform excellently, and drop into any project. They won't replace React for complex applications, but for reusable UI components shared across multiple projects, they're increasingly the right call.</p><h2>Native CSS: needing fewer preprocessors every year</h2><p>Modern CSS now has features that used to require Sass: native variables, nesting, container queries, and the color-mix() function. In 2026, starting a new project with Sass by default is a decision worth questioning.</p><h2>Edge computing and server performance</h2><p>Edge functions let you run server-side code in locations geographically close to the user, cutting latency dramatically. For applications that need server-side personalization, the edge is becoming the default architecture.</p><h2>Accessibility as a legal and technical requirement</h2><p>Several countries now have regulations requiring compliance with web accessibility standards (WCAG 2.1 AA at minimum), and the regulatory landscape elsewhere is moving in the same direction. Building with accessibility from day one is cheaper than remediating it later.</p>"
+    },
+    {
+      "id": 35,
+      "slug": "geo-generative-engine-optimization-guide",
+      "title": "GEO: What Generative Engine Optimization Is and How to Apply It",
+      "excerpt": "GEO is the discipline of optimizing your content to appear in answers from ChatGPT, Google AI Overviews, and Perplexity. What it is, why it matters for your business, and concrete strategies to implement it.",
+      "category": "seo",
+      "tags": [
+        "GEO",
+        "Generative Engine Optimization",
+        "ChatGPT",
+        "AI Overviews",
+        "SEO 2026"
+      ],
+      "date": "2026-05-15",
+      "dateFormatted": "May 15, 2026",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · GEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>GEO vs. SEO: the difference that defines visibility in 2026</h2><p>SEO ranks your site on Google so users click through. GEO — Generative Engine Optimization — optimizes for AI-powered search engines like ChatGPT, Perplexity, Google AI Overviews, and Gemini to mention and recommend your brand directly in their answers.</p><p>The difference is fundamental: with SEO, the user visits your site from a link. With GEO, the AI cites your content directly in its response, often without the user ever clicking anywhere. Winning that citation is the new battle for digital visibility.</p><h2>Why GEO matters right now</h2><p>ChatGPT has surpassed 200 million active users. Google AI Overviews now appears across millions of searches. Perplexity keeps growing among users who want verified answers instead of a list of links to sift through.</p><p>Usage of these tools is climbing fastest for service-comparison searches, vendor recommendations, and queries like 'who's the best web development agency in [city].' Those are exactly the searches where your business either shows up in the AI's answer, or doesn't exist at all.</p><h2>How AI models choose their sources</h2><p>Models like GPT-4, Claude, and Gemini were trained on web content and also pull in real-time search results. The signals they weigh most heavily when deciding what to cite: perceived domain authority, clear and specific content that answers questions directly, concrete and verifiable data, presence across multiple trusted sources, and schema markup that clearly identifies the entity and its services.</p><h2>GEO strategies that actually work</h2><p><strong>Question-and-answer format:</strong> FAQs with concise answers have a high chance of being cited in AI Overviews and by ChatGPT. Structure sections of your site to answer specific questions from your industry directly. <strong>Reinforced E-E-A-T:</strong> the Experience, Expertise, Authority, and Trust that Google looks for is exactly what AI models look for too. Identifiable authors, real case studies, sourced data, and genuine editorial opinions — AI doesn't cite generic content. <strong>Original data:</strong> publishing original statistics, client case studies, or industry analysis turns your site into a source other people cite. <strong>Detailed schema markup:</strong> implement JSON-LD with Organization, LocalBusiness, FAQPage, and Service markup where relevant. Structured data tells AI systems explicitly what you do, where you operate, and why you're relevant.</p><h2>Robots.txt: letting AI bots in</h2><p>Plenty of sites unintentionally block AI crawlers. To show up in ChatGPT (GPTBot), Google AI Overviews (Google-Extended), Claude (ClaudeBot, anthropic-ai), or Perplexity (PerplexityBot) answers, your robots.txt needs to explicitly allow them. Also worth allowing: CCBot (Common Crawl, which trains most LLMs), Meta-ExternalAgent for Meta AI, and Applebot-Extended for Apple Intelligence.</p><h2>GEO and SEO: one integrated strategy</h2><p>Solid technical SEO is the foundation GEO builds on. SEO can rank well-optimized informational content on its own. GEO demands content with real depth, original perspective, and verifiable data.</p><p>The strategy for 2026: don't replace your SEO, extend it. Publish content that answers specific questions from your industry, reinforce E-E-A-T with real case studies, implement detailed schema, and make sure AI crawlers can access your site without restrictions. AI visibility isn't the future — it's already here.</p>"
+    },
+    {
+      "id": 37,
+      "slug": "llms-txt-what-it-is-how-to-implement",
+      "title": "What llms.txt Is and How to Implement It on Your Site",
+      "excerpt": "llms.txt tells ChatGPT, Claude, Gemini, and Perplexity what your site is about, without relying on them to crawl your entire HTML. What it is, how it's structured, and how we built ours at raven3.com.ar.",
+      "category": "seo",
+      "tags": [
+        "llms.txt",
+        "GEO",
+        "Technical SEO",
+        "Artificial Intelligence",
+        "Web Crawling"
+      ],
+      "date": "2026-06-12",
+      "dateFormatted": "June 12, 2026",
+      "readTime": 8,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · GEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>What is the llms.txt file?</h2><p>llms.txt is a plain-text Markdown file placed at the root of a site (for example, raven3.com.ar/llms.txt) that acts as a curated map so language models — ChatGPT, Claude, Gemini, Perplexity — can quickly understand what your site is, what it offers, and where to find the most relevant information, without having to crawl and parse the entire HTML.</p><p>The proposal emerged in 2024 and takes inspiration from two files you already know: robots.txt (tells crawlers what they're allowed to crawl) and sitemap.xml (lists every URL). llms.txt does something different: instead of listing everything, it selects what matters and summarizes it in natural language.</p><h2>Why it matters to an LLM (and to your business)</h2><p>Language models work with a limited context window. When someone asks ChatGPT or Perplexity about your industry, the model can't read your entire site — it needs concise, trustworthy fragments. HTML loaded with menus, scripts, banners, and UI components is noise to an LLM. A clean Markdown file with the essence of your business is a direct signal.</p><p>On top of that, many corporate sites are applications that render content with JavaScript. If the bot doesn't execute JS — and several don't — it sees an almost empty page. llms.txt solves that by delivering the key content in plain text upfront, with no dependency on rendering.</p><h2>The standard structure</h2><p>The format is simple and intentionally minimal:</p><ul><li>An <strong>H1</strong> with the brand or site name</li><li>A one-line <strong>blockquote</strong> summarizing what the company does</li><li>An <strong>H2</strong> for each topical section (for example 'Main pages,' 'Policies,' 'Documentation') with a list of links, each with a short description</li></ul><p>For very large sites or ones with extensive documentation, there's also an llms-full.txt variant, which includes the complete content instead of just links and summaries.</p><h2>How we implemented it at Raven3</h2><p>At raven3.com.ar/llms.txt we follow that exact structure: an H1 with the agency name, a one-line blockquote summarizing our value proposition, and two sections — Main Pages and Policies — with direct links and a one-sentence description for each. No filler, no keyword stuffing: just the information a model needs to understand what the site is about and recommend it accurately.</p><h2>Common mistakes when building yours</h2><p>Treating it like a traditional SEO file and stuffing it with keywords: LLMs don't rank by keyword density, they prioritize clarity and precision. Copying the entire sitemap: if you have 200 URLs, the file loses its value as a curated map. Letting it go stale: if you add or remove pages and don't update it, the model can end up citing outdated information. Assuming it replaces technical SEO: llms.txt is a complement, not a substitute for semantic HTML, schema markup, and quality content.</p><h2>Checklist for building your llms.txt</h2><ul><li>Create the file as plain text and upload it to your domain root (yourdomain.com/llms.txt)</li><li>Start with an H1 with your brand name and a one-line blockquote summarizing what you do</li><li>Group your most important pages into 2 or 3 sensible sections (services, about the company, contact)</li><li>Describe each link in one clear sentence, without internal jargon</li><li>Verify that your robots.txt isn't blocking the AI crawlers you need reading the file</li><li>Review it every time your service offering or page structure changes</li></ul>"
+    },
+    {
+      "id": 36,
+      "slug": "shopify-vs-woocommerce-vs-custom-development",
+      "title": "Shopify vs. WooCommerce vs. Custom Development: Which One Should You Choose for Your Online Store",
+      "excerpt": "Three very different options in cost, flexibility, and time to launch. This guide compares Shopify, WooCommerce, and custom development with real-world costs so you can decide with actual numbers.",
+      "category": "ecommerce",
+      "tags": [
+        "Shopify",
+        "WooCommerce",
+        "E-commerce",
+        "Online Store",
+        "Custom Development"
+      ],
+      "date": "2026-06-05",
+      "dateFormatted": "June 5, 2026",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The decision that shapes your business for years</h2><p>Shopify, WooCommerce, or custom development: choosing the platform for an online store has long-term technical, commercial, and financial consequences. There's no universal answer — the best choice depends on projected sales volume, budget, available technical talent, and the specific needs of the business.</p><h2>Shopify: all-in-one for a fast launch</h2><p>Shopify is a SaaS e-commerce platform. You pay a monthly subscription and get hosting, security, automatic updates, and a large ecosystem of apps included. You don't need to worry about the technical infrastructure at all.</p><p><strong>Pros:</strong> fast launch (days, not months), high technical reliability, excellent for scaling sales volume, a huge app ecosystem, zero infrastructure maintenance. <strong>Cons:</strong> recurring cost billed in USD (Basic at USD 39/month up to Advanced at USD 399/month, plus apps), transaction fees if you don't use Shopify Payments (not available in every market), limited customization without writing code. <strong>Regional considerations:</strong> local payment processors like Mercado Pago require a third-party app integration, local tax invoicing systems need extra setup, and a dollar-denominated cost can be a meaningful factor depending on the exchange rate.</p><p><strong>Best for:</strong> brands with a single strong product and real scale potential, businesses with international ambitions, teams without developers who need immediate operational autonomy.</p><h2>WooCommerce: full flexibility on top of WordPress</h2><p>WooCommerce is a free e-commerce plugin for WordPress. There's no platform fee, but you'll need hosting, a domain, SSL, and eventually premium plugins for advanced features.</p><p><strong>Pros:</strong> low upfront cost, total flexibility with thousands of plugins and themes, full ownership of your code and data, excellent for SEO, a large developer community to hire from. <strong>Cons:</strong> requires ongoing technical maintenance (updates, security), performance depends heavily on hosting configuration, can get slow and complex once you stack up plugins. <strong>Regional considerations:</strong> it's the most popular option locally, with native integrations for Mercado Pago, local tax invoicing, and regional shipping carriers.</p><p><strong>Best for:</strong> small and mid-size businesses that have or can hire a developer, stores with complex catalogs or many categories, teams that care about SEO and content as much as selling.</p><h2>Custom development: full control, bigger investment</h2><p>A custom-built e-commerce store is built from scratch specifically for the business. No platform limitations, no plugins, no third-party dependencies.</p><p><strong>Pros:</strong> superior performance without the overhead of a generic platform, seamless integration with existing systems (ERP, CRM, in-house logistics), fully customized UX, no recurring platform subscription costs, complete ownership of the code. <strong>Cons:</strong> significantly higher upfront investment, longer development timeline (months), requires an ongoing technical team for maintenance.</p><p><strong>Best for:</strong> companies with logistics or business processes that standard platforms don't handle well, high-volume businesses where performance has a direct impact on conversion.</p><h2>Cost comparison (2026 figures)</h2><p><strong>Shopify:</strong> USD 39-399/month platform fee + USD 50-150/month in necessary apps + a theme at USD 200-400 (one-time). Recurring annual cost in USD ranging from 1,000 to 7,000+. <strong>WooCommerce:</strong> hosting USD 15-40/month + premium plugins USD 300-600/year + initial development USD 2,000-8,000. Low recurring cost once launched. <strong>Custom development:</strong> upfront investment USD 8,000-30,000+ depending on scope + server USD 30-200/month. No platform fees, but ongoing technical maintenance is required.</p><h2>How to decide: three key questions</h2><p>Do you need to start selling in under 4 weeks without an in-house developer? → Shopify. Do you want full flexibility without a high recurring dollar-denominated cost, and can you hire development help? → WooCommerce. Does your business have specific processes that off-the-shelf platforms don't solve, or are performance and UX a genuine competitive advantage you're chasing? → Custom development. There's no perfect platform — there's the one that best fits your business today and has room to scale tomorrow.</p>"
+    },
+    {
+      "id": 32,
+      "slug": "design-systems-for-web-projects",
+      "title": "Design Systems for Web Projects: When to Build One and Where to Start",
+      "excerpt": "A design system speeds up development, improves visual consistency, and reduces design debt. This guide explains when it's worth the effort and how to build your own.",
+      "category": "ux",
+      "tags": [
+        "Design System",
+        "UI",
+        "Components",
+        "Visual Consistency",
+        "Web Design"
+      ],
+      "date": "2026-01-08",
+      "dateFormatted": "January 8, 2026",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · Design · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>What a design system is (and isn't)</h2><p>A design system is the set of documented, shared design decisions a team uses to build digital products consistently: design tokens (colors, typography, spacing), reusable components, interaction patterns, and usage guidelines.</p><p>What it's NOT: a Figma file full of nice-looking components. Without documentation, without usage criteria, and without active maintenance, it's just a gallery.</p><h2>When it's actually worth having one</h2><p>It makes sense when: more than one person works on design or development, the project has multiple pages with repeated patterns, the product is going to evolve over time, or visual inconsistencies are causing frequent rework. For a static 5-page site, the overhead isn't worth it.</p><h2>The components of the most basic design system</h2><p><strong>Design tokens:</strong> the fundamental variables. Colors (primary, secondary, neutrals, semantic), typography (families, sizes, weights), spacing (an 8px scale), and shadows. In code, these are implemented as CSS variables. Change one token and the entire interface updates.</p><p><strong>Base components:</strong> buttons with all their states (default, hover, active, disabled, loading), inputs and forms, cards, modals, navigation, and empty and error states.</p><h2>Documentation: the part nobody wants to do</h2><p>A component without documentation is a component that will get misused. The bare minimum documentation: when to use it and when not to, the variants available, and examples of correct and incorrect usage.</p><h2>Where to start without getting overwhelmed</h2><p>Start with the tokens (colors and typography). Then extract the components that already exist in the design instead of building them from scratch. Document as you build. A design system that grows out of a real project is far more useful than one designed in a vacuum.</p>"
+    }
+  ]
+}

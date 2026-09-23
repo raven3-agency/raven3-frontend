@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Web Monitor — Raven3</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ════════════════════════════════════════════════════════
+       RESET & TOKENS
+    ════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:       #0b0f17;
+      --bg2:      #0d1520;
+      --panel:    rgba(255,255,255,0.028);
+      --line:     rgba(0,229,200,0.1);
+      --line-dim: rgba(255,255,255,0.07);
+
+      --teal:     #00e5c8;
+      --teal-dim: rgba(0,229,200,0.55);
+      --teal-glow:rgba(0,229,200,0.12);
+
+      --yellow:   #f59e0b;
+      --red:      #ef4444;
+
+      --txt:      rgba(215,232,245,0.92);
+      --muted:    rgba(160,190,215,0.48);
+      --faint:    rgba(160,190,215,0.22);
+
+      --mono: 'Share Tech Mono', monospace;
+      --sans: 'Outfit', sans-serif;
+      --disp: 'Orbitron', monospace;
+
+      --r: 14px;
+      --r-sm: 8px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--txt);
+      font-family: var(--sans);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* grid noise texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(0,229,200,0.018) 39px, rgba(0,229,200,0.018) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(0,229,200,0.018) 39px, rgba(0,229,200,0.018) 40px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* subtle radial glow top */
+    body::after {
+      content: '';
+      position: fixed;
+      top: -200px; left: 50%;
+      transform: translateX(-50%);
+      width: 900px; height: 500px;
+      background: radial-gradient(ellipse, rgba(0,229,200,0.05) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ════════════════════════════════════════════════════════
+       HEADER
+    ════════════════════════════════════════════════════════ */
+    .monitor-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,15,23,0.92);
+      backdrop-filter: blur(24px) saturate(1.4);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .header-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* brand */
+    .header-brand { display: flex; align-items: center; gap: 20px; }
+
+    .brand-wordmark {
+      font-family: var(--disp);
+      font-size: 17px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      color: #e9eef2;
+      line-height: 1;
+      text-decoration: none;
+      user-select: none;
+    }
+    .brand-wordmark .dot { color: var(--teal); }
+
+    .brand-divider {
+      width: 1px;
+      height: 28px;
+      background: var(--line-dim);
+    }
+
+    .brand-label {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .brand-sys {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.32em;
+      color: var(--teal-dim);
+      text-transform: uppercase;
+    }
+
+    .brand-title {
+      font-family: var(--disp);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--txt);
+      text-transform: uppercase;
+    }
+
+    /* controls */
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .last-check-wrap {
+      text-align: right;
+    }
+
+    .last-check-label {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .last-check-time {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--teal-dim);
+      letter-spacing: 0.08em;
+    }
+
+    .btn-refresh {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--r-sm);
+      border: 1px solid rgba(0,229,200,0.28);
+      background: rgba(0,229,200,0.06);
+      color: var(--teal);
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, opacity 0.2s;
+      white-space: nowrap;
+    }
+
+    .btn-refresh:hover:not(:disabled) {
+      background: rgba(0,229,200,0.12);
+      border-color: rgba(0,229,200,0.5);
+    }
+
+    .btn-refresh:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .btn-refresh .ico {
+      width: 13px; height: 13px;
+      flex-shrink: 0;
+      transition: transform 0.5s ease;
+    }
+
+    .btn-refresh.spinning .ico {
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ════════════════════════════════════════════════════════
+       STATS BAR
+    ════════════════════════════════════════════════════════ */
+    .stats-wrap {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 28px auto 0;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .stat-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: opacity 0.3s;
+    }
+
+    .stat-pill--green  { color: var(--teal);   border-color: rgba(0,229,200,0.22);  background: rgba(0,229,200,0.05); }
+    .stat-pill--yellow { color: var(--yellow);  border-color: rgba(245,158,11,0.22); background: rgba(245,158,11,0.05); }
+    .stat-pill--red    { color: var(--red);     border-color: rgba(239,68,68,0.22);  background: rgba(239,68,68,0.05); }
+    .stat-pill--dim    { color: var(--muted);   border-color: rgba(255,255,255,0.07); background: transparent; }
+
+    .stat-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+
+    .stat-pill--green .stat-dot {
+      animation: pulse-dot 2.4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-dot {
+      0%,100% { opacity:1; }
+      50% { opacity:0.35; }
+    }
+
+    /* ════════════════════════════════════════════════════════
+       SECTION LABEL
+    ════════════════════════════════════════════════════════ */
+    .section-label {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 32px auto 16px;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.35em;
+      color: var(--teal-dim);
+      text-transform: uppercase;
+    }
+
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--line);
+    }
+
+    /* ════════════════════════════════════════════════════════
+       GRID
+    ════════════════════════════════════════════════════════ */
+    .site-grid {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto 80px;
+      padding: 0 32px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 14px;
+    }
+
+    /* ════════════════════════════════════════════════════════
+       CARD
+    ════════════════════════════════════════════════════════ */
+    .site-card {
+      position: relative;
+      border-radius: var(--r);
+      border: 1px solid var(--line-dim);
+      background: var(--panel);
+      overflow: hidden;
+      transition: border-color 0.4s ease, background 0.4s ease, transform 0.2s ease;
+    }
+
+    .site-card:hover { transform: translateY(-1px); }
+
+    /* colored left accent */
+    .site-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--c-accent, var(--faint));
+      transition: background 0.4s ease;
+    }
+
+    /* scan shimmer — only on checking */
+    .site-card.is-checking::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(0,229,200,0.055) 50%,
+        transparent 80%
+      );
+      background-size: 220% 100%;
+      animation: shimmer 1.6s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shimmer {
+      0%   { background-position: -100% 0; }
+      100% { background-position: 220% 0; }
+    }
+
+    /* status variants */
+    .site-card.is-online {
+      --c-accent: var(--teal);
+      border-color: rgba(0,229,200,0.18);
+      background: rgba(0,229,200,0.04);
+    }
+    .site-card.is-slow {
+      --c-accent: var(--yellow);
+      border-color: rgba(245,158,11,0.2);
+      background: rgba(245,158,11,0.04);
+    }
+    .site-card.is-down,
+    .site-card.is-dns {
+      --c-accent: var(--red);
+      border-color: rgba(239,68,68,0.2);
+      background: rgba(239,68,68,0.04);
+    }
+
+    /* card inner */
+    .card-inner {
+      padding: 20px 20px 18px 24px;
+    }
+
+    /* top row */
+    .card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card-name {
+      font-family: var(--sans);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--txt);
+      line-height: 1.2;
+    }
+
+    .card-cat {
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.22em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* status badge */
+    .status-badge {
+      flex-shrink: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      border-radius: 6px;
+      border: 1px solid;
+      font-family: var(--mono);
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-online   { color: var(--teal);   border-color: rgba(0,229,200,0.25);  background: rgba(0,229,200,0.08); }
+    .badge-slow     { color: var(--yellow);  border-color: rgba(245,158,11,0.25); background: rgba(245,158,11,0.08); }
+    .badge-down     { color: var(--red);     border-color: rgba(239,68,68,0.25);  background: rgba(239,68,68,0.08); }
+    .badge-dns      { color: var(--red);     border-color: rgba(239,68,68,0.25);  background: rgba(239,68,68,0.08); }
+    .badge-checking { color: var(--muted);   border-color: var(--line-dim);       background: transparent; }
+
+    .badge-dot {
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+      flex-shrink: 0;
+    }
+
+    .badge-online .badge-dot {
+      animation: pulse-dot 2s ease-in-out infinite;
+    }
+
+    /* url row */
+    .card-url {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--mono);
+      font-size: 10px;
+      color: var(--muted);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: color 0.2s;
+    }
+
+    .card-url:hover { color: var(--teal-dim); }
+
+    .card-url-ico {
+      flex-shrink: 0;
+      opacity: 0.45;
+    }
+
+    .card-url-text {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* separator */
+    .card-sep {
+      height: 1px;
+      background: var(--line-dim);
+      margin: 0 0 14px;
+    }
+
+    /* meta row */
+    .card-meta {
+      display: flex;
+      gap: 0;
+    }
+
+    .meta-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding-right: 12px;
+    }
+
+    .meta-col:not(:last-child) {
+      border-right: 1px solid var(--line-dim);
+      margin-right: 12px;
+    }
+
+    .meta-lbl {
+      font-family: var(--mono);
+      font-size: 7px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    .meta-val {
+      font-family: var(--mono);
+      font-size: 14px;
+      color: var(--txt);
+      line-height: 1;
+    }
+
+    .meta-val.c-green  { color: var(--teal); }
+    .meta-val.c-yellow { color: var(--yellow); }
+    .meta-val.c-red    { color: var(--red); }
+    .meta-val.c-muted  { color: var(--muted); font-size: 11px; }
+
+    /* checking skeleton */
+    .skeleton {
+      height: 14px;
+      border-radius: 4px;
+      background: linear-gradient(90deg, var(--line-dim) 25%, rgba(255,255,255,0.04) 50%, var(--line-dim) 75%);
+      background-size: 200% 100%;
+      animation: sk 1.4s linear infinite;
+    }
+
+    .skeleton.sk-sm { height: 8px; width: 60%; margin-top: 3px; }
+
+    @keyframes sk {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    /* ════════════════════════════════════════════════════════
+       FOOTER
+    ════════════════════════════════════════════════════════ */
+    .monitor-footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--line-dim);
+      padding: 20px 0;
+    }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-note {
+      font-family: var(--mono);
+      font-size: 9px;
+      color: var(--faint);
+      letter-spacing: 0.1em;
+    }
+
+    .footer-note a {
+      color: var(--teal-dim);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-note a:hover { color: var(--teal); }
+
+    /* ════════════════════════════════════════════════════════
+       RESPONSIVE
+    ════════════════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .header-inner,
+      .stats-wrap,
+      .section-label,
+      .site-grid,
+      .footer-inner { padding-left: 20px; padding-right: 20px; }
+
+      .site-grid { grid-template-columns: 1fr; }
+      .last-check-wrap { display: none; }
+      .brand-divider { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .header-inner { gap: 12px; }
+      .brand-wordmark { font-size: 14px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════ -->
+<header class="monitor-header">
+  <div class="header-inner">
+    <div class="header-brand">
+      <a href="/" class="brand-wordmark">RAVEN3<span class="dot">.</span></a>
+      <div class="brand-divider"></div>
+      <div class="brand-label">
+        <span class="brand-sys">SYS.MONITOR // RAVEN3</span>
+        <span class="brand-title">Web Monitor</span>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="last-check-wrap">
+        <span class="last-check-label">Última verificación</span>
+        <span class="last-check-time" id="last-check-time">—</span>
+      </div>
+      <button class="btn-refresh" id="btn-refresh" onclick="checkAll()">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+        </svg>
+        Verificar todo
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════
+     STATS
+════════════════════════════════════════════════════════ -->
+<div class="stats-wrap" id="stats-wrap">
+  <!-- rendered by JS -->
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     SECTION LABEL
+════════════════════════════════════════════════════════ -->
+<div class="section-label">
+  Sitios monitoreados
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     GRID
+════════════════════════════════════════════════════════ -->
+<div class="site-grid" id="site-grid">
+  <!-- rendered by JS -->
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="monitor-footer">
+  <div class="footer-inner">
+    <span class="footer-note">
+      Verificación vía DNS-over-HTTPS (Google) · Proxy CORS (allorigins.win) · Fallback no-cors
+      &nbsp;·&nbsp; Los tiempos incluyen overhead del proxy (~1-2 s)
+    </span>
+    <span class="footer-note">
+      <a href="/">← Raven3</a>
+    </span>
+  </div>
+</footer>
+
+<script>
+/* ═══════════════════════════════════════════════════════════
+   ░░  CONFIGURACIÓN — Editá este array para agregar sitios  ░░
+   ═══════════════════════════════════════════════════════════ */
+const SITES = [
+  
+  { name: 'NDB Propiedades',         url: 'https://ndbpropiedades.com.ar',        category: 'Inmobiliaria' },
+  { name: 'Art1',                    url: 'https://art1.com.ar',                  category: 'Arte' },
+  { name: 'Somos Grupos de Mujeres', url: 'https://somosgrupodemujeresmas.ar/?audiencia=paciente',     category: 'Comunidad' },
+  { name: 'CEA American',            url: 'https://cea-american.com.ar/',           category: 'Educación' },
+  { name: 'OKOS',                    url: 'https://okos.com.ar',                  category: 'E-commerce' },
+  { name: 'Perniles Cochon',       url: 'https://pernilescochon.com.ar',      category: 'Gastronomía'  },
+  { name: 'Ibarra Propiedades',    url: 'https://ibarraprop.com.ar',          category: 'Inmobiliaria' },
+  { name: 'Etienne de Montebello', url: 'https://etiennedemontebello.com',    category: 'Moda'         },
+  { name: 'Lassen',                url: 'https://lassen.ar',                  category: 'Empresa'      },
+  { name: 'Beforce',               url: 'https://beforce.ar',                 category: 'Fitness'      },
+  { name: 'Knots4',                url: 'https://knots4.mitiendanube.com',    category: 'E-commerce'   },
+  { name: 'Didot Estudio',           url: 'https://didot.com.ar',                category: 'Diseño' },
+  // Agregá más sitios aquí:
+  // { name: 'Nombre del cliente', url: 'https://dominio.com.ar', category: 'Rubro' },
+];
+
+/* ═══════════════════════════════════════════════════════════
+   VERIFICADOR
+   ═══════════════════════════════════════════════════════════ */
+async function checkSite(siteUrl) {
+  let hostname;
+  try { hostname = new URL(siteUrl).hostname; }
+  catch { return { status: 'dns', time: null, code: null }; }
+
+  /* — PASO 1: DNS via Google DNS-over-HTTPS ————————————— */
+  try {
+    const dnsRes = await fetch(
+      `https://dns.google/resolve?name=${hostname}&type=A`,
+      { signal: AbortSignal.timeout(6000) }
+    );
+    const dns = await dnsRes.json();
+    const hasAnswer = Array.isArray(dns.Answer) && dns.Answer.length > 0;
+    if (dns.Status !== 0 || !hasAnswer) {
+      return { status: 'dns', time: null, code: null };
+    }
+  } catch {
+    return { status: 'dns', time: null, code: null };
+  }
+
+  /* — PASO 2: HTTP via proxy CORS ——————————————————————— */
+  const t0 = performance.now();
+  try {
+    const proxyRes = await fetch(
+      `https://api.allorigins.win/get?url=${encodeURIComponent(siteUrl)}&t=${Date.now()}`,
+      { signal: AbortSignal.timeout(16000) }
+    );
+    const elapsed = Math.round(performance.now() - t0);
+    const data    = await proxyRes.json();
+    const code    = data?.status?.http_code ?? 0;
+
+    if (code === 0)                return { status: 'down',   time: elapsed, code: null };
+    if (elapsed > 5000)            return { status: 'slow',   time: elapsed, code };
+    if (code >= 200 && code < 400) return { status: 'online', time: elapsed, code };
+    return                                { status: 'down',   time: elapsed, code };
+
+  } catch (e) {
+    /* — PASO 3: fallback no-cors ————————————————————————— */
+    const t1 = performance.now();
+    try {
+      await fetch(siteUrl, { mode: 'no-cors', signal: AbortSignal.timeout(8000) });
+      const elapsed = Math.round(performance.now() - t1);
+      return { status: elapsed > 5000 ? 'slow' : 'online', time: elapsed, code: '??' };
+    } catch (e2) {
+      if (e2.name === 'AbortError') return { status: 'slow', time: null, code: null };
+      return { status: 'down', time: null, code: null };
+    }
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RENDER HELPERS
+   ═══════════════════════════════════════════════════════════ */
+const STATUS_META = {
+  online:   { label: 'Online',       cls: 'badge-online',   cardCls: 'is-online' },
+  slow:     { label: 'Lento',        cls: 'badge-slow',     cardCls: 'is-slow'   },
+  down:     { label: 'Caído',        cls: 'badge-down',     cardCls: 'is-down'   },
+  dns:      { label: 'Error DNS',    cls: 'badge-dns',      cardCls: 'is-dns'    },
+  checking: { label: 'Verificando…', cls: 'badge-checking', cardCls: 'is-checking' },
+};
+
+function fmtTime(ms) {
+  if (ms == null) return '—';
+  return ms < 1000 ? `${ms} ms` : `${(ms / 1000).toFixed(1)} s`;
+}
+
+function timeColor(status, ms) {
+  if (status === 'online') return ms != null && ms > 2500 ? 'c-yellow' : 'c-green';
+  if (status === 'slow')   return 'c-yellow';
+  if (status === 'down' || status === 'dns') return 'c-red';
+  return 'c-muted';
+}
+
+function buildCardHTML(site, status, time, code) {
+  const sm   = STATUS_META[status] ?? STATUS_META.checking;
+  const isChecking = status === 'checking';
+  const urlDisplay = site.url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+  const now  = isChecking ? '—' : new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' });
+
+  return `
+    <div class="card-inner">
+      <div class="card-head">
+        <div>
+          <div class="card-name">${site.name}</div>
+          <div class="card-cat">${site.category}</div>
+        </div>
+        <span class="status-badge ${sm.cls}">
+          <span class="badge-dot"></span>
+          ${sm.label}
+        </span>
+      </div>
+
+      <a class="card-url" href="${site.url}" target="_blank" rel="noopener noreferrer">
+        <svg class="card-url-ico" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+          <polyline points="15 3 21 3 21 9"/>
+          <line x1="10" y1="14" x2="21" y2="3"/>
+        </svg>
+        <span class="card-url-text">${urlDisplay}</span>
+      </a>
+
+      <div class="card-sep"></div>
+
+      <div class="card-meta">
+        <div class="meta-col">
+          <span class="meta-lbl">Tiempo</span>
+          ${isChecking
+            ? '<div class="skeleton"></div>'
+            : `<span class="meta-val ${timeColor(status, time)}">${fmtTime(time)}</span>`
+          }
+        </div>
+        <div class="meta-col">
+          <span class="meta-lbl">HTTP</span>
+          ${isChecking
+            ? '<div class="skeleton sk-sm"></div>'
+            : `<span class="meta-val">${code ?? '—'}</span>`
+          }
+        </div>
+        <div class="meta-col">
+          <span class="meta-lbl">Check</span>
+          ${isChecking
+            ? '<div class="skeleton sk-sm"></div>'
+            : `<span class="meta-val c-muted">${now}</span>`
+          }
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function setCard(idx, site, status, time, code) {
+  const card = document.getElementById(`card-${idx}`);
+  if (!card) return;
+  const sm = STATUS_META[status] ?? STATUS_META.checking;
+  card.className = `site-card ${sm.cardCls}`;
+  card.innerHTML = buildCardHTML(site, status, time, code);
+}
+
+function renderStats(results) {
+  const counts = { online: 0, slow: 0, down: 0, dns: 0 };
+  results.forEach(r => { if (r && counts[r.status] !== undefined) counts[r.status]++; });
+  const red   = counts.down + counts.dns;
+  const total = results.length;
+
+  const wrap = document.getElementById('stats-wrap');
+  const pills = [];
+
+  pills.push(`<div class="stat-pill stat-pill--green"><span class="stat-dot"></span>${counts.online} Online</div>`);
+  if (counts.slow > 0) pills.push(`<div class="stat-pill stat-pill--yellow"><span class="stat-dot"></span>${counts.slow} Lento</div>`);
+  if (red > 0)         pills.push(`<div class="stat-pill stat-pill--red"><span class="stat-dot"></span>${red} Caído</div>`);
+  pills.push(`<div class="stat-pill stat-pill--dim"><span class="stat-dot"></span>${total} sitios</div>`);
+
+  wrap.innerHTML = pills.join('');
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ORQUESTADOR PRINCIPAL
+   ═══════════════════════════════════════════════════════════ */
+let isRunning = false;
+
+async function checkAll() {
+  if (isRunning) return;
+  isRunning = true;
+
+  const btn = document.getElementById('btn-refresh');
+  btn.disabled = true;
+  btn.classList.add('spinning');
+
+  /* — Render skeleton cards ——————————————————————————— */
+  const grid = document.getElementById('site-grid');
+  grid.innerHTML = SITES.map((site, idx) =>
+    `<div class="site-card is-checking" id="card-${idx}">${buildCardHTML(site, 'checking', null, null)}</div>`
+  ).join('');
+
+  /* — Stats: checking state ——————————————————————————— */
+  document.getElementById('stats-wrap').innerHTML = `
+    <div class="stat-pill" style="color:var(--teal-dim);border-color:var(--line);background:rgba(0,229,200,0.04);">
+      <span class="stat-dot" style="animation:pulse-dot 1s ease-in-out infinite;"></span>
+      Verificando ${SITES.length} sitios…
+    </div>`;
+
+  /* — Check all in parallel, update individually ——————— */
+  const results = await Promise.all(
+    SITES.map((site, idx) =>
+      checkSite(site.url)
+        .then(r  => { setCard(idx, site, r.status, r.time, r.code); return r; })
+        .catch(() => { const r = { status: 'down', time: null, code: null }; setCard(idx, site, r.status, r.time, r.code); return r; })
+    )
+  );
+
+  renderStats(results);
+
+  const now = new Date().toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+  document.getElementById('last-check-time').textContent = now;
+
+  btn.disabled = false;
+  btn.classList.remove('spinning');
+  isRunning = false;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   AUTO-RUN AL CARGAR
+   ═══════════════════════════════════════════════════════════ */
+checkAll();
+</script>
+</body>
+</html>

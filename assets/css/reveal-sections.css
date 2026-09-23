@@ -1,0 +1,125 @@
+/* ── Reveal-on-click: Diferenciales, Proceso y FAQ (index.html) ── */
+
+/* Diferenciales: el párrafo queda colapsado, la tarjeta entera es clickeable */
+.dif-item {
+  cursor: pointer;
+}
+
+.dif-item__icon {
+  position: absolute;
+  top: clamp(30px, 4vw, 52px);
+  right: clamp(24px, 3.5vw, 48px);
+  width: 20px;
+  height: 20px;
+  color: var(--r3);
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.dif-item.open .dif-item__icon {
+  transform: rotate(45deg);
+}
+
+.dif-item__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* Proceso: la descripción queda colapsada, el título es clickeable */
+.paso-content {
+  cursor: pointer;
+}
+
+.paso-content__icon {
+  width: 14px;
+  height: 14px;
+  margin: 6px auto 0;
+  display: block;
+  color: var(--r3);
+  opacity: 0.7;
+  transition: transform 0.3s ease;
+}
+
+.paso-content.open .paso-content__icon {
+  transform: rotate(180deg);
+}
+
+.paso-desc {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+/* FAQ: acordeón clásico, solo una pregunta abierta a la vez */
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.faq-item {
+  background: var(--panel, rgba(8, 12, 19, 0.72));
+  border: 1px solid var(--line, rgba(255, 255, 255, 0.08));
+  border-radius: var(--radius-sm, 14px);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item.open {
+  border-color: rgba(0, 229, 200, 0.22);
+}
+
+.faq-q {
+  all: unset;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 22px 26px;
+  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.faq-q:hover {
+  color: var(--r3);
+}
+
+.faq-q__icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--r3);
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-q__icon {
+  transform: rotate(45deg);
+}
+
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.faq-a__inner {
+  padding: 0 26px 24px;
+}
+
+.faq-a__inner p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--ink-2);
+}

@@ -1,0 +1,680 @@
+﻿<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web</title>
+  <meta name="description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
+  <link rel="canonical" href="https://raven3.com.ar/blog/" />
+  <link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/" />
+  <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/" />
+  <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="theme-color" content="#04080E" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Raven3" />
+  <meta property="og:title" content="Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web" />
+  <meta property="og:description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
+  <meta property="og:url" content="https://raven3.com.ar/blog/" />
+  <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web" />
+  <meta name="twitter:description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
+  <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
+
+  <link rel="icon" type="image/x-icon" href="https://www.raven3.com.ar/assets/img/favicon_io/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600;700&family=Outfit:wght@300;400;500;600&family=Share+Tech+Mono&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/redesign.css" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/animations.css" />
+  <link rel="stylesheet" href="../assets/css/lang-switcher.css" />
+  <link rel="stylesheet" href="../assets/css/blog.css" />
+  <script src="../assets/js/cursor.js" defer></script>
+
+<!-- GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+  gtag('config', 'G-MF63Q3JMSL');
+</script>
+<script>
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('a[href*="#formulario"]');
+    if (link) {
+      gtag('event', 'contact_request', {
+        'method': 'presupuesto_click',
+        'page_path': window.location.pathname
+      });
+    }
+  });
+
+  document.addEventListener('click', function(event) {
+    const link = event.target.closest('a[href^="mailto"]');
+    if (link) {
+      gtag('event', 'email_click', {
+        'method': 'email_directo',
+        'page_path': window.location.pathname
+      });
+    }
+  });
+
+  const whatsappBtn = document.getElementById('waTrigger');
+  if (whatsappBtn) {
+    whatsappBtn.addEventListener('click', function() {
+      gtag('event', 'whatsapp_click', {
+        'method': 'whatsapp',
+        'page_path': window.location.pathname
+      });
+    });
+  }
+
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function() {
+      gtag('event', 'form_submission', {
+        'method': 'formulario_contacto',
+        'page_path': window.location.pathname
+      });
+    });
+  }
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web",
+  "description": "Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar.",
+  "url": "https://raven3.com.ar/blog/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Raven3",
+    "url": "https://raven3.com.ar/"
+  },
+  "blogPost": [
+    {"@type":"BlogPosting","headline":"Shopify vs WooCommerce vs desarrollo a medida: cuál elegir para tu tienda online","url":"https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida","datePublished":"2026-06-05","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"GEO: qué es el Generative Engine Optimization y cómo aplicarlo en Argentina","url":"https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina","datePublished":"2026-05-15","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Cómo mejorar el SEO de mi página web: guía completa","url":"https://raven3.com.ar/blog/post.html?slug=como-mejorar-seo-pagina-web","datePublished":"2026-04-10","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Tendencias de desarrollo web en 2026: qué está cambiando y cómo prepararse","url":"https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026","datePublished":"2026-03-12","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Design systems para proyectos web: cuándo implementarlos y por dónde empezar","url":"https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web","datePublished":"2026-01-08","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Email marketing para e-commerce: la estrategia que genera ventas mientras dormís","url":"https://raven3.com.ar/blog/post.html?slug=email-marketing-ecommerce-estrategia","datePublished":"2025-10-16","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"IA y SEO en 2025: cómo los AI Overviews de Google cambian el juego","url":"https://raven3.com.ar/blog/post.html?slug=ia-seo-google-2025","datePublished":"2025-08-21","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Cómo monitorear la performance de tu sitio en producción: métricas y herramientas","url":"https://raven3.com.ar/blog/post.html?slug=monitoreo-performance-produccion","datePublished":"2025-06-19","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Consumir APIs REST desde el frontend: guía práctica con JavaScript moderno","url":"https://raven3.com.ar/blog/post.html?slug=apis-rest-javascript-frontend","datePublished":"2025-04-10","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Psicología del color en diseño web: qué transmite cada color y cómo usarlo en tu marca","url":"https://raven3.com.ar/blog/post.html?slug=psicologia-color-diseno-web","datePublished":"2025-02-13","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Hot Sale y Black Friday: cómo preparar tu tienda online para las fechas de mayor venta","url":"https://raven3.com.ar/blog/post.html?slug=tienda-online-hot-sale-black-friday","datePublished":"2024-12-05","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Google Search Console: cómo leer los datos y tomar decisiones de SEO","url":"https://raven3.com.ar/blog/post.html?slug=google-search-console-como-usarlo","datePublished":"2024-10-03","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Imágenes web en 2024: WebP, AVIF y las técnicas que reducen el peso a la mitad","url":"https://raven3.com.ar/blog/post.html?slug=optimizacion-imagenes-webp-avif-2024","datePublished":"2024-08-15","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"HTML semántico y accesibilidad: el código que Google y tus usuarios agradecen","url":"https://raven3.com.ar/blog/post.html?slug=html-semantico-accesibilidad-web","datePublished":"2024-06-27","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Formularios web que convierten: principios de UX y errores que cuestan leads","url":"https://raven3.com.ar/blog/post.html?slug=formularios-web-que-convierten","datePublished":"2024-04-18","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Abandono de carrito en e-commerce: causas reales y cómo recuperar esas ventas","url":"https://raven3.com.ar/blog/post.html?slug=abandono-carrito-ecommerce-como-recuperarlo","datePublished":"2024-02-08","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"SEO local en Argentina: cómo aparecer en Google Maps y capturar búsquedas de tu zona","url":"https://raven3.com.ar/blog/post.html?slug=seo-local-argentina-guia-2024","datePublished":"2023-12-14","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Core Web Vitals en 2024: qué mide Google y cómo mejorar tu puntaje","url":"https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica","datePublished":"2023-10-05","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Diseño B2B para logística: cómo una web puede generar más confianza comercial","url":"https://raven3.com.ar/blog/post.html?slug=cea-american-conversion-logistica-b2b","datePublished":"2023-07-13","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"CEA American: cómo diseñamos una web corporativa para una empresa de cadena de frío","url":"https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa","datePublished":"2023-06-22","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Storytelling visual aplicado a una web literaria: aprendizajes del proyecto Etienne de Montebello","url":"https://raven3.com.ar/blog/post.html?slug=storytelling-visual-web-literaria","datePublished":"2021-05-06","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Etienne de Montebello: una experiencia editorial interactiva para una obra literaria premium","url":"https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva","datePublished":"2021-04-15","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"SEO técnico en webs corporativas: lo que aplicamos en proyectos como Lassen Pharma","url":"https://raven3.com.ar/blog/post.html?slug=seo-tecnico-web-corporativa-lassen","datePublished":"2019-09-26","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base","url":"https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico","datePublished":"2019-09-05","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"UX inmobiliaria: cómo diseñar filtros de propiedades que realmente ayudan al usuario","url":"https://raven3.com.ar/blog/post.html?slug=ux-inmobiliaria-filtros-propiedades","datePublished":"2018-12-13","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"NDB Propiedades: una plataforma inmobiliaria integrada con Tokko Broker","url":"https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker","datePublished":"2018-11-22","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Catálogos digitales performantes: por qué BEFORCE no necesitaba una web pesada","url":"https://raven3.com.ar/blog/post.html?slug=catalogo-digital-productos-performance","datePublished":"2017-03-09","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"BEFORCE: catálogo digital con identidad visual sólida y experiencia comercial clara","url":"https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual","datePublished":"2017-02-16","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"E-commerce con comunidad: lo que aprendimos desarrollando SGM+","url":"https://raven3.com.ar/blog/post.html?slug=ecommerce-con-comunidad-sgm","datePublished":"2015-10-29","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"SGM+: sitio institucional con e-commerce para potenciar comunidad e inscripciones","url":"https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad","datePublished":"2015-10-08","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Minimalismo web y performance: por qué menos interfaz puede convertir mejor","url":"https://raven3.com.ar/blog/post.html?slug=minimalismo-web-performance-okos","datePublished":"2014-04-10","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"OKOS: sitio institucional minimalista con foco en claridad, velocidad e identidad","url":"https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista","datePublished":"2014-03-20","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"UX en Tienda Nube: pequeñas decisiones que pueden mejorar la conversión","url":"https://raven3.com.ar/blog/post.html?slug=tienda-nube-ux-conversion-knots","datePublished":"2013-06-06","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Knots: optimización de e-commerce en Tienda Nube con foco en UX de compra","url":"https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto","datePublished":"2013-05-14","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"Cómo estructurar una web de servicios gráficos para posicionar mejor: el caso ART1","url":"https://raven3.com.ar/blog/post.html?slug=estructura-seo-servicios-art1","datePublished":"2012-09-06","author":{"@type":"Organization","name":"Raven3"}},
+    {"@type":"BlogPosting","headline":"ART1: web corporativa con estructura SEO, accesibilidad y rendimiento optimizado","url":"https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad","datePublished":"2012-08-14","author":{"@type":"Organization","name":"Raven3"}}
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://raven3.com.ar/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://raven3.com.ar/blog/"}
+  ]
+}
+</script>
+</head>
+<body>
+  <div id="cursor" aria-hidden="true"></div>
+  <div id="cursor-dot" aria-hidden="true"></div>
+
+  <!-- TOPBAR -->
+  <header class="topbar scrolled">
+    <div class="container topbar__inner">
+      <a href="https://raven3.com.ar/" class="logo" aria-label="Raven3 — Inicio">
+        <span class="topbar-wordmark">RAVEN3<span class="topbar-dot">.</span></span>
+      </a>
+      <nav class="topbar__nav" id="main-nav" aria-label="Navegación principal">
+        <div class="topbar__dropdown">
+          <a class="topbar__link topbar__link--parent" href="/index.html#servicios">Servicios</a>
+          <div class="topbar__sub">
+            <a class="topbar__sub-link" href="/servicios/desarrollo-web-a-medida"><span class="topbar__sub-num">01</span>Desarrollo web</a>
+            <a class="topbar__sub-link" href="/servicios/tiendas-online"><span class="topbar__sub-num">02</span>Tiendas online</a>
+            <a class="topbar__sub-link" href="/servicios/seo-tecnico"><span class="topbar__sub-num">03</span>SEO técnico</a>
+          </div>
+        </div>
+        <a class="topbar__link" href="/index.html#proceso">Proceso</a>
+        <a class="topbar__link" href="/clientes">Clientes</a>
+        <a class="topbar__link" href="/sobre-raven3">Nosotros</a>
+        <a class="topbar__link is-active" href="/blog/">Blog</a>
+        <a class="topbar__link" href="/contacto">Contacto</a>
+        <nav class="r3-lang-switcher r3-lang-switcher--nav r3-lang--es" aria-label="Cambiar idioma / Language selector">
+          <span class="r3-lang-indicator" aria-hidden="true"></span>
+          <a class="r3-lang-option" href="/blog/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+          <a class="r3-lang-option" href="/en/blog/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+        </nav>
+      </nav>
+      <div class="topbar-sys" aria-hidden="true"><span class="topbar-sys-dot"></span>SYS NOMINAL</div>
+      <nav class="r3-lang-switcher r3-lang-switcher--bar r3-lang--es" aria-label="Cambiar idioma / Language selector">
+        <span class="r3-lang-indicator" aria-hidden="true"></span>
+        <a class="r3-lang-option" href="/blog/" hreflang="es" lang="es" aria-label="Versión en español">ES</a>
+        <a class="r3-lang-option" href="/en/blog/" hreflang="en" lang="en" aria-label="Switch to English">EN</a>
+      </nav>
+      <a class="btn primary cta-desktop" href="/auditoria-web-gratuita">Auditoría gratuita</a>
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- MASTHEAD -->
+    <section class="blog-masthead" aria-label="Blog de Raven3">
+      <div class="masthead-inner">
+        <p class="masthead-sys">SYS.BLOG // EDITORIAL // RAVEN3</p>
+        <h1 class="masthead-title">INSIGHTS<br><span class="hollow">TÉCNICOS</span><br><em>SIN FILTRO.</em></h1>
+        <div class="masthead-meta">
+          <p class="masthead-tagline">Performance web, SEO de fondo, arquitectura digital y e-commerce. Todo lo que nadie te explica, escrito por quienes lo implementan.</p>
+          <div class="masthead-stats" id="masthead-stats">
+            <div class="blog-stat"><div class="blog-stat__num" id="stat-total">—</div><div class="blog-stat__label">Artículos</div></div>
+            <div class="blog-stat"><div class="blog-stat__num" id="stat-cats">—</div><div class="blog-stat__label">Categorías</div></div>
+            <div class="blog-stat"><div class="blog-stat__num">8K</div><div class="blog-stat__label">Lectores / mes</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FILTERS -->
+    <div class="blog-filters" role="navigation" aria-label="Filtrar por categoría">
+      <div class="filters-inner" id="filters-inner"></div>
+    </div>
+
+    <!-- BODY -->
+    <div class="blog-body">
+      <!-- Featured -->
+      <section class="featured-wrap reveal" id="featured-section">
+        <p class="featured-lbl">SYS.01 // Artículo destacado</p>
+        <div id="featured-card-container"></div>
+      </section>
+
+      <!-- Grid -->
+      <p class="section-lbl reveal" id="grid-label">SYS.02 // Últimos artículos</p>
+      <div class="e-grid" id="posts-grid"></div>
+
+      <div class="load-more-row reveal" id="load-more-row" style="display:none">
+        <button class="btn-load-more" id="load-more-btn" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="12" height="12"><polyline points="6 9 12 15 18 9"/></svg>
+          Cargar más artículos
+          <span id="remaining-count" class="meta-text"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Fallback estático para rastreadores sin JavaScript (Google primera pasada, bots, accesibilidad) -->
+    <noscript>
+    <section style="max-width:1280px;margin:0 auto;padding:56px 32px 80px;border-top:1px solid rgba(0,229,200,0.14)">
+      <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(22px,3vw,32px);font-weight:600;color:#fff;margin-bottom:16px">Sobre el blog de Raven3</h2>
+      <p style="font-size:15px;line-height:1.75;color:rgba(160,190,215,0.85);max-width:760px;margin-bottom:16px">
+        En Raven3 escribimos sobre lo que realmente importa en el desarrollo web profesional: performance web medible, SEO técnico de fondo, arquitectura de e-commerce y experiencia de usuario con impacto en conversión. No publicamos contenido de relleno — cada artículo está respaldado por implementaciones reales con clientes en Argentina y Latinoamérica.
+      </p>
+      <p style="font-size:15px;line-height:1.75;color:rgba(160,190,215,0.85);max-width:760px;margin-bottom:16px">
+        Cubrimos temas como Core Web Vitals, optimización de Lighthouse, estrategias de link building técnico, arquitecturas headless, tiendas WooCommerce y Shopify de alta conversión, y diseño de interfaces orientadas a resultados. Si trabajás en marketing digital, desarrollo web o tenés un negocio online en Argentina, este blog está escrito para vos.
+      </p>
+      <p style="font-size:15px;line-height:1.75;color:rgba(160,190,215,0.85);max-width:760px;margin-bottom:40px">
+        Cada artículo es producido por el equipo técnico de Raven3, la agencia de desarrollo web y SEO técnico con base en Buenos Aires. Publicamos de forma regular sobre las herramientas, metodologías y casos de estudio que usamos con nuestros clientes.
+      </p>
+      <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:600;color:#fff;margin-bottom:24px">Todos los artículos</h2>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px">
+        <li><a href="post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida"><span>E-Commerce · 5 jun 2026</span> — <strong>Shopify vs WooCommerce vs desarrollo a medida: cuál elegir para tu tienda online</strong></a></li>
+        <li><a href="post.html?slug=geo-generative-engine-optimization-argentina"><span>SEO Técnico · 15 may 2026</span> — <strong>GEO: qué es el Generative Engine Optimization y cómo aplicarlo en Argentina</strong></a></li>
+        <li><a href="post.html?slug=como-mejorar-seo-pagina-web"><span>SEO Técnico · 10 abr 2026</span> — <strong>Cómo mejorar el SEO de mi página web: guía completa</strong></a></li>
+        <li><a href="post.html?slug=tendencias-desarrollo-web-2026"><span>Desarrollo Web · 12 mar 2026</span> — <strong>Tendencias de desarrollo web en 2026: qué está cambiando y cómo prepararse</strong></a></li>
+        <li><a href="post.html?slug=design-systems-proyectos-web"><span>UX / CRO · 8 ene 2026</span> — <strong>Design systems para proyectos web: cuándo implementarlos y por dónde empezar</strong></a></li>
+        <li><a href="post.html?slug=email-marketing-ecommerce-estrategia"><span>E-Commerce · 16 oct 2025</span> — <strong>Email marketing para e-commerce: la estrategia que genera ventas mientras dormís</strong></a></li>
+        <li><a href="post.html?slug=ia-seo-google-2025"><span>SEO Técnico · 21 ago 2025</span> — <strong>IA y SEO en 2025: cómo los AI Overviews de Google cambian el juego</strong></a></li>
+        <li><a href="post.html?slug=monitoreo-performance-produccion"><span>Performance · 19 jun 2025</span> — <strong>Cómo monitorear la performance de tu sitio en producción: métricas y herramientas</strong></a></li>
+        <li><a href="post.html?slug=apis-rest-javascript-frontend"><span>Desarrollo Web · 10 abr 2025</span> — <strong>Consumir APIs REST desde el frontend: guía práctica con JavaScript moderno</strong></a></li>
+        <li><a href="post.html?slug=psicologia-color-diseno-web"><span>UX / CRO · 13 feb 2025</span> — <strong>Psicología del color en diseño web: qué transmite cada color y cómo usarlo en tu marca</strong></a></li>
+        <li><a href="post.html?slug=tienda-online-hot-sale-black-friday"><span>E-Commerce · 5 dic 2024</span> — <strong>Hot Sale y Black Friday: cómo preparar tu tienda online para las fechas de mayor venta</strong></a></li>
+        <li><a href="post.html?slug=google-search-console-como-usarlo"><span>SEO Técnico · 3 oct 2024</span> — <strong>Google Search Console: cómo leer los datos y tomar decisiones de SEO</strong></a></li>
+        <li><a href="post.html?slug=optimizacion-imagenes-webp-avif-2024"><span>Performance · 15 ago 2024</span> — <strong>Imágenes web en 2024: WebP, AVIF y las técnicas que reducen el peso a la mitad</strong></a></li>
+        <li><a href="post.html?slug=html-semantico-accesibilidad-web"><span>Desarrollo Web · 27 jun 2024</span> — <strong>HTML semántico y accesibilidad: el código que Google y tus usuarios agradecen</strong></a></li>
+        <li><a href="post.html?slug=formularios-web-que-convierten"><span>UX / CRO · 18 abr 2024</span> — <strong>Formularios web que convierten: principios de UX y errores que cuestan leads</strong></a></li>
+        <li><a href="post.html?slug=abandono-carrito-ecommerce-como-recuperarlo"><span>E-Commerce · 8 feb 2024</span> — <strong>Abandono de carrito en e-commerce: causas reales y cómo recuperar esas ventas</strong></a></li>
+        <li><a href="post.html?slug=seo-local-argentina-guia-2024"><span>SEO Técnico · 14 dic 2023</span> — <strong>SEO local en Argentina: cómo aparecer en Google Maps y capturar búsquedas de tu zona</strong></a></li>
+        <li><a href="post.html?slug=core-web-vitals-2024-guia-practica"><span>Performance · 5 oct 2023</span> — <strong>Core Web Vitals en 2024: qué mide Google y cómo mejorar tu puntaje</strong></a></li>
+        <li><a href="post.html?slug=cea-american-conversion-logistica-b2b"><span>UX / CRO · 13 jul 2023</span> — <strong>Diseño B2B para logística: cómo una web puede generar más confianza comercial</strong></a></li>
+        <li><a href="post.html?slug=cea-american-cadena-frio-web-corporativa"><span>Desarrollo Web · 22 jun 2023</span> — <strong>CEA American: cómo diseñamos una web corporativa para una empresa de cadena de frío</strong></a></li>
+        <li><a href="post.html?slug=storytelling-visual-web-literaria"><span>UX / CRO · 6 may 2021</span> — <strong>Storytelling visual aplicado a una web literaria: aprendizajes del proyecto Etienne de Montebello</strong></a></li>
+        <li><a href="post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva"><span>Desarrollo Web · 15 abr 2021</span> — <strong>Etienne de Montebello: una experiencia editorial interactiva para una obra literaria premium</strong></a></li>
+        <li><a href="post.html?slug=seo-tecnico-web-corporativa-lassen"><span>SEO Técnico · 26 sep 2019</span> — <strong>SEO técnico en webs corporativas: lo que aplicamos en proyectos como Lassen Pharma</strong></a></li>
+        <li><a href="post.html?slug=lassen-pharma-web-corporativa-seo-tecnico"><span>SEO Técnico · 5 sep 2019</span> — <strong>Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base</strong></a></li>
+        <li><a href="post.html?slug=ux-inmobiliaria-filtros-propiedades"><span>UX / CRO · 13 dic 2018</span> — <strong>UX inmobiliaria: cómo diseñar filtros de propiedades que realmente ayudan al usuario</strong></a></li>
+        <li><a href="post.html?slug=ndb-propiedades-integracion-tokko-broker"><span>Desarrollo Web · 22 nov 2018</span> — <strong>NDB Propiedades: una plataforma inmobiliaria integrada con Tokko Broker</strong></a></li>
+        <li><a href="post.html?slug=catalogo-digital-productos-performance"><span>Performance · 9 mar 2017</span> — <strong>Catálogos digitales performantes: por qué BEFORCE no necesitaba una web pesada</strong></a></li>
+        <li><a href="post.html?slug=beforce-catalogo-digital-identidad-visual"><span>Desarrollo Web · 16 feb 2017</span> — <strong>BEFORCE: catálogo digital con identidad visual sólida y experiencia comercial clara</strong></a></li>
+        <li><a href="post.html?slug=ecommerce-con-comunidad-sgm"><span>E-Commerce · 29 oct 2015</span> — <strong>E-commerce con comunidad: lo que aprendimos desarrollando SGM+</strong></a></li>
+        <li><a href="post.html?slug=sgm-sitio-institucional-ecommerce-comunidad"><span>E-Commerce · 8 oct 2015</span> — <strong>SGM+: sitio institucional con e-commerce para potenciar comunidad e inscripciones</strong></a></li>
+        <li><a href="post.html?slug=minimalismo-web-performance-okos"><span>Performance · 10 abr 2014</span> — <strong>Minimalismo web y performance: por qué menos interfaz puede convertir mejor</strong></a></li>
+        <li><a href="post.html?slug=okos-sitio-institucional-minimalista"><span>Desarrollo Web · 20 mar 2014</span> — <strong>OKOS: sitio institucional minimalista con foco en claridad, velocidad e identidad</strong></a></li>
+        <li><a href="post.html?slug=tienda-nube-ux-conversion-knots"><span>E-Commerce · 6 jun 2013</span> — <strong>UX en Tienda Nube: pequeñas decisiones que pueden mejorar la conversión</strong></a></li>
+        <li><a href="post.html?slug=knots-ecommerce-tienda-nube-ux-producto"><span>E-Commerce · 14 may 2013</span> — <strong>Knots: optimización de e-commerce en Tienda Nube con foco en UX de compra</strong></a></li>
+        <li><a href="post.html?slug=estructura-seo-servicios-art1"><span>SEO Técnico · 6 sep 2012</span> — <strong>Cómo estructurar una web de servicios gráficos para posicionar mejor: el caso ART1</strong></a></li>
+        <li><a href="post.html?slug=art1-web-corporativa-seo-accesibilidad"><span>SEO Técnico · 14 ago 2012</span> — <strong>ART1: web corporativa con estructura SEO, accesibilidad y rendimiento optimizado</strong></a></li>
+      </ul>
+    </section>
+    </noscript>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer" aria-label="Pie de página">
+    <div class="container">
+      <div class="footer-newsletter">
+        <div class="footer-newsletter__copy">
+          <span class="footer-newsletter__label">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            NEWSLETTER
+          </span>
+          <p class="footer-newsletter__tagline">Web Performance Insights — solo contenido técnico de alto valor.</p>
+        </div>
+        <form id="newsletter-form" class="footer-newsletter__form" novalidate>
+          <div class="footer-newsletter__field">
+            <input id="newsletter-email" type="email" name="email" placeholder="tu@email.com" autocomplete="email" aria-label="Email para newsletter" required />
+            <button type="submit" id="newsletter-btn">Suscribirme <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+          </div>
+          <p class="footer-newsletter__msg" id="newsletter-msg" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="https://raven3.com.ar/" style="display:inline-block;margin-bottom:16px"><span class="footer-wordmark">RAVEN3<span class="footer-dot">.</span></span></a>
+          <p>Agencia digital especializada en desarrollo web, e-commerce y SEO técnico. Sin templates. Resultados reales.</p>
+          <div class="cta-row"><a class="btn primary" href="mailto:hola@raven3.com.ar">Escribinos</a><a class="btn" href="https://wa.me/5491150196519" target="_blank" rel="noopener nofollow">WhatsApp</a></div>
+        </div>
+        <div class="footer-col">
+          <h3>Servicios</h3>
+          <ul class="footer-links">
+            <li><a href="/servicios/desarrollo-web-a-medida">Desarrollo web</a></li>
+            <li><a href="/servicios/tiendas-online">Tiendas online</a></li>
+            <li><a href="/servicios/seo-tecnico">SEO técnico</a></li>
+            <li><a href="/webs-por-rubro">Webs por rubro</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contacto</h3>
+          <ul class="footer-contact-list">
+            <li><a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></li>
+            <li><a href="https://wa.me/5491150196519" target="_blank" rel="noopener nofollow">+54 9 11 5019-6519</a></li>
+            <li>Buenos Aires, Argentina</li>
+          </ul>
+          <h3 style="margin-top:24px">Empresa</h3>
+          <ul class="footer-links"><li><a href="/sobre-raven3">Sobre Raven3</a></li><li><a href="/clientes">Clientes</a></li><li><a href="/blog/">Blog</a></li></ul>
+        </div>
+      </div>
+      <div class="footer-bottom small">
+        <span><span id="year"></span> © Raven3. Todos los derechos reservados. <span class="footer-legal">· <a href="/politica-de-privacidad.html">Política de privacidad</a> · <a href="/terminos-de-contratacion.html">Términos</a> · <a href="/raven3-brand-guidelines.html">Brand Guidelines</a></span></span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/agencia.raven3/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 1.8A3.96 3.96 0 0 0 3.8 7.75v8.5a3.96 3.96 0 0 0 3.95 3.95h8.5a3.96 3.96 0 0 0 3.95-3.95v-8.5a3.96 3.96 0 0 0-3.95-3.95h-8.5ZM12 7.1A4.9 4.9 0 1 1 12 16.9 4.9 4.9 0 0 1 12 7.1Zm0 1.8A3.1 3.1 0 1 0 12 15.1 3.1 3.1 0 0 0 12 8.9Zm5.15-2.45a1.15 1.15 0 1 1 0 2.3 1.15 1.15 0 0 1 0-2.3Z"/></svg></a>
+          <a href="https://github.com/raven3-agency/" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2Z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/newsletter.js" defer></script>
+  <script src="../assets/js/redesign.js" defer></script>
+  <script src="../assets/js/lang-switcher.js" defer></script>
+  <script>
+    // Topbar scroll
+    const topbar = document.querySelector('.topbar');
+    if (topbar) window.addEventListener('scroll', () => topbar.classList.toggle('scrolled', window.scrollY > 20), { passive: true });
+  </script>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // ── CONFIG ──────────────────────────────────────
+    const POSTS_PER_PAGE = 6;
+
+    // ── THUMB CONTENT (imagen real o CSS fallback) ───
+    function thumbContent(post, iconSize) {
+      if (post.imageUrl) {
+        return `<img src="${post.imageUrl}" alt="${post.title}" loading="lazy" decoding="async">`;
+      }
+      return `<div class="thumb-art ${post.thumbClass}">${thumbIcon(post.category, iconSize)}</div>`;
+    }
+
+    // ── THUMB ICONS ──────────────────────────────────
+    function thumbIcon(category, size = 80) {
+      const s = size;
+      const icons = {
+        seo: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>`,
+        performance: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(245,158,11,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>`,
+        desarrollo: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(129,140,248,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>`,
+        ecommerce: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(52,211,153,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>`,
+        ux: `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="rgba(244,114,182,0.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`,
+      };
+      return `<span class="thumb-icon">${icons[category] || icons.desarrollo}</span>`;
+    }
+    const TAG_CLASSES = { seo:'tag', performance:'tag tag--perf', desarrollo:'tag tag--dev', ecommerce:'tag tag--ecomm', ux:'tag tag--ux' };
+
+    function tagClass(cat) { return TAG_CLASSES[cat] || 'tag'; }
+    function tagLabel(cat) {
+      const map = { seo:'SEO Técnico', performance:'Performance', desarrollo:'Desarrollo', ecommerce:'E-Commerce', ux:'UX / CRO' };
+      return map[cat] || cat;
+    }
+    function formatDate(iso) {
+      const d = new Date(iso + 'T00:00:00');
+      return d.toLocaleDateString('es-AR', { day:'numeric', month:'short', year:'numeric' });
+    }
+
+    // ── STATE ────────────────────────────────────────
+    let allPosts = [];
+    let filtered = [];
+    let visibleCount = POSTS_PER_PAGE;
+    let activeFilter = 'all';
+    let randomFeaturedPost = null;
+
+    // ── FETCH ────────────────────────────────────────
+    async function loadPosts() {
+      try {
+        const res = await fetch('./data/posts.json');
+        const data = await res.json();
+        allPosts = Array.isArray(data) ? data : data.posts;
+        randomFeaturedPost = allPosts[Math.floor(Math.random() * allPosts.length)] || null;
+        buildFilters();
+        renderAll();
+      } catch(e) {
+        console.error('Error cargando posts:', e);
+      }
+    }
+
+    // ── FILTERS ──────────────────────────────────────
+    const CAT_LABELS = {
+      all:         'Todos',
+      performance: 'Performance',
+      seo:         'SEO Técnico',
+      desarrollo:  'Desarrollo Web',
+      ecommerce:   'E-Commerce',
+      ux:          'UX / CRO'
+    };
+    const CAT_ORDER = ['all', 'desarrollo', 'seo', 'ecommerce', 'ux', 'performance'];
+
+    function buildFilters() {
+      const container = document.getElementById('filters-inner');
+
+      // Count posts per category from the actual data
+      const countMap = {};
+      allPosts.forEach(p => { countMap[p.category] = (countMap[p.category] || 0) + 1; });
+
+      CAT_ORDER.forEach(id => {
+        const count = id === 'all' ? allPosts.length : (countMap[id] || 0);
+        if (count === 0) return; // hide categories with no posts
+        const btn = document.createElement('button');
+        btn.className = 'filter-tab' + (id === 'all' ? ' active' : '');
+        btn.dataset.filter = id;
+        btn.innerHTML = `${CAT_LABELS[id] || id} <span class="filter-count">${count}</span>`;
+        btn.addEventListener('click', () => setFilter(id));
+        container.appendChild(btn);
+      });
+
+      document.getElementById('stat-total').textContent = allPosts.length;
+      document.getElementById('stat-cats').textContent = Object.keys(countMap).length;
+    }
+
+    function setFilter(id) {
+      activeFilter = id;
+      visibleCount = POSTS_PER_PAGE;
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.toggle('active', t.dataset.filter === id));
+      renderAll();
+    }
+
+    // ── RENDER ALL ───────────────────────────────────
+    function renderAll() {
+      filtered = activeFilter === 'all'
+        ? [...allPosts]
+        : allPosts.filter(p => p.category === activeFilter);
+
+      // Sort newest first
+      filtered.sort((a, b) => b.date.localeCompare(a.date));
+
+      renderFeatured();
+      renderGrid();
+      updateLoadMore();
+    }
+
+    // Helper: returns the post being shown in the featured slot
+    // (a random post chosen once per page load, kept stable across filter changes)
+    function getFeaturedPost() {
+      return randomFeaturedPost && filtered.includes(randomFeaturedPost)
+        ? randomFeaturedPost
+        : filtered[0] || null;
+    }
+
+    // ── FEATURED ─────────────────────────────────────
+    function renderFeatured() {
+      const container = document.getElementById('featured-card-container');
+      const section = document.getElementById('featured-section');
+      const post = getFeaturedPost();
+
+      if (!post) { container.innerHTML = ''; section.style.display = 'none'; return; }
+      section.style.display = '';
+
+      const heights = [35,58,44,72,55,88,66,42,78,95,82,60];
+      const bars = heights.map(h => `<div class="chart-bar" style="height:${h}%"></div>`).join('');
+
+      container.innerHTML = `
+        <a class="featured-card" href="post.html?slug=${post.slug}" aria-label="Leer: ${post.title}">
+          <div class="fc-visual">
+            ${post.imageUrl
+              ? `<img src="${post.imageUrl}" alt="${post.title}" loading="eager" decoding="async" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.55">`
+              : `<div class="fc-visual-bg ${post.thumbClass || ''}"></div>`
+            }
+            <div class="fc-badge"><span class="fc-badge-dot"></span>Destacado</div>
+            ${!post.imageUrl ? `<span class="thumb-icon" style="opacity:0.28">${(thumbIcon(post.category, 120)).replace('<span class="thumb-icon">','').replace('</span>','')}</span>` : ''}
+            <svg class="fc-glyph" viewBox="0 0 200 200" aria-hidden="true">
+              <circle cx="100" cy="100" r="80" stroke-dasharray="4 8"/>
+              <circle cx="100" cy="100" r="55" stroke-dasharray="2 6"/>
+              <circle cx="100" cy="100" r="30" stroke-dasharray="6 12"/>
+              <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(0,229,200,0.3)" stroke-width="0.5"/>
+              <line x1="100" y1="20" x2="100" y2="180" stroke="rgba(0,229,200,0.3)" stroke-width="0.5"/>
+              <circle cx="100" cy="100" r="4" fill="rgba(0,229,200,0.5)"/>
+            </svg>
+            <div class="fc-chart" aria-hidden="true">${bars}</div>
+          </div>
+          <div class="fc-content">
+            <div>
+              <div class="fc-meta">
+                <span class="${tagClass(post.category)}">${tagLabel(post.category)}</span>
+                <span class="meta-sep" aria-hidden="true"></span>
+                <span class="meta-text">${post.readTime} min de lectura</span>
+                <span class="meta-sep" aria-hidden="true"></span>
+                <span class="meta-text">${post.dateFormatted}</span>
+              </div>
+              <h2 class="fc-title">${post.title}</h2>
+              <p class="fc-excerpt">${post.excerpt}</p>
+            </div>
+            <div class="fc-footer">
+              <div class="author-chip">
+                <div class="author-avatar" aria-hidden="true">${post.author.initials}</div>
+                <div><div class="author-name">${post.author.name}</div><div class="author-role">${post.author.role}</div></div>
+              </div>
+              <span class="read-arrow">Leer artículo<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span>
+            </div>
+          </div>
+        </a>`;
+    }
+
+    // ── GRID ─────────────────────────────────────────
+    function renderGrid() {
+      const grid = document.getElementById('posts-grid');
+      // Always exclude whichever post is in the featured slot
+      const featuredPost = getFeaturedPost();
+      const nonFeatured = filtered.filter(p => p !== featuredPost);
+      const toShow = nonFeatured.slice(0, visibleCount);
+
+      if (!toShow.length) {
+        grid.innerHTML = '<div class="no-posts c12"><p>No hay artículos en esta categoría todavía.</p></div>';
+        return;
+      }
+
+      // Layout pattern: wide+narrow, 3col, horiz+horiz+trending, newsletter, 3compact
+      let html = '';
+      const total = toShow.length;
+
+      toShow.forEach((post, i) => {
+        const num = String(i + 1).padStart(2, '0');
+        const tc = tagClass(post.category);
+        const tl = tagLabel(post.category);
+
+        // Decide layout slot
+        if (i === 0) {
+          // Wide card
+          html += `
+          <a class="post-card c8 reveal d1" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb">${thumbContent(post, 80)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="10" height="10"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else if (i === 1) {
+          // Narrow card (completes 8+4 row)
+          html += `
+          <a class="post-card c4 reveal d2" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb pc-thumb--tall">${thumbContent(post, 70)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else if (i >= 2 && i <= 4) {
+          // 3-column row
+          const delay = ['d1','d2','d3'][i-2];
+          html += `
+          <a class="post-card c4 reveal ${delay}" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb">${thumbContent(post, 64)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else if (i === 5) {
+          // Newsletter inline break
+          html += `
+          <div class="inline-nl c12 reveal">
+            <div><p class="nl-eyebrow">SYS.NEWS // Suscribite</p><h3 class="nl-headline">Performance Insights, <em style="font-style:italic;color:var(--ba)">sin relleno.</em></h3><p class="nl-sub">Un artículo técnico por semana. Sin spam.</p></div>
+            <form class="nl-form" novalidate>
+              <input type="email" placeholder="tu@email.com" class="nl-input" autocomplete="email" aria-label="Email" />
+              <button type="submit" class="nl-btn">Suscribirme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="12" height="12"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
+            </form>
+          </div>
+          <a class="post-card c8 pc--horiz reveal d1" href="post.html?slug=${post.slug}" style="align-self:start">
+            <div class="pc-thumb" style="width:220px;flex-shrink:0;aspect-ratio:unset">${thumbContent(post, 56)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span><span class="meta-sep"></span><span class="meta-text">${post.readTime} min</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        } else {
+          // Compact
+          const delay = ['d1','d2','d3','d4'][i % 4];
+          html += `
+          <a class="post-card c4 pc--compact reveal ${delay}" href="post.html?slug=${post.slug}">
+            <div class="pc-thumb pc-thumb--short">${thumbContent(post, 48)}<div class="thumb-num" aria-hidden="true">${num}</div></div>
+            <div class="pc-body">
+              <div class="pc-meta"><span class="${tc}">${tl}</span></div>
+              <h2 class="pc-title">${post.title}</h2>
+              <p class="pc-excerpt">${post.excerpt}</p>
+              <div class="pc-footer"><span class="post-date">${post.dateFormatted}</span><span class="read-time">${post.readTime} min</span></div>
+            </div>
+          </a>`;
+        }
+      });
+
+      // Trending sidebar (after first batch)
+      if (total >= 5) {
+        const trending = allPosts.slice(0, 5);
+        const trendItems = trending.map((p,i) => `
+          <a class="trending-item" href="post.html?slug=${p.slug}">
+            <span class="trend-num" aria-hidden="true">${String(i+1).padStart(2,'0')}</span>
+            <div><p class="trend-title">${p.title}</p>
+            <div class="trend-meta"><span class="${tagClass(p.category)}" style="font-size:7px;padding:2px 6px">${tagLabel(p.category)}</span><span>${p.readTime} min</span></div></div>
+          </a>`).join('');
+
+        // Insert trending after the first 8 items in the html if we have a slot
+        html += `
+        <aside class="trending-panel c4 reveal d2" aria-label="Más leídos">
+          <div class="trending-head"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="rgba(0,229,200,0.55)" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg><span class="trending-head-label">Más leídos</span></div>
+          ${trendItems}
+        </aside>`;
+      }
+
+      grid.innerHTML = html;
+
+      // Re-observe new reveal elements
+      grid.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
+
+    // ── LOAD MORE ────────────────────────────────────
+    function updateLoadMore() {
+      const featuredPost = getFeaturedPost();
+      const nonFeatured = filtered.filter(p => p !== featuredPost);
+      const remaining = nonFeatured.length - visibleCount;
+      const row = document.getElementById('load-more-row');
+      row.style.display = remaining > 0 ? 'flex' : 'none';
+      document.getElementById('remaining-count').textContent = remaining > 0 ? `(${remaining} restantes)` : '';
+    }
+
+    document.getElementById('load-more-btn').addEventListener('click', () => {
+      visibleCount += POSTS_PER_PAGE;
+      renderGrid();
+      updateLoadMore();
+    });
+
+    // ── SCROLL REVEAL ────────────────────────────────
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in-view'); observer.unobserve(e.target); }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── BOOT ─────────────────────────────────────────
+    loadPosts();
+  </script>
+
+</body>
+</html>

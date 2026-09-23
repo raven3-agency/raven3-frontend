@@ -1,0 +1,71 @@
+/* ── Reveal-on-click: tarjetas de texto en páginas de /servicios/ ──
+   Aplica a beneficios, proceso, "por qué Raven3", tipos de proyecto,
+   qué incluye/auditoría y FAQ. El título queda visible, la descripción
+   se revela al tocar la tarjeta (ícono + que rota a ×). */
+
+.rvl-item {
+  cursor: pointer;
+}
+
+.rvl-item h3 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.rvl-title-text {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.rvl-icon {
+  position: relative;
+  flex: 0 0 auto;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  border-radius: 999px;
+  border: 1px solid rgba(55, 226, 213, 0.35);
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.rvl-icon::before,
+.rvl-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: var(--accent, #37e2d5);
+  transform: translate(-50%, -50%);
+}
+
+.rvl-icon::before {
+  width: 10px;
+  height: 2px;
+}
+
+.rvl-icon::after {
+  width: 2px;
+  height: 10px;
+}
+
+.rvl-item.is-open .rvl-icon {
+  transform: rotate(45deg);
+  border-color: var(--accent, #37e2d5);
+  background: rgba(55, 226, 213, 0.14);
+}
+
+.rvl-body {
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.rvl-item:focus-visible {
+  outline: 2px solid var(--accent, #37e2d5);
+  outline-offset: 4px;
+  border-radius: var(--radius-lg, 22px);
+}

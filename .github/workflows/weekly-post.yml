@@ -1,0 +1,39 @@
+name: 📝 Generador de Post Semanal
+
+on:
+  schedule:
+    - cron: '0 10 1,15 * *'   # El 1 y el 15 de cada mes a las 10am UTC (7am Argentina)
+  workflow_dispatch:         # También se puede ejecutar manualmente desde GitHub
+
+jobs:
+  generate-post:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install @google/generative-ai
+        working-directory: .github/scripts
+
+      - name: Generar nuevo post
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: node .github/scripts/generate-post.js
+
+      - name: Commit y push del nuevo post
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/data/posts.json
+          git diff --staged --quiet && echo "Sin cambios para commitear" || \
+            git commit -m "📝 Post semanal automático: $(date +'%Y-%m-%d')" && \
+            git push
