@@ -1283,6 +1283,16 @@
           border-color: rgba(55, 226, 213, 0.22);
         }
       }
+      .about-quote {
+        margin: 28px 0 0;
+        padding-left: 18px;
+        border-left: 2px solid var(--r3);
+        font-family: var(--font-heading, inherit);
+        font-size: clamp(20px, 2.2vw, 26px);
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .about-quote em { font-style: normal; color: var(--r3); }
     </style>
   </head>
 
@@ -1321,7 +1331,7 @@
           aria-label="Navegación principal"
         >
           <div class="topbar__dropdown"><a class="topbar__link topbar__link--parent" href="/#servicios">Servicios</a><div class="topbar__sub"><a class="topbar__sub-link" href="/servicios/desarrollo-web-a-medida"><span class="topbar__sub-num">01</span>Desarrollo web</a><a class="topbar__sub-link" href="/servicios/tiendas-online"><span class="topbar__sub-num">02</span>Tiendas online</a><a class="topbar__sub-link" href="/servicios/seo-tecnico"><span class="topbar__sub-num">03</span>SEO técnico</a></div></div>
-          <a class="topbar__link" href="/#proceso">Proceso</a>
+          <a class="topbar__link" href="/#proyectos">Proyectos</a>
           <a class="topbar__link" href="/clientes">Clientes</a>
           <a class="topbar__link is-active" href="/sobre-raven3">Nosotros</a>
           <a class="topbar__link" href="/blog/">Blog</a>
@@ -1375,6 +1385,8 @@
               con marcas que necesitan una presencia digital seria, rápida,
               diferenciada y preparada para rendir.
             </p>
+
+            <p class="about-quote">Tu web no es una vidriera.<br />Es tu mejor <em>vendedor digital</em>, 24/7.</p>
 
             <div class="about-hero__actions">
               <a class="btn primary" href="contacto"

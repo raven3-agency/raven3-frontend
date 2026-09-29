@@ -1283,6 +1283,16 @@
           border-color: rgba(55, 226, 213, 0.22);
         }
       }
+      .about-quote {
+        margin: 28px 0 0;
+        padding-left: 18px;
+        border-left: 2px solid var(--r3);
+        font-family: var(--font-heading, inherit);
+        font-size: clamp(20px, 2.2vw, 26px);
+        font-weight: 700;
+        line-height: 1.25;
+      }
+      .about-quote em { font-style: normal; color: var(--r3); }
     </style>
   </head>
 
@@ -1321,7 +1331,7 @@
           aria-label="Main navigation"
         >
           <div class="topbar__dropdown"><a class="topbar__link topbar__link--parent" href="/en/#servicios">Services</a><div class="topbar__sub"><a class="topbar__sub-link" href="/en/services/custom-web-development.html"><span class="topbar__sub-num">01</span>Web development</a><a class="topbar__sub-link" href="/en/services/online-stores.html"><span class="topbar__sub-num">02</span>Online stores</a><a class="topbar__sub-link" href="/en/services/technical-seo.html"><span class="topbar__sub-num">03</span>Technical SEO</a></div></div>
-          <a class="topbar__link" href="/en/#proceso">Process</a>
+          <a class="topbar__link" href="/en/#proyectos">Projects</a>
           <a class="topbar__link" href="/en/clients.html">Clients</a>
           <a class="topbar__link is-active" href="/en/about.html">About</a>
           <a class="topbar__link" href="/en/blog/">Blog</a>
@@ -1375,6 +1385,8 @@
               brands that need a serious, fast, differentiated digital
               presence built to perform.
             </p>
+
+            <p class="about-quote">Your website isn’t a shop window.<br />It’s your best <em>digital salesperson</em>, 24/7.</p>
 
             <div class="about-hero__actions">
               <a class="btn primary" href="/en/contact.html"
