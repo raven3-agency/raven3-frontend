@@ -1284,15 +1284,84 @@
         }
       }
       .about-quote {
-        margin: 28px 0 0;
-        padding-left: 18px;
-        border-left: 2px solid var(--r3);
+        margin: 18px 0 0;
+        padding: 18px 4px 0;
+        border-top: 1px solid rgba(55, 226, 213, 0.16);
         font-family: var(--font-heading, inherit);
-        font-size: clamp(20px, 2.2vw, 26px);
+        font-size: clamp(18px, 1.7vw, 22px);
         font-weight: 700;
-        line-height: 1.25;
+        line-height: 1.3;
+        color: var(--text-strong);
       }
       .about-quote em { font-style: normal; color: var(--r3); }
+      .about-hero__inner { align-items: center; }
+      @media (max-width: 760px) {
+        .about-hero .stat-grid { grid-template-columns: 1fr 1fr; }
+        .about-hero__panel { max-width: none; }
+      }
+
+      /* ── Expandable "why" items ── */
+      .why-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        align-items: start;
+      }
+      .why-item {
+        border-radius: 22px;
+        background: rgba(9, 17, 27, 0.88);
+        border: 1px solid rgba(55, 226, 213, 0.12);
+        transition: border-color 0.25s ease;
+      }
+      .why-item[open] { border-color: rgba(55, 226, 213, 0.35); }
+      .why-item summary {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 16px;
+        align-items: center;
+        padding: 20px 22px;
+        cursor: pointer;
+        list-style: none;
+      }
+      .why-item summary::-webkit-details-marker { display: none; }
+      .why-item summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 22px; }
+      .why-item__num { font-weight: 800; color: var(--accent); font-size: 0.95rem; }
+      .why-item h3 { margin: 0; font-size: 1.08rem; line-height: 1.25; }
+      .why-item__icon { width: 20px; height: 20px; color: var(--accent); transition: transform 0.3s ease; }
+      .why-item[open] .why-item__icon { transform: rotate(45deg); }
+      .why-item__body { padding: 0 22px 20px 22px; animation: aboutReveal 0.35s ease; }
+      .why-item__body p { margin: 0; color: var(--muted); line-height: 1.68; }
+
+      /* ── "Leer más" ── */
+      .read-more { margin-top: 8px; }
+      .read-more summary {
+        display: inline-flex;
+        cursor: pointer;
+        list-style: none;
+        color: var(--accent);
+        font-weight: 600;
+        border-bottom: 1px solid currentColor;
+      }
+      .read-more summary::-webkit-details-marker { display: none; }
+      .read-more__open::after { content: " +"; }
+      .read-more__close::after { content: " −"; }
+      .read-more__close, .read-more[open] .read-more__open { display: none; }
+      .read-more[open] .read-more__close { display: inline; }
+      .read-more__body { max-width: 760px; margin-top: 16px; animation: aboutReveal 0.35s ease; }
+      .read-more__body p { color: var(--muted); line-height: 1.72; }
+
+      .service-link-card h3 span { color: var(--accent); }
+
+      @keyframes aboutReveal {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .why-item__body, .read-more__body { animation: none; }
+      }
+      @media (max-width: 760px) {
+        .why-list { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
 
@@ -1377,21 +1446,11 @@
             </h1>
 
             <p class="about-lead">
-              <strong>Raven3</strong> es una agencia digital enfocada en
-              <strong>desarrollo web custom</strong>,
-              <strong>tiendas online</strong>, <strong>SEO técnico</strong>,
-              <strong>performance</strong> y
-              <strong>experiencias digitales de alto nivel</strong>. Trabajamos
-              con marcas que necesitan una presencia digital seria, rápida,
-              diferenciada y preparada para rendir.
+              Webs, tiendas online y SEO técnico para marcas que necesitan una presencia digital seria, rápida y preparada para rendir.
             </p>
 
-            <p class="about-quote">Tu web no es una vidriera.<br />Es tu mejor <em>vendedor digital</em>, 24/7.</p>
-
             <div class="about-hero__actions">
-              <a class="btn primary" href="contacto"
-                >Quiero cotizar mi proyecto</a
-              >
+              <a class="btn primary" href="contacto">Quiero cotizar mi proyecto</a>
               <a class="btn" href="/clientes">Ver proyectos</a>
             </div>
           </div>
@@ -1401,91 +1460,46 @@
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Enfoque</span>
                 <strong>Custom-first</strong>
-                <p>
-                  Arquitectura pensada para cada proyecto, sin depender de
-                  plantillas pesadas.
-                </p>
               </div>
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Especialidad</span>
                 <strong>Performance + SEO</strong>
-                <p>
-                  Velocidad, indexabilidad, accesibilidad y experiencia como
-                  base del trabajo.
-                </p>
               </div>
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Stack</span>
                 <strong>Frontend técnico</strong>
-                <p>
-                  HTML, CSS, JavaScript, integraciones API y soluciones a
-                  medida.
-                </p>
               </div>
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Objetivo</span>
                 <strong>Conversión real</strong>
-                <p>Diseño con intención comercial, no solo visual.</p>
               </div>
             </div>
+
+            <p class="about-quote">Tu web no es una vidriera.<br />Es tu mejor <em>vendedor digital</em>, 24/7.</p>
           </div>
         </div>
       </section>
 
-      <section class="about-section">
+      <section class="about-section about-section--compact">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Qué hacemos</p>
-            <h2 class="section-title">
-              Una agencia digital orientada a construir mejor
-            </h2>
-            <p class="section-subtitle">
-              En Raven3 combinamos diseño, desarrollo, estructura técnica y
-              visión comercial para construir productos digitales más rápidos,
-              más claros y mejor preparados para competir.
-            </p>
+            <h2 class="section-title">Dónde aportamos más valor</h2>
           </div>
 
-          <div class="about-grid">
-            <article class="about-card flow-card">
-              <div class="tag">Web a medida</div>
-              <h3>Desarrollo sin rigidez innecesaria</h3>
-              <p>
-                Creamos sitios web personalizados con una arquitectura
-                coherente, cuidando performance, responsive, accesibilidad y
-                claridad en la experiencia.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">E-commerce</div>
-              <h3>Tiendas pensadas para vender</h3>
-              <p>
-                Diseñamos y desarrollamos tiendas online con foco en recorrido
-                de usuario, catálogo, checkout, velocidad e integración con
-                herramientas clave del negocio.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">SEO técnico</div>
-              <h3>Optimización desde la base</h3>
-              <p>
-                Trabajamos Core Web Vitals, estructura semántica, indexabilidad,
-                metadatos, datos estructurados y señales técnicas que impactan
-                en visibilidad real.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">Integraciones</div>
-              <h3>Sitios conectados con el negocio</h3>
-              <p>
-                Integramos APIs, formularios, automatizaciones, catálogos,
-                analytics, tracking y herramientas externas para que la web no
-                quede aislada.
-              </p>
-            </article>
+          <div class="service-links">
+            <a class="service-link-card flow-card" href="/servicios/desarrollo-web-a-medida">
+              <h3>Desarrollo web a medida <span aria-hidden="true">→</span></h3>
+              <p>Sitios custom, rápidos y conectados con tu negocio.</p>
+            </a>
+            <a class="service-link-card flow-card" href="/servicios/tiendas-online">
+              <h3>Tiendas online <span aria-hidden="true">→</span></h3>
+              <p>E-commerce pensado para vender desde el día uno.</p>
+            </a>
+            <a class="service-link-card flow-card" href="/servicios/seo-tecnico">
+              <h3>SEO técnico <span aria-hidden="true">→</span></h3>
+              <p>Estructura y performance para que Google te encuentre.</p>
+            </a>
           </div>
         </div>
       </section>
@@ -1493,187 +1507,61 @@
       <section class="about-section">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Por qué elegir Raven3</p>
-            <h2 class="section-title">
-              No hacemos sitios para “cumplir”. Construimos activos digitales
-              que tienen que rendir.
-            </h2>
-            <p class="section-subtitle">
-              Elegir Raven3 es elegir una agencia que combina diseño,
-              desarrollo, performance y SEO técnico en una misma ejecución.
-            </p>
+            <p class="eyebrow">Por qué Raven3</p>
+            <h2 class="section-title">No hacemos “una web más”. La hacemos mejor.</h2>
+            <p class="section-subtitle">Tocá cada punto para ver el detalle.</p>
           </div>
 
-          <div class="about-grid">
-            <article class="about-card flow-card">
-              <div class="tag">01</div>
-              <h3>Desarrollo realmente a medida</h3>
-              <p>
-                Cada proyecto se piensa según el negocio, la marca y los
-                objetivos concretos. No forzamos el proyecto a una plantilla
-                prefabricada.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">02</div>
-              <h3>Performance como ventaja competitiva</h3>
-              <p>
-                Velocidad, claridad visual, carga optimizada y experiencia
-                fluida impactan directamente en percepción de marca, SEO y
-                conversión.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">03</div>
-              <h3>SEO técnico desde la base</h3>
-              <p>
-                No lo dejamos para el final. Estructura semántica,
-                indexabilidad, Core Web Vitals, metadata y datos estructurados
-                se trabajan desde el inicio.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">04</div>
-              <h3>Visión comercial, no solo visual</h3>
-              <p>
-                La web tiene que verse bien, pero también tiene que ordenar el
-                mensaje, generar confianza y ayudar a cerrar oportunidades
-                reales.
-              </p>
-            </article>
+          <div class="why-list">
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">01</span>
+                <h3>Desarrollo realmente a medida</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>Cada proyecto se piensa según el negocio, la marca y sus objetivos. No lo forzamos a una plantilla: menos plugins, menos fragilidad técnica y más control sobre la interfaz, la estructura y el resultado final.</p>
+              </div>
+            </details>
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">02</span>
+                <h3>Performance como estándar</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>Una web lenta pierde atención, confianza y conversiones. Velocidad, carga optimizada y una experiencia fluida impactan directo en la percepción de marca, el SEO y las ventas.</p>
+              </div>
+            </details>
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">03</span>
+                <h3>SEO técnico desde la base</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>No lo dejamos para el final. Estructura semántica, indexabilidad, Core Web Vitals, metadata y datos estructurados se trabajan desde la primera línea de código.</p>
+              </div>
+            </details>
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">04</span>
+                <h3>Visión comercial, no solo visual</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>La web tiene que verse bien, pero también ordenar el mensaje, generar confianza y ayudar a cerrar oportunidades. Un sitio custom transmite una identidad más sólida que una solución genérica reconocible.</p>
+              </div>
+            </details>
           </div>
         </div>
       </section>
 
-      <section class="about-section about-section--split">
-        <div class="container split-layout">
-          <div class="split-copy">
-            <p class="eyebrow">Quién está detrás</p>
-            <h2 class="section-title">
-              Raven3 está impulsada por una mirada hands-on, técnica y orientada
-              a producto.
-            </h2>
-            <p class="section-subtitle">
-              Detrás de Raven3 hay una forma de trabajar muy clara: menos humo,
-              más criterio, más ejecución y más atención al detalle.
-            </p>
-            <p>
-              La agencia nace desde una base real de desarrollo front-end,
-              arquitectura web, performance, integraciones y resolución técnica.
-              Eso permite tomar decisiones mejor fundamentadas y construir
-              sitios con una calidad muy superior al promedio.
-            </p>
-            <p>
-              Raven3 no se apoya en soluciones genéricas para acelerar entregas
-              a costa del resultado. Se apoya en conocimiento técnico, diseño
-              bien resuelto y una implementación cuidada para que cada proyecto
-              tenga identidad, solidez y proyección.
-            </p>
-          </div>
-
-          <div class="card-glow">
-            <div class="stat-grid">
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Base</span>
-                <strong>Desarrollo real</strong>
-                <p>
-                  Frontend, performance, integraciones, SEO técnico y
-                  arquitectura web.
-                </p>
-              </div>
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Foco</span>
-                <strong>Calidad de ejecución</strong>
-                <p>
-                  Detalles visuales, consistencia técnica y cero atajos de template.
-                </p>
-              </div>
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Estilo</span>
-                <strong>Hands-on</strong>
-                <p>
-                  Trabajo directo sobre el proyecto, sin capas innecesarias.
-                </p>
-              </div>
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Objetivo</span>
-                <strong>Resultados serios</strong>
-                <p>
-                  Construir presencia digital con impacto real en marca y
-                  negocio.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section">
-        <div class="container">
-          <div class="manifesto">
-            <div class="manifesto__copy">
-              <p class="eyebrow">Qué nos diferencia</p>
-              <h2 class="section-title">
-                No competimos por hacer “una web más”. Competimos por
-                construirla mejor.
-              </h2>
-              <p class="section-subtitle">
-                Muchas soluciones basadas en templates o builders permiten salir
-                rápido, pero suelen comprometer performance, escalabilidad,
-                control y diferenciación.
-              </p>
-            </div>
-
-            <div class="manifesto__list">
-              <div class="manifesto-item flow-card">
-                <strong>Menos dependencia de plugins</strong>
-                <p>
-                  Reducimos fragilidad técnica, conflictos, sobrecarga y
-                  mantenimiento innecesario.
-                </p>
-              </div>
-              <div class="manifesto-item flow-card">
-                <strong>Más control sobre el resultado final</strong>
-                <p>
-                  La interfaz, la estructura, la performance y la experiencia se
-                  ajustan al proyecto, no a las limitaciones de un template.
-                </p>
-              </div>
-              <div class="manifesto-item flow-card">
-                <strong>Mejor base para SEO y velocidad</strong>
-                <p>
-                  Un desarrollo más limpio permite optimizar carga, semántica,
-                  indexabilidad y señales técnicas con mucha más precisión.
-                </p>
-              </div>
-              <div class="manifesto-item flow-card">
-                <strong>Mayor percepción de marca</strong>
-                <p>
-                  Un sitio custom transmite una identidad más sólida, más
-                  cuidada y más profesional que una solución genérica
-                  reconocible.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section">
+      <section class="about-section about-section--compact">
         <div class="container">
           <div class="section-head">
             <p class="eyebrow">Comparativa</p>
-            <h2 class="section-title">
-              Template rápido vs desarrollo a medida
-            </h2>
-            <p class="section-subtitle">
-              No todas las soluciones digitales generan el mismo impacto. La
-              diferencia suele notarse en performance, control, percepción de
-              marca y capacidad de evolución.
-            </p>
+            <h2 class="section-title">Template rápido vs desarrollo a medida</h2>
           </div>
 
           <div class="compare-grid">
@@ -1681,11 +1569,10 @@
               <span class="tag">Opción genérica</span>
               <h3>Templates / builders</h3>
               <ul>
-                <li>Más limitaciones de diseño y estructura</li>
-                <li>Más dependencia de terceros y plugins</li>
-                <li>Menor control sobre performance</li>
-                <li>Menor diferenciación de marca</li>
-                <li>Escalabilidad más condicionada</li>
+                <li>Limitaciones de diseño y estructura</li>
+                <li>Dependencia de plugins</li>
+                <li>Poco control sobre performance</li>
+                <li>Poca diferenciación de marca</li>
               </ul>
             </article>
 
@@ -1694,10 +1581,9 @@
               <h3>Desarrollo a medida</h3>
               <ul>
                 <li>Arquitectura pensada para el proyecto</li>
-                <li>Más control técnico y visual</li>
-                <li>Mejor base para SEO técnico y Core Web Vitals</li>
-                <li>Mayor identidad de marca y coherencia visual</li>
-                <li>Más flexibilidad para crecer e integrar herramientas</li>
+                <li>Control técnico y visual total</li>
+                <li>Base sólida para SEO y Core Web Vitals</li>
+                <li>Identidad de marca propia</li>
               </ul>
             </article>
           </div>
@@ -1705,118 +1591,21 @@
       </section>
 
       <section class="about-section about-section--split">
-        <div class="container split-layout">
-          <div class="split-copy">
-            <p class="eyebrow">Nuestra forma de trabajar</p>
-            <h2 class="section-title">
-              No hacemos sitios genéricos para problemas específicos
-            </h2>
-            <p class="section-subtitle">
-              Cada proyecto tiene contexto, necesidades, limitaciones y
-              objetivos distintos. Por eso evitamos soluciones rígidas cuando
-              afectan performance, control, escalabilidad o percepción de marca.
-            </p>
-            <p>
-              Raven3 nace desde una mirada técnica y de producto: la web no se
-              piensa como una pieza aislada, sino como parte del sistema
-              comercial y operativo del cliente.
-            </p>
-            <p>
-              Eso implica trabajar con foco en estructura, velocidad, intención
-              comercial, legibilidad, posicionamiento y una identidad visual que
-              esté a la altura.
-            </p>
-          </div>
-
-          <div class="principles">
-            <article class="principle flow-card">
-              <span>01</span>
-              <div>
-                <h3>Performance como estándar</h3>
-                <p>Una web lenta pierde atención, confianza y conversiones.</p>
-              </div>
-            </article>
-
-            <article class="principle flow-card">
-              <span>02</span>
-              <div>
-                <h3>SEO técnico desde el inicio</h3>
-                <p>
-                  No como parche al final, sino como parte del diseño y la
-                  implementación.
-                </p>
-              </div>
-            </article>
-
-            <article class="principle flow-card">
-              <span>03</span>
-              <div>
-                <h3>Diseño con intención comercial</h3>
-                <p>
-                  La estética importa, pero siempre al servicio del mensaje y
-                  del negocio.
-                </p>
-              </div>
-            </article>
-
-            <article class="principle flow-card">
-              <span>04</span>
-              <div>
-                <h3>Soluciones a medida</h3>
-                <p>
-                  Elegimos la mejor estructura para cada caso, no la más cómoda
-                  por defecto.
-                </p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section about-section--compact">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Servicios principales</p>
-            <h2 class="section-title">Dónde aportamos más valor</h2>
+            <p class="eyebrow">Quién está detrás</p>
+            <h2 class="section-title">Una mirada hands-on, técnica y orientada a producto.</h2>
+            <p class="section-subtitle">Menos humo, más criterio, más ejecución y más atención al detalle.</p>
           </div>
 
-          <div class="service-links">
-            <a
-              class="service-link-card flow-card"
-              href="/servicios/desarrollo-web-a-medida"
-            >
-              <span class="tag">Servicio</span>
-              <h3>Desarrollo web a medida</h3>
-              <p>
-                Sitios custom con foco en UI, performance, arquitectura y
-                diferenciación real.
-              </p>
-            </a>
-
-            <a
-              class="service-link-card flow-card"
-              href="/servicios/tiendas-online"
-            >
-              <span class="tag">Servicio</span>
-              <h3>Tiendas online</h3>
-              <p>
-                E-commerce orientado a conversión, claridad operativa e
-                integración con el negocio.
-              </p>
-            </a>
-
-            <a
-              class="service-link-card flow-card"
-              href="/servicios/seo-tecnico"
-            >
-              <span class="tag">Servicio</span>
-              <h3>SEO técnico</h3>
-              <p>
-                Optimización de visibilidad, estructura técnica y performance
-                para crecer mejor.
-              </p>
-            </a>
-          </div>
+          <details class="read-more">
+            <summary><span class="read-more__open">Leer más</span><span class="read-more__close">Leer menos</span></summary>
+            <div class="read-more__body">
+              <p>La agencia nace desde una base real de desarrollo front-end, arquitectura web, performance, integraciones y resolución técnica. Eso permite tomar decisiones mejor fundamentadas y construir sitios con una calidad muy superior al promedio.</p>
+              <p>La web no se piensa como una pieza aislada, sino como parte del sistema comercial y operativo del cliente. Por eso trabajamos con foco en estructura, velocidad, intención comercial, legibilidad, posicionamiento y una identidad visual que esté a la altura.</p>
+              <p>Raven3 no se apoya en soluciones genéricas para acelerar entregas a costa del resultado: cada proyecto tiene que tener identidad, solidez y proyección.</p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -1825,29 +1614,13 @@
           <div class="cta-banner cta-banner--premium flow-card">
             <div>
               <p class="eyebrow">Sin atajos, sin templates</p>
-              <h2>
-                Si buscás una web genérica, Raven3 probablemente no sea para
-                vos.
-              </h2>
-              <p>
-                Si necesitás una presencia digital con mejor ejecución,
-                performance real, criterio técnico y una percepción de marca más
-                sólida, entonces sí vale la pena hablar.
-              </p>
-              <p>
-                Trabajamos con empresas, marcas y profesionales que entienden
-                que la web no es un gasto decorativo: es una herramienta de
-                posicionamiento, credibilidad y conversión.
-              </p>
+              <h2>Si buscás una web genérica, Raven3 probablemente no sea para vos.</h2>
+              <p>Si necesitás mejor ejecución, performance real y criterio técnico, hablemos.</p>
             </div>
 
             <div class="cta-banner__actions">
-              <a class="btn primary" href="contacto"
-                >Quiero una propuesta seria</a
-              >
-              <a class="btn" href="mailto:hola@raven3.com.ar"
-                >hola@raven3.com.ar</a
-              >
+              <a class="btn primary" href="contacto">Quiero una propuesta seria</a>
+              <a class="btn" href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>
             </div>
           </div>
         </div>

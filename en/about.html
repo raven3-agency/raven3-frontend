@@ -1284,15 +1284,84 @@
         }
       }
       .about-quote {
-        margin: 28px 0 0;
-        padding-left: 18px;
-        border-left: 2px solid var(--r3);
+        margin: 18px 0 0;
+        padding: 18px 4px 0;
+        border-top: 1px solid rgba(55, 226, 213, 0.16);
         font-family: var(--font-heading, inherit);
-        font-size: clamp(20px, 2.2vw, 26px);
+        font-size: clamp(18px, 1.7vw, 22px);
         font-weight: 700;
-        line-height: 1.25;
+        line-height: 1.3;
+        color: var(--text-strong);
       }
       .about-quote em { font-style: normal; color: var(--r3); }
+      .about-hero__inner { align-items: center; }
+      @media (max-width: 760px) {
+        .about-hero .stat-grid { grid-template-columns: 1fr 1fr; }
+        .about-hero__panel { max-width: none; }
+      }
+
+      /* ── Expandable "why" items ── */
+      .why-list {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        align-items: start;
+      }
+      .why-item {
+        border-radius: 22px;
+        background: rgba(9, 17, 27, 0.88);
+        border: 1px solid rgba(55, 226, 213, 0.12);
+        transition: border-color 0.25s ease;
+      }
+      .why-item[open] { border-color: rgba(55, 226, 213, 0.35); }
+      .why-item summary {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        gap: 16px;
+        align-items: center;
+        padding: 20px 22px;
+        cursor: pointer;
+        list-style: none;
+      }
+      .why-item summary::-webkit-details-marker { display: none; }
+      .why-item summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 22px; }
+      .why-item__num { font-weight: 800; color: var(--accent); font-size: 0.95rem; }
+      .why-item h3 { margin: 0; font-size: 1.08rem; line-height: 1.25; }
+      .why-item__icon { width: 20px; height: 20px; color: var(--accent); transition: transform 0.3s ease; }
+      .why-item[open] .why-item__icon { transform: rotate(45deg); }
+      .why-item__body { padding: 0 22px 20px 22px; animation: aboutReveal 0.35s ease; }
+      .why-item__body p { margin: 0; color: var(--muted); line-height: 1.68; }
+
+      /* ── "Leer más" ── */
+      .read-more { margin-top: 8px; }
+      .read-more summary {
+        display: inline-flex;
+        cursor: pointer;
+        list-style: none;
+        color: var(--accent);
+        font-weight: 600;
+        border-bottom: 1px solid currentColor;
+      }
+      .read-more summary::-webkit-details-marker { display: none; }
+      .read-more__open::after { content: " +"; }
+      .read-more__close::after { content: " −"; }
+      .read-more__close, .read-more[open] .read-more__open { display: none; }
+      .read-more[open] .read-more__close { display: inline; }
+      .read-more__body { max-width: 760px; margin-top: 16px; animation: aboutReveal 0.35s ease; }
+      .read-more__body p { color: var(--muted); line-height: 1.72; }
+
+      .service-link-card h3 span { color: var(--accent); }
+
+      @keyframes aboutReveal {
+        from { opacity: 0; transform: translateY(-6px); }
+        to { opacity: 1; transform: none; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .why-item__body, .read-more__body { animation: none; }
+      }
+      @media (max-width: 760px) {
+        .why-list { grid-template-columns: 1fr; }
+      }
     </style>
   </head>
 
@@ -1377,21 +1446,11 @@
             </h1>
 
             <p class="about-lead">
-              <strong>Raven3</strong> is a digital agency focused on
-              <strong>custom web development</strong>,
-              <strong>online stores</strong>, <strong>technical SEO</strong>,
-              <strong>performance</strong> and
-              <strong>high-end digital experiences</strong>. We work with
-              brands that need a serious, fast, differentiated digital
-              presence built to perform.
+              Websites, online stores and technical SEO for brands that need a serious, fast digital presence built to perform.
             </p>
 
-            <p class="about-quote">Your website isn’t a shop window.<br />It’s your best <em>digital salesperson</em>, 24/7.</p>
-
             <div class="about-hero__actions">
-              <a class="btn primary" href="/en/contact.html"
-                >Get a quote for my project</a
-              >
+              <a class="btn primary" href="/en/contact.html">Get a quote for my project</a>
               <a class="btn" href="/en/clients.html">See our work</a>
             </div>
           </div>
@@ -1401,380 +1460,22 @@
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Approach</span>
                 <strong>Custom-first</strong>
-                <p>
-                  An architecture built for each project — never a bloated
-                  template.
-                </p>
               </div>
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Specialty</span>
                 <strong>Performance + SEO</strong>
-                <p>
-                  Speed, indexability, accessibility and UX as the foundation
-                  of every build.
-                </p>
               </div>
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Stack</span>
                 <strong>Technical frontend</strong>
-                <p>
-                  HTML, CSS, JavaScript, API integrations and custom-built
-                  solutions.
-                </p>
               </div>
               <div class="stat-item flow-card">
                 <span class="stat-kicker">Goal</span>
                 <strong>Real conversion</strong>
-                <p>Design built with commercial intent, not just aesthetics.</p>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
 
-      <section class="about-section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">What we do</p>
-            <h2 class="section-title">
-              A digital agency built to construct better
-            </h2>
-            <p class="section-subtitle">
-              At Raven3 we combine design, development, technical structure
-              and business vision to build digital products that are faster,
-              clearer, and better equipped to compete.
-            </p>
-          </div>
-
-          <div class="about-grid">
-            <article class="about-card flow-card">
-              <div class="tag">Custom web</div>
-              <h3>Development without unnecessary rigidity</h3>
-              <p>
-                We build custom websites on a coherent architecture, with
-                careful attention to performance, responsiveness,
-                accessibility and clarity of experience.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">E-commerce</div>
-              <h3>Stores built to sell</h3>
-              <p>
-                We design and build online stores focused on user journey,
-                catalog structure, checkout flow, speed, and integration with
-                the tools your business already runs on.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">Technical SEO</div>
-              <h3>Optimization from the ground up</h3>
-              <p>
-                We work Core Web Vitals, semantic structure, indexability,
-                metadata, structured data and the technical signals that
-                actually move visibility.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">Integrations</div>
-              <h3>Sites connected to the business</h3>
-              <p>
-                We integrate APIs, forms, automations, catalogs, analytics,
-                tracking and external tools so the website is never an
-                isolated piece.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Why choose Raven3</p>
-            <h2 class="section-title">
-              We don't build websites to check a box. We build digital assets
-              that have to perform.
-            </h2>
-            <p class="section-subtitle">
-              Choosing Raven3 means choosing an agency that combines design,
-              development, performance and technical SEO in a single
-              execution.
-            </p>
-          </div>
-
-          <div class="about-grid">
-            <article class="about-card flow-card">
-              <div class="tag">01</div>
-              <h3>Genuinely custom development</h3>
-              <p>
-                Every project is designed around the business, the brand and
-                concrete goals. We never force a project into a prefab
-                template.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">02</div>
-              <h3>Performance as a competitive edge</h3>
-              <p>
-                Speed, visual clarity, optimized loading and a fluid
-                experience directly shape brand perception, SEO and
-                conversion.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">03</div>
-              <h3>Technical SEO from day one</h3>
-              <p>
-                We don't leave it for last. Semantic structure, indexability,
-                Core Web Vitals, metadata and structured data are built in
-                from the start.
-              </p>
-            </article>
-
-            <article class="about-card flow-card">
-              <div class="tag">04</div>
-              <h3>Commercial vision, not just visual</h3>
-              <p>
-                A website has to look great, but it also has to organize the
-                message, build trust, and help close real opportunities.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section about-section--split">
-        <div class="container split-layout">
-          <div class="split-copy">
-            <p class="eyebrow">Who's behind it</p>
-            <h2 class="section-title">
-              Raven3 is driven by a hands-on, technical, product-oriented
-              mindset.
-            </h2>
-            <p class="section-subtitle">
-              Behind Raven3 is a very clear way of working: less noise, more
-              judgment, more execution, and more attention to detail.
-            </p>
-            <p>
-              The agency was built on a real foundation of frontend
-              development, web architecture, performance, integrations and
-              technical problem-solving. That's what makes better-informed
-              decisions possible, and what lets us build sites at a quality
-              well above average.
-            </p>
-            <p>
-              Raven3 doesn't lean on generic solutions to speed up delivery at
-              the expense of the result. It leans on technical knowledge,
-              well-resolved design and careful implementation, so every
-              project ends up with identity, solidity and room to grow.
-            </p>
-          </div>
-
-          <div class="card-glow">
-            <div class="stat-grid">
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Foundation</span>
-                <strong>Real development</strong>
-                <p>
-                  Frontend, performance, integrations, technical SEO and web
-                  architecture.
-                </p>
-              </div>
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Focus</span>
-                <strong>Execution quality</strong>
-                <p>
-                  Visual detail, technical consistency, and zero template
-                  shortcuts.
-                </p>
-              </div>
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Style</span>
-                <strong>Hands-on</strong>
-                <p>
-                  Direct work on the project itself, without unnecessary
-                  layers.
-                </p>
-              </div>
-              <div class="stat-item flow-card">
-                <span class="stat-kicker">Goal</span>
-                <strong>Real results</strong>
-                <p>
-                  Building a digital presence with real impact on brand and
-                  business.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section">
-        <div class="container">
-          <div class="manifesto">
-            <div class="manifesto__copy">
-              <p class="eyebrow">What sets us apart</p>
-              <h2 class="section-title">
-                We're not competing to build "one more website." We're
-                competing to build it better.
-              </h2>
-              <p class="section-subtitle">
-                Plenty of template- or builder-based solutions can get you
-                live fast, but they tend to compromise performance,
-                scalability, control and differentiation.
-              </p>
-            </div>
-
-            <div class="manifesto__list">
-              <div class="manifesto-item flow-card">
-                <strong>Less dependence on plugins</strong>
-                <p>
-                  We cut technical fragility, conflicts, bloat and unnecessary
-                  maintenance.
-                </p>
-              </div>
-              <div class="manifesto-item flow-card">
-                <strong>More control over the final result</strong>
-                <p>
-                  The interface, structure, performance and experience are
-                  shaped around the project — not the limitations of a
-                  template.
-                </p>
-              </div>
-              <div class="manifesto-item flow-card">
-                <strong>A stronger base for SEO and speed</strong>
-                <p>
-                  Cleaner development means we can optimize load times,
-                  semantics, indexability and technical signals with far more
-                  precision.
-                </p>
-              </div>
-              <div class="manifesto-item flow-card">
-                <strong>Stronger brand perception</strong>
-                <p>
-                  A custom-built site conveys an identity that's more solid,
-                  more considered, and more professional than a recognizable
-                  off-the-shelf solution.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section">
-        <div class="container">
-          <div class="section-head">
-            <p class="eyebrow">Head to head</p>
-            <h2 class="section-title">
-              Fast template vs. custom development
-            </h2>
-            <p class="section-subtitle">
-              Not all digital solutions create the same impact. The
-              difference usually shows up in performance, control, brand
-              perception, and the ability to evolve.
-            </p>
-          </div>
-
-          <div class="compare-grid">
-            <article class="compare-card compare-card--muted flow-card">
-              <span class="tag">Generic option</span>
-              <h3>Templates / builders</h3>
-              <ul>
-                <li>More design and structural limitations</li>
-                <li>Heavier reliance on third parties and plugins</li>
-                <li>Less control over performance</li>
-                <li>Weaker brand differentiation</li>
-                <li>Scalability more constrained</li>
-              </ul>
-            </article>
-
-            <article class="compare-card compare-card--accent flow-card">
-              <span class="tag">The Raven3 approach</span>
-              <h3>Custom development</h3>
-              <ul>
-                <li>Architecture designed around the project</li>
-                <li>More technical and visual control</li>
-                <li>A stronger base for technical SEO and Core Web Vitals</li>
-                <li>Stronger brand identity and visual coherence</li>
-                <li>More flexibility to grow and integrate new tools</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section about-section--split">
-        <div class="container split-layout">
-          <div class="split-copy">
-            <p class="eyebrow">How we work</p>
-            <h2 class="section-title">
-              We don't build generic sites for specific problems
-            </h2>
-            <p class="section-subtitle">
-              Every project comes with its own context, needs, constraints and
-              goals. That's why we avoid rigid solutions whenever they'd
-              compromise performance, control, scalability or brand
-              perception.
-            </p>
-            <p>
-              Raven3 was built from a technical, product-minded perspective:
-              the website isn't treated as an isolated piece, but as part of
-              the client's broader commercial and operational system.
-            </p>
-            <p>
-              That means working with a real focus on structure, speed,
-              commercial intent, readability, positioning, and a visual
-              identity that lives up to the brand.
-            </p>
-          </div>
-
-          <div class="principles">
-            <article class="principle flow-card">
-              <span>01</span>
-              <div>
-                <h3>Performance as the standard</h3>
-                <p>A slow website loses attention, trust and conversions.</p>
-              </div>
-            </article>
-
-            <article class="principle flow-card">
-              <span>02</span>
-              <div>
-                <h3>Technical SEO from the start</h3>
-                <p>
-                  Not a patch applied at the end, but part of the design and
-                  implementation from day one.
-                </p>
-              </div>
-            </article>
-
-            <article class="principle flow-card">
-              <span>03</span>
-              <div>
-                <h3>Design with commercial intent</h3>
-                <p>
-                  Aesthetics matter, but they always serve the message and the
-                  business.
-                </p>
-              </div>
-            </article>
-
-            <article class="principle flow-card">
-              <span>04</span>
-              <div>
-                <h3>Solutions built to fit</h3>
-                <p>
-                  We choose the right structure for each case, not the most
-                  convenient default.
-                </p>
-              </div>
-            </article>
+            <p class="about-quote">Your website isn’t a shop window.<br />It’s your best <em>digital salesperson</em>, 24/7.</p>
           </div>
         </div>
       </section>
@@ -1782,47 +1483,129 @@
       <section class="about-section about-section--compact">
         <div class="container">
           <div class="section-head">
-            <p class="eyebrow">Core services</p>
+            <p class="eyebrow">What we do</p>
             <h2 class="section-title">Where we add the most value</h2>
           </div>
 
           <div class="service-links">
-            <a
-              class="service-link-card flow-card"
-              href="/en/services/custom-web-development.html"
-            >
-              <span class="tag">Service</span>
-              <h3>Custom web development</h3>
-              <p>
-                Custom-built sites focused on UI, performance, architecture
-                and real differentiation.
-              </p>
+            <a class="service-link-card flow-card" href="/en/services/custom-web-development.html">
+              <h3>Custom web development <span aria-hidden="true">→</span></h3>
+              <p>Custom, fast sites connected to your business.</p>
             </a>
-
-            <a
-              class="service-link-card flow-card"
-              href="/en/services/online-stores.html"
-            >
-              <span class="tag">Service</span>
-              <h3>Online stores</h3>
-              <p>
-                E-commerce built for conversion, operational clarity and
-                integration with the business.
-              </p>
+            <a class="service-link-card flow-card" href="/en/services/online-stores.html">
+              <h3>Online stores <span aria-hidden="true">→</span></h3>
+              <p>E-commerce built to sell from day one.</p>
             </a>
-
-            <a
-              class="service-link-card flow-card"
-              href="/en/services/technical-seo.html"
-            >
-              <span class="tag">Service</span>
-              <h3>Technical SEO</h3>
-              <p>
-                Optimizing visibility, technical structure and performance so
-                you can grow the right way.
-              </p>
+            <a class="service-link-card flow-card" href="/en/services/technical-seo.html">
+              <h3>Technical SEO <span aria-hidden="true">→</span></h3>
+              <p>Structure and performance so Google finds you.</p>
             </a>
           </div>
+        </div>
+      </section>
+
+      <section class="about-section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Why Raven3</p>
+            <h2 class="section-title">We don’t build “just another website”. We build it better.</h2>
+            <p class="section-subtitle">Tap each point to see the details.</p>
+          </div>
+
+          <div class="why-list">
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">01</span>
+                <h3>Truly custom development</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>Every project is shaped around the business, the brand and its goals. We never force it into a template: fewer plugins, less technical fragility and more control over the interface, structure and final result.</p>
+              </div>
+            </details>
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">02</span>
+                <h3>Performance as a standard</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>A slow website loses attention, trust and conversions. Speed, optimized loading and a smooth experience directly impact brand perception, SEO and sales.</p>
+              </div>
+            </details>
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">03</span>
+                <h3>Technical SEO from the ground up</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>We don’t leave it for the end. Semantic structure, indexability, Core Web Vitals, metadata and structured data are built in from the first line of code.</p>
+              </div>
+            </details>
+            <details class="why-item flow-card">
+              <summary>
+                <span class="why-item__num">04</span>
+                <h3>Commercial vision, not just visuals</h3>
+                <svg class="why-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </summary>
+              <div class="why-item__body">
+                <p>A website has to look good, but it also has to organize the message, build trust and help close real opportunities. A custom site conveys a stronger identity than a recognizable generic solution.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-section--compact">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Comparison</p>
+            <h2 class="section-title">Quick template vs custom development</h2>
+          </div>
+
+          <div class="compare-grid">
+            <article class="compare-card compare-card--muted flow-card">
+              <span class="tag">Generic option</span>
+              <h3>Templates / builders</h3>
+              <ul>
+                <li>Design and structure limitations</li>
+                <li>Plugin dependency</li>
+                <li>Little control over performance</li>
+                <li>Weak brand differentiation</li>
+              </ul>
+            </article>
+
+            <article class="compare-card compare-card--accent flow-card">
+              <span class="tag">Raven3 approach</span>
+              <h3>Custom development</h3>
+              <ul>
+                <li>Architecture built for the project</li>
+                <li>Full technical and visual control</li>
+                <li>Solid foundation for SEO and Core Web Vitals</li>
+                <li>A brand identity of your own</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-section about-section--split">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Who’s behind it</p>
+            <h2 class="section-title">A hands-on, technical, product-minded approach.</h2>
+            <p class="section-subtitle">Less fluff, more judgment, more execution and more attention to detail.</p>
+          </div>
+
+          <details class="read-more">
+            <summary><span class="read-more__open">Read more</span><span class="read-more__close">Read less</span></summary>
+            <div class="read-more__body">
+              <p>The agency was born from a real foundation in front-end development, web architecture, performance, integrations and technical problem-solving. That leads to better-informed decisions and sites built well above the average.</p>
+              <p>A website isn’t treated as an isolated piece, but as part of the client’s sales and operations system. That’s why we focus on structure, speed, commercial intent, readability, search visibility and a visual identity that lives up to the brand.</p>
+              <p>Raven3 doesn’t rely on generic solutions to ship faster at the expense of results: every project needs identity, solidity and room to grow.</p>
+            </div>
+          </details>
         </div>
       </section>
 
@@ -1831,29 +1614,13 @@
           <div class="cta-banner cta-banner--premium flow-card">
             <div>
               <p class="eyebrow">No shortcuts, no templates</p>
-              <h2>
-                If you're looking for a generic website, Raven3 probably isn't
-                for you.
-              </h2>
-              <p>
-                If you need a digital presence with better execution, real
-                performance, technical judgment and a stronger brand
-                perception, then it's worth talking.
-              </p>
-              <p>
-                We work with companies, brands and professionals who
-                understand that a website isn't a decorative expense — it's a
-                tool for positioning, credibility and conversion.
-              </p>
+              <h2>If you want a generic website, Raven3 probably isn’t for you.</h2>
+              <p>If you need better execution, real performance and technical judgment, let’s talk.</p>
             </div>
 
             <div class="cta-banner__actions">
-              <a class="btn primary" href="/en/contact.html"
-                >I want a serious proposal</a
-              >
-              <a class="btn" href="mailto:hola@raven3.com.ar"
-                >hola@raven3.com.ar</a
-              >
+              <a class="btn primary" href="/en/contact.html">I want a serious proposal</a>
+              <a class="btn" href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>
             </div>
           </div>
         </div>
