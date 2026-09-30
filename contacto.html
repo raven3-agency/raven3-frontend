@@ -173,15 +173,15 @@
             "name": "¿Qué tipo de proyectos toma Raven3?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Trabajamos principalmente proyectos de desarrollo web a medida, tiendas online, optimización técnica y SEO técnico, priorizando arquitectura, performance y conversión."
+              "text": "Principalmente desarrollo web a medida, tiendas online, SEO técnico, optimización de performance y reestructuración de sitios con base técnica débil."
             }
           },
           {
             "@type": "Question",
-            "name": "¿Puedo pedir presupuesto aunque todavía no tenga todo definido?",
+            "name": "¿Puedo escribir aunque todavía no tenga todo definido?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí. Si tu proyecto todavía está en etapa inicial, podés escribirnos igual y te ayudamos a ordenar necesidades, alcance y prioridades."
+              "text": "Sí. Muchas veces el primer paso es ordenar la necesidad. Si el proyecto está verde, igual podemos ayudarte a estructurar alcance, prioridades y próxima etapa."
             }
           },
           {
@@ -189,7 +189,7 @@
             "name": "Si dejamos de trabajar juntos, ¿pierdo mi web?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "No. El dominio, el hosting y el código pertenecen al cliente desde el día uno: nunca queda atado a Raven3 ni a una plataforma cerrada. Si en algún momento decide migrar a otro equipo, se lleva todo sin fricción."
+              "text": "No. El dominio, el hosting y el código son tuyos desde el día uno: nunca quedás atado a nosotros ni a una plataforma cerrada. Si en algún momento querés migrar a otro equipo, te llevás todo sin fricción."
             }
           },
           {
@@ -197,13 +197,13 @@
             "name": "¿También implementan mejoras técnicas además de auditar?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Sí. Según el proyecto, Raven3 puede detectar problemas, proponer mejoras e implementar optimizaciones técnicas reales sobre la web."
+              "text": "Sí. Según el proyecto, no solo auditamos: también resolvemos problemas técnicos reales de performance, SEO y arquitectura."
             }
           }
         ]
       }
     </script>
-    <link rel="stylesheet" href="assets/css/contacto.css" />
+    <link rel="stylesheet" href="assets/css/contacto.css?v=20260929" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
@@ -326,146 +326,65 @@
     </header>
 
     <main>
-      <section class="hero">
+      <section class="hero hero--contact" id="formulario">
         <div class="container">
           <div class="eyebrow">Contacto · Raven3</div>
+          <h1>Contanos tu proyecto</h1>
+          <p class="hero-copy">Te respondemos en menos de 24&nbsp;h con una propuesta clara. No hace falta que tengas todo definido.</p>
+          <ul class="c-trust" aria-label="Por qué escribirnos">
+            <li><a href="https://share.google/tJRfccRDlb4DnvjXV" target="_blank" rel="noopener">★ 5.0 en Google</a></li>
+            <li>Respuesta en 24&nbsp;h</li>
+            <li>+60 proyectos</li>
+          </ul>
 
-          <h1>Contanos sobre tu proyecto y te respondemos en menos de 24 horas</h1>
+          <div class="contact-grid">
+            <div class="contact-panel flow-card">
+              <form class="contact-form" action="https://formspree.io/f/mvoykeyq" method="POST" id="contactForm">
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input id="name" name="name" type="text" autocomplete="name" required placeholder="Tu nombre" />
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" autocomplete="email" required placeholder="tu@email.com" />
+                  </div>
+                  <div class="form-group full">
+                    <label for="service">¿Qué necesitás?</label>
+                    <select id="service" name="service" required>
+                      <option value="">Seleccionar</option>
+                      <option value="desarrollo-web-a-medida">Desarrollo web a medida</option>
+                      <option value="tienda-online">Tienda online</option>
+                      <option value="seo-tecnico">SEO técnico</option>
+                      <option value="optimizacion-performance">Optimización / Performance</option>
+                      <option value="rediseño-web">Rediseño web</option>
+                      <option value="otro">Otro</option>
+                    </select>
+                  </div>
+                  <div class="form-group full">
+                    <label for="message">Contanos sobre el proyecto</label>
+                    <textarea id="message" name="message" required rows="4" placeholder="Qué necesitás y qué problema querés resolver."></textarea>
+                  </div>
+                </div>
 
-          <p class="hero-copy">
-            Si necesitás una web a medida, una tienda online mejor resuelta o
-            una base técnica más sólida para posicionar y escalar, contanos tu
-            caso. Analizamos el proyecto y te proponemos el mejor enfoque.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn primary" href="#formulario"
-              >Quiero pedir presupuesto</a
-            >
-            <a class="btn" href="mailto:hola@raven3.com.ar">Enviar email</a>
-          </div>
-
-          <div class="quick-nav" role="navigation" aria-label="Accesos rápidos">
-            <a href="#formulario">Formulario</a>
-            <a href="#como-trabajamos">Cómo trabajamos</a>
-            <a href="#servicios">Servicios</a>
-            <a href="#faq">FAQ</a>
-          </div>
-
-          <div class="hero-stats" role="group" aria-label="Puntos clave de contacto">
-            <div class="stat flow-card">
-              <strong>Enfoque consultivo</strong>
-              <span
-                >Entendemos el proyecto antes de proponer arquitectura.</span
-              >
-            </div>
-            <div class="stat flow-card">
-              <strong>Foco en performance</strong>
-              <span>Priorizamos velocidad, estructura y conversión real.</span>
-            </div>
-            <div class="stat flow-card">
-              <strong>Base técnica sólida</strong>
-              <span>Desarrollo, e-commerce y SEO técnico alineados.</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="formulario">
-        <div class="container">
-          <div class="section-card">
-            <div class="section-head">
-              <h2>Contanos qué necesitás y recibí un diagnóstico inicial sin costo</h2>
-              <p>
-                Cuanto más contexto tengamos, mejor vamos a poder orientarte. No
-                hace falta que tengas todo definido: también podemos ayudarte a
-                ordenar alcance, prioridades y próxima etapa.
-              </p>
-            </div>
-
-            <div class="contact-grid">
-              <div class="contact-panel flow-card">
-                <h3>Formulario de contacto</h3>
-                <p class="form-note">
-                  Ideal para proyectos de desarrollo web, tiendas online, SEO
-                  técnico, optimización o rediseño.
-                </p>
-
-                <form
-                  class="contact-form"
-                  action="https://formspree.io/f/mvoykeyq"
-                  method="POST"
-                  id="contactForm"
-                >
+                <details class="c-more">
+                  <summary><span class="c-more__open">Agregar más detalles (opcional)</span><span class="c-more__close">Ocultar detalles</span></summary>
                   <div class="form-grid">
-                    <div class="form-group">
-                      <label for="name">Nombre</label>
-                      <input
-                        id="name"
-                        name="name"
-                        type="text"
-                        autocomplete="name"
-                        required
-                        placeholder="Tu nombre"
-                      />
-                    </div>
-
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        autocomplete="email"
-                        required
-                        placeholder="tu@email.com"
-                      />
-                    </div>
-
-                    <div class="form-group">
+                    <div class="form-group full">
                       <label for="company">Empresa / Proyecto</label>
-                      <input
-                        id="company"
-                        name="company"
-                        type="text"
-                        autocomplete="organization"
-                        placeholder="Nombre del proyecto o negocio"
-                      />
+                      <input id="company" name="company" type="text" autocomplete="organization" placeholder="Nombre del proyecto o negocio" />
                     </div>
-
-                    <div class="form-group">
-                      <label for="service">Tipo de servicio</label>
-                      <select id="service" name="service" required>
-                        <option value="">Seleccionar</option>
-                        <option value="desarrollo-web-a-medida">
-                          Desarrollo Web a Medida
-                        </option>
-                        <option value="tienda-online">Tienda Online</option>
-                        <option value="seo-tecnico">SEO Técnico</option>
-                        <option value="optimizacion-performance">
-                          Optimización / Performance
-                        </option>
-                        <option value="rediseño-web">Rediseño Web</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                    </div>
-
                     <div class="form-group">
                       <label for="budget">Presupuesto estimado</label>
                       <select id="budget" name="budget">
                         <option value="">Seleccionar</option>
                         <option value="a-definir">A definir</option>
-                        <option value="menos-de-1000-usd">
-                          Menos de USD 1.000
-                        </option>
+                        <option value="menos-de-1000-usd">Menos de USD 1.000</option>
                         <option value="1000-2500-usd">USD 1.000 – 2.500</option>
                         <option value="2500-5000-usd">USD 2.500 – 5.000</option>
-                        <option value="mas-de-5000-usd">
-                          Más de USD 5.000
-                        </option>
+                        <option value="mas-de-5000-usd">Más de USD 5.000</option>
                       </select>
                     </div>
-
                     <div class="form-group">
                       <label for="timeline">Plazo estimado</label>
                       <select id="timeline" name="timeline">
@@ -476,254 +395,91 @@
                         <option value="flexible">Flexible</option>
                       </select>
                     </div>
-
-                    <div class="form-group full">
-                      <label for="message">Contanos sobre el proyecto</label>
-                      <textarea
-                        id="message"
-                        name="message"
-                        required
-                        placeholder="Qué necesitás, en qué etapa está el proyecto, qué problema querés resolver y cualquier contexto que nos ayude a entender mejor."
-                      ></textarea>
-                    </div>
                   </div>
+                </details>
 
-                  <input
-                    type="hidden"
-                    name="_subject"
-                    value="Nueva consulta desde contacto Raven3"
-                  />
-                  <input type="hidden" name="form_source" value="contacto" />
-                  <div class="recaptcha-wrapper">
-                    <div
-                      class="g-recaptcha"
-                      data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq"
-                      data-theme="dark"
-                    ></div>
-                  </div>
-                  <button class="btn primary" type="submit">
-                    Enviar consulta
-                  </button>
-                  <span class="form-status" id="formStatus"></span>
-                </form>
+                <input type="hidden" name="_subject" value="Nueva consulta desde contacto Raven3" />
+                <input type="hidden" name="form_source" value="contacto" />
+
+                <div class="recaptcha-wrapper">
+                  <div class="g-recaptcha" data-sitekey="6LfQJf0qAAAAAN0Vd2AAIKEYb8y1SA02iDPrN5Dq" data-theme="dark"></div>
+                </div>
+
+                <button class="btn primary" type="submit">Enviar consulta →</button>
+                <span class="form-status" id="formStatus"></span>
+              </form>
+            </div>
+
+            <aside class="contact-side">
+              <div class="info-card flow-card">
+                <h3>¿Preferís hablar directo?</h3>
+                <div class="contact-meta">
+                  <a class="btn primary c-wa" href="https://wa.me/5491150196519" target="_blank" rel="noopener nofollow">WhatsApp · +54 9 11 5019-6519</a>
+                  <div><strong>Email:</strong> <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a></div>
+                  <div><strong>Ubicación:</strong> Buenos Aires, Argentina</div>
+                </div>
               </div>
 
-              <aside class="contact-side">
-                <div class="info-card flow-card">
-                  <h3>Qué podés consultarnos</h3>
-                  <ul class="contact-list">
-                    <li>Desarrollo de webs a medida.</li>
-                    <li>Tiendas online y e-commerce.</li>
-                    <li>SEO técnico y auditorías.</li>
-                    <li>Optimización de performance.</li>
-                    <li>Reestructuración técnica de sitios existentes.</li>
-                  </ul>
-                </div>
-
-                <div class="info-card flow-card">
-                  <h3>Contacto directo</h3>
-                  <div class="contact-meta">
-                    <div>
-                      <strong>Email:</strong><br />
-                      <a href="mailto:hola@raven3.com.ar">hola@raven3.com.ar</a>
-                    </div>
-                    <div>
-                      <strong>Ubicación:</strong><br />
-                      Buenos Aires, Argentina
-                    </div>
-                    <div>
-                      <strong>Sitio:</strong><br />
-                      <a href="https://raven3.com.ar">raven3.com.ar</a>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="info-card flow-card">
-                  <h3>Antes de escribirnos</h3>
-                  <p>
-                    Si no tenés todo cerrado, no pasa nada. Podés escribirnos
-                    igual. Muchas veces el primer paso es justamente ordenar el
-                    alcance del proyecto.
-                  </p>
-                </div>
-              </aside>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="como-trabajamos">
-        <div class="container">
-          <div class="section-card">
-            <div class="section-head">
-              <h2>Cómo trabajamos una consulta nueva</h2>
-              <p>
-                Buscamos entender el proyecto antes de hablar de solución. Eso
-                nos permite proponer una arquitectura más correcta, más realista
-                y mejor alineada con tus objetivos.
-              </p>
-            </div>
-
-            <div class="cards-grid">
-              <article class="info-card flow-card">
-                <h3>Entendemos el contexto</h3>
-                <p>
-                  Revisamos el tipo de negocio, el objetivo del sitio, la etapa
-                  del proyecto y el tipo de necesidad técnica o comercial.
-                </p>
-              </article>
-
-              <article class="info-card flow-card">
-                <h3>Ordenamos prioridades</h3>
-                <p>
-                  Detectamos qué conviene resolver primero: estructura,
-                  performance, rediseño, SEO técnico, e-commerce o desarrollo.
-                </p>
-              </article>
-
-              <article class="info-card flow-card">
-                <h3>Proponemos el mejor enfoque</h3>
-                <p>
-                  No vendemos plantillas genéricas. Buscamos la solución más
-                  lógica según el caso, el presupuesto y el potencial del
-                  proyecto.
-                </p>
-              </article>
-
-              <article class="info-card flow-card">
-                <h3>Armamos una base para crecer</h3>
-                <p>
-                  La idea no es sólo publicar algo. Queremos que el sitio quede
-                  mejor preparado para posicionar, rendir y evolucionar.
-                </p>
-              </article>
-            </div>
+              <div class="info-card flow-card" id="como-trabajamos">
+                <h3>Qué pasa después</h3>
+                <details class="c-acc c-step">
+                  <summary><span class="c-step__num">1</span><span class="c-acc__title">Nos contás tu proyecto</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+                  <p>Revisamos el tipo de negocio, el objetivo del sitio, la etapa del proyecto y la necesidad técnica o comercial detrás.</p>
+                </details>
+                <details class="c-acc c-step">
+                  <summary><span class="c-step__num">2</span><span class="c-acc__title">Propuesta clara en 24 h</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+                  <p>Ordenamos prioridades y te proponemos el enfoque más lógico según el caso, el presupuesto y el potencial del proyecto. Sin plantillas genéricas.</p>
+                </details>
+                <details class="c-acc c-step">
+                  <summary><span class="c-step__num">3</span><span class="c-acc__title">Arrancamos</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+                  <p>Construimos una base preparada para posicionar, rendir y evolucionar, no solo para publicar algo.</p>
+                </details>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
 
       <section class="section" id="servicios">
         <div class="container">
-          <div class="section-card">
-            <div class="section-head">
-              <h2>En qué podemos ayudarte</h2>
-              <p>
-                Raven3 trabaja principalmente en proyectos donde el rendimiento,
-                la estructura y la calidad técnica hacen una diferencia real.
-              </p>
-            </div>
-
-            <div class="services-grid">
-              <article class="service-card flow-card">
-                <h3>
-                  <a href="/servicios/desarrollo-web-a-medida">
-                    Desarrollo Web a Medida
-                  </a>
-                </h3>
-                <p>
-                  Sitios custom con foco en arquitectura limpia, velocidad,
-                  escalabilidad y una implementación pensada para negocio.
-                </p>
-              </article>
-
-              <article class="service-card flow-card">
-                <h3>
-                  <a href="/servicios/tiendas-online">Tiendas Online</a>
-                </h3>
-                <p>
-                  E-commerce orientado a conversión, claridad de catálogo,
-                  experiencia de compra y estructura técnica preparada para
-                  crecer.
-                </p>
-              </article>
-
-              <article class="service-card flow-card">
-                <h3>
-                  <a href="/servicios/seo-tecnico">SEO Técnico</a>
-                </h3>
-                <p>
-                  Auditoría y optimización de rastreo, indexación, semántica,
-                  Core Web Vitals y arquitectura interna del sitio.
-                </p>
-              </article>
-
-              <article class="service-card flow-card">
-                <h3>Optimización / Reestructuración</h3>
-                <p>
-                  Mejora de sitios existentes que necesitan una base técnica más
-                  fuerte, mejor rendimiento o una experiencia más clara.
-                </p>
-              </article>
-            </div>
+          <h2 class="c-h2">En qué podemos ayudarte</h2>
+          <div class="c-svc-grid">
+            <a class="c-svc flow-card" href="/servicios/desarrollo-web-a-medida">
+              <strong>Desarrollo web a medida <span aria-hidden="true">→</span></strong>
+              <span>Sitios custom, rápidos y escalables.</span>
+            </a>
+            <a class="c-svc flow-card" href="/servicios/tiendas-online">
+              <strong>Tiendas online <span aria-hidden="true">→</span></strong>
+              <span>E-commerce orientado a conversión.</span>
+            </a>
+            <a class="c-svc flow-card" href="/servicios/seo-tecnico">
+              <strong>SEO técnico <span aria-hidden="true">→</span></strong>
+              <span>Auditoría, indexación y Core Web Vitals.</span>
+            </a>
           </div>
         </div>
       </section>
 
       <section class="section" id="faq">
         <div class="container">
-          <div class="section-card">
-            <div class="section-head">
-              <h2>Preguntas frecuentes</h2>
-              <p>
-                Algunas dudas comunes antes de iniciar una conversación con
-                Raven3.
-              </p>
-            </div>
-
-            <div class="faq-grid">
-              <article class="faq-item flow-card">
-                <h3>¿Qué tipo de proyectos toma Raven3?</h3>
-                <p>
-                  Principalmente desarrollo web a medida, tiendas online, SEO
-                  técnico, optimización de performance y reestructuración de
-                  sitios con base técnica débil.
-                </p>
-              </article>
-
-              <article class="faq-item flow-card">
-                <h3>¿Puedo escribir aunque todavía no tenga todo definido?</h3>
-                <p>
-                  Sí. Muchas veces el primer paso es ordenar la necesidad. Si el
-                  proyecto está verde, igual podemos ayudarte a estructurarlo.
-                </p>
-              </article>
-
-              <article class="faq-item flow-card">
-                <h3>Si dejamos de trabajar juntos, ¿pierdo mi web?</h3>
-                <p>
-                  No. El dominio, el hosting y el código son tuyos desde el día
-                  uno: nunca quedás atado a nosotros ni a una plataforma cerrada.
-                  Si en algún momento querés migrar a otro equipo, te llevás
-                  todo sin fricción.
-                </p>
-              </article>
-
-              <article class="faq-item flow-card">
-                <h3>¿También implementan mejoras técnicas?</h3>
-                <p>
-                  Sí. Según el proyecto, no sólo auditamos: también podemos
-                  resolver problemas técnicos reales en performance, SEO y
-                  arquitectura.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="cta-final">
-        <div class="container">
-          <div class="cta">
-            <h2>
-              ¿Tenés un proyecto, una idea o una web que necesita mejorar?
-            </h2>
-            <p>
-              Escribinos y analizamos la mejor forma de construir una base más
-              sólida para tu sitio, tu tienda online o tu estrategia técnica.
-            </p>
-            <a class="btn primary" href="#formulario"
-              >Quiero hablar con Raven3</a
-            >
+          <h2 class="c-h2">Preguntas frecuentes</h2>
+          <div class="c-faq-list">
+            <details class="c-acc c-faq flow-card">
+              <summary><span class="c-acc__title">¿Qué tipo de proyectos toma Raven3?</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+              <p>Principalmente desarrollo web a medida, tiendas online, SEO técnico, optimización de performance y reestructuración de sitios con base técnica débil.</p>
+            </details>
+            <details class="c-acc c-faq flow-card">
+              <summary><span class="c-acc__title">¿Puedo escribir aunque todavía no tenga todo definido?</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+              <p>Sí. Muchas veces el primer paso es ordenar la necesidad. Si el proyecto está verde, igual podemos ayudarte a estructurar alcance, prioridades y próxima etapa.</p>
+            </details>
+            <details class="c-acc c-faq flow-card">
+              <summary><span class="c-acc__title">Si dejamos de trabajar juntos, ¿pierdo mi web?</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+              <p>No. El dominio, el hosting y el código son tuyos desde el día uno: nunca quedás atado a nosotros ni a una plataforma cerrada. Si en algún momento querés migrar a otro equipo, te llevás todo sin fricción.</p>
+            </details>
+            <details class="c-acc c-faq flow-card">
+              <summary><span class="c-acc__title">¿También implementan mejoras técnicas además de auditar?</span><svg class="c-acc__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+              <p>Sí. Según el proyecto, no solo auditamos: también resolvemos problemas técnicos reales de performance, SEO y arquitectura.</p>
+            </details>
           </div>
         </div>
       </section>
