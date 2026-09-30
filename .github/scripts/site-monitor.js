@@ -42,6 +42,7 @@ const SITES = [
   { name: 'Lassen',                  url: 'https://lassen.ar',                      category: 'Empresa',      stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
   { name: 'Beforce',                 url: 'https://beforce.ar',                     category: 'Fitness',      stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
   { name: 'Knots4',                  url: 'https://knots4.mitiendanube.com',        category: 'E-commerce',   stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
+  { name: 'Carlos Cutini',           url: 'https://carloscutini.com.ar',            category: 'E-commerce',   stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
   // { name: 'Didot Estudio',        url: 'https://didot.com.ar',                   category: 'Diseño',       stakeholderEmail: 'hola@raven3.com.ar', domainExpiry: null          },
 ];
 
