@@ -62,7 +62,7 @@
     if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restartAutoplay(); });
 
     /* ── Autoplay ── */
-    var AUTOPLAY_MS = 4000;
+    var AUTOPLAY_MS = 6500;
     var autoplayTimer = null;
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
