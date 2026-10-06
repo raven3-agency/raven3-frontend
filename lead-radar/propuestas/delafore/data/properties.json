@@ -1,0 +1,338 @@
+[
+  {
+    "id": 1,
+    "operacion": "venta",
+    "tipo": "Casa",
+    "titulo": "Casa señorial con jardín en Beccar Alto",
+    "zona": "Beccar",
+    "municipio": "San Isidro",
+    "precio": 380000,
+    "moneda": "USD",
+    "ambientes": 4,
+    "banos": 2,
+    "sup_cubierta": 320,
+    "sup_total": 650,
+    "img": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": true
+  },
+  {
+    "id": 2,
+    "operacion": "venta",
+    "tipo": "Departamento",
+    "titulo": "Departamento con amenities en torre nueva",
+    "zona": "San Isidro",
+    "municipio": "San Isidro",
+    "precio": 195000,
+    "moneda": "USD",
+    "ambientes": 3,
+    "banos": 2,
+    "sup_cubierta": 85,
+    "sup_total": 85,
+    "img": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": true
+  },
+  {
+    "id": 3,
+    "operacion": "alquiler",
+    "tipo": "Casa",
+    "titulo": "Casa con jardín, pileta y quincho",
+    "zona": "Acassuso",
+    "municipio": "San Isidro",
+    "precio": 850000,
+    "moneda": "ARS",
+    "ambientes": 5,
+    "banos": 3,
+    "sup_cubierta": 280,
+    "sup_total": 500,
+    "img": "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1543489822-c49534f3271f?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": true
+  },
+  {
+    "id": 4,
+    "operacion": "venta",
+    "tipo": "Barrio privado",
+    "titulo": "Casa en barrio privado con laguna",
+    "zona": "Victoria",
+    "municipio": "San Fernando",
+    "precio": 520000,
+    "moneda": "USD",
+    "ambientes": 6,
+    "banos": 4,
+    "sup_cubierta": 450,
+    "sup_total": 1200,
+    "img": "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 5,
+    "operacion": "venta",
+    "tipo": "Departamento",
+    "titulo": "Monoambiente a estrenar con terraza",
+    "zona": "Martínez",
+    "municipio": "San Isidro",
+    "precio": 135000,
+    "moneda": "USD",
+    "ambientes": 1,
+    "banos": 1,
+    "sup_cubierta": 42,
+    "sup_total": 42,
+    "img": "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": true
+  },
+  {
+    "id": 6,
+    "operacion": "alquiler",
+    "tipo": "Casa",
+    "titulo": "Casa familiar amplia con garage",
+    "zona": "Boulogne",
+    "municipio": "San Isidro",
+    "precio": 620000,
+    "moneda": "ARS",
+    "ambientes": 4,
+    "banos": 2,
+    "sup_cubierta": 200,
+    "sup_total": 400,
+    "img": "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 7,
+    "operacion": "venta",
+    "tipo": "PH",
+    "titulo": "PH con terraza privada y parrilla",
+    "zona": "Martínez",
+    "municipio": "San Isidro",
+    "precio": 210000,
+    "moneda": "USD",
+    "ambientes": 3,
+    "banos": 2,
+    "sup_cubierta": 95,
+    "sup_total": 115,
+    "img": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 8,
+    "operacion": "venta",
+    "tipo": "Terreno / Lote",
+    "titulo": "Lote plano en zona residencial exclusiva",
+    "zona": "Beccar",
+    "municipio": "San Isidro",
+    "precio": 150000,
+    "moneda": "USD",
+    "ambientes": 0,
+    "banos": 0,
+    "sup_cubierta": 0,
+    "sup_total": 600,
+    "img": "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 9,
+    "operacion": "alquiler",
+    "tipo": "Departamento",
+    "titulo": "Depto luminoso en piso alto con vista",
+    "zona": "San Isidro",
+    "municipio": "San Isidro",
+    "precio": 480000,
+    "moneda": "ARS",
+    "ambientes": 2,
+    "banos": 1,
+    "sup_cubierta": 58,
+    "sup_total": 58,
+    "img": "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 10,
+    "operacion": "venta",
+    "tipo": "Casa",
+    "titulo": "Casa colonial restaurada frente al río",
+    "zona": "Acassuso",
+    "municipio": "San Isidro",
+    "precio": 480000,
+    "moneda": "USD",
+    "ambientes": 5,
+    "banos": 3,
+    "sup_cubierta": 380,
+    "sup_total": 700,
+    "img": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 11,
+    "operacion": "venta",
+    "tipo": "Departamento",
+    "titulo": "2 ambientes a estrenar con balcón",
+    "zona": "San Isidro",
+    "municipio": "San Isidro",
+    "precio": 160000,
+    "moneda": "USD",
+    "ambientes": 2,
+    "banos": 1,
+    "sup_cubierta": 65,
+    "sup_total": 65,
+    "img": "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 12,
+    "operacion": "venta",
+    "tipo": "Casa",
+    "titulo": "Casa con vista al río y piscina climatizada",
+    "zona": "Beccar",
+    "municipio": "San Isidro",
+    "precio": 650000,
+    "moneda": "USD",
+    "ambientes": 5,
+    "banos": 4,
+    "sup_cubierta": 420,
+    "sup_total": 800,
+    "img": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 13,
+    "operacion": "alquiler",
+    "tipo": "Barrio privado",
+    "titulo": "Casa en country con golf y canchas",
+    "zona": "Victoria",
+    "municipio": "San Fernando",
+    "precio": 1200000,
+    "moneda": "ARS",
+    "ambientes": 6,
+    "banos": 4,
+    "sup_cubierta": 500,
+    "sup_total": 1500,
+    "img": "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 14,
+    "operacion": "temporal",
+    "tipo": "Casa",
+    "titulo": "Casa temporaria en country premium",
+    "zona": "Victoria",
+    "municipio": "San Fernando",
+    "precio": 4500,
+    "moneda": "USD",
+    "ambientes": 4,
+    "banos": 3,
+    "sup_cubierta": 280,
+    "sup_total": 600,
+    "img": "https://images.unsplash.com/photo-1543489822-c49534f3271f?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1543489822-c49534f3271f?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 15,
+    "operacion": "venta",
+    "tipo": "Oficina",
+    "titulo": "Oficina a estrenar en torre corporativa",
+    "zona": "San Isidro",
+    "municipio": "San Isidro",
+    "precio": 280000,
+    "moneda": "USD",
+    "ambientes": 3,
+    "banos": 2,
+    "sup_cubierta": 120,
+    "sup_total": 120,
+    "img": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  },
+  {
+    "id": 16,
+    "operacion": "alquiler",
+    "tipo": "Departamento",
+    "titulo": "Studio amoblado cerca del tren",
+    "zona": "Martínez",
+    "municipio": "San Isidro",
+    "precio": 380000,
+    "moneda": "ARS",
+    "ambientes": 1,
+    "banos": 1,
+    "sup_cubierta": 38,
+    "sup_total": 38,
+    "img": "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&auto=format&fit=crop",
+    "images": [
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=600&q=80&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=600&q=80&auto=format&fit=crop"
+    ],
+    "destacada": false
+  }
+]

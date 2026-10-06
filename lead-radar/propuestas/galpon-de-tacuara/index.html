@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tacu Resto & Bowling — El Bowling de Sanfer</title>
+  <meta name="description" content="Tacu Resto & Bowling: bowling, arcade, gastronomía, cumpleaños y eventos en San Fernando, Buenos Aires. Abiertos todos los días desde las 12hs. Reservá tu pista.">
+  <meta name="keywords" content="bowling San Fernando, Tacu Resto Bowling, bowling Sanfer, pistas de bowling, cumpleaños bowling, arcade, restaurante bowling Buenos Aires">
+  <meta name="author" content="Tacu Resto & Bowling">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Tacu Resto & Bowling — El Bowling de Sanfer">
+  <meta property="og:description" content="Bowling, arcade, gastronomía, cumpleaños y eventos. Abiertos todos los días desde las 12hs.">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:image" content="images/pistas.jpg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "name": "Tacu Resto & Bowling",
+    "description": "Bowling, arcade, gastronomía y eventos en San Fernando, Buenos Aires.",
+    "telephone": "+54-11-1522-818760",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Gral. Arias 710",
+      "addressLocality": "San Fernando",
+      "addressRegion": "Buenos Aires",
+      "postalCode": "B1646",
+      "addressCountry": "AR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "-34.4361004",
+      "longitude": "-58.5564856"
+    },
+    "openingHours": "Mo-Su 12:00-00:00",
+    "sameAs": ["https://www.instagram.com/tacu_restobowling"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      /* Tacu brand palette */
+      --tacu-teal: #1BB5C8;
+      --tacu-teal-dark: #158FA0;
+      --tacu-red: #C8232C;
+      --tacu-red-dark: #9E1B22;
+      --tacu-cream: #F5EDE0;
+      --tacu-maroon: #5C1A1E;
+      --tacu-maroon-light: #7A2A30;
+
+      --bg-deep: #1a1118;
+      --bg-surface: #221620;
+      --bg-card: #2c1e28;
+      --bg-card-hover: #3a2833;
+
+      --text-primary: #F5EDE0;
+      --text-secondary: #c4b5a8;
+      --text-muted: #8a7a6e;
+
+      --glow-teal: 0 0 20px rgba(27,181,200,.35), 0 0 60px rgba(27,181,200,.12);
+      --glow-red: 0 0 20px rgba(200,35,44,.35), 0 0 60px rgba(200,35,44,.12);
+
+      --radius: 16px;
+      --radius-sm: 8px;
+      --transition: .35s cubic-bezier(.4,0,.2,1);
+      --font-display: 'Fredoka', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-accent: 'Permanent Marker', cursive;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    body.is-loading { overflow: hidden; height: 100vh; }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+    button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
+    ul { list-style: none; }
+
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+    /* ══════════════════════════════════════
+       PRELOADER — BOWLING STRIKE
+    ══════════════════════════════════════ */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: var(--bg-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity .6s ease, visibility .6s ease;
+    }
+    #preloader.done { opacity: 0; visibility: hidden; pointer-events: none; }
+
+    .loader-scene {
+      position: relative;
+      width: 420px;
+      max-width: 90vw;
+      height: 300px;
+    }
+
+    .loader-lane {
+      position: absolute;
+      bottom: 40px;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, transparent, #3d2b1a 15%, #5a3f28 50%, #3d2b1a 85%, transparent);
+      border-radius: 3px;
+    }
+    .loader-lane::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 10%;
+      right: 10%;
+      height: 2px;
+      background: repeating-linear-gradient(90deg, transparent, transparent 18px, rgba(255,255,255,.08) 18px, rgba(255,255,255,.08) 20px);
+    }
+
+    .loader-ball {
+      position: absolute;
+      bottom: 46px;
+      left: -60px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, var(--tacu-red), #6b1015 70%, #3a0a0c);
+      box-shadow: inset -4px -4px 8px rgba(0,0,0,.5), inset 2px 2px 4px rgba(255,255,255,.15), 0 4px 12px rgba(0,0,0,.5);
+      animation: rollBall 2s ease-in forwards;
+    }
+    .loader-ball::before, .loader-ball::after, .loader-ball .ball-hole {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #2a0508, #4a1015);
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.8);
+    }
+    .loader-ball::before { width: 8px; height: 8px; top: 10px; left: 18px; }
+    .loader-ball::after { width: 8px; height: 8px; top: 10px; left: 28px; }
+    .loader-ball .ball-hole { width: 7px; height: 7px; top: 19px; left: 23px; }
+
+    @keyframes rollBall {
+      0% { left: -60px; transform: rotate(0deg); }
+      70% { left: 52%; transform: rotate(720deg); }
+      100% { left: 52%; transform: rotate(900deg); }
+    }
+
+    .loader-pins {
+      position: absolute;
+      bottom: 46px;
+      right: 40px;
+      width: 100px;
+      height: 110px;
+    }
+
+    .pin {
+      position: absolute;
+      width: 14px;
+      height: 34px;
+      transform-origin: bottom center;
+    }
+    .pin-body {
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
+    .pin-body::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      right: 1px;
+      height: 70%;
+      background: linear-gradient(to right, #e8e0d0, #fff 40%, #e8e0d0);
+      border-radius: 4px 4px 5px 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,.3);
+    }
+    .pin-body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 3px;
+      right: 3px;
+      height: 40%;
+      background: linear-gradient(to right, #ddd, #fff 50%, #ddd);
+      border-radius: 50% 50% 30% 30%;
+      box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    }
+    .pin-stripe {
+      position: absolute;
+      top: 38%;
+      left: 0;
+      right: 0;
+      height: 8%;
+      background: var(--tacu-red);
+      z-index: 1;
+      border-radius: 1px;
+    }
+
+    .pin:nth-child(1) { bottom: 0; left: 43px; }
+    .pin:nth-child(2) { bottom: 22px; left: 32px; }
+    .pin:nth-child(3) { bottom: 22px; left: 54px; }
+    .pin:nth-child(4) { bottom: 44px; left: 21px; }
+    .pin:nth-child(5) { bottom: 44px; left: 43px; }
+    .pin:nth-child(6) { bottom: 44px; left: 65px; }
+    .pin:nth-child(7) { bottom: 66px; left: 10px; }
+    .pin:nth-child(8) { bottom: 66px; left: 32px; }
+    .pin:nth-child(9) { bottom: 66px; left: 54px; }
+    .pin:nth-child(10) { bottom: 66px; left: 76px; }
+
+    .pins-hit .pin:nth-child(1)  { animation: pinFly1  .6s .05s ease-out forwards; }
+    .pins-hit .pin:nth-child(2)  { animation: pinFly2  .6s .02s ease-out forwards; }
+    .pins-hit .pin:nth-child(3)  { animation: pinFly3  .6s .08s ease-out forwards; }
+    .pins-hit .pin:nth-child(4)  { animation: pinFly4  .6s .00s ease-out forwards; }
+    .pins-hit .pin:nth-child(5)  { animation: pinFly5  .6s .04s ease-out forwards; }
+    .pins-hit .pin:nth-child(6)  { animation: pinFly6  .6s .1s  ease-out forwards; }
+    .pins-hit .pin:nth-child(7)  { animation: pinFly7  .6s .03s ease-out forwards; }
+    .pins-hit .pin:nth-child(8)  { animation: pinFly8  .6s .06s ease-out forwards; }
+    .pins-hit .pin:nth-child(9)  { animation: pinFly9  .6s .07s ease-out forwards; }
+    .pins-hit .pin:nth-child(10) { animation: pinFly10 .6s .09s ease-out forwards; }
+
+    @keyframes pinFly1  { to { transform: translate(15px, -80px) rotate(340deg); opacity: 0; } }
+    @keyframes pinFly2  { to { transform: translate(-30px, -100px) rotate(-280deg); opacity: 0; } }
+    @keyframes pinFly3  { to { transform: translate(40px, -90px) rotate(300deg); opacity: 0; } }
+    @keyframes pinFly4  { to { transform: translate(-50px, -70px) rotate(-350deg); opacity: 0; } }
+    @keyframes pinFly5  { to { transform: translate(5px, -120px) rotate(400deg); opacity: 0; } }
+    @keyframes pinFly6  { to { transform: translate(60px, -60px) rotate(250deg); opacity: 0; } }
+    @keyframes pinFly7  { to { transform: translate(-65px, -50px) rotate(-200deg); opacity: 0; } }
+    @keyframes pinFly8  { to { transform: translate(-20px, -110px) rotate(-320deg); opacity: 0; } }
+    @keyframes pinFly9  { to { transform: translate(30px, -95px) rotate(270deg); opacity: 0; } }
+    @keyframes pinFly10 { to { transform: translate(70px, -40px) rotate(180deg); opacity: 0; } }
+
+    .loader-flash {
+      position: absolute;
+      top: 50%;
+      left: 55%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(27,181,200,.6), rgba(200,35,44,.3), transparent 70%);
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .flash-active { animation: impactFlash .5s ease-out forwards; }
+    @keyframes impactFlash {
+      0% { width: 0; height: 0; opacity: 1; }
+      50% { width: 250px; height: 250px; opacity: .8; }
+      100% { width: 400px; height: 400px; opacity: 0; }
+    }
+
+    .loader-strike {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      font-family: var(--font-accent);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      color: var(--tacu-teal);
+      text-shadow: 0 0 10px var(--tacu-teal), 0 0 30px rgba(27,181,200,.5), 0 0 60px rgba(27,181,200,.3);
+      opacity: 0;
+      letter-spacing: 6px;
+      white-space: nowrap;
+    }
+    .strike-show { animation: strikeReveal .6s .15s cubic-bezier(.34,1.56,.64,1) forwards; }
+    @keyframes strikeReveal {
+      0% { transform: translate(-50%, -50%) scale(0) rotate(-10deg); opacity: 0; }
+      60% { transform: translate(-50%, -50%) scale(1.15) rotate(2deg); opacity: 1; }
+      100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); opacity: 1; }
+    }
+
+    .loader-sparks { position: absolute; top: 45%; left: 55%; pointer-events: none; }
+    .spark {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      opacity: 0;
+    }
+    .sparks-active .spark { animation: sparkFly .7s ease-out forwards; }
+    .spark:nth-child(1)  { background: var(--tacu-teal); animation-delay: 0s; --sx: -60px; --sy: -80px; }
+    .spark:nth-child(2)  { background: var(--tacu-red); animation-delay: .05s; --sx: 70px; --sy: -60px; }
+    .spark:nth-child(3)  { background: var(--tacu-cream); animation-delay: .02s; --sx: -40px; --sy: -100px; }
+    .spark:nth-child(4)  { background: var(--tacu-teal); animation-delay: .08s; --sx: 50px; --sy: -90px; }
+    .spark:nth-child(5)  { background: var(--tacu-red); animation-delay: .03s; --sx: -80px; --sy: -40px; }
+    .spark:nth-child(6)  { background: var(--tacu-cream); animation-delay: .06s; --sx: 90px; --sy: -50px; }
+    .spark:nth-child(7)  { background: var(--tacu-teal); animation-delay: .1s; --sx: -20px; --sy: -110px; }
+    .spark:nth-child(8)  { background: var(--tacu-red); animation-delay: .04s; --sx: 30px; --sy: -70px; }
+    .spark:nth-child(9)  { background: var(--tacu-cream); animation-delay: .07s; --sx: -70px; --sy: -30px; }
+    .spark:nth-child(10) { background: var(--tacu-teal); animation-delay: .09s; --sx: 60px; --sy: -100px; }
+    .spark:nth-child(11) { background: var(--tacu-red); animation-delay: .01s; --sx: -50px; --sy: -60px; }
+    .spark:nth-child(12) { background: var(--tacu-cream); animation-delay: .11s; --sx: 40px; --sy: -80px; }
+    @keyframes sparkFly {
+      0% { transform: translate(0, 0) scale(1); opacity: 1; }
+      100% { transform: translate(var(--sx), var(--sy)) scale(0); opacity: 0; }
+    }
+
+    .loader-subtext {
+      margin-top: 40px;
+      font-family: var(--font-body);
+      font-size: .85rem;
+      color: var(--text-muted);
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0;
+      animation: fadeInSoft 1s .3s forwards;
+    }
+    @keyframes fadeInSoft { to { opacity: .6; } }
+
+    /* Noise overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+      opacity: .4;
+    }
+
+    /* ══════════════════════════════════════
+       NAVIGATION
+    ══════════════════════════════════════ */
+    #site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      transition: background var(--transition), box-shadow var(--transition);
+    }
+    #site-header.scrolled {
+      background: rgba(26,17,24,.94);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 2px 30px rgba(0,0,0,.4), inset 0 -1px 0 rgba(27,181,200,.1);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 5%;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo img {
+      height: 48px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .nav-link {
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+      position: relative;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--tacu-teal);
+      box-shadow: 0 0 8px var(--tacu-teal);
+      transition: width var(--transition);
+    }
+    .nav-link:hover { color: var(--text-primary); }
+    .nav-link:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: var(--tacu-red);
+      padding: 10px 24px;
+      border-radius: 50px;
+      color: #fff !important;
+      font-weight: 600;
+      box-shadow: 0 4px 20px rgba(200,35,44,.25);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .nav-cta::after { display: none; }
+    .nav-cta:hover { transform: translateY(-2px); box-shadow: var(--glow-red); }
+
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      width: 32px;
+      padding: 4px 0;
+      z-index: 1001;
+    }
+    .hamburger-line {
+      display: block;
+      height: 2px;
+      background: var(--text-primary);
+      border-radius: 2px;
+      transition: transform var(--transition), opacity var(--transition);
+    }
+    .nav-hamburger.open .hamburger-line:first-child { transform: translateY(4px) rotate(45deg); }
+    .nav-hamburger.open .hamburger-line:last-child { transform: translateY(-4px) rotate(-45deg); }
+
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(26,17,24,.97);
+      backdrop-filter: blur(20px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .4s, visibility .4s;
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; }
+    .mobile-link {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--text-secondary);
+      transition: color var(--transition);
+    }
+    .mobile-link:hover { color: var(--tacu-teal); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ══════════════════════════════════════
+       SECTION SHARED
+    ══════════════════════════════════════ */
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: .75rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--tacu-teal);
+      margin-bottom: 16px;
+    }
+    .section-label::before {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background: var(--tacu-teal);
+      box-shadow: 0 0 6px var(--tacu-teal);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-weight: 700;
+    }
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 550px;
+      line-height: 1.7;
+    }
+
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+    [data-reveal].revealed { opacity: 1; transform: translateY(0); }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    .section-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .hero-bg-image {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(26,17,24,.3) 0%, rgba(26,17,24,.65) 50%, var(--bg-deep) 100%),
+        url('images/pistas.jpg') center/cover no-repeat;
+    }
+    .hero-neon-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--tacu-teal) 20%, var(--tacu-red) 50%, var(--tacu-teal) 80%, transparent);
+      box-shadow: 0 0 30px rgba(27,181,200,.3);
+    }
+    .hero-glow-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: .15;
+      animation: orbFloat 8s ease-in-out infinite alternate;
+    }
+    .hero-glow-orb--teal {
+      width: 400px;
+      height: 400px;
+      background: var(--tacu-teal);
+      top: 10%;
+      left: -5%;
+    }
+    .hero-glow-orb--red {
+      width: 350px;
+      height: 350px;
+      background: var(--tacu-red);
+      bottom: 15%;
+      right: -5%;
+      animation-delay: 3s;
+    }
+    @keyframes orbFloat {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, -20px) scale(1.1); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      padding: 0 20px;
+    }
+    .hero-logo {
+      width: clamp(180px, 35vw, 320px);
+      margin: 0 auto 24px;
+      opacity: 0;
+      animation: fadeUp .8s .3s forwards;
+      filter: drop-shadow(0 4px 20px rgba(0,0,0,.5));
+    }
+    .hero-tagline {
+      font-family: var(--font-accent);
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--tacu-teal);
+      text-shadow: 0 0 15px rgba(27,181,200,.3);
+      margin-bottom: 12px;
+      opacity: 0;
+      animation: fadeUp .8s .6s forwards;
+    }
+    .hero-subtitle {
+      font-size: .85rem;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeUp .8s .8s forwards;
+    }
+    .hero-description {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 500px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+      opacity: 0;
+      animation: fadeUp .8s 1s forwards;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp .8s 1.2s forwards;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: .95rem;
+      letter-spacing: .5px;
+      transition: transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary {
+      background: var(--tacu-red);
+      color: #fff;
+      box-shadow: 0 4px 25px rgba(200,35,44,.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 35px rgba(200,35,44,.45);
+    }
+    .btn-outline {
+      border: 2px solid var(--tacu-teal);
+      color: var(--tacu-teal);
+      box-shadow: 0 0 15px rgba(27,181,200,.1);
+    }
+    .btn-outline:hover {
+      background: rgba(27,181,200,.1);
+      transform: translateY(-3px);
+      box-shadow: var(--glow-teal);
+    }
+
+    .hero-scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0;
+      animation: fadeUp .8s 1.5s forwards;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(180deg, var(--tacu-teal), transparent);
+      animation: scrollPulse 2s infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: .3; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.2); }
+    }
+    .scroll-label { font-size: .7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--text-muted); }
+
+    /* Neon line */
+    .neon-line {
+      height: 2px;
+      border: none;
+      border-radius: 1px;
+      background: linear-gradient(90deg, transparent, var(--tacu-teal), var(--tacu-red), transparent);
+      box-shadow: var(--glow-teal);
+      margin: 0;
+    }
+
+    /* ══════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════ */
+    .section-about { padding: 120px 0; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .about-image-wrap {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .about-image-wrap img { width: 100%; height: 100%; object-fit: cover; }
+    .about-image-wrap::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border: 1px solid rgba(27,181,200,.2);
+      border-radius: var(--radius);
+      box-shadow: inset 0 0 40px rgba(0,0,0,.3);
+      pointer-events: none;
+    }
+    .about-neon-badge {
+      position: absolute;
+      bottom: -16px;
+      right: 24px;
+      background: var(--bg-card);
+      border: 1px solid rgba(27,181,200,.3);
+      border-radius: var(--radius-sm);
+      padding: 16px 24px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0,0,0,.4), var(--glow-teal);
+    }
+    .about-neon-badge strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: var(--tacu-teal);
+    }
+    .about-neon-badge span {
+      font-size: .72rem;
+      color: var(--text-secondary);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .about-text h3 {
+      font-family: var(--font-accent);
+      font-size: 1.1rem;
+      color: var(--tacu-red);
+      margin-bottom: 20px;
+    }
+    .about-text p { color: var(--text-secondary); margin-bottom: 16px; line-height: 1.8; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .stat-item {
+      text-align: center;
+      padding: 20px 8px;
+      background: var(--bg-card);
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,.05);
+    }
+    .stat-num {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      color: var(--tacu-teal);
+      margin-bottom: 4px;
+    }
+    .stat-label {
+      font-size: .72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    @media (max-width: 768px) {
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+
+    /* ══════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════ */
+    .section-services {
+      padding: 120px 0;
+      background: var(--bg-surface);
+      position: relative;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--tacu-teal), var(--tacu-red));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform .4s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(27,181,200,.2);
+      box-shadow: 0 12px 40px rgba(0,0,0,.3);
+    }
+    .service-card:hover::before { transform: scaleX(1); }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+      background: rgba(27,181,200,.1);
+      border: 1px solid rgba(27,181,200,.15);
+    }
+    .service-card:nth-child(2) .service-icon { background: rgba(200,35,44,.1); border-color: rgba(200,35,44,.15); }
+    .service-card:nth-child(3) .service-icon { background: rgba(92,26,30,.2); border-color: rgba(92,26,30,.3); }
+    .service-card:nth-child(4) .service-icon { background: rgba(245,237,224,.1); border-color: rgba(245,237,224,.15); }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .service-card p { color: var(--text-secondary); font-size: .92rem; line-height: 1.7; }
+
+    /* ══════════════════════════════════════
+       GALLERY
+    ══════════════════════════════════════ */
+    .section-gallery { padding: 120px 0; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 16px;
+      margin-top: 48px;
+    }
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    .gallery-item:first-child {
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+    .gallery-item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(26,17,24,.7));
+      opacity: 0;
+      transition: opacity .4s;
+    }
+    .gallery-item:hover img { transform: scale(1.05); }
+    .gallery-item:hover::after { opacity: 1; }
+    .gallery-item-label {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      font-family: var(--font-display);
+      font-size: .9rem;
+      color: #fff;
+      z-index: 1;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity .4s, transform .4s;
+    }
+    .gallery-item:hover .gallery-item-label { opacity: 1; transform: translateY(0); }
+    @media (max-width: 768px) {
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:first-child { grid-row: span 1; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════
+       PRICING
+    ══════════════════════════════════════ */
+    .section-pricing { padding: 120px 0; background: var(--bg-surface); }
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .pricing-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 36px 28px;
+      text-align: center;
+      position: relative;
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .pricing-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,.3); }
+    .pricing-card--featured { border-color: var(--tacu-red); box-shadow: 0 0 30px rgba(200,35,44,.1); }
+    .pricing-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--tacu-red);
+      padding: 5px 20px;
+      border-radius: 50px;
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: #fff;
+    }
+    .pricing-name { font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 8px; font-weight: 600; }
+    .pricing-desc { font-size: .85rem; color: var(--text-muted); margin-bottom: 20px; }
+    .pricing-price {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      color: var(--tacu-teal);
+      margin-bottom: 4px;
+    }
+    .pricing-per { font-size: .8rem; color: var(--text-muted); margin-bottom: 24px; }
+    .pricing-features { text-align: left; margin-bottom: 28px; }
+    .pricing-features li {
+      padding: 8px 0;
+      font-size: .9rem;
+      color: var(--text-secondary);
+      border-bottom: 1px solid rgba(255,255,255,.04);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .pricing-features li::before {
+      content: '✦';
+      color: var(--tacu-teal);
+      font-size: .65rem;
+      flex-shrink: 0;
+    }
+    .pricing-card .btn { width: 100%; justify-content: center; }
+
+    /* ══════════════════════════════════════
+       LOCATION
+    ══════════════════════════════════════ */
+    .section-location { padding: 120px 0; }
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 48px;
+      align-items: start;
+    }
+    .location-map {
+      border-radius: var(--radius);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      border: 1px solid rgba(27,181,200,.15);
+    }
+    .location-map iframe { width: 100%; height: 100%; border: 0; filter: brightness(.85) contrast(1.1) saturate(.8); }
+    .location-info { display: flex; flex-direction: column; gap: 24px; }
+    .location-item { display: flex; gap: 16px; align-items: flex-start; }
+    .location-item-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(27,181,200,.1);
+      border: 1px solid rgba(27,181,200,.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .location-item h4 { font-size: .95rem; margin-bottom: 4px; }
+    .location-item p { font-size: .88rem; color: var(--text-secondary); line-height: 1.6; }
+    @media (max-width: 768px) {
+      .location-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ══════════════════════════════════════
+       CTA
+    ══════════════════════════════════════ */
+    .section-cta {
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      background: var(--bg-surface);
+      overflow: hidden;
+    }
+    .section-cta::before, .section-cta::after {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: .1;
+    }
+    .section-cta::before { background: var(--tacu-teal); top: -100px; left: -100px; }
+    .section-cta::after { background: var(--tacu-red); bottom: -100px; right: -100px; }
+    .cta-title { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 16px; font-weight: 700; }
+    .cta-subtitle { font-size: 1.1rem; color: var(--text-secondary); max-width: 500px; margin: 0 auto 36px; line-height: 1.7; }
+    .cta-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: #fff;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      box-shadow: 0 4px 25px rgba(37,211,102,.3);
+      transition: transform var(--transition), box-shadow var(--transition);
+    }
+    .cta-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 8px 35px rgba(37,211,102,.4); }
+    .cta-whatsapp svg { width: 22px; height: 22px; }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    .site-footer {
+      padding: 60px 0 30px;
+      border-top: 1px solid rgba(255,255,255,.05);
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      flex-wrap: wrap;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+    .footer-brand .footer-logo { height: 56px; margin-bottom: 12px; border-radius: 6px; }
+    .footer-brand p { color: var(--text-muted); font-size: .88rem; max-width: 280px; line-height: 1.6; }
+    .footer-links h4 {
+      font-size: .75rem;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+    .footer-links a {
+      display: block;
+      font-size: .9rem;
+      color: var(--text-secondary);
+      padding: 4px 0;
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--tacu-teal); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,.05);
+      font-size: .8rem;
+      color: var(--text-muted);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .footer-bottom a { color: var(--tacu-teal); }
+
+    /* Scroll to top */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid rgba(27,181,200,.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all var(--transition);
+      box-shadow: 0 4px 20px rgba(0,0,0,.3);
+    }
+    .scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+    .scroll-top:hover { border-color: var(--tacu-teal); box-shadow: var(--glow-teal); }
+    .scroll-top svg { width: 18px; height: 18px; stroke: var(--tacu-teal); }
+  </style>
+</head>
+
+<body class="is-loading">
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-scene">
+      <div class="loader-lane"></div>
+      <div class="loader-ball" id="loader-ball"><span class="ball-hole"></span></div>
+      <div class="loader-pins" id="loader-pins">
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+        <div class="pin"><div class="pin-body"><span class="pin-stripe"></span></div></div>
+      </div>
+      <div class="loader-flash" id="loader-flash"></div>
+      <div class="loader-sparks" id="loader-sparks">
+        <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+        <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+        <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+        <span class="spark"></span><span class="spark"></span><span class="spark"></span>
+      </div>
+      <div class="loader-strike" id="loader-strike">STRIKE!</div>
+    </div>
+    <p class="loader-subtext">Preparando las pistas...</p>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header id="site-header">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="images/logo.jpg" alt="Tacu Resto & Bowling">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Nosotros</a></li>
+        <li><a href="#services" class="nav-link">Actividades</a></li>
+        <li><a href="#gallery" class="nav-link">Galería</a></li>
+        <li><a href="#pricing" class="nav-link">Planes</a></li>
+        <li><a href="#location" class="nav-link">Ubicación</a></li>
+        <li><a href="#reservar" class="nav-cta">Reservar pista</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#about" class="mobile-link">Nosotros</a>
+      <a href="#services" class="mobile-link">Actividades</a>
+      <a href="#gallery" class="mobile-link">Galería</a>
+      <a href="#pricing" class="mobile-link">Planes</a>
+      <a href="#location" class="mobile-link">Ubicación</a>
+      <a href="#reservar" class="mobile-link" style="color: var(--tacu-red);">Reservar pista</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="section-hero">
+      <div class="hero-bg">
+        <div class="hero-bg-image"></div>
+        <div class="hero-glow-orb hero-glow-orb--teal" aria-hidden="true"></div>
+        <div class="hero-glow-orb hero-glow-orb--red" aria-hidden="true"></div>
+        <div class="hero-neon-strip" aria-hidden="true"></div>
+      </div>
+      <div class="hero-content">
+        <img src="images/logo.jpg" alt="Tacu Resto & Bowling" class="hero-logo">
+        <p class="hero-tagline">El Bowling de Sanfer</p>
+        <p class="hero-subtitle">Bowling · Resto · Arcade · Eventos</p>
+        <p class="hero-description">
+          Pistas profesionales, gastronomía, juegos arcade y la mejor onda.<br>
+          Abiertos todos los días desde las 12hs.
+        </p>
+        <div class="hero-ctas">
+          <a href="https://wa.me/5491152281876?text=Hola!%20Quiero%20reservar%20una%20pista%20en%20Tacu%20Resto%20%26%20Bowling"
+             class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            Reservar pista
+          </a>
+          <a href="#pricing" class="btn btn-outline">Ver planes</a>
+        </div>
+      </div>
+      <div class="hero-scroll-indicator" aria-hidden="true">
+        <div class="scroll-line"></div>
+        <span class="scroll-label">Scroll</span>
+      </div>
+    </section>
+
+    <hr class="neon-line">
+
+    <!-- ABOUT -->
+    <section id="about" class="section-about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image-wrap" data-reveal>
+            <img src="images/grupo.jpg"
+                 alt="Grupo de amigos jugando bowling en Tacu"
+                 loading="lazy">
+            <div class="about-neon-badge">
+              <strong>Desde 12hs</strong>
+              <span>Todos los días</span>
+            </div>
+          </div>
+          <div class="about-text" data-reveal>
+            <span class="section-label">Sobre nosotros</span>
+            <h2 class="section-title">Más que bowling, un espacio familiar</h2>
+            <h3>"Donde cada partida se vive distinto"</h3>
+            <p>
+              Tacu Resto & Bowling es el bowling de San Fernando. Un espacio donde la diversión,
+              la gastronomía y los buenos momentos se encuentran bajo un mismo techo.
+            </p>
+            <p>
+              Pistas profesionales, juegos arcade clásicos, una carta gastronómica para toda la familia
+              y el ambiente perfecto para cumpleaños, salidas con amigos o eventos corporativos.
+            </p>
+            <div class="about-stats">
+              <div class="stat-item">
+                <span class="stat-num">8051</span>
+                <span class="stat-label">Reseñas</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">4.5★</span>
+                <span class="stat-label">Google</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-num">16.4K</span>
+                <span class="stat-label">Seguidores</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section-services">
+      <div class="container">
+        <div data-reveal>
+          <span class="section-label">Actividades</span>
+          <h2 class="section-title">Todo lo que podés hacer en Tacu</h2>
+          <p class="section-subtitle">Bowling, arcade, gastronomía y eventos. Todo en un mismo lugar.</p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card" data-reveal>
+            <div class="service-icon">🎳</div>
+            <h3>Bowling</h3>
+            <p>Pistas profesionales con scoring digital y zapatos incluidos. Ideal para venir con amigos, en familia o en pareja, cualquier día de la semana.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon">🎂</div>
+            <h3>Cumpleaños</h3>
+            <p>Organizamos tu cumple infantil o de adultos de principio a fin: pistas reservadas, deco, comida y un momento inolvidable. ¡El bowling de Sanfer!</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon">🕹️</div>
+            <h3>Arcade</h3>
+            <p>Zona de juegos arcade con clásicos como Daytona USA y más. Diversión extra para antes, durante o después de tu partida de bowling.</p>
+          </article>
+          <article class="service-card" data-reveal>
+            <div class="service-icon">🍔</div>
+            <h3>Gastronomía</h3>
+            <p>Carta completa de comidas y bebidas para disfrutar mientras jugás. Hamburguesas, picadas, pizzas, cerveza tirada y mucho más.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section-gallery">
+      <div class="container">
+        <div data-reveal>
+          <span class="section-label">Galería</span>
+          <h2 class="section-title">Viví la experiencia Tacu</h2>
+          <p class="section-subtitle">Un vistazo a lo que te espera.</p>
+        </div>
+        <div class="gallery-grid" data-reveal>
+          <div class="gallery-item">
+            <img src="images/pistas.jpg" alt="Pistas de bowling en Tacu con bolas de colores" loading="lazy">
+            <span class="gallery-item-label">Nuestras pistas</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/grupo.jpg" alt="Grupo de amigos jugando bowling" loading="lazy">
+            <span class="gallery-item-label">Con amigos</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/arcade.jpg" alt="Zona arcade con Daytona USA" loading="lazy">
+            <span class="gallery-item-label">Zona Arcade</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/cumple.jpg" alt="Cumpleaños infantil en Tacu" loading="lazy">
+            <span class="gallery-item-label">Cumpleaños</span>
+          </div>
+          <div class="gallery-item">
+            <img src="images/logo.jpg" alt="Logo de Tacu Resto & Bowling" loading="lazy">
+            <span class="gallery-item-label">Tacu Resto & Bowling</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section id="pricing" class="section-pricing">
+      <div class="container">
+        <div style="text-align: center;" data-reveal>
+          <span class="section-label">Planes</span>
+          <h2 class="section-title">Elegí tu partida</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">Opciones para todos: desde una partida suelta hasta eventos privados.</p>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card" data-reveal>
+            <h3 class="pricing-name">Partida libre</h3>
+            <p class="pricing-desc">Vení cuando quieras</p>
+            <div class="pricing-price">Consultar</div>
+            <p class="pricing-per">por persona / partida</p>
+            <ul class="pricing-features">
+              <li>1 partida completa</li>
+              <li>Zapatos incluidos</li>
+              <li>Scoring digital</li>
+              <li>Todos los días desde las 12hs</li>
+            </ul>
+            <a href="#reservar" class="btn btn-outline">Reservar</a>
+          </div>
+          <div class="pricing-card pricing-card--featured" data-reveal>
+            <span class="pricing-badge">Más elegido</span>
+            <h3 class="pricing-name">Pack amigos</h3>
+            <p class="pricing-desc">Ideal para grupos</p>
+            <div class="pricing-price">Consultar</div>
+            <p class="pricing-per">hasta 6 personas / 2 partidas</p>
+            <ul class="pricing-features">
+              <li>2 partidas completas</li>
+              <li>Zapatos incluidos</li>
+              <li>Pista reservada</li>
+              <li>Promo merienda disponible</li>
+              <li>2x1 en bowling (consultar)</li>
+            </ul>
+            <a href="#reservar" class="btn btn-primary">Reservar</a>
+          </div>
+          <div class="pricing-card" data-reveal>
+            <h3 class="pricing-name">Cumple / Evento</h3>
+            <p class="pricing-desc">Infantiles, corporativos, etc.</p>
+            <div class="pricing-price">Consultar</div>
+            <p class="pricing-per">presupuesto a medida</p>
+            <ul class="pricing-features">
+              <li>Pistas exclusivas</li>
+              <li>Comida y bebida incluida</li>
+              <li>Deco y música</li>
+              <li>Coordinador de evento</li>
+              <li>Zona arcade disponible</li>
+            </ul>
+            <a href="#reservar" class="btn btn-outline">Consultar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="section-location">
+      <div class="container">
+        <div data-reveal>
+          <span class="section-label">Ubicación</span>
+          <h2 class="section-title">Dónde encontrarnos</h2>
+        </div>
+        <div class="location-grid">
+          <div class="location-map" data-reveal>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3290.5!2d-58.5564856!3d-34.4361004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bca57d1ad58e77%3A0x2fffb6df28f47fd9!2sEl%20Galp%C3%B3n%20De%20Tacuara!5e0!3m2!1ses!2sar!4v1700000000000!5m2!1ses!2sar"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación de Tacu Resto & Bowling en Google Maps"></iframe>
+          </div>
+          <div class="location-info" data-reveal>
+            <div class="location-item">
+              <div class="location-item-icon">📍</div>
+              <div>
+                <h4>Dirección</h4>
+                <p>Gral. Arias 710, B1646<br>San Fernando, Buenos Aires</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-item-icon">🕐</div>
+              <div>
+                <h4>Horarios</h4>
+                <p>Abiertos todos los días desde las 12hs</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-item-icon">📞</div>
+              <div>
+                <h4>Teléfono</h4>
+                <p>011 15-2281-8760</p>
+              </div>
+            </div>
+            <div class="location-item">
+              <div class="location-item-icon">📸</div>
+              <div>
+                <h4>Instagram</h4>
+                <p><a href="https://www.instagram.com/tacu_restobowling" target="_blank" rel="noopener noreferrer" style="color: var(--tacu-teal);">@tacu_restobowling</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="reservar" class="section-cta">
+      <div class="container" data-reveal>
+        <span class="section-label">Reservar</span>
+        <h2 class="cta-title">¿Listo para tirar un strike?</h2>
+        <p class="cta-subtitle">Reservá tu pista por WhatsApp y vení a pasarla increíble. ¡Te esperamos en Sanfer!</p>
+        <a href="https://wa.me/5491152281876?text=Hola!%20Quiero%20reservar%20una%20pista%20en%20Tacu%20Resto%20%26%20Bowling"
+           class="cta-whatsapp" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="images/logo.jpg" alt="Tacu Resto & Bowling" class="footer-logo">
+          <p>Bowling, gastronomía, arcade y diversión en San Fernando. Espacio familiar abierto todos los días desde las 12hs.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <a href="#about">Nosotros</a>
+          <a href="#services">Actividades</a>
+          <a href="#gallery">Galería</a>
+          <a href="#pricing">Planes</a>
+          <a href="#location">Ubicación</a>
+        </div>
+        <div class="footer-links">
+          <h4>Contacto</h4>
+          <a href="https://wa.me/5491152281876" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+          <a href="https://www.instagram.com/tacu_restobowling" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.google.com/maps/place/El+Galp%C3%B3n+De+Tacuara/" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 Tacu Resto & Bowling. Todos los derechos reservados.</span>
+        <span>Hecho con 🎳 por <a href="https://raven3.com.ar" target="_blank" rel="noopener noreferrer">Raven3</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scroll-top" aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script>
+    (function() {
+      var pins = document.getElementById('loader-pins');
+      var flash = document.getElementById('loader-flash');
+      var sparks = document.getElementById('loader-sparks');
+      var strike = document.getElementById('loader-strike');
+      var preloader = document.getElementById('preloader');
+      setTimeout(function() {
+        pins.classList.add('pins-hit');
+        flash.classList.add('flash-active');
+        sparks.classList.add('sparks-active');
+      }, 1600);
+      setTimeout(function() { strike.classList.add('strike-show'); }, 1900);
+      setTimeout(function() {
+        preloader.classList.add('done');
+        document.body.classList.remove('is-loading');
+      }, 3400);
+      setTimeout(function() { preloader.remove(); }, 4100);
+    })();
+
+    (function() {
+      var header = document.getElementById('site-header');
+      var hamburger = document.getElementById('nav-hamburger');
+      var mobileMenu = document.getElementById('mobile-menu');
+      window.addEventListener('scroll', function() { header.classList.toggle('scrolled', window.scrollY > 60); });
+      hamburger.addEventListener('click', function() {
+        var isOpen = hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', isOpen);
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      mobileMenu.querySelectorAll('.mobile-link').forEach(function(link) {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('open');
+          mobileMenu.classList.remove('open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+    })();
+
+    (function() {
+      var reveals = document.querySelectorAll('[data-reveal]');
+      if (!reveals.length) return;
+      var observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) { entry.target.classList.add('revealed'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      reveals.forEach(function(el) { observer.observe(el); });
+    })();
+
+    (function() {
+      var btn = document.getElementById('scroll-top');
+      window.addEventListener('scroll', function() { btn.classList.toggle('visible', window.scrollY > 500); });
+      btn.addEventListener('click', function() { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+    })();
+
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(this.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+
+</body>
+</html>
