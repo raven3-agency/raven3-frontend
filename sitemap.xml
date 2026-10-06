@@ -576,323 +576,324 @@
   </url>
 
 
+  <!-- BLOG:START — generado por scripts/build-blog.js -->
   <!-- ══════════════════════════════════════════
        BLOG POSTS — ES (newest first)
   ══════════════════════════════════════════ -->
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=senales-web-perdiendo-clientes-frente-a-ia</loc>
+    <loc>https://raven3.com.ar/blog/senales-web-perdiendo-clientes-frente-a-ia</loc>
     <lastmod>2026-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=mi-web-no-aparece-en-chatgpt-checklist</loc>
+    <loc>https://raven3.com.ar/blog/mi-web-no-aparece-en-chatgpt-checklist</loc>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=llms-txt-que-es-como-implementarlo</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=llms-txt-que-es-como-implementarlo" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=llms-txt-what-it-is-how-to-implement" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=llms-txt-que-es-como-implementarlo" />
+    <loc>https://raven3.com.ar/blog/llms-txt-que-es-como-implementarlo</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/llms-txt-que-es-como-implementarlo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/llms-txt-what-it-is-how-to-implement.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/llms-txt-que-es-como-implementarlo" />
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=shopify-vs-woocommerce-vs-custom-development" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida" />
+    <loc>https://raven3.com.ar/blog/shopify-vs-woocommerce-vs-desarrollo-a-medida</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/shopify-vs-woocommerce-vs-desarrollo-a-medida" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/shopify-vs-woocommerce-vs-custom-development.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/shopify-vs-woocommerce-vs-desarrollo-a-medida" />
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=geo-generative-engine-optimization-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina" />
+    <loc>https://raven3.com.ar/blog/geo-generative-engine-optimization-argentina</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/geo-generative-engine-optimization-argentina" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/geo-generative-engine-optimization-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/geo-generative-engine-optimization-argentina" />
     <lastmod>2026-05-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=como-mejorar-seo-pagina-web</loc>
+    <loc>https://raven3.com.ar/blog/como-mejorar-seo-pagina-web</loc>
     <lastmod>2026-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=web-development-trends-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026" />
+    <loc>https://raven3.com.ar/blog/tendencias-desarrollo-web-2026</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/tendencias-desarrollo-web-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/web-development-trends-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/tendencias-desarrollo-web-2026" />
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=design-systems-for-web-projects" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web" />
+    <loc>https://raven3.com.ar/blog/design-systems-proyectos-web</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/design-systems-proyectos-web" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/design-systems-for-web-projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/design-systems-proyectos-web" />
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=email-marketing-ecommerce-estrategia</loc>
+    <loc>https://raven3.com.ar/blog/email-marketing-ecommerce-estrategia</loc>
     <lastmod>2025-10-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=ia-seo-google-2025</loc>
+    <loc>https://raven3.com.ar/blog/ia-seo-google-2025</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=monitoreo-performance-produccion</loc>
+    <loc>https://raven3.com.ar/blog/monitoreo-performance-produccion</loc>
     <lastmod>2025-06-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=apis-rest-javascript-frontend</loc>
+    <loc>https://raven3.com.ar/blog/apis-rest-javascript-frontend</loc>
     <lastmod>2025-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=psicologia-color-diseno-web</loc>
+    <loc>https://raven3.com.ar/blog/psicologia-color-diseno-web</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=tienda-online-hot-sale-black-friday</loc>
+    <loc>https://raven3.com.ar/blog/tienda-online-hot-sale-black-friday</loc>
     <lastmod>2024-12-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=google-search-console-como-usarlo</loc>
+    <loc>https://raven3.com.ar/blog/google-search-console-como-usarlo</loc>
     <lastmod>2024-10-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=optimizacion-imagenes-webp-avif-2024</loc>
+    <loc>https://raven3.com.ar/blog/optimizacion-imagenes-webp-avif-2024</loc>
     <lastmod>2024-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=html-semantico-accesibilidad-web</loc>
+    <loc>https://raven3.com.ar/blog/html-semantico-accesibilidad-web</loc>
     <lastmod>2024-06-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=formularios-web-que-convierten</loc>
+    <loc>https://raven3.com.ar/blog/formularios-web-que-convierten</loc>
     <lastmod>2024-04-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=abandono-carrito-ecommerce-como-recuperarlo</loc>
+    <loc>https://raven3.com.ar/blog/abandono-carrito-ecommerce-como-recuperarlo</loc>
     <lastmod>2024-02-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=seo-local-argentina-guia-2024</loc>
+    <loc>https://raven3.com.ar/blog/seo-local-argentina-guia-2024</loc>
     <lastmod>2023-12-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=core-web-vitals-practical-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica" />
+    <loc>https://raven3.com.ar/blog/core-web-vitals-2024-guia-practica</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/core-web-vitals-2024-guia-practica" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/core-web-vitals-practical-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/core-web-vitals-2024-guia-practica" />
     <lastmod>2023-10-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=cea-american-conversion-logistica-b2b</loc>
+    <loc>https://raven3.com.ar/blog/cea-american-conversion-logistica-b2b</loc>
     <lastmod>2023-07-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=cea-american-cold-chain-corporate-website" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa" />
+    <loc>https://raven3.com.ar/blog/cea-american-cadena-frio-web-corporativa</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/cea-american-cadena-frio-web-corporativa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/cea-american-cadena-frio-web-corporativa" />
     <lastmod>2023-06-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=storytelling-visual-web-literaria</loc>
+    <loc>https://raven3.com.ar/blog/storytelling-visual-web-literaria</loc>
     <lastmod>2021-05-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=etienne-de-montebello-interactive-editorial-experience" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva" />
+    <loc>https://raven3.com.ar/blog/etienne-de-montebello-experiencia-editorial-interactiva</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/etienne-de-montebello-experiencia-editorial-interactiva" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/etienne-de-montebello-interactive-editorial-experience.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/etienne-de-montebello-experiencia-editorial-interactiva" />
     <lastmod>2021-04-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=seo-tecnico-web-corporativa-lassen</loc>
+    <loc>https://raven3.com.ar/blog/seo-tecnico-web-corporativa-lassen</loc>
     <lastmod>2019-09-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=lassen-pharma-corporate-website-technical-seo" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico" />
+    <loc>https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/lassen-pharma-corporate-website-technical-seo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
     <lastmod>2019-09-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=ux-inmobiliaria-filtros-propiedades</loc>
+    <loc>https://raven3.com.ar/blog/ux-inmobiliaria-filtros-propiedades</loc>
     <lastmod>2018-12-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=ndb-propiedades-tokko-broker-integration" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker" />
+    <loc>https://raven3.com.ar/blog/ndb-propiedades-integracion-tokko-broker</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/ndb-propiedades-integracion-tokko-broker" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/ndb-propiedades-tokko-broker-integration.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/ndb-propiedades-integracion-tokko-broker" />
     <lastmod>2018-11-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=catalogo-digital-productos-performance</loc>
+    <loc>https://raven3.com.ar/blog/catalogo-digital-productos-performance</loc>
     <lastmod>2017-03-09</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=beforce-digital-catalog-visual-identity" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual" />
+    <loc>https://raven3.com.ar/blog/beforce-catalogo-digital-identidad-visual</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/beforce-catalogo-digital-identidad-visual" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/beforce-digital-catalog-visual-identity.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/beforce-catalogo-digital-identidad-visual" />
     <lastmod>2017-02-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=ecommerce-con-comunidad-sgm</loc>
+    <loc>https://raven3.com.ar/blog/ecommerce-con-comunidad-sgm</loc>
     <lastmod>2015-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=sgm-institutional-site-ecommerce-community" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad" />
+    <loc>https://raven3.com.ar/blog/sgm-sitio-institucional-ecommerce-comunidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/sgm-sitio-institucional-ecommerce-comunidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/sgm-institutional-site-ecommerce-community.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/sgm-sitio-institucional-ecommerce-comunidad" />
     <lastmod>2015-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=minimalismo-web-performance-okos</loc>
+    <loc>https://raven3.com.ar/blog/minimalismo-web-performance-okos</loc>
     <lastmod>2014-04-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=okos-minimalist-institutional-website" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista" />
+    <loc>https://raven3.com.ar/blog/okos-sitio-institucional-minimalista</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/okos-sitio-institucional-minimalista" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/okos-minimalist-institutional-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/okos-sitio-institucional-minimalista" />
     <lastmod>2014-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=tienda-nube-ux-conversion-knots</loc>
+    <loc>https://raven3.com.ar/blog/tienda-nube-ux-conversion-knots</loc>
     <lastmod>2013-06-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=knots-ecommerce-product-ux" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto" />
+    <loc>https://raven3.com.ar/blog/knots-ecommerce-tienda-nube-ux-producto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/knots-ecommerce-tienda-nube-ux-producto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/knots-ecommerce-product-ux.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/knots-ecommerce-tienda-nube-ux-producto" />
     <lastmod>2013-05-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=estructura-seo-servicios-art1</loc>
+    <loc>https://raven3.com.ar/blog/estructura-seo-servicios-art1</loc>
     <lastmod>2012-09-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=art1-corporate-website-seo-accessibility" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad" />
+    <loc>https://raven3.com.ar/blog/art1-web-corporativa-seo-accesibilidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/art1-web-corporativa-seo-accesibilidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/art1-corporate-website-seo-accessibility.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/art1-web-corporativa-seo-accesibilidad" />
     <lastmod>2012-08-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.64</priority>
@@ -904,154 +905,155 @@
   ══════════════════════════════════════════ -->
 
   <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=cea-american-cold-chain-corporate-website</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=cea-american-cold-chain-corporate-website" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=cea-american-cadena-frio-web-corporativa" />
-    <lastmod>2023-06-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=etienne-de-montebello-interactive-editorial-experience</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=etienne-de-montebello-interactive-editorial-experience" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=etienne-de-montebello-experiencia-editorial-interactiva" />
-    <lastmod>2021-04-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=ndb-propiedades-tokko-broker-integration</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=ndb-propiedades-tokko-broker-integration" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=ndb-propiedades-integracion-tokko-broker" />
-    <lastmod>2018-11-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=sgm-institutional-site-ecommerce-community</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=sgm-institutional-site-ecommerce-community" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=sgm-sitio-institucional-ecommerce-comunidad" />
-    <lastmod>2015-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=lassen-pharma-corporate-website-technical-seo</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=lassen-pharma-corporate-website-technical-seo" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=lassen-pharma-web-corporativa-seo-tecnico" />
-    <lastmod>2019-09-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=beforce-digital-catalog-visual-identity</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=beforce-digital-catalog-visual-identity" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=beforce-catalogo-digital-identidad-visual" />
-    <lastmod>2017-02-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=okos-minimalist-institutional-website</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=okos-minimalist-institutional-website" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=okos-sitio-institucional-minimalista" />
-    <lastmod>2014-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=art1-corporate-website-seo-accessibility</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=art1-corporate-website-seo-accessibility" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=art1-web-corporativa-seo-accesibilidad" />
-    <lastmod>2012-08-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=knots-ecommerce-product-ux</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=knots-ecommerce-product-ux" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=knots-ecommerce-tienda-nube-ux-producto" />
-    <lastmod>2013-05-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.64</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=core-web-vitals-practical-guide</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=core-web-vitals-practical-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=core-web-vitals-2024-guia-practica" />
-    <lastmod>2023-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=web-development-trends-2026</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=web-development-trends-2026" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=tendencias-desarrollo-web-2026" />
-    <lastmod>2026-03-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=geo-generative-engine-optimization-guide</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=geo-generative-engine-optimization-guide" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=geo-generative-engine-optimization-argentina" />
-    <lastmod>2026-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=llms-txt-what-it-is-how-to-implement</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=llms-txt-que-es-como-implementarlo" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=llms-txt-what-it-is-how-to-implement" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=llms-txt-que-es-como-implementarlo" />
+    <loc>https://raven3.com.ar/en/blog/llms-txt-what-it-is-how-to-implement.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/llms-txt-que-es-como-implementarlo" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/llms-txt-what-it-is-how-to-implement.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/llms-txt-que-es-como-implementarlo" />
     <lastmod>2026-06-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=shopify-vs-woocommerce-vs-custom-development</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=shopify-vs-woocommerce-vs-custom-development" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=shopify-vs-woocommerce-vs-desarrollo-a-medida" />
+    <loc>https://raven3.com.ar/en/blog/shopify-vs-woocommerce-vs-custom-development.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/shopify-vs-woocommerce-vs-desarrollo-a-medida" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/shopify-vs-woocommerce-vs-custom-development.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/shopify-vs-woocommerce-vs-desarrollo-a-medida" />
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
 
   <url>
-    <loc>https://raven3.com.ar/en/blog/post.html?slug=design-systems-for-web-projects</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/post.html?slug=design-systems-for-web-projects" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/post.html?slug=design-systems-proyectos-web" />
+    <loc>https://raven3.com.ar/en/blog/geo-generative-engine-optimization-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/geo-generative-engine-optimization-argentina" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/geo-generative-engine-optimization-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/geo-generative-engine-optimization-argentina" />
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/web-development-trends-2026.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/tendencias-desarrollo-web-2026" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/web-development-trends-2026.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/tendencias-desarrollo-web-2026" />
+    <lastmod>2026-03-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/design-systems-for-web-projects.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/design-systems-proyectos-web" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/design-systems-for-web-projects.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/design-systems-proyectos-web" />
     <lastmod>2026-01-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/core-web-vitals-practical-guide.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/core-web-vitals-2024-guia-practica" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/core-web-vitals-practical-guide.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/core-web-vitals-2024-guia-practica" />
+    <lastmod>2023-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/cea-american-cadena-frio-web-corporativa" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/cea-american-cadena-frio-web-corporativa" />
+    <lastmod>2023-06-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/etienne-de-montebello-interactive-editorial-experience.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/etienne-de-montebello-experiencia-editorial-interactiva" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/etienne-de-montebello-interactive-editorial-experience.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/etienne-de-montebello-experiencia-editorial-interactiva" />
+    <lastmod>2021-04-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/lassen-pharma-corporate-website-technical-seo.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/lassen-pharma-corporate-website-technical-seo.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
+    <lastmod>2019-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/ndb-propiedades-tokko-broker-integration.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/ndb-propiedades-integracion-tokko-broker" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/ndb-propiedades-tokko-broker-integration.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/ndb-propiedades-integracion-tokko-broker" />
+    <lastmod>2018-11-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/beforce-digital-catalog-visual-identity.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/beforce-catalogo-digital-identidad-visual" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/beforce-digital-catalog-visual-identity.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/beforce-catalogo-digital-identidad-visual" />
+    <lastmod>2017-02-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/sgm-institutional-site-ecommerce-community.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/sgm-sitio-institucional-ecommerce-comunidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/sgm-institutional-site-ecommerce-community.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/sgm-sitio-institucional-ecommerce-comunidad" />
+    <lastmod>2015-10-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/okos-minimalist-institutional-website.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/okos-sitio-institucional-minimalista" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/okos-minimalist-institutional-website.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/okos-sitio-institucional-minimalista" />
+    <lastmod>2014-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/knots-ecommerce-product-ux.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/knots-ecommerce-tienda-nube-ux-producto" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/knots-ecommerce-product-ux.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/knots-ecommerce-tienda-nube-ux-producto" />
+    <lastmod>2013-05-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+
+  <url>
+    <loc>https://raven3.com.ar/en/blog/art1-corporate-website-seo-accessibility.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/art1-web-corporativa-seo-accesibilidad" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/art1-corporate-website-seo-accessibility.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/art1-web-corporativa-seo-accesibilidad" />
+    <lastmod>2012-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.64</priority>
+  </url>
+  <!-- BLOG:END -->
 
 
   <!-- ══════════════════════════════════════════
