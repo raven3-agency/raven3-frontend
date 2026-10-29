@@ -1,4 +1,4 @@
 :HL["/propuesta/twenty/_next/static/chunks/01r3wd-c27yky.css","style"]
 :HC["/",""]
 1:[["children",{"s":"__PAGE__","h":160}]]
-0:{"b":"5zxMXc0aCQcO6X7LVcB_b","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"gzwgfj0hNIX1bnB7uUyn9","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
