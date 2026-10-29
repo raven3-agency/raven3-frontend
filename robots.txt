@@ -1,6 +1,12 @@
 User-agent: *
 Disallow: /private-directory/
 
+# Semrush Site Audit: no rastrear el blog (límite de páginas del plan)
+User-agent: SiteAuditBot
+Disallow: /private-directory/
+Disallow: /blog/
+Disallow: /en/blog/
+
 # OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
