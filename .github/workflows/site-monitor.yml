@@ -1,0 +1,35 @@
+name: 🌐 Web Monitor
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'   # Cada 5 minutos
+  workflow_dispatch:         # También ejecutable manualmente desde GitHub
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Restaura el estado de la corrida anterior para detectar cambios de estado
+      - name: Restaurar estado previo
+        uses: actions/cache@v4
+        with:
+          path: .monitor-state.json
+          key: monitor-state-${{ github.run_id }}
+          restore-keys: |
+            monitor-state-
+
+      - name: Verificar sitios y enviar alertas
+        env:
+          RESEND_API_KEY: ${{ secrets.MONITOR_RESEND_API_KEY }}
+          RAVEN3_EMAIL:   ${{ secrets.MONITOR_RAVEN3_EMAIL }}
+        run: node .github/scripts/site-monitor.js

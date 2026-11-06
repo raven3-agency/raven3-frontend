@@ -1,0 +1,1 @@
+!function(){"use strict";var e=(new Date).getFullYear();document.getElementById("copyright").innerHTML=e+" © Copyright <strong><span>Agencia raven3</span></strong>. Todos los derechos reservados. Argentina, Buenos Aires.";document.getElementById("backearth").addEventListener("click",()=>{window.location.href="https://raven3.com.ar"})}();

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0b0f17" />
+    <title>Reservas | Raven3</title>
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Rajdhani:wght@600;700&family=Share+Tech+Mono&display=swap"
+    />
+    <link rel="stylesheet" href="assets/reservas.css?v=1" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "./js/vendor/three/three.module.js",
+          "three/addons/": "./js/vendor/three/addons/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <div>
+            <strong id="tenant-name"></strong>
+            <small>Sistema de reservas</small>
+          </div>
+        </div>
+
+        <nav class="sports" id="sports" aria-label="Deportes"></nav>
+
+        <nav class="views" aria-label="Secciones">
+          <button type="button" data-view="complejo">Complejo</button>
+          <button type="button" data-view="agenda">Agenda</button>
+          <button type="button" data-view="reservas">Reservas</button>
+        </nav>
+
+        <div class="datebar">
+          <button type="button" class="icon-btn" id="date-prev" aria-label="Día anterior">&#8249;</button>
+          <label class="date-field">
+            <span class="sr-only">Fecha</span>
+            <input type="date" id="date-input" />
+          </label>
+          <button type="button" class="icon-btn" id="date-next" aria-label="Día siguiente">&#8250;</button>
+          <button type="button" class="btn btn-ghost" id="date-today">Hoy</button>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="new-booking">Nueva reserva</button>
+      </header>
+
+      <main class="main">
+        <section class="view view-complejo" id="view-complejo" hidden>
+          <div class="stage">
+            <div class="venue" id="venue">
+              <div class="venue-tools">
+                <button type="button" class="chip-btn" id="cam-general">Vista general</button>
+                <button type="button" class="chip-btn" id="cam-planta">Planta</button>
+                <button type="button" class="chip-btn chip-btn--accent" id="cam-editar" aria-pressed="false">Editar plano</button>
+              </div>
+              <ul class="legend" aria-label="Referencias">
+                <li data-status="libre">Libre</li>
+                <li data-status="ocupada">Ocupada</li>
+                <li data-status="bloqueada">Bloqueada</li>
+              </ul>
+              <div class="venue-fallback" id="venue-fallback" hidden>
+                <strong>El plano 3D no está disponible en este dispositivo.</strong>
+                <span>Las canchas y reservas se pueden seguir usando desde la Agenda.</span>
+              </div>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-head">
+                <div>
+                  <span class="timeline-time" id="time-label"></span>
+                  <span class="timeline-date" id="time-date"></span>
+                </div>
+                <button type="button" class="chip-btn" id="time-now">Ahora</button>
+              </div>
+              <div class="timeline-track">
+                <div class="heat" id="heat" aria-hidden="true"></div>
+                <input type="range" id="time-range" aria-label="Hora a visualizar en el plano" />
+              </div>
+              <div class="timeline-scale" id="time-scale" aria-hidden="true"></div>
+            </div>
+          </div>
+
+          <aside class="rail" id="rail"></aside>
+        </section>
+
+        <section class="view view-agenda" id="view-agenda" hidden>
+          <div class="view-head">
+            <h1 id="agenda-title"></h1>
+            <p id="agenda-sub"></p>
+          </div>
+          <div class="agenda-scroll" id="agenda" tabindex="0" aria-label="Agenda del día por cancha"></div>
+        </section>
+
+        <section class="view view-reservas" id="view-reservas" hidden>
+          <div class="view-head">
+            <h1>Reservas</h1>
+          </div>
+          <div class="kpis" id="list-kpis"></div>
+          <form class="filters" id="filters" role="search">
+            <label class="field field-grow">
+              <span>Buscar</span>
+              <input type="search" name="q" placeholder="Cliente, teléfono o nota" autocomplete="off" />
+            </label>
+            <label class="field">
+              <span>Período</span>
+              <select name="rango">
+                <option value="dia">Día seleccionado</option>
+                <option value="semana" selected>Próximos 7 días</option>
+                <option value="todas">Todas</option>
+              </select>
+            </label>
+            <label class="field">
+              <span>Pago</span>
+              <select name="pago">
+                <option value="">Todos</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="sena">Con seña</option>
+                <option value="pagado">Pagado</option>
+              </select>
+            </label>
+            <label class="check">
+              <input type="checkbox" name="canceladas" />
+              <span>Ver canceladas</span>
+            </label>
+          </form>
+          <div id="list"></div>
+        </section>
+      </main>
+    </div>
+
+    <dialog class="sheet" id="booking-dialog" aria-labelledby="booking-title">
+      <form id="booking-form" novalidate>
+        <header class="sheet-head">
+          <h2 id="booking-title">Nueva reserva</h2>
+          <button type="button" class="icon-btn" id="booking-close" aria-label="Cerrar">&#10005;</button>
+        </header>
+
+        <div class="sheet-body">
+          <div class="form-grid">
+            <label class="field">
+              <span>Cancha</span>
+              <select name="cancha" required></select>
+            </label>
+            <label class="field">
+              <span>Tipo</span>
+              <select name="tipo"></select>
+            </label>
+            <label class="field">
+              <span>Fecha</span>
+              <input type="date" name="fecha" required />
+            </label>
+            <label class="field">
+              <span>Hora</span>
+              <select name="inicio" required></select>
+            </label>
+            <label class="field">
+              <span>Duración</span>
+              <select name="duracion" required></select>
+            </label>
+            <label class="field" data-only="fijo">
+              <span>Repetir</span>
+              <select name="semanas">
+                <option value="1">Solo este día</option>
+                <option value="4">4 semanas</option>
+                <option value="8" selected>8 semanas</option>
+                <option value="12">12 semanas</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-grid" data-hide="bloqueo">
+            <label class="field">
+              <span>Cliente</span>
+              <input type="text" name="cliente" list="clientes" maxlength="80" autocomplete="off" />
+            </label>
+            <label class="field">
+              <span>Teléfono</span>
+              <input type="tel" name="telefono" maxlength="30" autocomplete="off" />
+            </label>
+            <datalist id="clientes"></datalist>
+            <label class="field">
+              <span>Precio</span>
+              <input type="number" name="precio" min="0" step="500" inputmode="numeric" />
+              <small class="hint" id="price-hint"></small>
+            </label>
+            <label class="field">
+              <span>Pago</span>
+              <select name="pago"></select>
+            </label>
+            <label class="field" data-only="sena">
+              <span>Seña cobrada</span>
+              <input type="number" name="sena" min="0" step="500" inputmode="numeric" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span id="notes-label">Notas</span>
+            <textarea name="notas" rows="2" maxlength="240"></textarea>
+          </label>
+
+          <p class="form-error" id="booking-error" role="alert" hidden></p>
+        </div>
+
+        <footer class="sheet-foot">
+          <button type="button" class="btn btn-danger" id="booking-cancel" hidden>Cancelar reserva</button>
+          <span class="sheet-spacer"></span>
+          <button type="submit" class="btn btn-primary" id="booking-save">Guardar</button>
+        </footer>
+      </form>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="js/app.js?v=1"></script>
+  </body>
+</html>
