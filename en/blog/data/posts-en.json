@@ -28,6 +28,33 @@
       "content": "<h2>The Challenge</h2><p>CEA American needed a digital presence that matched the seriousness of its logistics operation: refrigerated and frozen storage, dry goods, distribution, and cold chain control.</p><p>The goal wasn't just to build an institutional website, but to create a clear, trustworthy, and commercially effective platform.</p><h2>Raven3's Approach</h2><p>We built a solid corporate aesthetic, with messaging focused on operations, safety, traceability, and compliance. The structure was designed so a prospective client could quickly understand what the company does, what services it offers, and why they can trust it.</p><h2>What We Prioritized</h2><ul><li>Clarity around core services</li><li>Professional visual hierarchy</li><li>Direct commercial messaging</li><li>Integrated contact form</li><li>Fast, responsive design</li></ul><h2>Result</h2><p>The site positions CEA American as a company ready for demanding operations, with a focus on control, infrastructure, and commercial trust.</p>"
     },
     {
+      "id": 2,
+      "slug": "cea-american-b2b-logistics-conversion",
+      "title": "B2B Design for Logistics: How a Website Can Build Commercial Trust",
+      "seoTitle": "B2B Web Design for Logistics: Building Commercial Trust",
+      "seoDescription": "In a B2B logistics website like CEA American, conversion depends on conveying operational capacity, order, reliability, and a professional response.",
+      "excerpt": "In projects like CEA American, conversion doesn't depend on flashy buttons but on conveying operational capacity, order, reliability, and a professional response.",
+      "category": "ux",
+      "tags": [
+        "B2B",
+        "UX",
+        "Logistics",
+        "Conversion",
+        "Corporate Website"
+      ],
+      "date": "2023-07-13",
+      "dateFormatted": "July 13, 2023",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · B2B Conversion",
+        "initials": "R3"
+      },
+      "content": "<h2>B2B conversion works differently</h2><p>A logistics website doesn't sell the way an online store does. The visitor isn't buying on the spot: they're evaluating trust, capacity, reliability, structure, and experience.</p><h2>What a logistics website needs to communicate</h2><ul><li>What services the company offers</li><li>What kinds of products it can handle</li><li>How much operational control it has</li><li>How easy it is to get in touch or request a quote</li></ul><h2>The CEA American case</h2><p>For CEA American, the design was built around one central idea: conveying control. Every section had to reinforce that the company can handle sensitive products under specific conditions.</p><h2>Conclusion</h2><p>An effective B2B website doesn't just display information. It shapes how the company is perceived and removes friction before the first sales conversation.</p>"
+    },
+    {
       "id": 3,
       "slug": "etienne-de-montebello-interactive-editorial-experience",
       "title": "Etienne de Montebello: An Interactive Editorial Experience for a Premium Literary Work",
@@ -54,56 +81,30 @@
       "content": "<h2>A Site Built to Sell a Story, Not Just Show It</h2><p>The Etienne de Montebello project called for a different kind of digital presence: editorial, elegant, immersive, and built for conversion.</p><p>The website needed to match the world of the book and create a memorable experience for potential readers.</p><h2>The Solution</h2><p>We designed a custom visual experience centered on storytelling, book presentation, author background, and a clear path to purchasing the eBook.</p><h2>What We Built</h2><ul><li>Premium editorial experience</li><li>Immersive visual design</li><li>Sections built around reading and conversion</li><li>Mobile optimization</li><li>Commercial integration for the eBook</li></ul><h2>Result</h2><p>The site works as a digital editorial piece: it presents the book, builds atmosphere, and guides users toward the purchase.</p>"
     },
     {
-      "id": 7,
-      "slug": "ndb-propiedades-tokko-broker-integration",
-      "title": "NDB Propiedades: A Real Estate Platform Integrated with Tokko Broker",
-      "seoTitle": "NDB Propiedades: Real Estate Site Integrated with Tokko",
-      "excerpt": "How we built a custom real estate experience with advanced filters, API integration, and an architecture built to scale property listings.",
-      "category": "desarrollo",
+      "id": 4,
+      "slug": "visual-storytelling-literary-website",
+      "title": "Visual Storytelling for a Literary Website: Lessons from the Etienne de Montebello Project",
+      "seoTitle": "Visual Storytelling on a Literary Website: Etienne Case",
+      "excerpt": "When the product is a literary work, the website has to do more than inform: it has to build atmosphere, rhythm, the desire to read, and trust.",
+      "category": "ux",
       "tags": [
-        "NDB Propiedades",
-        "Tokko Broker",
-        "API",
-        "Real Estate",
-        "Advanced Filters"
+        "Visual Storytelling",
+        "Editorial UX",
+        "Web Design",
+        "Conversion",
+        "Literature"
       ],
-      "date": "2018-11-22",
-      "dateFormatted": "November 22, 2018",
-      "readTime": 8,
-      "featured": true,
-      "thumbClass": "thumb-art--dev",
+      "date": "2021-05-06",
+      "dateFormatted": "May 6, 2021",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
       "author": {
         "name": "Raven3 Team",
-        "role": "API · Web Development",
+        "role": "UX · Storytelling",
         "initials": "R3"
       },
-      "content": "<h2>The Real Estate Challenge</h2><p>A real estate website can't rely on manually uploading listings if the business needs to scale. For NDB Propiedades, the goal was to connect the site's visual experience with real data pulled directly from Tokko Broker.</p><h2>What We Built</h2><ul><li>Dynamic property listings</li><li>Filters by transaction type, area, and property type</li><li>Optimized property cards</li><li>Structure ready for detailed property pages</li><li>Tokko Broker API integration</li></ul><h2>UX Built for Search</h2><p>Real estate users want to find what they're looking for fast. That's why the experience had to prioritize clear filters, visible information, and smooth navigation.</p><h2>Result</h2><p>The platform presents properties in an organized, professional, and scalable way, eliminating the need for heavy manual administration.</p>"
-    },
-    {
-      "id": 11,
-      "slug": "sgm-institutional-site-ecommerce-community",
-      "title": "SGM+: An Institutional Site with E-Commerce to Power Community and Sign-Ups",
-      "seoTitle": "SGM+: Institutional Site with E-Commerce and Community",
-      "excerpt": "A project that combines institutional presence, online sales, community, and a conversion-focused experience.",
-      "category": "ecommerce",
-      "tags": [
-        "SGM+",
-        "E-commerce",
-        "Community",
-        "Sign-Ups",
-        "UX"
-      ],
-      "date": "2015-10-08",
-      "dateFormatted": "October 8, 2015",
-      "readTime": 7,
-      "featured": true,
-      "thumbClass": "thumb-art--ecom",
-      "author": {
-        "name": "Raven3 Team",
-        "role": "E-commerce · UX",
-        "initials": "R3"
-      },
-      "content": "<h2>More Than an Institutional Website</h2><p>SGM+ needed a platform capable of communicating its offering, sustaining a community, and enabling concrete actions like sign-ups or purchases.</p><h2>What We Delivered</h2><ul><li>Clear institutional design</li><li>Integrated e-commerce</li><li>Conversion-focused structure</li><li>Community-driven communication</li><li>Digital scalability</li></ul><h2>UX for Community</h2><p>When a website combines institutional content with sales, the key is not to artificially separate the two. The experience needs to guide users from interest to action.</p>"
+      "content": "<h2>The website as an extension of the book</h2><p>In an editorial project, the site can't feel generic. It has to match the tone of the work, introduce the author, and turn curiosity into reading.</p><h2>Key decisions</h2><ul><li>Use a visual structure that is more narrative than corporate</li><li>Create pauses between sections to encourage reading</li><li>Avoid overwhelming visitors with aggressive sales calls to action</li><li>Build a clean, readable mobile experience</li></ul><h2>What we learned</h2><p>Visual storytelling isn't decoration. It's a way of shaping how visitors perceive a work so they understand its value before they buy it.</p>"
     },
     {
       "id": 5,
@@ -132,6 +133,84 @@
       "content": "<h2>An Institutional Site Built to a Technical Standard</h2><p>Lassen Pharma needed a clear, professional corporate website, technically optimized to strengthen its digital presence.</p><p>The work combined content architecture, semantic structure, performance, and a sober institutional interface.</p><h2>Project Priorities</h2><ul><li>Institutional clarity</li><li>Technical SEO built into the structure</li><li>Web performance</li><li>Responsive design</li><li>Content hierarchy</li></ul><h2>Why Architecture Matters</h2><p>On a corporate website, SEO doesn't start when you publish a blog post. It starts with the HTML structure, the headings, how sections are organized, page speed, and how easily Google can interpret the site.</p>"
     },
     {
+      "id": 6,
+      "slug": "technical-seo-corporate-websites-lassen",
+      "title": "Technical SEO for Corporate Websites: What We Applied in Projects Like Lassen Pharma",
+      "seoTitle": "Technical SEO for Corporate Websites: Lassen Pharma Case",
+      "excerpt": "An institutional website can look right and still be poorly prepared for Google. The difference lies in its technical architecture.",
+      "category": "seo",
+      "tags": [
+        "Technical SEO",
+        "Semantic HTML",
+        "Performance",
+        "Institutional Website",
+        "Indexing"
+      ],
+      "date": "2019-09-26",
+      "dateFormatted": "September 26, 2019",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · Performance",
+        "initials": "R3"
+      },
+      "content": "<h2>The most common mistake</h2><p>Many institutional websites are designed as visual pieces and forget about technical structure. That limits their ability to rank, load fast, and be correctly understood by search engines.</p><h2>What we check at Raven3</h2><ul><li>A correct heading hierarchy</li><li>Clear, unique metadata</li><li>Optimized images</li><li>Semantic HTML</li><li>Simple URLs</li><li>Content aligned with search intent</li></ul><h2>The key point</h2><p>Technical SEO isn't something you add later. It's part of building the site from day one.</p>"
+    },
+    {
+      "id": 7,
+      "slug": "ndb-propiedades-tokko-broker-integration",
+      "title": "NDB Propiedades: A Real Estate Platform Integrated with Tokko Broker",
+      "seoTitle": "NDB Propiedades: Real Estate Site Integrated with Tokko",
+      "excerpt": "How we built a custom real estate experience with advanced filters, API integration, and an architecture built to scale property listings.",
+      "category": "desarrollo",
+      "tags": [
+        "NDB Propiedades",
+        "Tokko Broker",
+        "API",
+        "Real Estate",
+        "Advanced Filters"
+      ],
+      "date": "2018-11-22",
+      "dateFormatted": "November 22, 2018",
+      "readTime": 8,
+      "featured": true,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "API · Web Development",
+        "initials": "R3"
+      },
+      "content": "<h2>The Real Estate Challenge</h2><p>A real estate website can't rely on manually uploading listings if the business needs to scale. For NDB Propiedades, the goal was to connect the site's visual experience with real data pulled directly from Tokko Broker.</p><h2>What We Built</h2><ul><li>Dynamic property listings</li><li>Filters by transaction type, area, and property type</li><li>Optimized property cards</li><li>Structure ready for detailed property pages</li><li>Tokko Broker API integration</li></ul><h2>UX Built for Search</h2><p>Real estate users want to find what they're looking for fast. That's why the experience had to prioritize clear filters, visible information, and smooth navigation.</p><h2>Result</h2><p>The platform presents properties in an organized, professional, and scalable way, eliminating the need for heavy manual administration.</p>"
+    },
+    {
+      "id": 8,
+      "slug": "real-estate-ux-property-filters",
+      "title": "Real Estate UX: How to Design Property Filters That Actually Help Users",
+      "seoTitle": "Real Estate UX: Property Filters That Actually Help",
+      "excerpt": "In projects like NDB Propiedades, filters aren't a visual detail: they are the heart of the search experience.",
+      "category": "ux",
+      "tags": [
+        "Real Estate UX",
+        "Filters",
+        "Properties",
+        "Tokko Broker",
+        "Conversion"
+      ],
+      "date": "2018-12-13",
+      "dateFormatted": "December 13, 2018",
+      "readTime": 6,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · Real Estate",
+        "initials": "R3"
+      },
+      "content": "<h2>Users don't want to browse: they want to find</h2><p>On a real estate website, search is the core experience. If filters are confusing, slow, or hard to spot, visitors leave.</p><h2>Filters that matter</h2><ul><li>Operation: sale, long-term rental, or short-term rental</li><li>Property type</li><li>Area or location</li><li>Sorting by price or relevance</li><li>Quick access on mobile</li></ul><h2>The NDB Propiedades case</h2><p>The project was designed around dynamic search, where each property is presented with the relevant data and a clear interface for comparing options.</p><h2>Conclusion</h2><p>Good real estate UX reduces friction, improves exploration, and increases the likelihood of an inquiry.</p>"
+    },
+    {
       "id": 9,
       "slug": "beforce-digital-catalog-visual-identity",
       "title": "BEFORCE: A Digital Catalog with Strong Visual Identity and a Clear Shopping Experience",
@@ -156,6 +235,84 @@
         "initials": "R3"
       },
       "content": "<h2>A catalog is more than a gallery</h2><p>BEFORCE needed a digital presence that could showcase products with clarity, speed, and a recognizable visual identity.</p><h2>What we worked on</h2><ul><li>Brand-aligned visual design</li><li>Clean, organized product presentation</li><li>Fast, responsive experience</li><li>Simple commercial structure</li><li>Focus on clarity and inquiry generation</li></ul><h2>The goal</h2><p>When a visitor lands on a catalog, they need to understand what's on offer, how the product line is organized, and how to move toward an inquiry. The design has to support the product, not compete with it.</p>"
+    },
+    {
+      "id": 10,
+      "slug": "fast-digital-catalog-performance",
+      "title": "High-Performance Digital Catalogs: Why BEFORCE Didn't Need a Heavy Website",
+      "seoTitle": "A Lightweight, Fast Digital Catalog: The BEFORCE Case",
+      "excerpt": "To showcase products effectively, many brands don't need a complex platform: they need structure, speed, and commercial clarity.",
+      "category": "performance",
+      "tags": [
+        "Digital Catalog",
+        "Performance",
+        "UX",
+        "Product",
+        "Custom Development"
+      ],
+      "date": "2017-03-09",
+      "dateFormatted": "March 9, 2017",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Performance · UI",
+        "initials": "R3"
+      },
+      "content": "<h2>Less weight, more clarity</h2><p>An effective digital catalog doesn't need to be loaded with plugins, unnecessary animations, or structures that are hard to maintain.</p><h2>What we prioritized</h2><ul><li>Fast loading</li><li>Responsive design</li><li>Well-presented products</li><li>A simple interface</li><li>A direct path to purchase</li></ul><h2>Takeaway</h2><p>In projects like BEFORCE, performance is part of the commercial experience. If the catalog loads fast and is quick to understand, visitors are more likely to move forward.</p>"
+    },
+    {
+      "id": 11,
+      "slug": "sgm-institutional-site-ecommerce-community",
+      "title": "SGM+: An Institutional Site with E-Commerce to Power Community and Sign-Ups",
+      "seoTitle": "SGM+: Institutional Site with E-Commerce and Community",
+      "excerpt": "A project that combines institutional presence, online sales, community, and a conversion-focused experience.",
+      "category": "ecommerce",
+      "tags": [
+        "SGM+",
+        "E-commerce",
+        "Community",
+        "Sign-Ups",
+        "UX"
+      ],
+      "date": "2015-10-08",
+      "dateFormatted": "October 8, 2015",
+      "readTime": 7,
+      "featured": true,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-commerce · UX",
+        "initials": "R3"
+      },
+      "content": "<h2>More Than an Institutional Website</h2><p>SGM+ needed a platform capable of communicating its offering, sustaining a community, and enabling concrete actions like sign-ups or purchases.</p><h2>What We Delivered</h2><ul><li>Clear institutional design</li><li>Integrated e-commerce</li><li>Conversion-focused structure</li><li>Community-driven communication</li><li>Digital scalability</li></ul><h2>UX for Community</h2><p>When a website combines institutional content with sales, the key is not to artificially separate the two. The experience needs to guide users from interest to action.</p>"
+    },
+    {
+      "id": 12,
+      "slug": "ecommerce-with-community-sgm",
+      "title": "E-Commerce with Community: What We Learned Building SGM+",
+      "seoTitle": "E-Commerce with Community: What We Learned with SGM+",
+      "excerpt": "Not every e-commerce site sells products the same way. Some sell belonging, education, experience, and community.",
+      "category": "ecommerce",
+      "tags": [
+        "E-Commerce",
+        "Community",
+        "Conversion",
+        "Sign-Ups",
+        "UX"
+      ],
+      "date": "2015-10-29",
+      "dateFormatted": "October 29, 2015",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-Commerce · Strategy",
+        "initials": "R3"
+      },
+      "content": "<h2>Selling isn't always about showing a product</h2><p>In projects like SGM+, conversion depends on communicating trust, community, and purpose. Visitors need to understand what the brand stands for before they move forward.</p><h2>Key elements</h2><ul><li>A clear institutional message</li><li>Visible access to sign-up or purchase</li><li>Mobile-first design</li><li>Content hierarchy</li><li>Trust and visual continuity</li></ul><h2>Conclusion</h2><p>An e-commerce site built around a community needs a different architecture: less cold catalog and more of an emotional, informative, and commercial journey.</p>"
     },
     {
       "id": 13,
@@ -184,6 +341,32 @@
       "content": "<h2>Minimalism with intent</h2><p>OKOS needed a clean, direct, and fast institutional website. The goal wasn't to do less for the sake of simplicity, but to cut the noise so the brand would come through more clearly.</p><h2>What we prioritized</h2><ul><li>Brand clarity</li><li>Load speed</li><li>Clean UI</li><li>Optimized technical structure</li><li>Responsive experience</li></ul><h2>Result</h2><p>The site conveys professionalism without overwhelming the user, keeping the experience fast and focused.</p>"
     },
     {
+      "id": 14,
+      "slug": "minimalist-web-design-performance-okos",
+      "title": "Minimalist Web Design and Performance: Why Less Interface Can Convert Better",
+      "seoTitle": "Minimalist Web Design: Less Interface, More Conversion",
+      "excerpt": "The OKOS case shows how a minimalist website can improve clarity, speed, and brand perception without losing visual presence.",
+      "category": "performance",
+      "tags": [
+        "Minimalism",
+        "Performance",
+        "UX",
+        "Institutional Website",
+        "UI"
+      ],
+      "date": "2014-04-10",
+      "dateFormatted": "April 10, 2014",
+      "readTime": 4,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Performance · UX",
+        "initials": "R3"
+      },
+      "content": "<h2>Fewer elements, less friction</h2><p>A well-designed minimalist interface reduces distractions, improves load times, and helps visitors understand faster what the brand offers.</p><h2>The risk</h2><p>Minimalist doesn't mean empty. A website that's too sparse can feel unfinished. The key is to work on hierarchy, contrast, spacing, and content.</p><h2>What we applied</h2><ul><li>Clear sections</li><li>A lightweight design</li><li>Good readability</li><li>A simple architecture</li><li>A focus on identity</li></ul>"
+    },
+    {
       "id": 15,
       "slug": "art1-corporate-website-seo-accessibility",
       "title": "ART1: A Corporate Website Built for SEO, Accessibility, and Performance",
@@ -210,6 +393,32 @@
       "content": "<h2>Bringing order to a broad service offering</h2><p>ART1 runs multiple service lines: graphics, printing, environmental branding, dimensional lettering, design, branding, cutting, and engraving. The website needed to organize that offering in a way that was clear and scalable.</p><h2>What we worked on</h2><ul><li>SEO structure by service</li><li>Clear sections for each business line</li><li>Web accessibility</li><li>Optimized performance</li><li>Visual stability</li></ul><h2>Why structure matters</h2><p>When a company offers many services, a generic landing page isn't enough. Each service needs its own page or section capable of ranking, explaining, and converting.</p>"
     },
     {
+      "id": 16,
+      "slug": "seo-structure-service-website-art1",
+      "title": "How to Structure a Graphic Services Website to Rank Better: The ART1 Case",
+      "seoTitle": "How to Structure a Service Website for SEO: ART1 Case",
+      "excerpt": "A company with multiple services needs an SEO architecture, not just visual design. Each service needs its own space, intent, and message.",
+      "category": "seo",
+      "tags": [
+        "Service SEO",
+        "ART1",
+        "Web Architecture",
+        "Web Design",
+        "Rankings"
+      ],
+      "date": "2012-09-06",
+      "dateFormatted": "September 6, 2012",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · Architecture",
+        "initials": "R3"
+      },
+      "content": "<h2>The problem with generic websites</h2><p>When every service is explained on a single page, Google has fewer signals to understand what the company offers, and visitors have a harder time finding what they're looking for.</p><h2>The solution</h2><p>In projects like ART1, it pays to build an architecture around services: graphics, printing, environmental graphics, dimensional letters, design and branding, cutting and engraving.</p><h2>Benefits</h2><ul><li>Better indexing</li><li>Greater commercial clarity</li><li>More ranking opportunities</li><li>More specific content</li><li>A better browsing experience</li></ul>"
+    },
+    {
       "id": 17,
       "slug": "knots-ecommerce-product-ux",
       "title": "Knots: Optimizing a Tienda Nube Store Around the Shopping Experience",
@@ -234,6 +443,32 @@
         "initials": "R3"
       },
       "content": "<h2>Optimizing on top of an existing platform</h2><p>Knots runs on Tienda Nube, a platform that already handles most of the e-commerce infrastructure. The challenge was improving the experience, product presentation, and commercial structure within that framework.</p><h2>What we prioritized</h2><ul><li>Clear catalog presentation</li><li>Purchase UX</li><li>Visual product hierarchy</li><li>Commercial clarity</li><li>Navigation optimization</li></ul><h2>Takeaway</h2><p>An online store doesn't improve just by having products listed. It improves when each product is easy to understand, easy to compare, and the path to purchase is simple.</p>"
+    },
+    {
+      "id": 18,
+      "slug": "tienda-nube-ux-conversion-knots",
+      "title": "UX on Tienda Nube: Small Decisions That Can Improve Conversion",
+      "seoTitle": "UX on Tienda Nube: Decisions That Improve Conversion",
+      "excerpt": "In e-commerce, the shopping experience is defined by details: photos, titles, hierarchy, categories, trust, and a clear path to purchase.",
+      "category": "ecommerce",
+      "tags": [
+        "Tienda Nube",
+        "UX",
+        "Conversion",
+        "E-Commerce",
+        "Product"
+      ],
+      "date": "2013-06-06",
+      "dateFormatted": "June 6, 2013",
+      "readTime": 5,
+      "featured": false,
+      "thumbClass": "thumb-art--ecom",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · E-Commerce",
+        "initials": "R3"
+      },
+      "content": "<h2>The platform doesn't do everything</h2><p>Tienda Nube makes it easy to sell online, but conversion depends on how the brand is presented, how products are organized, and how easy it is to move toward checkout.</p><h2>What to review in a store</h2><ul><li>Clear product titles</li><li>Consistent photos</li><li>Simple categories</li><li>Visible information</li><li>Trust before checkout</li></ul><h2>The takeaway</h2><p>In projects like Knots, optimization doesn't always require rebuilding everything. Often, improving structure, clarity, and the browsing experience is enough.</p>"
     },
     {
       "id": 19,
@@ -264,6 +499,351 @@
       "content": "<h2>Why Core Web Vitals matter for your business</h2><p>Since 2021, Google has used Core Web Vitals as a ranking signal. But beyond SEO, these metrics measure something real: how fast and stable your site feels to someone browsing on a phone over a 4G connection.</p><p>A site that passes the Core Web Vitals thresholds converts better, bounces less, and ranks higher. The three current metrics are LCP, CLS, and INP.</p><h2>LCP: Largest Contentful Paint</h2><p>LCP measures how long it takes for the largest visible element on the screen to render (usually the hero image or main headline). Google's threshold is <strong>2.5 seconds or less</strong>.</p><p>The most common causes of slow LCP: unoptimized images, a slow server (high TTFB), render-blocking CSS or JS, and web fonts that delay visible text.</p><p>Practical fixes: preload the hero image with <code>link rel='preload'</code>, convert images to WebP or AVIF, use a CDN for static assets, and enable Brotli compression on the server.</p><h2>CLS: Cumulative Layout Shift</h2><p>CLS measures unexpected visual shifts during load: that moment when text jumps because an image loaded without defined dimensions. The threshold is <strong>0.1 or less</strong>.</p><p>Common causes: images and videos without defined width and height attributes, dynamically injected content (banners, pop-ups), and web fonts that change the layout when they load.</p><p>Direct fix: always include width and height on img tags. For fonts, use font-display: swap. For dynamic content, reserve the space before it loads.</p><h2>INP: Interaction to Next Paint</h2><p>INP replaced FID in 2024. It measures how long the page takes to respond to any user interaction (click, tap, keystroke). The threshold is <strong>200ms or less</strong>.</p><p>A high INP is usually caused by heavy JavaScript blocking the main thread. Solutions: break long tasks into smaller chunks, defer non-critical JS, and avoid heavy libraries when lighter native alternatives exist.</p><h2>How to measure your Core Web Vitals right now</h2><p>Three free tools: <strong>PageSpeed Insights</strong> (pagespeed.web.dev) shows real field data from actual users. <strong>Search Console</strong>, under \"Page Experience,\" shows which URLs have issues. <strong>Chrome DevTools</strong> with Lighthouse lets you analyze in real time during development.</p><p>Important: field data (CrUX) is what Google actually uses for ranking. Lab data (Lighthouse) is useful for diagnosis, but it isn't the same data the algorithm uses.</p><h2>A priority action plan</h2><p>If your Core Web Vitals are in the red, here's the order of impact: start by optimizing images (the biggest win for the least effort), then fix CLS by defining dimensions, next tackle TTFB with better hosting or a CDN, and finally audit your JavaScript if INP is still high.</p>"
     },
     {
+      "id": 20,
+      "slug": "local-seo-argentina-guide",
+      "title": "Local SEO in Argentina: How to Show Up on Google Maps and Capture Searches in Your Area",
+      "seoTitle": "Local SEO in Argentina: How to Show Up on Google Maps",
+      "seoDescription": "How to show up on Google Maps and in local searches: a local SEO guide for businesses in Argentina with a physical location or a defined service area.",
+      "excerpt": "For businesses with a physical location or a defined service area, local SEO is the most profitable digital marketing investment. This guide explains how to master it in Argentina.",
+      "category": "seo",
+      "tags": [
+        "Local SEO",
+        "Google Maps",
+        "Google Business Profile",
+        "Argentina",
+        "Local Business"
+      ],
+      "date": "2023-12-14",
+      "dateFormatted": "December 14, 2023",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The Local Pack: Google's most valuable result</h2><p>When someone searches for 'dentist in Palermo' or 'hardware store north zone', Google shows a block of 3 results with a map, rating, and address before the organic results. That block is called the Local Pack, and its click-through rate is much higher than any traditional organic position.</p><p>To appear in the Local Pack you need two things: an optimized Google Business Profile and local relevance signals on your website.</p><h2>Google Business Profile: the foundation of everything</h2><p>GBP (formerly Google My Business) is free and it's the most impactful thing you can do for local SEO. Key points to optimize it: use the business's real name without adding extra keywords (Google penalizes keyword stuffing in the name). Choose the most specific primary category possible and add secondary categories. Keep the address exactly the same as it appears on your website. Update your hours, including Argentine national holidays. Add at least 10 quality photos of the premises, the team, and your services.</p><h2>A review strategy that works</h2><p>Reviews are the most important conversion factor in the Local Pack. A process for getting reviews consistently: after every successful job, send a WhatsApp message with a direct link to leave a Google review. Reply to every review, positive and negative, within 48 hours. Never buy fake reviews: Google detects and penalizes them.</p><h2>On-page optimization for local SEO</h2><p>Your website and your GBP must be in sync. Your name, address, and phone number (NAP) must be <strong>identical</strong> on the site and on Google. Include the address as visible text, not just in an image. Embed a Google map on your contact page. Implement LocalBusiness schema with JSON-LD.</p><h2>Local keywords: how to find them</h2><p>The local searches with the highest intent follow the pattern [service] + [neighborhood or city]. To find the most searched ones: watch Google's autocomplete as you type your services, check Search Console for queries with area names that already generate impressions, and use Keyword Planner with a city filter.</p><h2>Relevant local directories in Argentina</h2><p>Citations in external directories reinforce local relevance. Important directories for the Argentine market: Páginas Amarillas, Infonegocios, your area's chamber of commerce, industry-specific directories, and local news portals. The critical part: your NAP must be exactly the same in all of them.</p>"
+    },
+    {
+      "id": 21,
+      "slug": "cart-abandonment-ecommerce-recovery",
+      "title": "E-Commerce Cart Abandonment: The Real Causes and How to Recover Those Sales",
+      "seoTitle": "Cart Abandonment: Causes and How to Recover Lost Sales",
+      "excerpt": "70% of shopping carts are abandoned before checkout is completed. This guide explains why it happens and which concrete actions bring that number down.",
+      "category": "ecommerce",
+      "tags": [
+        "Cart Abandonment",
+        "E-Commerce",
+        "Conversion",
+        "Email Marketing",
+        "Checkout"
+      ],
+      "date": "2024-02-08",
+      "dateFormatted": "February 8, 2024",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>E-commerce's most expensive problem</h2><p>Out of every 10 users who add a product to their cart, 7 leave without buying. Bringing cart abandonment down from 70% to 60% can mean 15% more revenue without spending an extra cent on advertising.</p><h2>Why users abandon: the real causes</h2><p>The main reasons are: unexpected shipping costs at checkout, being forced to create an account before buying, a checkout process that's too long, not being able to see the total including taxes from the start, and distrust in the site's security.</p><p>Most of them are checkout problems, not product or price problems.</p><h2>Checkout fixes with immediate impact</h2><p><strong>Guest checkout:</strong> letting people buy without creating an account can raise conversion by up to 35%. You can offer an account after the purchase.</p><p><strong>Show total costs from the start:</strong> include a shipping calculator on the product page or in the cart. A price surprise at the last step is the number one cause of abandonment.</p><p><strong>Fewer steps:</strong> the ideal checkout has 3 steps: personal details, shipping, payment. Every extra step reduces conversions.</p><p><strong>Multiple payment methods:</strong> in Argentina, offering Mercado Pago, bank transfer, and interest-free installments is practically mandatory if you don't want to lose sales.</p><h2>Email recovery flow</h2><p>A well-configured 3-email flow recovers between 5% and 15% of lost carts. Email 1 after one hour, with a reminder and a photo of the product. Email 2 after 24 hours, reinforcing the value and adding reviews. Email 3 after 72 hours, with a concrete incentive such as a discount or free shipping.</p><h2>Remarketing: reminding them off-site</h2><p>Combined with emails, remarketing on Meta Ads or Google Ads to users who abandoned their cart has a very high ROI because the user already knows the product. The message should be specific to the product they viewed, not generic.</p>"
+    },
+    {
+      "id": 22,
+      "slug": "web-forms-that-convert",
+      "title": "Web Forms That Convert: UX Principles and Mistakes That Cost You Leads",
+      "seoTitle": "Web Forms That Convert: UX Principles and Costly Mistakes",
+      "excerpt": "The form is the last step before a visitor becomes a lead or a customer. These UX principles reduce friction and increase submissions.",
+      "category": "ux",
+      "tags": [
+        "UX",
+        "Web Forms",
+        "Conversion",
+        "Leads",
+        "Web Design"
+      ],
+      "date": "2024-04-18",
+      "dateFormatted": "April 18, 2024",
+      "readTime": 8,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · CRO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The form is the most overlooked bottleneck</h2><p>You can have the best design, the best copy, and the best product, but if your contact form creates friction, you lose the lead. Most sites have forms designed for the developer's convenience, not the user's.</p><h2>How many fields is too many</h2><p>The general rule: ask only for what you really need right now. Every extra field lowers the conversion rate. Studies show that going from 6 fields down to 3 can increase submissions by 50%.</p><p>Fields that should almost never be in a first contact form: phone number if you're not going to call right away, company, estimated budget, and any 'how did you hear about us' field unless you actually use that data.</p><h2>Field order and grouping</h2><p>The brain processes grouped information better. The easiest fields go first to build momentum: name and email first, then the message or the service of interest.</p><h2>Labels and placeholders: the most common mistake</h2><p>Using only the placeholder as a label is an accessibility and usability mistake. When the user starts typing, the placeholder disappears and they no longer know what the field was for. Always use a visible label, either static above the field or floating.</p><h2>Real-time validation</h2><p>Validation should happen field by field, not only on submit. If the user enters an email with the wrong format, let them know when they leave the field, not when they try to submit the whole form. Validating only on submit creates frustration and abandonment.</p><h2>The submit button matters more than you think</h2><p>'Submit' is the worst possible button text. Use benefit-oriented text: 'Request a quote', 'Contact me', 'Start my project'. The button text is the last piece of microcopy before conversion.</p><h2>Confirm the submission properly</h2><p>After a successful submission, show a confirmation screen that explains when and how you'll reply. Never leave the user on the same page with an empty form.</p>"
+    },
+    {
+      "id": 23,
+      "slug": "semantic-html-web-accessibility",
+      "title": "Semantic HTML and Accessibility: The Code Google and Your Users Will Thank You For",
+      "seoTitle": "Semantic HTML and Accessibility: A Guide for SEO",
+      "excerpt": "Semantic HTML isn't just good practice: it improves SEO, makes maintenance easier, and makes your site accessible to millions of users with disabilities.",
+      "category": "desarrollo",
+      "tags": [
+        "Semantic HTML",
+        "Web Accessibility",
+        "WCAG",
+        "SEO",
+        "Web Development"
+      ],
+      "date": "2024-06-27",
+      "dateFormatted": "June 27, 2024",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The problem with non-semantic HTML</h2><p>A site built with nested divs can look exactly like one built with semantic HTML. But for Google, for screen readers, and for the developer maintaining it months later, the difference is huge.</p><h2>The semantic tags that matter most</h2><p><strong>header:</strong> the header of the page or a section, with the logo and main navigation. <strong>nav:</strong> a navigation block, which lets screen readers jump straight to the navigation. <strong>main:</strong> the main content; there should be only one per page. <strong>article:</strong> self-contained content such as a blog post or a news item. <strong>section:</strong> a thematic grouping that should always have a heading. <strong>aside:</strong> related but non-essential content, such as a sidebar or widgets. <strong>footer:</strong> the page footer, with contact details and legal links.</p><h2>Heading hierarchy: the most frequent mistake</h2><p>There should be only one h1 per page. h2s are the main sections, and h3s are subsections of those h2s. Never skip levels for visual reasons: if you want smaller text, use CSS. Google uses headings to understand the structure of the content.</p><h2>Basic accessibility every site should have</h2><ul><li>Every image should have descriptive alt text, or an empty alt if it's decorative.</li><li>Links should have descriptive text. 'Click here' says nothing out of context.</li><li>The contrast between text and background should meet a minimum ratio of 4.5:1.</li><li>The site should be fully navigable with the keyboard alone (Tab, Enter, arrow keys).</li><li>Forms should have a label associated with every input.</li></ul><h2>ARIA: when to use it and when not to</h2><p>The golden rule: don't use ARIA if there's a native HTML element that does the same thing. A button with role='button' is redundant. A div with role='button' is a patch that signals you should be using a real button.</p>"
+    },
+    {
+      "id": 24,
+      "slug": "image-optimization-webp-avif",
+      "title": "Web Images in 2024: WebP, AVIF, and the Techniques That Cut Page Weight in Half",
+      "seoTitle": "Web Images: WebP, AVIF, and How to Cut Page Weight in Half",
+      "seoDescription": "Images are the heaviest resource on almost every site. Modern formats (WebP, AVIF) and the optimization techniques that most improve speed.",
+      "excerpt": "Images are the heaviest resource on most websites. This guide explains modern formats and the optimization techniques with the biggest impact on performance.",
+      "category": "performance",
+      "tags": [
+        "Image Optimization",
+        "WebP",
+        "AVIF",
+        "Web Performance",
+        "Lazy Loading"
+      ],
+      "date": "2024-08-15",
+      "dateFormatted": "August 15, 2024",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Performance · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Why images are the main performance problem</h2><p>On average, images account for 50-60% of a web page's total weight. A photo taken with a modern phone can weigh 4-8MB. Without optimization, that image can wreck your LCP and make the site feel slow even on good hosting.</p><h2>Modern formats: WebP and AVIF</h2><p><strong>WebP:</strong> developed by Google, it's supported by every modern browser. It compresses images 25% to 35% better than JPEG with no visible loss of quality. It's the minimum you should be using today.</p><p><strong>AVIF:</strong> newer and more efficient. It compresses 50% to 60% better than JPEG. Browser support is already broad. The recommended strategy is to serve AVIF with WebP and JPEG fallbacks using the picture element.</p><h2>Responsive images: delivering the right size</h2><p>There's no point loading a 1920px image on a phone with a 400px screen. The srcset attribute lets you specify multiple versions of an image so the browser picks the most appropriate one. Use 400w, 800w, and 1200w versions to serve the right size for each device.</p><h2>Lazy loading: don't load what isn't visible</h2><p>The loading='lazy' attribute keeps images outside the initial viewport from loading until the user gets close to them. It's one line of code that can significantly improve initial load time. Never lazy-load the hero image: it needs to load immediately.</p><h2>Always set dimensions</h2><p>Always setting the width and height attributes on images prevents CLS. Without dimensions, the browser doesn't know how much space to reserve, and content jumps when the image loads, which directly affects Core Web Vitals.</p><h2>Tools for optimizing images</h2><p>Squoosh (squoosh.app) for manual optimization with a real-time preview. ImageMagick for batch processing. On WordPress, plugins like ShortPixel or Imagify automate the process. In custom projects, the Sharp library for Node.js is the fastest.</p>"
+    },
+    {
+      "id": 25,
+      "slug": "google-search-console-how-to-use",
+      "title": "Google Search Console: How to Read the Data and Make SEO Decisions",
+      "seoTitle": "Google Search Console: How to Read and Use the Data",
+      "seoDescription": "Search Console is the free tool for understanding how Google sees your site. The most important reports and what to do with each one.",
+      "excerpt": "Search Console is the most powerful free tool for understanding how Google sees your site. This guide explains the most important reports and what to do with each one.",
+      "category": "seo",
+      "tags": [
+        "Google Search Console",
+        "SEO",
+        "Indexing",
+        "Keywords",
+        "Web Analytics"
+      ],
+      "date": "2024-10-03",
+      "dateFormatted": "October 3, 2024",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The tool few people use well</h2><p>Google Search Console is free, official, and shows data no other tool has: the real search queries that bring traffic to your site, the indexing problems Google detects, and the status of your Core Web Vitals based on real user data.</p><h2>The Performance report: the most valuable one</h2><p>Under 'Search results' you'll find clicks, impressions, CTR, and average position. The most useful views in Queries: keywords where you have many impressions but a low CTR (they need better meta titles and descriptions), and keywords in positions 8-15, which are the biggest opportunities to climb into the top 5.</p><h2>Coverage: spotting indexing problems</h2><p>The coverage report shows which URLs Google has indexed and which ones have problems. The statuses are: Valid (indexed), Excluded (not indexed, which may be intentional), and Errors (Google wants to index them but can't). The most common errors: 404 pages without a redirect and URLs accidentally blocked by robots.txt.</p><h2>Core Web Vitals in Search Console</h2><p>Unlike Lighthouse, which measures in lab conditions, the Core Web Vitals in Search Console are real user data. They're the data Google uses for ranking. Check this report monthly: when a URL moves from 'Poor' to 'Good', the effect on rankings usually shows up within 2-4 weeks.</p><h2>A recommended monthly review routine</h2><p>15 minutes a month can make a big difference: check for new coverage errors, identify the 5 keywords closest to the top 3 and optimize those pages, compare traffic with the previous month to catch drops, and check whether any important page lost positions.</p>"
+    },
+    {
+      "id": 26,
+      "slug": "online-store-hot-sale-black-friday",
+      "title": "Hot Sale and Black Friday: How to Prepare Your Online Store for the Biggest Sales Days",
+      "seoTitle": "Hot Sale and Black Friday: How to Prepare Your Online Store",
+      "seoDescription": "Discount events create traffic spikes that can make or break a month. How to prepare the technical, commercial, and operational sides of your store.",
+      "excerpt": "Discount events create traffic spikes that can make or break an entire month. This guide explains how to prepare the technical, commercial, and operational sides of your store.",
+      "category": "ecommerce",
+      "tags": [
+        "Hot Sale",
+        "Black Friday",
+        "E-Commerce",
+        "Discounts",
+        "Online Store Prep"
+      ],
+      "date": "2024-12-05",
+      "dateFormatted": "December 5, 2024",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The traffic spike very few stores make the most of</h2><p>Hot Sale, Argentina's biggest online sales event, moves billions of pesos in just a few days. But many online stores lose sales on these dates not for lack of demand, but because of technical, operational, or communication problems that could have been avoided.</p><h2>Technical preparation: what can't fail</h2><p><strong>Performance under load:</strong> your store loads fine on quiet days, but Hot Sale can bring 10 times more simultaneous traffic. Make sure your hosting can handle those spikes, or consider temporarily upgrading your plan.</p><p><strong>A tested checkout:</strong> place a complete test order a week before. It's surprising how many stores have a broken checkout and don't find out until a wave of customers tries to buy.</p><h2>Commercial preparation: the offer that converts</h2><p>Generic '20% off everything' offers convert worse than specific ones. Strategies that work better: tiered discounts (more units, bigger discount), product bundles at a special price, and real urgency with a countdown and visible stock when inventory is running low.</p><h2>Communication before, during, and after</h2><p>80% of sales on special dates come from your existing customer base, not from new traffic. Before the date: an early-notice email. During: a launch email and a reminder. After: a thank-you email with a follow-up offer for those who bought.</p><h2>Logistics and customer service</h2><p>The biggest post-purchase problem on special dates is shipping delays. Communicate delivery times clearly before the purchase, not after. If you know the volume will delay shipments, say so on the product page and at checkout.</p>"
+    },
+    {
+      "id": 27,
+      "slug": "color-psychology-web-design",
+      "title": "Color Psychology in Web Design: What Each Color Conveys and How to Use It for Your Brand",
+      "seoTitle": "Color Psychology in Web Design: How to Use It for Your Brand",
+      "seoDescription": "Color is the first visual decision the brain processes. What each hue communicates and how to use it to trigger the right emotion on your website.",
+      "excerpt": "Color is the first visual decision the brain processes. Understanding what each hue communicates helps you design interfaces that trigger the right emotion in users.",
+      "category": "ux",
+      "tags": [
+        "Color Psychology",
+        "Web Design",
+        "UX",
+        "Branding",
+        "UI"
+      ],
+      "date": "2025-02-13",
+      "dateFormatted": "February 13, 2025",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · Design · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Color communicates before users read a single word</h2><p>90% of snap judgments about a product are based on color alone within the first 90 seconds. Color isn't decoration: it's the first message users receive, before the logo, before the copy, before any other visual element.</p><h2>What each color conveys</h2><p><strong>Blue:</strong> trust, security, professionalism. It's no accident that it's the dominant color in banking, insurance, and technology. When you need users to feel they can trust you, blue is the most direct option.</p><p><strong>Green:</strong> growth, health, success. It works well for sustainable, health, and personal finance brands. It's the quintessential color for confirmation buttons.</p><p><strong>Red:</strong> urgency, passion, energy. It triggers an immediate emotional response. Effective for CTAs, limited-time offers, and fast food brands. Use it sparingly.</p><p><strong>Orange:</strong> optimism, creativity, warmth. It communicates action without the aggressiveness of red. Popular with mass-market consumer brands.</p><p><strong>Black:</strong> luxury, exclusivity, sophistication. Premium brands use it to say the product doesn't need to justify itself.</p><p><strong>White:</strong> cleanliness, simplicity, space. It isn't 'no color': it's the decision to let the content breathe.</p><h2>Contrast and accessibility</h2><p>The contrast between text and background should meet WCAG standards: a minimum ratio of 4.5:1 for body text. 8% of men have some form of color blindness, so never communicate information through color alone.</p><h2>Color palette: less is more</h2><p>An effective web palette has 1 primary brand color, 1 accent color for CTAs and key elements, and neutrals for text and backgrounds. More colors without a hierarchy create visual noise and make the site feel less professional.</p>"
+    },
+    {
+      "id": 28,
+      "slug": "rest-apis-javascript-frontend",
+      "title": "Consuming REST APIs from the Frontend: A Practical Guide with Modern JavaScript",
+      "seoTitle": "Consuming REST APIs from the Frontend with JavaScript",
+      "excerpt": "Fetch, async/await, error handling, and best practices for integrating any API into a web project. Everything you need to know, without frameworks.",
+      "category": "desarrollo",
+      "tags": [
+        "REST APIs",
+        "JavaScript",
+        "Fetch API",
+        "Async Await",
+        "Frontend"
+      ],
+      "date": "2025-04-10",
+      "dateFormatted": "April 10, 2025",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>What is a REST API and why does it matter on the frontend?</h2><p>A REST API is an interface that lets your frontend talk to a server: fetch data, send it, update it, or delete it. Integrating APIs is a core skill in modern web development, from displaying a real estate agency's listings to processing payments or loading blog posts.</p><h2>The Fetch API: the native, modern way</h2><p>Browsers have shipped the Fetch API natively since 2015. You don't need external libraries for most cases. A basic GET request: call fetch() with the URL, await the response, convert it to JSON with response.json(), and handle the result. If the API requires authentication, pass the token in the request headers.</p><h2>Async/await: the current standard</h2><p>Async/await makes asynchronous code read almost exactly like synchronous code. Always wrap API calls in a try/catch block to capture errors. A network error (no connection) and an API error (a 404 or 500 response) are different and need to be handled differently.</p><h2>The most common HTTP methods</h2><p><strong>GET:</strong> retrieves data and doesn't change anything. <strong>POST:</strong> creates a new resource or submits a form. <strong>PUT/PATCH:</strong> updates an existing resource. PUT replaces it entirely, while PATCH changes only some fields. <strong>DELETE:</strong> removes a resource.</p><h2>Handling state in the UI</h2><p>Every API call has three states: loading (request in progress), success (the data arrived), and error (something failed). The UI should reflect all three: a skeleton screen while loading, the content on success, and a descriptive message on error.</p><h2>Best practices for production</h2><p>Never expose API keys on the frontend: anyone who inspects the code can see them. Debounce real-time search so you don't send a request on every keystroke. Cache responses that don't change often to improve performance.</p>"
+    },
+    {
+      "id": 29,
+      "slug": "production-performance-monitoring",
+      "title": "How to Monitor Your Site's Performance in Production: Metrics and Tools",
+      "seoTitle": "How to Monitor Your Website's Performance in Production",
+      "seoDescription": "Performance changes with every piece of content, plugin, or deploy. How to monitor your site in production and catch regressions before your users do.",
+      "excerpt": "Optimizing once isn't enough. Performance changes over time: new content, plugins, code changes. This guide explains how to catch regressions before they affect users.",
+      "category": "performance",
+      "tags": [
+        "Web Monitoring",
+        "Performance",
+        "RUM",
+        "Lighthouse CI",
+        "Web Vitals"
+      ],
+      "date": "2025-06-19",
+      "dateFormatted": "June 19, 2025",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--perf",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Performance · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The 'I optimized it once' problem</h2><p>A site that passes Core Web Vitals today can fail them in three months if someone adds a heavy image, a new third-party script, or a plugin with render-blocking CSS. Without continuous monitoring, regressions go unnoticed until Google penalizes them or users complain.</p><h2>Two kinds of monitoring: lab and field</h2><p><strong>Lab:</strong> tests run under controlled conditions, like Lighthouse. Useful for catching problems during development, reproducible, and easy to automate.</p><p><strong>Field:</strong> real data from real users on their own devices and connections. It's what Google measures for ranking. You get it through RUM (Real User Monitoring) tools.</p><h2>Continuous monitoring tools</h2><p><strong>Google Search Console:</strong> the free starting point. It shows real Core Web Vitals grouped by URL. Checking it monthly reveals trends and emerging problems.</p><p><strong>Lighthouse CI:</strong> integrates Lighthouse into your CI/CD pipeline. Every deploy automatically runs an audit and can be blocked if the score drops below a threshold.</p><p><strong>WebPageTest:</strong> detailed tests from multiple geographic locations. Ideal for in-depth diagnosis of specific regressions.</p><h2>Alerts: when to get notified</h2><p>Set up alerts so you hear about it when something changes. Recommended thresholds: alert if LCP exceeds 3 seconds for more than 20% of users, if CLS exceeds 0.15, or if average TTFB exceeds 1 second.</p><h2>Performance budget: set limits before they're exceeded</h2><p>A performance budget is a set of limits the team agrees not to exceed: maximum page weight, maximum number of requests, minimum Lighthouse score. Defining it before the project starts and automating its enforcement prevents performance debt from piling up.</p>"
+    },
+    {
+      "id": 30,
+      "slug": "ai-seo-google-2025",
+      "title": "AI and SEO in 2025: How Google's AI Overviews Are Changing the Game",
+      "seoTitle": "AI and SEO: How Google's AI Overviews Change the Game",
+      "excerpt": "Google is showing AI-generated answers before the organic results. That changes what kind of content ranks and how you need to write to stay visible.",
+      "category": "seo",
+      "tags": [
+        "SEO 2025",
+        "AI Overviews",
+        "Google SGE",
+        "SEO Content",
+        "Artificial Intelligence"
+      ],
+      "date": "2025-08-21",
+      "dateFormatted": "August 21, 2025",
+      "readTime": 11,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>What AI Overviews are and why they change SEO</h2><p>Google AI Overviews is the AI-generated answer block that appears at the top of the results for many queries. Instead of showing links, Google generates a direct answer using information from multiple sources.</p><p>This has a direct impact: for simple informational queries, users can get the answer without clicking on any site.</p><h2>Which searches trigger AI Overviews</h2><p>Not every search shows them. They appear mainly for 'how to' or 'what is' questions, comparison queries, and definition and research searches. Searches with direct purchase intent, brand searches, and local searches still show organic results more often.</p><h2>How to rank in AI Overviews</h2><p>Google pulls information from sites that already rank well organically. The traits that increase your chances of being cited: direct, concise answers at the start of the content, a clear structure with descriptive headings, E-E-A-T content (Experience, Expertise, Authoritativeness, Trustworthiness), and specific data with concrete examples.</p><h2>The content AI does NOT replace</h2><p>AI generates generic answers. What it can't replicate: real experiences and your own case studies, genuine editorial opinions, specific local and regional content, real-time updates, and content that depends on trust in a specific person or brand.</p><p>Content based on real experience (like an agency's project case studies) is more valuable than ever.</p>"
+    },
+    {
+      "id": 31,
+      "slug": "ecommerce-email-marketing-strategy",
+      "title": "Email Marketing for E-Commerce: The Strategy That Generates Sales While You Sleep",
+      "seoTitle": "Email Marketing for E-Commerce: Flows That Sell on Autopilot",
+      "excerpt": "Email has the highest ROI of any digital marketing channel. This guide explains the automated flows every e-commerce store should have set up.",
+      "category": "ecommerce",
+      "tags": [
+        "Email Marketing",
+        "E-Commerce",
+        "Automation",
+        "ROI",
+        "Customer Retention"
+      ],
+      "date": "2025-10-16",
+      "dateFormatted": "October 16, 2025",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--ecomm",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "E-Commerce · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>Why email is still the channel with the best ROI</h2><p>For every dollar invested in email marketing, the average return is 36 to 1. That far outperforms social media, SEO, and paid advertising. The reason: you're talking to people who already chose to hear from you, on their most personal channel, without paying for every impression.</p><h2>The automated flows you can't skip</h2><p><strong>Welcome:</strong> sent when someone subscribes or buys for the first time. It's the email with the highest open rate (50-60%). It should introduce the brand and offer an incentive for the first purchase.</p><p><strong>Abandoned cart:</strong> a 3-email sequence for when someone adds products but doesn't buy. Email 1 after one hour (a reminder with a photo of the product), Email 2 after 24 hours (value + reviews), Email 3 after 72 hours (a concrete incentive). It recovers between 5% and 15% of lost carts.</p><p><strong>Post-purchase:</strong> Email 1 with the order confirmation, Email 2 after 3-5 days with a usage guide, Email 3 after 2-3 weeks asking for a review and showing complementary products.</p><p><strong>Re-engagement:</strong> for subscribers or customers with no interaction in 90+ days. A 'we miss you' email with a concrete offer. If they don't respond after 2-3 attempts, it's better to remove them to protect your sender reputation.</p><h2>Segmentation: the effectiveness multiplier</h2><p>An email sent to your whole list converts far less than the same email sent to the right segment. Basic segments: buyers vs. subscribers only, repeat vs. one-time buyers, and by category of product purchased.</p>"
+    },
+    {
+      "id": 32,
+      "slug": "design-systems-for-web-projects",
+      "title": "Design Systems for Web Projects: When to Build One and Where to Start",
+      "seoTitle": "Design Systems for Web Projects: When and Where to Start",
+      "seoDescription": "A design system speeds up development and improves visual consistency. When it's worth the effort and how to build your own, step by step.",
+      "excerpt": "A design system speeds up development, improves visual consistency, and reduces design debt. This guide explains when it's worth the effort and how to build your own.",
+      "category": "ux",
+      "tags": [
+        "Design System",
+        "UI",
+        "Components",
+        "Visual Consistency",
+        "Web Design"
+      ],
+      "date": "2026-01-08",
+      "dateFormatted": "January 8, 2026",
+      "readTime": 10,
+      "featured": false,
+      "thumbClass": "thumb-art--ux",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "UX · Design · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>What a design system is (and isn't)</h2><p>A design system is the set of documented, shared design decisions a team uses to build digital products consistently: design tokens (colors, typography, spacing), reusable components, interaction patterns, and usage guidelines.</p><p>What it's NOT: a Figma file full of nice-looking components. Without documentation, without usage criteria, and without active maintenance, it's just a gallery.</p><h2>When it's actually worth having one</h2><p>It makes sense when: more than one person works on design or development, the project has multiple pages with repeated patterns, the product is going to evolve over time, or visual inconsistencies are causing frequent rework. For a static 5-page site, the overhead isn't worth it.</p><h2>The components of the most basic design system</h2><p><strong>Design tokens:</strong> the fundamental variables. Colors (primary, secondary, neutrals, semantic), typography (families, sizes, weights), spacing (an 8px scale), and shadows. In code, these are implemented as CSS variables. Change one token and the entire interface updates.</p><p><strong>Base components:</strong> buttons with all their states (default, hover, active, disabled, loading), inputs and forms, cards, modals, navigation, and empty and error states.</p><h2>Documentation: the part nobody wants to do</h2><p>A component without documentation is a component that will get misused. The bare minimum documentation: when to use it and when not to, the variants available, and examples of correct and incorrect usage.</p><h2>Where to start without getting overwhelmed</h2><p>Start with the tokens (colors and typography). Then extract the components that already exist in the design instead of building them from scratch. Document as you build. A design system that grows out of a real project is far more useful than one designed in a vacuum.</p>"
+    },
+    {
       "id": 33,
       "slug": "web-development-trends-2026",
       "title": "Web Development Trends in 2026: What's Changing and How to Prepare",
@@ -288,6 +868,33 @@
         "initials": "R3"
       },
       "content": "<h2>The context: an ecosystem reaching maturity</h2><p>2026 finds the web development ecosystem in a moment of maturation. After years of framework and tooling explosion, there's a visible shift toward simplification: less unnecessary JavaScript, more reliance on native platform features, and a sharper focus on performance and accessibility as requirements, not extras.</p><h2>AI as a development copilot</h2><p>AI-assisted tools (GitHub Copilot, Cursor, and their competitors) have moved from novelty to a standard part of most professional developers' workflow. The real shift isn't that AI writes the code — it's that it frees up time from repetitive boilerplate so developers can focus on architecture decisions and solving genuinely complex problems.</p><h2>Web Components and the native platform revival</h2><p>Native browser Web Components are gaining real traction. They work across every modern browser, require no framework, perform excellently, and drop into any project. They won't replace React for complex applications, but for reusable UI components shared across multiple projects, they're increasingly the right call.</p><h2>Native CSS: needing fewer preprocessors every year</h2><p>Modern CSS now has features that used to require Sass: native variables, nesting, container queries, and the color-mix() function. In 2026, starting a new project with Sass by default is a decision worth questioning.</p><h2>Edge computing and server performance</h2><p>Edge functions let you run server-side code in locations geographically close to the user, cutting latency dramatically. For applications that need server-side personalization, the edge is becoming the default architecture.</p><h2>Accessibility as a legal and technical requirement</h2><p>Several countries now have regulations requiring compliance with web accessibility standards (WCAG 2.1 AA at minimum), and the regulatory landscape elsewhere is moving in the same direction. Building with accessibility from day one is cheaper than remediating it later.</p>"
+    },
+    {
+      "id": 34,
+      "slug": "how-to-improve-website-seo",
+      "title": "How to Improve Your Website's SEO: The Complete Guide",
+      "seoTitle": "How to Improve Your Website's SEO: The Complete Guide",
+      "seoDescription": "A complete guide to improving your website's SEO: technical SEO, keywords, on-page optimization, content, and link building, with concrete actions.",
+      "excerpt": "Improving organic rankings isn't magic: it's the result of layers working together. This guide covers technical SEO, keyword research, on-page optimization, content, and link building with concrete actions.",
+      "category": "seo",
+      "tags": [
+        "SEO",
+        "Search Rankings",
+        "Keywords",
+        "Technical SEO",
+        "Link Building"
+      ],
+      "date": "2026-04-10",
+      "dateFormatted": "April 10, 2026",
+      "readTime": 12,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>SEO isn't magic: it's structure, content, and signals</h2><p>Improving a website's SEO is the result of multiple layers working together: the site's technical structure, content that answers what your audience is searching for, external authority signals, and the real user experience. This guide covers each layer with concrete actions you can implement regardless of your platform.</p><h2>1. Technical SEO: the foundation many ignore</h2><p>Technical SEO lets Google find, crawl, and index your site correctly. Without a solid technical foundation, everything else loses effectiveness. The key points: <strong>load speed</strong> (Google uses Core Web Vitals — LCP, CLS, and INP — as ranking signals; measure them in PageSpeed Insights and aim for the green thresholds), mandatory <strong>HTTPS</strong>, <strong>simple, descriptive URLs</strong> without unnecessary parameters, <strong>canonical tags</strong> on every page to avoid duplicate content, an up-to-date <strong>sitemap.xml</strong> submitted to Search Console, and a <strong>robots.txt</strong> that doesn't block pages that should be indexed.</p><h2>2. Keyword research: find what your audience is searching for</h2><p>Before writing any piece of content, identify the exact words your audience uses. The four search intents you need to understand: <strong>informational</strong> (they want to learn), <strong>navigational</strong> (they're looking for a brand), <strong>transactional</strong> (they want to buy), and <strong>commercial investigation</strong> (they're comparing options before deciding). Each intent calls for a different kind of content and landing page.</p><p>Free tools to get started: Google Search Console (shows the keywords already bringing you traffic), Google Keyword Planner, and Google's autocomplete to identify variations with local intent.</p><h2>3. On-page optimization: every page counts</h2><p><strong>Title tag:</strong> the most important on-page element. Include the main keyword near the beginning, keep it between 50 and 60 characters, and make it unique for each page. <strong>Meta description:</strong> it doesn't affect rankings directly but it does affect CTR; use 150-160 characters with a clear value proposition. <strong>A single H1:</strong> only one per page, with the main keyword. <strong>Images:</strong> descriptive file names, a relevant alt attribute, and WebP format for a smaller file size. <strong>E-E-A-T:</strong> Google evaluates Experience, Expertise, Authoritativeness, and Trustworthiness — content based on real experience ranks better than generic content.</p><h2>4. Content as a traffic engine</h2><p>A blog is the most sustainable long-term SEO tool. Every article that answers a real question from your audience is a new organic entry point. Content tightly focused on search intent beats long but vague content.</p><p>Update existing pages regularly: Google rewards pages that stay relevant with up-to-date information. A page that climbs from position 12 to position 4 brings in more traffic than publishing a brand-new page from scratch.</p><h2>5. Link building: authority from the outside</h2><p>Backlinks are votes of confidence in Google's eyes. A link from a relevant publication in your industry is worth more than hundreds of links from low-quality sites. Sustainable strategies: publish content others want to cite (guides, original statistics, case studies), get featured in your industry's media as an expert, and work on internal links between your own pages to distribute authority strategically.</p><h2>Action plan: where to start</h2><p>If you have to prioritize: verify in Search Console that the site is indexed correctly, fix critical technical errors, optimize the pages that already get traffic to improve their positions, and then add new content targeting the keywords most relevant to your business. When sustained over time, SEO is the long-term investment with the best return in digital marketing.</p>"
     },
     {
       "id": 35,
@@ -317,32 +924,6 @@
       "content": "<h2>GEO vs. SEO: the difference that defines visibility in 2026</h2><p>SEO ranks your site on Google so users click through. GEO — Generative Engine Optimization — optimizes for AI-powered search engines like ChatGPT, Perplexity, Google AI Overviews, and Gemini to mention and recommend your brand directly in their answers.</p><p>The difference is fundamental: with SEO, the user visits your site from a link. With GEO, the AI cites your content directly in its response, often without the user ever clicking anywhere. Winning that citation is the new battle for digital visibility.</p><h2>Why GEO matters right now</h2><p>ChatGPT has surpassed 200 million active users. Google AI Overviews now appears across millions of searches. Perplexity keeps growing among users who want verified answers instead of a list of links to sift through.</p><p>Usage of these tools is climbing fastest for service-comparison searches, vendor recommendations, and queries like 'who's the best web development agency in [city].' Those are exactly the searches where your business either shows up in the AI's answer, or doesn't exist at all.</p><h2>How AI models choose their sources</h2><p>Models like GPT-4, Claude, and Gemini were trained on web content and also pull in real-time search results. The signals they weigh most heavily when deciding what to cite: perceived domain authority, clear and specific content that answers questions directly, concrete and verifiable data, presence across multiple trusted sources, and schema markup that clearly identifies the entity and its services.</p><h2>GEO strategies that actually work</h2><p><strong>Question-and-answer format:</strong> FAQs with concise answers have a high chance of being cited in AI Overviews and by ChatGPT. Structure sections of your site to answer specific questions from your industry directly. <strong>Reinforced E-E-A-T:</strong> the Experience, Expertise, Authority, and Trust that Google looks for is exactly what AI models look for too. Identifiable authors, real case studies, sourced data, and genuine editorial opinions — AI doesn't cite generic content. <strong>Original data:</strong> publishing original statistics, client case studies, or industry analysis turns your site into a source other people cite. <strong>Detailed schema markup:</strong> implement JSON-LD with Organization, LocalBusiness, FAQPage, and Service markup where relevant. Structured data tells AI systems explicitly what you do, where you operate, and why you're relevant.</p><h2>Robots.txt: letting AI bots in</h2><p>Plenty of sites unintentionally block AI crawlers. To show up in ChatGPT (GPTBot), Google AI Overviews (Google-Extended), Claude (ClaudeBot, anthropic-ai), or Perplexity (PerplexityBot) answers, your robots.txt needs to explicitly allow them. Also worth allowing: CCBot (Common Crawl, which trains most LLMs), Meta-ExternalAgent for Meta AI, and Applebot-Extended for Apple Intelligence.</p><h2>GEO and SEO: one integrated strategy</h2><p>Solid technical SEO is the foundation GEO builds on. SEO can rank well-optimized informational content on its own. GEO demands content with real depth, original perspective, and verifiable data.</p><p>The strategy for 2026: don't replace your SEO, extend it. Publish content that answers specific questions from your industry, reinforce E-E-A-T with real case studies, implement detailed schema, and make sure AI crawlers can access your site without restrictions. AI visibility isn't the future — it's already here.</p>"
     },
     {
-      "id": 37,
-      "slug": "llms-txt-what-it-is-how-to-implement",
-      "title": "What llms.txt Is and How to Implement It on Your Site",
-      "seoDescription": "What llms.txt is, how it's structured, and how we built ours at raven3.com.ar so ChatGPT, Claude, Gemini, and Perplexity understand your site.",
-      "excerpt": "llms.txt tells ChatGPT, Claude, Gemini, and Perplexity what your site is about, without relying on them to crawl your entire HTML. What it is, how it's structured, and how we built ours at raven3.com.ar.",
-      "category": "seo",
-      "tags": [
-        "llms.txt",
-        "GEO",
-        "Technical SEO",
-        "Artificial Intelligence",
-        "Web Crawling"
-      ],
-      "date": "2026-06-12",
-      "dateFormatted": "June 12, 2026",
-      "readTime": 8,
-      "featured": false,
-      "thumbClass": "thumb-art--seo",
-      "author": {
-        "name": "Raven3 Team",
-        "role": "SEO · GEO · Raven3",
-        "initials": "R3"
-      },
-      "content": "<h2>What is the llms.txt file?</h2><p>llms.txt is a plain-text Markdown file placed at the root of a site (for example, raven3.com.ar/llms.txt) that acts as a curated map so language models — ChatGPT, Claude, Gemini, Perplexity — can quickly understand what your site is, what it offers, and where to find the most relevant information, without having to crawl and parse the entire HTML.</p><p>The proposal emerged in 2024 and takes inspiration from two files you already know: robots.txt (tells crawlers what they're allowed to crawl) and sitemap.xml (lists every URL). llms.txt does something different: instead of listing everything, it selects what matters and summarizes it in natural language.</p><h2>Why it matters to an LLM (and to your business)</h2><p>Language models work with a limited context window. When someone asks ChatGPT or Perplexity about your industry, the model can't read your entire site — it needs concise, trustworthy fragments. HTML loaded with menus, scripts, banners, and UI components is noise to an LLM. A clean Markdown file with the essence of your business is a direct signal.</p><p>On top of that, many corporate sites are applications that render content with JavaScript. If the bot doesn't execute JS — and several don't — it sees an almost empty page. llms.txt solves that by delivering the key content in plain text upfront, with no dependency on rendering.</p><h2>The standard structure</h2><p>The format is simple and intentionally minimal:</p><ul><li>An <strong>H1</strong> with the brand or site name</li><li>A one-line <strong>blockquote</strong> summarizing what the company does</li><li>An <strong>H2</strong> for each topical section (for example 'Main pages,' 'Policies,' 'Documentation') with a list of links, each with a short description</li></ul><p>For very large sites or ones with extensive documentation, there's also an llms-full.txt variant, which includes the complete content instead of just links and summaries.</p><h2>How we implemented it at Raven3</h2><p>At raven3.com.ar/llms.txt we follow that exact structure: an H1 with the agency name, a one-line blockquote summarizing our value proposition, and two sections — Main Pages and Policies — with direct links and a one-sentence description for each. No filler, no keyword stuffing: just the information a model needs to understand what the site is about and recommend it accurately.</p><h2>Common mistakes when building yours</h2><p>Treating it like a traditional SEO file and stuffing it with keywords: LLMs don't rank by keyword density, they prioritize clarity and precision. Copying the entire sitemap: if you have 200 URLs, the file loses its value as a curated map. Letting it go stale: if you add or remove pages and don't update it, the model can end up citing outdated information. Assuming it replaces technical SEO: llms.txt is a complement, not a substitute for semantic HTML, schema markup, and quality content.</p><h2>Checklist for building your llms.txt</h2><ul><li>Create the file as plain text and upload it to your domain root (yourdomain.com/llms.txt)</li><li>Start with an H1 with your brand name and a one-line blockquote summarizing what you do</li><li>Group your most important pages into 2 or 3 sensible sections (services, about the company, contact)</li><li>Describe each link in one clear sentence, without internal jargon</li><li>Verify that your robots.txt isn't blocking the AI crawlers you need reading the file</li><li>Review it every time your service offering or page structure changes</li></ul>"
-    },
-    {
       "id": 36,
       "slug": "shopify-vs-woocommerce-vs-custom-development",
       "title": "Shopify vs. WooCommerce vs. Custom Development: Which One Should You Choose for Your Online Store",
@@ -370,31 +951,135 @@
       "content": "<h2>The decision that shapes your business for years</h2><p>Shopify, WooCommerce, or custom development: choosing the platform for an online store has long-term technical, commercial, and financial consequences. There's no universal answer — the best choice depends on projected sales volume, budget, available technical talent, and the specific needs of the business.</p><h2>Shopify: all-in-one for a fast launch</h2><p>Shopify is a SaaS e-commerce platform. You pay a monthly subscription and get hosting, security, automatic updates, and a large ecosystem of apps included. You don't need to worry about the technical infrastructure at all.</p><p><strong>Pros:</strong> fast launch (days, not months), high technical reliability, excellent for scaling sales volume, a huge app ecosystem, zero infrastructure maintenance. <strong>Cons:</strong> recurring cost billed in USD (Basic at USD 39/month up to Advanced at USD 399/month, plus apps), transaction fees if you don't use Shopify Payments (not available in every market), limited customization without writing code. <strong>Regional considerations:</strong> local payment processors like Mercado Pago require a third-party app integration, local tax invoicing systems need extra setup, and a dollar-denominated cost can be a meaningful factor depending on the exchange rate.</p><p><strong>Best for:</strong> brands with a single strong product and real scale potential, businesses with international ambitions, teams without developers who need immediate operational autonomy.</p><h2>WooCommerce: full flexibility on top of WordPress</h2><p>WooCommerce is a free e-commerce plugin for WordPress. There's no platform fee, but you'll need hosting, a domain, SSL, and eventually premium plugins for advanced features.</p><p><strong>Pros:</strong> low upfront cost, total flexibility with thousands of plugins and themes, full ownership of your code and data, excellent for SEO, a large developer community to hire from. <strong>Cons:</strong> requires ongoing technical maintenance (updates, security), performance depends heavily on hosting configuration, can get slow and complex once you stack up plugins. <strong>Regional considerations:</strong> it's the most popular option locally, with native integrations for Mercado Pago, local tax invoicing, and regional shipping carriers.</p><p><strong>Best for:</strong> small and mid-size businesses that have or can hire a developer, stores with complex catalogs or many categories, teams that care about SEO and content as much as selling.</p><h2>Custom development: full control, bigger investment</h2><p>A custom-built e-commerce store is built from scratch specifically for the business. No platform limitations, no plugins, no third-party dependencies.</p><p><strong>Pros:</strong> superior performance without the overhead of a generic platform, seamless integration with existing systems (ERP, CRM, in-house logistics), fully customized UX, no recurring platform subscription costs, complete ownership of the code. <strong>Cons:</strong> significantly higher upfront investment, longer development timeline (months), requires an ongoing technical team for maintenance.</p><p><strong>Best for:</strong> companies with logistics or business processes that standard platforms don't handle well, high-volume businesses where performance has a direct impact on conversion.</p><h2>Cost comparison (2026 figures)</h2><p><strong>Shopify:</strong> USD 39-399/month platform fee + USD 50-150/month in necessary apps + a theme at USD 200-400 (one-time). Recurring annual cost in USD ranging from 1,000 to 7,000+. <strong>WooCommerce:</strong> hosting USD 15-40/month + premium plugins USD 300-600/year + initial development USD 2,000-8,000. Low recurring cost once launched. <strong>Custom development:</strong> upfront investment USD 8,000-30,000+ depending on scope + server USD 30-200/month. No platform fees, but ongoing technical maintenance is required.</p><h2>How to decide: three key questions</h2><p>Do you need to start selling in under 4 weeks without an in-house developer? → Shopify. Do you want full flexibility without a high recurring dollar-denominated cost, and can you hire development help? → WooCommerce. Does your business have specific processes that off-the-shelf platforms don't solve, or are performance and UX a genuine competitive advantage you're chasing? → Custom development. There's no perfect platform — there's the one that best fits your business today and has room to scale tomorrow.</p>"
     },
     {
-      "id": 32,
-      "slug": "design-systems-for-web-projects",
-      "title": "Design Systems for Web Projects: When to Build One and Where to Start",
-      "seoTitle": "Design Systems for Web Projects: When and Where to Start",
-      "seoDescription": "A design system speeds up development and improves visual consistency. When it's worth the effort and how to build your own, step by step.",
-      "excerpt": "A design system speeds up development, improves visual consistency, and reduces design debt. This guide explains when it's worth the effort and how to build your own.",
-      "category": "ux",
+      "id": 37,
+      "slug": "llms-txt-what-it-is-how-to-implement",
+      "title": "What llms.txt Is and How to Implement It on Your Site",
+      "seoDescription": "What llms.txt is, how it's structured, and how we built ours at raven3.com.ar so ChatGPT, Claude, Gemini, and Perplexity understand your site.",
+      "excerpt": "llms.txt tells ChatGPT, Claude, Gemini, and Perplexity what your site is about, without relying on them to crawl your entire HTML. What it is, how it's structured, and how we built ours at raven3.com.ar.",
+      "category": "seo",
       "tags": [
-        "Design System",
-        "UI",
-        "Components",
-        "Visual Consistency",
-        "Web Design"
+        "llms.txt",
+        "GEO",
+        "Technical SEO",
+        "Artificial Intelligence",
+        "Web Crawling"
       ],
-      "date": "2026-01-08",
-      "dateFormatted": "January 8, 2026",
-      "readTime": 10,
+      "date": "2026-06-12",
+      "dateFormatted": "June 12, 2026",
+      "readTime": 8,
       "featured": false,
-      "thumbClass": "thumb-art--ux",
+      "thumbClass": "thumb-art--seo",
       "author": {
         "name": "Raven3 Team",
-        "role": "UX · Design · Raven3",
+        "role": "SEO · GEO · Raven3",
         "initials": "R3"
       },
-      "content": "<h2>What a design system is (and isn't)</h2><p>A design system is the set of documented, shared design decisions a team uses to build digital products consistently: design tokens (colors, typography, spacing), reusable components, interaction patterns, and usage guidelines.</p><p>What it's NOT: a Figma file full of nice-looking components. Without documentation, without usage criteria, and without active maintenance, it's just a gallery.</p><h2>When it's actually worth having one</h2><p>It makes sense when: more than one person works on design or development, the project has multiple pages with repeated patterns, the product is going to evolve over time, or visual inconsistencies are causing frequent rework. For a static 5-page site, the overhead isn't worth it.</p><h2>The components of the most basic design system</h2><p><strong>Design tokens:</strong> the fundamental variables. Colors (primary, secondary, neutrals, semantic), typography (families, sizes, weights), spacing (an 8px scale), and shadows. In code, these are implemented as CSS variables. Change one token and the entire interface updates.</p><p><strong>Base components:</strong> buttons with all their states (default, hover, active, disabled, loading), inputs and forms, cards, modals, navigation, and empty and error states.</p><h2>Documentation: the part nobody wants to do</h2><p>A component without documentation is a component that will get misused. The bare minimum documentation: when to use it and when not to, the variants available, and examples of correct and incorrect usage.</p><h2>Where to start without getting overwhelmed</h2><p>Start with the tokens (colors and typography). Then extract the components that already exist in the design instead of building them from scratch. Document as you build. A design system that grows out of a real project is far more useful than one designed in a vacuum.</p>"
+      "content": "<h2>What is the llms.txt file?</h2><p>llms.txt is a plain-text Markdown file placed at the root of a site (for example, raven3.com.ar/llms.txt) that acts as a curated map so language models — ChatGPT, Claude, Gemini, Perplexity — can quickly understand what your site is, what it offers, and where to find the most relevant information, without having to crawl and parse the entire HTML.</p><p>The proposal emerged in 2024 and takes inspiration from two files you already know: robots.txt (tells crawlers what they're allowed to crawl) and sitemap.xml (lists every URL). llms.txt does something different: instead of listing everything, it selects what matters and summarizes it in natural language.</p><h2>Why it matters to an LLM (and to your business)</h2><p>Language models work with a limited context window. When someone asks ChatGPT or Perplexity about your industry, the model can't read your entire site — it needs concise, trustworthy fragments. HTML loaded with menus, scripts, banners, and UI components is noise to an LLM. A clean Markdown file with the essence of your business is a direct signal.</p><p>On top of that, many corporate sites are applications that render content with JavaScript. If the bot doesn't execute JS — and several don't — it sees an almost empty page. llms.txt solves that by delivering the key content in plain text upfront, with no dependency on rendering.</p><h2>The standard structure</h2><p>The format is simple and intentionally minimal:</p><ul><li>An <strong>H1</strong> with the brand or site name</li><li>A one-line <strong>blockquote</strong> summarizing what the company does</li><li>An <strong>H2</strong> for each topical section (for example 'Main pages,' 'Policies,' 'Documentation') with a list of links, each with a short description</li></ul><p>For very large sites or ones with extensive documentation, there's also an llms-full.txt variant, which includes the complete content instead of just links and summaries.</p><h2>How we implemented it at Raven3</h2><p>At raven3.com.ar/llms.txt we follow that exact structure: an H1 with the agency name, a one-line blockquote summarizing our value proposition, and two sections — Main Pages and Policies — with direct links and a one-sentence description for each. No filler, no keyword stuffing: just the information a model needs to understand what the site is about and recommend it accurately.</p><h2>Common mistakes when building yours</h2><p>Treating it like a traditional SEO file and stuffing it with keywords: LLMs don't rank by keyword density, they prioritize clarity and precision. Copying the entire sitemap: if you have 200 URLs, the file loses its value as a curated map. Letting it go stale: if you add or remove pages and don't update it, the model can end up citing outdated information. Assuming it replaces technical SEO: llms.txt is a complement, not a substitute for semantic HTML, schema markup, and quality content.</p><h2>Checklist for building your llms.txt</h2><ul><li>Create the file as plain text and upload it to your domain root (yourdomain.com/llms.txt)</li><li>Start with an H1 with your brand name and a one-line blockquote summarizing what you do</li><li>Group your most important pages into 2 or 3 sensible sections (services, about the company, contact)</li><li>Describe each link in one clear sentence, without internal jargon</li><li>Verify that your robots.txt isn't blocking the AI crawlers you need reading the file</li><li>Review it every time your service offering or page structure changes</li></ul>"
+    },
+    {
+      "id": 38,
+      "slug": "website-not-showing-in-chatgpt-checklist",
+      "title": "My Website Doesn't Show Up in ChatGPT or Gemini: A Checklist to Get Cited by AI",
+      "seoTitle": "Not Showing Up in ChatGPT? A Checklist to Get Cited by AI",
+      "seoDescription": "Ranking on Google no longer guarantees an AI will recommend you. A technical and content checklist to find out why you're not mentioned and fix it.",
+      "excerpt": "Ranking well on Google no longer guarantees that an AI will recommend you. A technical and content checklist to diagnose why you're not being mentioned and how to fix it.",
+      "category": "seo",
+      "tags": [
+        "ChatGPT",
+        "Gemini",
+        "GEO",
+        "AI Overviews",
+        "AI Visibility"
+      ],
+      "date": "2026-06-20",
+      "dateFormatted": "June 20, 2026",
+      "readTime": 9,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · GEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>The problem: you exist, but AI doesn't mention you</h2><p>You ask ChatGPT 'who does custom web development in Buenos Aires' and your company doesn't show up, even though you've ranked on Google for years. That's no accident: generative AI engines read and prioritize different signals from the ones you optimized for traditional search. This checklist walks through the most common reasons and how to fix each one.</p><h2>Step 1: confirm AI bots can access your site</h2><p>The first filter is technical, and many sites fail it without knowing. Check your robots.txt and confirm you're not blocking GPTBot (OpenAI), ClaudeBot and anthropic-ai (Anthropic), Google-Extended (Google AI Overviews and Gemini), PerplexityBot (Perplexity), and CCBot (Common Crawl, used to train most models). If your site was set up long ago with a generic or restrictive robots.txt, it's common for these user agents to be blocked unintentionally.</p><h2>Step 2: check whether your content is actually crawlable</h2><p>If your site is an app that renders everything with client-side JavaScript, several AI crawlers see an almost empty page. Try disabling JavaScript in your browser and see how much real content is still visible. If little or nothing remains, you need server-side rendering, static generation, or at least pre-rendered critical content.</p><h2>Step 3: write to answer questions, not to list services</h2><p>LLMs cite content that answers a question directly and verifiably. A services page full of generic phrases like 'we offer end-to-end solutions' gives them nothing to cite. A FAQ section with concrete answers and specific data does.</p><h2>Step 4: add structured data</h2><p>JSON-LD schema markup tells an AI system explicitly who you are, what you do, and where you are, with no ambiguity. At a minimum, implement Organization or LocalBusiness with your name, address, industry, and contact details, plus FAQPage if you have frequently asked questions. It's the difference between a model having to infer your business from scattered paragraphs and reading it directly in a format that leaves no room for misinterpretation.</p><h2>Step 5: strengthen your authority signals</h2><p>An AI model weighs whether other trustworthy sources mention your brand: press coverage, industry directories, reviews, verified profiles. If your only digital footprint is your own website, you're less likely to be cited than a competitor with a presence in several places.</p><h2>Step 6: test it yourself, for real</h2><p>Don't take it for granted: open ChatGPT, Perplexity, and Gemini and ask exactly what a potential customer would ask, including your industry and your city. Repeat it every few weeks. It's the only real way to know whether your fixes are working.</p><h2>Quick checklist</h2><ul><li>robots.txt allows GPTBot, ClaudeBot, Google-Extended, PerplexityBot, and CCBot</li><li>The main content is visible without running JavaScript</li><li>There's a FAQ section with direct, specific answers</li><li>You've implemented Organization or LocalBusiness schema and FAQPage</li><li>Your brand is mentioned in at least a few external sources</li><li>You've tried asking ChatGPT, Gemini, and Perplexity directly about your industry and city</li></ul>"
+    },
+    {
+      "id": 39,
+      "slug": "signs-website-losing-customers-to-ai",
+      "title": "Signs Your Website Is Losing Customers to AI (and How to Fix It)",
+      "seoTitle": "Signs Your Website Is Losing Customers to AI",
+      "excerpt": "More and more people ask an AI directly before searching on Google. These are the technical and content signals that leave your business out of that answer.",
+      "category": "seo",
+      "tags": [
+        "Website Redesign",
+        "GEO",
+        "Artificial Intelligence",
+        "Website Audit",
+        "SEO 2026"
+      ],
+      "date": "2026-06-27",
+      "dateFormatted": "June 27, 2026",
+      "readTime": 8,
+      "featured": false,
+      "thumbClass": "thumb-art--seo",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "SEO · GEO · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>First contact no longer always goes through Google</h2><p>More and more people ask an AI directly instead of searching and comparing ten tabs: 'recommend a web development agency in Buenos Aires', 'which online store platform is best for selling clothing'. If your website isn't ready for that moment, you're not just losing a visit: you're losing the contact before it even exists.</p><h2>Sign 1: your site is slow to load</h2><p>A high LCP doesn't just hurt your Google rankings: an AI model assessing a source's reliability also weighs technical quality signals. A slow site sends the same signal to an algorithm as it does to a person: neglect.</p><h2>Sign 2: the design doesn't show the business is active</h2><p>A website with an eight- or ten-year-old look, no visible HTTPS, pixelated images, or layouts that break on mobile doesn't build trust with a human visitor, or with the authority criteria an AI uses to decide whether to recommend you. The first impression is still visual, human or not.</p><h2>Sign 3: there's no content that answers real questions</h2><p>If your site is just a landing page with an 'about us' section and a contact form, you're giving an AI nothing concrete to cite. A blog, a FAQ section, or client case studies with real data are the material a model can use to mention you accurately instead of a competitor.</p><h2>Sign 4: you're blocking AI bots without knowing it</h2><p>A robots.txt inherited from an old setup or a previous developer may be blocking GPTBot, ClaudeBot, or Google-Extended without anyone having decided it on purpose. It's one of the simplest, highest-impact fixes: checking it takes minutes.</p><h2>Sign 5: you have no structured data or llms.txt</h2><p>Without schema markup or an llms.txt file, you're asking an AI model to guess what you do by interpreting marketing copy. With those two pieces in place, you're telling it directly.</p><h2>What we do when we find these signs</h2><p>In a free website audit we review exactly these points: performance, accessibility for AI bots, content structure, and structured data, in addition to traditional SEO criteria. Most of the time the problem isn't that you need a brand-new site from scratch, but that a specific set of signals is currently switched off and needs fixing.</p><h2>The cost of doing nothing</h2><p>Every month a business stays out of AI answers in its industry, someone else takes that spot. Visibility in generative engines is still being defined: the sites that get these signals in order now have an advantage over the ones that do it a year from now.</p>"
+    },
+    {
+      "id": 40,
+      "slug": "website-maintenance-monthly-checklist",
+      "title": "Website Maintenance: What to Check Every Month, Quarter, and Year",
+      "seoTitle": "Website Maintenance Checklist: Monthly, Quarterly, Yearly",
+      "seoDescription": "Forms that stop sending, untested backups, expired certificates: a monthly, quarterly, and yearly website maintenance checklist, with clear owners.",
+      "excerpt": "A website doesn't look after itself: forms that stop sending, backups no one tested, expiring certificates, and outdated plugins. A concrete checklist to avoid surprises and know who handles what.",
+      "category": "desarrollo",
+      "tags": [
+        "Website Maintenance",
+        "Web Security",
+        "Backups",
+        "WordPress",
+        "Checklist"
+      ],
+      "date": "2026-11-03",
+      "dateFormatted": "November 3, 2026",
+      "readTime": 8,
+      "featured": false,
+      "thumbClass": "thumb-art--dev",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · Raven3",
+        "initials": "R3"
+      },
+      "content": "<h2>A website isn't finished the day it goes live</h2><p>Many companies treat their website like a brochure: they pay for it, publish it, and only look at it again when someone says something isn't working. The problem is that a website relies on pieces that change on their own: the server, certificates, dependencies, plugins, browsers, and third-party services.</p><p>That's why the worst-case scenario usually isn't a visible outage. It's the form that stopped sending inquiries three weeks ago without anyone noticing. It's the backup that existed on paper but couldn't be restored. It's the domain that expired because the renewal notice went to the email of someone who no longer works at the company.</p><p>The good news: most of these problems can be prevented with a short routine. This guide gives you a concrete checklist to review every month, every quarter, and every year, whether your site is custom-built, on WordPress, or on a platform like Shopify or Tiendanube.</p><h2>Why this is more urgent than a few years ago</h2><p>Three facts help put it in perspective:</p><ul><li><strong>WordPress vulnerabilities are growing fast.</strong> Patchstack's <em>State of WordPress Security in 2026</em> report recorded 11,334 new vulnerabilities in 2025, 42% more than in 2024. 91% were in plugins and 9% in themes. WordPress core had only 6, all low priority.</li><li><strong>The window to react is very short.</strong> The same report notes that 46% of vulnerabilities had no patch when they were disclosed, and that for the most targeted ones, the median time to mass exploitation is 5 hours.</li><li><strong>SSL/TLS certificates keep getting shorter.</strong> Following a CA/Browser Forum decision, the maximum validity dropped from 398 to 200 days for certificates issued from March 15, 2026. It will drop to 100 days in March 2027 and to 47 days in March 2029. Renewing them by hand is no longer a reasonable option.</li></ul><p>None of this means your site is in danger today. It means that leaving it alone is no longer a neutral way of looking after it.</p><h2>Monthly checklist: 30 to 60 minutes</h2><h3>1. What brings in business</h3><p>Start here, because it's what costs the most when it fails and what gets checked the least.</p><ul><li>Send a real test through every form and confirm the message arrives and doesn't land in spam.</li><li>Test the WhatsApp buttons, phone numbers, and email links from a phone.</li><li>If you sell online, place a complete test order, including payment, the confirmation email, and the shipping calculation.</li><li>Compare this month's conversions with last month's. A sharp drop with no commercial reason is usually a technical problem, not a market one.</li></ul><h3>2. Updates and security</h3><ul><li><strong>On WordPress:</strong> update core, plugins, and themes, in a staging environment first if the site is critical. Remove what you don't use: a deactivated plugin is still code on your server.</li><li><strong>On a custom build:</strong> review dependencies with tools like <code>npm audit</code> or <code>composer audit</code>, and prioritize vulnerabilities that affect code that actually runs.</li><li><strong>On SaaS platforms:</strong> the platform updates itself, but installed apps are still your responsibility. Uninstall the ones you no longer use and review their permissions.</li><li>Review the list of admin users and remove anyone who should no longer have access, including former employees and previous vendors.</li><li>Open the Security issues report in Google Search Console. If Google has detected something, that's the first place you'll see it.</li></ul><h3>3. Backups</h3><p>A backup that has never been tested is an assumption. Every month, check that copies are being created and that they include both the files and the database.</p><p>A practical rule is 3-2-1: three copies, on two different media, with one stored outside the provider that hosts the site. If your hosting has an incident, or you get locked out, a backup that lives only on that same server won't help you.</p><h3>4. Speed and experience</h3><ul><li>Check the Core Web Vitals report in Search Console, which shows real user data. The “good” thresholds are LCP up to 2.5 seconds, INP up to 200 milliseconds, and CLS up to 0.1.</li><li>Check what was added during the month. An unoptimized image, a new video, or a campaign pixel can ruin a site that was performing well.</li><li>Browse the site on a real phone, on mobile data rather than the office Wi-Fi.</li></ul><h3>5. Search visibility</h3><ul><li>Review the Page indexing report in Search Console to catch new 404 errors or important pages that dropped out.</li><li>Look at how your main pages are performing. What matters is the trend, not one week's movement.</li><li>After any major change, confirm that no <code>noindex</code> from the staging environment was left behind, and that <code>robots.txt</code> isn't blocking more than it should.</li></ul><h3>6. Content</h3><p>It's the easiest step to skip and the one that speaks most directly to customers. Check prices, opening hours, phone numbers, addresses, team members, expired promotions, and old dates. A “What's new in 2023” on the home page tells every visitor that nobody is watching the site.</p><h2>Quarterly checklist: a broader look</h2><ul><li><strong>Actually restore a backup.</strong> Spin it up in a staging environment and time how long it takes. That's your real recovery time, and it's better to know it before you need it.</li><li><strong>Audit third-party scripts.</strong> Chat widgets, heatmaps, pixels from finished campaigns: each one adds weight, and each one is someone else's code running on your site.</li><li><strong>Look for broken links</strong> and redirects that went wrong after URL changes.</li><li><strong>Test on several browsers and screen sizes</strong>, including Safari on iPhone, which is usually where the surprises show up.</li><li><strong>Review basic accessibility:</strong> contrast, alt text on new images, and keyboard navigation.</li><li><strong>Check email deliverability.</strong> If your forms or your store send emails, verify that SPF, DKIM, and DMARC are still configured correctly.</li></ul><h2>Yearly checklist: what nobody remembers until it fails</h2><ul><li><strong>Domain ownership.</strong> Confirm it's registered to the company, not to a former employee or a vendor. If it's a .com.ar, it's managed through NIC Argentina. Make sure renewal notices go to a company inbox.</li><li><strong>Centralized access.</strong> Build an inventory of hosting, DNS, domain, analytics, Search Console, and payment dashboards, with who holds each login. Ideally, use a password manager and turn on two-factor authentication.</li><li><strong>Automated certificates.</strong> With shorter lifetimes, renewal has to be automatic, and there has to be an alert if it fails.</li><li><strong>Server versions.</strong> Check that your language runtime and database are still supported. For example, according to php.net, PHP 8.2 receives security patches only until December 31, 2026. Versions 8.1 and earlier are already out of support.</li><li><strong>Costs and vendors.</strong> Review what you're paying for hosting, licenses, and apps, and whether you still use all of it. Many subscriptions renew automatically for years without anyone needing them.</li><li><strong>Legal pages.</strong> Update your privacy policy and terms if you've added forms, cookies, payment methods, or new tools.</li></ul><h2>Who should do what</h2><p>Maintenance fails less from a lack of knowledge than from a lack of ownership. When everyone thinks someone else is doing it, nobody does. A reasonable split looks like this:</p><ul><li><strong>Someone on the business side:</strong> content, form tests, test orders, and conversion tracking. It doesn't require knowing how to code, especially if the site has a self-managed admin panel.</li><li><strong>A technical profile, in-house or external:</strong> updates, dependencies, backups, server, certificates, and performance analysis.</li><li><strong>Management or administration:</strong> domain ownership, access control, contracts, and renewals.</li></ul><p>What matters is putting it in writing, with names and frequency. A recurring task in a shared calendar is enough to get started.</p><h2>How the routine changes depending on your site</h2><p><strong>WordPress or WooCommerce:</strong> requires the most demanding routine, because the attack surface depends on every installed plugin. Fewer plugins, better chosen and maintained, is the single most effective measure. If you sell online, add a staging environment before every update.</p><p><strong>Shopify, Tiendanube, and similar platforms:</strong> you offload the infrastructure and platform patches, but you're still in charge of apps, custom themes, content, SEO, speed, and access.</p><p><strong>Custom development:</strong> with fewer third-party pieces, there are usually fewer urgent updates, but dependencies and the server don't look after themselves. You should have automated monitoring and a clear owner, and the code should be documented so you don't depend on a single person.</p><h2>Signs that maintenance is no longer enough</h2><p>Sometimes the checklist reveals a deeper problem. Pay attention if any of these sound familiar:</p><ul><li>Every update breaks something and nobody dares to touch the site.</li><li>Speed problems come back as soon as they're fixed.</li><li>You depend on a single person for any change, even fixing a typo.</li><li>The site runs on unsupported versions that can't be updated without rebuilding entire parts.</li><li>You can't access the domain, hosting, or code of your own website.</li></ul><p>In those cases, it's worth comparing, with real numbers, how much it costs to keep patching versus how much it costs to rebuild what's broken. You don't always need a new site, but you shouldn't put off that calculation indefinitely either.</p><h2>Where to start this week</h2><p>If you've never done any of this, don't try to tackle everything at once. These four actions already remove a large part of the risk:</p><ul><li>Test your forms and confirm that inquiries are arriving.</li><li>Check whose name your domain is registered under and when it expires.</li><li>Ask to see the latest backup, and proof that it can be restored.</li><li>Schedule a monthly review with a named owner.</li></ul><p>If you'd rather have a diagnosis before setting up the routine, at Raven3 we offer a <a href=\"/en/free-web-audit.html\">free website audit</a> where we analyze your site's speed, SEO, mobile experience, and conversion, and show you what to tackle first. And if you don't want to carry the technical maintenance yourself, we also offer plans to handle it for you: <a href=\"/en/contact.html\">tell us what you have</a> and we'll take a look.</p>"
+    },
+    {
+      "id": 41,
+      "slug": "how-much-does-a-website-cost-argentina-2026",
+      "title": "How Much Does a Website Cost in Argentina in 2026",
+      "excerpt": "Ballpark prices by type of site: landing page, corporate site, online store, and custom development, with timelines, what drives the price, and ongoing costs.",
+      "category": "desarrollo",
+      "tags": [
+        "Pricing",
+        "Web Design",
+        "Budget",
+        "Online Stores",
+        "Argentina"
+      ],
+      "date": "2026-11-19",
+      "dateFormatted": "November 19, 2026",
+      "readTime": 7,
+      "featured": false,
+      "thumbClass": "thumb-art--web",
+      "author": {
+        "name": "Raven3 Team",
+        "role": "Web Development · Raven3",
+        "initials": "R3"
+      },
+      "content": "<p>\"How much does a website cost?\" is the question we get asked most, and the honest answer is \"it depends\". But \"it depends\" doesn't help you plan a budget. In this guide we share concrete ranges by type of site, what makes the price go up or down, and which costs you'll keep paying after launch.</p><blockquote>Short answer: in Argentina, in 2026, a professional landing page starts at USD 400–800, a corporate website at USD 800–1,500, an online store at USD 1,000–8,000 depending on the platform, and custom development with integrations from USD 8,000 and up. On top of that come the domain, hosting or platform fees, and maintenance.</blockquote><h2>Price table by type of site</h2><p>Ballpark figures in US dollars, updated as of November 2026, for projects with original design (not purchased templates filled with content). Every project is quoted with a fixed scope before work begins.</p><div class=\"table-wrap\"><table><thead><tr><th>Type of site</th><th>Who it's for</th><th>Upfront investment</th><th>Typical timeline</th></tr></thead><tbody><tr><td><strong>Landing page</strong></td><td>A single campaign, service, or launch</td><td>USD 400–800</td><td>1–2 weeks</td></tr><tr><td><strong>Corporate website</strong></td><td>Companies, firms, and professionals who need a presence and inquiries</td><td>USD 800–1,500</td><td>3–5 weeks</td></tr><tr><td><strong>Industry website</strong></td><td>Restaurants, real estate agencies, medical practices, schools</td><td>From USD 800 (from USD 1,000 with integrations like Tokko)</td><td>3–6 weeks</td></tr><tr><td><strong>Store on Tiendanube or Shopify</strong></td><td>Small and mid-size catalogs that want to start selling fast</td><td>USD 1,000–2,500 + the platform's monthly plan</td><td>3–6 weeks</td></tr><tr><td><strong>Store on WooCommerce</strong></td><td>Catalogs that need more customization and lower recurring costs</td><td>USD 2,000–8,000</td><td>6–10 weeks</td></tr><tr><td><strong>Custom development</strong></td><td>Platforms, portals, and stores integrated with ERP, inventory, or logistics</td><td>USD 8,000–30,000+</td><td>2–4 months or more</td></tr><tr><td><strong>Monthly maintenance</strong></td><td>Any site in production</td><td>USD 50–200 per month</td><td>Ongoing</td></tr></tbody></table></div><p>If your project doesn't fit any row, it almost always falls between two: a corporate site with a catalog, or a small store with a specific integration. In those cases, the price is built by adding up what changes, which we cover below.</p><h2>What makes the price go up or down</h2><p>Two sites with \"five sections\" can cost twice as much as each other. What really moves the number is this:</p><ul><li><strong>Original design or template.</strong> An adapted template is cheaper, but it looks like a thousand other websites and usually carries code you don't use. Custom design costs more up front and performs better in speed and conversion.</li><li><strong>Number of distinct pages.</strong> What matters isn't so much how many pages there are, but how many <em>types</em> of page need to be designed: home, service, product page, blog post.</li><li><strong>Content.</strong> If you deliver ready-made copy and photos, the price goes down. If the copy has to be written with SEO in mind or photos have to be produced, it goes up.</li><li><strong>Integrations.</strong> Mercado Pago, Tokko Broker, a CRM, an ERP, or a booking system add development and testing hours.</li><li><strong>Languages.</strong> A well-built English version (with hreflang and its own URLs) isn't just translate-and-paste: it adds between 20% and 40%.</li><li><strong>Baseline technical SEO.</strong> URL structure, schema, speed, and a sitemap done right from day one cost less than fixing them later.</li></ul><h2>The costs that continue after launch</h2><p>The development quote is only part of it. Before deciding, add up what you'll pay every month or every year:</p><ul><li><strong>Domain.</strong> A .com.ar is registered through NIC Argentina and has a low annual cost. A .com is paid in dollars.</li><li><strong>Hosting.</strong> A fast static site can be hosted for very little or even for free; a WordPress site with traffic needs hosting at USD 15–40 per month.</li><li><strong>E-commerce platform.</strong> Shopify ranges from USD 39 to 399 per month plus apps; Tiendanube charges plans in pesos and, depending on the plan, a per-transaction fee. We compare them in detail in <a href=\"/en/blog/shopify-vs-woocommerce-vs-custom-development.html\">Shopify vs. WooCommerce vs. custom development</a>.</li><li><strong>Maintenance.</strong> Updates, backups, certificates, and checking that forms keep sending. Here's a <a href=\"/en/blog/website-maintenance-monthly-checklist.html\">monthly maintenance checklist</a> so you know what to ask for.</li></ul><h2>Why are prices in dollars?</h2><p>Because a large share of a website's costs are: platforms, cloud services, licenses, and tools. Quoting in dollars makes it possible to hold a fixed budget throughout the project. You can still pay in pesos at the exchange rate on the day of each payment.</p><h2>How to compare quotes without getting it wrong</h2><p>A cheap quote can turn out expensive if it leaves out things you'll need later. Before choosing, ask every proposal to answer these questions in writing:</p><ol><li>Which pages and features does it include, exactly?</li><li>Is the design original or a template?</li><li>Who writes the copy and who sources the images?</li><li>Does it include baseline technical SEO (titles, schema, sitemap, speed)?</li><li>How many rounds of revisions are included?</li><li>Who owns the code, the domain, and the hosting when the project ends?</li><li>How much will it cost to maintain afterwards?</li></ol><p>If a proposal can't answer these questions, the price isn't real yet.</p><h2>So, how much will you invest?</h2><p>For most small businesses and professionals, a reasonable starting point is a well-built USD 800–1,500 corporate website that loads fast and is ready to show up on Google. If you sell online, the leap is in choosing the right platform, not in spending more. And if your business depends on integrations or your own processes, custom development pays for itself in time saved.</p><p>If you want a number for your case, <a href=\"/en/contact.html\">tell us about your project</a> and we'll put together a proposal with a fixed scope. You can also start with a <a href=\"/en/free-web-audit.html\">free audit</a> of your current website, or explore our <a href=\"/en/services/custom-web-development.html\">custom web development</a>, <a href=\"/en/services/online-stores.html\">online stores</a>, and <a href=\"/en/websites-by-industry.html\">websites by industry</a> options.</p>"
     }
   ]
 }
