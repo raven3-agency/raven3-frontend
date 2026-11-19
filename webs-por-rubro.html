@@ -6,7 +6,7 @@
 
     <title>Webs por rubro | Desarrollo web especializado | Raven3</title>
 
-    <meta name="description" content="Creamos webs premium especializadas por rubro: inmobiliarias, restaurantes, médicos, abogados, arquitectos, estética, gimnasios, hoteles, colegios, contadores, emprendedores y más." />
+    <meta name="description" content="Webs premium por rubro: inmobiliarias, restaurantes, médicos, abogados, arquitectos, estética, gimnasios, hoteles, colegios, contadores y más." />
     <meta name="robots" content="index,follow,max-image-preview:large" />
 
     <link rel="canonical" href="https://raven3.com.ar/webs-por-rubro" />
@@ -41,7 +41,21 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css?v=20261010" />
     <link rel="stylesheet" href="assets/css/landing-nichos.css" />
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-MF63Q3JMSL');</script>
     <script src="assets/js/analytics-events.js" defer></script>
 

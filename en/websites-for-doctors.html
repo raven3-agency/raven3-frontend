@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Websites for Doctors | Raven3</title>
-  <meta name="description" content="We design professional websites for doctors, specialists and medical practices with appointment booking, location, specialties, WhatsApp and a trustworthy digital presence." />
+  <title>Websites for Doctors and Medical Practices | Raven3</title>
+  <meta name="description" content="Professional websites for doctors, specialists and medical practices: appointment booking, location, specialties, WhatsApp and a trustworthy presence." />
   <meta name="author" content="Raven3" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#050A0E" />
@@ -16,16 +16,16 @@
   <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/websites-for-doctors.html" />
   <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/webs-para-medicos.html" />
 
-  <meta property="og:title" content="Websites for Doctors | Raven3" />
-  <meta property="og:description" content="We design professional websites for doctors, specialists and medical practices with appointment booking, location, specialties, WhatsApp and a trustworthy digital presence." />
+  <meta property="og:title" content="Websites for Doctors and Medical Practices | Raven3" />
+  <meta property="og:description" content="Professional websites for doctors, specialists and medical practices: appointment booking, location, specialties, WhatsApp and a trustworthy presence." />
   <meta property="og:url" content="https://raven3.com.ar/en/websites-for-doctors.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Raven3" />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Websites for Doctors | Raven3" />
-  <meta name="twitter:description" content="We design professional websites for doctors, specialists and medical practices with appointment booking, location, specialties, WhatsApp and a trustworthy digital presence." />
+  <meta name="twitter:title" content="Websites for Doctors and Medical Practices | Raven3" />
+  <meta name="twitter:description" content="Professional websites for doctors, specialists and medical practices: appointment booking, location, specialties, WhatsApp and a trustworthy presence." />
   <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
   <!-- Favicons -->
@@ -69,7 +69,21 @@
   </script>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

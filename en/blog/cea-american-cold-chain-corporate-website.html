@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <!-- Archivo generado por scripts/build-blog.js desde scripts/templates/. No editar a mano. -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company — Raven3 Blog</title>
-  <meta name="description" content="A project built to convey operational strength, traceability, and end-to-end control across the logistics, storage, and distribution of refrigerated, frozen, and dry goods." />
+  <title>CEA American: Corporate Website for Cold Chain Logistics</title>
+  <meta name="description" content="Corporate website for CEA American, a cold chain logistics company: operational strength, traceability, and control of refrigerated and frozen goods." />
   <link rel="canonical" href="https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html" />
   <link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/cea-american-cadena-frio-web-corporativa" />
   <link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html" />
@@ -16,8 +16,8 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Raven3" />
   <meta property="og:locale" content="en_US" />
-  <meta property="og:title" content="CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company — Raven3 Blog" />
-  <meta property="og:description" content="A project built to convey operational strength, traceability, and end-to-end control across the logistics, storage, and distribution of refrigerated, frozen, and dry goods." />
+  <meta property="og:title" content="CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company" />
+  <meta property="og:description" content="Corporate website for CEA American, a cold chain logistics company: operational strength, traceability, and control of refrigerated and frozen goods." />
   <meta property="og:url" content="https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html" />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
   <meta property="article:published_time" content="2023-06-22" />
@@ -30,8 +30,8 @@
   <meta property="article:tag" content="Logistics" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company — Raven3 Blog" />
-  <meta name="twitter:description" content="A project built to convey operational strength, traceability, and end-to-end control across the logistics, storage, and distribution of refrigerated, frozen, and dry goods." />
+  <meta name="twitter:title" content="CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company" />
+  <meta name="twitter:description" content="Corporate website for CEA American, a cold chain logistics company: operational strength, traceability, and control of refrigerated and frozen goods." />
   <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
   <script type="application/ld+json">
@@ -42,7 +42,7 @@
       "@type": "BlogPosting",
       "@id": "https://raven3.com.ar/en/blog/cea-american-cold-chain-corporate-website.html#article",
       "headline": "CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company",
-      "description": "A project built to convey operational strength, traceability, and end-to-end control across the logistics, storage, and distribution of refrigerated, frozen, and dry goods.",
+      "description": "Corporate website for CEA American, a cold chain logistics company: operational strength, traceability, and control of refrigerated and frozen goods.",
       "inLanguage": "en",
       "datePublished": "2023-06-22",
       "dateModified": "2023-06-22",
@@ -195,6 +195,11 @@
     .post-content a { color:var(--ba); text-decoration:none; border-bottom:1px solid rgba(0,229,200,0.3); transition:border-color .2s; }
     .post-content a:hover { border-color:var(--ba); }
     .post-content blockquote { margin:28px 0; padding:20px 24px; border-left:3px solid var(--ba); background:rgba(0,229,200,0.04); border-radius:0 12px 12px 0; font-style:italic; color:rgba(180,210,225,0.8); }
+    .post-content .table-wrap { margin:28px 0; overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--bb); border-radius:12px; }
+    .post-content table { width:100%; min-width:560px; border-collapse:collapse; font-size:14px; line-height:1.55; }
+    .post-content th, .post-content td { padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--bb); }
+    .post-content th { font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--ba); background:rgba(0,229,200,0.05); }
+    .post-content tbody tr:last-child td { border-bottom:0; }
 
     /* ── Share + Tags footer ── */
     .post-footer { margin-top:56px; padding-top:32px; border-top:1px solid var(--bb); }
@@ -295,7 +300,21 @@
   </style>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

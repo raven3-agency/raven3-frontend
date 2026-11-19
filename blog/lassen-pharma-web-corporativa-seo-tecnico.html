@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <!-- Archivo generado por scripts/build-blog.js desde scripts/templates/. No editar a mano. -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base — Raven3 Blog</title>
+  <title>Lassen Pharma: web corporativa con SEO técnico | Raven3</title>
   <meta name="description" content="Un sitio institucional creado para mejorar claridad, performance, visibilidad orgánica y estructura técnica en una marca del sector farmacéutico." />
   <link rel="canonical" href="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
   <link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
@@ -16,7 +16,7 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Raven3" />
   <meta property="og:locale" content="es_AR" />
-  <meta property="og:title" content="Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base — Raven3 Blog" />
+  <meta property="og:title" content="Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base" />
   <meta property="og:description" content="Un sitio institucional creado para mejorar claridad, performance, visibilidad orgánica y estructura técnica en una marca del sector farmacéutico." />
   <meta property="og:url" content="https://raven3.com.ar/blog/lassen-pharma-web-corporativa-seo-tecnico" />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
@@ -30,7 +30,7 @@
   <meta property="article:tag" content="Arquitectura Web" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base — Raven3 Blog" />
+  <meta name="twitter:title" content="Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base" />
   <meta name="twitter:description" content="Un sitio institucional creado para mejorar claridad, performance, visibilidad orgánica y estructura técnica en una marca del sector farmacéutico." />
   <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
@@ -195,6 +195,11 @@
     .post-content a { color:var(--ba); text-decoration:none; border-bottom:1px solid rgba(0,229,200,0.3); transition:border-color .2s; }
     .post-content a:hover { border-color:var(--ba); }
     .post-content blockquote { margin:28px 0; padding:20px 24px; border-left:3px solid var(--ba); background:rgba(0,229,200,0.04); border-radius:0 12px 12px 0; font-style:italic; color:rgba(180,210,225,0.8); }
+    .post-content .table-wrap { margin:28px 0; overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--bb); border-radius:12px; }
+    .post-content table { width:100%; min-width:560px; border-collapse:collapse; font-size:14px; line-height:1.55; }
+    .post-content th, .post-content td { padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--bb); }
+    .post-content th { font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--ba); background:rgba(0,229,200,0.05); }
+    .post-content tbody tr:last-child td { border-bottom:0; }
 
     /* ── Share + Tags footer ── */
     .post-footer { margin-top:56px; padding-top:32px; border-top:1px solid var(--bb); }
@@ -295,7 +300,21 @@
   </style>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

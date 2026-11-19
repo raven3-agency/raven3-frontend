@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <!-- Archivo generado por scripts/build-blog.js desde scripts/templates/. No editar a mano. -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Diseño B2B para logística: cómo una web puede generar más confianza comercial — Raven3 Blog</title>
-  <meta name="description" content="En proyectos como CEA American, la conversión no depende de botones llamativos, sino de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional." />
+  <title>Diseño web B2B para logística: más confianza comercial</title>
+  <meta name="description" content="En una web B2B de logística como CEA American, la conversión depende de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional." />
   <link rel="canonical" href="https://raven3.com.ar/blog/cea-american-conversion-logistica-b2b" />
   <link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/cea-american-conversion-logistica-b2b" />
   <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/blog/cea-american-conversion-logistica-b2b" />
@@ -15,8 +15,8 @@
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Raven3" />
   <meta property="og:locale" content="es_AR" />
-  <meta property="og:title" content="Diseño B2B para logística: cómo una web puede generar más confianza comercial — Raven3 Blog" />
-  <meta property="og:description" content="En proyectos como CEA American, la conversión no depende de botones llamativos, sino de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional." />
+  <meta property="og:title" content="Diseño B2B para logística: cómo una web puede generar más confianza comercial" />
+  <meta property="og:description" content="En una web B2B de logística como CEA American, la conversión depende de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional." />
   <meta property="og:url" content="https://raven3.com.ar/blog/cea-american-conversion-logistica-b2b" />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
   <meta property="article:published_time" content="2023-07-13" />
@@ -29,8 +29,8 @@
   <meta property="article:tag" content="Web Corporativa" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Diseño B2B para logística: cómo una web puede generar más confianza comercial — Raven3 Blog" />
-  <meta name="twitter:description" content="En proyectos como CEA American, la conversión no depende de botones llamativos, sino de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional." />
+  <meta name="twitter:title" content="Diseño B2B para logística: cómo una web puede generar más confianza comercial" />
+  <meta name="twitter:description" content="En una web B2B de logística como CEA American, la conversión depende de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional." />
   <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
   <script type="application/ld+json">
@@ -41,7 +41,7 @@
       "@type": "BlogPosting",
       "@id": "https://raven3.com.ar/blog/cea-american-conversion-logistica-b2b#article",
       "headline": "Diseño B2B para logística: cómo una web puede generar más confianza comercial",
-      "description": "En proyectos como CEA American, la conversión no depende de botones llamativos, sino de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional.",
+      "description": "En una web B2B de logística como CEA American, la conversión depende de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional.",
       "inLanguage": "es",
       "datePublished": "2023-07-13",
       "dateModified": "2023-07-13",
@@ -194,6 +194,11 @@
     .post-content a { color:var(--ba); text-decoration:none; border-bottom:1px solid rgba(0,229,200,0.3); transition:border-color .2s; }
     .post-content a:hover { border-color:var(--ba); }
     .post-content blockquote { margin:28px 0; padding:20px 24px; border-left:3px solid var(--ba); background:rgba(0,229,200,0.04); border-radius:0 12px 12px 0; font-style:italic; color:rgba(180,210,225,0.8); }
+    .post-content .table-wrap { margin:28px 0; overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid var(--bb); border-radius:12px; }
+    .post-content table { width:100%; min-width:560px; border-collapse:collapse; font-size:14px; line-height:1.55; }
+    .post-content th, .post-content td { padding:12px 14px; text-align:left; vertical-align:top; border-bottom:1px solid var(--bb); }
+    .post-content th { font-family:var(--mono); font-size:11px; font-weight:500; letter-spacing:.06em; text-transform:uppercase; color:var(--ba); background:rgba(0,229,200,0.05); }
+    .post-content tbody tr:last-child td { border-bottom:0; }
 
     /* ── Share + Tags footer ── */
     .post-footer { margin-top:56px; padding-top:32px; border-top:1px solid var(--bb); }
@@ -294,7 +299,21 @@
   </style>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

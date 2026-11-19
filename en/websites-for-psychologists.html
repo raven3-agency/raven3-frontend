@@ -7,7 +7,7 @@
 
   <title>Websites for Psychologists | Raven3</title>
 
-  <meta name="description" content="We design professional websites for psychologists and therapists with a clear approach, appointment booking, online or in-person sessions, contact and a thoughtful digital presence." />
+  <meta name="description" content="Professional websites for psychologists and therapists: a clear approach, appointment booking, online or in-person sessions and easy contact." />
   <meta name="author" content="Raven3" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#050A0E" />
@@ -18,7 +18,7 @@
   <link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/webs-para-psicologos.html" />
 
   <meta property="og:title" content="Websites for Psychologists | Raven3" />
-  <meta property="og:description" content="We design professional websites for psychologists and therapists with a clear approach, appointment booking, online or in-person sessions, contact and a thoughtful digital presence." />
+  <meta property="og:description" content="Professional websites for psychologists and therapists: a clear approach, appointment booking, online or in-person sessions and easy contact." />
   <meta property="og:url" content="https://raven3.com.ar/en/websites-for-psychologists.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Raven3" />
@@ -26,7 +26,7 @@
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Websites for Psychologists | Raven3" />
-  <meta name="twitter:description" content="We design professional websites for psychologists and therapists with a clear approach, appointment booking, online or in-person sessions, contact and a thoughtful digital presence." />
+  <meta name="twitter:description" content="Professional websites for psychologists and therapists: a clear approach, appointment booking, online or in-person sessions and easy contact." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -117,7 +117,21 @@
   </script>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

@@ -164,7 +164,10 @@ function renderHead(lang, post) {
   const t = T[lang];
   const canonical = url[lang].abs(post.slug);
   const alt = altUrls(lang, post.slug);
-  const title = `${post.title} — ${t.blogSuffix}`;
+  // <title> corto para Google (≤60): seoTitle si existe; la marca solo si entra.
+  const baseTitle = post.seoTitle || post.title;
+  const title = baseTitle.length + 9 <= 60 ? `${baseTitle} | Raven3` : baseTitle;
+  const description = post.seoDescription || post.excerpt;
   const modified = post.dateModified || post.date;
   const hreflang = [
     alt.es && `  <link rel="alternate" hreflang="es" href="${alt.es}" />`,
@@ -179,7 +182,7 @@ function renderHead(lang, post) {
         '@type': 'BlogPosting',
         '@id': `${canonical}#article`,
         headline: post.title,
-        description: post.excerpt,
+        description,
         inLanguage: lang,
         datePublished: post.date,
         dateModified: modified,
@@ -209,7 +212,7 @@ function renderHead(lang, post) {
   };
 
   return `  <title>${e(title)}</title>
-  <meta name="description" content="${e(post.excerpt)}" />
+  <meta name="description" content="${e(description)}" />
   <link rel="canonical" href="${canonical}" />
 ${hreflang}
   <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -218,8 +221,8 @@ ${hreflang}
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="Raven3" />
   <meta property="og:locale" content="${t.locale}" />
-  <meta property="og:title" content="${e(title)}" />
-  <meta property="og:description" content="${e(post.excerpt)}" />
+  <meta property="og:title" content="${e(post.title)}" />
+  <meta property="og:description" content="${e(description)}" />
   <meta property="og:url" content="${canonical}" />
   <meta property="og:image" content="${OG_IMAGE}" />
   <meta property="article:published_time" content="${post.date}" />
@@ -228,8 +231,8 @@ ${hreflang}
 ${(post.tags || []).map(tag => `  <meta property="article:tag" content="${e(tag)}" />`).join('\n')}
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="${e(title)}" />
-  <meta name="twitter:description" content="${e(post.excerpt)}" />
+  <meta name="twitter:title" content="${e(post.title)}" />
+  <meta name="twitter:description" content="${e(description)}" />
   <meta name="twitter:image" content="${OG_IMAGE}" />
 
   <script type="application/ld+json">

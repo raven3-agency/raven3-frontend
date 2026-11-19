@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries."
+      content="Premium websites for brands, companies and professionals who want to project trust, organize their digital presence and get better inquiries."
     />
 
     <meta name="author" content="Raven3" />
@@ -24,7 +24,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://raven3.com.ar/en/premium-web.html" />
     <meta property="og:title" content="Premium Web Design for Businesses | Raven3" />
-    <meta property="og:description" content="We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries." />
+    <meta property="og:description" content="Premium websites for brands, companies and professionals who want to project trust, organize their digital presence and get better inquiries." />
     <meta property="og:image" content="https://raven3.com.ar/assets/img/og/web-premium.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://raven3.com.ar/en/premium-web.html" />
     <meta name="twitter:title" content="Premium Web Design for Businesses | Raven3" />
-    <meta name="twitter:description" content="We build premium websites for brands, companies, and professionals who want to project trust, get their digital presence in order, and generate better inquiries." />
+    <meta name="twitter:description" content="Premium websites for brands, companies and professionals who want to project trust, organize their digital presence and get better inquiries." />
     <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/web-premium.png" />
 
     <!-- Favicons -->
@@ -62,7 +62,21 @@
     <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
 
     <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }

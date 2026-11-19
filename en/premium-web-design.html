@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Premium Web Design | Raven3</title>
+    <title>Professional Website Design Services | Raven3</title>
 
     <meta
       name="description"
-      content="Premium web design for brands and businesses that won't settle for templates. UX, performance, technical SEO and international-level aesthetics, from Buenos Aires."
+      content="Professional web design for brands that won't settle for templates: UX, performance, technical SEO and international-level aesthetics."
     />
 
     <meta name="author" content="Raven3" />
@@ -23,7 +23,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://raven3.com.ar/en/premium-web-design.html" />
-    <meta property="og:title" content="Premium Web Design | Raven3" />
+    <meta property="og:title" content="Professional Website Design Services | Raven3" />
     <meta property="og:description" content="Premium web design for brands and businesses that won't settle for templates. UX, performance, technical SEO and international-level aesthetics." />
     <meta property="og:image" content="https://raven3.com.ar/assets/img/og/diseno-web-premium.png" />
     <meta property="og:image:width" content="1200" />
@@ -34,7 +34,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://raven3.com.ar/en/premium-web-design.html" />
-    <meta name="twitter:title" content="Premium Web Design | Raven3" />
+    <meta name="twitter:title" content="Professional Website Design Services | Raven3" />
     <meta name="twitter:description" content="Premium web design for brands and businesses that won't settle for templates. UX, performance, technical SEO and international-level aesthetics." />
     <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/diseno-web-premium.png" />
 
@@ -62,7 +62,21 @@
     <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
 
     <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }

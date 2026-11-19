@@ -4,6 +4,8 @@
       "id": 1,
       "slug": "cea-american-cold-chain-corporate-website",
       "title": "CEA American: How We Designed a Corporate Website for a Cold Chain Logistics Company",
+      "seoTitle": "CEA American: Corporate Website for Cold Chain Logistics",
+      "seoDescription": "Corporate website for CEA American, a cold chain logistics company: operational strength, traceability, and control of refrigerated and frozen goods.",
       "excerpt": "A project built to convey operational strength, traceability, and end-to-end control across the logistics, storage, and distribution of refrigerated, frozen, and dry goods.",
       "category": "desarrollo",
       "tags": [
@@ -29,6 +31,7 @@
       "id": 3,
       "slug": "etienne-de-montebello-interactive-editorial-experience",
       "title": "Etienne de Montebello: An Interactive Editorial Experience for a Premium Literary Work",
+      "seoTitle": "Etienne de Montebello: Interactive Editorial Website",
       "excerpt": "How we built an immersive site with visual storytelling and an editorial focus, designed to showcase and sell an eBook.",
       "category": "desarrollo",
       "tags": [
@@ -54,6 +57,7 @@
       "id": 7,
       "slug": "ndb-propiedades-tokko-broker-integration",
       "title": "NDB Propiedades: A Real Estate Platform Integrated with Tokko Broker",
+      "seoTitle": "NDB Propiedades: Real Estate Site Integrated with Tokko",
       "excerpt": "How we built a custom real estate experience with advanced filters, API integration, and an architecture built to scale property listings.",
       "category": "desarrollo",
       "tags": [
@@ -79,6 +83,7 @@
       "id": 11,
       "slug": "sgm-institutional-site-ecommerce-community",
       "title": "SGM+: An Institutional Site with E-Commerce to Power Community and Sign-Ups",
+      "seoTitle": "SGM+: Institutional Site with E-Commerce and Community",
       "excerpt": "A project that combines institutional presence, online sales, community, and a conversion-focused experience.",
       "category": "ecommerce",
       "tags": [
@@ -104,6 +109,7 @@
       "id": 5,
       "slug": "lassen-pharma-corporate-website-technical-seo",
       "title": "Lassen Pharma: Corporate Web Architecture with Technical SEO Built In From the Start",
+      "seoTitle": "Lassen Pharma: Corporate Website with Technical SEO",
       "excerpt": "An institutional site built to improve clarity, performance, organic visibility, and technical structure for a pharmaceutical brand.",
       "category": "seo",
       "tags": [
@@ -129,6 +135,7 @@
       "id": 9,
       "slug": "beforce-digital-catalog-visual-identity",
       "title": "BEFORCE: A Digital Catalog with Strong Visual Identity and a Clear Shopping Experience",
+      "seoTitle": "BEFORCE: Digital Catalog with a Strong Visual Identity",
       "excerpt": "A project focused on presenting products quickly, clearly, and professionally, built around a strong visual identity and solid catalog structure.",
       "category": "desarrollo",
       "tags": [
@@ -154,6 +161,7 @@
       "id": 13,
       "slug": "okos-minimalist-institutional-website",
       "title": "OKOS: A Minimalist Institutional Website Built for Clarity, Speed, and Identity",
+      "seoTitle": "OKOS: Minimalist Institutional Website Built for Speed",
       "excerpt": "A project where visual simplicity was a strategic choice — to communicate better, load faster, and sustain a clear brand identity.",
       "category": "desarrollo",
       "tags": [
@@ -179,6 +187,7 @@
       "id": 15,
       "slug": "art1-corporate-website-seo-accessibility",
       "title": "ART1: A Corporate Website Built for SEO, Accessibility, and Performance",
+      "seoTitle": "ART1: Corporate Website Built for SEO and Accessibility",
       "excerpt": "A project to bring order to the digital presence of a visual communications company spanning graphics, environmental branding, and corporate solutions.",
       "category": "seo",
       "tags": [
@@ -204,6 +213,7 @@
       "id": 17,
       "slug": "knots-ecommerce-product-ux",
       "title": "Knots: Optimizing a Tienda Nube Store Around the Shopping Experience",
+      "seoTitle": "Knots: Optimizing the Shopping UX of a Tienda Nube Store",
       "excerpt": "An online store built on Tienda Nube, optimized with better product presentation, commercial structure, and a smoother purchase journey.",
       "category": "ecommerce",
       "tags": [
@@ -229,6 +239,8 @@
       "id": 19,
       "slug": "core-web-vitals-practical-guide",
       "title": "Core Web Vitals in 2024: What Google Measures and How to Improve Your Score",
+      "seoTitle": "Core Web Vitals: What Google Measures and How to Improve",
+      "seoDescription": "LCP, CLS, and INP are the metrics Google uses to measure real user experience. What each one means and how to improve it with concrete changes.",
       "excerpt": "LCP, CLS, and INP are the three metrics Google uses to measure real user experience. This guide explains what each one means and how to improve it with concrete changes.",
       "category": "performance",
       "tags": [
@@ -255,6 +267,7 @@
       "id": 33,
       "slug": "web-development-trends-2026",
       "title": "Web Development Trends in 2026: What's Changing and How to Prepare",
+      "seoTitle": "Web Development Trends in 2026: What's Changing",
       "excerpt": "The web ecosystem is evolving fast. Here are the technical trends shaping how sites and web applications are being built in 2026.",
       "category": "desarrollo",
       "tags": [
@@ -280,6 +293,8 @@
       "id": 35,
       "slug": "geo-generative-engine-optimization-guide",
       "title": "GEO: What Generative Engine Optimization Is and How to Apply It",
+      "seoTitle": "Generative Engine Optimization (GEO): A Practical Guide",
+      "seoDescription": "What GEO is, why it matters for your business, and concrete strategies to get your content cited by ChatGPT, Google AI Overviews, and Perplexity.",
       "excerpt": "GEO is the discipline of optimizing your content to appear in answers from ChatGPT, Google AI Overviews, and Perplexity. What it is, why it matters for your business, and concrete strategies to implement it.",
       "category": "seo",
       "tags": [
@@ -305,6 +320,7 @@
       "id": 37,
       "slug": "llms-txt-what-it-is-how-to-implement",
       "title": "What llms.txt Is and How to Implement It on Your Site",
+      "seoDescription": "What llms.txt is, how it's structured, and how we built ours at raven3.com.ar so ChatGPT, Claude, Gemini, and Perplexity understand your site.",
       "excerpt": "llms.txt tells ChatGPT, Claude, Gemini, and Perplexity what your site is about, without relying on them to crawl your entire HTML. What it is, how it's structured, and how we built ours at raven3.com.ar.",
       "category": "seo",
       "tags": [
@@ -330,6 +346,8 @@
       "id": 36,
       "slug": "shopify-vs-woocommerce-vs-custom-development",
       "title": "Shopify vs. WooCommerce vs. Custom Development: Which One Should You Choose for Your Online Store",
+      "seoTitle": "Shopify vs. WooCommerce vs. Custom: Which One to Choose",
+      "seoDescription": "Shopify, WooCommerce, or custom development: we compare cost, flexibility, and time to launch with real-world numbers so you can choose.",
       "excerpt": "Three very different options in cost, flexibility, and time to launch. This guide compares Shopify, WooCommerce, and custom development with real-world costs so you can decide with actual numbers.",
       "category": "ecommerce",
       "tags": [
@@ -355,6 +373,8 @@
       "id": 32,
       "slug": "design-systems-for-web-projects",
       "title": "Design Systems for Web Projects: When to Build One and Where to Start",
+      "seoTitle": "Design Systems for Web Projects: When and Where to Start",
+      "seoDescription": "A design system speeds up development and improves visual consistency. When it's worth the effort and how to build your own, step by step.",
       "excerpt": "A design system speeds up development, improves visual consistency, and reduces design debt. This guide explains when it's worth the effort and how to build your own.",
       "category": "ux",
       "tags": [

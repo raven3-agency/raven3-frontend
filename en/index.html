@@ -99,7 +99,21 @@
     <link rel="stylesheet" href="/assets/css/lang-switcher.css?v=20261010" />
 
     <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }
@@ -137,12 +151,6 @@
               "https://www.instagram.com/agencia.raven3/",
               "https://github.com/raven3-agency/"
             ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "10",
-              "bestRating": "5"
-            },
             "hasOfferCatalog": {
               "@type": "OfferCatalog",
               "name": "Raven3 Digital Services",
@@ -351,7 +359,7 @@
             </span>
             <span class="trust-item">
               <span class="trust-dot" aria-hidden="true"></span>
-              95+ Lighthouse score
+              Core Web Vitals optimized
             </span>
           </div>
 
@@ -1180,11 +1188,11 @@
     </script>
 
     <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
     <script>
       /* ── SYS.08 // PROYECTOS — Horizontal Scroll ── */
-      (function () {
+      document.addEventListener("DOMContentLoaded", function () {
         if (!window.gsap || !window.ScrollTrigger) return;
         gsap.registerPlugin(ScrollTrigger);
 
@@ -1263,7 +1271,7 @@
             observer.observe(item);
           });
         });
-      })();
+      });
     </script>
 
     <!-- App modules -->

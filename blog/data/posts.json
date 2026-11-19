@@ -4,6 +4,8 @@
       "id": 1,
       "slug": "cea-american-cadena-frio-web-corporativa",
       "title": "CEA American: cómo diseñamos una web corporativa para una empresa de cadena de frío",
+      "seoTitle": "CEA American: web corporativa para cadena de frío",
+      "seoDescription": "Web corporativa para CEA American, logística en cadena de frío: solidez operativa, trazabilidad y control de productos refrigerados y congelados.",
       "excerpt": "Un proyecto pensado para transmitir solidez operativa, trazabilidad y control integral en logística, almacenaje y distribución de productos refrigerados, congelados y secos.",
       "category": "desarrollo",
       "tags": [
@@ -29,6 +31,8 @@
       "id": 2,
       "slug": "cea-american-conversion-logistica-b2b",
       "title": "Diseño B2B para logística: cómo una web puede generar más confianza comercial",
+      "seoTitle": "Diseño web B2B para logística: más confianza comercial",
+      "seoDescription": "En una web B2B de logística como CEA American, la conversión depende de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional.",
       "excerpt": "En proyectos como CEA American, la conversión no depende de botones llamativos, sino de transmitir capacidad operativa, orden, cumplimiento y respuesta profesional.",
       "category": "ux",
       "tags": [
@@ -54,6 +58,7 @@
       "id": 3,
       "slug": "etienne-de-montebello-experiencia-editorial-interactiva",
       "title": "Etienne de Montebello: una experiencia editorial interactiva para una obra literaria premium",
+      "seoTitle": "Etienne de Montebello: web editorial interactiva",
       "excerpt": "Cómo construimos un sitio inmersivo con storytelling visual, foco editorial y una experiencia digital pensada para presentar y vender un eBook.",
       "category": "desarrollo",
       "tags": [
@@ -79,6 +84,7 @@
       "id": 4,
       "slug": "storytelling-visual-web-literaria",
       "title": "Storytelling visual aplicado a una web literaria: aprendizajes del proyecto Etienne de Montebello",
+      "seoTitle": "Storytelling visual en una web literaria: caso Etienne",
       "excerpt": "Cuando el producto es una obra literaria, la web tiene que hacer más que informar: debe construir clima, ritmo, deseo de lectura y confianza.",
       "category": "ux",
       "tags": [
@@ -104,6 +110,7 @@
       "id": 5,
       "slug": "lassen-pharma-web-corporativa-seo-tecnico",
       "title": "Lassen Pharma: arquitectura web corporativa con SEO técnico desde la base",
+      "seoTitle": "Lassen Pharma: web corporativa con SEO técnico",
       "excerpt": "Un sitio institucional creado para mejorar claridad, performance, visibilidad orgánica y estructura técnica en una marca del sector farmacéutico.",
       "category": "seo",
       "tags": [
@@ -129,6 +136,7 @@
       "id": 6,
       "slug": "seo-tecnico-web-corporativa-lassen",
       "title": "SEO técnico en webs corporativas: lo que aplicamos en proyectos como Lassen Pharma",
+      "seoTitle": "SEO técnico para webs corporativas: caso Lassen Pharma",
       "excerpt": "Una web institucional puede ser visualmente correcta y aun así estar mal preparada para Google. La diferencia está en la arquitectura técnica.",
       "category": "seo",
       "tags": [
@@ -154,6 +162,7 @@
       "id": 7,
       "slug": "ndb-propiedades-integracion-tokko-broker",
       "title": "NDB Propiedades: una plataforma inmobiliaria integrada con Tokko Broker",
+      "seoTitle": "NDB Propiedades: web inmobiliaria con Tokko Broker",
       "excerpt": "Cómo desarrollamos una experiencia inmobiliaria a medida con filtros avanzados, consumo de API y estructura preparada para escalar propiedades.",
       "category": "desarrollo",
       "tags": [
@@ -179,6 +188,7 @@
       "id": 8,
       "slug": "ux-inmobiliaria-filtros-propiedades",
       "title": "UX inmobiliaria: cómo diseñar filtros de propiedades que realmente ayudan al usuario",
+      "seoTitle": "UX inmobiliaria: filtros de propiedades que ayudan",
       "excerpt": "En proyectos como NDB Propiedades, los filtros no son un detalle visual: son el corazón de la experiencia de búsqueda.",
       "category": "ux",
       "tags": [
@@ -204,6 +214,7 @@
       "id": 9,
       "slug": "beforce-catalogo-digital-identidad-visual",
       "title": "BEFORCE: catálogo digital con identidad visual sólida y experiencia comercial clara",
+      "seoTitle": "BEFORCE: catálogo digital con identidad visual",
       "excerpt": "Un proyecto enfocado en presentar productos de forma rápida, ordenada y profesional, con una identidad visual fuerte y estructura de catálogo.",
       "category": "desarrollo",
       "tags": [
@@ -229,6 +240,7 @@
       "id": 10,
       "slug": "catalogo-digital-productos-performance",
       "title": "Catálogos digitales performantes: por qué BEFORCE no necesitaba una web pesada",
+      "seoTitle": "Catálogo digital liviano y rápido: el caso BEFORCE",
       "excerpt": "Para mostrar productos de forma efectiva, muchas marcas no necesitan una plataforma compleja: necesitan estructura, velocidad y claridad comercial.",
       "category": "performance",
       "tags": [
@@ -254,6 +266,7 @@
       "id": 11,
       "slug": "sgm-sitio-institucional-ecommerce-comunidad",
       "title": "SGM+: sitio institucional con e-commerce para potenciar comunidad e inscripciones",
+      "seoTitle": "SGM+: sitio institucional con e-commerce y comunidad",
       "excerpt": "Un proyecto que combina presencia institucional, venta online, comunidad y una experiencia orientada a conversión.",
       "category": "ecommerce",
       "tags": [
@@ -279,6 +292,7 @@
       "id": 12,
       "slug": "ecommerce-con-comunidad-sgm",
       "title": "E-commerce con comunidad: lo que aprendimos desarrollando SGM+",
+      "seoTitle": "E-commerce con comunidad: lo que aprendimos con SGM+",
       "excerpt": "No todos los e-commerce venden productos de la misma manera. Algunos venden pertenencia, formación, experiencia y comunidad.",
       "category": "ecommerce",
       "tags": [
@@ -304,6 +318,7 @@
       "id": 13,
       "slug": "okos-sitio-institucional-minimalista",
       "title": "OKOS: sitio institucional minimalista con foco en claridad, velocidad e identidad",
+      "seoTitle": "OKOS: sitio institucional minimalista y rápido",
       "excerpt": "Un proyecto donde la simpleza visual fue una decisión estratégica para comunicar mejor, cargar más rápido y sostener una identidad clara.",
       "category": "desarrollo",
       "tags": [
@@ -329,6 +344,7 @@
       "id": 14,
       "slug": "minimalismo-web-performance-okos",
       "title": "Minimalismo web y performance: por qué menos interfaz puede convertir mejor",
+      "seoTitle": "Minimalismo web: menos interfaz, más conversión",
       "excerpt": "El caso OKOS muestra cómo una web minimalista puede mejorar claridad, velocidad y percepción de marca sin perder presencia visual.",
       "category": "performance",
       "tags": [
@@ -354,6 +370,7 @@
       "id": 15,
       "slug": "art1-web-corporativa-seo-accesibilidad",
       "title": "ART1: web corporativa con estructura SEO, accesibilidad y rendimiento optimizado",
+      "seoTitle": "ART1: web corporativa con SEO y accesibilidad",
       "excerpt": "Un proyecto para ordenar la presencia digital de una empresa de comunicación visual, gráfica, ambientaciones y soluciones corporativas.",
       "category": "seo",
       "tags": [
@@ -379,6 +396,7 @@
       "id": 16,
       "slug": "estructura-seo-servicios-art1",
       "title": "Cómo estructurar una web de servicios gráficos para posicionar mejor: el caso ART1",
+      "seoTitle": "Cómo estructurar una web de servicios para SEO: caso ART1",
       "excerpt": "Una empresa con múltiples servicios necesita arquitectura SEO, no solo diseño visual. Cada servicio debe tener su propio espacio, intención y mensaje.",
       "category": "seo",
       "tags": [
@@ -404,6 +422,7 @@
       "id": 17,
       "slug": "knots-ecommerce-tienda-nube-ux-producto",
       "title": "Knots: optimización de e-commerce en Tienda Nube con foco en UX de compra",
+      "seoTitle": "Knots: UX de compra en una tienda de Tienda Nube",
       "excerpt": "Una tienda online optimizada sobre Tienda Nube, con mejoras en presentación de producto, estructura comercial y experiencia de compra.",
       "category": "ecommerce",
       "tags": [
@@ -429,6 +448,7 @@
       "id": 18,
       "slug": "tienda-nube-ux-conversion-knots",
       "title": "UX en Tienda Nube: pequeñas decisiones que pueden mejorar la conversión",
+      "seoTitle": "UX en Tienda Nube: decisiones que mejoran la conversión",
       "excerpt": "En e-commerce, la experiencia de compra se define por detalles: fotos, títulos, jerarquía, categorías, confianza y claridad en el recorrido.",
       "category": "ecommerce",
       "tags": [
@@ -454,6 +474,8 @@
       "id": 19,
       "slug": "core-web-vitals-2024-guia-practica",
       "title": "Core Web Vitals en 2024: qué mide Google y cómo mejorar tu puntaje",
+      "seoTitle": "Core Web Vitals: qué mide Google y cómo mejorar tu puntaje",
+      "seoDescription": "LCP, CLS e INP son las métricas que Google usa para medir la experiencia real. Qué significa cada una y cómo mejorarlas con cambios concretos.",
       "excerpt": "LCP, CLS e INP son los tres indicadores que Google usa para medir la experiencia real del usuario. Esta guía explica qué significa cada uno y cómo mejorarlo con cambios concretos.",
       "category": "performance",
       "tags": [
@@ -480,6 +502,8 @@
       "id": 20,
       "slug": "seo-local-argentina-guia-2024",
       "title": "SEO local en Argentina: cómo aparecer en Google Maps y capturar búsquedas de tu zona",
+      "seoTitle": "SEO local en Argentina: cómo aparecer en Google Maps",
+      "seoDescription": "Cómo aparecer en Google Maps y en las búsquedas de tu zona: guía de SEO local para negocios en Argentina con local físico o cobertura geográfica.",
       "excerpt": "Para negocios con presencia física o cobertura geográfica, el SEO local es la inversión de marketing digital más rentable. Esta guía explica cómo dominarlo en el contexto argentino.",
       "category": "seo",
       "tags": [
@@ -505,6 +529,7 @@
       "id": 21,
       "slug": "abandono-carrito-ecommerce-como-recuperarlo",
       "title": "Abandono de carrito en e-commerce: causas reales y cómo recuperar esas ventas",
+      "seoTitle": "Abandono de carrito: causas y cómo recuperar esas ventas",
       "excerpt": "El 70% de los carritos se abandonan antes de completar la compra. Esta guía explica por qué ocurre y qué acciones concretas reducen ese número.",
       "category": "ecommerce",
       "tags": [
@@ -530,6 +555,7 @@
       "id": 22,
       "slug": "formularios-web-que-convierten",
       "title": "Formularios web que convierten: principios de UX y errores que cuestan leads",
+      "seoTitle": "Formularios web que convierten: UX y errores que cuestan",
       "excerpt": "El formulario es el último paso antes de que un visitante se convierta en lead o cliente. Estos principios de UX reducen la fricción y aumentan los envíos.",
       "category": "ux",
       "tags": [
@@ -555,6 +581,8 @@
       "id": 23,
       "slug": "html-semantico-accesibilidad-web",
       "title": "HTML semántico y accesibilidad: el código que Google y tus usuarios agradecen",
+      "seoTitle": "HTML semántico y accesibilidad: guía para SEO",
+      "seoDescription": "El HTML semántico mejora el SEO, facilita el mantenimiento y hace tu sitio accesible para millones de usuarios con discapacidades.",
       "excerpt": "El HTML semántico no es solo buena práctica: mejora el SEO, facilita el mantenimiento y hace tu sitio accesible para millones de usuarios con discapacidades.",
       "category": "desarrollo",
       "tags": [
@@ -580,6 +608,8 @@
       "id": 24,
       "slug": "optimizacion-imagenes-webp-avif-2024",
       "title": "Imágenes web en 2024: WebP, AVIF y las técnicas que reducen el peso a la mitad",
+      "seoTitle": "Imágenes web: WebP, AVIF y cómo reducir el peso a la mitad",
+      "seoDescription": "Las imágenes son el recurso más pesado de casi todo sitio. Formatos modernos (WebP, AVIF) y las técnicas de optimización que más mejoran la velocidad.",
       "excerpt": "Las imágenes son el recurso más pesado de la mayoría de los sitios web. Esta guía explica los formatos modernos y las técnicas de optimización que más impactan en la performance.",
       "category": "performance",
       "tags": [
@@ -605,6 +635,8 @@
       "id": 25,
       "slug": "google-search-console-como-usarlo",
       "title": "Google Search Console: cómo leer los datos y tomar decisiones de SEO",
+      "seoTitle": "Google Search Console: cómo leer los datos y usarlos",
+      "seoDescription": "Search Console es la herramienta gratuita para entender cómo Google ve tu sitio. Los reportes más importantes y qué hacer con cada uno.",
       "excerpt": "Search Console es la herramienta gratuita más poderosa para entender cómo Google ve tu sitio. Esta guía explica los reportes más importantes y qué hacer con cada uno.",
       "category": "seo",
       "tags": [
@@ -630,6 +662,8 @@
       "id": 26,
       "slug": "tienda-online-hot-sale-black-friday",
       "title": "Hot Sale y Black Friday: cómo preparar tu tienda online para las fechas de mayor venta",
+      "seoTitle": "Hot Sale y Black Friday: cómo preparar tu tienda online",
+      "seoDescription": "Las fechas de descuentos generan picos de tráfico que pueden hacer o arruinar un mes. Cómo preparar la parte técnica, comercial y operativa de tu tienda.",
       "excerpt": "Las fechas de descuentos generan picos de tráfico que pueden hacer o arruinar un mes entero. Esta guía explica cómo preparar la parte técnica, comercial y operativa de tu tienda.",
       "category": "ecommerce",
       "tags": [
@@ -655,6 +689,8 @@
       "id": 27,
       "slug": "psicologia-color-diseno-web",
       "title": "Psicología del color en diseño web: qué transmite cada color y cómo usarlo en tu marca",
+      "seoTitle": "Psicología del color en diseño web: cómo usarlo en tu marca",
+      "seoDescription": "El color es la primera decisión visual que procesa el cerebro. Qué comunica cada tono y cómo usarlo para generar la emoción correcta en tu web.",
       "excerpt": "El color es la primera decisión visual que procesa el cerebro. Entender qué comunica cada tono ayuda a diseñar interfaces que generan la emoción correcta en el usuario.",
       "category": "ux",
       "tags": [
@@ -680,6 +716,7 @@
       "id": 28,
       "slug": "apis-rest-javascript-frontend",
       "title": "Consumir APIs REST desde el frontend: guía práctica con JavaScript moderno",
+      "seoTitle": "Consumir APIs REST desde el frontend con JavaScript",
       "excerpt": "Fetch, async/await, manejo de errores y buenas prácticas para integrar cualquier API en un proyecto web. Todo lo que necesitás saber sin frameworks.",
       "category": "desarrollo",
       "tags": [
@@ -705,6 +742,8 @@
       "id": 29,
       "slug": "monitoreo-performance-produccion",
       "title": "Cómo monitorear la performance de tu sitio en producción: métricas y herramientas",
+      "seoTitle": "Cómo monitorear la performance de tu web en producción",
+      "seoDescription": "La performance cambia con cada contenido, plugin o deploy. Cómo monitorear tu sitio en producción y detectar regresiones antes que tus usuarios.",
       "excerpt": "Optimizar una vez no es suficiente. La performance cambia con el tiempo: nuevo contenido, plugins, cambios de código. Esta guía explica cómo detectar regresiones antes de que afecten a los usuarios.",
       "category": "performance",
       "tags": [
@@ -730,6 +769,8 @@
       "id": 30,
       "slug": "ia-seo-google-2025",
       "title": "IA y SEO en 2025: cómo los AI Overviews de Google cambian el juego",
+      "seoTitle": "IA y SEO: cómo los AI Overviews de Google cambian el juego",
+      "seoDescription": "Google muestra respuestas generadas por IA antes de los resultados orgánicos. Qué contenido posiciona ahora y cómo escribir para seguir siendo visible.",
       "excerpt": "Google está mostrando respuestas generadas por IA antes de los resultados orgánicos. Esto cambia qué tipo de contenido posiciona y cómo hay que escribir para seguir siendo visible.",
       "category": "seo",
       "tags": [
@@ -755,6 +796,8 @@
       "id": 31,
       "slug": "email-marketing-ecommerce-estrategia",
       "title": "Email marketing para e-commerce: la estrategia que genera ventas mientras dormís",
+      "seoTitle": "Email marketing para e-commerce: flujos que venden solos",
+      "seoDescription": "El email tiene el mayor ROI del marketing digital. Los flujos automáticos que todo e-commerce debería tener configurados para vender más.",
       "excerpt": "El email tiene el mayor ROI de todos los canales de marketing digital. Esta guía explica los flujos automáticos que todo e-commerce debería tener configurados.",
       "category": "ecommerce",
       "tags": [
@@ -780,6 +823,8 @@
       "id": 32,
       "slug": "design-systems-proyectos-web",
       "title": "Design systems para proyectos web: cuándo implementarlos y por dónde empezar",
+      "seoTitle": "Design systems web: cuándo implementarlos y cómo empezar",
+      "seoDescription": "Un design system acelera el desarrollo y mejora la consistencia visual. Cuándo vale la pena el esfuerzo y cómo construir el tuyo paso a paso.",
       "excerpt": "Un design system acelera el desarrollo, mejora la consistencia visual y reduce la deuda de diseño. Esta guía explica cuándo vale la pena el esfuerzo y cómo construir el tuyo.",
       "category": "ux",
       "tags": [
@@ -805,6 +850,7 @@
       "id": 33,
       "slug": "tendencias-desarrollo-web-2026",
       "title": "Tendencias de desarrollo web en 2026: qué está cambiando y cómo prepararse",
+      "seoTitle": "Tendencias de desarrollo web en 2026: qué está cambiando",
       "excerpt": "El ecosistema web evoluciona rápido. Estas son las tendencias técnicas que están definiendo cómo se construyen los sitios y aplicaciones web en 2026.",
       "category": "desarrollo",
       "tags": [
@@ -830,6 +876,7 @@
       "id": 34,
       "slug": "como-mejorar-seo-pagina-web",
       "title": "Cómo mejorar el SEO de mi página web: guía completa",
+      "seoDescription": "Guía completa para mejorar el SEO de tu web: SEO técnico, keywords, optimización on-page, contenido y link building, con acciones concretas.",
       "excerpt": "Mejorar el posicionamiento orgánico no es magia: es el resultado de capas que trabajan juntas. Esta guía cubre el SEO técnico, la investigación de keywords, la optimización on-page, el contenido y el link building con acciones concretas.",
       "category": "seo",
       "tags": ["SEO", "Posicionamiento Web", "Keywords", "SEO Técnico", "Link Building"],
@@ -849,6 +896,8 @@
       "id": 35,
       "slug": "geo-generative-engine-optimization-argentina",
       "title": "GEO: qué es el Generative Engine Optimization y cómo aplicarlo en Argentina",
+      "seoTitle": "GEO (Generative Engine Optimization): guía para Argentina",
+      "seoDescription": "Qué es el GEO, por qué importa para negocios en Argentina y cómo optimizar tu web para aparecer en ChatGPT, Google AI Overviews y Perplexity.",
       "excerpt": "El GEO es la disciplina que optimiza para aparecer en respuestas de ChatGPT, Google AI Overviews y Perplexity. Qué es, por qué importa para negocios en Argentina y las estrategias concretas para implementarlo.",
       "category": "seo",
       "tags": ["GEO", "Generative Engine Optimization", "ChatGPT", "AI Overviews", "SEO 2026"],
@@ -868,6 +917,8 @@
       "id": 36,
       "slug": "shopify-vs-woocommerce-vs-desarrollo-a-medida",
       "title": "Shopify vs WooCommerce vs desarrollo a medida: cuál elegir para tu tienda online",
+      "seoTitle": "Shopify vs WooCommerce vs a medida: cuál elegir en Argentina",
+      "seoDescription": "Shopify, WooCommerce o desarrollo a medida: comparamos costo, flexibilidad y tiempos con números reales en Argentina para que elijas con datos.",
       "excerpt": "Tres opciones muy diferentes en costo, flexibilidad y tiempo de implementación. Esta guía compara Shopify, WooCommerce y desarrollo a medida con costos reales en Argentina para que puedas elegir con información concreta.",
       "category": "ecommerce",
       "tags": ["Shopify", "WooCommerce", "E-commerce", "Tienda Online", "Desarrollo a Medida"],
@@ -887,6 +938,7 @@
       "id": 37,
       "slug": "llms-txt-que-es-como-implementarlo",
       "title": "Qué es el archivo llms.txt y cómo implementarlo en tu web",
+      "seoDescription": "Qué es llms.txt, cómo se estructura y cómo lo implementamos en raven3.com.ar para que ChatGPT, Claude, Gemini y Perplexity entiendan tu sitio.",
       "excerpt": "llms.txt es el archivo que le dice a ChatGPT, Claude, Gemini y Perplexity de qué se trata tu sitio, sin depender de que rastreen todo el HTML. Qué es, cómo se estructura y cómo lo armamos en raven3.com.ar.",
       "category": "seo",
       "tags": ["llms.txt", "GEO", "SEO Técnico", "Inteligencia Artificial", "Rastreo Web"],
@@ -906,6 +958,8 @@
       "id": 38,
       "slug": "mi-web-no-aparece-en-chatgpt-checklist",
       "title": "Mi web no aparece en ChatGPT ni en Gemini: checklist para que las IA te citen",
+      "seoTitle": "Mi web no aparece en ChatGPT: checklist para que te citen",
+      "seoDescription": "Estar bien en Google ya no garantiza que una IA te recomiende. Checklist técnica y de contenido para saber por qué no te mencionan y corregirlo.",
       "excerpt": "Estar bien posicionado en Google ya no garantiza que una IA te recomiende. Una checklist técnica y de contenido para diagnosticar por qué no te mencionan y cómo corregirlo.",
       "category": "seo",
       "tags": ["ChatGPT", "Gemini", "GEO", "AI Overviews", "Visibilidad IA"],
@@ -925,6 +979,8 @@
       "id": 39,
       "slug": "senales-web-perdiendo-clientes-frente-a-ia",
       "title": "Señales de que tu web está perdiendo clientes frente a la IA (y cómo se arregla)",
+      "seoTitle": "Señales de que tu web pierde clientes frente a la IA",
+      "seoDescription": "Cada vez más gente le pregunta a una IA antes de buscar en Google. Las señales técnicas y de contenido que dejan a tu negocio fuera de la respuesta.",
       "excerpt": "Cada vez más gente le pregunta directamente a una IA antes de buscar en Google. Estas son las señales técnicas y de contenido que hacen que tu negocio quede afuera de esa respuesta.",
       "category": "seo",
       "tags": ["Rediseño Web", "GEO", "Inteligencia Artificial", "Auditoría Web", "SEO 2026"],
@@ -944,6 +1000,8 @@
       "id": 40,
       "slug": "mantenimiento-web-checklist-mensual",
       "title": "Mantenimiento web: qué revisar en tu sitio cada mes, trimestre y año",
+      "seoTitle": "Mantenimiento web: qué revisar cada mes, trimestre y año",
+      "seoDescription": "Formularios que no envían, backups sin probar, certificados vencidos: checklist mensual, trimestral y anual de mantenimiento web, con responsables.",
       "excerpt": "Una web no se cuida sola: formularios que dejan de enviar, backups que nadie probó, certificados que vencen y plugins sin actualizar. Un checklist concreto para evitar sorpresas y saber quién se ocupa de cada cosa.",
       "category": "desarrollo",
       "tags": ["Mantenimiento Web", "Seguridad Web", "Backups", "WordPress", "Checklist"],
@@ -958,6 +1016,31 @@
         "initials": "R3"
       },
       "content": "<h2>Una web no se termina el día que se publica</h2><p>Muchas empresas tratan su sitio como un folleto: se paga, se publica y se vuelve a mirar cuando alguien avisa que algo no funciona. El problema es que una web está apoyada en piezas que cambian solas: el servidor, los certificados, las dependencias, los plugins, los navegadores y los servicios de terceros.</p><p>Por eso el peor escenario no suele ser una caída visible. Es el formulario que dejó de enviar consultas hace tres semanas y nadie se enteró. Es el backup que existía en los papeles, pero no se podía restaurar. Es el dominio que venció porque el aviso le llegaba a un mail de alguien que ya no trabaja en la empresa.</p><p>La buena noticia: la mayoría de estos problemas se previenen con una rutina corta. Esta guía te deja un checklist concreto para revisar cada mes, cada trimestre y cada año, sin importar si tu sitio está hecho a medida, en WordPress o en una plataforma como Shopify o Tiendanube.</p><h2>Por qué este tema es más urgente que hace unos años</h2><p>Tres datos ayudan a dimensionarlo:</p><ul><li><strong>Las vulnerabilidades en WordPress crecen rápido.</strong> El informe <em>State of WordPress Security in 2026</em> de Patchstack registró 11.334 vulnerabilidades nuevas en 2025, un 42% más que en 2024. El 91% estaba en plugins y el 9% en temas. En el núcleo de WordPress hubo solo 6, de baja prioridad.</li><li><strong>El margen de reacción es muy chico.</strong> El mismo informe señala que el 46% de las vulnerabilidades no tenía parche al momento de hacerse públicas, y que la mediana hasta la explotación masiva, en las más atacadas, es de 5 horas.</li><li><strong>Los certificados SSL/TLS duran cada vez menos.</strong> Por una decisión del CA/Browser Forum, la validez máxima bajó de 398 a 200 días para los certificados emitidos desde el 15 de marzo de 2026. Va a bajar a 100 días en marzo de 2027 y a 47 días en marzo de 2029. Renovarlos a mano deja de ser una opción razonable.</li></ul><p>Nada de esto significa que tu sitio esté en peligro hoy. Significa que dejarlo quieto ya no es una forma neutra de cuidarlo.</p><h2>Checklist mensual: 30 a 60 minutos</h2><h3>1. Lo que genera negocio</h3><p>Empezá por acá, porque es lo que más cuesta cuando falla y lo que menos se controla.</p><ul><li>Enviá una prueba real por cada formulario y confirmá que el mensaje llega, y que no cae en spam.</li><li>Probá los botones de WhatsApp, los teléfonos y los mails desde un celular.</li><li>Si vendés online, hacé una compra de prueba completa, incluyendo el pago, el mail de confirmación y el cálculo de envío.</li><li>Compará las conversiones del mes con las del mes anterior. Una caída brusca sin motivo comercial suele ser un problema técnico, no de mercado.</li></ul><h3>2. Actualizaciones y seguridad</h3><ul><li><strong>En WordPress:</strong> actualizá núcleo, plugins y temas, primero en un entorno de prueba si el sitio es crítico. Eliminá lo que no uses: un plugin desactivado sigue siendo código en tu servidor.</li><li><strong>En un desarrollo a medida:</strong> revisá las dependencias con herramientas como <code>npm audit</code> o <code>composer audit</code>, y priorizá las vulnerabilidades que afecten a código que realmente se ejecuta.</li><li><strong>En plataformas SaaS:</strong> la plataforma actualiza por vos, pero las apps instaladas siguen siendo tu responsabilidad. Desinstalá las que ya no usás y revisá qué permisos tienen.</li><li>Revisá el listado de usuarios administradores y dá de baja a quienes ya no deberían tener acceso, incluidos ex empleados y proveedores anteriores.</li><li>Abrí el informe de problemas de seguridad de Google Search Console. Si Google detectó algo, es el primer lugar donde lo vas a ver.</li></ul><h3>3. Backups</h3><p>Un backup que nunca se probó es una suposición. Cada mes, verificá que las copias se estén generando y que incluyan tanto los archivos como la base de datos.</p><p>Una regla práctica es la 3-2-1: tres copias, en dos medios distintos, con una fuera del proveedor donde está alojado el sitio. Si el hosting tiene un incidente, o si te quedan bloqueados los accesos, un backup que vive solo en ese mismo servidor no te sirve.</p><h3>4. Velocidad y experiencia</h3><ul><li>Revisá el informe de Core Web Vitals en Search Console, que muestra datos de usuarios reales. Los umbrales de “bueno” son LCP de hasta 2,5 segundos, INP de hasta 200 milisegundos y CLS de hasta 0,1.</li><li>Controlá qué se agregó durante el mes. Una imagen sin optimizar, un video nuevo o un píxel de una campaña pueden arruinar un sitio que venía bien.</li><li>Navegá el sitio desde un celular real, con datos móviles y no con el Wi-Fi de la oficina.</li></ul><h3>5. Visibilidad en buscadores</h3><ul><li>Revisá en Search Console el informe de indexación de páginas, para detectar errores 404 nuevos o páginas importantes que quedaron afuera.</li><li>Mirá el rendimiento de tus páginas principales. Lo que importa es la tendencia, no el movimiento de una semana.</li><li>Después de cualquier cambio grande, confirmá que no haya quedado un <code>noindex</code> del entorno de prueba, ni un <code>robots.txt</code> que bloquee más de lo debido.</li></ul><h3>6. Contenido</h3><p>Es el punto más fácil de saltear y el que más le habla al cliente. Revisá precios, horarios, teléfonos, direcciones, equipo, promociones vencidas y fechas viejas. Un “Novedades 2023” en la home le comunica a cualquier visitante que nadie está mirando el sitio.</p><h2>Checklist trimestral: una mirada más amplia</h2><ul><li><strong>Restaurá un backup de verdad.</strong> Levantalo en un entorno de prueba y medí cuánto tarda. Ese es tu tiempo real de recuperación, y conviene conocerlo antes de necesitarlo.</li><li><strong>Auditá los scripts de terceros.</strong> Chats, mapas de calor, píxeles de campañas terminadas: cada uno pesa, y además es código ajeno ejecutándose en tu sitio.</li><li><strong>Buscá enlaces rotos</strong> y redirecciones que hayan quedado mal después de cambios de URL.</li><li><strong>Probá en varios navegadores y tamaños de pantalla</strong>, incluido Safari en iPhone, que suele ser donde aparecen las sorpresas.</li><li><strong>Revisá la accesibilidad básica:</strong> contraste, textos alternativos en imágenes nuevas y navegación con teclado.</li><li><strong>Controlá la entregabilidad del mail.</strong> Si tus formularios o tu tienda envían correos, verificá que SPF, DKIM y DMARC sigan bien configurados.</li></ul><h2>Checklist anual: lo que nadie recuerda hasta que falla</h2><ul><li><strong>Titularidad del dominio.</strong> Confirmá que esté a nombre de la empresa, y no de un ex empleado o de un proveedor. Si es un .com.ar, se gestiona en NIC Argentina. Asegurate de que los avisos de vencimiento lleguen a una casilla institucional.</li><li><strong>Accesos centralizados.</strong> Armá un inventario de hosting, DNS, dominio, analítica, Search Console y paneles de pago, con quién tiene cada acceso. Lo ideal es usar un gestor de contraseñas y activar la verificación en dos pasos.</li><li><strong>Certificados automatizados.</strong> Con los plazos más cortos, la renovación tiene que ser automática, y tiene que haber una alerta si falla.</li><li><strong>Versiones del servidor.</strong> Verificá que el lenguaje y la base de datos sigan con soporte. Por ejemplo, según php.net, PHP 8.2 recibe parches de seguridad solo hasta el 31 de diciembre de 2026. Las versiones 8.1 y anteriores ya están fuera de soporte.</li><li><strong>Costos y proveedores.</strong> Revisá qué estás pagando en hosting, licencias y apps, y si seguís usando todo. Muchas suscripciones se renuevan solas durante años sin que nadie las necesite.</li><li><strong>Textos legales.</strong> Actualizá la política de privacidad y los términos si sumaste formularios, cookies, medios de pago o herramientas nuevas.</li></ul><h2>Quién tiene que hacer cada cosa</h2><p>El mantenimiento falla menos por falta de conocimiento que por falta de dueño. Cuando todos creen que lo hace otro, no lo hace nadie. Una división razonable es esta:</p><ul><li><strong>Alguien del negocio:</strong> contenido, pruebas de formularios, compras de prueba y seguimiento de conversiones. No requiere saber programar, sobre todo si el sitio tiene un panel autoadministrable.</li><li><strong>Un perfil técnico, interno o externo:</strong> actualizaciones, dependencias, backups, servidor, certificados y análisis de performance.</li><li><strong>Dirección o administración:</strong> titularidad del dominio, control de accesos, contratos y renovaciones.</li></ul><p>Lo importante es dejarlo por escrito, con nombres y frecuencia. Una tarea recurrente en el calendario compartido alcanza para empezar.</p><h2>Cómo cambia la rutina según tu sitio</h2><p><strong>WordPress o WooCommerce:</strong> requiere la rutina más exigente, porque la superficie de ataque depende de cada plugin instalado. Menos plugins, mejor elegidos y mantenidos, es la medida más efectiva. Si vendés online, sumale un entorno de prueba antes de cada actualización.</p><p><strong>Shopify, Tiendanube y similares:</strong> te sacás de encima la infraestructura y los parches de la plataforma, pero seguís a cargo de las apps, los temas personalizados, el contenido, el SEO, la velocidad y los accesos.</p><p><strong>Desarrollo a medida:</strong> al tener menos piezas de terceros, suele haber menos actualizaciones urgentes, pero las dependencias y el servidor no se cuidan solos. Conviene que haya monitoreo automático y un responsable claro, y que el código esté documentado para no depender de una sola persona.</p><h2>Señales de que ya no alcanza con mantener</h2><p>A veces el checklist revela un problema de fondo. Prestale atención si te pasa alguna de estas cosas:</p><ul><li>Cada actualización rompe algo y nadie se anima a tocar el sitio.</li><li>Los problemas de velocidad vuelven apenas se resuelven.</li><li>Dependés de una sola persona para cualquier cambio, incluso para corregir un texto.</li><li>El sitio corre sobre versiones sin soporte que no se pueden actualizar sin rehacer partes enteras.</li><li>No podés acceder al dominio, al hosting o al código de tu propia web.</li></ul><p>En esos casos, conviene comparar con números cuánto cuesta seguir emparchando y cuánto cuesta rehacer lo que está mal. No siempre hace falta un sitio nuevo, pero tampoco conviene postergar esa cuenta indefinidamente.</p><h2>Por dónde empezar esta semana</h2><p>Si nunca hiciste nada de esto, no intentes resolver todo junto. Con estas cuatro acciones ya bajás gran parte del riesgo:</p><ul><li>Probá tus formularios y confirmá que las consultas estén llegando.</li><li>Verificá a nombre de quién está tu dominio y cuándo vence.</li><li>Pedí que te muestren el último backup, y una prueba de que se puede restaurar.</li><li>Agendá una revisión mensual con un responsable.</li></ul><p>Si preferís tener un diagnóstico antes de armar la rutina, en Raven3 hacemos una <a href=\"/auditoria-web-gratuita\">auditoría web gratuita</a> donde analizamos velocidad, SEO, experiencia mobile y conversión de tu sitio, y te mostramos qué conviene atender primero. Y si no querés cargar con el mantenimiento técnico, también ofrecemos planes para encargarnos: <a href=\"/contacto\">contanos qué tenés</a> y lo vemos.</p>"
+    },
+    {
+      "id": 41,
+      "slug": "cuanto-cuesta-una-pagina-web-argentina-2026",
+      "title": "Cuánto cuesta una página web en Argentina en 2026",
+      "excerpt": "Precios orientativos por tipo de sitio: landing, institucional, tienda online y desarrollo a medida, con plazos, qué mueve el precio y qué se paga después.",
+      "category": "desarrollo",
+      "tags": [
+        "Precios",
+        "Diseño Web",
+        "Presupuesto",
+        "Tiendas Online",
+        "Argentina"
+      ],
+      "date": "2026-11-19",
+      "dateFormatted": "19 de noviembre, 2026",
+      "readTime": 7,
+      "featured": false,
+      "thumbClass": "thumb-art--web",
+      "author": {
+        "name": "Equipo Raven3",
+        "role": "Desarrollo Web · Raven3",
+        "initials": "R3"
+      },
+      "content": "<p>\"¿Cuánto sale una página web?\" es la pregunta que más nos hacen, y la respuesta honesta es \"depende\". Pero \"depende\" no ayuda a armar un presupuesto. En esta guía te dejamos rangos concretos por tipo de sitio, qué hace subir o bajar el precio y qué costos vas a seguir pagando después de publicar.</p><blockquote>Respuesta corta: en Argentina, en 2026, una landing page profesional parte de USD 400–800, un sitio institucional de USD 800–1.500, una tienda online de USD 1.000–8.000 según la plataforma, y un desarrollo a medida con integraciones de USD 8.000 en adelante. A eso se suman dominio, hosting o plataforma y mantenimiento.</blockquote><h2>Tabla de precios por tipo de sitio</h2><p>Valores orientativos en dólares, actualizados a noviembre de 2026, para proyectos con diseño propio (no plantillas compradas y rellenadas). Cada proyecto se cotiza con un alcance cerrado antes de arrancar.</p><div class=\"table-wrap\"><table><thead><tr><th>Tipo de sitio</th><th>Para quién</th><th>Inversión inicial</th><th>Plazo típico</th></tr></thead><tbody><tr><td><strong>Landing page</strong></td><td>Una campaña, un servicio o un lanzamiento puntual</td><td>USD 400–800</td><td>1–2 semanas</td></tr><tr><td><strong>Sitio institucional</strong></td><td>Empresas, estudios y profesionales que necesitan presencia y consultas</td><td>USD 800–1.500</td><td>3–5 semanas</td></tr><tr><td><strong>Web por rubro</strong></td><td>Restaurantes, inmobiliarias, consultorios, colegios</td><td>Desde USD 800 (desde USD 1.000 con integraciones como Tokko)</td><td>3–6 semanas</td></tr><tr><td><strong>Tienda en Tiendanube o Shopify</strong></td><td>Catálogos chicos y medianos que quieren vender rápido</td><td>USD 1.000–2.500 + plan mensual de la plataforma</td><td>3–6 semanas</td></tr><tr><td><strong>Tienda en WooCommerce</strong></td><td>Catálogos con más personalización y menos costo recurrente</td><td>USD 2.000–8.000</td><td>6–10 semanas</td></tr><tr><td><strong>Desarrollo a medida</strong></td><td>Plataformas, portales, tiendas con integraciones a ERP, stock o logística</td><td>USD 8.000–30.000+</td><td>2–4 meses o más</td></tr><tr><td><strong>Mantenimiento mensual</strong></td><td>Cualquier sitio en producción</td><td>USD 50–200 por mes</td><td>Continuo</td></tr></tbody></table></div><p>Si tu proyecto no entra en ninguna fila, casi siempre está entre dos: una institucional con un catálogo, o una tienda chica con una integración puntual. En esos casos el precio se arma sumando lo que cambia, que vemos abajo.</p><h2>Qué hace subir o bajar el precio</h2><p>Dos sitios con \"cinco secciones\" pueden costar el doble uno del otro. Lo que realmente mueve el número es esto:</p><ul><li><strong>Diseño propio o plantilla.</strong> Una plantilla adaptada es más barata, pero se parece a otras mil webs y suele cargar código que no usás. El diseño a medida cuesta más al principio y rinde mejor en velocidad y conversión.</li><li><strong>Cantidad de páginas distintas.</strong> No importa tanto cuántas páginas hay, sino cuántos <em>tipos</em> de página hay que diseñar: home, servicio, ficha de producto, artículo de blog.</li><li><strong>Contenido.</strong> Si vos entregás textos y fotos listos, baja. Si hay que escribir los textos pensando en SEO o producir fotos, sube.</li><li><strong>Integraciones.</strong> Mercado Pago, Tokko Broker, un CRM, un ERP o un sistema de turnos suman horas de desarrollo y pruebas.</li><li><strong>Idiomas.</strong> Una versión en inglés bien hecha (con hreflang y URLs propias) no es traducir y pegar: suma entre un 20% y un 40%.</li><li><strong>SEO técnico de base.</strong> Estructura de URLs, schema, velocidad y sitemap bien hechos desde el día uno cuestan menos que corregirlos después.</li></ul><h2>Los costos que siguen después de publicar</h2><p>El presupuesto de desarrollo es solo una parte. Antes de decidir, sumá lo que vas a pagar todos los meses o todos los años:</p><ul><li><strong>Dominio.</strong> Un .com.ar se registra en NIC Argentina y su costo anual es bajo. Un .com se paga en dólares.</li><li><strong>Hosting.</strong> Un sitio estático rápido puede alojarse por muy poco o incluso gratis; un WordPress con tráfico necesita un hosting de USD 15–40 por mes.</li><li><strong>Plataforma de e-commerce.</strong> Shopify va de USD 39 a 399 por mes más apps; Tiendanube cobra planes en pesos y, según el plan, un costo por transacción. Lo comparamos en detalle en <a href=\"/blog/shopify-vs-woocommerce-vs-desarrollo-a-medida\">Shopify vs WooCommerce vs desarrollo a medida</a>.</li><li><strong>Mantenimiento.</strong> Actualizaciones, backups, certificados y revisar que los formularios sigan enviando. Te dejamos un <a href=\"/blog/mantenimiento-web-checklist-mensual\">checklist de mantenimiento mensual</a> para que sepas qué pedir.</li></ul><h2>¿Por qué los precios están en dólares?</h2><p>Porque buena parte de los costos de una web lo están: plataformas, servicios en la nube, licencias y herramientas. Cotizar en dólares permite sostener un presupuesto cerrado durante todo el proyecto. Igualmente se puede pagar en pesos al tipo de cambio del día de cada pago.</p><h2>Cómo comparar presupuestos sin equivocarte</h2><p>Un presupuesto barato puede salir caro si deja afuera cosas que después vas a necesitar. Antes de elegir, pedí que cada propuesta responda esto por escrito:</p><ol><li>¿Qué páginas y funcionalidades incluye, exactamente?</li><li>¿El diseño es propio o una plantilla?</li><li>¿Quién escribe los textos y quién consigue las imágenes?</li><li>¿Incluye SEO técnico de base (titles, schema, sitemap, velocidad)?</li><li>¿Cuántas rondas de cambios entran?</li><li>¿De quién es el código, el dominio y el hosting cuando termina el proyecto?</li><li>¿Qué cuesta mantenerlo después?</li></ol><p>Si una propuesta no puede contestar estas preguntas, el precio todavía no es real.</p><h2>Entonces, ¿cuánto vas a invertir vos?</h2><p>Para la mayoría de las pymes y profesionales, el punto de partida razonable es un sitio institucional de USD 800–1.500 bien hecho, que cargue rápido y esté preparado para aparecer en Google. Si vendés online, el salto está en elegir bien la plataforma, no en gastar más. Y si tu negocio depende de integraciones o procesos propios, el desarrollo a medida se paga solo en tiempo ahorrado.</p><p>Si querés un número para tu caso, <a href=\"/contacto\">contanos tu proyecto</a> y te armamos una propuesta con alcance cerrado. También podés empezar por una <a href=\"/auditoria-web-gratuita\">auditoría gratuita</a> de tu web actual, o ver nuestras opciones de <a href=\"/servicios/desarrollo-web-a-medida\">desarrollo web a medida</a>, <a href=\"/servicios/tiendas-online\">tiendas online</a> y <a href=\"/webs-por-rubro\">webs por rubro</a>.</p>"
     }
   ],
   "categories": [

@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="Technical SEO that fixes the foundation, not just the checklist. We optimize architecture, indexability, Core Web Vitals and site speed to give your SEO a real base to grow from. Free audit."
+      content="Technical SEO that fixes the foundation: architecture, indexability, Core Web Vitals and site speed, so your SEO has a real base to grow. Free audit."
     />
     <meta name="author" content="Raven3" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
@@ -175,7 +175,21 @@
     <link rel="stylesheet" href="/assets/css/servicio-seo-tecnico.css?v=20261028" />
 
   <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+  <script>
+    /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+    (function () {
+      var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+      function load() {
+        if (done) return; done = true;
+        evs.forEach(function (e) { removeEventListener(e, load); });
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+        document.head.appendChild(s);
+      }
+      evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+      addEventListener("load", function () { setTimeout(load, 3000); });
+    })();
+  </script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }

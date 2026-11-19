@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <title>Webs para colegios | Raven3</title>
+    <title>Páginas web para colegios e instituciones | Raven3</title>
 
     <meta
       name="description"
@@ -22,7 +22,7 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://raven3.com.ar/webs-para-colegios" />
-    <meta property="og:title" content="Webs para colegios | Raven3" />
+    <meta property="og:title" content="Páginas web para colegios e instituciones | Raven3" />
     <meta property="og:description" content="Diseñamos webs institucionales para colegios e instituciones educativas con admisiones, niveles, propuesta educativa, contacto y comunicación clara." />
     <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
     <meta property="og:image:width" content="1200" />
@@ -33,7 +33,7 @@
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://raven3.com.ar/webs-para-colegios" />
-    <meta name="twitter:title" content="Webs para colegios | Raven3" />
+    <meta name="twitter:title" content="Páginas web para colegios e instituciones | Raven3" />
     <meta name="twitter:description" content="Diseñamos webs institucionales para colegios e instituciones educativas con admisiones, niveles, propuesta educativa, contacto y comunicación clara." />
     <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
@@ -61,7 +61,21 @@
     <link rel="stylesheet" href="assets/css/landing-nichos.css" />
 
     <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Webs para contadores | Raven3</title>
+  <title>Páginas web para contadores y estudios contables | Raven3</title>
   <meta name="description" content="Creamos webs profesionales para contadores y estudios contables con servicios, consultas, WhatsApp, formularios y dise&ntilde;o institucional claro." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <link rel="canonical" href="https://raven3.com.ar/webs-para-contadores" />
@@ -14,7 +14,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raven3.com.ar/webs-para-contadores" />
-  <meta property="og:title" content="Webs para contadores | Raven3" />
+  <meta property="og:title" content="Páginas web para contadores y estudios contables | Raven3" />
   <meta property="og:description" content="Creamos webs profesionales para contadores y estudios contables con servicios, consultas, WhatsApp, formularios y dise&ntilde;o institucional claro." />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
   <meta property="og:image:width" content="1200" />
@@ -24,7 +24,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Webs para contadores | Raven3" />
+  <meta name="twitter:title" content="Páginas web para contadores y estudios contables | Raven3" />
   <meta name="twitter:description" content="Creamos webs profesionales para contadores y estudios contables con servicios, consultas, WhatsApp, formularios y dise&ntilde;o institucional claro." />
   <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
@@ -77,7 +77,21 @@
   </script>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

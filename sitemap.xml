@@ -582,6 +582,13 @@
   ══════════════════════════════════════════ -->
 
   <url>
+    <loc>https://raven3.com.ar/blog/cuanto-cuesta-una-pagina-web-argentina-2026</loc>
+    <lastmod>2026-11-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
     <loc>https://raven3.com.ar/blog/mantenimiento-web-checklist-mensual</loc>
     <lastmod>2026-11-03</lastmod>
     <changefreq>monthly</changefreq>
@@ -1061,50 +1068,5 @@
     <priority>0.64</priority>
   </url>
   <!-- BLOG:END -->
-
-
-  <!-- ══════════════════════════════════════════
-       LEGALES / LEGAL
-  ══════════════════════════════════════════ -->
-
-  <url>
-    <loc>https://raven3.com.ar/politica-de-privacidad.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/politica-de-privacidad.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/politica-de-privacidad.html" />
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.20</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/terminos-de-contratacion.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/terminos-de-contratacion.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/terms.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/terminos-de-contratacion.html" />
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.20</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/privacy-policy.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/politica-de-privacidad.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/privacy-policy.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/politica-de-privacidad.html" />
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.20</priority>
-  </url>
-
-  <url>
-    <loc>https://raven3.com.ar/en/terms.html</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://raven3.com.ar/terminos-de-contratacion.html" />
-    <xhtml:link rel="alternate" hreflang="en" href="https://raven3.com.ar/en/terms.html" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://raven3.com.ar/terminos-de-contratacion.html" />
-    <lastmod>2026-07-02</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.20</priority>
-  </url>
 
 </urlset>

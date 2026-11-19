@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Webs para oficios | Raven3</title>
+  <title>Páginas web para oficios y servicios técnicos | Raven3</title>
 
   <meta name="description" content="Creamos webs profesionales para electricistas, plomeros, gasistas, carpinteros y oficios que quieren generar más consultas desde Google y WhatsApp." />
   <meta name="author" content="Raven3" />
@@ -19,7 +19,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://raven3.com.ar/webs-para-oficios" />
-  <meta property="og:title" content="Webs para oficios | Raven3" />
+  <meta property="og:title" content="Páginas web para oficios y servicios técnicos | Raven3" />
   <meta property="og:description" content="Creamos webs profesionales para electricistas, plomeros, gasistas, carpinteros y oficios que quieren generar más consultas desde Google y WhatsApp." />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
   <meta property="og:image:width" content="1200" />
@@ -65,7 +65,21 @@
   </script>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }

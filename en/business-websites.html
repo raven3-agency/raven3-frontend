@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="We build business websites that generate real results. Custom web development, technical SEO, and a focus on conversions — more inquiries, a stronger image, more sales."
+      content="Business websites that generate real results: custom development, technical SEO and a focus on conversion. More inquiries, a stronger image, more sales."
     />
 
     <meta name="author" content="Raven3" />
@@ -62,7 +62,21 @@
     <link rel="stylesheet" href="/assets/css/landing-nichos.css" />
 
     <!-- GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() { dataLayer.push(arguments); }

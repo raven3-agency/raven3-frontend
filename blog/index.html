@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web</title>
+  <title>Blog de SEO, performance y desarrollo web | Raven3</title>
   <meta name="description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
   <link rel="canonical" href="https://raven3.com.ar/blog/" />
   <link rel="alternate" hreflang="es" href="https://raven3.com.ar/blog/" />
@@ -14,13 +14,13 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Raven3" />
-  <meta property="og:title" content="Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web" />
+  <meta property="og:title" content="Blog de SEO, performance y desarrollo web | Raven3" />
   <meta property="og:description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
   <meta property="og:url" content="https://raven3.com.ar/blog/" />
   <meta property="og:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Blog — Raven3 | Insights de Performance, SEO y Desarrollo Web" />
+  <meta name="twitter:title" content="Blog de SEO, performance y desarrollo web | Raven3" />
   <meta name="twitter:description" content="Artículos técnicos sobre performance web, SEO, e-commerce y arquitectura digital. Sin relleno, solo conocimiento que se puede implementar." />
   <meta name="twitter:image" content="https://raven3.com.ar/assets/img/og/raven3.png" />
 
@@ -36,7 +36,21 @@
   <script src="../assets/js/cursor.js" defer></script>
 
 <!-- GA4 -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"></script>
+<script>
+  /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+  (function () {
+    var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+    function load() {
+      if (done) return; done = true;
+      evs.forEach(function (e) { removeEventListener(e, load); });
+      var s = document.createElement("script");
+      s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+      document.head.appendChild(s);
+    }
+    evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+    addEventListener("load", function () { setTimeout(load, 3000); });
+  })();
+</script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag() { dataLayer.push(arguments); }
@@ -58,6 +72,7 @@
     "url": "https://raven3.com.ar/"
   },
   "blogPost": [
+    {"@type":"BlogPosting","headline":"Cuánto cuesta una página web en Argentina en 2026","url":"https://raven3.com.ar/blog/cuanto-cuesta-una-pagina-web-argentina-2026","datePublished":"2026-11-19","author":{"@type":"Organization","name":"Raven3"}},
     {"@type":"BlogPosting","headline":"Mantenimiento web: qué revisar en tu sitio cada mes, trimestre y año","url":"https://raven3.com.ar/blog/mantenimiento-web-checklist-mensual","datePublished":"2026-11-03","author":{"@type":"Organization","name":"Raven3"}},
     {"@type":"BlogPosting","headline":"Señales de que tu web está perdiendo clientes frente a la IA (y cómo se arregla)","url":"https://raven3.com.ar/blog/senales-web-perdiendo-clientes-frente-a-ia","datePublished":"2026-06-27","author":{"@type":"Organization","name":"Raven3"}},
     {"@type":"BlogPosting","headline":"Mi web no aparece en ChatGPT ni en Gemini: checklist para que las IA te citen","url":"https://raven3.com.ar/blog/mi-web-no-aparece-en-chatgpt-checklist","datePublished":"2026-06-20","author":{"@type":"Organization","name":"Raven3"}},
@@ -212,6 +227,7 @@
       </p>
       <h2 style="font-family:'Rajdhani',sans-serif;font-size:clamp(18px,2.5vw,26px);font-weight:600;color:#fff;margin-bottom:24px">Todos los artículos</h2>
       <ul style="list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:12px">
+        <li><a href="/blog/cuanto-cuesta-una-pagina-web-argentina-2026"><span>Desarrollo · 19 nov 2026</span> — <strong>Cuánto cuesta una página web en Argentina en 2026</strong></a></li>
         <li><a href="/blog/mantenimiento-web-checklist-mensual"><span>Desarrollo · 3 nov 2026</span> — <strong>Mantenimiento web: qué revisar en tu sitio cada mes, trimestre y año</strong></a></li>
         <li><a href="/blog/senales-web-perdiendo-clientes-frente-a-ia"><span>SEO Técnico · 27 jun 2026</span> — <strong>Señales de que tu web está perdiendo clientes frente a la IA (y cómo se arregla)</strong></a></li>
         <li><a href="/blog/mi-web-no-aparece-en-chatgpt-checklist"><span>SEO Técnico · 20 jun 2026</span> — <strong>Mi web no aparece en ChatGPT ni en Gemini: checklist para que las IA te citen</strong></a></li>

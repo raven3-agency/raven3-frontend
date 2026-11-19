@@ -9,7 +9,7 @@
 
     <meta
       name="description"
-      content="Conocé la política de privacidad de Raven3. Explicamos qué datos recopilamos, cómo los usamos, con qué herramientas trabajamos y qué derechos tenés sobre tu información."
+      content="Política de privacidad de Raven3: qué datos recopilamos, cómo los usamos, con qué herramientas trabajamos y qué derechos tenés sobre tu información."
     />
     <meta name="author" content="Raven3" />
     <meta name="robots" content="noindex,follow" />
@@ -114,10 +114,21 @@
     <link rel="stylesheet" href="assets/css/lang-switcher.css?v=20261010" />
 
     <!-- GA4 -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL"
-    ></script>
+    <script>
+      /* gtag.js diferido: primera interacción o 3 s después de load (dataLayer encola los eventos) */
+      (function () {
+        var done = false, evs = ["scroll", "pointerdown", "keydown", "touchstart"];
+        function load() {
+          if (done) return; done = true;
+          evs.forEach(function (e) { removeEventListener(e, load); });
+          var s = document.createElement("script");
+          s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=G-MF63Q3JMSL";
+          document.head.appendChild(s);
+        }
+        evs.forEach(function (e) { addEventListener(e, load, { once: true, passive: true }); });
+        addEventListener("load", function () { setTimeout(load, 3000); });
+      })();
+    </script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag() {
@@ -943,8 +954,8 @@
     </main>
 
     <!-- GSAP + ScrollTrigger -->
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 
     <!-- App modules -->
     <script type="module" src="assets/js/main.js"></script>
